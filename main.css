@@ -1,0 +1,153 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.grid {
+  max-width: 1200px;
+  height: 100vh;
+}
+
+.grid.overlay {
+  width: 100%;
+  padding: 8px;
+  display: block;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+}
+.grid.overlay .col-1 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-2 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-3 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-4 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-5 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-6 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-7 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-8 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-9 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-10 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-11 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.overlay .col-12 {
+  width: 8.3333%;
+  padding: 8px;
+}
+
+.grid > div {
+  height: 100%;
+  float: left;
+}
+
+.grid.overlay > div .inner {
+  height: 100%;
+  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.grid.content {
+  width: 100%;
+  padding: 8px;
+  display: block;
+  margin: auto;
+}
+.grid.content .one-third {
+  width: 33.3333%;
+  padding: 8px;
+}
+
+.grid.content > div .inner {
+  height: 100%;
+  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body:before {
+  background-color: #FCF8E3;
+  border-bottom: 1px solid #FBEED5;
+  border-left: 1px solid #FBEED5;
+  color: #C09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 20em) {
+  body:before {
+    content: "mobile ≥ 320px (20em)";
+  }
+}
+@media (min-width: 30em) {
+  body:before {
+    content: "mobileLandscape ≥ 480px (30em)";
+  }
+}
+@media (min-width: 46.25em) {
+  body:before {
+    content: "tablet ≥ 740px (46.25em)";
+  }
+}
+@media (min-width: 61.25em) {
+  body:before {
+    content: "desktop ≥ 980px (61.25em)";
+  }
+}
+@media (min-width: 81.25em) {
+  body:before {
+    content: "wide ≥ 1300px (81.25em)";
+  }
+}

@@ -1,0 +1,10 @@
+// @mixin gridCalculator($gridVal) {
+// 	$column: $gridVal;
+
+// 	@while $column > 0 {
+// 		.grid-#{$column} {
+// 			@include paddedGrid($gridVal);
+// 		}
+// 		$column: $column - 1;
+// 	}
+// }

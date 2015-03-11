@@ -1,0 +1,44 @@
+
+// Mixins for generating CSS grids
+
+@mixin paddedGrid($colVal,$colPadVal) {
+	width: 100% / $colVal;
+	padding: $colPadVal+px;
+}
+
+@mixin gridGenerator($gridVal,$colPadVal) {
+	$columns: $gridVal;
+
+	@if $gridVal == 3 {
+	  .one-third {
+	    @include paddedGrid($gridVal,$colPadVal);
+	  }
+	} @else {
+		@for $column from 1 through $columns {
+		  .col-#{$column} {
+		    @include paddedGrid($gridVal,$colPadVal);
+		  }
+		}
+	} 
+}
+
+@mixin gridAlignment($align) {
+	@if $align == 'left' {
+		$align: left;
+		float: $align;
+	}
+	@else if $align == 'right' {
+		$align: right;
+		float: $align;
+	} 
+	@else if $align == 'center' {
+		display: block;
+		margin: auto;
+	}
+}
+
+@mixin transformToAbsoluteCenter($leftVal,$topVal,$x,$y) {
+	left: $leftVal;
+	top: $topVal;
+	transform: translate($x,$y);
+}
