@@ -18,6 +18,11 @@ html {
   height: 100vh;
 }
 
+.grid > div {
+  height: 100%;
+  float: left;
+}
+
 .grid.overlay {
   width: 100%;
   padding: 8px;
@@ -30,64 +35,60 @@ html {
           transform: translate(-50%, -50%);
   position: fixed;
 }
-.grid.overlay .col-1 {
+.grid.overlay .col._1of12 {
   width: 8.3333%;
   padding: 8px;
 }
-.grid.overlay .col-2 {
-  width: 8.3333%;
+.grid.overlay .col._2of12 {
+  width: 16.6667%;
   padding: 8px;
 }
-.grid.overlay .col-3 {
-  width: 8.3333%;
+.grid.overlay .col._3of12 {
+  width: 25%;
   padding: 8px;
 }
-.grid.overlay .col-4 {
-  width: 8.3333%;
+.grid.overlay .col._4of12 {
+  width: 33.3333%;
   padding: 8px;
 }
-.grid.overlay .col-5 {
-  width: 8.3333%;
+.grid.overlay .col._5of12 {
+  width: 41.6667%;
   padding: 8px;
 }
-.grid.overlay .col-6 {
-  width: 8.3333%;
+.grid.overlay .col._6of12 {
+  width: 50%;
   padding: 8px;
 }
-.grid.overlay .col-7 {
-  width: 8.3333%;
+.grid.overlay .col._7of12 {
+  width: 58.3333%;
   padding: 8px;
 }
-.grid.overlay .col-8 {
-  width: 8.3333%;
+.grid.overlay .col._8of12 {
+  width: 66.6667%;
   padding: 8px;
 }
-.grid.overlay .col-9 {
-  width: 8.3333%;
+.grid.overlay .col._9of12 {
+  width: 75%;
   padding: 8px;
 }
-.grid.overlay .col-10 {
-  width: 8.3333%;
+.grid.overlay .col._10of12 {
+  width: 83.3333%;
   padding: 8px;
 }
-.grid.overlay .col-11 {
-  width: 8.3333%;
+.grid.overlay .col._11of12 {
+  width: 91.6667%;
   padding: 8px;
 }
-.grid.overlay .col-12 {
-  width: 8.3333%;
+.grid.overlay .col._12of12 {
+  width: 100%;
   padding: 8px;
 }
-
-.grid > div {
-  height: 100%;
-  float: left;
-}
-
-.grid.overlay > div .inner {
-  height: 100%;
+.grid.overlay .col .inner {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.3);
+}
+.grid .inner {
+  height: 100%;
 }
 
 .grid.content {
@@ -96,13 +97,19 @@ html {
   display: block;
   margin: auto;
 }
-.grid.content .one-third {
+.grid.content .col._1of3 {
   width: 33.3333%;
   padding: 8px;
 }
-
-.grid.content > div .inner {
-  height: 100%;
+.grid.content .col._2of3 {
+  width: 66.6667%;
+  padding: 8px;
+}
+.grid.content .col._3of3 {
+  width: 100%;
+  padding: 8px;
+}
+.grid.content .inner {
   background-color: blue;
   background-color: rgba(0, 0, 255, 0.3);
 }

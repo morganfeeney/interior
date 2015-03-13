@@ -3,23 +3,27 @@
 
 @mixin paddedGrid($colVal,$colPadVal) {
 	width: 100% / $colVal;
-	padding: $colPadVal+px;
+	padding: $colPadVal;
 }
 
 @mixin gridGenerator($gridVal,$colPadVal) {
-	$columns: $gridVal;
-
 	@if $gridVal == 3 {
 	  .one-third {
-	    @include paddedGrid($gridVal,$colPadVal);
+		@include paddedGrid($gridVal,$colPadVal);
 	  }
-	} @else {
-		@for $column from 1 through $columns {
-		  .col-#{$column} {
-		    @include paddedGrid($gridVal,$colPadVal);
-		  }
-		}
-	} 
+	}
+}
+
+// Automate (loop through) a number of sequentially numbered divs from 1 to $gridVal
+
+@mixin gridAutomator($gridVal,$colPadVal) {
+	$columns: $gridVal;
+	@for $column from 1 through $columns {
+	  .col._#{$column}of#{$columns} {
+	    width: 100% / $gridVal * $column;
+	    padding: $colPadVal;
+	  }
+	}
 }
 
 @mixin gridAlignment($align) {
