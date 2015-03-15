@@ -1,10 +1,6 @@
 @import 'partials/globalMixins';
 @import 'partials/reset';
 
-html {
-	box-sizing: border-box;
-}
-
 @include box-sizing;
 
 @import 'partials/grid';
@@ -22,9 +18,9 @@ html {
 .grid {
 	&.overlay {
 		@include paddedGrid(1,8px);
-		@include gridAutomator(12,8px);
+		@include gridAutomator;
 		@include gridAlignment(center);
-		@include transformToAbsoluteCenter(50%,50%,-50%,-50%);
+		@include transformToCenter;
 		position: fixed;
 		.col {
 			.inner {
