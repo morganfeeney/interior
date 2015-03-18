@@ -35,51 +35,51 @@ html {
           transform: translate(-50%, -50%);
   position: fixed;
 }
-.grid.overlay .col._1of12 {
+.grid.overlay .grid-col._1of12 {
   width: 8.3333%;
   padding: 8px;
 }
-.grid.overlay .col._2of12 {
+.grid.overlay .grid-col._2of12 {
   width: 16.6667%;
   padding: 8px;
 }
-.grid.overlay .col._3of12 {
+.grid.overlay .grid-col._3of12 {
   width: 25%;
   padding: 8px;
 }
-.grid.overlay .col._4of12 {
+.grid.overlay .grid-col._4of12 {
   width: 33.3333%;
   padding: 8px;
 }
-.grid.overlay .col._5of12 {
+.grid.overlay .grid-col._5of12 {
   width: 41.6667%;
   padding: 8px;
 }
-.grid.overlay .col._6of12 {
+.grid.overlay .grid-col._6of12 {
   width: 50%;
   padding: 8px;
 }
-.grid.overlay .col._7of12 {
+.grid.overlay .grid-col._7of12 {
   width: 58.3333%;
   padding: 8px;
 }
-.grid.overlay .col._8of12 {
+.grid.overlay .grid-col._8of12 {
   width: 66.6667%;
   padding: 8px;
 }
-.grid.overlay .col._9of12 {
+.grid.overlay .grid-col._9of12 {
   width: 75%;
   padding: 8px;
 }
-.grid.overlay .col._10of12 {
+.grid.overlay .grid-col._10of12 {
   width: 83.3333%;
   padding: 8px;
 }
-.grid.overlay .col._11of12 {
+.grid.overlay .grid-col._11of12 {
   width: 91.6667%;
   padding: 8px;
 }
-.grid.overlay .col._12of12 {
+.grid.overlay .grid-col._12of12 {
   width: 100%;
   padding: 8px;
 }
@@ -97,15 +97,15 @@ html {
   display: block;
   margin: auto;
 }
-.grid.content .col._1of3 {
+.grid.content .grid-col._1of3 {
   width: 33.3333%;
   padding: 8px;
 }
-.grid.content .col._2of3 {
+.grid.content .grid-col._2of3 {
   width: 66.6667%;
   padding: 8px;
 }
-.grid.content .col._3of3 {
+.grid.content .grid-col._3of3 {
   width: 100%;
   padding: 8px;
 }
