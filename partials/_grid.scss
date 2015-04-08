@@ -30,25 +30,33 @@ $baseGridVal:12;
 	  .grid-col._#{$column}of#{$columns} {
 	    width: 100% / $gridVal * $column;
 	    padding: $colPadVal;
-
-	    // if $names == true in demoGrid display the class name //
-	    @if $names == true {
-				& .inner {
-					&:before {
-						content: '#{$column}of#{$columns}';
-						margin: auto;
-					}
-				}
-			}
 		}
 	}
 }
 
 @mixin demoGrid($columns:$baseGridVal) {
 	@for $i from 1 through $columns {
-		@include gridAutomator(+$i,$names: true)
+		@include gridAutomator(+$i);
 	}
 }
+
+// display the class name //
+@mixin demoDisplayClassName() {
+	&:before {
+		content: attr(class)!important;
+		margin: auto;
+		font-size: 11px;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		background-color: orange;
+		display: table-header-group;
+		text-align: center;
+	}
+	@at-root & {
+		display: table;
+	}
+}
+
+
 
 @mixin gridAlignment($align) {
 	@if $align == 'left' {

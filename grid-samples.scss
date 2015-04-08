@@ -9,12 +9,12 @@
 	max-width: 1200px;
 }
 
-.grid > div {
-	height: 60px;
-	@include gridAlignment(left);
-}
-
 .grid {
+	&-col {
+	height: 60px;
+	@include gridAlignment(left);		
+	}
+
 	&.overlay {
 		height: 100vh;
 		@include paddedGrid(1,8px);
@@ -30,24 +30,26 @@
 	}
 	.inner {
 		height: 100%;
-		display: flex;
 	}
 }
 
 .grid {
 	&.master {
 		@include gridAlignment(center);
+		padding: 8px;
 	}
 	&.demo {
-		padding-top: 0;
-		padding-bottom: 0;
 		@include demoGrid;
 
 		.inner {
 			@include alpha-attribute('background-color', rgba(blue, 0.3), blue);
 		}
+
+		& .grid-col {
+			@include demoDisplayClassName;
+		}
 	}
-	@include paddedGrid(1,8px);
+	@include paddedGrid(1,0);
 }
 
 
