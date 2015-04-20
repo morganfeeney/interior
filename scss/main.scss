@@ -7,16 +7,16 @@
 
 .grid {
 	max-width: 1200px;
+	height: 100vh;
+}
+
+.grid > div {
+	height: 100%;
+	@include gridAlignment(left);
 }
 
 .grid {
-	&-col {
-	height: 60px;
-	@include gridAlignment(left);		
-	}
-
 	&.overlay {
-		height: 100vh;
 		@include paddedGrid(1,8px);
 		@include gridAutomator;
 		@include gridAlignment(center);
@@ -27,6 +27,7 @@
 				@include alpha-attribute('background-color', rgba(red, 0.3), red);
 			}			
 		}
+
 	}
 	.inner {
 		height: 100%;
@@ -34,24 +35,15 @@
 }
 
 .grid {
-	&.master {
+	&.content {
+		@include paddedGrid(1,8px);
+		@include gridAutomator(3,8px);
 		@include gridAlignment(center);
-		padding: 8px;
-	}
-	&.demo {
-		@include demoGrid;
-
 		.inner {
 			@include alpha-attribute('background-color', rgba(blue, 0.3), blue);
 		}
-
-		& .grid-col {
-			@include demoDisplayClassName;
-		}
 	}
-	@include paddedGrid(1,0);
 }
-
 
 // Helpers
 
@@ -87,4 +79,4 @@ $mq-static-breakpoint: desktop;
 // to this list, ordered by width, e.g. (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
-@import 'bower_components/sass-mq/_mq.scss';
+@import '../bower_components/sass-mq/_mq.scss';
