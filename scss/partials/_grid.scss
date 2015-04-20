@@ -30,17 +30,27 @@ $baseGridVal:12;
 	  .grid-col._#{$column}of#{$columns} {
 	    width: 100% / $gridVal * $column;
 	    padding: $colPadVal;
+
+	    // if $names == true in demoGrid display the class name //
+	    @if $names == true {
+				& .inner {
+					&:before {
+						content: '#{$column}of#{$columns}';
+						margin: auto;
+					}
+				}
+			}
 		}
 	}
 }
 
 @mixin demoGrid($columns:$baseGridVal) {
 	@for $i from 1 through $columns {
-		@include gridAutomator(+$i);
+		@include gridAutomator(+$i, $names: true);
 	}
 }
 
-// display the class name //
+// display the class name of the current element/tag/selector in a pseudo element //
 @mixin demoDisplayClassName() {
 	&:before {
 		content: attr(class)!important;

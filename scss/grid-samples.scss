@@ -43,10 +43,7 @@
 
 		.inner {
 			@include alpha-attribute('background-color', rgba(blue, 0.3), blue);
-		}
-
-		& .grid-col {
-			@include demoDisplayClassName;
+			display: flex;
 		}
 	}
 	@include paddedGrid(1,0);
