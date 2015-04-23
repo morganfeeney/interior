@@ -1,3 +1,4 @@
+@import 'partials/variables';
 @import 'partials/globalMixins';
 @import 'partials/reset';
 
@@ -10,9 +11,9 @@
 }
 
 .grid {
-	&-col {
-	height: 60px;
-	@include gridAlignment(left);		
+	[class*=-col] {
+		height: 60px;
+		@include gridAlignment(left);		
 	}
 
 	&.overlay {
@@ -39,7 +40,7 @@
 		padding: 8px;
 	}
 	&.demo {
-		@include demoGrid;
+		@include gridAutomator($names: true);
 
 		.inner {
 			@include alpha-attribute('background-color', rgba(blue, 0.3), blue);
@@ -84,4 +85,4 @@ $mq-static-breakpoint: desktop;
 // to this list, ordered by width, e.g. (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
-@import '../bower_components/sass-mq/_mq.scss';
+@import '../../bower_components/sass-mq/_mq.scss';

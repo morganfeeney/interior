@@ -17,7 +17,7 @@ html {
   max-width: 1200px;
 }
 
-.grid-col {
+.grid [class*=-col] {
   height: 60px;
   float: left;
 }
@@ -34,51 +34,51 @@ html {
           transform: translate(-50%, -50%);
   position: fixed;
 }
-.grid.overlay .grid-col._1of12 {
+.grid.overlay .grid-col-1 {
   width: 8.3333%;
   padding: 8px;
 }
-.grid.overlay .grid-col._2of12 {
+.grid.overlay .grid-col-2 {
   width: 16.6667%;
   padding: 8px;
 }
-.grid.overlay .grid-col._3of12 {
+.grid.overlay .grid-col-3 {
   width: 25%;
   padding: 8px;
 }
-.grid.overlay .grid-col._4of12 {
+.grid.overlay .grid-col-4 {
   width: 33.3333%;
   padding: 8px;
 }
-.grid.overlay .grid-col._5of12 {
+.grid.overlay .grid-col-5 {
   width: 41.6667%;
   padding: 8px;
 }
-.grid.overlay .grid-col._6of12 {
+.grid.overlay .grid-col-6 {
   width: 50%;
   padding: 8px;
 }
-.grid.overlay .grid-col._7of12 {
+.grid.overlay .grid-col-7 {
   width: 58.3333%;
   padding: 8px;
 }
-.grid.overlay .grid-col._8of12 {
+.grid.overlay .grid-col-8 {
   width: 66.6667%;
   padding: 8px;
 }
-.grid.overlay .grid-col._9of12 {
+.grid.overlay .grid-col-9 {
   width: 75%;
   padding: 8px;
 }
-.grid.overlay .grid-col._10of12 {
+.grid.overlay .grid-col-10 {
   width: 83.3333%;
   padding: 8px;
 }
-.grid.overlay .grid-col._11of12 {
+.grid.overlay .grid-col-11 {
   width: 91.6667%;
   padding: 8px;
 }
-.grid.overlay .grid-col._12of12 {
+.grid.overlay .grid-col-12 {
   width: 100%;
   padding: 8px;
 }
@@ -99,628 +99,100 @@ html {
   margin: auto;
   padding: 8px;
 }
-.grid.demo .grid-col._1of1 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of1 .inner:before {
-  content: "1of1";
-  margin: auto;
-}
-.grid.demo .grid-col._1of2 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of2 .inner:before {
-  content: "1of2";
-  margin: auto;
-}
-.grid.demo .grid-col._2of2 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of2 .inner:before {
-  content: "2of2";
-  margin: auto;
-}
-.grid.demo .grid-col._1of3 {
-  width: 33.3333%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of3 .inner:before {
-  content: "1of3";
-  margin: auto;
-}
-.grid.demo .grid-col._2of3 {
-  width: 66.6667%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of3 .inner:before {
-  content: "2of3";
-  margin: auto;
-}
-.grid.demo .grid-col._3of3 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of3 .inner:before {
-  content: "3of3";
-  margin: auto;
-}
-.grid.demo .grid-col._1of4 {
-  width: 25%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of4 .inner:before {
-  content: "1of4";
-  margin: auto;
-}
-.grid.demo .grid-col._2of4 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of4 .inner:before {
-  content: "2of4";
-  margin: auto;
-}
-.grid.demo .grid-col._3of4 {
-  width: 75%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of4 .inner:before {
-  content: "3of4";
-  margin: auto;
-}
-.grid.demo .grid-col._4of4 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of4 .inner:before {
-  content: "4of4";
-  margin: auto;
-}
-.grid.demo .grid-col._1of5 {
-  width: 20%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of5 .inner:before {
-  content: "1of5";
-  margin: auto;
-}
-.grid.demo .grid-col._2of5 {
-  width: 40%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of5 .inner:before {
-  content: "2of5";
-  margin: auto;
-}
-.grid.demo .grid-col._3of5 {
-  width: 60%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of5 .inner:before {
-  content: "3of5";
-  margin: auto;
-}
-.grid.demo .grid-col._4of5 {
-  width: 80%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of5 .inner:before {
-  content: "4of5";
-  margin: auto;
-}
-.grid.demo .grid-col._5of5 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of5 .inner:before {
-  content: "5of5";
-  margin: auto;
-}
-.grid.demo .grid-col._1of6 {
-  width: 16.6667%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of6 .inner:before {
-  content: "1of6";
-  margin: auto;
-}
-.grid.demo .grid-col._2of6 {
-  width: 33.3333%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of6 .inner:before {
-  content: "2of6";
-  margin: auto;
-}
-.grid.demo .grid-col._3of6 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of6 .inner:before {
-  content: "3of6";
-  margin: auto;
-}
-.grid.demo .grid-col._4of6 {
-  width: 66.6667%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of6 .inner:before {
-  content: "4of6";
-  margin: auto;
-}
-.grid.demo .grid-col._5of6 {
-  width: 83.3333%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of6 .inner:before {
-  content: "5of6";
-  margin: auto;
-}
-.grid.demo .grid-col._6of6 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._6of6 .inner:before {
-  content: "6of6";
-  margin: auto;
-}
-.grid.demo .grid-col._1of7 {
-  width: 14.2857%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of7 .inner:before {
-  content: "1of7";
-  margin: auto;
-}
-.grid.demo .grid-col._2of7 {
-  width: 28.5714%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of7 .inner:before {
-  content: "2of7";
-  margin: auto;
-}
-.grid.demo .grid-col._3of7 {
-  width: 42.8571%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of7 .inner:before {
-  content: "3of7";
-  margin: auto;
-}
-.grid.demo .grid-col._4of7 {
-  width: 57.1429%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of7 .inner:before {
-  content: "4of7";
-  margin: auto;
-}
-.grid.demo .grid-col._5of7 {
-  width: 71.4286%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of7 .inner:before {
-  content: "5of7";
-  margin: auto;
-}
-.grid.demo .grid-col._6of7 {
-  width: 85.7143%;
-  padding: 8px;
-}
-.grid.demo .grid-col._6of7 .inner:before {
-  content: "6of7";
-  margin: auto;
-}
-.grid.demo .grid-col._7of7 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._7of7 .inner:before {
-  content: "7of7";
-  margin: auto;
-}
-.grid.demo .grid-col._1of8 {
-  width: 12.5%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of8 .inner:before {
-  content: "1of8";
-  margin: auto;
-}
-.grid.demo .grid-col._2of8 {
-  width: 25%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of8 .inner:before {
-  content: "2of8";
-  margin: auto;
-}
-.grid.demo .grid-col._3of8 {
-  width: 37.5%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of8 .inner:before {
-  content: "3of8";
-  margin: auto;
-}
-.grid.demo .grid-col._4of8 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of8 .inner:before {
-  content: "4of8";
-  margin: auto;
-}
-.grid.demo .grid-col._5of8 {
-  width: 62.5%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of8 .inner:before {
-  content: "5of8";
-  margin: auto;
-}
-.grid.demo .grid-col._6of8 {
-  width: 75%;
-  padding: 8px;
-}
-.grid.demo .grid-col._6of8 .inner:before {
-  content: "6of8";
-  margin: auto;
-}
-.grid.demo .grid-col._7of8 {
-  width: 87.5%;
-  padding: 8px;
-}
-.grid.demo .grid-col._7of8 .inner:before {
-  content: "7of8";
-  margin: auto;
-}
-.grid.demo .grid-col._8of8 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._8of8 .inner:before {
-  content: "8of8";
-  margin: auto;
-}
-.grid.demo .grid-col._1of9 {
-  width: 11.1111%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of9 .inner:before {
-  content: "1of9";
-  margin: auto;
-}
-.grid.demo .grid-col._2of9 {
-  width: 22.2222%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of9 .inner:before {
-  content: "2of9";
-  margin: auto;
-}
-.grid.demo .grid-col._3of9 {
-  width: 33.3333%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of9 .inner:before {
-  content: "3of9";
-  margin: auto;
-}
-.grid.demo .grid-col._4of9 {
-  width: 44.4444%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of9 .inner:before {
-  content: "4of9";
-  margin: auto;
-}
-.grid.demo .grid-col._5of9 {
-  width: 55.5556%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of9 .inner:before {
-  content: "5of9";
-  margin: auto;
-}
-.grid.demo .grid-col._6of9 {
-  width: 66.6667%;
-  padding: 8px;
-}
-.grid.demo .grid-col._6of9 .inner:before {
-  content: "6of9";
-  margin: auto;
-}
-.grid.demo .grid-col._7of9 {
-  width: 77.7778%;
-  padding: 8px;
-}
-.grid.demo .grid-col._7of9 .inner:before {
-  content: "7of9";
-  margin: auto;
-}
-.grid.demo .grid-col._8of9 {
-  width: 88.8889%;
-  padding: 8px;
-}
-.grid.demo .grid-col._8of9 .inner:before {
-  content: "8of9";
-  margin: auto;
-}
-.grid.demo .grid-col._9of9 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._9of9 .inner:before {
-  content: "9of9";
-  margin: auto;
-}
-.grid.demo .grid-col._1of10 {
-  width: 10%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of10 .inner:before {
-  content: "1of10";
-  margin: auto;
-}
-.grid.demo .grid-col._2of10 {
-  width: 20%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of10 .inner:before {
-  content: "2of10";
-  margin: auto;
-}
-.grid.demo .grid-col._3of10 {
-  width: 30%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of10 .inner:before {
-  content: "3of10";
-  margin: auto;
-}
-.grid.demo .grid-col._4of10 {
-  width: 40%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of10 .inner:before {
-  content: "4of10";
-  margin: auto;
-}
-.grid.demo .grid-col._5of10 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of10 .inner:before {
-  content: "5of10";
-  margin: auto;
-}
-.grid.demo .grid-col._6of10 {
-  width: 60%;
-  padding: 8px;
-}
-.grid.demo .grid-col._6of10 .inner:before {
-  content: "6of10";
-  margin: auto;
-}
-.grid.demo .grid-col._7of10 {
-  width: 70%;
-  padding: 8px;
-}
-.grid.demo .grid-col._7of10 .inner:before {
-  content: "7of10";
-  margin: auto;
-}
-.grid.demo .grid-col._8of10 {
-  width: 80%;
-  padding: 8px;
-}
-.grid.demo .grid-col._8of10 .inner:before {
-  content: "8of10";
-  margin: auto;
-}
-.grid.demo .grid-col._9of10 {
-  width: 90%;
-  padding: 8px;
-}
-.grid.demo .grid-col._9of10 .inner:before {
-  content: "9of10";
-  margin: auto;
-}
-.grid.demo .grid-col._10of10 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.demo .grid-col._10of10 .inner:before {
-  content: "10of10";
-  margin: auto;
-}
-.grid.demo .grid-col._1of11 {
-  width: 9.0909%;
-  padding: 8px;
-}
-.grid.demo .grid-col._1of11 .inner:before {
-  content: "1of11";
-  margin: auto;
-}
-.grid.demo .grid-col._2of11 {
-  width: 18.1818%;
-  padding: 8px;
-}
-.grid.demo .grid-col._2of11 .inner:before {
-  content: "2of11";
-  margin: auto;
-}
-.grid.demo .grid-col._3of11 {
-  width: 27.2727%;
-  padding: 8px;
-}
-.grid.demo .grid-col._3of11 .inner:before {
-  content: "3of11";
-  margin: auto;
-}
-.grid.demo .grid-col._4of11 {
-  width: 36.3636%;
-  padding: 8px;
-}
-.grid.demo .grid-col._4of11 .inner:before {
-  content: "4of11";
-  margin: auto;
-}
-.grid.demo .grid-col._5of11 {
-  width: 45.4545%;
-  padding: 8px;
-}
-.grid.demo .grid-col._5of11 .inner:before {
-  content: "5of11";
-  margin: auto;
-}
-.grid.demo .grid-col._6of11 {
-  width: 54.5455%;
-  padding: 8px;
-}
-.grid.demo .grid-col._6of11 .inner:before {
-  content: "6of11";
-  margin: auto;
-}
-.grid.demo .grid-col._7of11 {
-  width: 63.6364%;
-  padding: 8px;
-}
-.grid.demo .grid-col._7of11 .inner:before {
-  content: "7of11";
-  margin: auto;
-}
-.grid.demo .grid-col._8of11 {
-  width: 72.7273%;
-  padding: 8px;
-}
-.grid.demo .grid-col._8of11 .inner:before {
-  content: "8of11";
-  margin: auto;
-}
-.grid.demo .grid-col._9of11 {
-  width: 81.8182%;
-  padding: 8px;
-}
-.grid.demo .grid-col._9of11 .inner:before {
-  content: "9of11";
-  margin: auto;
-}
-.grid.demo .grid-col._10of11 {
-  width: 90.9091%;
-  padding: 8px;
-}
-.grid.demo .grid-col._10of11 .inner:before {
-  content: "10of11";
-  margin: auto;
-}
-.grid.demo .grid-col._11of11 {
-  width: 100.0%;
-  padding: 8px;
-}
-.grid.demo .grid-col._11of11 .inner:before {
-  content: "11of11";
-  margin: auto;
-}
-.grid.demo .grid-col._1of12 {
+.grid.demo .grid-col-1 {
   width: 8.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col._1of12 .inner:before {
-  content: "1of12";
+.grid.demo .grid-col-1 .inner:before {
+  content: "1";
   margin: auto;
 }
-.grid.demo .grid-col._2of12 {
+.grid.demo .grid-col-2 {
   width: 16.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col._2of12 .inner:before {
-  content: "2of12";
+.grid.demo .grid-col-2 .inner:before {
+  content: "2";
   margin: auto;
 }
-.grid.demo .grid-col._3of12 {
+.grid.demo .grid-col-3 {
   width: 25%;
   padding: 8px;
 }
-.grid.demo .grid-col._3of12 .inner:before {
-  content: "3of12";
+.grid.demo .grid-col-3 .inner:before {
+  content: "3";
   margin: auto;
 }
-.grid.demo .grid-col._4of12 {
+.grid.demo .grid-col-4 {
   width: 33.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col._4of12 .inner:before {
-  content: "4of12";
+.grid.demo .grid-col-4 .inner:before {
+  content: "4";
   margin: auto;
 }
-.grid.demo .grid-col._5of12 {
+.grid.demo .grid-col-5 {
   width: 41.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col._5of12 .inner:before {
-  content: "5of12";
+.grid.demo .grid-col-5 .inner:before {
+  content: "5";
   margin: auto;
 }
-.grid.demo .grid-col._6of12 {
+.grid.demo .grid-col-6 {
   width: 50%;
   padding: 8px;
 }
-.grid.demo .grid-col._6of12 .inner:before {
-  content: "6of12";
+.grid.demo .grid-col-6 .inner:before {
+  content: "6";
   margin: auto;
 }
-.grid.demo .grid-col._7of12 {
+.grid.demo .grid-col-7 {
   width: 58.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col._7of12 .inner:before {
-  content: "7of12";
+.grid.demo .grid-col-7 .inner:before {
+  content: "7";
   margin: auto;
 }
-.grid.demo .grid-col._8of12 {
+.grid.demo .grid-col-8 {
   width: 66.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col._8of12 .inner:before {
-  content: "8of12";
+.grid.demo .grid-col-8 .inner:before {
+  content: "8";
   margin: auto;
 }
-.grid.demo .grid-col._9of12 {
+.grid.demo .grid-col-9 {
   width: 75%;
   padding: 8px;
 }
-.grid.demo .grid-col._9of12 .inner:before {
-  content: "9of12";
+.grid.demo .grid-col-9 .inner:before {
+  content: "9";
   margin: auto;
 }
-.grid.demo .grid-col._10of12 {
+.grid.demo .grid-col-10 {
   width: 83.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col._10of12 .inner:before {
-  content: "10of12";
+.grid.demo .grid-col-10 .inner:before {
+  content: "10";
   margin: auto;
 }
-.grid.demo .grid-col._11of12 {
+.grid.demo .grid-col-11 {
   width: 91.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col._11of12 .inner:before {
-  content: "11of12";
+.grid.demo .grid-col-11 .inner:before {
+  content: "11";
   margin: auto;
 }
-.grid.demo .grid-col._12of12 {
+.grid.demo .grid-col-12 {
   width: 100%;
   padding: 8px;
 }
-.grid.demo .grid-col._12of12 .inner:before {
-  content: "12of12";
+.grid.demo .grid-col-12 .inner:before {
+  content: "12";
   margin: auto;
 }
 .grid.demo .inner {

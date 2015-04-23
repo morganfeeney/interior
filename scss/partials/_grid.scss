@@ -16,9 +16,6 @@
 
 // Automate (loop through) a number of sequentially numbered divs from 1 to $gridVal
 
-$basePadVal:8px;
-$baseGridVal:12;
-
 @mixin gridAutomator(
 	$gridVal:$baseGridVal,
 	$colPadVal:$basePadVal,
@@ -27,7 +24,7 @@ $baseGridVal:12;
 ) {
 	$columns: $gridVal;
 	@for $column from 1 through $columns {
-	  .grid-col._#{$column}of#{$columns} {
+	  .grid-col-#{$column - 1 + 1} {
 	    width: 100% / $gridVal * $column;
 	    padding: $colPadVal;
 
@@ -35,18 +32,12 @@ $baseGridVal:12;
 	    @if $names == true {
 				& .inner {
 					&:before {
-						content: '#{$column}of#{$columns}';
+						content: '#{$column - 1 + 1}';
 						margin: auto;
 					}
 				}
 			}
 		}
-	}
-}
-
-@mixin demoGrid($columns:$baseGridVal) {
-	@for $i from 1 through $columns {
-		@include gridAutomator(+$i, $names: true);
 	}
 }
 
