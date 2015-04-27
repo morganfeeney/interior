@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html,
 body {
   margin: 0;
@@ -15,10 +14,58 @@ html {
 
 .grid {
   max-width: 1200px;
+  width: 100%;
+  padding: 0;
 }
-
+.grid .grid-col-1 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid .grid-col-2 {
+  width: 16.6667%;
+  padding: 8px;
+}
+.grid .grid-col-3 {
+  width: 25%;
+  padding: 8px;
+}
+.grid .grid-col-4 {
+  width: 33.3333%;
+  padding: 8px;
+}
+.grid .grid-col-5 {
+  width: 41.6667%;
+  padding: 8px;
+}
+.grid .grid-col-6 {
+  width: 50%;
+  padding: 8px;
+}
+.grid .grid-col-7 {
+  width: 58.3333%;
+  padding: 8px;
+}
+.grid .grid-col-8 {
+  width: 66.6667%;
+  padding: 8px;
+}
+.grid .grid-col-9 {
+  width: 75%;
+  padding: 8px;
+}
+.grid .grid-col-10 {
+  width: 83.3333%;
+  padding: 8px;
+}
+.grid .grid-col-11 {
+  width: 91.6667%;
+  padding: 8px;
+}
+.grid .grid-col-12 {
+  width: 100%;
+  padding: 8px;
+}
 .grid [class*=-col] {
-  height: 60px;
   float: left;
 }
 .grid.overlay {
@@ -34,67 +81,18 @@ html {
           transform: translate(-50%, -50%);
   position: fixed;
 }
-.grid.overlay .grid-col-1 {
-  width: 8.3333%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-2 {
-  width: 16.6667%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-3 {
-  width: 25%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-4 {
-  width: 33.3333%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-5 {
-  width: 41.6667%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-6 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-7 {
-  width: 58.3333%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-8 {
-  width: 66.6667%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-9 {
-  width: 75%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-10 {
-  width: 83.3333%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-11 {
-  width: 91.6667%;
-  padding: 8px;
-}
-.grid.overlay .grid-col-12 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.overlay .col .inner {
-  background-color: red;
-  background-color: rgba(255, 0, 0, 0.3);
-}
-.grid .inner {
+.grid.overlay [class*=-col] {
   height: 100%;
 }
-
-.grid {
-  width: 100%;
-  padding: 0;
+.grid.overlay .inner {
+  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
+  height: 100%;
 }
-.grid.master {
+.grid .inner {
+  min-height: 60px;
+}
+.grid-outer {
   display: block;
   margin: auto;
   padding: 8px;
@@ -210,43 +208,4 @@ html {
   clear: both;
 }
 
-body:before {
-  background-color: #FCF8E3;
-  border-bottom: 1px solid #FBEED5;
-  border-left: 1px solid #FBEED5;
-  color: #C09853;
-  font: small-caption;
-  padding: 3px 6px;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100;
-}
-@media (min-width: 20em) {
-  body:before {
-    content: "mobile ≥ 320px (20em)";
-  }
-}
-@media (min-width: 30em) {
-  body:before {
-    content: "mobileLandscape ≥ 480px (30em)";
-  }
-}
-@media (min-width: 46.25em) {
-  body:before {
-    content: "tablet ≥ 740px (46.25em)";
-  }
-}
-@media (min-width: 61.25em) {
-  body:before {
-    content: "desktop ≥ 980px (61.25em)";
-  }
-}
-@media (min-width: 81.25em) {
-  body:before {
-    content: "wide ≥ 1300px (81.25em)";
-  }
-}
-
-/*# sourceMappingURL=grid-samples.css.map */
+/*# sourceMappingURL=griddle.css.map */

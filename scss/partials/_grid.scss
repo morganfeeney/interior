@@ -6,25 +6,16 @@
 	padding: $colPadVal;
 }
 
-@mixin gridGenerator($gridVal,$colPadVal) {
-	@if $gridVal == 3 {
-	  .one-third {
-		@include paddedGrid($gridVal,$colPadVal);
-	  }
-	}
-}
+// Loop through a number of sequentially numbered divs from 1 to $columns
 
-// Automate (loop through) a number of sequentially numbered divs from 1 to $gridVal
-
-@mixin gridAutomator(
+@mixin griddle(
 	$gridVal:$baseGridVal,
 	$colPadVal:$basePadVal,
-	$names:false,
-	$demo:false
+	$names:false
 ) {
 	$columns: $gridVal;
 	@for $column from 1 through $columns {
-	  .grid-col-#{$column - 1 + 1} {
+	  .grid-col-#{$column} {
 	    width: 100% / $gridVal * $column;
 	    padding: $colPadVal;
 
@@ -32,7 +23,7 @@
 	    @if $names == true {
 				& .inner {
 					&:before {
-						content: '#{$column - 1 + 1}';
+						content: '#{$column}';
 						margin: auto;
 					}
 				}
@@ -40,24 +31,6 @@
 		}
 	}
 }
-
-// display the class name of the current element/tag/selector in a pseudo element //
-@mixin demoDisplayClassName() {
-	&:before {
-		content: attr(class)!important;
-		margin: auto;
-		font-size: 11px;
-		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-		background-color: orange;
-		display: table-header-group;
-		text-align: center;
-	}
-	@at-root & {
-		display: table;
-	}
-}
-
-
 
 @mixin gridAlignment($align) {
 	@if $align == 'left' {

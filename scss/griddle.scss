@@ -8,46 +8,49 @@
 
 .grid {
 	max-width: 1200px;
-}
+	@include griddle($names: false);
 
-.grid {
 	[class*=-col] {
-		height: 60px;
 		@include gridAlignment(left);		
 	}
 
 	&.overlay {
 		height: 100vh;
 		@include paddedGrid(1,8px);
-		@include gridAutomator;
 		@include gridAlignment(center);
 		@include transformToCenter;
 		position: fixed;
-		.col {
-			.inner {
-				@include alpha-attribute('background-color', rgba(red, 0.3), red);
-			}			
+		
+		[class*=-col] {
+			height: 100%;
 		}
-	}
-	.inner {
-		height: 100%;
-	}
-}
 
-.grid {
-	&.master {
+		.inner {
+			@include alpha-attribute('background-color', rgba(red, 0.3), red);
+			height: 100%;
+		}
+
+	}
+
+	.inner {
+		min-height: 60px;
+	}
+
+	&-outer {
 		@include gridAlignment(center);
 		padding: 8px;
 	}
-	&.demo {
-		@include gridAutomator($names: true);
 
+	&.demo {
+		@include griddle($names: true);
 		.inner {
 			@include alpha-attribute('background-color', rgba(blue, 0.3), blue);
 			display: flex;
 		}
 	}
+
 	@include paddedGrid(1,0);
+
 }
 
 
@@ -79,10 +82,5 @@ $mq-breakpoints: (
 // be used as the target width when outputting a static stylesheet
 // (i.e. when $mq-responsive is set to 'false').
 $mq-static-breakpoint: desktop;
-
-// If you want to display the currently active breakpoint in the top
-// right corner of your site during development, add the breakpoints
-// to this list, ordered by width, e.g. (mobile, tablet, desktop).
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
 @import '../../bower_components/sass-mq/_mq.scss';
