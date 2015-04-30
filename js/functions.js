@@ -14,16 +14,17 @@ $(function(){
 			);
 		}
 	}
-	function overlayOn(){
+	function overlayToggle(){
 		$('.toggle-overlay').on('click', function(e){
-			$('body').addClass('overlay-active');
-			e.preventDefault();
-			if ($('body').hasClass('overlay-active')) {
+			if (!$('body').hasClass('overlay-active')) {
 				gridOverlay();
-			} else if (!$('body').hasClass('overlay-active')) {
+				$('body').addClass('overlay-active');
+			} else if ($('body').hasClass('overlay-active')) {
+				$('body').removeClass('overlay-active');
 				$('#gridOverlay').remove();
 			}
+			e.preventDefault();
 		});
 	}
-	overlayOn();
+	overlayToggle();
 });
