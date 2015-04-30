@@ -17,8 +17,8 @@ $(function(){
 	function overlayToggle(){
 		$('.toggle-overlay').on('click', function(e){
 			if (!$('body').hasClass('overlay-active')) {
-				gridOverlay();
 				$('body').addClass('overlay-active');
+				gridOverlay();
 			} else if ($('body').hasClass('overlay-active')) {
 				$('body').removeClass('overlay-active');
 				$('#gridOverlay').remove();
