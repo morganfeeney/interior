@@ -1,23 +1,23 @@
 
 // Mixins for generating CSS grids
 
-@mixin paddedGrid($colVal,$colPadVal) {
+@mixin simpleCol($colVal,$col-gutter-val) {
 	width: 100% / $colVal;
-	padding: $colPadVal;
+	padding: $col-gutter-val;
 }
 
 // Loop through a number of sequentially numbered divs from 1 to $columns
 
 @mixin griddle(
 	$gridVal:$baseGridVal,
-	$colPadVal:$basePadVal,
+	$colPadVal:$col-gutter-val,
 	$names:false
 ) {
 	$columns: $gridVal;
 	@for $column from 1 through $columns {
 	  .grid-col-#{$column} {
 	    width: 100% / $gridVal * $column;
-	    padding: $colPadVal;
+	    padding: $col-gutter-val / 2;
 
 	    // if $names == true in demoGrid display the class name //
 	    @if $names == true {

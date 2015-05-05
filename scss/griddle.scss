@@ -6,22 +6,32 @@
 
 @import 'partials/grid';
 
+.dev {
+	&-controls {
+		position: fixed;
+		z-index: 100;
+		background: #ccc;
+		width: 100%;
+	}
+}
+
 .grid {
 	max-width: 1200px;
-	@include griddle($names: false);
+	@include griddle();
 
 	[class*=-col] {
-		@include gridAlignment(left);		
+		@include gridAlignment(left);
 	}
 
 	&.overlay {
 		height: 100vh;
-		@include paddedGrid(1,8px);
+		padding: 0 8px;
 		@include gridAlignment(center);
 		@include transformToCenter;
 		position: fixed;
 		
 		[class*=-col] {
+			padding: 0 ($col-gutter-val / 2);
 			height: 100%;
 		}
 
@@ -49,7 +59,7 @@
 		}
 	}
 
-	@include paddedGrid(1,0);
+	@include simpleCol(1,0);
 
 }
 
