@@ -1,10 +1,9 @@
 @import 'partials/variables';
-@import 'partials/globalMixins';
+@import 'mixins/helpers';
 @import 'partials/reset';
-
 @include box-sizing;
-
-@import 'partials/grid';
+@import 'partials/typography';
+@import 'mixins/grid';
 
 .dev {
 	&-controls {
@@ -12,6 +11,15 @@
 		z-index: 100;
 		background: #ccc;
 		width: 100%;
+		padding: ($col-gutter-val / 2);
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		opacity: 0.1;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
@@ -25,7 +33,7 @@
 
 	&.overlay {
 		height: 100vh;
-		padding: 0 8px;
+		padding: 0 ($col-gutter-val / 2);
 		@include gridAlignment(center);
 		@include transformToCenter;
 		position: fixed;
@@ -48,7 +56,7 @@
 
 	&-outer {
 		@include gridAlignment(center);
-		padding: 8px;
+		padding: ($col-gutter-val / 2);
 	}
 
 	&.demo {
@@ -63,6 +71,7 @@
 
 }
 
+@import 'partials/code';
 
 // Helpers
 
