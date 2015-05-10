@@ -1,0 +1,20 @@
+.grid {
+
+	&.overlay {
+		height: 100vh;
+		padding: 0 ($col-gutter-val / 2);
+		@include gridAlignment(center);
+		@include transformToCenter;
+		position: fixed;
+
+		[class*=-col] {
+			height: 100%;
+		}
+		
+		.inner {
+			@include alpha-attribute('background-color', rgba(red, 0.3), red);
+			height: 100%;
+		}
+	}
+
+}

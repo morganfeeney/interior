@@ -1,0 +1,40 @@
+@import 'partials/variables';
+@import 'mixins/helpers';
+@import 'partials/reset';
+@include box-sizing;
+@import 'partials/typography';
+@import 'mixins/griddle';
+
+// Devtools
+@import 'partials/devtools';
+
+// Custom
+.grid {
+	max-width: 1000px;
+	@include griddle();
+
+	[class*=-col] {
+		@include gridAlignment(left);
+	}
+
+	.inner {
+		min-height: 60px;
+	}
+
+	&-outer {
+		@include gridAlignment(center);
+		padding: ($col-gutter-val / 2);
+	}
+
+	@include simpleCol(1,0);
+
+}
+
+// Code
+@import 'partials/code';
+
+// Demo
+@import 'partials/demo';
+
+// Helpers
+@include clearfix;

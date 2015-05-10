@@ -28,3 +28,15 @@ $(function(){
 	}
 	overlayToggle();
 });
+
+// Feature detection using Modernizr.js to test for presence of media queries support in browser
+
+function featureDetectMediaQuery(){
+	if (!(Modernizr.mq('only all'))) {
+		document.querySelector('html').classList.add('no-mediaqueries');
+	} else if ((Modernizr.mq('only all'))) {
+		document.querySelector('html').classList.add('mediaqueries');
+	}
+}
+
+featureDetectMediaQuery();

@@ -3,16 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Griddle | All | Demo</title>
-		<link rel="stylesheet" href="css/griddle.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/modernizr.custom.73874.js"></script>
 		<script src="../bower_components/jquery/dist/jquery.js"></script>
 	</head>
 	<body>
-		<nav class="dev-controls">
-			<button class="toggle-overlay">
-				Toggle Overlay
-			</button>
-		</nav>
-		<header class="grid grid-outer">
+		<header>
+			<nav class="dev-controls">
+				<button class="toggle-overlay">
+					Toggle Overlay
+				</button>
+			</nav>
+		</header>
+		<section class="grid grid-outer">
 			<div class="grid-col-12">
 				<h1>Griddle</h1>
 				<p class="large">Griddle is a set of fluid and responsive layout tools for front-end web developers. Built from SCSS it is configurable to your needs. There are some default values.</p>
@@ -24,7 +27,7 @@ $col-gutter-val: 16px;</code></pre>
 					These default values can be overridden e.g.
 				</p>
 			</div>
-		</header>
+		</section>
 		<div class="grid grid-outer demo">
 			<div class="grid-row clearfix">
 				<div class="grid-col-12">
