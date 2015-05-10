@@ -54,6 +54,7 @@ h1 {
 }
 .grid.overlay [class*=-col] {
   height: 100%;
+  padding: 0 8px;
 }
 .grid.overlay .inner {
   background-color: red;

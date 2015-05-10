@@ -9,6 +9,7 @@
 
 		[class*=-col] {
 			height: 100%;
+			padding: 0 ($col-gutter-val / 2);
 		}
 		
 		.inner {
