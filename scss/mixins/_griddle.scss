@@ -1,26 +1,19 @@
-
-// Mixins for generating CSS grids
-
-@mixin simpleCol($colVal,$col-gutter-val) {
-	width: 100% / $colVal;
-	padding: $col-gutter-val;
-}
-
-// Loop through a number of sequentially numbered divs from 1 to $columns
+// Loop through a number of sequentially numbered divs from 1 to $columns //
 
 @mixin griddle(
-	$gridVal:$baseGridVal,
-	$colPadVal:$col-gutter-val,
-	$names:false
+	$grid-cols,
+	$grid-gutter-width,
+	$grid-names: false,
+	$grid-alignment: left
 ) {
-	$columns: $gridVal;
+	$columns: $grid-cols;
 	@for $column from 1 through $columns {
 	  .grid-col-#{$column} {
-	    width: 100% / $gridVal * $column;
-	    padding: $col-gutter-val / 2;
+	    width: 100% / $grid-cols * $column;
+	    padding: $grid-gutter-width / 2;
 
 	    // if $names == true in demoGrid display the class name //
-	    @if $names == true {
+	    @if $grid-names == true {
 				& .inner {
 					&:before {
 						content: '#{$column}';
@@ -28,6 +21,22 @@
 					}
 				}
 			}
+		}
+	}
+	// if $grid-alignment == left, right or center: display accordingly //
+	@if $grid-alignment == left {
+		[class*=-col] {
+			@include gridAlignment(left);
+		}
+	}
+	@else if $grid-alignment == right {
+		[class*=-col] {
+			@include gridAlignment(right);
+		}
+	}
+	@else if $grid-alignment == center {
+		[class*=-col] {
+			@include gridAlignment(center);
 		}
 	}
 }

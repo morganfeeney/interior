@@ -61,11 +61,12 @@ h1 {
   background-color: rgba(255, 0, 0, 0.3);
   height: 100%;
 }
+.grid-outer {
+  width: 100%;
+}
 
 .grid {
   max-width: 1000px;
-  width: 100%;
-  padding: 0;
 }
 .grid .grid-col-1 {
   width: 8.3333%;
@@ -144,18 +145,6 @@ pre {
   overflow: auto;
 }
 
-.grid {
-  width: 100%;
-  padding: 0;
-}
-.grid [class*=-col] {
-  float: left;
-}
-.grid-outer {
-  display: block;
-  margin: auto;
-  padding: 8px;
-}
 .grid.demo .grid-col-1 {
   width: 8.3333%;
   padding: 8px;
@@ -251,6 +240,9 @@ pre {
 .grid.demo .grid-col-12 .inner:before {
   content: "12";
   margin: auto;
+}
+.grid.demo [class*=-col] {
+  float: left;
 }
 .grid.demo .inner {
   background-color: blue;

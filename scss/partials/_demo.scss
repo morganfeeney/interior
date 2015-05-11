@@ -1,22 +1,14 @@
 .grid {
-	
-	[class*=-col] {
-		@include gridAlignment(left);
-	}
-
-	&-outer {
-		@include gridAlignment(center);
-		padding: ($col-gutter-val / 2);
-	}
 
 	&.demo {
-		@include griddle($names: true);
+		@include griddle(
+			$grid-names: true,
+			$grid-cols: 12,
+			$grid-gutter-width: $grid-gutter-unit
+			);
 		.inner {
 			@include alpha-attribute('background-color', rgba(blue, 0.3), blue);
 			display: flex;
 		}
 	}
-
-	@include simpleCol(1,0);
-
 }
