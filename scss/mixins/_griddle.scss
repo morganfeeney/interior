@@ -12,9 +12,9 @@
 	    width: 100% / $grid-cols * $column;
 	    padding: $grid-gutter-width / 2;
 
-	    // if $names == true in demoGrid display the class name //
+	    // if $grid-names == true in demoGrid display the class name //
 	    @if $grid-names == true {
-				& .inner {
+				& > .inner {
 					&:before {
 						content: '#{$column}';
 						margin: auto;
@@ -25,17 +25,17 @@
 	}
 	// if $grid-alignment == left, right or center: display accordingly //
 	@if $grid-alignment == left {
-		[class*=-col] {
+		[class^=grid-col] {
 			@include gridAlignment(left);
 		}
 	}
 	@else if $grid-alignment == right {
-		[class*=-col] {
+		[class^=grid-col] {
 			@include gridAlignment(right);
 		}
 	}
 	@else if $grid-alignment == center {
-		[class*=-col] {
+		[class^=grid-col] {
 			@include gridAlignment(center);
 		}
 	}

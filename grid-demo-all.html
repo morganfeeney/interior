@@ -18,7 +18,7 @@
 		<section class="grid grid-outer clearfix">
 			<div class="grid-col-12">
 				<h1>Griddle</h1>
-				<p class="large">Griddle is a set of fluid and responsive layout tools for front-end web developers. Built from SCSS it is configurable to your needs.</p>
+				<p class="large">Griddle is a set of fluid and responsive layout tools for front-end web developers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS) it is configurable to your needs.</p>
 				<div class="code-example">
 					<pre><code>@include griddle(
 	$grid-cols: 12,
@@ -31,7 +31,7 @@
 				</p>
 			</div>
 		</section>
-		<div class="grid grid-outer demo">
+		<section class="grid grid-outer demo">
 			<div class="grid-row clearfix">
 				<div class="grid-col-12">
 					<div class="inner"></div>
@@ -125,7 +125,45 @@
 					<div class="inner"></div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<section class="grid grid-outer nested-examples">
+			<div class="grid-col-12">
+				<h2>Nested Grids</h2>
+				<p class="large">
+					This shit can be nested like so:
+				</p>
+			</div>
+			<div class="grid-row clearfix">
+				<div class="grid-col-4">
+					<div class="inner">
+						<div class="grid-col-12">
+							<div class="inner">
+								<p>This is some text for layout purposes</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-col-8">
+					<div class="inner">
+						<div class="grid-col-4">
+							<div class="inner">
+								<p>This is some text for layout purposes</p>
+							</div>
+						</div>
+						<div class="grid-col-4">
+							<div class="inner">
+								<p>This is some text for layout purposes</p>
+							</div>
+						</div>
+						<div class="grid-col-4">
+							<div class="inner">
+								<p>This is some text for layout purposes</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<footer>
 			<script type="text/javascript" src="js/functions.js"></script>
 		</footer>

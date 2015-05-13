@@ -116,7 +116,7 @@ h1 {
   width: 100%;
   padding: 8px;
 }
-.grid [class*=-col] {
+.grid [class^=grid-col] {
   float: left;
 }
 .grid .inner {
@@ -145,11 +145,15 @@ pre {
   overflow: auto;
 }
 
+.grid.demo.grid-outer {
+  background-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
 .grid.demo .grid-col-1 {
   width: 8.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col-1 .inner:before {
+.grid.demo .grid-col-1 > .inner:before {
   content: "1";
   margin: auto;
 }
@@ -157,7 +161,7 @@ pre {
   width: 16.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col-2 .inner:before {
+.grid.demo .grid-col-2 > .inner:before {
   content: "2";
   margin: auto;
 }
@@ -165,7 +169,7 @@ pre {
   width: 25%;
   padding: 8px;
 }
-.grid.demo .grid-col-3 .inner:before {
+.grid.demo .grid-col-3 > .inner:before {
   content: "3";
   margin: auto;
 }
@@ -173,7 +177,7 @@ pre {
   width: 33.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col-4 .inner:before {
+.grid.demo .grid-col-4 > .inner:before {
   content: "4";
   margin: auto;
 }
@@ -181,7 +185,7 @@ pre {
   width: 41.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col-5 .inner:before {
+.grid.demo .grid-col-5 > .inner:before {
   content: "5";
   margin: auto;
 }
@@ -189,7 +193,7 @@ pre {
   width: 50%;
   padding: 8px;
 }
-.grid.demo .grid-col-6 .inner:before {
+.grid.demo .grid-col-6 > .inner:before {
   content: "6";
   margin: auto;
 }
@@ -197,7 +201,7 @@ pre {
   width: 58.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col-7 .inner:before {
+.grid.demo .grid-col-7 > .inner:before {
   content: "7";
   margin: auto;
 }
@@ -205,7 +209,7 @@ pre {
   width: 66.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col-8 .inner:before {
+.grid.demo .grid-col-8 > .inner:before {
   content: "8";
   margin: auto;
 }
@@ -213,7 +217,7 @@ pre {
   width: 75%;
   padding: 8px;
 }
-.grid.demo .grid-col-9 .inner:before {
+.grid.demo .grid-col-9 > .inner:before {
   content: "9";
   margin: auto;
 }
@@ -221,7 +225,7 @@ pre {
   width: 83.3333%;
   padding: 8px;
 }
-.grid.demo .grid-col-10 .inner:before {
+.grid.demo .grid-col-10 > .inner:before {
   content: "10";
   margin: auto;
 }
@@ -229,7 +233,7 @@ pre {
   width: 91.6667%;
   padding: 8px;
 }
-.grid.demo .grid-col-11 .inner:before {
+.grid.demo .grid-col-11 > .inner:before {
   content: "11";
   margin: auto;
 }
@@ -237,20 +241,85 @@ pre {
   width: 100%;
   padding: 8px;
 }
-.grid.demo .grid-col-12 .inner:before {
+.grid.demo .grid-col-12 > .inner:before {
   content: "12";
   margin: auto;
 }
-.grid.demo [class*=-col] {
+.grid.demo [class^=grid-col] {
   float: left;
 }
 .grid.demo .inner {
-  background-color: blue;
-  background-color: rgba(0, 0, 255, 0.3);
+  background-color: red;
+  background-color: rgba(255, 0, 0, 0.2);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+.grid.nested-examples {
+  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+.grid.nested-examples .grid-col-1 {
+  width: 8.3333%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-2 {
+  width: 16.6667%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-3 {
+  width: 25%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-4 {
+  width: 33.3333%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-5 {
+  width: 41.6667%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-6 {
+  width: 50%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-7 {
+  width: 58.3333%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-8 {
+  width: 66.6667%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-9 {
+  width: 75%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-10 {
+  width: 83.3333%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-11 {
+  width: 91.6667%;
+  padding: 8px;
+}
+.grid.nested-examples .grid-col-12 {
+  width: 100%;
+  padding: 8px;
+}
+.grid.nested-examples [class^=grid-col] {
+  float: left;
+}
+.grid.nested-examples .inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.grid.nested-examples .inner [class*=grid-col] .inner {
+  background-color: white;
+  background-color: white;
 }
 
 .clearfix:after {
