@@ -1,7 +1,6 @@
 @import 'partials/variables';
 @import 'mixins/helpers';
 @import 'partials/reset';
-@include box-sizing;
 @import 'partials/typography';
 @import 'mixins/griddle';
 
@@ -14,7 +13,6 @@
 
 	@include griddle(
 		$grid-cols: 12,
-		$grid-gutter-width: $grid-gutter-unit,
 		$grid-alignment: left
 	);
 
@@ -24,7 +22,7 @@
 
 	&-outer {
 		@include gridAlignment(center);
-		padding: ($grid-gutter-unit / 2);
+		padding: ($grid-gutter-width / 2);
 	}
 
 }

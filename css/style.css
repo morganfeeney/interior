@@ -1,9 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -12,12 +6,23 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
   font-size: 40px;
+}
+
+p {
+  margin: 0 0 16px 0;
+  padding: 0;
 }
 
 .large {
@@ -116,7 +121,13 @@ h1 {
   width: 100%;
   padding: 8px;
 }
-.grid [class^=grid-col] {
+.grid .nested-outer {
+  padding: 0;
+}
+.grid .nested-inner-bg {
+  padding: 8px;
+}
+.grid [class*=grid-col] {
   float: left;
 }
 .grid .inner {
@@ -143,6 +154,7 @@ pre {
     -o-tab-size: 4;
        tab-size: 4;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .grid.demo.grid-outer {
@@ -245,7 +257,13 @@ pre {
   content: "12";
   margin: auto;
 }
-.grid.demo [class^=grid-col] {
+.grid.demo .nested-outer {
+  padding: 0;
+}
+.grid.demo .nested-inner-bg {
+  padding: 8px;
+}
+.grid.demo [class*=grid-col] {
   float: left;
 }
 .grid.demo .inner {
@@ -256,69 +274,74 @@ pre {
   display: -ms-flexbox;
   display: flex;
 }
-.grid.nested-examples {
-  background-color: blue;
-  background-color: rgba(0, 0, 255, 0.2);
-}
-.grid.nested-examples .grid-col-1 {
+.grid.nested-example .grid-col-1 {
   width: 8.3333%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-2 {
+.grid.nested-example .grid-col-2 {
   width: 16.6667%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-3 {
+.grid.nested-example .grid-col-3 {
   width: 25%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-4 {
+.grid.nested-example .grid-col-4 {
   width: 33.3333%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-5 {
+.grid.nested-example .grid-col-5 {
   width: 41.6667%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-6 {
+.grid.nested-example .grid-col-6 {
   width: 50%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-7 {
+.grid.nested-example .grid-col-7 {
   width: 58.3333%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-8 {
+.grid.nested-example .grid-col-8 {
   width: 66.6667%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-9 {
+.grid.nested-example .grid-col-9 {
   width: 75%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-10 {
+.grid.nested-example .grid-col-10 {
   width: 83.3333%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-11 {
+.grid.nested-example .grid-col-11 {
   width: 91.6667%;
   padding: 8px;
 }
-.grid.nested-examples .grid-col-12 {
+.grid.nested-example .grid-col-12 {
   width: 100%;
   padding: 8px;
 }
-.grid.nested-examples [class^=grid-col] {
+.grid.nested-example .nested-outer {
+  padding: 0;
+}
+.grid.nested-example .nested-inner-bg {
+  padding: 8px;
+}
+.grid.nested-example [class*=grid-col] {
   float: left;
 }
-.grid.nested-examples .inner {
+.grid.nested-example-2 {
+  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+.grid.nested-example .inner {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.grid.nested-examples .inner [class*=grid-col] .inner {
-  background-color: white;
+.grid.nested-example .inner [class*=grid-col] .nested-inner-bg {
   background-color: white;
 }
 
@@ -327,5 +350,4 @@ pre {
   display: table;
   clear: both;
 }
-
 /*# sourceMappingURL=style.css.map */

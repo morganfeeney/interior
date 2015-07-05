@@ -8,6 +8,11 @@ h1 {
 
 // Paragraphs
 
+p {
+	margin: 0 0 ($grid-gutter-width / 1) 0;
+	padding: 0;
+}
+
 .large {
 	font-size: 20px;
 }

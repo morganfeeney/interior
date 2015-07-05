@@ -3,7 +3,7 @@
 .code-example {
 	background-color: #eee;
 	font-size: 16px;
-	padding: ($grid-gutter-unit / 2) $grid-gutter-unit;
+	padding: ($grid-gutter-width / 2) $grid-gutter-width;
 }
 
 code, pre {
@@ -13,4 +13,5 @@ code, pre {
 pre {
 	tab-size: 4;
 	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 }

@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/modernizr.custom.73874.js"></script>
 		<script src="../bower_components/jquery/dist/jquery.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<header>
@@ -126,38 +127,72 @@
 				</div>
 			</div>
 		</section>
-		<section class="grid grid-outer nested-examples">
+		<section class="grid grid-outer nested-example nested-example-1">
 			<div class="grid-col-12">
-				<h2>Nested Grids</h2>
+				<h2>Nested Demo 1</h2>
 				<p class="large">
-					This shit can be nested like so:
+					Nesting columns using text alignment to create the grid-gutter:
 				</p>
 			</div>
 			<div class="grid-row clearfix">
-				<div class="grid-col-4">
+				<div class="grid-col-4 outer">
 					<div class="inner">
-						<div class="grid-col-12">
+						<p>This is some text for layout purposes, it can go on a bit.</p>
+					</div>
+				</div>
+				<div class="grid-col-8 nested-outer">
+					<div class="inner">
+						<div class="grid-col-4">
 							<div class="inner">
-								<p>This is some text for layout purposes</p>
+								<p>This is some text for layout purposes, it can go on a bit.</p>
+							</div>
+						</div>
+						<div class="grid-col-4">
+							<div class="inner">
+								<p>This is some text for layout purposes, it can go on a bit.</p>
+							</div>
+						</div>
+						<div class="grid-col-4">
+							<div class="inner">
+								<p>This is some text for layout purposes, it can go on a bit.</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="grid-col-8">
+			</div>
+		</section>
+		<section class="grid grid-outer nested-example nested-example-2">
+			<div class="grid-col-12">
+				<h2>Nested Demo 2</h2>
+				<p class="large">
+					Nesting columns using background-colour to create the grid-gutter:
+				</p>
+			</div>
+			<div class="grid-row clearfix">
+				<div class="grid-col-4 nested-outer">
+					<div class="inner">
+						<div class="grid-col-12">
+							<div class="nested-inner-bg">
+								<p>This is some text for layout purposes, it can go on a bit.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-col-8 nested-outer">
 					<div class="inner">
 						<div class="grid-col-4">
-							<div class="inner">
-								<p>This is some text for layout purposes</p>
+							<div class="nested-inner-bg">
+								<p>This is some text for layout purposes, it can go on a bit.</p>
 							</div>
 						</div>
 						<div class="grid-col-4">
-							<div class="inner">
-								<p>This is some text for layout purposes</p>
+							<div class="nested-inner-bg">
+								<p>This is some text for layout purposes, it can go on a bit.</p>
 							</div>
 						</div>
 						<div class="grid-col-4">
-							<div class="inner">
-								<p>This is some text for layout purposes</p>
+							<div class="nested-inner-bg">
+								<p>This is some text for layout purposes, it can go on a bit.</p>
 							</div>
 						</div>
 					</div>

@@ -1,8 +1,10 @@
+// TO DO --> Create a feature which allows the use of inline-block or float, or flex (if easy enough)
+
 // Loop through a number of sequentially numbered divs from 1 to $columns //
 
 @mixin griddle(
 	$grid-cols,
-	$grid-gutter-width,
+	$grid-gutter-width: 16px,
 	$grid-names: false,
 	$grid-alignment: left
 ) {
@@ -23,19 +25,28 @@
 			}
 		}
 	}
+	.nested {
+		&-outer {
+			padding: 0;
+		}
+		&-inner-bg {
+			padding: $grid-gutter-width / 2;
+		}
+	}
+
 	// if $grid-alignment == left, right or center: display accordingly //
 	@if $grid-alignment == left {
-		[class^=grid-col] {
+		[class*=grid-col] {
 			@include gridAlignment(left);
 		}
 	}
 	@else if $grid-alignment == right {
-		[class^=grid-col] {
+		[class*=grid-col] {
 			@include gridAlignment(right);
 		}
 	}
 	@else if $grid-alignment == center {
-		[class^=grid-col] {
+		[class*=grid-col] {
 			@include gridAlignment(center);
 		}
 	}
@@ -54,10 +65,4 @@
 		display: block;
 		margin: auto;
 	}
-}
-
-@mixin transformToCenter {
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
 }
