@@ -3,7 +3,8 @@
 	max-width: 100rem;
 
 	@include griddle();
-
+	
+	// Placeholder to store grid-gutter-width padding value so it can be extended
 	%grid-gutter-width {
 		padding: $grid-gutter-width / 2;
 	}
