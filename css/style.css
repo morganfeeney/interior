@@ -12,21 +12,37 @@ body {
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.6rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 4rem;
 }
 
-p {
-  margin: 0 0 16px 0;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+}
+p + * {
+  margin-top: 1.6rem;
+}
+p + * + * {
+  margin-top: 1.6rem;
+}
+
 .large {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .dev-controls {
@@ -34,9 +50,9 @@ p {
   z-index: 100;
   background: #ccc;
   width: 100%;
-  padding: 8px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.8rem;
+  box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.5);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
   opacity: 0.1;
   -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
@@ -47,7 +63,7 @@ p {
 
 .grid.overlay {
   height: 100vh;
-  padding: 0 8px;
+  padding: 0 0.8rem;
   display: block;
   margin: auto;
   left: 50%;
@@ -59,7 +75,7 @@ p {
 }
 .grid.overlay [class*=-col] {
   height: 100%;
-  padding: 0 8px;
+  padding: 0 0.8rem;
 }
 .grid.overlay .inner {
   background-color: red;
@@ -71,78 +87,78 @@ p {
 }
 
 .grid {
-  max-width: 1000px;
+  max-width: 100rem;
 }
 .grid .grid-col-1 {
   width: 8.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-2 {
   width: 16.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-3 {
   width: 25%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-4 {
   width: 33.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-5 {
   width: 41.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-6 {
   width: 50%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-7 {
   width: 58.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-8 {
   width: 66.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-9 {
   width: 75%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-10 {
   width: 83.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-11 {
   width: 91.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .grid-col-12 {
   width: 100%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid .nested-outer {
   padding: 0;
 }
 .grid .nested-inner-bg {
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid [class*=grid-col] {
   float: left;
 }
 .grid .inner {
-  min-height: 60px;
+  min-height: 6rem;
 }
 .grid-outer {
   display: block;
   margin: auto;
-  padding: 8px;
+  padding: 0.8rem;
 }
 
 .code-example {
   background-color: #eee;
-  font-size: 16px;
-  padding: 8px 16px;
+  font-size: 2rem;
+  padding: 0.8rem 1.6rem;
 }
 
 code, pre {
@@ -163,7 +179,7 @@ pre {
 }
 .grid.demo .grid-col-1 {
   width: 8.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-1 > .inner:before {
   content: "1";
@@ -171,7 +187,7 @@ pre {
 }
 .grid.demo .grid-col-2 {
   width: 16.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-2 > .inner:before {
   content: "2";
@@ -179,7 +195,7 @@ pre {
 }
 .grid.demo .grid-col-3 {
   width: 25%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-3 > .inner:before {
   content: "3";
@@ -187,7 +203,7 @@ pre {
 }
 .grid.demo .grid-col-4 {
   width: 33.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-4 > .inner:before {
   content: "4";
@@ -195,7 +211,7 @@ pre {
 }
 .grid.demo .grid-col-5 {
   width: 41.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-5 > .inner:before {
   content: "5";
@@ -203,7 +219,7 @@ pre {
 }
 .grid.demo .grid-col-6 {
   width: 50%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-6 > .inner:before {
   content: "6";
@@ -211,7 +227,7 @@ pre {
 }
 .grid.demo .grid-col-7 {
   width: 58.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-7 > .inner:before {
   content: "7";
@@ -219,7 +235,7 @@ pre {
 }
 .grid.demo .grid-col-8 {
   width: 66.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-8 > .inner:before {
   content: "8";
@@ -227,7 +243,7 @@ pre {
 }
 .grid.demo .grid-col-9 {
   width: 75%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-9 > .inner:before {
   content: "9";
@@ -235,7 +251,7 @@ pre {
 }
 .grid.demo .grid-col-10 {
   width: 83.3333%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-10 > .inner:before {
   content: "10";
@@ -243,7 +259,7 @@ pre {
 }
 .grid.demo .grid-col-11 {
   width: 91.6667%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-11 > .inner:before {
   content: "11";
@@ -251,7 +267,7 @@ pre {
 }
 .grid.demo .grid-col-12 {
   width: 100%;
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo .grid-col-12 > .inner:before {
   content: "12";
@@ -261,7 +277,7 @@ pre {
   padding: 0;
 }
 .grid.demo .nested-inner-bg {
-  padding: 8px;
+  padding: 0.8rem;
 }
 .grid.demo [class*=grid-col] {
   float: left;
@@ -274,74 +290,12 @@ pre {
   display: -ms-flexbox;
   display: flex;
 }
-.grid.nested-example .grid-col-1 {
-  width: 8.3333%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-2 {
-  width: 16.6667%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-3 {
-  width: 25%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-4 {
-  width: 33.3333%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-5 {
-  width: 41.6667%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-6 {
-  width: 50%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-7 {
-  width: 58.3333%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-8 {
-  width: 66.6667%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-9 {
-  width: 75%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-10 {
-  width: 83.3333%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-11 {
-  width: 91.6667%;
-  padding: 8px;
-}
-.grid.nested-example .grid-col-12 {
-  width: 100%;
-  padding: 8px;
-}
-.grid.nested-example .nested-outer {
-  padding: 0;
-}
-.grid.nested-example .nested-inner-bg {
-  padding: 8px;
-}
-.grid.nested-example [class*=grid-col] {
-  float: left;
-}
-.grid.nested-example-2 {
+
+.nested-example-2 {
   background-color: blue;
   background-color: rgba(0, 0, 255, 0.2);
 }
-.grid.nested-example .inner {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.grid.nested-example .inner [class*=grid-col] .nested-inner-bg {
+.nested-example .inner [class*=grid-col] .nested-inner-bg {
   background-color: white;
 }
 
@@ -350,4 +304,5 @@ pre {
   display: table;
   clear: both;
 }
+
 /*# sourceMappingURL=style.css.map */

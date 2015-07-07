@@ -1,0 +1,14 @@
+.nested-example {
+	&-1 {
+	}
+	&-2 {
+		@include alpha-attribute('background-color', rgba(blue, 0.2), blue);
+	}
+	.inner {
+		& [class*=grid-col]  {
+			.nested-inner-bg {
+				background-color: white;
+			}
+		}
+	}
+}

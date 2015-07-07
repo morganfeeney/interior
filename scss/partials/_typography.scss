@@ -1,18 +1,36 @@
+html {
+	font-size: 62.5%;
+}
+
 body {
-	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 1.6rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
 }
 
 // Paragraphs
 
 p {
-	margin: 0 0 ($grid-gutter-width / 1) 0;
+	margin: 0;
 	padding: 0;
+
+	& + * {
+		margin-top: $grid-gutter-width;
+		& + * {
+			margin-top: $grid-gutter-width;
+		}
+	}
+
+	font-size: 1.4rem;
 }
 
 .large {
-	font-size: 20px;
+	font-size: 2rem;
 }

@@ -1,20 +1,21 @@
 // TO DO --> Create a feature which allows the use of inline-block or float, or flex (if easy enough)
 
-// Loop through a number of sequentially numbered divs from 1 to $columns //
-
 @mixin griddle(
-	$grid-cols,
-	$grid-gutter-width: 16px,
+	// The variables below are assigned values in: variables.scss.
+	// They can be overridden by passing in new variables in the mixin itself.
+	$grid-cols: $grid-cols,
+	$grid-gutter-width: $grid-gutter-width,
 	$grid-names: false,
-	$grid-alignment: left
+	$grid-alignment: $grid-alignment
 ) {
 	$columns: $grid-cols;
+	// Loop through a number of sequentially numbered divs from 1 to $columns
 	@for $column from 1 through $columns {
 	  .grid-col-#{$column} {
 	    width: 100% / $grid-cols * $column;
 	    padding: $grid-gutter-width / 2;
 
-	    // if $grid-names == true in demoGrid display the class name //
+	    // if $grid-names == true in demoGrid display the class name
 	    @if $grid-names == true {
 				& > .inner {
 					&:before {
@@ -34,7 +35,7 @@
 		}
 	}
 
-	// if $grid-alignment == left, right or center: display accordingly //
+	// if $grid-alignment == left, right or center: display accordingly
 	@if $grid-alignment == left {
 		[class*=grid-col] {
 			@include gridAlignment(left);

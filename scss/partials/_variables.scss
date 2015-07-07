@@ -1,1 +1,8 @@
-$grid-gutter-width: 16px; 
+// Set the number of columns in your grid
+$grid-cols: 12;
+
+// Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns
+$grid-gutter-width: 1.6rem;
+
+// Set the default grid alignment
+$grid-alignment: left;

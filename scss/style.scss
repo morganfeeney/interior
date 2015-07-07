@@ -9,15 +9,12 @@
 
 // Custom
 .grid {
-	max-width: 1000px;
+	max-width: 100rem;
 
-	@include griddle(
-		$grid-cols: 12,
-		$grid-alignment: left
-	);
+	@include griddle();
 
 	.inner {
-		min-height: 60px;
+		min-height: 6rem;
 	}
 
 	&-outer {
@@ -32,6 +29,9 @@
 
 // Demo
 @import 'partials/demo';
+
+// Theme
+@import 'partials/theme';
 
 // Helpers
 @include clearfix;

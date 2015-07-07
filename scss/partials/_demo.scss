@@ -1,41 +1,14 @@
 .grid {
-
 	&.demo {
-
 		&.grid-outer {
 			@include alpha-attribute('background-color', rgba(red, 0.1), red);
 		}
 		@include griddle(
-			$grid-names: true,
-			$grid-cols: 12,
-			$grid-gutter-width: $grid-gutter-width
+			$grid-names: true
 			);
 		.inner {
 			@include alpha-attribute('background-color', rgba(red, 0.2), red);
 			display: flex;
-		}
-	}
-
-	&.nested-example {
-		@include griddle(
-			$grid-names: false,
-			$grid-cols: 12,
-			$grid-gutter-width: $grid-gutter-width
-			);
-		&-1 {
-		}
-		&-2 {
-			@include alpha-attribute('background-color', rgba(blue, 0.2), blue);
-		}
-
-		.inner {
-			display: flex;
-
-			& [class*=grid-col]  {
-				.nested-inner-bg {
-					background-color: white;
-				}
-			}
 		}
 	}
 }
