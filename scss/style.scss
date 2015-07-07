@@ -7,22 +7,8 @@
 // Devtools
 @import 'partials/devtools';
 
-// Custom
-.grid {
-	max-width: 100rem;
-
-	@include griddle();
-
-	.inner {
-		min-height: 6rem;
-	}
-
-	&-outer {
-		@include gridAlignment(center);
-		padding: ($grid-gutter-width / 2);
-	}
-
-}
+// Grid
+@import 'partials/grid';
 
 // Code
 @import 'partials/code';

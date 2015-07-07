@@ -1,0 +1,25 @@
+// Custom
+.grid {
+	max-width: 100rem;
+
+	@include griddle();
+
+	%grid-gutter-width {
+		padding: $grid-gutter-width / 2;
+	}
+	.inner {
+		min-height: 6rem;
+	}
+	.nested {
+		&-outer {
+			padding: 0;
+		}
+		&-inner-bg {
+			padding: $grid-gutter-width / 2;
+		}
+	}
+	&-outer {
+		@include gridAlignment(center);
+		padding: $grid-gutter-width / 2;
+	}
+}

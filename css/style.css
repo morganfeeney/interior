@@ -91,63 +91,54 @@ p + * + * {
 }
 .grid .grid-col-1 {
   width: 8.3333%;
-  padding: 0.8rem;
 }
 .grid .grid-col-2 {
   width: 16.6667%;
-  padding: 0.8rem;
 }
 .grid .grid-col-3 {
   width: 25%;
-  padding: 0.8rem;
 }
 .grid .grid-col-4 {
   width: 33.3333%;
-  padding: 0.8rem;
 }
 .grid .grid-col-5 {
   width: 41.6667%;
-  padding: 0.8rem;
 }
 .grid .grid-col-6 {
   width: 50%;
-  padding: 0.8rem;
 }
 .grid .grid-col-7 {
   width: 58.3333%;
-  padding: 0.8rem;
 }
 .grid .grid-col-8 {
   width: 66.6667%;
-  padding: 0.8rem;
 }
 .grid .grid-col-9 {
   width: 75%;
-  padding: 0.8rem;
 }
 .grid .grid-col-10 {
   width: 83.3333%;
-  padding: 0.8rem;
 }
 .grid .grid-col-11 {
   width: 91.6667%;
-  padding: 0.8rem;
 }
 .grid .grid-col-12 {
   width: 100%;
+}
+.grid [class*=grid-col] {
+  float: left;
+}
+.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12, .grid.demo .grid-col-1, .grid.demo .grid-col-2, .grid.demo .grid-col-3, .grid.demo .grid-col-4, .grid.demo .grid-col-5, .grid.demo .grid-col-6, .grid.demo .grid-col-7, .grid.demo .grid-col-8, .grid.demo .grid-col-9, .grid.demo .grid-col-10, .grid.demo .grid-col-11, .grid.demo .grid-col-12 {
   padding: 0.8rem;
+}
+.grid .inner {
+  min-height: 6rem;
 }
 .grid .nested-outer {
   padding: 0;
 }
 .grid .nested-inner-bg {
   padding: 0.8rem;
-}
-.grid [class*=grid-col] {
-  float: left;
-}
-.grid .inner {
-  min-height: 6rem;
 }
 .grid-outer {
   display: block;
@@ -179,7 +170,6 @@ pre {
 }
 .grid.demo .grid-col-1 {
   width: 8.3333%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-1 > .inner:before {
   content: "1";
@@ -187,7 +177,6 @@ pre {
 }
 .grid.demo .grid-col-2 {
   width: 16.6667%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-2 > .inner:before {
   content: "2";
@@ -195,7 +184,6 @@ pre {
 }
 .grid.demo .grid-col-3 {
   width: 25%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-3 > .inner:before {
   content: "3";
@@ -203,7 +191,6 @@ pre {
 }
 .grid.demo .grid-col-4 {
   width: 33.3333%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-4 > .inner:before {
   content: "4";
@@ -211,7 +198,6 @@ pre {
 }
 .grid.demo .grid-col-5 {
   width: 41.6667%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-5 > .inner:before {
   content: "5";
@@ -219,7 +205,6 @@ pre {
 }
 .grid.demo .grid-col-6 {
   width: 50%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-6 > .inner:before {
   content: "6";
@@ -227,7 +212,6 @@ pre {
 }
 .grid.demo .grid-col-7 {
   width: 58.3333%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-7 > .inner:before {
   content: "7";
@@ -235,7 +219,6 @@ pre {
 }
 .grid.demo .grid-col-8 {
   width: 66.6667%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-8 > .inner:before {
   content: "8";
@@ -243,7 +226,6 @@ pre {
 }
 .grid.demo .grid-col-9 {
   width: 75%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-9 > .inner:before {
   content: "9";
@@ -251,7 +233,6 @@ pre {
 }
 .grid.demo .grid-col-10 {
   width: 83.3333%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-10 > .inner:before {
   content: "10";
@@ -259,7 +240,6 @@ pre {
 }
 .grid.demo .grid-col-11 {
   width: 91.6667%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-11 > .inner:before {
   content: "11";
@@ -267,17 +247,10 @@ pre {
 }
 .grid.demo .grid-col-12 {
   width: 100%;
-  padding: 0.8rem;
 }
 .grid.demo .grid-col-12 > .inner:before {
   content: "12";
   margin: auto;
-}
-.grid.demo .nested-outer {
-  padding: 0;
-}
-.grid.demo .nested-inner-bg {
-  padding: 0.8rem;
 }
 .grid.demo [class*=grid-col] {
   float: left;

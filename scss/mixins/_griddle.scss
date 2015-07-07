@@ -13,7 +13,7 @@
 	@for $column from 1 through $columns {
 	  .grid-col-#{$column} {
 	    width: 100% / $grid-cols * $column;
-	    padding: $grid-gutter-width / 2;
+	    @extend %grid-gutter-width;
 
 	    // if $grid-names == true in demoGrid display the class name
 	    @if $grid-names == true {
@@ -24,14 +24,6 @@
 					}
 				}
 			}
-		}
-	}
-	.nested {
-		&-outer {
-			padding: 0;
-		}
-		&-inner-bg {
-			padding: $grid-gutter-width / 2;
 		}
 	}
 
