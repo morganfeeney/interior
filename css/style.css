@@ -128,7 +128,7 @@ p + * + * {
 .grid [class*=grid-col] {
   float: left;
 }
-.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12, .grid.demo .grid-col-1, .grid.demo .grid-col-2, .grid.demo .grid-col-3, .grid.demo .grid-col-4, .grid.demo .grid-col-5, .grid.demo .grid-col-6, .grid.demo .grid-col-7, .grid.demo .grid-col-8, .grid.demo .grid-col-9, .grid.demo .grid-col-10, .grid.demo .grid-col-11, .grid.demo .grid-col-12 {
+.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12, .grid .demo.demo-1 .grid-col-1, .demo.demo-1 .grid .grid-col-1, .grid .demo.demo-1 .grid-col-2, .demo.demo-1 .grid .grid-col-2, .grid .demo.demo-1 .grid-col-3, .demo.demo-1 .grid .grid-col-3, .grid .demo.demo-1 .grid-col-4, .demo.demo-1 .grid .grid-col-4, .grid .demo.demo-1 .grid-col-5, .demo.demo-1 .grid .grid-col-5, .grid .demo.demo-1 .grid-col-6, .demo.demo-1 .grid .grid-col-6, .grid .demo.demo-1 .grid-col-7, .demo.demo-1 .grid .grid-col-7, .grid .demo.demo-1 .grid-col-8, .demo.demo-1 .grid .grid-col-8, .grid .demo.demo-1 .grid-col-9, .demo.demo-1 .grid .grid-col-9, .grid .demo.demo-1 .grid-col-10, .demo.demo-1 .grid .grid-col-10, .grid .demo.demo-1 .grid-col-11, .demo.demo-1 .grid .grid-col-11, .grid .demo.demo-1 .grid-col-12, .demo.demo-1 .grid .grid-col-12 {
   padding: 0.8rem;
 }
 .grid .inner {
@@ -164,98 +164,11 @@ pre {
   -webkit-overflow-scrolling: touch;
 }
 
-.grid.demo.grid-outer {
+.demo.demo-1.grid-outer {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.1);
 }
-.grid.demo .grid-col-1 {
-  width: 8.3333%;
-}
-.grid.demo .grid-col-1 > .inner:before {
-  content: "1";
-  margin: auto;
-}
-.grid.demo .grid-col-2 {
-  width: 16.6667%;
-}
-.grid.demo .grid-col-2 > .inner:before {
-  content: "2";
-  margin: auto;
-}
-.grid.demo .grid-col-3 {
-  width: 25%;
-}
-.grid.demo .grid-col-3 > .inner:before {
-  content: "3";
-  margin: auto;
-}
-.grid.demo .grid-col-4 {
-  width: 33.3333%;
-}
-.grid.demo .grid-col-4 > .inner:before {
-  content: "4";
-  margin: auto;
-}
-.grid.demo .grid-col-5 {
-  width: 41.6667%;
-}
-.grid.demo .grid-col-5 > .inner:before {
-  content: "5";
-  margin: auto;
-}
-.grid.demo .grid-col-6 {
-  width: 50%;
-}
-.grid.demo .grid-col-6 > .inner:before {
-  content: "6";
-  margin: auto;
-}
-.grid.demo .grid-col-7 {
-  width: 58.3333%;
-}
-.grid.demo .grid-col-7 > .inner:before {
-  content: "7";
-  margin: auto;
-}
-.grid.demo .grid-col-8 {
-  width: 66.6667%;
-}
-.grid.demo .grid-col-8 > .inner:before {
-  content: "8";
-  margin: auto;
-}
-.grid.demo .grid-col-9 {
-  width: 75%;
-}
-.grid.demo .grid-col-9 > .inner:before {
-  content: "9";
-  margin: auto;
-}
-.grid.demo .grid-col-10 {
-  width: 83.3333%;
-}
-.grid.demo .grid-col-10 > .inner:before {
-  content: "10";
-  margin: auto;
-}
-.grid.demo .grid-col-11 {
-  width: 91.6667%;
-}
-.grid.demo .grid-col-11 > .inner:before {
-  content: "11";
-  margin: auto;
-}
-.grid.demo .grid-col-12 {
-  width: 100%;
-}
-.grid.demo .grid-col-12 > .inner:before {
-  content: "12";
-  margin: auto;
-}
-.grid.demo [class*=grid-col] {
-  float: left;
-}
-.grid.demo .inner {
+.demo.demo-1 .inner {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.2);
   display: -webkit-box;
@@ -263,16 +176,163 @@ pre {
   display: -ms-flexbox;
   display: flex;
 }
+.demo.demo-1 .grid-col-1 {
+  width: 8.3333%;
+}
+.demo.demo-1 .grid-col-1 .inner:before {
+  content: "1";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-2 {
+  width: 16.6667%;
+}
+.demo.demo-1 .grid-col-2 .inner:before {
+  content: "2";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-3 {
+  width: 25%;
+}
+.demo.demo-1 .grid-col-3 .inner:before {
+  content: "3";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-4 {
+  width: 33.3333%;
+}
+.demo.demo-1 .grid-col-4 .inner:before {
+  content: "4";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-5 {
+  width: 41.6667%;
+}
+.demo.demo-1 .grid-col-5 .inner:before {
+  content: "5";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-6 {
+  width: 50%;
+}
+.demo.demo-1 .grid-col-6 .inner:before {
+  content: "6";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-7 {
+  width: 58.3333%;
+}
+.demo.demo-1 .grid-col-7 .inner:before {
+  content: "7";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-8 {
+  width: 66.6667%;
+}
+.demo.demo-1 .grid-col-8 .inner:before {
+  content: "8";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-9 {
+  width: 75%;
+}
+.demo.demo-1 .grid-col-9 .inner:before {
+  content: "9";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-10 {
+  width: 83.3333%;
+}
+.demo.demo-1 .grid-col-10 .inner:before {
+  content: "10";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-11 {
+  width: 91.6667%;
+}
+.demo.demo-1 .grid-col-11 .inner:before {
+  content: "11";
+  margin: auto;
+}
+.demo.demo-1 .grid-col-12 {
+  width: 100%;
+}
+.demo.demo-1 .grid-col-12 .inner:before {
+  content: "12";
+  margin: auto;
+}
+.demo.demo-1 [class*=grid-col] {
+  float: left;
+}
+.demo.demo-2.grid-outer {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+.demo.demo-2 .outer {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.demo.demo-2 .outer .inner {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.demo.demo-2 .inner {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.25);
+}
+.demo.demo-3.grid-outer {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+.demo.demo-3 .outer {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.demo.demo-3 .inner {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.2);
+}
+.demo.demo-4.grid-outer {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.1);
+}
+.demo.demo-4 .outer,
+.demo.demo-4 .inner {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.2);
+}
+.demo + .demo {
+  margin-top: 3.2rem;
+}
+.demo-outer {
+  display: block;
+  margin: auto;
+}
 
-.nested-example-2 {
+.bg-1 {
+  background-color: green;
+  background-color: rgba(0, 128, 0, 0.3);
+}
+.bg-1 > .inner {
+  background: orange;
+}
+.bg-2 {
+  background-color: cyan;
+  background-color: rgba(0, 255, 255, 0.3);
+}
+.bg-2 [class*=grid] .inner {
+  background: orange;
+}
+
+.filler {
+  background: #fff;
+}
+
+.demo-2 {
   background-color: blue;
   background-color: rgba(0, 0, 255, 0.2);
 }
-.nested-example .inner [class*=grid-col] .nested-inner-bg {
-  background-color: white;
-}
 
-.clearfix:after {
+.clearfix:after, .grid .inner:after {
   content: "";
   display: table;
   clear: both;

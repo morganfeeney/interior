@@ -1,14 +1,75 @@
-.grid {
-	&.demo {
+.demo {
+	&#{&-1} {
 		&.grid-outer {
 			@include alpha-attribute('background-color', rgba(red, 0.1), red);
 		}
-		@include griddle(
-			$grid-names: true
-			);
 		.inner {
 			@include alpha-attribute('background-color', rgba(red, 0.2), red);
 			display: flex;
+			
+		}		
+		@include griddle($grid-names: true);
+	}
+	&#{&-2} {
+		&.grid-outer {
+			@include alpha-attribute('background-color', rgba(green, 0.1), green);
+		}
+		.outer {
+			@include alpha-attribute('background-color', rgba(black, 0.25), black);
+			.inner {
+				@include alpha-attribute('background-color', rgba(black, 0.25), black);
+			}
+		}
+		.inner {
+			@include alpha-attribute('background-color', rgba(green, 0.25), green);
 		}
 	}
+	&#{&-3} {
+		&.grid-outer {
+			@include alpha-attribute('background-color', rgba(green, 0.1), green);
+		}
+		.outer {
+			@include alpha-attribute('background-color', rgba(black, 0.2), black);
+		}
+		.inner {
+			@include alpha-attribute('background-color', rgba(green, 0.2), green);
+		}
+	}
+	&#{&-4} {
+		&.grid-outer {
+			@include alpha-attribute('background-color', rgba(green, 0.1), green);
+		}
+		.outer,
+		.inner {
+			@include alpha-attribute('background-color', rgba(green, 0.2), green);
+		}
+	}
+	& + & {
+		margin-top: ($grid-gutter-width * 2);
+	}
+	&-outer {
+		display: block;
+		margin: auto;
+	}
+}
+
+.bg {
+	&-1 {
+		@include alpha-attribute('background-color', rgba(green, 0.3), green);
+		> .inner {
+			background: orange;
+		}
+	}
+	&-2 {
+		@include alpha-attribute('background-color', rgba(aqua, 0.3), aqua);
+		[class*=grid] {
+			.inner {
+				background: orange;
+			}
+		}
+	}
+}
+
+.filler {
+	background: #fff;
 }

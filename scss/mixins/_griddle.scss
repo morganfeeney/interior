@@ -11,19 +11,19 @@
 	$columns: $grid-cols;
 	// Loop through a number of sequentially numbered divs from 1 to $columns
 	@for $column from 1 through $columns {
-	  .grid-col-#{$column} {
-	    width: 100% / $grid-cols * $column;
-	    @extend %grid-gutter-width;
+		.grid-col-#{$column} {
+	   		width: 100% / $grid-cols * $column;
+	   		@extend %grid-gutter-width;
 
-	    // if $grid-names == true in demoGrid display the class name
-	    @if $grid-names == true {
-				& > .inner {
+		    // if $grid-names == true in demoGrid display the class name
+		    @if $grid-names == true {
+				.inner {
 					&:before {
 						content: '#{$column}';
 						margin: auto;
 					}
-				}
-			}
+				}	    		
+	    	}
 		}
 	}
 
