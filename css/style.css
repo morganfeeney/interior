@@ -82,13 +82,16 @@ p + * + * {
   background-color: rgba(255, 0, 0, 0.3);
   height: 100%;
 }
-.grid-outer {
+.grid-gutter-outer {
   width: 100%;
 }
 
-.grid {
+.container-set-width, #gridOverlay {
   max-width: 100rem;
+  display: block;
+  margin: auto;
 }
+
 .grid .grid-col-1 {
   width: 8.3333%;
 }
@@ -131,19 +134,19 @@ p + * + * {
 .grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12, .grid .demo.demo-1 .grid-col-1, .demo.demo-1 .grid .grid-col-1, .grid .demo.demo-1 .grid-col-2, .demo.demo-1 .grid .grid-col-2, .grid .demo.demo-1 .grid-col-3, .demo.demo-1 .grid .grid-col-3, .grid .demo.demo-1 .grid-col-4, .demo.demo-1 .grid .grid-col-4, .grid .demo.demo-1 .grid-col-5, .demo.demo-1 .grid .grid-col-5, .grid .demo.demo-1 .grid-col-6, .demo.demo-1 .grid .grid-col-6, .grid .demo.demo-1 .grid-col-7, .demo.demo-1 .grid .grid-col-7, .grid .demo.demo-1 .grid-col-8, .demo.demo-1 .grid .grid-col-8, .grid .demo.demo-1 .grid-col-9, .demo.demo-1 .grid .grid-col-9, .grid .demo.demo-1 .grid-col-10, .demo.demo-1 .grid .grid-col-10, .grid .demo.demo-1 .grid-col-11, .demo.demo-1 .grid .grid-col-11, .grid .demo.demo-1 .grid-col-12, .demo.demo-1 .grid .grid-col-12 {
   padding: 0.8rem;
 }
-.grid .inner {
-  min-height: 6rem;
-}
-.grid .nested-outer {
+.grid .col-group {
   padding: 0;
 }
-.grid .nested-inner-bg {
-  padding: 0.8rem;
+.grid .col-single {
+  clear: both;
 }
-.grid-outer {
-  display: block;
-  margin: auto;
+.grid-gutter-outer {
   padding: 0.8rem;
+  clear: both;
+}
+
+.inner {
+  min-height: 6rem;
 }
 
 .code-example {
@@ -164,7 +167,7 @@ pre {
   -webkit-overflow-scrolling: touch;
 }
 
-.demo.demo-1.grid-outer {
+.demo.demo-1.grid-gutter-outer {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.1);
 }
@@ -263,27 +266,26 @@ pre {
 .demo.demo-1 [class*=grid-col] {
   float: left;
 }
-.demo.demo-2.grid-outer {
+.demo.demo-2.grid-gutter-outer {
+  background-color: black;
+}
+.demo.demo-2 .col-single {
+  background-color: black;
+}
+.demo.demo-2 .col-single .inner {
+  background-color: red;
+}
+.demo.demo-2 .col-group .inner {
+  background-color: turquoise;
+}
+.demo.demo-2 .col-group > .inner {
+  background-color: black;
+}
+.demo.demo-3.grid-gutter-outer {
   background-color: green;
   background-color: rgba(0, 128, 0, 0.1);
 }
-.demo.demo-2 .outer {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.demo.demo-2 .outer .inner {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.demo.demo-2 .inner {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.25);
-}
-.demo.demo-3.grid-outer {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.1);
-}
-.demo.demo-3 .outer {
+.demo.demo-3 .col-single {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -291,11 +293,11 @@ pre {
   background-color: green;
   background-color: rgba(0, 128, 0, 0.2);
 }
-.demo.demo-4.grid-outer {
+.demo.demo-4.grid-gutter-outer {
   background-color: green;
   background-color: rgba(0, 128, 0, 0.1);
 }
-.demo.demo-4 .outer,
+.demo.demo-4 .col-single,
 .demo.demo-4 .inner {
   background-color: green;
   background-color: rgba(0, 128, 0, 0.2);
@@ -327,12 +329,7 @@ pre {
   background: #fff;
 }
 
-.demo-2 {
-  background-color: blue;
-  background-color: rgba(0, 0, 255, 0.2);
-}
-
-.clearfix:after, .grid .inner:after {
+.clearfix:after, .inner:after {
   content: "";
   display: table;
   clear: both;

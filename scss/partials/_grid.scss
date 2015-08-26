@@ -1,6 +1,13 @@
+// Containers
+.container {
+	&-set-width {
+		max-width: 100rem;
+		@include gridAlignment(center);
+	}
+}
+
 // Custom
 .grid {
-	max-width: 100rem;
 
 	@include griddle();
 	
@@ -8,20 +15,23 @@
 	%grid-gutter-width {
 		padding: $grid-gutter-width / 2;
 	}
-	.inner {
-		min-height: 6rem;
-		@extend .clearfix;
-	}
-	.nested {
-		&-outer {
+	.col {
+		&-group {
 			padding: 0;
 		}
-		&-inner-bg {
-			padding: $grid-gutter-width / 2;
+		&-single {
+			// Clear all the things
+			clear: both;
 		}
 	}
-	&-outer {
-		@include gridAlignment(center);
+	&-gutter-outer {
 		padding: $grid-gutter-width / 2;
+		// Clear all the things
+		clear: both;
 	}
+}
+
+.inner {
+	min-height: 6rem;
+	@extend .clearfix;
 }

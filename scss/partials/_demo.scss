@@ -1,6 +1,6 @@
 .demo {
 	&#{&-1} {
-		&.grid-outer {
+		&.grid-gutter-outer {
 			@include alpha-attribute('background-color', rgba(red, 0.1), red);
 		}
 		.inner {
@@ -11,24 +11,29 @@
 		@include griddle($grid-names: true);
 	}
 	&#{&-2} {
-		&.grid-outer {
-			@include alpha-attribute('background-color', rgba(green, 0.1), green);
+		&.grid-gutter-outer {
+			background-color: black;
 		}
-		.outer {
-			@include alpha-attribute('background-color', rgba(black, 0.25), black);
+		.col-single {
+			background-color: black;
 			.inner {
-				@include alpha-attribute('background-color', rgba(black, 0.25), black);
+				background-color: red;
 			}
 		}
-		.inner {
-			@include alpha-attribute('background-color', rgba(green, 0.25), green);
+		.col-group {
+			.inner {
+				background-color: turquoise;
+			}
+			> .inner {
+				background-color: black;
+			}
 		}
 	}
 	&#{&-3} {
-		&.grid-outer {
+		&.grid-gutter-outer {
 			@include alpha-attribute('background-color', rgba(green, 0.1), green);
 		}
-		.outer {
+		.col-single {
 			@include alpha-attribute('background-color', rgba(black, 0.2), black);
 		}
 		.inner {
@@ -36,10 +41,10 @@
 		}
 	}
 	&#{&-4} {
-		&.grid-outer {
+		&.grid-gutter-outer {
 			@include alpha-attribute('background-color', rgba(green, 0.1), green);
 		}
-		.outer,
+		.col-single,
 		.inner {
 			@include alpha-attribute('background-color', rgba(green, 0.2), green);
 		}

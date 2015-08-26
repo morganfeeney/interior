@@ -2,7 +2,7 @@ $(function(){
 	function gridOverlay(){
 		$('#gridOverlay').remove();
 		$('body').append(
-			'<div id="gridOverlay" class="grid grid-outer overlay">'+
+			'<div id="gridOverlay" class="grid grid-gutter-outer overlay">'+
 			'</div>'
 		);
 		for (var overlayGridCol = 0; overlayGridCol < 12; overlayGridCol++) {
