@@ -132,16 +132,14 @@
 							<div class="inner"></div>
 						</div>
 						<div class="grid-col-8 col-group">
-							<div class="inner">
-								<div class="grid-col-4">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-4">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-4">
-									<div class="inner"></div>
-								</div>
+							<div class="grid-col-4">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-4">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-4">
+								<div class="inner"></div>
 							</div>
 						</div>
 					</div>

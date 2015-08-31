@@ -17,12 +17,24 @@
 		.col-single {
 			background-color: black;
 			.inner {
-				background-color: red;
+				background-color: $demo-col-single;
+				display: flex;
+				&:before {
+					content: 'single child';
+					margin: auto;
+					color: darken($demo-col-single, 100);
+				}
 			}
 		}
 		.col-group {
 			.inner {
-				background-color: turquoise;
+				background-color: $demo-col-group;
+				display: flex;
+				&:before {
+					content: 'group child';
+					margin: auto;
+					color: darken($demo-col-group, 100);
+				}
 			}
 			> .inner {
 				background-color: black;

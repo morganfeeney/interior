@@ -274,9 +274,27 @@ pre {
 }
 .demo.demo-2 .col-single .inner {
   background-color: red;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.demo.demo-2 .col-single .inner:before {
+  content: 'single child';
+  margin: auto;
+  color: black;
 }
 .demo.demo-2 .col-group .inner {
   background-color: turquoise;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.demo.demo-2 .col-group .inner:before {
+  content: 'group child';
+  margin: auto;
+  color: black;
 }
 .demo.demo-2 .col-group > .inner {
   background-color: black;
