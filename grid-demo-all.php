@@ -25,7 +25,7 @@
 					These default values can be overridden e.g.
 				</p>
 			</section>
-			<section class="grid grid-gutter-outer demo demo-1">
+			<section class="grid grid-gutter-outer demo demo-bg-1">
 				<div class="grid-row clearfix">
 					<div class="grid-col-12">
 						<div class="inner"></div>
@@ -120,18 +120,18 @@
 					</div>
 				</div>
 			</section>
-			<section class="grid demo demo-2">
+			<section class="grid demo demo-bg-2">
 				<h2>Nested Demo 1</h2>
 				<p class="large">
 					How to group nested columns, e.g. sidebar and content area:
 				</p>
 				<?php include('includes/code-samples/nested-demo-1.php') ?>
-				<div class="grid-gutter-outer demo demo-2">
+				<div class="grid-gutter-outer">
 					<div class="grid-row clearfix">
-						<div class="grid-col-4 col-single">
+						<div class="grid-col-4 col-single with-names">
 							<div class="inner"></div>
 						</div>
-						<div class="grid-col-8 col-group">
+						<div class="grid-col-8 col-group with-names">
 							<div class="grid-col-4">
 								<div class="inner"></div>
 							</div>
@@ -145,54 +145,39 @@
 					</div>
 				</div>
 			</section>
-			<section class="grid grid-gutter-outer demo demo-3">
+			<section class="grid demo demo-bg-2">
 				<h2>Nested Demo 2</h2>
 				<p class="large">
-					Nesting columns using background-colour to create the grid-gutter:
+					How to group nested columns, within other nested columns:
 				</p>
-				<div class="grid-row clearfix">
-					<div class="grid-col-4 col-single">
-						<div class="inner">
-							<p>This is some text for layout purposes, it can go on a bit.</p>
+				<?php //include('includes/code-samples/nested-demo-1.php') ?>
+				<div class="grid-gutter-outer">
+					<div class="grid-row clearfix">
+						<div class="grid-col-6 col-single">
+							<div class="inner">
+								<div class="col-group with-names">
+									<div class="grid-col-4">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-4">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-4">
+										<div class="inner"></div>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="grid-col-8 col-group">
-						<div class="inner">
+						<div class="grid-col-6 col-group">
 							<div class="grid-col-4">
-								<p>This is some text for layout purposes, it can go on a bit.</p>
-								<p>This is some text for layout purposes, it can go on a bit.</p>
+								<div class="inner"></div>
 							</div>
 							<div class="grid-col-4">
-								<p>This is some text for layout purposes, it can go on a bit.</p>
+								<div class="inner"></div>
 							</div>
 							<div class="grid-col-4">
-								<p>This is some text for layout purposes, it can go on a bit.</p>
+								<div class="inner"></div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="grid grid-gutter-outer demo demo-4">
-				<div class="grid-col-12">
-					<h2>Nested Demo 3</h2>
-					<p class="large">
-						Nesting columns with visual aid:
-					</p>
-				</div>
-				<div class="grid-row clearfix">
-					<div class="grid-col-4 col-single">
-						<p class="filler">This is some text for layout purposes, it can go on a bit.</p>
-					</div>
-					<div class="grid-col-8 col-group">
-						<div class="grid-col-4">
-							<p class="filler">This is some text for layout purposes, it can go on a bit.</p>
-							<p class="filler">This is some text for layout purposes, it can go on a bit.</p>
-						</div>
-						<div class="grid-col-4">
-							<p class="filler">This is some text for layout purposes, it can go on a bit.</p>
-						</div>
-						<div class="grid-col-4">
-							<p class="filler">This is some text for layout purposes, it can go on a bit.</p>
 						</div>
 					</div>
 				</div>

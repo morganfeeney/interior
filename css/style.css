@@ -131,7 +131,7 @@ p + * + * {
 .grid [class*=grid-col] {
   float: left;
 }
-.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12, .grid .demo.demo-1 .grid-col-1, .demo.demo-1 .grid .grid-col-1, .grid .demo.demo-1 .grid-col-2, .demo.demo-1 .grid .grid-col-2, .grid .demo.demo-1 .grid-col-3, .demo.demo-1 .grid .grid-col-3, .grid .demo.demo-1 .grid-col-4, .demo.demo-1 .grid .grid-col-4, .grid .demo.demo-1 .grid-col-5, .demo.demo-1 .grid .grid-col-5, .grid .demo.demo-1 .grid-col-6, .demo.demo-1 .grid .grid-col-6, .grid .demo.demo-1 .grid-col-7, .demo.demo-1 .grid .grid-col-7, .grid .demo.demo-1 .grid-col-8, .demo.demo-1 .grid .grid-col-8, .grid .demo.demo-1 .grid-col-9, .demo.demo-1 .grid .grid-col-9, .grid .demo.demo-1 .grid-col-10, .demo.demo-1 .grid .grid-col-10, .grid .demo.demo-1 .grid-col-11, .demo.demo-1 .grid .grid-col-11, .grid .demo.demo-1 .grid-col-12, .demo.demo-1 .grid .grid-col-12 {
+.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12 {
   padding: 0.8rem;
 }
 .grid .col-group {
@@ -167,11 +167,11 @@ pre {
   -webkit-overflow-scrolling: touch;
 }
 
-.demo.demo-1.grid-gutter-outer {
+.demo-bg-1.grid-gutter-outer {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.1);
 }
-.demo.demo-1 .inner {
+.demo-bg-1 .inner {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.2);
   display: -webkit-box;
@@ -179,146 +179,121 @@ pre {
   display: -ms-flexbox;
   display: flex;
 }
-.demo.demo-1 .grid-col-1 {
+.demo-bg-1 .grid-col-1 {
   width: 8.3333%;
 }
-.demo.demo-1 .grid-col-1 .inner:before {
+.demo-bg-1 .grid-col-1 .inner:before {
   content: "1";
   margin: auto;
 }
-.demo.demo-1 .grid-col-2 {
+.demo-bg-1 .grid-col-2 {
   width: 16.6667%;
 }
-.demo.demo-1 .grid-col-2 .inner:before {
+.demo-bg-1 .grid-col-2 .inner:before {
   content: "2";
   margin: auto;
 }
-.demo.demo-1 .grid-col-3 {
+.demo-bg-1 .grid-col-3 {
   width: 25%;
 }
-.demo.demo-1 .grid-col-3 .inner:before {
+.demo-bg-1 .grid-col-3 .inner:before {
   content: "3";
   margin: auto;
 }
-.demo.demo-1 .grid-col-4 {
+.demo-bg-1 .grid-col-4 {
   width: 33.3333%;
 }
-.demo.demo-1 .grid-col-4 .inner:before {
+.demo-bg-1 .grid-col-4 .inner:before {
   content: "4";
   margin: auto;
 }
-.demo.demo-1 .grid-col-5 {
+.demo-bg-1 .grid-col-5 {
   width: 41.6667%;
 }
-.demo.demo-1 .grid-col-5 .inner:before {
+.demo-bg-1 .grid-col-5 .inner:before {
   content: "5";
   margin: auto;
 }
-.demo.demo-1 .grid-col-6 {
+.demo-bg-1 .grid-col-6 {
   width: 50%;
 }
-.demo.demo-1 .grid-col-6 .inner:before {
+.demo-bg-1 .grid-col-6 .inner:before {
   content: "6";
   margin: auto;
 }
-.demo.demo-1 .grid-col-7 {
+.demo-bg-1 .grid-col-7 {
   width: 58.3333%;
 }
-.demo.demo-1 .grid-col-7 .inner:before {
+.demo-bg-1 .grid-col-7 .inner:before {
   content: "7";
   margin: auto;
 }
-.demo.demo-1 .grid-col-8 {
+.demo-bg-1 .grid-col-8 {
   width: 66.6667%;
 }
-.demo.demo-1 .grid-col-8 .inner:before {
+.demo-bg-1 .grid-col-8 .inner:before {
   content: "8";
   margin: auto;
 }
-.demo.demo-1 .grid-col-9 {
+.demo-bg-1 .grid-col-9 {
   width: 75%;
 }
-.demo.demo-1 .grid-col-9 .inner:before {
+.demo-bg-1 .grid-col-9 .inner:before {
   content: "9";
   margin: auto;
 }
-.demo.demo-1 .grid-col-10 {
+.demo-bg-1 .grid-col-10 {
   width: 83.3333%;
 }
-.demo.demo-1 .grid-col-10 .inner:before {
+.demo-bg-1 .grid-col-10 .inner:before {
   content: "10";
   margin: auto;
 }
-.demo.demo-1 .grid-col-11 {
+.demo-bg-1 .grid-col-11 {
   width: 91.6667%;
 }
-.demo.demo-1 .grid-col-11 .inner:before {
+.demo-bg-1 .grid-col-11 .inner:before {
   content: "11";
   margin: auto;
 }
-.demo.demo-1 .grid-col-12 {
+.demo-bg-1 .grid-col-12 {
   width: 100%;
 }
-.demo.demo-1 .grid-col-12 .inner:before {
+.demo-bg-1 .grid-col-12 .inner:before {
   content: "12";
   margin: auto;
 }
-.demo.demo-1 [class*=grid-col] {
+.demo-bg-1 [class*=grid-col] {
   float: left;
 }
-.demo.demo-2.grid-gutter-outer {
-  background-color: black;
+.demo-bg-2 .grid-gutter-outer {
+  background-color: #5F9ED9;
 }
-.demo.demo-2 .col-single {
-  background-color: black;
-}
-.demo.demo-2 .col-single .inner {
-  background-color: red;
+.demo-bg-2 .col-single.with-names .inner {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.demo.demo-2 .col-single .inner:before {
-  content: 'single child';
+.demo-bg-2 .col-single.with-names .inner p {
   margin: auto;
-  color: black;
+  color: rgba(255, 255, 255, 0.5);
 }
-.demo.demo-2 .col-group .inner {
-  background-color: turquoise;
+.demo-bg-2 .col-single .inner {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.demo-bg-2 .col-group.with-names .inner {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-.demo.demo-2 .col-group .inner:before {
-  content: 'group child';
+.demo-bg-2 .col-group.with-names .inner p {
   margin: auto;
-  color: black;
+  color: rgba(0, 0, 0, 0.75);
 }
-.demo.demo-2 .col-group > .inner {
-  background-color: black;
-}
-.demo.demo-3.grid-gutter-outer {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.1);
-}
-.demo.demo-3 .col-single {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.demo.demo-3 .inner {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.2);
-}
-.demo.demo-4.grid-gutter-outer {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.1);
-}
-.demo.demo-4 .col-single,
-.demo.demo-4 .inner {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.2);
+.demo-bg-2 .col-group .inner {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 .demo + .demo {
   margin-top: 3.2rem;
@@ -326,25 +301,6 @@ pre {
 .demo-outer {
   display: block;
   margin: auto;
-}
-
-.bg-1 {
-  background-color: green;
-  background-color: rgba(0, 128, 0, 0.3);
-}
-.bg-1 > .inner {
-  background: orange;
-}
-.bg-2 {
-  background-color: cyan;
-  background-color: rgba(0, 255, 255, 0.3);
-}
-.bg-2 [class*=grid] .inner {
-  background: orange;
-}
-
-.filler {
-  background: #fff;
 }
 
 .clearfix:after, .inner:after {

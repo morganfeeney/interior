@@ -1,5 +1,5 @@
 .demo {
-	&#{&-1} {
+	&-bg-1 {
 		&.grid-gutter-outer {
 			@include alpha-attribute('background-color', rgba(red, 0.1), red);
 		}
@@ -10,55 +10,37 @@
 		}		
 		@include griddle($grid-names: true);
 	}
-	&#{&-2} {
-		&.grid-gutter-outer {
-			background-color: black;
+	&-bg-2 {
+		.grid-gutter-outer {
+			background-color: $demo-bg-1;
 		}
 		.col-single {
-			background-color: black;
-			.inner {
-				background-color: $demo-col-single;
-				display: flex;
-				&:before {
-					content: 'single child';
-					margin: auto;
-					color: darken($demo-col-single, 100);
+			&.with-names {
+				.inner {
+					display: flex;
+					p {
+						margin: auto;
+						color: lighten($demo-bg-1--single, 100);
+					}					
 				}
+			}
+			.inner {
+				background-color: $demo-bg-1--single;
 			}
 		}
 		.col-group {
-			.inner {
-				background-color: $demo-col-group;
-				display: flex;
-				&:before {
-					content: 'group child';
-					margin: auto;
-					color: darken($demo-col-group, 100);
+			&.with-names {
+				.inner {
+					display: flex;
+					p {
+						margin: auto;
+						color: darken($demo-bg-1--group, 100);
+					}					
 				}
 			}
-			> .inner {
-				background-color: black;
+			.inner {
+				background-color: $demo-bg-1--group;
 			}
-		}
-	}
-	&#{&-3} {
-		&.grid-gutter-outer {
-			@include alpha-attribute('background-color', rgba(green, 0.1), green);
-		}
-		.col-single {
-			@include alpha-attribute('background-color', rgba(black, 0.2), black);
-		}
-		.inner {
-			@include alpha-attribute('background-color', rgba(green, 0.2), green);
-		}
-	}
-	&#{&-4} {
-		&.grid-gutter-outer {
-			@include alpha-attribute('background-color', rgba(green, 0.1), green);
-		}
-		.col-single,
-		.inner {
-			@include alpha-attribute('background-color', rgba(green, 0.2), green);
 		}
 	}
 	& + & {
@@ -68,25 +50,4 @@
 		display: block;
 		margin: auto;
 	}
-}
-
-.bg {
-	&-1 {
-		@include alpha-attribute('background-color', rgba(green, 0.3), green);
-		> .inner {
-			background: orange;
-		}
-	}
-	&-2 {
-		@include alpha-attribute('background-color', rgba(aqua, 0.3), aqua);
-		[class*=grid] {
-			.inner {
-				background: orange;
-			}
-		}
-	}
-}
-
-.filler {
-	background: #fff;
 }
