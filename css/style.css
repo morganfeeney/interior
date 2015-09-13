@@ -131,14 +131,14 @@ p + * + * {
 .grid [class*=grid-col] {
   float: left;
 }
-.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12 {
+.grid .grid-col-1, .grid .grid-col-2, .grid .grid-col-3, .grid .grid-col-4, .grid .grid-col-5, .grid .grid-col-6, .grid .grid-col-7, .grid .grid-col-8, .grid .grid-col-9, .grid .grid-col-10, .grid .grid-col-11, .grid .grid-col-12, .grid .demo-bg-1.grid-nums .grid-col-1, .demo-bg-1.grid-nums .grid .grid-col-1, .grid .demo-bg-1.grid-nums .grid-col-2, .demo-bg-1.grid-nums .grid .grid-col-2, .grid .demo-bg-1.grid-nums .grid-col-3, .demo-bg-1.grid-nums .grid .grid-col-3, .grid .demo-bg-1.grid-nums .grid-col-4, .demo-bg-1.grid-nums .grid .grid-col-4, .grid .demo-bg-1.grid-nums .grid-col-5, .demo-bg-1.grid-nums .grid .grid-col-5, .grid .demo-bg-1.grid-nums .grid-col-6, .demo-bg-1.grid-nums .grid .grid-col-6, .grid .demo-bg-1.grid-nums .grid-col-7, .demo-bg-1.grid-nums .grid .grid-col-7, .grid .demo-bg-1.grid-nums .grid-col-8, .demo-bg-1.grid-nums .grid .grid-col-8, .grid .demo-bg-1.grid-nums .grid-col-9, .demo-bg-1.grid-nums .grid .grid-col-9, .grid .demo-bg-1.grid-nums .grid-col-10, .demo-bg-1.grid-nums .grid .grid-col-10, .grid .demo-bg-1.grid-nums .grid-col-11, .demo-bg-1.grid-nums .grid .grid-col-11, .grid .demo-bg-1.grid-nums .grid-col-12, .demo-bg-1.grid-nums .grid .grid-col-12 {
   padding: 0.8rem;
 }
 .grid .col-group {
   padding: 0;
 }
-.grid .col-single {
-  clear: both;
+.grid .col-group-descend > [class*=grid-col] {
+  padding: 0;
 }
 .grid-gutter-outer {
   padding: 0.8rem;
@@ -167,6 +167,93 @@ pre {
   -webkit-overflow-scrolling: touch;
 }
 
+.demo-bg-1.grid-nums .grid-col-1 {
+  width: 8.3333%;
+}
+.demo-bg-1.grid-nums .grid-col-1 .inner:before {
+  content: "1";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-2 {
+  width: 16.6667%;
+}
+.demo-bg-1.grid-nums .grid-col-2 .inner:before {
+  content: "2";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-3 {
+  width: 25%;
+}
+.demo-bg-1.grid-nums .grid-col-3 .inner:before {
+  content: "3";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-4 {
+  width: 33.3333%;
+}
+.demo-bg-1.grid-nums .grid-col-4 .inner:before {
+  content: "4";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-5 {
+  width: 41.6667%;
+}
+.demo-bg-1.grid-nums .grid-col-5 .inner:before {
+  content: "5";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-6 {
+  width: 50%;
+}
+.demo-bg-1.grid-nums .grid-col-6 .inner:before {
+  content: "6";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-7 {
+  width: 58.3333%;
+}
+.demo-bg-1.grid-nums .grid-col-7 .inner:before {
+  content: "7";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-8 {
+  width: 66.6667%;
+}
+.demo-bg-1.grid-nums .grid-col-8 .inner:before {
+  content: "8";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-9 {
+  width: 75%;
+}
+.demo-bg-1.grid-nums .grid-col-9 .inner:before {
+  content: "9";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-10 {
+  width: 83.3333%;
+}
+.demo-bg-1.grid-nums .grid-col-10 .inner:before {
+  content: "10";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-11 {
+  width: 91.6667%;
+}
+.demo-bg-1.grid-nums .grid-col-11 .inner:before {
+  content: "11";
+  margin: auto;
+}
+.demo-bg-1.grid-nums .grid-col-12 {
+  width: 100%;
+}
+.demo-bg-1.grid-nums .grid-col-12 .inner:before {
+  content: "12";
+  margin: auto;
+}
+.demo-bg-1.grid-nums [class*=grid-col] {
+  float: left;
+}
 .demo-bg-1.grid-gutter-outer {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.1);
@@ -178,93 +265,6 @@ pre {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-.demo-bg-1 .grid-col-1 {
-  width: 8.3333%;
-}
-.demo-bg-1 .grid-col-1 .inner:before {
-  content: "1";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-2 {
-  width: 16.6667%;
-}
-.demo-bg-1 .grid-col-2 .inner:before {
-  content: "2";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-3 {
-  width: 25%;
-}
-.demo-bg-1 .grid-col-3 .inner:before {
-  content: "3";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-4 {
-  width: 33.3333%;
-}
-.demo-bg-1 .grid-col-4 .inner:before {
-  content: "4";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-5 {
-  width: 41.6667%;
-}
-.demo-bg-1 .grid-col-5 .inner:before {
-  content: "5";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-6 {
-  width: 50%;
-}
-.demo-bg-1 .grid-col-6 .inner:before {
-  content: "6";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-7 {
-  width: 58.3333%;
-}
-.demo-bg-1 .grid-col-7 .inner:before {
-  content: "7";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-8 {
-  width: 66.6667%;
-}
-.demo-bg-1 .grid-col-8 .inner:before {
-  content: "8";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-9 {
-  width: 75%;
-}
-.demo-bg-1 .grid-col-9 .inner:before {
-  content: "9";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-10 {
-  width: 83.3333%;
-}
-.demo-bg-1 .grid-col-10 .inner:before {
-  content: "10";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-11 {
-  width: 91.6667%;
-}
-.demo-bg-1 .grid-col-11 .inner:before {
-  content: "11";
-  margin: auto;
-}
-.demo-bg-1 .grid-col-12 {
-  width: 100%;
-}
-.demo-bg-1 .grid-col-12 .inner:before {
-  content: "12";
-  margin: auto;
-}
-.demo-bg-1 [class*=grid-col] {
-  float: left;
 }
 .demo-bg-2 .grid-gutter-outer {
   background-color: #5F9ED9;
@@ -301,6 +301,12 @@ pre {
 .demo-outer {
   display: block;
   margin: auto;
+}
+.demo-borders > [class*=grid-col] {
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+.demo-borders > [class*=grid-col]:last-child {
+  border: none;
 }
 
 .clearfix:after, .inner:after {

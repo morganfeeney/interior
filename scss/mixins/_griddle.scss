@@ -5,7 +5,7 @@
 	// They can be overridden by passing in new variables in the mixin itself.
 	$grid-cols: $grid-cols,
 	$grid-gutter-width: $grid-gutter-width,
-	$grid-names: false,
+	$grid-nums: false,
 	$grid-alignment: $grid-alignment
 ) {
 	$columns: $grid-cols;
@@ -16,7 +16,7 @@
 	   		@extend %grid-gutter-width;
 
 		    // if $grid-names == true in demoGrid display the class name
-		    @if $grid-names == true {
+		    @if $grid-nums == true {
 				.inner {
 					&:before {
 						content: '#{$column}';

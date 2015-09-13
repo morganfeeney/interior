@@ -18,10 +18,11 @@
 	.col {
 		&-group {
 			padding: 0;
-		}
-		&-single {
-			// Clear all the things
-			clear: both;
+			&-descend {
+				> [class*=grid-col] {
+					padding: 0;
+				}
+			}
 		}
 	}
 	&-gutter-outer {

@@ -25,7 +25,7 @@
 					These default values can be overridden e.g.
 				</p>
 			</section>
-			<section class="grid grid-gutter-outer demo demo-bg-1">
+			<section class="grid grid-gutter-outer demo demo-bg-1 grid-nums">
 				<div class="grid-row clearfix">
 					<div class="grid-col-12">
 						<div class="inner"></div>
@@ -121,7 +121,7 @@
 				</div>
 			</section>
 			<section class="grid demo demo-bg-2">
-				<h2>Nested Demo 1</h2>
+				<h2>Demo 1</h2>
 				<p class="large">
 					How to group nested columns, e.g. sidebar and content area:
 				</p>
@@ -146,13 +146,58 @@
 				</div>
 			</section>
 			<section class="grid demo demo-bg-2">
-				<h2>Nested Demo 2</h2>
+				<h2>Demo 2</h2>
 				<p class="large">
-					How to group nested columns, within other nested columns:
+					How to group columns within columns:
 				</p>
 				<?php //include('includes/code-samples/nested-demo-1.php') ?>
 				<div class="grid-gutter-outer">
 					<div class="grid-row clearfix">
+						<div class="grid-col-12 col-single with-names">
+							<div class="inner"></div>
+						</div>
+						<div class="grid-col-12 col-single">
+							<div class="inner">
+								<div class="col-group demo-bg-1 col-group-descend demo-borders">
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="grid-col-6 col-single">
 							<div class="inner">
 								<div class="col-group with-names">
@@ -168,19 +213,36 @@
 								</div>
 							</div>
 						</div>
-						<div class="grid-col-6 col-group">
-							<div class="grid-col-4">
-								<div class="inner"></div>
+						<div class="grid-col-6 col-single">
+							<div class="inner">
+								<div class="col-group with-names">
+									<div class="grid-col-6">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-6">
+										<div class="inner"></div>
+									</div>
+								</div>
 							</div>
-							<div class="grid-col-4">
-								<div class="inner"></div>
-							</div>
-							<div class="grid-col-4">
+						</div>
+						<div class="grid-col-12 col-single with-names">
+							<div class="inner"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="grid demo demo-bg-1">
+				<h2>Demo 3</h2>
+				<p class="large">
+					How to offset columns:
+				</p>
+					<div class="grid-row clearfix">
+						<div class="col-group-descend">
+							<div class="grid-col-6 col-single">
 								<div class="inner"></div>
 							</div>
 						</div>
 					</div>
-				</div>
 			</section>			
 		</main>
 

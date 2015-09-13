@@ -27,6 +27,7 @@ $(function(){
 		});
 	}
 	overlayToggle();
+	
 	function demoText(){
 		$('.col-single.with-names .inner').append('<p>single child</p>');
 		$('.col-group.with-names .inner').append('<p>group child</p>');

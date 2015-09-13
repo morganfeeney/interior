@@ -1,14 +1,15 @@
 .demo {
 	&-bg-1 {
+		&.grid-nums {
+			@include griddle($grid-nums: true);
+		}
 		&.grid-gutter-outer {
 			@include alpha-attribute('background-color', rgba(red, 0.1), red);
 		}
 		.inner {
 			@include alpha-attribute('background-color', rgba(red, 0.2), red);
 			display: flex;
-			
 		}		
-		@include griddle($grid-names: true);
 	}
 	&-bg-2 {
 		.grid-gutter-outer {
@@ -49,5 +50,13 @@
 	&-outer {
 		display: block;
 		margin: auto;
+	}
+	&-borders {
+		> [class*=grid-col] {
+			border-right: 1px solid $demo-bg-1--single;
+			&:last-child {
+				border: none;
+			}
+		}
 	}
 }
