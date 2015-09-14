@@ -16,7 +16,7 @@
 		}
 		
 		.inner {
-			@include alpha-attribute('background-color', rgba(red, 0.3), red);
+			background: rgba(red, 0.3);
 			height: 100%;
 		}
 	}

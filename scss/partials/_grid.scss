@@ -9,7 +9,7 @@
 // Custom
 .grid {
 
-	@include griddle();
+	@include interior();
 	
 	// Placeholder to store grid-gutter-width padding value so it can be extended
 	%grid-gutter-width {
@@ -30,9 +30,4 @@
 		// Clear all the things
 		clear: both;
 	}
-}
-
-.inner {
-	min-height: 6rem;
-	@extend .clearfix;
 }

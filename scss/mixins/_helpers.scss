@@ -7,16 +7,6 @@
 	}
 }
 
-// @mixin for creating RGBA colours with HEX fallback
-
-@mixin alpha-attribute($attribute, $color, $background) {
-	$percent: alpha($color) * 100%;
-	$opaque: opacify($color, 1);
-	$solid-color: mix($opaque, $background, $percent);
-	#{$attribute}: $solid-color;
-	#{$attribute}: $color;
-}
-
 // Clearfix Hack
 
 @mixin clearfix {

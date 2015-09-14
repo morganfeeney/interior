@@ -1,19 +1,22 @@
 .demo {
 	&-bg-1 {
 		&.grid-nums {
-			@include griddle($grid-nums: true);
+			@include interior($grid-nums: true);
 		}
 		&.grid-gutter-outer {
-			@include alpha-attribute('background-color', rgba(red, 0.1), red);
+			background: rgba(red, 0.1);
 		}
 		.inner {
-			@include alpha-attribute('background-color', rgba(red, 0.2), red);
+			background: rgba(red, 0.2);
 			display: flex;
 		}		
 	}
 	&-bg-2 {
 		.grid-gutter-outer {
 			background-color: $demo-bg-1;
+		}
+		.inner {
+			background-color: $demo-bg-1--group;
 		}
 		.col-single {
 			&.with-names {
@@ -29,23 +32,9 @@
 				background-color: $demo-bg-1--single;
 			}
 		}
-		.col-group {
-			&.with-names {
-				.inner {
-					display: flex;
-					p {
-						margin: auto;
-						color: darken($demo-bg-1--group, 100);
-					}					
-				}
-			}
-			.inner {
-				background-color: $demo-bg-1--group;
-			}
-		}
 	}
 	& + & {
-		margin-top: ($grid-gutter-width * 2);
+		margin-top: ($grid-gutter-width * 4);
 	}
 	&-outer {
 		display: block;
@@ -53,10 +42,39 @@
 	}
 	&-borders {
 		> [class*=grid-col] {
-			border-right: 1px solid $demo-bg-1--single;
+			border-left: 1px solid rgba(red, .4);
+			border-right: 1px solid rgba(red, .4);
+			border-top: 0;
+			border-bottom: 0;
+			&:first-child {
+				border-left: none;
+			}
 			&:last-child {
-				border: none;
+				border-right: none;
 			}
 		}
+		> [class*=grid-col-flip] {
+			border-right: none;
+			border-left: none;
+			&:first-child {
+				border-left: 1px solid rgba(red, .4);
+			}
+			&:last-child {
+				border-right: 1px solid rgba(red, .4);
+			}
+		}
+	}
+}
+.inner {
+	min-height: 4rem;
+	@extend .clearfix;
+}
+.with-names {
+	.inner {
+		display: flex;
+		p {
+			margin: auto;
+			color: darken($demo-bg-1--group, 100);
+		}					
 	}
 }

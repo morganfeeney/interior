@@ -1,6 +1,6 @@
 // TO DO --> Create a feature which allows the use of inline-block or float, or flex (if easy enough)
 
-@mixin griddle(
+@mixin interior(
 	// The variables below are assigned values in: variables.scss.
 	// They can be overridden by passing in new variables in the mixin itself.
 	$grid-cols: $grid-cols,
@@ -14,6 +14,7 @@
 		.grid-col-#{$column} {
 	   		width: 100% / $grid-cols * $column;
 	   		@extend %grid-gutter-width;
+	   		position: relative;
 
 		    // if $grid-names == true in demoGrid display the class name
 		    @if $grid-nums == true {
@@ -24,6 +25,17 @@
 					}
 				}	    		
 	    	}
+		}
+		.grid-col-push-#{$column} {
+	   		margin-left: 100% / $grid-cols * $column;
+		}
+		.grid-col-flip {
+			&-left-#{$column} {
+		   		left: 100% / $grid-cols * $column;
+			}
+			&-right-#{$column} {
+		   		right: 100% / $grid-cols * $column;
+			}
 		}
 	}
 
