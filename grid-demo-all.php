@@ -19,7 +19,7 @@
 		</script>
 	</head>
 	<body>
-		<header class="container-outer">
+		<header class="container-outer theme-1">
 			<div class="container-set-width">
 				<h1>Interior</h1>
 			</div>
@@ -27,6 +27,7 @@
 		<main class="container-outer">
 			<div class="container-set-width">
 				<section class="intro">
+				<h2>About</h2>
 					<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS) it is configurable to your needs.</p>
 					<?php include('includes/code-samples/griddle-config-1.php') ?>
 					<p class="large">

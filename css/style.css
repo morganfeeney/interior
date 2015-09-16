@@ -21,13 +21,11 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
   color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova";
-  font-weight: 400;
+  font: normal 400 2.4rem/1.6 "proxima-nova";
   text-transform: uppercase;
   margin: 0;
   padding: 0;
@@ -38,7 +36,7 @@ p {
 }
 
 * ~ *:not([class*=grid-col]):not(main) {
-  margin: 0 0 1.6rem 0;
+  margin: 0 0 3rem 0;
 }
 
 .grid-gutter-outer.demo [class*=grid-row] {
@@ -278,12 +276,32 @@ code, pre {
   white-space: pre;
 }
 
+pre.snippet code {
+  background: rgba(255, 112, 112, 0.1);
+  display: block;
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+pre.snippet:before {
+  content: attr(rel);
+  background: #555;
+  display: block;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font: normal 600 1.4rem "Proxima Nova";
+}
+
 pre {
   -moz-tab-size: 4;
     -o-tab-size: 4;
        tab-size: 4;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+code {
+  background: rgba(255, 112, 112, 0.1);
 }
 
 .demo-bg-1.grid-nums .grid-col-1 {
@@ -575,19 +593,35 @@ pre {
 }
 
 header {
-  background: #FF7070;
   overflow: hidden;
-  padding: 2rem 0;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+}
+header.theme-1 {
+  background: #FF7070;
+}
+header.theme-1 h1 {
+  font: normal 600 8rem/1.6 "proxima-nova";
+  padding-bottom: 2rem;
+}
+header.theme-1 h1:after {
+  content: "Modular grid system";
+  font-size: 2rem;
+  display: block;
+  font-weight: 300;
+  margin-top: -3rem;
+}
+header.theme-2 {
+  background: #FFF;
+}
+header.theme-2 h1 {
+  color: #FF7070;
+  font-size: 5rem;
+  text-shadow: -1rem -1rem rgba(0, 0, 0, 0.1), 1rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 main {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(55%, transparent), color-stop(100%, transparent));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, transparent 55%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, transparent 55%, transparent 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f000000', endColorstr='#00000000',GradientType=0 );
-  background-size: 100% 5%;
-  background-repeat: no-repeat;
-  padding-top: 1rem;
   clear: both;
 }
 

@@ -11,7 +11,31 @@ code, pre {
 }
 
 pre {
+	&.snippet {
+		code {
+			background: rgba($demo-bg-1, 0.1);
+			display: block;
+			font-size: $font-size-normal;
+			padding: 2rem;
+		}
+		&:before {
+			content: attr(rel);
+		    background: #555;
+		    display: block;
+		    color: #fff;
+		    padding: 1rem 2rem;
+		    text-transform: uppercase;
+		    font: normal 600 1.4rem "Proxima Nova";
+		}		
+	}
+}
+
+pre {
 	tab-size: 4;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
+}
+
+code {
+	background: rgba($demo-bg-1, 0.1);
 }

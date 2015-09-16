@@ -7,14 +7,12 @@ body {
 }
 
 h1 {
-	font-size: 4rem;
 	color: #fff;
 	// text-shadow: -1rem 5rem rgba(0,0,0,.4),1rem -5rem rgba(0,0,0,.15);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "proxima-nova";
-	font-weight: 400;
+	font: normal 400 2.4rem/1.6 "proxima-nova";
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
@@ -27,7 +25,7 @@ p {
 }
 
 * ~ *:not([class*=grid-col]):not(main) {
-	margin: 0 0 $grid-gutter-width*2 0;
+	margin: 0 0 3rem 0;
 }
 
 .grid-gutter-outer.demo [class*=grid-row] {

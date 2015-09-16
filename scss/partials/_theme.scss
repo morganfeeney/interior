@@ -1,16 +1,43 @@
 header {
-	background: $theme-bg-1;
 	overflow: hidden;
-	padding: 2rem 0;
+	padding: 1rem 0;
+	margin-bottom: 3rem;
+	position: relative;
+	&.theme {
+		&-1 {
+			background: $theme-bg-1;
+			h1 {
+				font: normal 600 8rem/1.6 "proxima-nova";
+				padding-bottom: 2rem;
+				&:after {
+					content: "Modular grid system";
+					font-size: 2rem;
+					display: block;
+					font-weight: 300;
+					margin-top: -3rem;
+					// position: absolute;
+					// width: 20rem;
+					// height: 20rem;
+					// right: 0;
+					// content: "";
+					// box-shadow: 2rem -1rem rgba(255, 255, 255, 0.3), 6rem -2rem rgba(255, 255, 255, 0.2), 9rem -3rem rgba(255, 255, 255, 0.1);
+					// transform: rotate(45deg);
+					// left: 0;
+					// top: -15rem;
+				}
+			}
+		}
+		&-2 {
+			background: $theme-bg-2;
+			h1 {
+				color: $theme-bg-1;
+				font-size: 5rem;
+				text-shadow: -1rem -1rem rgba(0,0,0,0.1),1rem 1rem rgba(0,0,0,0.1);
+			}
+		}
+	}
 }
 main {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(55%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f000000', endColorstr='#00000000',GradientType=0 );
-	background-size: 100% 5%;
-	background-repeat: no-repeat;
-	padding-top: 1rem;
 	clear: both;
 }
 a {
