@@ -3,14 +3,19 @@ html {
 }
 
 body {
-	font: 1.6rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 1.6rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
 	font-size: 4rem;
+	color: #fff;
+	// text-shadow: -1rem 5rem rgba(0,0,0,.4),1rem -5rem rgba(0,0,0,.15);
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: "proxima-nova";
+	font-weight: 400;
+	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
 }
@@ -18,17 +23,15 @@ h1, h2, h3, h4, h5, h6 {
 // Paragraphs
 
 p {
-	margin: 0;
-	padding: 0;
-
-	& + * {
-		margin-top: $grid-gutter-width;
-		& + * {
-			margin-top: $grid-gutter-width;
-		}
-	}
-
 	font-size: 1.4rem;
+}
+
+* ~ *:not([class*=grid-col]):not(main) {
+	margin: 0 0 $grid-gutter-width*2 0;
+}
+
+.grid-gutter-outer.demo [class*=grid-row] {
+	margin: 0;
 }
 
 .large {

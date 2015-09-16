@@ -17,28 +17,32 @@ html {
 }
 
 body {
-  font: 1.6rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.6rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
   font-size: 4rem;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "proxima-nova";
+  font-weight: 400;
+  text-transform: uppercase;
   margin: 0;
   padding: 0;
 }
 
 p {
-  margin: 0;
-  padding: 0;
   font-size: 1.4rem;
 }
-p + * {
-  margin-top: 0.8rem;
+
+* ~ *:not([class*=grid-col]):not(main) {
+  margin: 0 0 1.6rem 0;
 }
-p + * + * {
-  margin-top: 0.8rem;
+
+.grid-gutter-outer.demo [class*=grid-row] {
+  margin: 0;
 }
 
 .large {
@@ -490,17 +494,24 @@ pre {
   float: left;
 }
 .demo-bg-1.grid-gutter-outer {
-  background: rgba(255, 0, 0, 0.1);
+  background: rgba(255, 112, 112, 0.3);
+}
+.demo-bg-1.grid-gutter-outer .inner {
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .demo-bg-1 .inner {
-  background: rgba(255, 0, 0, 0.2);
+  background: rgba(255, 112, 112, 0.3);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .demo-bg-2 .grid-gutter-outer {
-  background-color: #5F9ED9;
+  background-color: #FF7070;
 }
 .demo-bg-2 .inner {
   background-color: rgba(255, 255, 255, 0.75);
@@ -526,8 +537,8 @@ pre {
   margin: auto;
 }
 .demo-borders > [class*=grid-col] {
-  border-left: 1px solid rgba(255, 0, 0, 0.4);
-  border-right: 1px solid rgba(255, 0, 0, 0.4);
+  border-left: 1px solid rgba(255, 0, 0, 0.5);
+  border-right: 1px solid rgba(255, 0, 0, 0.5);
   border-top: 0;
   border-bottom: 0;
 }
@@ -542,10 +553,10 @@ pre {
   border-left: none;
 }
 .demo-borders > [class*=grid-col-flip]:first-child {
-  border-left: 1px solid rgba(255, 0, 0, 0.4);
+  border-left: 1px solid rgba(255, 0, 0, 0.5);
 }
 .demo-borders > [class*=grid-col-flip]:last-child {
-  border-right: 1px solid rgba(255, 0, 0, 0.4);
+  border-right: 1px solid rgba(255, 0, 0, 0.5);
 }
 
 .inner {
@@ -561,6 +572,27 @@ pre {
 .with-names .inner p {
   margin: auto;
   color: rgba(0, 0, 0, 0.75);
+}
+
+header {
+  background: #FF7070;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+main {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.05)), color-stop(55%, transparent), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, transparent 55%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, transparent 55%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f000000', endColorstr='#00000000',GradientType=0 );
+  background-size: 100% 5%;
+  background-repeat: no-repeat;
+  padding-top: 1rem;
+  clear: both;
+}
+
+a, a:link, a:focus, a:hover {
+  color: #FF7070;
 }
 
 .clearfix:after, .inner:after {

@@ -4,10 +4,14 @@
 			@include interior($grid-nums: true);
 		}
 		&.grid-gutter-outer {
-			background: rgba(red, 0.1);
+			background: rgba(#FF7070, 0.3);
+			.inner {
+				background: #fff;
+				display: flex;
+			}
 		}
 		.inner {
-			background: rgba(red, 0.2);
+			background: rgba(#FF7070, 0.3);
 			display: flex;
 		}		
 	}
@@ -42,8 +46,8 @@
 	}
 	&-borders {
 		> [class*=grid-col] {
-			border-left: 1px solid rgba(red, .4);
-			border-right: 1px solid rgba(red, .4);
+			border-left: $demo-bg-1--border;
+			border-right: $demo-bg-1--border;
 			border-top: 0;
 			border-bottom: 0;
 			&:first-child {
@@ -57,10 +61,10 @@
 			border-right: none;
 			border-left: none;
 			&:first-child {
-				border-left: 1px solid rgba(red, .4);
+				border-left: $demo-bg-1--border;
 			}
 			&:last-child {
-				border-right: 1px solid rgba(red, .4);
+				border-right: $demo-bg-1--border;
 			}
 		}
 	}

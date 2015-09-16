@@ -29,8 +29,17 @@ $(function(){
 	overlayToggle();
 	
 	function demoText(){
-		$('.col-single.with-names .inner').append('<p>single child</p>');
-		$('.col-group.with-names .inner').append('<p>group child</p>');
+		// Grouped or not?
+		$('.demo .col-single.with-names .inner').append('<p>single child</p>');
+		$('.demo .col-group.with-names .inner').append('<p>group child</p>');
+
+		// Flipped
+		$('.demo .grid-col-flip-left-4.with-names .inner').append('<p>grid-col-flip-left-4</p>');
+		$('.demo .grid-col-flip-right-8.with-names .inner').append('<p>grid-col-flip-right-8</p>');
+
+		//Offset
+		$('.demo .grid-col-push-3.with-names .inner').append('<p>grid-col-push-3</p>');
+		$('.demo .grid-col-push-6.with-names .inner').append('<p>grid-col-push-6</p>');
 	}
 	demoText();
 });
