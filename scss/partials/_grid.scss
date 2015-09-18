@@ -1,7 +1,7 @@
 // Containers
 .container {
 	&-set-width {
-		max-width: 100rem;
+		max-width: 80rem;
 		@include gridAlignment(center);
 	}
 }
@@ -11,10 +11,6 @@
 
 	@include interior();
 	
-	// Placeholder to store grid-gutter-width padding value so it can be extended
-	%grid-gutter-width {
-		padding: $grid-gutter-width / 2;
-	}
 	.col {
 		&-group {
 			padding: 0;
@@ -24,10 +20,5 @@
 				}
 			}
 		}
-	}
-	&-gutter-outer {
-		padding: $grid-gutter-width / 2;
-		// Clear all the things
-		clear: both;
 	}
 }

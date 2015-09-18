@@ -13,8 +13,7 @@
 	@for $column from 1 through $columns {
 		.grid-col-#{$column} {
 	   		width: 100% / $grid-cols * $column;
-	   		@extend %grid-gutter-width;
-	   		position: relative;
+	   		//@extend %grid-goodness;
 
 		    // if $grid-names == true in demoGrid display the class name
 		    @if $grid-nums == true {
@@ -38,23 +37,26 @@
 			}
 		}
 	}
-
-	// if $grid-alignment == left, right or center: display accordingly
-	@if $grid-alignment == left {
-		[class*=grid-col] {
+	&.grid-gutter-outer {
+		padding: $grid-gutter-width / 2;
+		// Clear all the things
+		clear: both;
+	}
+	[class*=grid-col] {
+		padding: $grid-gutter-width / 2;
+		position: relative;
+		// if $grid-alignment == left, right or center: display accordingly
+		@if $grid-alignment == left {
 			@include gridAlignment(left);
 		}
-	}
-	@else if $grid-alignment == right {
-		[class*=grid-col] {
+		@else if $grid-alignment == right {
 			@include gridAlignment(right);
 		}
-	}
-	@else if $grid-alignment == center {
-		[class*=grid-col] {
+		@else if $grid-alignment == center {
 			@include gridAlignment(center);
 		}
 	}
+
 }
 
 @mixin gridAlignment($align) {
@@ -69,5 +71,6 @@
 	@else if $align == 'center' {
 		display: block;
 		margin: auto;
+		float: none!important;
 	}
 }

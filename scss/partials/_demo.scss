@@ -13,8 +13,15 @@
 		.inner {
 			background: rgba($demo-bg-1, 0.3);
 			display: flex;
-		}		
+		}
 	}
+		&.simple-demo-1 {
+			@include interior(
+				$grid-cols: 3,
+				$grid-gutter-width: 2rem
+			);
+		}		
+
 	&-bg-2 {
 		.grid-gutter-outer {
 			background-color: $demo-bg-1;
@@ -36,9 +43,6 @@
 				background-color: $demo-bg-1--single;
 			}
 		}
-	}
-	& + & {
-		margin-top: ($grid-gutter-width * 4);
 	}
 	&-outer {
 		display: block;

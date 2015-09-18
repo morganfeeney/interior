@@ -21,114 +21,133 @@
 	<body>
 		<header class="container-outer theme-1">
 			<div class="container-set-width">
-				<h1>Interior</h1>
+				<h1>Interior <span>Modular grid system</span></h1>
 			</div>
 		</header>
 		<main class="container-outer">
 			<div class="container-set-width">
 				<section class="intro">
-				<h2>About</h2>
-					<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS) it is configurable to your needs.</p>
-					<?php include('includes/code-samples/griddle-config-1.php') ?>
+					<h2>What is this?</h2>
+					<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs.</p>
+					<?php include('includes/code-samples/interior-config-1.php') ?>
 					<p class="large">
-						if you leave the default <code>.grid-cols</code> set to 12 you will get the following columns:
+						Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a gutter width of .8rem, with grid columns floating to the left:
 					</p>
+					<section class="grid grid-nums grid-gutter-outer demo demo-bg-1">
+						<div class="grid-row clearfix">
+							<div class="grid-col-12">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-11">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-1">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-10">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-2">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-9">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-3">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-8">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-4">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-7">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-5">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-6">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-6">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-5">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-7">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-4">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-8">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-3">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-9">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-2">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-10">
+								<div class="inner"></div>
+							</div>
+						</div>
+						<div class="grid-row clearfix">
+							<div class="grid-col-1">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-11">
+								<div class="inner"></div>
+							</div>
+						</div>
+					</section>
+					<h2>As simple as you make it</h2>
+					<p class="large">
+						Create simple layouts, and output as many columns as required, nested within in as many different classes as needed.
+					</p>
+					<?php include('includes/code-samples/interior-config-2.php') ?>
+					<section class="grid grid-nums grid-gutter-outer demo demo-bg-1 simple-demo-1">
+						<div class="grid-row clearfix">
+							<div class="grid-col-1">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-2">
+								<div class="inner"></div>
+							</div>
+							<div class="grid-col-3">
+								<div class="inner"></div>
+							</div>
+						</div>
+					</section>				
 				</section>
-				<section class="grid grid-nums grid-gutter-outer demo demo-bg-1">
-					<div class="grid-row clearfix">
-						<div class="grid-col-12">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-11">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-1">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-10">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-2">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-9">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-3">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-8">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-4">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-7">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-5">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-6">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-6">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-5">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-7">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-4">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-8">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-3">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-9">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-2">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-10">
-							<div class="inner"></div>
-						</div>
-					</div>
-					<div class="grid-row clearfix">
-						<div class="grid-col-1">
-							<div class="inner"></div>
-						</div>
-						<div class="grid-col-11">
-							<div class="inner"></div>
-						</div>
-					</div>
-				</section>
+
 				<section class="grid demo demo-bg-2">
 					<h2>Demo 1</h2>
 					<p class="large">
