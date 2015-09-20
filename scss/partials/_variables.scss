@@ -2,19 +2,28 @@
 $grid-cols: 12;
 
 // Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns
-$grid-gutter-width: 0.8rem!global;
+$grid-gutter-width: .8rem;
+
+// Add or remove padding from the wrapper `.grid-outer`
+$grid-outer: ($grid-gutter-width / 2);
 
 // Set the default grid alignment
-$grid-alignment: left;
+$grid-align: left;
+$vert-space: 1rem 0;
 
 // Colours
-$demo-bg-1: #FF7070;
-$demo-bg-1--single: rgba(0, 0, 0, 0.5);
-$demo-bg-1--group: rgba(255, 255, 255, 0.75);
-$demo-bg-1--border: 1px solid rgba(red, .5);
+$theme-bg-1: #FF7070; // Funky Salmon
+$theme-bg-2: #FFF; // White
 
-$theme-bg-1: #FF7070;
-$theme-bg-2: #FFF;
+$demo-bg-1: rgba($theme-bg-1, 0.3);
+$demo-bg-1--single: $theme-bg-1;
+$demo-bg-1--group: $theme-bg-2;
+$demo-bg-1--border: 1px solid $theme-bg-1;
+
+$demo-bg-2: #FF7070;
+$demo-bg-2--single: rgba($demo-bg-2, 0.3);
+$demo-bg-2--group: rgb(255, 255, 255);
 
 //Fonts
+$font-family-base: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-size-normal: 1.6rem

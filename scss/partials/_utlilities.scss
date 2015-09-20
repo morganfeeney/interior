@@ -1,15 +1,3 @@
-// display the class name of the current element/tag/selector in a pseudo element //
-@mixin displayClassName() {
-	&:before {
-		content: attr(class)!important;
-		margin: auto;
-		font-size: 1.1rem;
-		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-		background-color: orange;
-		display: table-header-group;
-		text-align: center;
-	}
-	@at-root & {
-		display: table;
-	}
+.grid-row {
+	@extend .clearfix;
 }

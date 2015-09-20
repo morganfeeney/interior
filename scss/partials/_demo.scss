@@ -1,10 +1,18 @@
+
+//////////// NEED TO USE LATEST VERSION OF SASS TO USE DEFAULT FLAG ////////////
+//////////// ALSO NEED TO MOVE TO USE GRUNT INSTEAD OF CODEKIT - ////////////
+//////////// SCOPING ISSUES WITH VARIABLES AND SASS VERSION - ////////////
+
 .demo {
 	&-bg-1 {
 		&.grid-nums {
-			@include interior($grid-nums: true);
+			@include interior(
+				$grid-nums: true,
+				$vert-space: 0
+			);
 		}
-		&.grid-gutter-outer {
-			background: rgba($demo-bg-1, 0.3);
+		.grid-outer {
+			background: $demo-bg-1;
 			.inner {
 				background: #fff;
 				display: flex;
@@ -15,15 +23,15 @@
 			display: flex;
 		}
 	}
-		&.simple-demo-1 {
-			@include interior(
-				$grid-cols: 3,
-				$grid-gutter-width: 2rem
-			);
-		}		
+	&.simple-demo-1 {
+		@include interior(
+			$grid-cols: 3,
+			$vert-space: 0
+		);
+	}		
 
 	&-bg-2 {
-		.grid-gutter-outer {
+		.grid-outer {
 			background-color: $demo-bg-1;
 		}
 		.inner {
@@ -44,12 +52,31 @@
 			}
 		}
 	}
+	&-bg-3 {
+		@include interior(
+			$grid-outer: 0,
+			$grid-cols: 12,
+			$grid-gutter-width: 0
+		);
+		.grid-outer {
+			background: transparent;
+			.inner {
+				background: rgba($demo-bg-1, 0.3);
+				display: flex;
+			}
+		}
+		.inner {
+			background: rgba($demo-bg-1, 0.3);
+			display: flex;
+		}
+	}
+	
 	&-outer {
 		display: block;
 		margin: auto;
 	}
 	&-borders {
-		> [class*=grid-col] {
+		[class*=grid-col] {
 			border-left: $demo-bg-1--border;
 			border-right: $demo-bg-1--border;
 			border-top: 0;

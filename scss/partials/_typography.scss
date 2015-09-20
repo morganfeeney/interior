@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	font: 1.6rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 1.6rem/1.6 $font-family-base;
 }
 
 h1 {
@@ -12,7 +12,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font: normal 600 2rem/1.6 "proxima-nova";
+	font: normal 600 2rem/1.6 $font-family-base;
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
@@ -24,11 +24,11 @@ p {
 	font-size: 1.4rem;
 }
 
-* ~ *:not([class*=grid-col]):not(main):not(h2):not(h3):not(h4) {
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4) {
 	margin: 0 0 3rem 0;
 }
 
-.grid-gutter-outer.demo [class*=grid-row] {
+.grid-outer.demo [class*=grid-row] {
 	margin: 0;
 }
 

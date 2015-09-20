@@ -7,14 +7,16 @@
 }
 
 // Custom
-.grid {
 
-	@include interior();
-	
-	.col {
-		&-group {
-			padding: 0;
-			&-descend {
+@include interior(
+	$vert-space: 0
+);
+
+.col {
+	&-group {
+		padding: 0;
+		&-descend {
+			.grid-row {
 				> [class*=grid-col] {
 					padding: 0;
 				}

@@ -7,13 +7,14 @@ header {
 		&-1 {
 			background: $theme-bg-1;
 			h1 {
-				font: normal 600 8rem/1 "proxima-nova";
+				font: normal 600 8rem/1 $font-family-base;
 				padding: 2rem 0;
 				span {
 					font-size: 2rem;
 					display: block;
 					font-weight: 300;
-					padding-bottom: .6rem;				}
+					padding-bottom: .6rem;
+				}
 			}
 		}
 		&-2 {

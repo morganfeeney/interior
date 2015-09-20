@@ -1,20 +1,19 @@
-@import 'partials/variables';
+// Mixins
 @import 'mixins/helpers';
-@import 'partials/reset';
-@import 'partials/typography';
 @import 'mixins/interior';
 
-// Devtools
-@import 'partials/devtools';
+// Variables
+@import 'partials/variables';
 
-// Grid
-@import 'partials/grid';
-
-// Code
-@import 'partials/code';
-
-// Demo
+// Utilities
+@import 'partials/reset';
+@import 'partials/utlilities';
 @import 'partials/demo';
+
+// Core
+@import 'partials/typography';
+@import 'partials/code';
+@import 'partials/grid';
 
 // Theme
 @import 'partials/theme';

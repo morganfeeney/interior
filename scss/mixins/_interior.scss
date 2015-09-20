@@ -1,21 +1,39 @@
-// TO DO --> Create a feature which allows the use of inline-block or float, or flex (if easy enough)
+// TO DO --> Create a feature which allows the use of inline-block OR float, or flex (if easy enough)
 
 @mixin interior(
 	// The variables below are assigned values in: variables.scss.
 	// They can be overridden by passing in new variables in the mixin itself.
-	$grid-cols: $grid-cols,
 	$grid-gutter-width: $grid-gutter-width,
+	$grid-outer: ($grid-gutter-width/2),
+	$grid-cols: $grid-cols,
 	$grid-nums: false,
-	$grid-alignment: $grid-alignment
+	$grid-align: $grid-align,
+	$vert-space: $vert-space
 ) {
+	.grid-outer {
+		padding: $grid-outer;
+		// Clear all the things
+		clear: both;
+	}
+	.grid-row {
+		padding: $vert-space;
+		&:first-of-type {
+			padding-top: 0;
+		}
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+	// Get the number of columns from the variable
 	$columns: $grid-cols;
+	// Wrap them all up in `.grid-outer`
 	// Loop through a number of sequentially numbered divs from 1 to $columns
 	@for $column from 1 through $columns {
 		.grid-col-#{$column} {
 	   		width: 100% / $grid-cols * $column;
-	   		//@extend %grid-goodness;
-
-		    // if $grid-names == true in demoGrid display the class name
+	   		padding: ($grid-gutter-width / 2);
+		    // If $grid-names == true in demoGrid display the class name
+		    // To be removed > for demo only
 		    @if $grid-nums == true {
 				.inner {
 					&:before {
@@ -37,26 +55,20 @@
 			}
 		}
 	}
-	&.grid-gutter-outer {
-		padding: $grid-gutter-width / 2;
-		// Clear all the things
-		clear: both;
-	}
 	[class*=grid-col] {
-		padding: $grid-gutter-width / 2;
+		//padding: ($grid-gutter-width / 2);
 		position: relative;
-		// if $grid-alignment == left, right or center: display accordingly
-		@if $grid-alignment == left {
+		// if $grid-align == left, right or center: display accordingly
+		@if $grid-align == left {
 			@include gridAlignment(left);
 		}
-		@else if $grid-alignment == right {
+		@else if $grid-align == right {
 			@include gridAlignment(right);
 		}
-		@else if $grid-alignment == center {
+		@else if $grid-align == center {
 			@include gridAlignment(center);
 		}
 	}
-
 }
 
 @mixin gridAlignment($align) {

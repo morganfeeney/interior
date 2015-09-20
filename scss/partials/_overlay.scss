@@ -1,5 +1,8 @@
 #gridOverlay {
 	@extend .container-set-width;
+	.grid-outer {
+		width: 100%;
+	}
 }
 .grid {
 
@@ -21,7 +24,5 @@
 		}
 	}
 
-	&-gutter-outer {
-		width: 100%;
-	}
+
 }
