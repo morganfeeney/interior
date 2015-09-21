@@ -6,17 +6,31 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'expanded',
-                    sourcemap: 'auto'
+                    sourcemap: 'auto',
+                    precision: 4
                 },
                 files: {
                     'css/style.css': 'scss/style.scss'
                 }
             }
         },
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+                src: 'css/*.css'
+            }
+        },
         watch: {
             sass: {
                 files: ['**/*.scss'],
-                tasks: ['sass'],
+                tasks: 'sass',
                 options: {
                     spawn: false,
                     livereload: true
@@ -24,7 +38,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['**/*.js','!**/node_modules/**'],
-                tasks: ['watch'],
+                tasks: 'watch',
                 options: {
                     spawn: false,
                     livereload: true
@@ -48,7 +62,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['**/*.css'],
-                tasks: 'watch',
+                tasks: 'postcss',
                 options: {
                     spawn: false,
                     livereload: true
@@ -66,6 +80,7 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('default', [
         'sass',
+        'postcss',
         'watch'
     ]);
 };
