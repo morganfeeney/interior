@@ -238,14 +238,12 @@ body {
 }
 .demo-bg-1 .grid-outer .inner {
   background: #fff;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .demo-bg-1 .inner {
   background: rgba(255, 112, 112, 0.3);
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +311,6 @@ body {
   background-color: #FFF;
 }
 .demo-bg-2 .col-single.with-names .inner {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -503,14 +500,12 @@ body {
 }
 .demo-bg-3 .grid-outer .inner {
   background: rgba(255, 112, 112, 0.3);
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .demo-bg-3 .inner {
   background: rgba(255, 112, 112, 0.3);
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -547,7 +542,6 @@ body {
 }
 
 .with-names .inner {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -620,7 +614,6 @@ pre.snippet:before {
 
 pre {
   -moz-tab-size: 4;
-    -o-tab-size: 4;
        tab-size: 4;
   overflow: auto;
   -webkit-overflow-scrolling: touch;

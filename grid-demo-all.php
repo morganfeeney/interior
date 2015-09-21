@@ -158,7 +158,7 @@
 				<section class="grid demo demo-bg-2">
 					<h2>Demo 1</h2>
 					<p class="large">
-						How to group nested columns, e.g. sidebar and content area:
+						Group nested columns, e.g. sidebar and content area. We have to use different classes <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code> for parent containers due to the amount of padding created when nesting:
 					</p>
 					<?php include('includes/code-samples/nested-demo-1.php') ?>
 					<div class="grid-outer">
