@@ -156,9 +156,9 @@
 				</section>
 
 				<section class="grid demo demo-bg-2">
-					<h2>Demo 1</h2>
+					<h2>Demo 1 - Group nested columns</h2>
 					<p class="large">
-						Group nested columns, e.g. sidebar and content area. We have to use different classes <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code> for parent containers due to the amount of padding created when nesting:
+						We have to use different classes <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code> for parent containers due to the amount of padding created when nesting. This enables us to group different numbers of columns, without affecting the gutter widths:
 					</p>
 					<?php include('includes/code-samples/nested-demo-1.php') ?>
 					<div class="grid-outer">
@@ -184,9 +184,9 @@
 				<!-- Demo 2 -->
 
 				<section class="grid demo demo-bg-1">
-					<h2>Demo 2</h2>
+					<h2>Demo 2 - Nest columns within columns</h2>
 					<p class="large">
-						How to group columns within columns:
+						In this example I have re-used the grouping classes from the previous example <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code>:
 					</p>
 					<div class="grid-outer demo-bg-1">
 						<div class="grid-row">
