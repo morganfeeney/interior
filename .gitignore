@@ -1,4 +1,6 @@
 config.codekit
 bower_components
+node_modules
+config.codekit
 /.sass-cache
 .DS_Store
