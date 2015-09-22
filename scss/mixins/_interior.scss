@@ -1,14 +1,18 @@
-// TO DO --> Create a feature which allows the use of inline-block OR float, or flex (if easy enough)
+// TO DO --> Create a feature which allows the use of inline-block OR float, or flex (if easy enough).
 
 @mixin interior(
 	// The variables below are assigned values in: variables.scss.
-	// They can be overridden by passing in new variables in the mixin itself.
+	// They can be overridden by passing variable arguments to the @mixin.
 	$grid-gutter-width: $grid-gutter-width,
 	$grid-outer: ($grid-gutter-width/2),
 	$grid-cols: $grid-cols,
 	$grid-nums: false,
 	$grid-align: $grid-align,
-	$vert-space: $vert-space
+	$vert-space: $vert-space,
+	$push: true,
+	$push-cols: $push-cols,
+	$flip: true,
+	$flip-cols: $flip-cols
 ) {
 	.grid-outer {
 		padding: $grid-outer;
@@ -24,15 +28,15 @@
 			padding-bottom: 0;
 		}
 	}
-	// Get the number of columns from the variable
+	// Get the number of columns from the variable.
 	$columns: $grid-cols;
 	// Wrap them all up in `.grid-outer`
-	// Loop through a number of sequentially numbered divs from 1 to $columns
+	// Loop through a number of sequentially numbered divs from 1 to $columns.
 	@for $column from 1 through $columns {
 		.grid-col-#{$column} {
 	   		width: 100% / $grid-cols * $column;
 	   		padding: ($grid-gutter-width / 2);
-		    // If $grid-names == true in demoGrid display the class name
+		    // If $grid-names == true in demoGrid display the class name.
 		    // To be removed > for demo only
 		    @if $grid-nums == true {
 				.inner {
@@ -43,20 +47,30 @@
 				}	    		
 	    	}
 		}
-		.grid-col-push-#{$column} {
-	   		margin-left: 100% / $grid-cols * $column;
-		}
-		.grid-col-flip {
-			&-left-#{$column} {
-		   		left: 100% / $grid-cols * $column;
+	}
+	// This is set to true by default, to turn off set to false in @mixin.
+	@if $push == true {
+		@for $push-col from 1 through $push-cols {
+			.grid-col-push-#{$push-col} {
+		   		margin-left: 100% / $grid-cols * $push-col;
 			}
-			&-right-#{$column} {
-		   		right: 100% / $grid-cols * $column;
+		}		
+	}
+	// This is set to true by default, to turn off set to false in @mixin.
+	@if $flip == true {
+		@for $flip-col from 1 through $flip-cols {
+			.grid-col-flip {
+				&-left-#{$flip-col} {
+			   		left: 100% / $grid-cols * $flip-col;
+				}
+				&-right-#{$flip-col} {
+			   		right: 100% / $grid-cols * $flip-col;
+				}
 			}
 		}
 	}
 	[class*=grid-col] {
-		//padding: ($grid-gutter-width / 2);
+		min-height: 1px;
 		position: relative;
 		// if $grid-align == left, right or center: display accordingly
 		@if $grid-align == left {
@@ -68,21 +82,5 @@
 		@else if $grid-align == center {
 			@include gridAlignment(center);
 		}
-	}
-}
-
-@mixin gridAlignment($align) {
-	@if $align == 'left' {
-		$align: left;
-		float: $align;
-	}
-	@else if $align == 'right' {
-		$align: right;
-		float: $align;
-	} 
-	@else if $align == 'center' {
-		display: block;
-		margin: auto;
-		float: none!important;
 	}
 }

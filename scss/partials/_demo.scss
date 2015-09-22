@@ -1,7 +1,3 @@
-
-//////////// NEED TO USE LATEST VERSION OF SASS TO USE DEFAULT FLAG ////////////
-//////////// SCOPING ISSUES WITH VARIABLES AND SASS VERSION - ////////////
-
 .demo {
 	&-bg-1 {
 		&.grid-nums {
@@ -56,7 +52,9 @@
 		@include interior(
 			$grid-outer: 0,
 			$grid-cols: 12,
-			$grid-gutter-width: 0
+			$grid-gutter-width: 0,
+			$push: true,
+			$flip: false
 		);
 		.grid-outer {
 			background: transparent;
