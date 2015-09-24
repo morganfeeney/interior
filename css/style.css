@@ -583,11 +583,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+  font-size: 1.8rem;
+}
+.with-names p {
   font-size: 1.4rem;
 }
 
-* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4) {
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4),
+.intro {
   margin: 0 0 3rem 0;
+}
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4):last-child,
+.intro:last-child {
+  margin-bottom: 0;
 }
 
 .grid-outer.demo [class*=grid-row] {
@@ -596,6 +604,26 @@ p {
 
 .large {
   font-size: 2rem;
+}
+
+.demo h2 {
+  position: relative;
+}
+.demo h2::before {
+  content: 'Demo';
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  color: #555;
+  left: -130px;
+  line-height: 88px;
+  font-weight: 100;
+  font-size: 1.6rem;
+  border: 8px solid #FFF1F1;
 }
 
 .code-example {
@@ -613,26 +641,30 @@ pre.snippet code {
   display: block;
   font-size: 1.6rem;
   padding: 2rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 pre.snippet:before {
   content: attr(rel);
   background: #555;
   display: block;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: .6rem 2rem;
   text-transform: uppercase;
-  font: normal 600 1.4rem "Proxima Nova";
+  font: normal 600 1.2rem "Proxima Nova";
 }
 
 pre {
   -moz-tab-size: 4;
        tab-size: 4;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 code {
   background: rgba(255, 112, 112, 0.1);
+}
+
+.comment {
+  color: #999;
 }
 
 .container-set-width {

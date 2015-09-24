@@ -21,11 +21,18 @@ h1, h2, h3, h4, h5, h6 {
 // Paragraphs
 
 p {
-	font-size: 1.4rem;
+	font-size: 1.8rem;
+	.with-names & {
+		font-size: 1.4rem;
+	}
 }
 
-* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4) {
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4),
+.intro {
 	margin: 0 0 3rem 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .grid-outer.demo [class*=grid-row] {
@@ -34,4 +41,25 @@ p {
 
 .large {
 	font-size: 2rem;
+}
+
+// Demo heading example
+.demo h2 {
+	position: relative;
+	&::before {
+    content: 'Demo';
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    color: #555;
+    left: -130px;
+    line-height: 88px;
+    font-weight: 100;
+    font-size: 1.6rem;
+    border: 8px solid #FFF1F1;
+}
 }

@@ -28,10 +28,10 @@
 			<div class="container-set-width">
 				<section class="intro">
 					<h2>What is this?</h2>
-					<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs.</p>
-					<?php include('includes/code-samples/interior-config-1.php') ?>
-					<p class="large">
-						Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a gutter width of .8rem, with grid columns floating to the left:
+					<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs by simply changing the default variables.</p>
+					<?php include('includes/code-samples/interior-config-3.php') ?>
+					<p>
+						Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
 					</p>
 					<section class="grid grid-nums demo demo-bg-1">
 						<div class="grid-outer">
@@ -133,11 +133,13 @@
 							</div>
 						</div>
 					</section>
+					<h2>Modular mixins</h2>
+					<p>Interior can be re-used over and over again, by declaring your desired units within a mixin you can leave the defaults in place, knowing that they will be overridden.</p>
+					<?php include('includes/code-samples/interior-config-1.php') ?>
 					<h2>As simple as you make it</h2>
-					<p class="large">
+					<p>
 						Create simple layouts, and output as many columns as required, nested within in as many different classes as needed.
 					</p>
-					<?php include('includes/code-samples/interior-config-2.php') ?>
 					<section class="grid grid-nums demo demo-bg-1 simple-demo-1">
 						<div class="grid-outer">
 							<div class="grid-row clearfix">
@@ -152,40 +154,44 @@
 								</div>
 							</div>
 						</div>
-					</section>				
+					</section>	
+					<?php include('includes/code-samples/interior-config-2.php') ?>
+			
 				</section>
 
 				<section class="grid demo demo-bg-2">
-					<h2>Demo 1 - Group nested columns</h2>
-					<p class="large">
+					<h2>Group nested columns</h2>
+					<p>
 						We have to use different classes <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code> for parent containers due to the amount of padding created when nesting. This enables us to group different numbers of columns, without affecting the gutter widths:
 					</p>
-					<?php include('includes/code-samples/nested-demo-1.php') ?>
-					<div class="grid-outer">
-						<div class="grid-row clearfix">
-							<div class="grid-col-4 col-single with-names">
-								<div class="inner"></div>
-							</div>
-							<div class="grid-col-8 col-group with-names">
-								<div class="grid-col-4">
+					<section>
+						<div class="grid-outer">
+							<div class="grid-row clearfix">
+								<div class="grid-col-4 col-single with-names">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-4">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-4">
-									<div class="inner"></div>
+								<div class="grid-col-8 col-group with-names">
+									<div class="grid-col-4">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-4">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-4">
+										<div class="inner"></div>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</section>
+					<?php include('includes/code-samples/nested-demo-1.php') ?>
 				</section>
 
 				<!-- Demo 2 -->
 
 				<section class="grid demo demo-bg-1">
-					<h2>Demo 2 - Nest columns within columns</h2>
-					<p class="large">
+					<h2>Nest columns within columns</h2>
+					<p>
 						In this example I have re-used the grouping classes from the previous example <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code>:
 					</p>
 					<div class="grid-outer demo-bg-1">
@@ -276,35 +282,39 @@
 				<!-- Demo 3 -->
 
 				<section class="grid demo demo-bg-3 clearfix">
-					<h2>Demo 3</h2>
-					<p class="large">
-						How to offset columns:
+					<h2>Offset columns</h2>
+					<p>
+						If you would like to position columns wihout changing <code class="language-scss">float: left</code> to <code class="language-scss">float: right</code>, or using <code class="language-scss">margin: auto</code> with <code class="language-scss">display: block</code> you can use offsets.
+						Offsets use math percentage values to offset columns, combined with a left margin. Offset CSS is standard, however you can turn it off if you don't want the extra bytes.
 					</p>
-					<div class="grid-outer">
-						<div class="grid-row">
-							<div class="grid-col-6 grid-col-push-6 with-names">
-								<div class="inner"></div>
+					<section>
+						<div class="grid-outer">
+							<div class="grid-row">
+								<div class="grid-col-6 grid-col-push-6 with-names">
+									<div class="inner"></div>
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="grid-col-6 grid-col-push-3 with-names">
+									<div class="inner"></div>
+								</div>
+							</div>
+							<div class="grid-row">
+								<div class="grid-col-6 col-single no-offset with-names">
+									<div class="inner"></div>
+								</div>
 							</div>
 						</div>
-						<div class="grid-row">
-							<div class="grid-col-6 grid-col-push-3 with-names">
-								<div class="inner"></div>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="grid-col-6 col-single">
-								<div class="inner"></div>
-							</div>
-						</div>
-					</div>
+					</section>
+					<?php include('includes/code-samples/offset-demo-1.php') ?>
 				</section>
 
 				<!-- Demo 4 -->
 
 				<section class="grid demo demo-bg-3">
-					<h2>Demo 3</h2>
-					<p class="large">
-						How to flip column order:
+					<h2>Flip columns</h2>
+					<p>
+						 The usual use case scenario for flipping visual appearance of columns is for use with Responsive Web Design. For example you want the left column to be the second column going down the page once your columns eventually span the full width, at a set break-point. Unless you change the source order you will not be able to achieve this using CSS.
 					</p>
 					<div class="grid-outer">
 						<div class="grid-row">
