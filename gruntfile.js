@@ -69,6 +69,46 @@ module.exports = function(grunt) {
                 }
             },
         },
+        php2html: {
+            default:{
+                options: {
+                    processLinks: true,
+                    htmlhint: {
+                      'doctype-first' : false
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: '',
+                    src: '*.php',
+                    dest: '',
+                    ext: '.html' 
+                }]                
+            },
+        },
+        prettify: {
+            options: {
+                "indent": 4,
+                "indent_char": " ",
+                "indent_scripts": "normal",
+                "wrap_line_length": 0,
+                "brace_style": "collapse",
+                "preserve_newlines": true,
+                "max_preserve_newlines": 1,
+                "unformatted": [
+                    "a",
+                    "code",
+                    "pre"
+                ]
+            },
+            all: {
+                expand: true,
+                cwd: '',
+                src: ['*.html'],
+                dest: '',
+                ext: '.html'
+            }
+        },
     });
 
     // Load the plugins to run your tasks
@@ -82,5 +122,9 @@ module.exports = function(grunt) {
         'sass',
         'postcss',
         'watch'
+    ]);
+    grunt.registerTask('demo', [
+        'php2html',
+        'prettify'
     ]);
 };

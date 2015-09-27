@@ -47,7 +47,7 @@ p {
 section {
 	margin-bottom: 6rem;
 	&:not(.intro) {
-		padding-top: 6rem;
+		padding-top: 3rem;
 		border-top: 1px solid rgba($demo-bg-1, 0.3);
 	}
 }
@@ -75,7 +75,7 @@ section {
 			&:after {
 				top: -.1rem;
 				left: 0;
-				height: 3rem;
+				height: 2rem;
 				width: 8.3333%;
 				position: absolute;
 				border-right: .1rem solid $demo-border-colour-1;
