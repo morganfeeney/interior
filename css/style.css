@@ -569,17 +569,20 @@ html {
 
 body {
   font: 1.6rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  color: #fff;
+  counter-reset: counter;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #fff;
   font: normal 600 2rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  color: inherit;
+  margin: 0 0 1rem 0;
 }
 
 p {
@@ -589,13 +592,8 @@ p {
   font-size: 1.4rem;
 }
 
-* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4),
-.intro {
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4):not(section) {
   margin: 0 0 3rem 0;
-}
-* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4):last-child,
-.intro:last-child {
-  margin-bottom: 0;
 }
 
 .grid-outer.demo [class*=grid-row] {
@@ -606,24 +604,44 @@ p {
   font-size: 2rem;
 }
 
-.demo h2 {
+section {
+  margin-bottom: 6rem;
+}
+section:not(.intro) {
+  padding-top: 6rem;
+  border-top: 1px solid rgba(255, 112, 112, 0.3);
+}
+
+.demo {
   position: relative;
 }
-.demo h2::before {
-  content: 'Demo';
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  display: block;
+section.demo {
+  counter-increment: counter;
+}
+section.demo:before {
+  content: "Demo " counter(counter);
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #FFF;
   position: absolute;
-  border-radius: 50%;
-  text-align: center;
-  color: #555;
-  left: -130px;
-  line-height: 88px;
-  font-weight: 100;
-  font-size: 1.6rem;
-  border: 8px solid #FFF1F1;
+  text-align: right;
+  color: #FF7070;
+  top: -1rem;
+  right: 0;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+  padding: 0 0 0 2rem;
+}
+section.demo:after {
+  top: -.1rem;
+  left: 0;
+  height: 3rem;
+  width: 8.3333%;
+  position: absolute;
+  border-right: 0.1rem solid rgba(255, 112, 112, 0.3);
+  border-top: 0.1rem solid #FFF;
+  z-index: 10;
+  width: 66.6667%;
 }
 
 .code-example {
@@ -651,7 +669,7 @@ pre.snippet:before {
   color: #fff;
   padding: .6rem 2rem;
   text-transform: uppercase;
-  font: normal 600 1.2rem "Proxima Nova";
+  font: normal 600 1.2rem "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 pre {
@@ -903,11 +921,11 @@ header {
 header.theme-1 {
   background: #FF7070;
 }
-header.theme-1 h1 {
+header.theme-1 h1, header.theme-1 h2, header.theme-1 h3, header.theme-1 h4, header.theme-1 h5, header.theme-1 h6 {
   font: normal 600 8rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 2rem 0;
 }
-header.theme-1 h1 span {
+header.theme-1 h1 span, header.theme-1 h2 span, header.theme-1 h3 span, header.theme-1 h4 span, header.theme-1 h5 span, header.theme-1 h6 span {
   font-size: 2rem;
   display: block;
   font-weight: 300;
@@ -916,7 +934,7 @@ header.theme-1 h1 span {
 header.theme-2 {
   background: #FFF;
 }
-header.theme-2 h1 {
+header.theme-2 h1, header.theme-2 h2, header.theme-2 h3, header.theme-2 h4, header.theme-2 h5, header.theme-2 h6 {
   color: #FF7070;
   font-size: 5rem;
   text-shadow: -1rem -1rem rgba(0, 0, 0, 0.1), 1rem 1rem rgba(0, 0, 0, 0.1);
@@ -930,7 +948,7 @@ a, a:link, a:focus, a:hover {
   color: #FF7070;
 }
 
-.clearfix:after, .grid-row:after, .inner:after {
+.clearfix:after, .grid-row:after, .inner:after, .demo:after {
   content: "";
   display: table;
   clear: both;

@@ -4,18 +4,21 @@ html {
 
 body {
 	font: 1.6rem/1.6 $font-family-base;
+	counter-reset: counter;
 }
 
 h1 {
 	color: #fff;
-	// text-shadow: -1rem 5rem rgba(0,0,0,.4),1rem -5rem rgba(0,0,0,.15);
-}
-
-h1, h2, h3, h4, h5, h6 {
 	font: normal 600 2rem/1.6 $font-family-base;
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
+}
+
+h2, h3, h4, h5, h6 {
+	@extend h1;
+	color: inherit;
+	margin: 0 0 1rem 0;
 }
 
 // Paragraphs
@@ -27,12 +30,8 @@ p {
 	}
 }
 
-* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4),
-.intro {
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4):not(section) {
 	margin: 0 0 3rem 0;
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 .grid-outer.demo [class*=grid-row] {
@@ -44,22 +43,46 @@ p {
 }
 
 // Demo heading example
-.demo h2 {
-	position: relative;
-	&::before {
-    content: 'Demo';
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    text-align: center;
-    color: #555;
-    left: -130px;
-    line-height: 88px;
-    font-weight: 100;
-    font-size: 1.6rem;
-    border: 8px solid #FFF1F1;
+
+section {
+	margin-bottom: 6rem;
+	&:not(.intro) {
+		padding-top: 6rem;
+		border-top: 1px solid rgba($demo-bg-1, 0.3);
+	}
 }
+
+.demo {
+	position: relative;
+	@extend .clearfix;
+	@at-root {
+		section#{&} {
+			counter-increment: counter;
+			&:before {
+			    content: 'Demo ' counter(counter);
+			    text-transform: uppercase;
+			    font-weight: 600;
+			    background-color: $theme-bg-2;
+			    position: absolute;
+			    text-align: right;
+			    color: $font-color-1;
+			    top: -1rem;
+			    right: 0;
+			    font-size: 1.3rem;
+			    letter-spacing: .1rem;
+			    padding: 0 0 0 2rem;
+			}
+			&:after {
+				top: -.1rem;
+				left: 0;
+				height: 3rem;
+				width: 8.3333%;
+				position: absolute;
+				border-right: .1rem solid $demo-border-colour-1;
+				border-top: .1rem solid $brand-primary-outset;
+				z-index: 10;
+				width: 66.6667%;
+			}
+		}		
+	}
 }

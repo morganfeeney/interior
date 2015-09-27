@@ -14,9 +14,12 @@ $grid-outer: ($grid-gutter-width / 2);
 $grid-align: left;
 $vert-space: 1rem 0;
 
-// Colours
-$theme-bg-1: #FF7070; // Funky Salmon
-$theme-bg-2: #FFF; // White
+// Base Colours
+$brand-primary: #FF7070; // Funky Salmon
+$brand-primary-outset: #FFF; // White
+
+$theme-bg-1: $brand-primary;
+$theme-bg-2: $brand-primary-outset;
 
 $demo-bg-1: rgba($theme-bg-1, 0.3);
 $demo-bg-1--single: $theme-bg-1;
@@ -25,8 +28,13 @@ $demo-bg-1--border: 1px solid $theme-bg-1;
 
 $demo-bg-2: #FF7070;
 $demo-bg-2--single: rgba($demo-bg-2, 0.3);
-$demo-bg-2--group: rgb(255, 255, 255);
+$demo-bg-2--group: $theme-bg-2;
 
-//Fonts
+// Fonts
 $font-family-base: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-normal: 1.6rem
+$font-size-normal: 1.6rem;
+
+$font-color-1: $brand-primary;
+
+// Borders
+$demo-border-colour-1: rgba($demo-bg-1, 0.3);
