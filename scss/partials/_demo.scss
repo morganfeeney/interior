@@ -2,7 +2,6 @@
 	&-bg-1 {
 		&.grid-nums {
 			@include interior(
-				$grid-nums: true,
 				$vert-space: 0
 			);
 		}
@@ -103,12 +102,10 @@
 	min-height: 4rem;
 	@extend .clearfix;
 }
-.with-names {
-	.inner {
-		display: flex;
-		p {
-			margin: auto;
-			color: darken($demo-bg-1--group, 100);
-		}					
-	}
+.inner {
+	display: flex;
+	p {
+		margin: auto;
+		color: darken($demo-bg-1--group, 100);
+	}					
 }
