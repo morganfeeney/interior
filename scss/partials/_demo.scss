@@ -1,3 +1,12 @@
+@media(min-width: $screen-xs) {
+	@include interior(
+		$grid-cols: 3,
+		$vert-space: 0,
+		$flip: false,
+		$push: false,
+		$mq: xs
+	);
+}
 .demo {
 	&-bg-1 {
 		&.grid-nums {

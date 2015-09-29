@@ -13,21 +13,19 @@
 }
 .simple-demo-1 .grid-col-1 {
   width: 33.3333%;
-  padding: 0.4rem;
 }
 .simple-demo-1 .grid-col-2 {
   width: 66.6667%;
-  padding: 0.4rem;
 }
 .simple-demo-1 .grid-col-3 {
   width: 100%;
-  padding: 0.4rem;
-}
-.simple-demo-1 .col-group {
-  padding: 0;
 }
 .simple-demo-1 [class*=grid-col] {
-  min-height: 1px;
+  padding: 0.4rem;
+  min-height: .1rem;
   position: relative;
   float: left;
+}
+.simple-demo-1 [class*=grid-col].col-group {
+  padding: 0;
 }</code></pre>
