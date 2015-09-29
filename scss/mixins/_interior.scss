@@ -6,7 +6,6 @@
 	$grid-gutter-width: $grid-gutter-width,
 	$grid-outer: ($grid-gutter-width/2),
 	$grid-cols: $grid-cols,
-	$grid-nums: false,
 	$grid-align: $grid-align,
 	$vert-space: $vert-space,
 	$push: true,
@@ -36,16 +35,6 @@
 		.grid-col-#{$column} {
 	   		width: 100% / $grid-cols * $column;
 	   		padding: ($grid-gutter-width / 2);
-		    // If $grid-names == true in demoGrid display the class name.
-		    // To be removed > for demo only
-		    @if $grid-nums == true {
-				.inner {
-					&:before {
-						content: '#{$column}';
-						margin: auto;
-					}
-				}	    		
-			}
 		}
 	}
 	// This is set to true by default, to turn off set to false in @mixin.

@@ -1,4 +1,4 @@
-$(function(){
+(function(jQuery) {
 	function gridOverlay(){
 		$('#gridOverlay').remove();
 		$('body').append(
@@ -45,4 +45,19 @@ $(function(){
 		$('.demo .grid-col-flip-right-4.with-names .inner').html('<p>grid-col-flip-right-4</p>');
 	}
 	demoText();
-});
+
+	var gridNums = function($){
+		$('.grid-nums [class*=grid-col-]').not('.col-group').each(function() {
+			var $string = $(this).attr('class');
+			var $stringSplit = $string.split('-');
+			$(this,'.inner').html(
+				'<div class="inner">'+
+					'<p>'+$stringSplit[2]+'</p>'+
+				'</div>'
+			);
+		});
+	}
+	$(function() {
+		window.gridNums = new gridNums(jQuery);
+	})
+})(jQuery);
