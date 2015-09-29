@@ -3,7 +3,6 @@ $grid-cols: 12;
 $push-cols: $grid-cols;
 $flip-cols: $grid-cols;
 
-
 // Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns
 $grid-gutter-width: .8rem;
 
@@ -38,3 +37,12 @@ $font-color-1: $brand-primary;
 
 // Borders
 $demo-border-colour-1: rgba($demo-bg-1, 0.3);
+
+// Media widths
+$media-widths: (
+	xs: 400px,
+	sm: 600px,
+	md: 800px,
+	lg: 1000px,
+	xl: 1200px
+);

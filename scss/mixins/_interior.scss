@@ -13,6 +13,7 @@
 	$flip: true,
 	$flip-cols: $flip-cols
 ) {
+	// Wrap them all up in `.grid-outer`
 	.grid-outer {
 		padding: $grid-outer;
 		// Clear all the things
@@ -29,14 +30,15 @@
 	}
 	// Get the number of columns from the variable.
 	$columns: $grid-cols;
-	// Wrap them all up in `.grid-outer`
 	// Loop through a number of sequentially numbered divs from 1 to $columns.
-	@for $column from 1 through $columns {
-		.grid-col-#{$column} {
-	   		width: 100% / $grid-cols * $column;
-	   		padding: ($grid-gutter-width / 2);
+	@each $mq, $media-width in $media-widths {
+		@for $column from 1 through $columns {
+			.grid-col-#{$mq}-#{$column} {
+		   		width: 100% / $grid-cols * $column;
+			}
 		}
 	}
+		
 	// This is set to true by default, to turn off set to false in @mixin.
 	@if $push == true {
 		@for $push-col from 1 through $push-cols {
@@ -58,12 +60,13 @@
 			}
 		}
 	}
-	.col-group {
-		padding: 0;
-	}
 	[class*=grid-col] {
-		min-height: 1px;
+		padding: ($grid-gutter-width / 2);
+		min-height: .1rem;
 		position: relative;
+		&.col-group {
+			padding: 0;
+		}
 		// if $grid-align == left, right or center: display accordingly
 		@if $grid-align == left {
 			@include gridAlignment(left);
