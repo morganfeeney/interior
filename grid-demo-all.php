@@ -29,6 +29,8 @@
 				<section class="intro">
 					<h2>What is this?</h2>
 					<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs by simply changing the default variables.</p>
+				</section>
+				<section class="grid demo demo-bg-1">
 					<?php include('includes/code-samples/interior-config-3.php') ?>
 					<p>
 						Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
@@ -133,15 +135,19 @@
 							</div>
 						</div>
 					</div>
-					<h2>Modular mixins</h2>
+<!-- 					<h2>Modular mixins</h2>
 					<p>Interior can be re-used over and over again, by declaring your desired units within a mixin you can leave the defaults in place, knowing that they will be overridden.</p>
-					<?php include('includes/code-samples/interior-config-1.php') ?>
+					<?php include('includes/code-samples/interior-config-1.php') ?> -->
 					<div class="accompanying-text">
 						<h2>As simple as you make it</h2>
 						<p>
-							Create simple layouts, and output as many columns as required, nested within in as many different classes as needed.
+							Create simple layouts, and output as many columns as required, nested within in as many different classes as needed. For example, simply creating a mini-grid system out of a total of 3 columns yields a number of possible layouts.
 						</p>
 					</div>
+					<?php include('includes/code-samples/interior-config-2.php') ?>
+					<p class="text-center">Outputs</p>
+					<?php include('includes/code-samples/interior-css-1.php') ?>
+					<p class="text-center"><i>Allowing you to create:</i></p>
 					<div class="visual-example">
 						<div class="grid grid-nums demo demo-bg-1 simple-demo-1">
 							<div class="grid-outer">
@@ -159,7 +165,58 @@
 							</div>
 						</div>
 					</div>
-					<?php include('includes/code-samples/interior-config-2.php') ?>
+					<p class="text-center"><i>Or</i></p>
+					<div class="visual-example">
+						<div class="grid grid-nums demo demo-bg-1 simple-demo-1">
+							<div class="grid-outer">
+								<div class="grid-row clearfix">
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p class="text-center"><i>Then even:</i></p>
+					<div class="visual-example">
+						<div class="grid grid-nums demo demo-bg-1 simple-demo-1">
+							<div class="grid-outer">
+								<div class="grid-row clearfix">
+									<div class="grid-col-3 col-group">
+										<div class="grid-col-2">
+											<div class="inner"></div>
+										</div>
+										<div class="grid-col-1">
+											<div class="inner"></div>
+										</div>
+									</div>
+									<div class="grid-col-1">
+										<div class="inner"></div>
+									</div>
+									<div class="grid-col-2 col-group">
+										<div class="grid-col-1">
+											<div class="inner"></div>
+										</div>
+										<div class="grid-col-1">
+											<div class="inner"></div>
+										</div>
+										<div class="grid-col-1">
+											<div class="inner"></div>
+										</div>
+									</div>
+									<div class="grid-col-3">
+										<div class="inner"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 
 				<section class="grid demo demo-bg-2">
@@ -324,10 +381,9 @@
 
 				<section class="grid demo demo-bg-3">
 					<div class="accompanying-text">
-						<h2>Flip columns</h2>
-						<p>
-							 The usual use case scenario for flipping visual appearance of columns is for use with Responsive Web Design. For example you want the left column to be the second column going down the page once your columns eventually span the full width, at a set break-point. Unless you change the source order you will not be able to achieve this using CSS.
-						</p>
+						<h2>Flipping columns</h2>
+						<p>No that wasn't me complaining again... One use case scenario for 'flipping' visual appearance of columns is for use with Responsive Web Design (RWD).</p>
+						<p>E.g. in a 2 column layout you want a left &amp; right column, yet when you have a single column layout, at a set break-point, you want the left column from your 2 column layout to be beneath the right column in your single columns layout. Unless you change the source order you will not be able to achieve this using CSS &amp; HTML only.</p>
 					</div>
 					<div class="visual-example">
 						<div class="grid-outer">

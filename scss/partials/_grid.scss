@@ -12,13 +12,10 @@
 	$vert-space: 0
 );
 .col {
-	&-group {
-		padding: 0;
-		&-descend {
-			.grid-row {
-				> [class*=grid-col] {
-					padding: 0;
-				}
+	&-descend {
+		.grid-row {
+			> [class*=grid-col] {
+				padding: 0;
 			}
 		}
 	}

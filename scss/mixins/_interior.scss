@@ -69,6 +69,9 @@
 			}
 		}
 	}
+	.col-group {
+		padding: 0;
+	}
 	[class*=grid-col] {
 		min-height: 1px;
 		position: relative;

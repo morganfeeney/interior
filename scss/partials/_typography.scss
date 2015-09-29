@@ -25,12 +25,18 @@ h2, h3, h4, h5, h6 {
 
 p {
 	font-size: 1.8rem;
+	margin-bottom: 1.6rem;
 	.with-names & {
 		font-size: 1.4rem;
 	}
 }
 
-* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4):not(section) {
+.text-center {
+	text-align: center;
+}
+
+* ~ *:not([class*=grid-col]):not(.grid-row):not(.grid-outer):not(main):not(h2):not(h3):not(h4):not(section),
+section > :first-child:not(h2) {
 	margin: 0 0 3rem 0;
 }
 
@@ -48,7 +54,7 @@ section {
 	margin-bottom: 6rem;
 	&:not(.intro) {
 		padding-top: 3rem;
-		border-top: 1px solid rgba($demo-bg-1, 0.3);
+		//border-top: 1px solid rgba($demo-bg-1, 0.3);
 	}
 }
 
@@ -71,17 +77,17 @@ section {
 			    font-size: 1.3rem;
 			    letter-spacing: .1rem;
 			    padding: 0 0 0 2rem;
+			    z-index: 1;
 			}
 			&:after {
 				top: -.1rem;
-				left: 0;
-				height: 2rem;
-				width: 8.3333%;
-				position: absolute;
-				border-right: .1rem solid $demo-border-colour-1;
-				border-top: .1rem solid $brand-primary-outset;
-				z-index: 10;
-				width: 66.6667%;
+			    left: -2rem;
+			    height: 1.5rem;
+			    position: absolute;
+			    border-left: .1rem solid $demo-border-colour-1;
+			    border-top: .1rem solid $demo-border-colour-1;
+			    z-index: 0;
+			    width: 100%;
 			}
 		}		
 	}

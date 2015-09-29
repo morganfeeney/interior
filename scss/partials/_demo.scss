@@ -19,10 +19,11 @@
 		}
 	}
 	&.simple-demo-1 {
-		//$grid-gutter-width: 3rem;
 		@include interior(
 			$grid-cols: 3,
-			$vert-space: 0
+			$vert-space: 0,
+			$flip: false,
+			$push: false
 		);
 	}		
 
