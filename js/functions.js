@@ -2,12 +2,12 @@
 	function gridOverlay(){
 		$('#gridOverlay').remove();
 		$('body').append(
-			'<div id="gridOverlay" class="grid grid-outer overlay">'+
+			'<div id="gridOverlay" class="grid i-outer overlay">'+
 			'</div>'
 		);
 		for (var overlayGridCol = 0; overlayGridCol < 12; overlayGridCol++) {
 			$('#gridOverlay').append(
-				'<div class="grid-col-1">'+
+				'<div class="i-col-1">'+
 					'<div class="inner">'+
 					'</div>'+
 				'</div>'
@@ -30,24 +30,24 @@
 	
 	function demoText(){
 		// Grouped or not?
-		$('.demo .col-single.with-names .inner').html('<p>single child</p>');
-		$('.demo .col-group.with-names .inner').html('<p>group child</p>');
+		$('.demo .col-single.i-names .inner').html('<p>single child</p>');
+		$('.demo .col-group.i-names .inner').html('<p>group child</p>');
 
 		//Offset
-		$('.demo .grid-col-push-3.with-names .inner').html('<p>grid-col-push-3</p>');
-		$('.demo .grid-col-push-6.with-names .inner').html('<p>grid-col-push-6</p>');
-		$('.demo .grid-col-6.no-offset.with-names .inner').html('<p>no offset used</p>');
+		$('.demo .i-col-p-3.i-names .inner').html('<p>i-col-p-3</p>');
+		$('.demo .i-col-p-6.i-names .inner').html('<p>i-col-p-6</p>');
+		$('.demo .i-col-6.no-offset.i-names .inner').html('<p>no offset used</p>');
 
-		// Flipped
-		$('.demo .grid-col-flip-left-4.with-names .inner').html('<p>grid-col-flip-left-4</p>');
-		$('.demo .grid-col-flip-right-8.with-names .inner').html('<p>grid-col-flip-right-8</p>');
-		$('.demo .grid-col-flip-left-8.with-names .inner').html('<p>grid-col-flip-left-8</p>');
-		$('.demo .grid-col-flip-right-4.with-names .inner').html('<p>grid-col-flip-right-4</p>');
+		// fped
+		$('.demo .i-col-f-l-4.i-names .inner').html('<p>i-col-f-l-4</p>');
+		$('.demo .i-col-f-r-8.i-names .inner').html('<p>i-col-f-r-8</p>');
+		$('.demo .i-col-f-l-8.i-names .inner').html('<p>i-col-f-l-8</p>');
+		$('.demo .i-col-f-r-4.i-names .inner').html('<p>i-col-f-r-4</p>');
 	}
 	demoText();
 
 	var gridNums = function($){
-		$('.grid-nums [class*=grid-col-]').not('.col-group').each(function() {
+		$('.i-nums [class*=i-col-]').not('.col-group').each(function() {
 			var $string = $(this).attr('class');
 			var $stringSplit = $string.split('-');
 			$(this,'.inner').html(

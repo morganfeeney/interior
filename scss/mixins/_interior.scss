@@ -6,21 +6,21 @@
 	$grid-gutter-width: $grid-gutter-width,
 	$grid-outer: ($grid-gutter-width/2),
 	$grid-cols: $grid-cols,
-	$grid-align: $grid-align,
+	$align: $align,
 	$vert-space: $vert-space,
 	$push: true,
-	$push-cols: $push-cols,
+	$push-cols: $grid-cols,
 	$flip: true,
-	$flip-cols: $flip-cols,
+	$flip-cols: $grid-cols,
 	$mq: null
 ) {
-	// Wrap them all up in `.grid-outer`
-	.grid-outer {
+	// Wrap them all up in `.i-outer`
+	.i-outer {
 		padding: $grid-outer;
 		// Clear all the things
 		clear: both;
 	}
-	.grid-row {
+	.i-row {
 		padding: $vert-space;
 		&:first-of-type {
 			padding-top: 0;
@@ -31,50 +31,81 @@
 	}
 	// Get the number of columns from the variable.
 	$columns: $grid-cols;
-	// Loop through a number of sequentially numbered divs from 1 to $columns.
-	@for $column from 1 through $columns {
-		.grid-col-#{$mq}-#{$column} {
-	   		width: 100% / $grid-cols * $column;
-		}
-	}		
-		
-	// This is set to true by default, to turn off set to false in @mixin.
-	@if $push == true {
-		@for $push-col from 1 through $push-cols {
-			.grid-col-push-#{$push-col} {
-		   		margin-left: 100% / $grid-cols * $push-col;
-			}
-		}		
-	}
-	// This is set to true by default, to turn off set to false in @mixin.
-	@if $flip == true {
-		@for $flip-col from 1 through $flip-cols {
-			.grid-col-flip {
-				&-left-#{$flip-col} {
-			   		left: 100% / $grid-cols * $flip-col;
-				}
-				&-right-#{$flip-col} {
-			   		right: 100% / $grid-cols * $flip-col;
-				}
+	// Check to see if $mq is defined, if it is then interpolate the $mq variable name into the class.
+	// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
+	@if $mq != null {
+		@for $column from 1 through $columns {
+			.i-col-#{$mq}-#{$column} {
+		   		width: 100% / $grid-cols * $column;
 			}
 		}
-	}
-	[class*=grid-col] {
-		padding: ($grid-gutter-width / 2);
-		min-height: .1rem;
-		position: relative;
-		&.col-group {
-			padding: 0;
+		// This is set to true by default, to turn off set to false in @mixin.
+		@if $push == true {
+			@for $push-col from 1 through $push-cols {
+				.i-col-#{$mq}-p-#{$push-col} {
+			   		margin-left: 100% / $grid-cols * $push-col;
+				}
+			}		
 		}
-		// if $grid-align == left, right or center: display accordingly
-		@if $grid-align == left {
-			@include gridAlignment(left);
+		// This is set to true by default, to turn off set to false in @mixin.
+		@if $flip == true {
+			@for $flip-col from 1 through $flip-cols {
+				.i-col-#{$mq}-f {
+					&-l-#{$flip-col} {
+				   		left: 100% / $grid-cols * $flip-col;
+					}
+					&-r-#{$flip-col} {
+				   		right: 100% / $grid-cols * $flip-col;
+					}
+				}
+			}
 		}
-		@else if $grid-align == right {
-			@include gridAlignment(right);
+		[class*=i-col-#{$mq}] {
+			padding: ($grid-gutter-width / 2);
+			min-height: $col-min-height;
+			position: relative;
+			&.col-group {
+				padding: $col-group-padding;
+			}
+			// if $align == left, right or center: display accordingly
+			@include gridAlignment($align);
 		}
-		@else if $grid-align == center {
-			@include gridAlignment(center);
+	} @else {
+		@for $column from 1 through $columns {
+			.i-col-#{$column} {
+		   		width: 100% / $grid-cols * $column;
+			}
+		}
+		// This is set to true by default, to turn off set to false in @mixin.
+		@if $push == true {
+			@for $push-col from 1 through $push-cols {
+				.i-col-p-#{$push-col} {
+			   		margin-left: 100% / $grid-cols * $push-col;
+				}
+			}		
+		}
+		// This is set to true by default, to turn off set to false in @mixin.
+		@if $flip == true {
+			@for $flip-col from 1 through $flip-cols {
+				.i-col-f {
+					&-l-#{$flip-col} {
+				   		left: 100% / $grid-cols * $flip-col;
+					}
+					&-r-#{$flip-col} {
+				   		right: 100% / $grid-cols * $flip-col;
+					}
+				}
+			}
+		}
+		[class*=i-col] {
+			padding: ($grid-gutter-width / 2);
+			min-height: $col-min-height;
+			position: relative;
+			&.col-group {
+				padding: $col-group-padding;
+			}
+			// if $align == left, right or center: display accordingly
+			@include gridAlignment($align);
 		}
 	}
 }

@@ -13,7 +13,7 @@
 );
 .col {
 	&-descend {
-		.grid-row {
+		.i-row {
 			> [class*=grid-col] {
 				padding: 0;
 			}

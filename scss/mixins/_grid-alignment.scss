@@ -1,10 +1,8 @@
 @mixin gridAlignment($align) {
 	@if $align == 'left' {
-		$align: left;
 		float: $align;
 	}
 	@else if $align == 'right' {
-		$align: right;
 		float: $align;
 	} 
 	@else if $align == 'center' {

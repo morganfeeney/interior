@@ -3,12 +3,6 @@
 }
 @media(min-width: $screen-xs) {
 	.screen-xs {
-		
+
 	}
-	@include interior(
-		$grid-cols: 3,
-		$vert-space: 0,
-		$flip: false,
-		$push: false
-	);
 }

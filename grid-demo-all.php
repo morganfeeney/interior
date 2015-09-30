@@ -5,7 +5,7 @@
 		<title>Interior | All | Demo</title>
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/modernizr.custom.73874.js"></script>
-		<script src="../../bower_components/jquery/dist/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
 		  (function(d) {
@@ -33,103 +33,103 @@
 				<section class="grid demo demo-bg-1">
 					<?php include('includes/code-samples/interior-config-3.php') ?>
 					<p>
-						Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
+						Leaving the default values in place, e.g. <code class="language-scss">$i-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
 					</p>
-					<div class="grid grid-nums demo demo-bg-1">
-						<div class="grid-outer">
-							<div class="grid-row clearfix">
-								<div class="grid-col-12">
+					<div class="grid i-nums demo demo-bg-1">
+						<div class="i-outer">
+							<div class="i-row clearfix">
+								<div class="i-col-12">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-11">
+							<div class="i-row clearfix">
+								<div class="i-col-11">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-1">
-									<div class="inner"></div>
-								</div>
-							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-10">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-2">
+								<div class="i-col-1">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-9">
+							<div class="i-row clearfix">
+								<div class="i-col-10">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-3">
-									<div class="inner"></div>
-								</div>
-							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-8">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-4">
+								<div class="i-col-2">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-7">
+							<div class="i-row clearfix">
+								<div class="i-col-9">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-5">
-									<div class="inner"></div>
-								</div>
-							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-6">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-6">
+								<div class="i-col-3">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-5">
+							<div class="i-row clearfix">
+								<div class="i-col-8">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-7">
-									<div class="inner"></div>
-								</div>
-							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-4">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-8">
+								<div class="i-col-4">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-3">
+							<div class="i-row clearfix">
+								<div class="i-col-7">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-9">
-									<div class="inner"></div>
-								</div>
-							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-2">
-									<div class="inner"></div>
-								</div>
-								<div class="grid-col-10">
+								<div class="i-col-5">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row clearfix">
-								<div class="grid-col-1">
+							<div class="i-row clearfix">
+								<div class="i-col-6">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-11">
+								<div class="i-col-6">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-12">
+							</div>
+							<div class="i-row clearfix">
+								<div class="i-col-5">
+									<div class="inner"></div>
+								</div>
+								<div class="i-col-7">
+									<div class="inner"></div>
+								</div>
+							</div>
+							<div class="i-row clearfix">
+								<div class="i-col-4">
+									<div class="inner"></div>
+								</div>
+								<div class="i-col-8">
+									<div class="inner"></div>
+								</div>
+							</div>
+							<div class="i-row clearfix">
+								<div class="i-col-3">
+									<div class="inner"></div>
+								</div>
+								<div class="i-col-9">
+									<div class="inner"></div>
+								</div>
+							</div>
+							<div class="i-row clearfix">
+								<div class="i-col-2">
+									<div class="inner"></div>
+								</div>
+								<div class="i-col-10">
+									<div class="inner"></div>
+								</div>
+							</div>
+							<div class="i-row clearfix">
+								<div class="i-col-1">
+									<div class="inner"></div>
+								</div>
+								<div class="i-col-11">
+									<div class="inner"></div>
+								</div>
+								<div class="i-col-12">
 									<div class="inner"></div>
 								</div>
 							</div>
@@ -149,16 +149,16 @@
 					<?php include('includes/code-samples/interior-css-1.php') ?>
 					<p class="text-center"><i>Allowing you to create:</i></p>
 					<div class="visual-example">
-						<div class="grid grid-nums demo demo-bg-1 simple-demo-1">
-							<div class="grid-outer">
-								<div class="grid-row clearfix">
-									<div class="grid-col-1">
+						<div class="grid i-nums demo demo-bg-1 simple-demo-1">
+							<div class="i-outer">
+								<div class="i-row clearfix">
+									<div class="i-col-1">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-2">
+									<div class="i-col-2">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-3">
+									<div class="i-col-3">
 										<div class="inner"></div>
 									</div>
 								</div>
@@ -167,16 +167,16 @@
 					</div>
 					<p class="text-center"><i>Or</i></p>
 					<div class="visual-example">
-						<div class="grid grid-nums demo demo-bg-1 simple-demo-1">
-							<div class="grid-outer">
-								<div class="grid-row clearfix">
-									<div class="grid-col-1">
+						<div class="grid i-nums demo demo-bg-1 simple-demo-1">
+							<div class="i-outer">
+								<div class="i-row clearfix">
+									<div class="i-col-1">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-1">
+									<div class="i-col-1">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-1">
+									<div class="i-col-1">
 										<div class="inner"></div>
 									</div>
 								</div>
@@ -185,32 +185,32 @@
 					</div>
 					<p class="text-center"><i>Then even:</i></p>
 					<div class="visual-example">
-						<div class="grid grid-nums demo demo-bg-1 simple-demo-1">
-							<div class="grid-outer">
-								<div class="grid-row clearfix">
-									<div class="grid-col-3 col-group">
-										<div class="grid-col-2">
+						<div class="grid i-nums demo demo-bg-1 simple-demo-1">
+							<div class="i-outer">
+								<div class="i-row clearfix">
+									<div class="i-col-3 col-group">
+										<div class="i-col-2">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
 									</div>
-									<div class="grid-col-1">
+									<div class="i-col-1">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-2 col-group">
-										<div class="grid-col-1">
+									<div class="i-col-2 col-group">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
 									</div>
-									<div class="grid-col-3">
+									<div class="i-col-3">
 										<div class="inner"></div>
 									</div>
 								</div>
@@ -227,19 +227,19 @@
 						</p>
 					</div>
 					<div class="visual-example">
-						<div class="grid-outer">
-							<div class="grid-row clearfix">
-								<div class="grid-col-4 col-single with-names">
+						<div class="i-outer">
+							<div class="i-row clearfix">
+								<div class="i-col-4 col-single i-names">
 									<div class="inner"></div>
 								</div>
-								<div class="grid-col-8 col-group with-names">
-									<div class="grid-col-4">
+								<div class="i-col-8 col-group i-names">
+									<div class="i-col-4">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-4">
+									<div class="i-col-4">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-4">
+									<div class="i-col-4">
 										<div class="inner"></div>
 									</div>
 								</div>
@@ -259,85 +259,85 @@
 						</p>
 					</div>
 					<div class="visual-example">
-						<div class="grid-outer demo-bg-1">
-							<div class="grid-row">
-								<div class="grid-col-12 col-single with-names">
+						<div class="i-outer demo-bg-1">
+							<div class="i-row">
+								<div class="i-col-12 col-single i-names">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row">
-								<div class="grid-col-12 col-group">
-									<div class="grid-row">
-										<div class="grid-col-1">
+							<div class="i-row">
+								<div class="i-col-12 col-group">
+									<div class="i-row">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
-										<div class="grid-col-1">
+										<div class="i-col-1">
 											<div class="inner"></div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="grid-row">
-								<div class="grid-col-6 col-group">
-									<div class="col-group with-names clearfix">
-										<div class="grid-row">
-											<div class="grid-col-4">
+							<div class="i-row">
+								<div class="i-col-6 col-group">
+									<div class="col-group i-names clearfix">
+										<div class="i-row">
+											<div class="i-col-4">
 												<div class="inner"></div>
 											</div>
-											<div class="grid-col-4">
+											<div class="i-col-4">
 												<div class="inner"></div>
 											</div>
-											<div class="grid-col-4">
+											<div class="i-col-4">
 												<div class="inner"></div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="grid-col-6 col-group">
-									<div class="col-group with-names clearfix">
-										<div class="grid-row">
-											<div class="grid-col-6">
+								<div class="i-col-6 col-group">
+									<div class="col-group i-names clearfix">
+										<div class="i-row">
+											<div class="i-col-6">
 												<div class="inner"></div>
 											</div>
-											<div class="grid-col-6">
+											<div class="i-col-6">
 												<div class="inner"></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="grid-row">
-								<div class="grid-col-12 col-single with-names">
+							<div class="i-row">
+								<div class="i-col-12 col-single i-names">
 									<div class="inner"></div>
 								</div>
 							</div>
@@ -356,19 +356,19 @@
 						</p>
 					</div>
 					<div class="visual-example">
-						<div class="grid-outer">
-							<div class="grid-row">
-								<div class="grid-col-6 grid-col-push-6 with-names">
+						<div class="i-outer">
+							<div class="i-row">
+								<div class="i-col-6 i-col-p-6 i-names">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row">
-								<div class="grid-col-6 grid-col-push-3 with-names">
+							<div class="i-row">
+								<div class="i-col-6 i-col-p-3 i-names">
 									<div class="inner"></div>
 								</div>
 							</div>
-							<div class="grid-row">
-								<div class="grid-col-6 col-single no-offset with-names">
+							<div class="i-row">
+								<div class="i-col-6 col-single no-offset i-names">
 									<div class="inner"></div>
 								</div>
 							</div>
@@ -386,23 +386,23 @@
 						<p>E.g. in a 2 column layout you want a left &amp; right column, yet when you have a single column layout, at a set break-point, you want the left column from your 2 column layout to be beneath the right column in your single columns layout. Unless you change the source order you will not be able to achieve this using CSS &amp; HTML only.</p>
 					</div>
 					<div class="visual-example">
-						<div class="grid-outer">
-							<div class="grid-row">
+						<div class="i-outer">
+							<div class="i-row">
 								<div class="demo-borders clearfix">
-									<div class="grid-col-8 grid-col-flip-left-4 with-names">
+									<div class="i-col-8 i-col-f-l-4 i-names">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-4 grid-col-flip-right-8 with-names">
+									<div class="i-col-4 i-col-f-r-8 i-names">
 										<div class="inner"></div>
 									</div>
 								</div>
 							</div>
-							<div class="grid-row">
+							<div class="i-row">
 								<div class="demo-borders clearfix">
-									<div class="grid-col-4 grid-col-flip-left-8 with-names">
+									<div class="i-col-4 i-col-f-l-8 i-names">
 										<div class="inner"></div>
 									</div>
-									<div class="grid-col-8 grid-col-flip-right-4 with-names">
+									<div class="i-col-8 i-col-f-r-4 i-names">
 										<div class="inner"></div>
 									</div>
 								</div>

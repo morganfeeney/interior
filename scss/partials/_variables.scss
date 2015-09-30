@@ -10,8 +10,12 @@ $grid-gutter-width: .8rem;
 $grid-outer: ($grid-gutter-width / 2);
 
 // Set the default grid alignment
-$grid-align: left;
+$align: left;
 $vert-space: 1rem 0;
+
+// Helpers
+$col-min-height: .1rem;
+$col-group-padding: 0;
 
 // Base Colours
 $brand-primary: #FF7070; // Funky Salmon
@@ -39,15 +43,8 @@ $font-color-1: $brand-primary;
 $demo-border-colour-1: rgba($demo-bg-1, 0.3);
 
 // Media widths
-$media-widths: (
-	xs: 400px,
-	sm: 600px,
-	md: 800px,
-	lg: 1000px,
-	xl: 1200px
-);
-$screen-xs: 400px;
-$screen-sm: 600px;
-$screen-md: 800px;
-$screen-lg: 1000px;
-$screen-xl: 1200px;
+$xs: 400px;
+$sm: 600px;
+$md: 800px;
+$lg: 1000px;
+$xl: 1200px;
