@@ -4,13 +4,13 @@
 	// The variables below are assigned values in: variables.scss.
 	// They can be overridden by passing variable arguments to the @mixin.
 	$grid-gutter-width: $grid-gutter-width,
-	$grid-outer: ($grid-gutter-width/2),
+	$grid-outer: ($grid-gutter-width / 2),
 	$grid-cols: $grid-cols,
 	$align: $align,
 	$vert-space: $vert-space,
-	$push: true,
+	$push: false,
 	$push-cols: $grid-cols,
-	$flip: true,
+	$flip: false,
 	$flip-cols: $grid-cols,
 	$mq: null
 ) {
@@ -33,24 +33,46 @@
 	$columns: $grid-cols;
 	// Check to see if $mq is defined, if it is then interpolate the $mq variable name into the class.
 	// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
-	@if $mq != null {
-		@for $column from 1 through $columns {
+	@for $column from 1 through $columns {
+		@if $mq != null {
 			.i-col-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
+		// If $mq is not defined then fall back to just including the column number into the class.
+		} @else {
+			.i-col-#{$column} {
+		   		width: 100% / $grid-cols * $column;
+			}
 		}
-		// This is set to true by default, to turn off set to false in @mixin.
-		@if $push == true {
-			@for $push-col from 1 through $push-cols {
+	}
+	// This is set to true by default, to turn off set to false in @mixin.
+	@if $push == true {
+		@for $push-col from 1 through $push-cols {
+			@if $mq != null {
 				.i-col-#{$mq}-p-#{$push-col} {
 			   		margin-left: 100% / $grid-cols * $push-col;
 				}
-			}		
-		}
-		// This is set to true by default, to turn off set to false in @mixin.
-		@if $flip == true {
-			@for $flip-col from 1 through $flip-cols {
+			} @else {
+				.i-col-p-#{$push-col} {
+			   		margin-left: 100% / $grid-cols * $push-col;
+				}
+			}
+		}		
+	}
+	// This is set to true by default, to turn off set to false in @mixin.
+	@if $flip == true {
+		@for $flip-col from 1 through $flip-cols {
+			@if $mq != null {
 				.i-col-#{$mq}-f {
+					&-l-#{$flip-col} {
+				   		left: 100% / $grid-cols * $flip-col;
+					}
+					&-r-#{$flip-col} {
+				   		right: 100% / $grid-cols * $flip-col;
+					}
+				}
+			} @else {
+				.i-col-f {
 					&-l-#{$flip-col} {
 				   		left: 100% / $grid-cols * $flip-col;
 					}
@@ -60,6 +82,8 @@
 				}
 			}
 		}
+	}
+	@if $mq != null {
 		[class*=i-col-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
 			min-height: $col-min-height;
@@ -71,32 +95,6 @@
 			@include gridAlignment($align);
 		}
 	} @else {
-		@for $column from 1 through $columns {
-			.i-col-#{$column} {
-		   		width: 100% / $grid-cols * $column;
-			}
-		}
-		// This is set to true by default, to turn off set to false in @mixin.
-		@if $push == true {
-			@for $push-col from 1 through $push-cols {
-				.i-col-p-#{$push-col} {
-			   		margin-left: 100% / $grid-cols * $push-col;
-				}
-			}		
-		}
-		// This is set to true by default, to turn off set to false in @mixin.
-		@if $flip == true {
-			@for $flip-col from 1 through $flip-cols {
-				.i-col-f {
-					&-l-#{$flip-col} {
-				   		left: 100% / $grid-cols * $flip-col;
-					}
-					&-r-#{$flip-col} {
-				   		right: 100% / $grid-cols * $flip-col;
-					}
-				}
-			}
-		}
 		[class*=i-col] {
 			padding: ($grid-gutter-width / 2);
 			min-height: $col-min-height;

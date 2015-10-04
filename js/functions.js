@@ -49,12 +49,23 @@
 	var gridNums = function($){
 		$('.i-nums [class*=i-col-]').not('.col-group').each(function() {
 			var $string = $(this).attr('class');
-			var $stringSplit = $string.split('-');
-			$(this,'.inner').html(
-				'<div class="inner">'+
-					'<p>'+$stringSplit[2]+'</p>'+
-				'</div>'
-			);
+			var $stringSplitSpace = $string.split(' ');
+			if ($stringSplitSpace.length >= 2) {
+				var $mqClass = $stringSplitSpace[1].split('-');
+				$(this,'.inner').html(
+					'<div class="inner">'+
+						'<p>'+$mqClass[3]+'</p>'+
+					'</div>'	
+				);
+			}
+			if ($stringSplitSpace.length <= 1) {
+				var $noMqClass = $stringSplitSpace[0].split('-');
+				$(this,'.inner').html(
+					'<div class="inner">'+
+						'<p>'+$noMqClass[2]+'</p>'+
+					'</div>'	
+				);
+			}
 		});
 	}
 	$(function() {

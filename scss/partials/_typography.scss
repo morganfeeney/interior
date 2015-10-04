@@ -50,12 +50,10 @@ section > :first-child:not(h2) {
 }
 
 // Demo heading example
-
 section {
 	margin-bottom: 6rem;
 	&:not(.intro) {
 		padding-top: 3rem;
-		//border-top: 1px solid rgba($demo-bg-1, 0.3);
 	}
 }
 
@@ -92,4 +90,8 @@ section {
 			}
 		}		
 	}
+}
+
+mark {
+	background: rgba($demo-bg-1, 0.3);
 }

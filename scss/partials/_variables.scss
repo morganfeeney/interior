@@ -29,7 +29,7 @@ $demo-bg-1--single: $theme-bg-1;
 $demo-bg-1--group: $theme-bg-2;
 $demo-bg-1--border: 1px solid $theme-bg-1;
 
-$demo-bg-2: #FF7070;
+$demo-bg-2: $brand-primary;
 $demo-bg-2--single: rgba($demo-bg-2, 0.3);
 $demo-bg-2--group: $theme-bg-2;
 

@@ -1,35 +1,12 @@
-// @media(min-width: $xs) {
-// 	@include interior(
-// 		$grid-cols: 3,
-// 		$vert-space: 0,
-// 		$grid-gutter-width: 6rem,
-// 		$mq: xs,
-// 		$align: center
-// 	);
-// }
-// @media(min-width: $md) {
-// 	@include interior(
-// 		$grid-cols: 2,
-// 		$grid-gutter-width: 3rem,
-// 		$vert-space: 0,
-// 		$flip: false,
-// 		$push: false,
-// 		$mq: md
-// 	);
-// }
-// 	@include interior(
-// 		$grid-cols: 2,
-// 		$grid-gutter-width: 13rem,
-// 		$vert-space: 0,
-// 		$flip: false,
-// 		$push: false
-// 	);
 .demo {
 	&-bg-1 {
 		&.i-nums {
-			@include interior(
-				$vert-space: 0
-			);
+			@media(min-width: $xs) {
+				@include interior(
+					$vert-space: 0,
+					$mq: xs
+				);
+			}
 		}
 		.i-outer {
 			background: $demo-bg-1;
@@ -46,10 +23,15 @@
 	&.simple-demo-1 {
 		@include interior(
 			$grid-cols: 3,
-			$vert-space: 0,
-			$flip: false,
-			$push: false
+			$vert-space: 0
 		);
+		@media(min-width: $sm) {
+			@include interior(
+				$grid-cols: 3,
+				$vert-space: 0,
+				$mq: sm
+			);
+		}
 	}		
 
 	&-bg-2 {

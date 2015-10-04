@@ -219,6 +219,37 @@
 					</div>
 				</section>
 
+				<section class="grid demo demo-bg-1">
+					<div class="accompanying-text">
+						<h2>Include media queries</h2>
+						<p>
+							Create the same simple layouts, yet with the advantages media queries bring along. E.g. <i>adjust your layout at your desired screen width</i>.
+						</p>
+						<?php include('includes/code-samples/interior-config-4.php') ?>
+						<p class="text-center">Outputs</p>
+						<?php include('includes/code-samples/interior-css-2.php') ?>
+						<p class="text-center">Adjust your markup accordingly</p>
+						<?php include('includes/code-samples/interior-markup-1.php') ?>
+						<div class="visual-example">
+							<div class="grid i-nums demo demo-bg-1 simple-demo-1">
+								<div class="i-outer">
+									<div class="i-row clearfix">
+										<div class="i-col-3 i-col-sm-1">
+											<div class="inner"></div>
+										</div>
+										<div class="i-col-3 i-col-sm-2">
+											<div class="inner"></div>
+										</div>
+										<div class="i-col-3 i-col-sm-3">
+											<div class="inner"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<section class="grid demo demo-bg-2">
 					<div class="accompanying-text">
 						<h2>Group nested columns</h2>
