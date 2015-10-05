@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 		<title>Interior | All | Demo</title>
 		<link rel="stylesheet" href="css/style.css">
-		<script src="js/modernizr.custom.73874.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
@@ -145,7 +144,7 @@
 						</p>
 					</div>
 					<?php include('includes/code-samples/interior-config-2.php') ?>
-					<p class="text-center">Outputs</p>
+					<p class="text-center"><i>Compiles to:</i></p>
 					<?php include('includes/code-samples/interior-css-1.php') ?>
 					<p class="text-center"><i>Allowing you to create:</i></p>
 					<div class="visual-example">
@@ -183,7 +182,7 @@
 							</div>
 						</div>
 					</div>
-					<p class="text-center"><i>Then even:</i></p>
+					<p class="text-center"><i>Or even:</i></p>
 					<div class="visual-example">
 						<div class="grid i-nums demo demo-bg-1 simple-demo-1">
 							<div class="i-outer">
@@ -223,13 +222,14 @@
 					<div class="accompanying-text">
 						<h2>Include media queries</h2>
 						<p>
-							Create the same simple layouts, yet with the advantages media queries bring along. E.g. <i>adjust your layout at your desired screen width</i>.
+							Create the same simple layouts, yet with the advantages of media queries. E.g. <i>adjust your layout at your desired screen width</i>.
 						</p>
 						<?php include('includes/code-samples/interior-config-4.php') ?>
-						<p class="text-center">Outputs</p>
+						<p class="text-center"><i>Compiles to:</i></p>
 						<?php include('includes/code-samples/interior-css-2.php') ?>
-						<p class="text-center">Adjust your markup accordingly</p>
-						<?php include('includes/code-samples/interior-markup-1.php') ?>
+						<p class="text-center"><i>Adjust your markup accordingly, e.g.:</i></p>
+						<?php include('includes/code-samples/interior-html-1.php') ?>
+						<p class="text-center"><i>Results in:</i></p>
 						<div class="visual-example">
 							<div class="grid i-nums demo demo-bg-1 simple-demo-1">
 								<div class="i-outer">
@@ -247,6 +247,58 @@
 								</div>
 							</div>
 						</div>
+						<p class="text-center"><i>Or use three equal width columns:</i></p>
+						<div class="visual-example">
+							<div class="grid i-nums demo demo-bg-1 simple-demo-1">
+								<div class="i-outer">
+									<div class="i-row clearfix">
+										<div class="i-col-3 i-col-sm-1">
+											<div class="inner"></div>
+										</div>
+										<div class="i-col-3 i-col-sm-1">
+											<div class="inner"></div>
+										</div>
+										<div class="i-col-3 i-col-sm-1">
+											<div class="inner"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="text-center"><i>Or a more complex structure:</i></p>
+						<div class="visual-example">
+							<div class="grid i-nums demo demo-bg-1 simple-demo-1">
+								<div class="i-outer">
+									<div class="i-row clearfix">
+										<div class="i-col-3 col-group">
+											<div class="i-col-2">
+												<div class="inner"></div>
+											</div>
+											<div class="i-col-1">
+												<div class="inner"></div>
+											</div>
+										</div>
+										<div class="i-col-3 i-col-sm-1">
+											<div class="inner"></div>
+										</div>
+										<div class="i-col-3 i-col-sm-2 col-group">
+											<div class="i-col-1">
+												<div class="inner"></div>
+											</div>
+											<div class="i-col-1">
+												<div class="inner"></div>
+											</div>
+											<div class="i-col-1">
+												<div class="inner"></div>
+											</div>
+										</div>
+										<div class="i-col-3">
+											<div class="inner"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -254,16 +306,16 @@
 					<div class="accompanying-text">
 						<h2>Group nested columns</h2>
 						<p>
-							We have to use different classes <code class="language-scss">.col-single</code> &amp; <code class="language-scss">.col-group</code> for parent containers due to the amount of padding created when nesting. This enables us to group different numbers of columns, without affecting the gutter widths:
+							We have to add a new class here: <code class="language-scss">.col-group</code> for parent containers due to the amount of padding created when nesting. This enables us to group different numbers of columns, without affecting the gutter widths - <i>keeping things even</i>:
 						</p>
 					</div>
 					<div class="visual-example">
 						<div class="i-outer">
 							<div class="i-row clearfix">
-								<div class="i-col-4 col-single i-names">
+								<div class="i-col-12 i-col-xs-4 col-single i-names">
 									<div class="inner"></div>
 								</div>
-								<div class="i-col-8 col-group i-names">
+								<div class="i-col-12 i-col-xs-8 col-group i-names">
 									<div class="i-col-4">
 										<div class="inner"></div>
 									</div>

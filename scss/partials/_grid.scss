@@ -1,5 +1,11 @@
 // Containers
 .container {
+	&-outer {
+		@media(min-width: $sm) {
+			padding: 0 2rem;			
+		}
+		padding: 0 1.5rem;
+	}
 	&-set-width {
 		max-width: 80rem;
 		@include gridAlignment(center);
@@ -11,6 +17,13 @@
 @include interior(
 	$vert-space: 0
 );
+
+@media(min-width: $xs) {
+	@include interior(
+		$vert-space: 0,
+		$mq: xs
+	);
+}
 .col {
 	&-descend {
 		.i-row {

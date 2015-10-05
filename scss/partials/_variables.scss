@@ -20,6 +20,7 @@ $col-group-padding: 0;
 // Base Colours
 $brand-primary: #FF7070; // Funky Salmon
 $brand-primary-outset: #FFF; // White
+$brand-primary-offset: #000; // Black
 
 $theme-bg-1: $brand-primary;
 $theme-bg-2: $brand-primary-outset;
@@ -38,6 +39,8 @@ $font-family-base: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-seri
 $font-size-normal: 1.6rem;
 
 $font-color-1: $brand-primary;
+$font-color-2: $brand-primary-outset;
+$font-color-3: $brand-primary-offset;
 
 // Borders
 $demo-border-colour-1: rgba($demo-bg-1, 0.3);

@@ -3,29 +3,7 @@ header {
 	padding: 1rem 0;
 	margin-bottom: 3rem;
 	position: relative;
-	&.theme {
-		&-1 {
-			background: $theme-bg-1;
-			h1 {
-				font: normal 600 8rem/1 $font-family-base;
-				padding: 2rem 0;
-				span {
-					font-size: 2rem;
-					display: block;
-					font-weight: 300;
-					padding-bottom: .6rem;
-				}
-			}
-		}
-		&-2 {
-			background: $theme-bg-2;
-			h1 {
-				color: $theme-bg-1;
-				font-size: 5rem;
-				text-shadow: -1rem -1rem rgba(0,0,0,0.1),1rem 1rem rgba(0,0,0,0.1);
-			}
-		}
-	}
+	background: $theme-bg-1;
 }
 main {
 	clear: both;

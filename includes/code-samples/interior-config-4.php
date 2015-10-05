@@ -5,16 +5,16 @@
 );
 
 <span class="comment">// Set your media query width as a variable</span>
-$xs: 400px;
+$md: 600px;
 
 <span class="comment">// Wrap your interior config in the media query</span>
-@media(min-width: $xs) {
+@media(min-width: $md) {
 	@include interior(
 		$grid-cols: 3,
 		$vert-space: 0,
 		<span class="comment">// Reference the variable name. It can be anything you want, 
-		// as long it matches the one used in the media query</span>
-		$mq: xs
+		// for the sake of your sanity match the one used in the media query.</span>
+		$mq: md
 	);	
 }
 </code></pre>

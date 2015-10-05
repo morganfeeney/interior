@@ -12,66 +12,6 @@ body {
   padding: 0;
 }
 
-@media (min-width: 400px) {
-  .demo-bg-1.i-nums .i-outer {
-    padding: 0.4rem;
-    clear: both;
-  }
-  .demo-bg-1.i-nums .i-row {
-    padding: 0;
-  }
-  .demo-bg-1.i-nums .i-row:first-of-type {
-    padding-top: 0;
-  }
-  .demo-bg-1.i-nums .i-row:last-of-type {
-    padding-bottom: 0;
-  }
-  .demo-bg-1.i-nums .i-col-xs-1 {
-    width: 8.3333%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-2 {
-    width: 16.6667%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-3 {
-    width: 25%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-4 {
-    width: 33.3333%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-5 {
-    width: 41.6667%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-6 {
-    width: 50%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-7 {
-    width: 58.3333%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-8 {
-    width: 66.6667%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-9 {
-    width: 75%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-10 {
-    width: 83.3333%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-11 {
-    width: 91.6667%;
-  }
-  .demo-bg-1.i-nums .i-col-xs-12 {
-    width: 100%;
-  }
-  .demo-bg-1.i-nums [class*=i-col-xs] {
-    padding: 0.4rem;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  .demo-bg-1.i-nums [class*=i-col-xs].col-group {
-    padding: 0;
-  }
-}
 .demo-bg-1 .i-outer {
   background: rgba(255, 112, 112, 0.3);
 }
@@ -400,16 +340,32 @@ body {
   counter-reset: counter;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #fff;
-  font: normal 600 2rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+h1 {
+  color: #FFF;
+  font: normal 600 5rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
+}
+h1 span {
+  font-size: 1.6rem;
+  display: block;
+  font-weight: 300;
+  padding-bottom: .6rem;
+}
+@media (min-width: 600px) {
+  h1 {
+    font: normal 600 8rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  h1 span {
+    font-size: 2rem;
+  }
 }
 
 h2, h3, h4, h5, h6 {
   color: inherit;
+  font-size: 2rem;
+  text-transform: uppercase;
   margin: 0 0 1rem 0;
 }
 
@@ -471,14 +427,22 @@ section.demo:after {
   left: -2rem;
   height: 1.5rem;
   position: absolute;
-  border-left: 0.1rem solid rgba(255, 112, 112, 0.3);
   border-top: 0.1rem solid rgba(255, 112, 112, 0.3);
   z-index: 0;
   width: 100%;
 }
+@media (min-width: 800px) {
+  section.demo:after {
+    border-left: 0.1rem solid rgba(255, 112, 112, 0.3);
+  }
+}
 
 mark {
   background: rgba(255, 112, 112, 0.3);
+}
+
+.inner p {
+  text-align: center;
 }
 
 .code-example {
@@ -494,7 +458,7 @@ code, pre {
 pre.snippet code {
   background: rgba(255, 112, 112, 0.1);
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding: 2rem;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -522,6 +486,14 @@ code {
   color: #999;
 }
 
+.container-outer {
+  padding: 0 1.5rem;
+}
+@media (min-width: 600px) {
+  .container-outer {
+    padding: 0 2rem;
+  }
+}
 .container-set-width {
   max-width: 80rem;
   display: block;
@@ -602,6 +574,80 @@ code {
   padding: 0;
 }
 
+@media (min-width: 400px) {
+  .i-outer {
+    padding: 0.4rem;
+    clear: both;
+  }
+
+  .i-row {
+    padding: 0;
+  }
+  .i-row:first-of-type {
+    padding-top: 0;
+  }
+  .i-row:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .i-col-xs-1 {
+    width: 8.3333%;
+  }
+
+  .i-col-xs-2 {
+    width: 16.6667%;
+  }
+
+  .i-col-xs-3 {
+    width: 25%;
+  }
+
+  .i-col-xs-4 {
+    width: 33.3333%;
+  }
+
+  .i-col-xs-5 {
+    width: 41.6667%;
+  }
+
+  .i-col-xs-6 {
+    width: 50%;
+  }
+
+  .i-col-xs-7 {
+    width: 58.3333%;
+  }
+
+  .i-col-xs-8 {
+    width: 66.6667%;
+  }
+
+  .i-col-xs-9 {
+    width: 75%;
+  }
+
+  .i-col-xs-10 {
+    width: 83.3333%;
+  }
+
+  .i-col-xs-11 {
+    width: 91.6667%;
+  }
+
+  .i-col-xs-12 {
+    width: 100%;
+  }
+
+  [class*=i-col-xs] {
+    padding: 0.4rem;
+    min-height: 0.1rem;
+    position: relative;
+    float: left;
+  }
+  [class*=i-col-xs].col-group {
+    padding: 0;
+  }
+}
 .col-descend .i-row > [class*=grid-col] {
   padding: 0;
 }
@@ -611,27 +657,7 @@ header {
   padding: 1rem 0;
   margin-bottom: 3rem;
   position: relative;
-}
-header.theme-1 {
   background: #FF7070;
-}
-header.theme-1 h1, header.theme-1 h2, header.theme-1 h3, header.theme-1 h4, header.theme-1 h5, header.theme-1 h6 {
-  font: normal 600 8rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 2rem 0;
-}
-header.theme-1 h1 span, header.theme-1 h2 span, header.theme-1 h3 span, header.theme-1 h4 span, header.theme-1 h5 span, header.theme-1 h6 span {
-  font-size: 2rem;
-  display: block;
-  font-weight: 300;
-  padding-bottom: .6rem;
-}
-header.theme-2 {
-  background: #FFF;
-}
-header.theme-2 h1, header.theme-2 h2, header.theme-2 h3, header.theme-2 h4, header.theme-2 h5, header.theme-2 h6 {
-  color: #FF7070;
-  font-size: 5rem;
-  text-shadow: -1rem -1rem rgba(0, 0, 0, 0.1), 1rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 main {

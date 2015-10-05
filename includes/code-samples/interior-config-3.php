@@ -3,7 +3,8 @@ $grid-cols: 12;
 $push-cols: $grid-cols;
 $flip-cols: $grid-cols;
 
-<span class="comment">// Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns</span>
+<span class="comment">// Set the grid gutter width, this will be divided by 2
+// then added back together by adjacent columns</span>
 $grid-gutter-width: .8rem;
 
 <span class="comment">// Add or remove padding from the wrapper `.grid-outer`</span>
