@@ -26,7 +26,7 @@
   position: relative;
   float: left;
 }
-[class*=i-col].col-group {
+[class*=i-col].i-g {
   padding: 0;
 }
 
@@ -44,22 +44,22 @@
   .i-row:last-of-type {
     padding-bottom: 0;
   }
-  .i-col-sm-1 {
+  .i-sm-1 {
     width: 33.3333%;
   }
-  .i-col-sm-2 {
+  .i-sm-2 {
     width: 66.6667%;
   }
-  .i-col-sm-3 {
+  .i-sm-3 {
     width: 100%;
   }
-  [class*=i-col-sm] {
+  [class*=i-sm] {
     padding: 0.4rem;
     min-height: 0.1rem;
     position: relative;
     float: left;
   }
-  [class*=i-col-sm].col-group {
+  [class*=i-sm].i-g {
     padding: 0;
   }
 }</code></pre>

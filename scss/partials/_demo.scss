@@ -2,12 +2,12 @@
 	&-bg-1 {
 		.i-outer {
 			background: $demo-bg-1;
-			.inner {
+			.i-inner {
 				background: #fff;
 				display: flex;
 			}
 		}
-		.inner {
+		.i-inner {
 			background: rgba($demo-bg-1, 0.3);
 			display: flex;
 		}
@@ -30,12 +30,12 @@
 		.i-outer {
 			background-color: $demo-bg-1;
 		}
-		.inner {
+		.i-inner {
 			background-color: $demo-bg-1--group;
 		}
-		.col-single {
+		.i-single {
 			&.i-names {
-				.inner {
+				.i-inner {
 					display: flex;
 					p {
 						margin: auto;
@@ -43,7 +43,7 @@
 					}					
 				}
 			}
-			.inner {
+			.i-inner {
 				background-color: $demo-bg-1--single;
 			}
 		}
@@ -51,19 +51,25 @@
 	&-bg-3 {
 		@include interior(
 			$grid-outer: 0,
-			$grid-cols: 12,
 			$grid-gutter-width: 0,
-			$push: true,
-			$flip: true
+			$push: true
 		);
+		@media(min-width: $md) {
+			@include interior(
+				$grid-outer: 0,
+				$grid-gutter-width: 0,
+				$flip: true,
+				$mq: md
+			);			
+		}
 		.i-outer {
 			background: transparent;
-			.inner {
+			.i-inner {
 				background: rgba($demo-bg-1, 0.3);
 				display: flex;
 			}
 		}
-		.inner {
+		.i-inner {
 			background: rgba($demo-bg-1, 0.3);
 			display: flex;
 		}
@@ -85,6 +91,16 @@
 			&:last-child {
 				border-right: none;
 			}
+			@media(min-width: $md){
+				&:first-child {
+					border-left: $demo-bg-1--border;
+					border-right: none;
+				}
+				&:last-child {
+					border-right: $demo-bg-1--border;
+					border-left: none;
+				}
+			}
 		}
 		> [class*=i-col-f] {
 			border-right: none;
@@ -98,11 +114,11 @@
 		}
 	}
 }
-.inner {
+.i-inner {
 	min-height: 4rem;
 	@extend .clearfix;
 }
-.inner {
+.i-inner {
 	display: flex;
 	p {
 		margin: auto;

@@ -29,39 +29,39 @@
 	overlayToggle();
 	
 	function demoText(){
-		// Grouped or not?
-		$('.demo .col-single.i-names .inner').html('<p>single child</p>');
-		$('.demo .col-group.i-names .inner').html('<p>group child</p>');
+		// Group or not
+		$('.demo .i-single.i-names .i-inner').html('<p>single child</p>');
+		$('.demo .i-g.i-names .i-inner').html('<p>group child</p>');
 
-		//Offset
-		$('.demo .i-col-p-3.i-names .inner').html('<p>i-col-p-3</p>');
-		$('.demo .i-col-p-6.i-names .inner').html('<p>i-col-p-6</p>');
-		$('.demo .i-col-6.no-offset.i-names .inner').html('<p>no offset used</p>');
+		// Offset
+		$('.demo .i-o-3.i-names .i-inner').html('<p>i-o-3</p>');
+		$('.demo .i-o-6.i-names .i-inner').html('<p>i-o-6</p>');
+		$('.demo .i-6.no-offset.i-names .i-inner').html('<p>no offset used</p>');
 
-		// fped
-		$('.demo .i-col-f-l-4.i-names .inner').html('<p>i-col-f-l-4</p>');
-		$('.demo .i-col-f-r-8.i-names .inner').html('<p>i-col-f-r-8</p>');
-		$('.demo .i-col-f-l-8.i-names .inner').html('<p>i-col-f-l-8</p>');
-		$('.demo .i-col-f-r-4.i-names .inner').html('<p>i-col-f-r-4</p>');
+		// Flip
+		$('.demo .i-md-fl-4.i-names .i-inner').html('<p>i-md-fl-4</p>');
+		$('.demo .i-md-fr-8.i-names .i-inner').html('<p>i-md-fr-8</p>');
+		$('.demo .i-md-fl-8.i-names .i-inner').html('<p>i-md-fl-8</p>');
+		$('.demo .i-md-fr-4.i-names .i-inner').html('<p>i-md-fr-4</p>');
 	}
 	demoText();
 
 	var gridNums = function($){
-		$('.i-nums [class*=i-col-]').not('.col-group').each(function() {
+		$('.i-nums [class*=i-col-]').not('.i-g').each(function() {
 			var $string = $(this).attr('class');
 			var $stringSplitSpace = $string.split(' ');
 			if ($stringSplitSpace.length >= 2) {
 				var $mqClass = $stringSplitSpace[1].split('-');
-				$(this,'.inner').html(
-					'<div class="inner">'+
-						'<p>'+$mqClass[3]+'</p>'+
+				$(this,'.i-inner').html(
+					'<div class="i-inner">'+
+						'<p>'+$mqClass[2]+'</p>'+
 					'</div>'	
 				);
 			}
 			if ($stringSplitSpace.length <= 1) {
 				var $noMqClass = $stringSplitSpace[0].split('-');
-				$(this,'.inner').html(
-					'<div class="inner">'+
+				$(this,'.i-inner').html(
+					'<div class="i-inner">'+
 						'<p>'+$noMqClass[2]+'</p>'+
 					'</div>'	
 				);

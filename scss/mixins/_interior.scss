@@ -35,7 +35,7 @@
 	// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
 	@for $column from 1 through $columns {
 		@if $mq != null {
-			.i-col-#{$mq}-#{$column} {
+			.i-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
 		// If $mq is not defined then fall back to just including the column number into the class.
@@ -49,11 +49,11 @@
 	@if $push == true {
 		@for $push-col from 1 through $push-cols {
 			@if $mq != null {
-				.i-col-#{$mq}-p-#{$push-col} {
+				.i-#{$mq}-o-#{$push-col} {
 			   		margin-left: 100% / $grid-cols * $push-col;
 				}
 			} @else {
-				.i-col-p-#{$push-col} {
+				.i-o-#{$push-col} {
 			   		margin-left: 100% / $grid-cols * $push-col;
 				}
 			}
@@ -63,20 +63,20 @@
 	@if $flip == true {
 		@for $flip-col from 1 through $flip-cols {
 			@if $mq != null {
-				.i-col-#{$mq}-f {
-					&-l-#{$flip-col} {
+				.i-#{$mq}-f {
+					&l-#{$flip-col} {
 				   		left: 100% / $grid-cols * $flip-col;
 					}
-					&-r-#{$flip-col} {
+					&r-#{$flip-col} {
 				   		right: 100% / $grid-cols * $flip-col;
 					}
 				}
 			} @else {
-				.i-col-f {
-					&-l-#{$flip-col} {
+				.i-f {
+					&l-#{$flip-col} {
 				   		left: 100% / $grid-cols * $flip-col;
 					}
-					&-r-#{$flip-col} {
+					&r-#{$flip-col} {
 				   		right: 100% / $grid-cols * $flip-col;
 					}
 				}
@@ -84,11 +84,11 @@
 		}
 	}
 	@if $mq != null {
-		[class*=i-col-#{$mq}] {
+		[class*=i-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
 			min-height: $col-min-height;
 			position: relative;
-			&.col-group {
+			&.i-g {
 				padding: $col-group-padding;
 			}
 			// if $align == left, right or center: display accordingly
@@ -99,7 +99,7 @@
 			padding: ($grid-gutter-width / 2);
 			min-height: $col-min-height;
 			position: relative;
-			&.col-group {
+			&.i-g {
 				padding: $col-group-padding;
 			}
 			// if $align == left, right or center: display accordingly
