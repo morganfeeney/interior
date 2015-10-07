@@ -5,3 +5,8 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+* ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section),
+section > :first-child:not(h2) {
+	margin: 0 0 3rem 0;
+}

@@ -49,11 +49,6 @@ p {
 	text-align: center;
 }
 
-* ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section),
-section > :first-child:not(h2) {
-	margin: 0 0 3rem 0;
-}
-
 .i-outer.demo [class*=i-row] {
 	margin: 0;
 }
@@ -92,6 +87,7 @@ section {
 			    z-index: 1;
 			}
 			&:after {
+				content: "";
 				top: -.1rem;
 			    left: -2rem;
 			    height: 1.5rem;
@@ -104,6 +100,20 @@ section {
 			    width: 100%;
 			}
 		}		
+	}
+}
+
+footer {
+	.sig {
+		position: relative;
+		p {
+			font-size: 1.4rem;
+		}
+		.name {
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: .1rem;
+		}
 	}
 }
 

@@ -36,7 +36,7 @@
 		// Offset
 		$('.demo .i-o-3.i-names .i-inner').html('<p>i-o-3</p>');
 		$('.demo .i-o-6.i-names .i-inner').html('<p>i-o-6</p>');
-		$('.demo .i-6.no-offset.i-names .i-inner').html('<p>no offset used</p>');
+		$('.demo .i-col-6.no-offset.i-names .i-inner').html('<p>no offset used</p>');
 
 		// Flip
 		$('.demo .i-md-fl-4.i-names .i-inner').html('<p>i-md-fl-4</p>');

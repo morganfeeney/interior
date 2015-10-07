@@ -2,23 +2,23 @@
 	&lt;div class="i-row"&gt;
 		&lt;div class="i-col-12 i-xs-4"&gt;
 			&lt;div class="i-inner"&gt;
-				&lt;p&gt;single child&lt;/p&gt;
+				...
 			&lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class="i-col-12 i-xs-8 i-g"&gt;
 			&lt;div class="i-col-4"&gt;
 				&lt;div class="i-inner"&gt;
-					&lt;p&gt;group child&lt;/p&gt;
+					...
 				&lt;/div&gt;
 			&lt;/div&gt;
 			&lt;div class="i-col-4"&gt;
 				&lt;div class="i-inner"&gt;
-					&lt;p&gt;group child&lt;/p&gt;
+					...
 				&lt;/div&gt;
 			&lt;/div&gt;
 			&lt;div class="i-col-4"&gt;
 				&lt;div class="i-inner"&gt;
-					&lt;p&gt;group child&lt;/p&gt;
+					...
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;

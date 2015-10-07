@@ -1,4 +1,5 @@
 // TO DO --> Create a feature which allows the use of inline-block OR float, or flex (if easy enough).
+// Create some edge case layouts to see how simple it is to override some selectors e.g. [class*=i-sm].i-g - ooh err!
 
 @mixin interior(
 	// The variables below are assigned values in: variables.scss.
