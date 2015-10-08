@@ -479,6 +479,52 @@
 					</div>
 					<?php include('includes/code-samples/flipping-demo-1.php') ?>
 				</section>
+				<section class="grid demo demo-bg-3">
+					<div class="accompanying-text">
+						<h2>Classes explained</h2>
+						<p>I have abbreviated some words so that the amount of text in class names is smaller; therefore at first the class names may appear like jargon. I will explain what each class should do.</p>
+						<p>You may feel that the markup is excessive, this all depends upon what you want to achieve. Ultimately I have aimed for maximum flexibility hence why there are lots of tags.</p>
+						<p><i>Bear in mind if things don't appear work to check the order of your markup against the examples.</i></p>
+						<dl>
+							<dt>
+								<code class="language-sass">.i-outer</code>
+							</dt>
+							<dd>allows styling of the wrapping tag, e.g. adding a <code class="language-css">background-color</code>.</dd>
+							<dt>
+								<code class="language-sass">.i-row</code>
+							</dt>
+							<dd>maintains vertical rythm.</dd>
+							<dt>
+								<code class="language-sass">.i-col-*</code>
+							</dt>
+							<dd>is the default column width with or without gutter.</dd>
+							<dt>
+								<code class="language-sass">.i-{$mq}-*</code>
+							</dt>
+							<dd>is a modifying class which changes width / gutter within a media query.</dd>
+							<dt>
+								<code class="language-sass">.i-fl-*</code>
+							</dt>
+							<dd>lip left changes the visual order from right to left using the number of columns specified.</dd>
+							<dt>
+								<code class="language-sass">.i-fr-*</code>
+							</dt>
+							<dd>flip right changes the visual order from left to right using the number of columns specified.</dd>
+							<dt>
+								<code class="language-sass">.i-fl-{$mq}-*</code>
+							</dt>
+							<dd>is a modifying class which changes the visual order from right to left using the number of columns specified within a media query.</dd>
+							<dt>
+								<code class="language-sass">.i-fr-{$mq}-*</code>
+							</dt>
+							<dd>is a modifying class which changes the visual order from left to right using the number of columns specified within a media query.</dd>
+							<dt>
+								<code class="language-sass">.i-inner</code>
+							</dt>
+							<dd>is a wrapping class for the content within a column.</dd>
+						</dl>
+					</div>
+				</section>
 			</div>	
 		</main>
 	<?php include('includes/footer.php') ?>

@@ -118,10 +118,46 @@
 	min-height: 4rem;
 	@extend .clearfix;
 }
-.i-inner {
+.demo .i-inner {
 	display: flex;
 	p {
 		margin: auto;
+		text-align: center;
 		color: darken($demo-bg-1--group, 100);
-	}					
+	}				
+}
+
+// Example layouts (pages)
+.eg {
+	&-bg-1 {
+		.i-inner {
+			background: rgba($demo-bg-1, 0.3);
+			padding: 2rem;
+		}
+	}
+	@include interior(
+		$grid-outer: 0,
+		$grid-gutter-width: 1rem
+	);
+	@media(min-width: $sm) {
+		@include interior(
+			$grid-outer: 0,
+			$grid-gutter-width: 4rem,
+			$mq: sm
+		);		
+	}
+	.container-set-width {
+		max-width: 120rem;
+	}
+}
+
+dd {
+
+}
+dt {
+	color: $font-color-1;
+	font-size: $font-size-large;
+	code {
+		background: transparent;
+	}
 }
