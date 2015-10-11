@@ -7,6 +7,7 @@ body {
 }
 
 main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section):not(li):not(dt),
-section > :first-child:not(h2) {
+section > :first-child:not(h2),
+dl:first-child {
 	margin: 0 0 3rem 0;
 }

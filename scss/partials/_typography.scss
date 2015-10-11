@@ -11,9 +11,10 @@ h1 {
 	color: $font-color-2;
 	font: normal 600 5rem/1 $font-family-base;
 	text-transform: uppercase;
-	margin: 0;
+	margin: 0 0 0 -.4rem;
 	padding: 2rem 0;
 	span {
+		margin: 0 0 0 .4rem;
 		font-size: 1.6rem;
 		display: block;
 		font-weight: 300;

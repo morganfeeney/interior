@@ -129,9 +129,16 @@
 
 // Example layouts (pages)
 .eg {
+	header {
+		background: rgba($demo-bg-1, 0.2);
+		h1 {
+			color: $theme-bg-1;
+		}
+	}
 	&-bg-1 {
 		.i-inner {
-			background: rgba($demo-bg-1, 0.3);
+			background: $theme-bg-2;
+			border: .8rem solid $demo-border-colour-1;
 			padding: 2rem;
 		}
 	}
@@ -146,7 +153,7 @@
 			$mq: sm
 		);		
 	}
-	.container-set-width {
+	.container-width {
 		max-width: 120rem;
 	}
 }

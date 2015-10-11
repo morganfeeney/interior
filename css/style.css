@@ -13,7 +13,8 @@ body {
 }
 
 main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section):not(li):not(dt),
-section > :first-child:not(h2) {
+section > :first-child:not(h2),
+dl:first-child {
   margin: 0 0 3rem 0;
 }
 
@@ -407,8 +408,15 @@ section > :first-child:not(h2) {
   color: black;
 }
 
+.eg header {
+  background: rgba(255, 112, 112, 0.2);
+}
+.eg header h1 {
+  color: #FF7070;
+}
 .eg-bg-1 .i-inner {
-  background: rgba(255, 112, 112, 0.3);
+  background: #FFF;
+  border: 0.8rem solid rgba(255, 112, 112, 0.3);
   padding: 2rem;
 }
 .eg .i-outer {
@@ -529,7 +537,7 @@ section > :first-child:not(h2) {
     padding: 0;
   }
 }
-.eg .container-set-width {
+.eg .container-width {
   max-width: 120rem;
 }
 
@@ -554,10 +562,11 @@ h1 {
   color: #FFF;
   font: normal 600 5rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 0 -.4rem;
   padding: 2rem 0;
 }
 h1 span {
+  margin: 0 0 0 .4rem;
   font-size: 1.6rem;
   display: block;
   font-weight: 300;
@@ -708,7 +717,7 @@ code {
     padding: 0 2rem;
   }
 }
-.container-set-width {
+.container-width {
   max-width: 80rem;
   display: block;
   margin: auto;
