@@ -477,6 +477,66 @@ dl:first-child {
 .eg [class*=i-col].i-g {
   padding: 0;
 }
+@media (min-width: 400px) {
+  .eg .i-outer {
+    padding: 0;
+    clear: both;
+  }
+  .eg .i-row {
+    padding: 1rem 0;
+  }
+  .eg .i-row:first-of-type {
+    padding-top: 0;
+  }
+  .eg .i-row:last-of-type {
+    padding-bottom: 0;
+  }
+  .eg .i-xs-1 {
+    width: 8.3333%;
+  }
+  .eg .i-xs-2 {
+    width: 16.6667%;
+  }
+  .eg .i-xs-3 {
+    width: 25%;
+  }
+  .eg .i-xs-4 {
+    width: 33.3333%;
+  }
+  .eg .i-xs-5 {
+    width: 41.6667%;
+  }
+  .eg .i-xs-6 {
+    width: 50%;
+  }
+  .eg .i-xs-7 {
+    width: 58.3333%;
+  }
+  .eg .i-xs-8 {
+    width: 66.6667%;
+  }
+  .eg .i-xs-9 {
+    width: 75%;
+  }
+  .eg .i-xs-10 {
+    width: 83.3333%;
+  }
+  .eg .i-xs-11 {
+    width: 91.6667%;
+  }
+  .eg .i-xs-12 {
+    width: 100%;
+  }
+  .eg [class*=i-xs] {
+    padding: 1rem;
+    min-height: 0.1rem;
+    position: relative;
+    float: left;
+  }
+  .eg [class*=i-xs].i-g {
+    padding: 0;
+  }
+}
 @media (min-width: 600px) {
   .eg .i-outer {
     padding: 0;
@@ -528,7 +588,7 @@ dl:first-child {
     width: 100%;
   }
   .eg [class*=i-sm] {
-    padding: 2rem;
+    padding: 1rem;
     min-height: 0.1rem;
     position: relative;
     float: left;
@@ -537,8 +597,71 @@ dl:first-child {
     padding: 0;
   }
 }
+@media (min-width: 800px) {
+  .eg .i-outer {
+    padding: 0;
+    clear: both;
+  }
+  .eg .i-row {
+    padding: 1rem 0;
+  }
+  .eg .i-row:first-of-type {
+    padding-top: 0;
+  }
+  .eg .i-row:last-of-type {
+    padding-bottom: 0;
+  }
+  .eg .i-md-1 {
+    width: 8.3333%;
+  }
+  .eg .i-md-2 {
+    width: 16.6667%;
+  }
+  .eg .i-md-3 {
+    width: 25%;
+  }
+  .eg .i-md-4 {
+    width: 33.3333%;
+  }
+  .eg .i-md-5 {
+    width: 41.6667%;
+  }
+  .eg .i-md-6 {
+    width: 50%;
+  }
+  .eg .i-md-7 {
+    width: 58.3333%;
+  }
+  .eg .i-md-8 {
+    width: 66.6667%;
+  }
+  .eg .i-md-9 {
+    width: 75%;
+  }
+  .eg .i-md-10 {
+    width: 83.3333%;
+  }
+  .eg .i-md-11 {
+    width: 91.6667%;
+  }
+  .eg .i-md-12 {
+    width: 100%;
+  }
+  .eg [class*=i-md] {
+    padding: 1rem;
+    min-height: 0.1rem;
+    position: relative;
+    float: left;
+  }
+  .eg [class*=i-md].i-g {
+    padding: 0;
+  }
+}
 .eg .container-width {
   max-width: 120rem;
+}
+.eg .i-row {
+  clear: both;
 }
 
 dt {
@@ -547,6 +670,10 @@ dt {
 }
 dt code {
   background: transparent;
+}
+
+.product-lister .i-inner {
+  min-height: 20rem;
 }
 
 html {
@@ -881,6 +1008,9 @@ header {
   margin-bottom: 3rem;
   position: relative;
   background: #FF7070;
+}
+header.theme-1 {
+  padding: 3rem 0;
 }
 
 main {

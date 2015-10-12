@@ -4,6 +4,9 @@ header {
 	margin-bottom: 3rem;
 	position: relative;
 	background: $theme-bg-1;
+	&.theme-1 {
+		padding: 3rem 0;
+	}
 }
 main {
 	clear: both;

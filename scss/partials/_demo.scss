@@ -146,25 +146,46 @@
 		$grid-outer: 0,
 		$grid-gutter-width: 1rem
 	);
+	@media(min-width: $xs) {
+		@include interior(
+			$grid-outer: 0,
+			$grid-gutter-width: 2rem,
+			$mq: xs
+		);
+	}
 	@media(min-width: $sm) {
 		@include interior(
 			$grid-outer: 0,
-			$grid-gutter-width: 4rem,
+			$grid-gutter-width: 2rem,
 			$mq: sm
-		);		
+		);
+	}
+	@media(min-width: $md) {
+		@include interior(
+			$grid-outer: 0,
+			$grid-gutter-width: 2rem,
+			$mq: md
+		);
 	}
 	.container-width {
 		max-width: 120rem;
 	}
+	.i-row {
+		clear: both;
+	}
 }
 
-dd {
-
-}
 dt {
 	color: $font-color-1;
 	font-size: $font-size-large;
 	code {
 		background: transparent;
+	}
+}
+
+// Product lister
+.product-lister {
+	.i-inner {
+		min-height: 20rem;
 	}
 }
