@@ -131,6 +131,10 @@
 .eg {
 	header {
 		background: rgba($demo-bg-1, 0.2);
+		[class*=i-col] {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 		h1 {
 			color: $theme-bg-1;
 		}

@@ -1,11 +1,15 @@
 header {
-	overflow: hidden;
-	padding: 1rem 0;
-	margin-bottom: 3rem;
-	position: relative;
-	background: $theme-bg-1;
-	&.theme-1 {
-		padding: 3rem 0;
+	&.container-outer {
+		overflow: hidden;
+		padding: 1rem 0;
+		margin-bottom: 3rem;
+		position: relative;
+		&.theme-1 {
+			background: $theme-bg-1;
+		}
+		@media(min-width: $md) {
+			padding: 3rem 0;
+		}
 	}
 }
 main {

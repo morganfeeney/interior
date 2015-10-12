@@ -411,6 +411,10 @@ dl:first-child {
 .eg header {
   background: rgba(255, 112, 112, 0.2);
 }
+.eg header [class*=i-col] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .eg header h1 {
   color: #FF7070;
 }
@@ -1002,15 +1006,19 @@ code {
   padding: 0;
 }
 
-header {
+header.container-outer {
   overflow: hidden;
   padding: 1rem 0;
   margin-bottom: 3rem;
   position: relative;
+}
+header.container-outer.theme-1 {
   background: #FF7070;
 }
-header.theme-1 {
-  padding: 3rem 0;
+@media (min-width: 800px) {
+  header.container-outer {
+    padding: 3rem 0;
+  }
 }
 
 main {
