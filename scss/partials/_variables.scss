@@ -5,6 +5,7 @@ $flip-cols: $grid-cols;
 
 // Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns
 $grid-gutter-width: .8rem;
+$grid-gutter-width--2: 2rem;
 
 // Add or remove padding from the wrapper `.grid-outer`
 $grid-outer: ($grid-gutter-width / 2);

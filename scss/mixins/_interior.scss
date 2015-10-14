@@ -29,6 +29,9 @@
 		&:last-of-type {
 			padding-bottom: 0;
 		}
+		&:only-of-type {
+			padding: 0;
+		}
 	}
 	// Get the number of columns from the variable.
 	$columns: $grid-cols;

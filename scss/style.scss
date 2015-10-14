@@ -14,10 +14,10 @@
 // Core
 @import 'partials/typography';
 @import 'partials/code';
-@import 'partials/grid';
 
 // Theme
-@import 'partials/theme';
+@import 'partials/layout';
+@import 'partials/links';
 
 // Helpers
 @include clearfix;

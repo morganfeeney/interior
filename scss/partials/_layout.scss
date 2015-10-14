@@ -1,0 +1,46 @@
+// Header specifics
+header {
+	&.container-outer {
+		overflow: hidden;
+		margin-bottom: 3rem;
+		position: relative;
+		&.theme-1 {
+			background: $theme-bg-1;
+		}
+		@media(min-width: $md) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+}
+
+main {
+	clear: both;
+}
+
+// Containers
+.container {
+	&-outer {
+		@media(min-width: $sm) {
+			padding: 0 $grid-gutter-width--2;			
+		}
+		padding: 0 ($grid-gutter-width--2 / 2);
+	}
+	&-width {
+		max-width: 80rem;
+		@include gridAlignment(center);
+	}
+}
+
+// Default grid
+@include interior(
+	$vert-space: 0
+);
+
+ // Grid with MQs
+@media(min-width: $xs) {
+	@include interior(
+		$vert-space: 0,
+		$mq: xs
+	);
+}

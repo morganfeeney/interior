@@ -141,9 +141,26 @@
 	}
 	&-bg-1 {
 		.i-inner {
-			background: $theme-bg-2;
+			background: rgba($theme-bg-1, 0.1);
 			border: .8rem solid $demo-border-colour-1;
-			padding: 2rem;
+		}
+	}
+	&#{&}1 {
+		aside {
+			.i-inner {
+				padding: $grid-gutter-width--2;
+			}
+		}
+	}
+	&#{&}2 {
+		aside {
+			.i-inner {
+				@media(min-width: $sm) {
+					padding: 0 0 0 $grid-gutter-width--2;
+				}
+				border: none;
+				background: none;
+			}
 		}
 	}
 	@include interior(
@@ -153,21 +170,21 @@
 	@media(min-width: $xs) {
 		@include interior(
 			$grid-outer: 0,
-			$grid-gutter-width: 2rem,
+			$grid-gutter-width: $grid-gutter-width--2,
 			$mq: xs
 		);
 	}
 	@media(min-width: $sm) {
 		@include interior(
 			$grid-outer: 0,
-			$grid-gutter-width: 2rem,
+			$grid-gutter-width: $grid-gutter-width--2,
 			$mq: sm
 		);
 	}
 	@media(min-width: $md) {
 		@include interior(
 			$grid-outer: 0,
-			$grid-gutter-width: 2rem,
+			$grid-gutter-width: $grid-gutter-width--2,
 			$mq: md
 		);
 	}

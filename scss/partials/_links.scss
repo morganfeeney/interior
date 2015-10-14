@@ -1,0 +1,8 @@
+a {
+	&,
+	&:link,
+	&:focus,
+	&:hover {
+		color: $theme-bg-1;
+	}
+}

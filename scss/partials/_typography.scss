@@ -14,7 +14,10 @@ h1 {
 	margin: 0 0 0 -.4rem;
 	padding: 2rem 0;
 	span {
-		margin: 0 0 0 .4rem;
+		@media(min-width: $sm) {
+			margin: 0 0 0 .4rem;
+		}
+		margin: 0 0 0 .2rem;
 		font-size: 1.6rem;
 		display: block;
 		font-weight: 300;
@@ -36,9 +39,8 @@ h2, h3, h4, h5, h6 {
 }
 
 // Paragraphs
-
 p {
-	font-size: 1.8rem;
+	@extend .medium;
 	margin-bottom: 1.6rem;
 	.i-names &,
 	.i-nums & {
@@ -58,6 +60,14 @@ p {
 	font-size: 2rem;
 }
 
+.medium {
+	font-size: 1.8rem;
+}
+
+.small {
+	font-size: 1.6rem;
+}
+
 // Demo heading example
 section {
 	margin-bottom: 6rem;
@@ -66,6 +76,7 @@ section {
 	}
 }
 
+// Demo headings etc.
 .demo {
 	position: relative;
 	@extend .clearfix;
@@ -104,6 +115,7 @@ section {
 	}
 }
 
+// Footer
 footer {
 	.sig {
 		position: relative;
@@ -120,4 +132,9 @@ footer {
 
 mark {
 	background: rgba($demo-bg-1, 0.3);
+}
+
+// Products
+.product-title {
+	@extend .small;
 }

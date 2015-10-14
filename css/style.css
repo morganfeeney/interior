@@ -14,8 +14,16 @@ body {
 
 main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section):not(li):not(dt),
 section > :first-child:not(h2),
+.product-lister,
 dl:first-child {
   margin: 0 0 3rem 0;
+}
+
+.img-r {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  display: block;
 }
 
 .demo-bg-1 .i-outer {
@@ -45,6 +53,9 @@ dl:first-child {
 }
 .demo.simple-demo-1 .i-row:last-of-type {
   padding-bottom: 0;
+}
+.demo.simple-demo-1 .i-row:only-of-type {
+  padding: 0;
 }
 .demo.simple-demo-1 .i-col-1 {
   width: 33.3333%;
@@ -77,6 +88,9 @@ dl:first-child {
   }
   .demo.simple-demo-1 .i-row:last-of-type {
     padding-bottom: 0;
+  }
+  .demo.simple-demo-1 .i-row:only-of-type {
+    padding: 0;
   }
   .demo.simple-demo-1 .i-sm-1 {
     width: 33.3333%;
@@ -127,6 +141,9 @@ dl:first-child {
 }
 .demo-bg-3 .i-row:last-of-type {
   padding-bottom: 0;
+}
+.demo-bg-3 .i-row:only-of-type {
+  padding: 0;
 }
 .demo-bg-3 .i-col-1 {
   width: 8.3333%;
@@ -222,6 +239,9 @@ dl:first-child {
   }
   .demo-bg-3 .i-row:last-of-type {
     padding-bottom: 0;
+  }
+  .demo-bg-3 .i-row:only-of-type {
+    padding: 0;
   }
   .demo-bg-3 .i-md-1 {
     width: 8.3333%;
@@ -419,9 +439,20 @@ dl:first-child {
   color: #FF7070;
 }
 .eg-bg-1 .i-inner {
-  background: #FFF;
+  background: rgba(255, 112, 112, 0.1);
   border: 0.8rem solid rgba(255, 112, 112, 0.3);
+}
+.eg.eg1 aside .i-inner {
   padding: 2rem;
+}
+.eg.eg2 aside .i-inner {
+  border: none;
+  background: none;
+}
+@media (min-width: 600px) {
+  .eg.eg2 aside .i-inner {
+    padding: 0 0 0 2rem;
+  }
 }
 .eg .i-outer {
   padding: 0;
@@ -435,6 +466,9 @@ dl:first-child {
 }
 .eg .i-row:last-of-type {
   padding-bottom: 0;
+}
+.eg .i-row:only-of-type {
+  padding: 0;
 }
 .eg .i-col-1 {
   width: 8.3333%;
@@ -494,6 +528,9 @@ dl:first-child {
   }
   .eg .i-row:last-of-type {
     padding-bottom: 0;
+  }
+  .eg .i-row:only-of-type {
+    padding: 0;
   }
   .eg .i-xs-1 {
     width: 8.3333%;
@@ -555,6 +592,9 @@ dl:first-child {
   .eg .i-row:last-of-type {
     padding-bottom: 0;
   }
+  .eg .i-row:only-of-type {
+    padding: 0;
+  }
   .eg .i-sm-1 {
     width: 8.3333%;
   }
@@ -614,6 +654,9 @@ dl:first-child {
   }
   .eg .i-row:last-of-type {
     padding-bottom: 0;
+  }
+  .eg .i-row:only-of-type {
+    padding: 0;
   }
   .eg .i-md-1 {
     width: 8.3333%;
@@ -697,11 +740,16 @@ h1 {
   padding: 2rem 0;
 }
 h1 span {
-  margin: 0 0 0 .4rem;
+  margin: 0 0 0 .2rem;
   font-size: 1.6rem;
   display: block;
   font-weight: 300;
   padding-bottom: .6rem;
+}
+@media (min-width: 600px) {
+  h1 span {
+    margin: 0 0 0 .4rem;
+  }
 }
 @media (min-width: 600px) {
   h1 {
@@ -720,7 +768,6 @@ h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 1.8rem;
   margin-bottom: 1.6rem;
 }
 .i-names p, .i-nums p {
@@ -737,6 +784,14 @@ p {
 
 .large {
   font-size: 2rem;
+}
+
+.medium, p {
+  font-size: 1.8rem;
+}
+
+.small, .product-title {
+  font-size: 1.6rem;
 }
 
 section {
@@ -840,8 +895,27 @@ code {
   color: #999;
 }
 
+header.container-outer {
+  overflow: hidden;
+  margin-bottom: 3rem;
+  position: relative;
+}
+header.container-outer.theme-1 {
+  background: #FF7070;
+}
+@media (min-width: 800px) {
+  header.container-outer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+main {
+  clear: both;
+}
+
 .container-outer {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 @media (min-width: 600px) {
   .container-outer {
@@ -868,6 +942,9 @@ code {
 }
 .i-row:last-of-type {
   padding-bottom: 0;
+}
+.i-row:only-of-type {
+  padding: 0;
 }
 
 .i-col-1 {
@@ -943,6 +1020,9 @@ code {
   .i-row:last-of-type {
     padding-bottom: 0;
   }
+  .i-row:only-of-type {
+    padding: 0;
+  }
 
   .i-xs-1 {
     width: 8.3333%;
@@ -1002,29 +1082,6 @@ code {
     padding: 0;
   }
 }
-.col-descend .i-row > [class*=grid-col] {
-  padding: 0;
-}
-
-header.container-outer {
-  overflow: hidden;
-  padding: 1rem 0;
-  margin-bottom: 3rem;
-  position: relative;
-}
-header.container-outer.theme-1 {
-  background: #FF7070;
-}
-@media (min-width: 800px) {
-  header.container-outer {
-    padding: 3rem 0;
-  }
-}
-
-main {
-  clear: both;
-}
-
 a, a:link, a:focus, a:hover {
   color: #FF7070;
 }
