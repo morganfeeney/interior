@@ -14,7 +14,7 @@
 	$flip: false,
 	$flip-cols: $grid-cols,
 	$mq: null,
-	$gu: null
+	$gu: false
 ) {
 	// Wrap them all up in `.i-outer`
 	.i-outer {
@@ -39,20 +39,24 @@
 	// Check to see if $mq is defined, if it is then interpolate the $mq variable name into the class.
 	// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
 	@for $column from 1 through $columns {
-		@if $mq != null {
+		@if $mq != null and $gu == false or not $mq == null {
 			// Below needs negation if $gu is true
 			.i-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
-			@if $gu == true {
-				.i-#{$mq}-#{$column}-gu {
-			   		width: calc(#{100% / $grid-cols * $column} - .31rem);
-			   		//@extend %grid-utility;
-				}
+		}
+		@else if $mq != null and $gu == true {
+			.i-#{$mq}-#{$column}-gu {
+		   		width: calc(#{100% / $grid-cols * $column} - .31rem);
 			}
+		}
+		@else if $gu == true and $mq == null {
+			.i-col-#{$column}-gu {
+		   		width: calc(#{100% / $grid-cols * $column} - .31rem);
+			}
+		}
 		// If $mq is not defined then fall back to just including the column number into the class.
-		} 
-		@else {
+		@else if $mq == null {
 			.i-col-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
@@ -96,7 +100,10 @@
 			}
 		}
 	}
-	@if $mq != null {
+	@if $mq != null and $gu == false or not $mq == null {
+		.test {
+			background: red;
+		}
 		[class*=i-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
 			min-height: $col-min-height;
@@ -107,7 +114,19 @@
 			// if $align == left, right or center: display accordingly
 			@include gridAlignment($align);
 		}
-	} @else {
+	}
+	@else if $mq != null and $gu == true {
+		[class*=i-#{$mq}][class*=-gu] {
+			padding: ($grid-gutter-width / 2);
+			min-height: $col-min-height;
+			position: relative;
+			&.i-g {
+				padding: $col-group-padding;
+			}
+			@include grid-utility();
+		}
+	}
+	@else if $mq == null {
 		[class*=i-col] {
 			padding: ($grid-gutter-width / 2);
 			min-height: $col-min-height;

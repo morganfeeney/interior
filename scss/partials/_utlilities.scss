@@ -9,7 +9,7 @@
 	display: block;
 }
 
-%grid-utility {
+@mixin grid-utility() {
 	display: inline-block;
 	float: none!important;
 	vertical-align: top;
