@@ -126,6 +126,17 @@
 			@include grid-utility();
 		}
 	}
+	@else if $gu == true and $mq == null {
+		[class*=i-col][class*=-gu] {
+			padding: ($grid-gutter-width / 2);
+			min-height: $col-min-height;
+			position: relative;
+			&.i-g {
+				padding: $col-group-padding;
+			}
+			@include grid-utility();
+		}
+	}
 	@else if $mq == null {
 		[class*=i-col] {
 			padding: ($grid-gutter-width / 2);

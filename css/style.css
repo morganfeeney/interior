@@ -786,13 +786,15 @@ dt code {
 .product-lister .i-col-12-gu {
   width: calc(100% - .31rem);
 }
-.product-lister [class*=i-col] {
+.product-lister [class*=i-col][class*=-gu] {
   padding: 0.5rem;
   min-height: 0.1rem;
   position: relative;
-  float: left;
+  display: inline-block;
+  float: none !important;
+  vertical-align: top;
 }
-.product-lister [class*=i-col].i-g {
+.product-lister [class*=i-col][class*=-gu].i-g {
   padding: 0;
 }
 @media (min-width: 400px) {
