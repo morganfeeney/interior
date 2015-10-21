@@ -1,6 +1,3 @@
-// TO DO --> Create a feature which allows the use of inline-block OR float, or flex (if easy enough).
-// Create some edge case layouts to see how simple it is to override some selectors e.g. [class*=i-sm].i-g - ooh err!
-
 @mixin interior(
 	// The variables below are assigned values in: variables.scss.
 	// They can be overridden by passing variable arguments to the @mixin.
@@ -15,8 +12,10 @@
 	$flip-cols: $grid-cols,
 	$mq: null,
 	$gu: false
-) {
-	// Wrap them all up in `.i-outer`
+) {;
+	// Wrap them all up in `.i-outer`, this class is to provide a padded container.
+	// Useful if you want to add a background or box shadow etc. around your content,
+	// yet offset the content in from the edges.
 	.i-outer {
 		padding: $grid-outer;
 		// Clear all the things
@@ -34,22 +33,26 @@
 			padding: 0;
 		}
 	}
+
 	// Get the number of columns from the variable.
 	$columns: $grid-cols;
-	// Check to see if $mq is defined, if it is then interpolate the $mq variable name into the class.
-	// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
+
 	@for $column from 1 through $columns {
+		// Check if $mq is defined, if it is then interpolate the $mq variable name into the class.
+		// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
 		@if $mq != null and $gu == false or not $mq == null {
-			// Below needs negation if $gu is true
 			.i-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
 		}
+		// Check if $mq & $gu are defined, if they are then affix `gu` onto the class e.g. `i-col-xs-1-gu`.
+		// Then use `calc` for the width, minus the white space which `inline-block` creates.
 		@else if $mq != null and $gu == true {
 			.i-#{$mq}-#{$column}-gu {
 		   		width: calc(#{100% / $grid-cols * $column} - .31rem);
 			}
 		}
+		// Check if $gu alone is defined, if true use `calc` for the width, minus the white space which `inline-block` creates.
 		@else if $gu == true and $mq == null {
 			.i-col-#{$column}-gu {
 		   		width: calc(#{100% / $grid-cols * $column} - .31rem);
@@ -62,7 +65,9 @@
 			}
 		}
 	}
-	// This is set to true by default, to turn off set to false in @mixin.
+	// `$push` is set to false by default, to turn on set to true in your @mixin.
+	// If true generate a set of classes which contain `-o-` which stands for offset.
+	// Media query or non-media query flavours are both available, depending upon whether or not $mq has been defined.
 	@if $push == true {
 		@for $push-col from 1 through $push-cols {
 			@if $mq != null {
@@ -76,7 +81,9 @@
 			}
 		}		
 	}
-	// This is set to true by default, to turn off set to false in @mixin.
+	// `$flip` is set to false by default, to turn on set to true in your @mixin.
+	// If true generate a set of classes which contain `-fl-` which stands for flip-left, or `-fr-` which stands for flip-right.
+	// Media query or non-media query flavours are both available, depending upon whether or not $mq has been defined.
 	@if $flip == true {
 		@for $flip-col from 1 through $flip-cols {
 			@if $mq != null {
@@ -100,43 +107,29 @@
 			}
 		}
 	}
+	// Check if $mq is defined, $gu is false or if only $mq is defined.
+	// This is to offer flexibility with padding and columns across `@media()`.
 	@if $mq != null and $gu == false or not $mq == null {
-		.test {
-			background: red;
-		}
 		[class*=i-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
-			min-height: $col-min-height;
-			position: relative;
-			&.i-g {
-				padding: $col-group-padding;
-			}
-			// if $align == left, right or center: display accordingly
-			@include gridAlignment($align);
 		}
 	}
+	// Check if $mq is defined and $gu is true update the padding (gutters).
 	@else if $mq != null and $gu == true {
 		[class*=i-#{$mq}][class*=-gu] {
 			padding: ($grid-gutter-width / 2);
-			min-height: $col-min-height;
-			position: relative;
-			&.i-g {
-				padding: $col-group-padding;
-			}
-			@include grid-utility();
 		}
 	}
+	// Check if $gu is true and $mq is null update the padding (gutters).
 	@else if $gu == true and $mq == null {
 		[class*=i-col][class*=-gu] {
 			padding: ($grid-gutter-width / 2);
-			min-height: $col-min-height;
-			position: relative;
-			&.i-g {
-				padding: $col-group-padding;
-			}
+			// Add grid utility styling, to the base class only, if `$gu` is true.
 			@include grid-utility();
 		}
 	}
+	// Now we've only one possibility left, if $mq is null set some useful defaults to any class starting with `col`.
+	// Then of course update the padding (gutters).
 	@else if $mq == null {
 		[class*=i-col] {
 			padding: ($grid-gutter-width / 2);

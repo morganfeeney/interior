@@ -101,17 +101,8 @@ dl:first-child {
   .demo.simple-demo-1 .i-sm-3 {
     width: 100%;
   }
-  .demo.simple-demo-1 .test {
-    background: red;
-  }
   .demo.simple-demo-1 [class*=i-sm] {
     padding: 0.4rem;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  .demo.simple-demo-1 [class*=i-sm].i-g {
-    padding: 0;
   }
 }
 .demo-bg-2 .i-outer {
@@ -354,16 +345,7 @@ dl:first-child {
   .demo-bg-3 .i-md-fr-12 {
     right: 100%;
   }
-  .demo-bg-3 .test {
-    background: red;
-  }
   .demo-bg-3 [class*=i-md] {
-    padding: 0;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  .demo-bg-3 [class*=i-md].i-g {
     padding: 0;
   }
 }
@@ -574,17 +556,8 @@ dl:first-child {
   .eg .i-xs-12 {
     width: 100%;
   }
-  .eg .test {
-    background: red;
-  }
   .eg [class*=i-xs] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  .eg [class*=i-xs].i-g {
-    padding: 0;
   }
 }
 @media (min-width: 600px) {
@@ -640,17 +613,8 @@ dl:first-child {
   .eg .i-sm-12 {
     width: 100%;
   }
-  .eg .test {
-    background: red;
-  }
   .eg [class*=i-sm] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  .eg [class*=i-sm].i-g {
-    padding: 0;
   }
 }
 @media (min-width: 800px) {
@@ -706,17 +670,8 @@ dl:first-child {
   .eg .i-md-12 {
     width: 100%;
   }
-  .eg .test {
-    background: red;
-  }
   .eg [class*=i-md] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  .eg [class*=i-md].i-g {
-    padding: 0;
   }
 }
 .eg .container-width {
@@ -788,14 +743,9 @@ dt code {
 }
 .product-lister [class*=i-col][class*=-gu] {
   padding: 0.5rem;
-  min-height: 0.1rem;
-  position: relative;
   display: inline-block;
   float: none !important;
   vertical-align: top;
-}
-.product-lister [class*=i-col][class*=-gu].i-g {
-  padding: 0;
 }
 @media (min-width: 400px) {
   .product-lister .i-outer {
@@ -852,14 +802,6 @@ dt code {
   }
   .product-lister [class*=i-xs][class*=-gu] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    display: inline-block;
-    float: none !important;
-    vertical-align: top;
-  }
-  .product-lister [class*=i-xs][class*=-gu].i-g {
-    padding: 0;
   }
 }
 @media (min-width: 600px) {
@@ -917,14 +859,6 @@ dt code {
   }
   .product-lister [class*=i-sm][class*=-gu] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    display: inline-block;
-    float: none !important;
-    vertical-align: top;
-  }
-  .product-lister [class*=i-sm][class*=-gu].i-g {
-    padding: 0;
   }
 }
 @media (min-width: 800px) {
@@ -982,14 +916,6 @@ dt code {
   }
   .product-lister [class*=i-md][class*=-gu] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    display: inline-block;
-    float: none !important;
-    vertical-align: top;
-  }
-  .product-lister [class*=i-md][class*=-gu].i-g {
-    padding: 0;
   }
 }
 @media (min-width: 1000px) {
@@ -1047,14 +973,6 @@ dt code {
   }
   .product-lister [class*=i-lg][class*=-gu] {
     padding: 1rem;
-    min-height: 0.1rem;
-    position: relative;
-    display: inline-block;
-    float: none !important;
-    vertical-align: top;
-  }
-  .product-lister [class*=i-lg][class*=-gu].i-g {
-    padding: 0;
   }
 }
 .product-lister .i-inner {
@@ -1410,18 +1328,8 @@ main {
     width: 100%;
   }
 
-  .test {
-    background: red;
-  }
-
   [class*=i-xs] {
     padding: 0.4rem;
-    min-height: 0.1rem;
-    position: relative;
-    float: left;
-  }
-  [class*=i-xs].i-g {
-    padding: 0;
   }
 }
 a, a:link, a:focus, a:hover {
