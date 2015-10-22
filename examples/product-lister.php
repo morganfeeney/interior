@@ -18,8 +18,8 @@
 			<div class="container-inner">
 				<div class="i-outer">
 					<div class="i-row">
-						<div class="i-col-12 i-sm-8 i-g product-lister">
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+						<div class="i-col-12 i-sm-8 i-g product-lister gup">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -27,7 +27,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -35,7 +35,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a really long product title which goes onto several lines</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -43,7 +43,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -51,7 +51,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -59,7 +59,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a really long product title which goes onto several lines</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -67,7 +67,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -75,7 +75,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -83,7 +83,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -91,7 +91,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -99,7 +99,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">
@@ -107,7 +107,7 @@
 									<button>Buy now</button>
 								</div>
 							</div>
-							<div class="i-col-6-gu i-xs-4-gu i-sm-4-gu i-md-4-gu i-lg-3-gu product-fragment">
+							<div class="i-col-6 i-xs-4 i-sm-4 i-md-4 i-lg-3 product-fragment">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
 									<img class="img-r" src="http://placehold.it/200/FFF1F1/FF7070?text=<IMG>">

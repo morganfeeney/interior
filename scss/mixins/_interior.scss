@@ -10,8 +10,7 @@
 	$push-cols: $grid-cols,
 	$flip: false,
 	$flip-cols: $grid-cols,
-	$mq: null,
-	$gu: false
+	$mq: null
 ) {;
 	// Wrap them all up in `.i-outer`, this class is to provide a padded container.
 	// Useful if you want to add a background or box shadow etc. around your content,
@@ -40,22 +39,9 @@
 	@for $column from 1 through $columns {
 		// Check if $mq is defined, if it is then interpolate the $mq variable name into the class.
 		// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
-		@if $mq != null and $gu == false or not $mq == null {
+		@if $mq != null or not $mq == null {
 			.i-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
-			}
-		}
-		// Check if $mq & $gu are defined, if they are then affix `gu` onto the class e.g. `i-col-xs-1-gu`.
-		// Then use `calc` for the width, minus the white space which `inline-block` creates.
-		@else if $mq != null and $gu == true {
-			.i-#{$mq}-#{$column}-gu {
-		   		width: calc(#{100% / $grid-cols * $column} - .31rem);
-			}
-		}
-		// Check if $gu alone is defined, if true use `calc` for the width, minus the white space which `inline-block` creates.
-		@else if $gu == true and $mq == null {
-			.i-col-#{$column}-gu {
-		   		width: calc(#{100% / $grid-cols * $column} - .31rem);
 			}
 		}
 		// If $mq is not defined then fall back to just including the column number into the class.
@@ -107,28 +93,14 @@
 			}
 		}
 	}
-	// Check if $mq is defined, $gu is false or if only $mq is defined.
+	// Check if $mq is defined, or if only $mq is defined.
 	// This is to offer flexibility with padding and columns across `@media()`.
-	@if $mq != null and $gu == false or not $mq == null {
+	@if $mq != null or not $mq == null {
 		[class*=i-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
 		}
 	}
-	// Check if $mq is defined and $gu is true update the padding (gutters).
-	@else if $mq != null and $gu == true {
-		[class*=i-#{$mq}][class*=-gu] {
-			padding: ($grid-gutter-width / 2);
-		}
-	}
-	// Check if $gu is true and $mq is null update the padding (gutters).
-	@else if $gu == true and $mq == null {
-		[class*=i-col][class*=-gu] {
-			padding: ($grid-gutter-width / 2);
-			// Add grid utility styling, to the base class only, if `$gu` is true.
-			@include grid-utility();
-		}
-	}
-	// Now we've only one possibility left, if $mq is null set some useful defaults to any class starting with `col`.
+	// If $mq is null set some useful defaults to any class starting with `col`.
 	// Then of course update the padding (gutters).
 	@else if $mq == null {
 		[class*=i-col] {

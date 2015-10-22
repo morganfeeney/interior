@@ -208,39 +208,34 @@ dt {
 .product-lister {
 	@include interior(
 		$grid-outer: 0,
-		$grid-gutter-width: 1rem,
-		$gu: true
+		$grid-gutter-width: 1rem
 	);
 	@media(min-width: $xs) {
 		@include interior(
 			$grid-outer: 0,
 			$grid-gutter-width: $grid-gutter-width--2,
-			$mq: xs,
-			$gu: true
+			$mq: xs
 		);
 	}
 	@media(min-width: $sm) {
 		@include interior(
 			$grid-outer: 0,
 			$grid-gutter-width: $grid-gutter-width--2,
-			$mq: sm,
-			$gu: true
+			$mq: sm
 		);
 	}
 	@media(min-width: $md) {
 		@include interior(
 			$grid-outer: 0,
 			$grid-gutter-width: $grid-gutter-width--2,
-			$mq: md,
-			$gu: true
+			$mq: md
 		);
 	}
 	@media(min-width: $lg) {
 		@include interior(
 			$grid-outer: 0,
 			$grid-gutter-width: $grid-gutter-width--2,
-			$mq: lg,
-			$gu: true
+			$mq: lg
 		);
 	}
 

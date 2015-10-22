@@ -9,8 +9,20 @@
 	display: block;
 }
 
-@mixin grid-utility() {
+@mixin grid-utility-parent() {
+	letter-spacing: -.31em;
+}
+
+@mixin grid-utility-child() {
+	letter-spacing: normal;
 	display: inline-block;
 	float: none!important;
 	vertical-align: top;
+}
+
+.gup {
+	@include grid-utility-parent();
+	> [class*=i-col] {
+		@include grid-utility-child();
+	}
 }
