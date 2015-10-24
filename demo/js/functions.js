@@ -54,7 +54,7 @@
 				var $mqClass = $stringSplitSpace[1].split('-');
 				$(this,'.i-inner').html(
 					'<div class="i-inner">'+
-						'<p>'+$mqClass[2]+'</p>'+
+						'<p>'+$mqClass[3]+'</p>'+
 					'</div>'	
 				);
 			}

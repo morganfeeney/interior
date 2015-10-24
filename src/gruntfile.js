@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                 ]
             },
             interior: {
-                src: 'css/*.css'
+                src: '../dist/css/*.css'
             }
         },
         watch: {

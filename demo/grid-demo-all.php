@@ -122,9 +122,7 @@
 								</div>
 							</div>
 						</div>
-	<!-- 					<h2>Modular mixins</h2>
-						<p>Interior can be re-used over and over again, by declaring your desired units within a mixin you can leave the defaults in place, knowing that they will be overridden.</p>
-						<?php include('includes/code-samples/interior-config-1.php') ?> -->
+						<?php include('includes/code-samples/interior-config-1.php') ?>
 						<div class="accompanying-text">
 							<h2>As simple as you make it</h2>
 							<p>
@@ -222,13 +220,13 @@
 								<div class="grid i-nums demo demo-bg-1 simple-demo-1">
 									<div class="i-outer">
 										<div class="i-row clearfix">
-											<div class="i-col-3 i-sm-1">
+											<div class="i-col-3 i-col-sm-1">
 												<div class="i-inner"></div>
 											</div>
-											<div class="i-col-3 i-sm-2">
+											<div class="i-col-3 i-col-sm-2">
 												<div class="i-inner"></div>
 											</div>
-											<div class="i-col-3 i-sm-3">
+											<div class="i-col-3 i-col-sm-3">
 												<div class="i-inner"></div>
 											</div>
 										</div>
@@ -240,13 +238,13 @@
 								<div class="grid i-nums demo demo-bg-1 simple-demo-1">
 									<div class="i-outer">
 										<div class="i-row clearfix">
-											<div class="i-col-3 i-sm-1">
+											<div class="i-col-3 i-col-sm-1">
 												<div class="i-inner"></div>
 											</div>
-											<div class="i-col-3 i-sm-1">
+											<div class="i-col-3 i-col-sm-1">
 												<div class="i-inner"></div>
 											</div>
-											<div class="i-col-3 i-sm-1">
+											<div class="i-col-3 i-col-sm-1">
 												<div class="i-inner"></div>
 											</div>
 										</div>
@@ -266,10 +264,10 @@
 													<div class="i-inner"></div>
 												</div>
 											</div>
-											<div class="i-col-3 i-sm-1">
+											<div class="i-col-3 i-col-sm-1">
 												<div class="i-inner"></div>
 											</div>
-											<div class="i-col-3 i-sm-2 i-g">
+											<div class="i-col-3 i-col-sm-2 i-g">
 												<div class="i-col-1">
 													<div class="i-inner"></div>
 												</div>
@@ -300,10 +298,10 @@
 						<div class="visual-example">
 							<div class="i-outer">
 								<div class="i-row clearfix">
-									<div class="i-col-12 i-xs-4 i-single i-names">
+									<div class="i-col-12 i-col-xs-4 i-single i-names">
 										<div class="i-inner"></div>
 									</div>
-									<div class="i-col-12 i-xs-8 i-g i-names">
+									<div class="i-col-12 i-col-xs-8 i-g i-names">
 										<div class="i-col-4">
 											<div class="i-inner"></div>
 										</div>
@@ -492,39 +490,43 @@
 								<dt>
 									<code class="language-sass">.i-outer</code>
 								</dt>
-								<dd>Allows styling of the wrapping tag, e.g. adding a <code class="language-css">background-color</code>.</dd>
+								<dd>Allows styling of the wrapping tag, e.g. adding a <code class="language-css">background-color</code> behind, and around your columns.</dd>
 								<dt>
 									<code class="language-sass">.i-row</code>
 								</dt>
-								<dd>Maintains vertical rythm.</dd>
+								<dd>Maintains vertical rythm. You can add <code class="language-css">margin: bottom</code> for example to all of these classes, so you maintain a consistent vertical space between content sections.</dd>
 								<dt>
-									<code class="language-sass">.i-col-*</code>
+									<code class="language-sass">.i-col-#{$column}</code>
 								</dt>
-								<dd>Is the default column width with or without gutter. You should always at-least use the default.</dd>
+								<dd>Is the default column width with or without gutter. You should <strong>always</strong> at-least use this default, unless you want the default column width to be 100%, if so use <code class="language-xss">.i-col-#{$mq}-#{$column}</code> and set your media queries up accordingly.</dd>
 								<dt>
-									<code class="language-sass">.i-{$mq}-*</code>
+									<code class="language-sass">.i-col-#{$mq}-#{$column}</code>
 								</dt>
-								<dd>Is a modifying class which changes column width or/and gutter width within a media query. This overrides the default: <code class="language-css">.i-col-*</code>.</dd>
+								<dd>Is a modifying class which changes column width or/and gutter width within a media query. This overrides the default: <code class="language-css">.i-col-#{$column}</code>.</dd>
 								<dt>
-									<code class="language-sass">.i-fl-*</code>
+									<code class="language-sass">.i-fl-#{$column}</code>
 								</dt>
 								<dd>Flip left changes the visual order from right to left by the number of columns specified.</dd>
 								<dt>
-									<code class="language-sass">.i-fr-*</code>
+									<code class="language-sass">.i-fr-#{$column}</code>
 								</dt>
-								<dd>Flip right changes the visual order from left to right by the number of columns specified.</dd>
+								<dd>Flip right changes the visual order from left to right by the number of columns specified. Use in conjunction with either <code class="language-sass">.i-col-#{$column}</code> or <code class="language-sass">.i-col-#{$mq}-#{$column}</code>.</dd>
 								<dt>
-									<code class="language-sass">.i-fl-{$mq}-*</code>
+									<code class="language-sass">.i-fl-#{$mq}-#{$column}</code>
 								</dt>
-								<dd>Is a modifying class which changes the visual order from right to left by the number of columns specified within a media query.</dd>
+								<dd>Is a modifying class which changes the visual order from right to left by the number of columns specified within a media query. Use in conjunction with either <code class="language-sass">.i-col-#{$column}</code> or <code class="language-sass">.i-col-#{$mq}-#{$column}</code>.</dd>
 								<dt>
-									<code class="language-sass">.i-fr-{$mq}-*</code>
+									<code class="language-sass">.i-fr-#{$mq}-#{$column}</code>
 								</dt>
-								<dd>Is a modifying class which changes the visual order from left to right by the number of columns specified within a media query.</dd>
+								<dd>Is a modifying class which changes the visual order from left to right by the number of columns specified within a media query. Use in conjunction with either <code class="language-sass">.i-col-#{$column}</code> or <code class="language-sass">.i-col-#{$mq}-#{$column}</code>.</dd>
 								<dt>
 									<code class="language-sass">.i-inner</code>
 								</dt>
-								<dd>Is a wrapping class for the content within a column.</dd>
+								<dd>Is a wrapping class for the content within a column. The main use-case for this class is so that you maintain a visual gutter when you say apply a <code class="language-css">background-color</code> to the column, yet want the content within the column to have a background <em>or visa-versa</em>.</dd>
+								<dt>
+									<code class="language-sass">.i-gup</code>
+								</dt>
+								<dd>Removes floats on all direct column children e.g. <code class="language-css">.i-gup > [class*=i-col]</code> adds <code class="language-css">display: inline-block</code> and <code class="language-css">vertical-align: top</code>. The purpose of this class is to allow columns with uneven heights, which don't clear each other using floats, to clear. The great thing with this is that no matter what order the columns are in, and no matter how much content differs between columns they always clear and align properly.</dd>
 							</dl>
 						</div>
 					</section>
