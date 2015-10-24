@@ -3,14 +3,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
-            dist: {
+            demo: {
                 options: {
                     style: 'expanded',
                     sourcemap: 'auto',
                     precision: 4
                 },
                 files: {
-                    'css/style.css': 'scss/style.scss'
+                    'css/style.css': 'scss/demo.scss'
                 }
             }
         },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                     })
                 ]
             },
-            dist: {
+            demo: {
                 src: 'css/*.css'
             }
         },

@@ -9,7 +9,7 @@ body {
 
 h1 {
 	color: $font-color-2;
-	font: normal 600 5rem/1 $font-family-base;
+	font: normal 600 4rem/1 $font-family-base;
 	text-transform: uppercase;
 	margin: 0 0 0 -.4rem;
 	padding: 2rem 0;
@@ -23,10 +23,21 @@ h1 {
 		font-weight: 300;
 		padding-bottom: .6rem;
 	}
+	small {
+		span {
+			display: inline;
+			font-size: 2rem;
+		}
+	}
 	@media(min-width: $sm) {
 		font: normal 600 8rem/1 $font-family-base;	
 		span {
 			font-size: 2rem;
+		}
+		small {
+			span {
+				font-size: 4rem;
+			}
 		}
 	}
 }

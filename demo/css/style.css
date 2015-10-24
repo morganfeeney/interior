@@ -12,13 +12,6 @@ body {
   padding: 0;
 }
 
-main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section):not(li):not(dt):not(.img-r):not(.price),
-section > :first-child:not(h2),
-.product-lister,
-dl:first-child {
-  margin: 0 0 3rem 0;
-}
-
 .img-r {
   max-width: 100%;
   max-height: 100%;
@@ -26,14 +19,17 @@ dl:first-child {
   display: block;
 }
 
-.gup {
+.i-gup {
   letter-spacing: -.31em;
+  text-rendering: optimizespeed;
 }
-.gup > [class*=i-col] {
-  letter-spacing: normal;
+.i-gup > [class*=i-col] {
   display: inline-block;
   float: none !important;
   vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
 }
 
 .demo-bg-1 .i-outer {
@@ -1003,7 +999,7 @@ body {
 
 h1 {
   color: #FFF;
-  font: normal 600 5rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 600 4rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin: 0 0 0 -.4rem;
   padding: 2rem 0;
@@ -1020,12 +1016,19 @@ h1 span {
     margin: 0 0 0 .4rem;
   }
 }
+h1 small span {
+  display: inline;
+  font-size: 2rem;
+}
 @media (min-width: 600px) {
   h1 {
     font: normal 600 8rem/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   h1 span {
     font-size: 2rem;
+  }
+  h1 small span {
+    font-size: 4rem;
   }
 }
 
@@ -1162,6 +1165,13 @@ code {
 
 .comment {
   color: #999;
+}
+
+main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section):not(li):not(dt):not(.img-r):not(.price),
+section > :first-child:not(h2),
+.product-lister,
+dl:first-child {
+  margin: 0 0 3rem 0;
 }
 
 header.container-outer {

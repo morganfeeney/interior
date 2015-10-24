@@ -28,6 +28,12 @@
 										A main content area with an aside.
 									</dd>
 									<dt>
+										<a href="flipped-2-column-layout.php">Flipped 2 column layout</a>
+									</dt>
+									<dd>
+										A main content area with an aside, with visual source order flipped.
+									</dd>
+									<dt>
 										<a href="product-lister.php">Product lister page layout</a>
 									</dt>
 									<dd>

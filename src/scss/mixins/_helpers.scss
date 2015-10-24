@@ -24,3 +24,17 @@
 	top: 50%;
 	transform: translate(-50%,-50%);
 }
+
+@mixin grid-utility-parent() {
+	letter-spacing: -.31em;
+	text-rendering: optimizespeed;
+}
+
+@mixin grid-utility-child() {
+	display: inline-block;
+	float: none!important;
+	vertical-align: top;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-rendering: auto;
+}

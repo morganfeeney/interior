@@ -1,6 +1,36 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// INTERIOR - Modular SASS Grid System
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//
+// Example usage:
+//
+//	<div class="i-outer">
+//		<div class="i-row">
+//			<div class="i-col-3 i-sm-1">
+//				<div class="i-inner">
+//					...
+//				</div>
+//			</div>
+//			<div class="i-col-3 i-sm-2">
+//				<div class="i-inner">
+//	 				...
+//	 			</div>
+//	 		</div>
+//	 		<div class="i-col-3 i-sm-3">
+//	 			<div class="i-inner">
+//	 				...
+//	 			</div>
+//	 		</div>
+//	 	</div>
+//	 </div>
+//
+
 @mixin interior(
+
 	// The variables below are assigned values in: variables.scss.
 	// They can be overridden by passing variable arguments to the @mixin.
+
 	$grid-gutter-width: $grid-gutter-width,
 	$grid-outer: ($grid-gutter-width / 2),
 	$grid-cols: $grid-cols,
@@ -11,15 +41,22 @@
 	$flip: false,
 	$flip-cols: $grid-cols,
 	$mq: null
+
 ) {;
+
 	// Wrap them all up in `.i-outer`, this class is to provide a padded container.
 	// Useful if you want to add a background or box shadow etc. around your content,
 	// yet offset the content in from the edges.
+
 	.i-outer {
 		padding: $grid-outer;
 		// Clear all the things
 		clear: both;
 	}
+
+	// Remove the padding from the top of the first, bottom of the last,
+	// or both top & bottom on the only `.i-row` tags.
+
 	.i-row {
 		padding: $vert-space;
 		&:first-of-type {
@@ -33,43 +70,53 @@
 		}
 	}
 
-	// Get the number of columns from the variable.
+	// Get the number of columns from the `$grid-cols` variable.
+
 	$columns: $grid-cols;
 
 	@for $column from 1 through $columns {
+
 		// Check if $mq is defined, if it is then interpolate the $mq variable name into the class.
-		// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `i-col-xs-1`.
+		// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `.i-col-xs-1`.
+
 		@if $mq != null or not $mq == null {
 			.i-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
 		}
-		// If $mq is not defined then fall back to just including the column number into the class.
+
+		// If $mq is not defined then fall back to just including the column number into the class, e.g. `.i-col-1`.
+
 		@else if $mq == null {
 			.i-col-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
 		}
 	}
+
 	// `$push` is set to false by default, to turn on set to true in your @mixin.
 	// If true generate a set of classes which contain `-o-` which stands for offset.
 	// Media query or non-media query flavours are both available, depending upon whether or not $mq has been defined.
+	
 	@if $push == true {
 		@for $push-col from 1 through $push-cols {
 			@if $mq != null {
 				.i-#{$mq}-o-#{$push-col} {
 			   		margin-left: 100% / $grid-cols * $push-col;
 				}
-			} @else {
+			}
+			@else {
 				.i-o-#{$push-col} {
 			   		margin-left: 100% / $grid-cols * $push-col;
 				}
 			}
 		}		
 	}
+
 	// `$flip` is set to false by default, to turn on set to true in your @mixin.
 	// If true generate a set of classes which contain `-fl-` which stands for flip-left, or `-fr-` which stands for flip-right.
 	// Media query or non-media query flavours are both available, depending upon whether or not $mq has been defined.
+	
 	@if $flip == true {
 		@for $flip-col from 1 through $flip-cols {
 			@if $mq != null {
@@ -81,7 +128,8 @@
 				   		right: 100% / $grid-cols * $flip-col;
 					}
 				}
-			} @else {
+			}
+			@else {
 				.i-f {
 					&l-#{$flip-col} {
 				   		left: 100% / $grid-cols * $flip-col;
@@ -93,15 +141,19 @@
 			}
 		}
 	}
-	// Check if $mq is defined, or if only $mq is defined.
+
+	// Check if $mq is defined.
 	// This is to offer flexibility with padding and columns across `@media()`.
+
 	@if $mq != null or not $mq == null {
 		[class*=i-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
 		}
 	}
-	// If $mq is null set some useful defaults to any class starting with `col`.
-	// Then of course update the padding (gutters).
+
+	// If $mq is null set some useful defaults to any class starting with `.i-col-*`.
+	// Then of-course update the padding (gutters).
+
 	@else if $mq == null {
 		[class*=i-col] {
 			padding: ($grid-gutter-width / 2);
@@ -110,7 +162,9 @@
 			&.i-g {
 				padding: $col-group-padding;
 			}
-			// if $align == left, right or center: display accordingly
+
+			// if $align == left, right or center: display accordingly.
+
 			@include gridAlignment($align);
 		}
 	}

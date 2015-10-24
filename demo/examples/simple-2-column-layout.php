@@ -1,5 +1,5 @@
 <?php
-	$pageTitle = 'Layout example 1';
+	$pageTitle = 'Simple 2 column layout';
 	$baseUrl = '../';
 	include('../includes/head.php');
 ?>
@@ -8,7 +8,7 @@
 			<div class="container-width">
 				<div class="container-inner">
 					<div class="i-col-12 i-sm-12">
-						<h1>EG<small>.1</small> <span>Simple 2 column layout</span></h1>
+						<h1>Example <small><span>#</span>1</small> <span><?php echo $pageTitle; ?></span></h1>
 					</div>
 				</div>
 			</div>

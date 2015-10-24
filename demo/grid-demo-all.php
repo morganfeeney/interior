@@ -487,44 +487,44 @@
 							<h2>Classes explained</h2>
 							<p>I have abbreviated some words so that the amount of text in class names is smaller; therefore at first the class names may appear like jargon. I will explain what each class should do.</p>
 							<p>You may feel that the markup is excessive, this all depends upon what you want to achieve. Ultimately I have aimed for maximum flexibility hence why there are lots of tags.</p>
-							<p><i>Bear in mind if things don't appear work to check the order of your markup against the examples.</i></p>
+							<p><i><strong>Bear in mind...</strong> if things don't appear work to check the order of your markup against the examples in this web page.</i></p>
 							<dl>
 								<dt>
 									<code class="language-sass">.i-outer</code>
 								</dt>
-								<dd>allows styling of the wrapping tag, e.g. adding a <code class="language-css">background-color</code>.</dd>
+								<dd>Allows styling of the wrapping tag, e.g. adding a <code class="language-css">background-color</code>.</dd>
 								<dt>
 									<code class="language-sass">.i-row</code>
 								</dt>
-								<dd>maintains vertical rythm.</dd>
+								<dd>Maintains vertical rythm.</dd>
 								<dt>
 									<code class="language-sass">.i-col-*</code>
 								</dt>
-								<dd>is the default column width with or without gutter.</dd>
+								<dd>Is the default column width with or without gutter. You should always at-least use the default.</dd>
 								<dt>
 									<code class="language-sass">.i-{$mq}-*</code>
 								</dt>
-								<dd>is a modifying class which changes width / gutter within a media query.</dd>
+								<dd>Is a modifying class which changes column width or/and gutter width within a media query. This overrides the default: <code class="language-css">.i-col-*</code>.</dd>
 								<dt>
 									<code class="language-sass">.i-fl-*</code>
 								</dt>
-								<dd>lip left changes the visual order from right to left using the number of columns specified.</dd>
+								<dd>Flip left changes the visual order from right to left by the number of columns specified.</dd>
 								<dt>
 									<code class="language-sass">.i-fr-*</code>
 								</dt>
-								<dd>flip right changes the visual order from left to right using the number of columns specified.</dd>
+								<dd>Flip right changes the visual order from left to right by the number of columns specified.</dd>
 								<dt>
 									<code class="language-sass">.i-fl-{$mq}-*</code>
 								</dt>
-								<dd>is a modifying class which changes the visual order from right to left using the number of columns specified within a media query.</dd>
+								<dd>Is a modifying class which changes the visual order from right to left by the number of columns specified within a media query.</dd>
 								<dt>
 									<code class="language-sass">.i-fr-{$mq}-*</code>
 								</dt>
-								<dd>is a modifying class which changes the visual order from left to right using the number of columns specified within a media query.</dd>
+								<dd>Is a modifying class which changes the visual order from left to right by the number of columns specified within a media query.</dd>
 								<dt>
 									<code class="language-sass">.i-inner</code>
 								</dt>
-								<dd>is a wrapping class for the content within a column.</dd>
+								<dd>Is a wrapping class for the content within a column.</dd>
 							</dl>
 						</div>
 					</section>

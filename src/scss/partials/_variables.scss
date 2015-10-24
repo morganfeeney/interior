@@ -1,0 +1,24 @@
+$grid-cols: 12; // Set the number of columns in your grid.
+$push-cols: $grid-cols;
+$flip-cols: $grid-cols;
+
+// Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns.
+
+$grid-gutter-width: .8rem;
+$grid-gutter-width--2: 2rem;
+
+$grid-outer: ($grid-gutter-width / 2); // Add or remove padding from the wrapper `.grid-outer`.
+
+$align: left; // Set the default grid alignment.
+$vert-space: 1rem 0; // Set the vertical spacing.
+
+$col-min-height: .1rem; // Ensures `.i-col-*` won't collapse.
+$col-group-padding: 0; // Use this class to remove padding on the parent of nested columns.
+
+// Media widths; not based on specific devices, just rough demo widths.
+
+$xs: 400px;
+$sm: 600px;
+$md: 800px;
+$lg: 1000px;
+$xl: 1200px;

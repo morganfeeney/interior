@@ -9,15 +9,6 @@
 // Utilities
 @import 'partials/reset';
 @import 'partials/utlilities';
-@import 'partials/demo';
-
-// Core
-@import 'partials/typography';
-@import 'partials/code';
-
-// Theme
-@import 'partials/layout';
-@import 'partials/links';
 
 // Helpers
 @include clearfix;
