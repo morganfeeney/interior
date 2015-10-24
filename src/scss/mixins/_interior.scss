@@ -80,7 +80,7 @@
 		// Loop through a sequence of $column numbers, interpolating their value into the class e.g. `.i-col-xs-1`.
 
 		@if $mq != null or not $mq == null {
-			.i-#{$mq}-#{$column} {
+			.i-col-#{$mq}-#{$column} {
 		   		width: 100% / $grid-cols * $column;
 			}
 		}
