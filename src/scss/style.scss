@@ -1,3 +1,5 @@
+// This is the main style sheet
+
 // Mixins
 @import 'mixins/helpers';
 @import 'mixins/grid-alignment';
@@ -9,6 +11,3 @@
 // Utilities
 @import 'partials/reset';
 @import 'partials/utlilities';
-
-// Helpers
-@include clearfix;

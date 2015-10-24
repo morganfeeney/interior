@@ -29,7 +29,7 @@
 @mixin interior(
 
 	// The variables below are assigned values in: variables.scss.
-	// They can be overridden by passing variable arguments to the @mixin.
+	// They can be overridden by passing variable arguments to the `@mixin`.
 
 	$grid-gutter-width: $grid-gutter-width,
 	$grid-outer: ($grid-gutter-width / 2),
@@ -44,7 +44,7 @@
 
 ) {;
 
-	// Wrap them all up in `.i-outer`, this class is to provide a padded container.
+	// Wrap them all up in `.i-outer`, this class is to provide a padded / non-padded container.
 	// Useful if you want to add a background or box shadow etc. around your content,
 	// yet offset the content in from the edges.
 
@@ -115,7 +115,7 @@
 
 	// `$flip` is set to false by default, to turn on set to true in your @mixin.
 	// If true generate a set of classes which contain `-fl-` which stands for flip-left, or `-fr-` which stands for flip-right.
-	// Media query or non-media query flavours are both available, depending upon whether or not $mq has been defined.
+	// Media query or non-media query flavours are both available, depending upon whether or not `$mq` has been defined in your `@mixin`.
 	
 	@if $flip == true {
 		@for $flip-col from 1 through $flip-cols {
