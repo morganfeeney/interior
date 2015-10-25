@@ -1,6 +1,6 @@
 # Interior
 
-Interior is a SASS based grid system aimed towards front-end developers and web designers, and anyone else in-between. There are a host of useful features to combat every-day scenarios effectively; such as layouts for eCommerce sites.
+Interior is a Sass based grid system aimed towards front-end developers and web designers, and anyone else in-between. There are a host of useful features to combat every-day scenarios effectively; such as layouts for eCommerce sites.
 
 [Project page](http://morganfeeney.github.io/interior/)
 
