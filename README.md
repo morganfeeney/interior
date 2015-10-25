@@ -1,6 +1,6 @@
 # Interior
 
-Interior is a Sass based grid system aimed towards front-end developers and web designers, plus anyone else in-between. There are a host of useful features to combat every-day scenarios effectively; such as layouts for eCommerce sites.
+Interior is a Sass based grid system aimed towards front-end developers, web designers, plus anyone else in-between. There are a host of useful features to combat every-day scenarios effectively; such as layouts for eCommerce sites.
 
 [Project page](http://interiorsystem.co.uk)
 
@@ -16,8 +16,8 @@ Interior is a Sass based grid system aimed towards front-end developers and web 
 * Easy to configure with predefined settings that are disabled by default; which are easy to enable.
 * Lots of design / layout possibilities catered for.
 * Nesting is about as straight-forward as it gets.
-* Comes bundled with a Gruntfile & package.json file for running Sass & watch tasks.
 * Demo files, documentation & examples in the form of a microsite built with Interior yet customized.
+* Comes bundled with a Gruntfile & package.json file for running Sass & watch tasks.
 
 ## How it works
 
@@ -86,7 +86,7 @@ $md: 800px;
 $lg: 1000px;
 $xl: 1200px;
 ```
-Well, they are but would you want to? A break-point should be exactly that, I didn't intend them for anything other than to use in my demos so feel free you change them to suit your project, and to change the names of each breakpoint to anything you like.
+A break-point should be exactly that (when your layout breaks), I didn't intend them for anything other than to use in my demos so feel free you change them to suit your project, and to change the names of each breakpoint to anything you like.
 
 ## Browser support
 
