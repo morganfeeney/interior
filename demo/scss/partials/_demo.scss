@@ -206,9 +206,17 @@ dt {
 
 // Product lister
 .product-lister {
+	@media(max-width: $sm) {
+		.container {
+			&-outer {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+		}
+	}
 	@include interior(
 		$grid-outer: 0,
-		$grid-gutter-width: 1rem
+		$grid-gutter-width: $grid-gutter-width--2
 	);
 	@media(min-width: $xs) {
 		@include interior(

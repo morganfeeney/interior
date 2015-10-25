@@ -5,6 +5,12 @@ dl:first-child {
 	margin: 0 0 3rem 0;
 }
 
+@media (max-width: $sm) {
+	aside[class*=-fl-] ~ [class*=i-col] {
+		margin: 3rem 0 0 0;
+	}	
+}
+
 // Header specifics
 header {
 	&.container-outer {
@@ -28,10 +34,7 @@ main {
 // Containers
 .container {
 	&-outer {
-		@media(min-width: $sm) {
-			padding: 0 $grid-gutter-width--2;			
-		}
-		padding: 0 ($grid-gutter-width--2 / 2);
+		padding: 0 $grid-gutter-width--2;
 	}
 	&-width {
 		max-width: 80rem;

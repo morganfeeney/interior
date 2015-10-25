@@ -1,7 +1,7 @@
 		<footer class="container-outer theme-1">
 			<div class="container-width">
 				<div class="container-inner">
-					<div class="i-col-12 i-col-xs-12 i-col-sm-12">
+					<div class="i-col-12 i-col-sm-12">
 						<div class="sig">
 							<p><span class="name">Interior</span> © 2015 by <cite><a href="http://www.morganfeeney.com">Morgan Feeney</a></cite></p>
 						</div>

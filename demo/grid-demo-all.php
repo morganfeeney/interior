@@ -1,12 +1,12 @@
 <?php
-	$pageTitle = 'Modular SASS Grid System';
+	$pageTitle = 'Modular Sass Grid System';
 	include('includes/head.php');
 ?>
 	<body>
 		<header class="container-outer theme-1">
 			<div class="container-width">
 				<div class="container-inner">
-					<h1>Interior <span>Modular SASS grid system</span></h1>
+					<h1>Interior <span><?php echo $pageTitle; ?></span></h1>
 				</div>
 			</div>
 		</header>
@@ -15,7 +15,7 @@
 				<div class="container-inner">
 					<section class="intro">
 						<h2>What is this?</h2>
-						<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">SASS</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs by simply changing the default variables.</p>
+						<p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">Sass</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs by simply changing the default variables.</p>
 					</section>
 					<section class="grid demo demo-bg-1">
 						<?php include('includes/code-samples/interior-config-3.php') ?>

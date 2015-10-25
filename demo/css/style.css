@@ -701,6 +701,12 @@ dt code {
   background: transparent;
 }
 
+@media (max-width: 600px) {
+  .product-lister .container-outer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .product-lister .i-outer {
   padding: 0;
   clear: both;
@@ -754,7 +760,7 @@ dt code {
   width: 100%;
 }
 .product-lister [class*=i-col] {
-  padding: 0.5rem;
+  padding: 1rem;
   min-height: 0.1rem;
   position: relative;
   float: left;
@@ -1001,6 +1007,9 @@ html {
 body {
   font: 1.6rem/1.6 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   counter-reset: counter;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 h1 {
@@ -1180,6 +1189,11 @@ dl:first-child {
   margin: 0 0 3rem 0;
 }
 
+@media (max-width: 600px) {
+  aside[class*=-fl-] ~ [class*=i-col] {
+    margin: 3rem 0 0 0;
+  }
+}
 header.container-outer {
   overflow: hidden;
   margin-bottom: 3rem;
@@ -1200,12 +1214,7 @@ main {
 }
 
 .container-outer {
-  padding: 0 1rem;
-}
-@media (min-width: 600px) {
-  .container-outer {
-    padding: 0 2rem;
-  }
+  padding: 0 2rem;
 }
 .container-width {
   max-width: 80rem;

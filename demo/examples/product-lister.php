@@ -3,7 +3,7 @@
 	$baseUrl = '../';
 	include('../includes/head.php');
 ?>
-<body class="eg eg2">
+<body class="eg eg2 product-lister">
 	<header class="container-outer">
 		<div class="container-width">
 			<div class="container-inner">
@@ -18,7 +18,7 @@
 			<div class="container-inner">
 				<div class="i-outer">
 					<div class="i-row">
-						<div class="i-col-12 i-col-sm-8 i-g i-gup product-lister">
+						<div class="i-col-12 i-col-sm-8 i-g i-gup">
 							<div class="i-col-6 i-col-xs-4 i-col-sm-4 i-col-md-4 i-col-lg-3">
 								<div class="i-inner">
 									<h4 class="product-title">This is a product title</h4>
