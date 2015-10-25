@@ -22,6 +22,30 @@ Interior is a SASS based grid system aimed towards front-end developers and web 
 
 The `interior()` mixin comes preconfigured with settings to create your desired grid system. The amount of columns you want, whether or not you will use with media queries, and whether you want to output classes to change the visual source order of elements, are all catered for.
 
+*Markup example*
+
+```
+<div class="i-outer">
+    <div class="i-row">
+        <div class="i-col-3 i-sm-1">
+            <div class="i-inner">
+                ...
+            </div>
+        </div>
+        <div class="i-col-3 i-sm-2">
+            <div class="i-inner">
+                ...
+            </div>
+        </div>
+        <div class="i-col-3 i-sm-3">
+            <div class="i-inner">
+                ...
+            </div>
+        </div>
+    </div>
+</div>
+```
+
 ## Customization
 
 Head over to the variables file to make any changes you desire, for example I have used `rem` units whereas you may prefer `px`. The default amount of grid columns is 12, this can be any number you like.

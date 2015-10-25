@@ -2,30 +2,6 @@
 // INTERIOR - Modular SASS Grid System
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//
-// Example usage:
-//
-//	<div class="i-outer">
-//		<div class="i-row">
-//			<div class="i-col-3 i-sm-1">
-//				<div class="i-inner">
-//					...
-//				</div>
-//			</div>
-//			<div class="i-col-3 i-sm-2">
-//				<div class="i-inner">
-//	 				...
-//	 			</div>
-//	 		</div>
-//	 		<div class="i-col-3 i-sm-3">
-//	 			<div class="i-inner">
-//	 				...
-//	 			</div>
-//	 		</div>
-//	 	</div>
-//	 </div>
-//
-
 @mixin interior(
 
 	// The variables below are assigned values in: variables.scss.
