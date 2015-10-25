@@ -37,8 +37,7 @@ $md: 800px;
 $lg: 1000px;
 $xl: 1200px;
 ```
-
-well they are but would you want to? A break-point should be exactly that, I did not intend for anything other than to use in demos so make sure you change them to suit.
+Well, they are but would you want to? A break-point should be exactly that, I didn't intend them for anything other than to use in my demos so feel free you change them to suit your project.
 
 Feel free to change the names of each breakpoint to anything you like.
 
