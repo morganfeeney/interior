@@ -22,7 +22,7 @@ Interior is a SASS based grid system aimed towards front-end developers and web 
 
 The `interior()` mixin comes preconfigured with settings to create your desired grid system. The amount of columns you want, whether or not you will use with media queries, and whether you want to output classes to change the visual source order of elements, are all catered for.
 
-*Markup example*
+**Markup example**
 
 ```
 <div class="i-outer">
