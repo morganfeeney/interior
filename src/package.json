@@ -1,8 +1,12 @@
 {
   "name": "Interior",
   "description": "Modular grid system.",
-  "version": "0.1.0",
+  "version": "1.0",
   "author": "Morgan Feeney",
+  "license": {
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "grunt": "^0.4.5",
