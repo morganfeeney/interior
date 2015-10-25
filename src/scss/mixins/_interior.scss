@@ -146,7 +146,7 @@
 	// This is to offer flexibility with padding and columns across `@media()`.
 
 	@if $mq != null or not $mq == null {
-		[class*=i-#{$mq}] {
+		[class*=i-col-#{$mq}] {
 			padding: ($grid-gutter-width / 2);
 		}
 	}

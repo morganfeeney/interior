@@ -113,7 +113,7 @@ body {
   .demo.simple-demo-1 .i-col-sm-3 {
     width: 100%;
   }
-  .demo.simple-demo-1 [class*=i-sm] {
+  .demo.simple-demo-1 [class*=i-col-sm] {
     padding: 0.4rem;
   }
 }
@@ -357,7 +357,7 @@ body {
   .demo-bg-3 .i-md-fr-12 {
     right: 100%;
   }
-  .demo-bg-3 [class*=i-md] {
+  .demo-bg-3 [class*=i-col-md] {
     padding: 0;
   }
 }
@@ -568,7 +568,7 @@ body {
   .eg .i-col-xs-12 {
     width: 100%;
   }
-  .eg [class*=i-xs] {
+  .eg [class*=i-col-xs] {
     padding: 1rem;
   }
 }
@@ -625,7 +625,7 @@ body {
   .eg .i-col-sm-12 {
     width: 100%;
   }
-  .eg [class*=i-sm] {
+  .eg [class*=i-col-sm] {
     padding: 1rem;
   }
 }
@@ -682,7 +682,7 @@ body {
   .eg .i-col-md-12 {
     width: 100%;
   }
-  .eg [class*=i-md] {
+  .eg [class*=i-col-md] {
     padding: 1rem;
   }
 }
@@ -815,7 +815,7 @@ dt code {
   .product-lister .i-col-xs-12 {
     width: 100%;
   }
-  .product-lister [class*=i-xs] {
+  .product-lister [class*=i-col-xs] {
     padding: 1rem;
   }
 }
@@ -872,7 +872,7 @@ dt code {
   .product-lister .i-col-sm-12 {
     width: 100%;
   }
-  .product-lister [class*=i-sm] {
+  .product-lister [class*=i-col-sm] {
     padding: 1rem;
   }
 }
@@ -929,7 +929,7 @@ dt code {
   .product-lister .i-col-md-12 {
     width: 100%;
   }
-  .product-lister [class*=i-md] {
+  .product-lister [class*=i-col-md] {
     padding: 1rem;
   }
 }
@@ -986,7 +986,7 @@ dt code {
   .product-lister .i-col-lg-12 {
     width: 100%;
   }
-  .product-lister [class*=i-lg] {
+  .product-lister [class*=i-col-lg] {
     padding: 1rem;
   }
 }
@@ -1357,7 +1357,7 @@ main {
     width: 100%;
   }
 
-  [class*=i-xs] {
+  [class*=i-col-xs] {
     padding: 0.4rem;
   }
 }
