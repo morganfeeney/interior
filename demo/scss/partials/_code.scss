@@ -22,7 +22,7 @@ pre {
 		}
 		&:before {
 			content: attr(rel);
-		    background: #555;
+		    background: $demo-bg-3;
 		    display: block;
 		    color: #fff;
 		    padding: .6rem 2rem;

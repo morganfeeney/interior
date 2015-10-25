@@ -530,6 +530,7 @@
 							</dl>
 						</div>
 						<a class="big-button" href="examples/index.php">View working examples</a>
+						<a class="big-button dark" href="https://github.com/morganfeeney/interior">View on Github</a>
 					</section>
 				</div>
 			</div>	

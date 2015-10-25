@@ -17,5 +17,8 @@ a {
 		}
 		display: block;
 		text-align: center;
+		&.dark {
+			background: $demo-bg-3;
+		}
 	}
 }
