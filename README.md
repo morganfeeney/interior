@@ -1,8 +1,8 @@
 # Interior
 
-Interior is a SASS based grid system aimed towards front-end developers and web designers, or anyone else in-between. There are a host of useful features to combat every-day scenarios effectively; such as layouts for eCommerce sites.
+Interior is a SASS based grid system aimed towards front-end developers and web designers, and anyone else in-between. There are a host of useful features to combat every-day scenarios effectively; such as layouts for eCommerce sites.
 
-[Project page](http://morganfeeney.github.com/interior/)
+[Project page](http://morganfeeney.github.io/interior/)
 
 ## Installation
 
@@ -20,13 +20,13 @@ Interior is a SASS based grid system aimed towards front-end developers and web 
 
 ## How it works
 
-The `interior()` mixin comes preconfigured with settings to create your desired grid system. The amount of columns you want, whether or not you will use with media queries, and whether you want to output classes to change the visual source order of elemnts, are all catered for.
+The `interior()` mixin comes preconfigured with settings to create your desired grid system. The amount of columns you want, whether or not you will use with media queries, and whether you want to output classes to change the visual source order of elements, are all catered for.
 
 ## Customization
 
-Head over to the variables file to make any changes you desire, for example I have used `rem` units whereas you may prefer `px`. The default amount of grid columns is 12, this can be any number you like, etc.
+Head over to the variables file to make any changes you desire, for example I have used `rem` units whereas you may prefer `px`. The default amount of grid columns is 12, this can be any number you like.
 
-You can use `interior()` as many times as you need, in as many variations as desired. For clarity on how this can be achieved I have included several demo files. The demo has been created using interior, and has been customized to suit; _feel free to rip apart and put back together again_.
+You can use `interior()` as many times as you need, in as many variations as desired. For further clarity on how this can be achieved I have included several demo files. The demo has been created using interior, serves as working documentation, and has been customized; _feel free to rip apart and put back together again_. A working example of the demo files can be found [here](http://morganfeeney.github.io/interior/).
 
 The variables in the file entitled: _variables.scss are suitable for production use, with the exception of the widths:
 
