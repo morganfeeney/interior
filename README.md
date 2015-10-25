@@ -6,7 +6,7 @@ Interior is a SASS based grid system aimed towards front-end developers and web 
 
 ## Installation
 
-* Download: [zip](https://github.com/morganfeeney/interior/gh-pages)
+* Download: [zip](https://github.com/morganfeeney/interior/archive/gh-pages.zip)
 * Git: `git clone https://github.com/morganfeeney/interior.git`
 
 ## Features
