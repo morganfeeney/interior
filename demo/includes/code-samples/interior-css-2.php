@@ -44,13 +44,13 @@
   .i-row:last-of-type {
     padding-bottom: 0;
   }
-  .i-sm-1 {
+  .i-col-sm-1 {
     width: 33.3333%;
   }
-  .i-sm-2 {
+  .i-col-sm-2 {
     width: 66.6667%;
   }
-  .i-sm-3 {
+  .i-col-sm-3 {
     width: 100%;
   }
   [class*=i-sm] {
@@ -59,7 +59,7 @@
     position: relative;
     float: left;
   }
-  [class*=i-sm].i-g {
+  [class*=i-col-sm].i-g {
     padding: 0;
   }
 }</code></pre>

@@ -529,6 +529,7 @@
 								<dd>Removes floats on all direct column children e.g. <code class="language-css">.i-gup > [class*=i-col]</code> adds <code class="language-css">display: inline-block</code> and <code class="language-css">vertical-align: top</code>. The purpose of this class is to allow columns with uneven heights, which don't clear each other using floats, to clear. The great thing with this is that no matter what order the columns are in, and no matter how much content differs between columns they always clear and align properly.</dd>
 							</dl>
 						</div>
+						<a class="big-button" href="examples/index.php">View working examples</a>
 					</section>
 				</div>
 			</div>	

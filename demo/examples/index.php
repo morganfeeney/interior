@@ -7,7 +7,7 @@
 	<header class="container-outer">
 		<div class="container-width">
 			<div class="container-inner">
-				<div class="i-col-12 i-sm-12">
+				<div class="i-col-12 i-col-sm-12">
 					<h1>Examples <span>Blah de blah</span></h1>
 				</div>
 			</div>
@@ -18,7 +18,7 @@
 			<div class="container-inner">
 				<div class="i-outer">
 					<div class="i-row">
-						<div class="i-col-12 i-sm-8">
+						<div class="i-col-12 i-col-sm-8">
 							<div class="i-inner">
 								<dl>
 									<dt>

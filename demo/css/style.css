@@ -1364,6 +1364,21 @@ main {
 a, a:link, a:focus, a:hover {
   color: #FF7070;
 }
+a.big-button {
+  color: #FFF;
+  background: #FF7070;
+  text-transform: uppercase;
+  padding: 1.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+@media (min-width: 800px) {
+  a.big-button {
+    max-width: 33.3333%;
+  }
+}
 
 .clearfix:after, .i-row:after, .i-inner:after, .demo:after {
   content: "";

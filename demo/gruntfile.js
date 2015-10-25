@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '',
-                    src: '*.php',
+                    src: ['*.php', 'examples/*.php'],
                     dest: '',
                     ext: '.html' 
                 }]                
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
                 "wrap_line_length": 0,
                 "brace_style": "collapse",
                 "preserve_newlines": true,
-                "max_preserve_newlines": 1,
+                "max_preserve_newlines": 2,
                 "unformatted": [
                     "a",
                     "code",

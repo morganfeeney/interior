@@ -3,6 +3,19 @@ a {
 	&:link,
 	&:focus,
 	&:hover {
-		color: $theme-bg-1;
+		color: $font-color-1;
+	}
+	&.big-button {
+		color: $font-color-2;
+		background: $theme-bg-1;
+		text-transform: uppercase;
+		padding: ($grid-gutter-width * 2);
+		text-decoration: none;
+		font-weight: 600;
+		@media(min-width: $md) {
+			max-width: 33.3333%;
+		}
+		display: block;
+		text-align: center;
 	}
 }
