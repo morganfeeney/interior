@@ -1,5 +1,6 @@
 <?php
 	$pageTitle = 'Modular Sass Grid System';
+	$description = 'Use this Grid System to build responsive &amp; fluid web layouts. Modular, simple, Sass.';
 	include('includes/head.php');
 ?>
 	<body>

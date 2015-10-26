@@ -1,7 +1,8 @@
 <?php
 	$pageTitle = 'Example layouts built with Interior';
 	$baseUrl = '../';
-	include('../includes/head.php');
+	$description = 'Learn how to create practical web layouts using Interior.';
+	include('../includes/eg-head.php');
 ?>
 <body class="eg eg1">
 	<header class="container-outer">

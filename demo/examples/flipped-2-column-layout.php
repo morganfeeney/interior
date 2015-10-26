@@ -1,7 +1,8 @@
 <?php
 	$pageTitle = 'Flipped 2 column layout';
 	$baseUrl = '../';
-	include('../includes/head.php');
+	$description = "Learn how to create a flipped 2 column layout using Interior. Don't forget to view the source.";
+	include('../includes/eg-head.php');
 ?>
 	<body class="eg eg1">
 		<header class="container-outer">

@@ -1,7 +1,8 @@
 <?php
 	$pageTitle = 'Product lister page layout';
 	$baseUrl = '../';
-	include('../includes/head.php');
+	$description = "Learn how to create a Product Lister page layout using Interior. Don't forget to view the source.";
+	include('../includes/eg-head.php');
 ?>
 <body class="eg eg2 product-lister">
 	<header class="container-outer">

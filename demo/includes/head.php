@@ -1,10 +1,12 @@
-<?php global $pageTitle ?>
-<?php global $baseUrl ?>
+<?php global $pageTitle; ?>
+<?php global $baseUrl; ?>
+<?php global $description; ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Interior | <?php echo $pageTitle ?></title>
+		<title>Interior | <?php if (isset($pageTitle)) : echo $pageTitle; endif;?></title>
+		<meta name="description" content="<?php if (isset($description)) : echo $description; endif;?>">
 		<link rel="stylesheet" href="<?php if (isset($baseUrl)) : echo $baseUrl; endif;?>css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
