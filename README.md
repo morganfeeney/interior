@@ -25,7 +25,7 @@ The `interior()` mixin comes preconfigured with settings to create your desired 
 
 **Sass example**
 
-```
+```scss
 // Create your default grid
 @include interior(
     $grid-cols: 3,
@@ -49,7 +49,7 @@ $sm: 600px;
 
 **Markup example**
 
-```
+```html
 <div class="i-outer">
     <div class="i-row">
         <div class="i-col-3 i-sm-1">
@@ -79,7 +79,7 @@ You can use `interior()` as many times as you need, in as many variations as des
 
 The variables in the file entitled: _variables.scss are suitable for production use, with the exception of the widths:
 
-```
+```scss
 $xs: 400px;
 $sm: 600px;
 $md: 800px;
