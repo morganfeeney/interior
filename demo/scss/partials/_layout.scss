@@ -1,4 +1,4 @@
-main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(main):not(h2):not(h3):not(h4):not(section):not(li):not(dt):not(.img-r):not(.price),
+#main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(#main):not(h2):not(h3):not(h4):not(section):not(li):not(dt):not(.img-r):not(.price),
 section > :first-child:not(h2),
 .product-lister,
 dl:first-child {
@@ -27,7 +27,7 @@ header {
 	}
 }
 
-main {
+#main {
 	clear: both;
 }
 
