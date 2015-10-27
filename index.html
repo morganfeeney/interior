@@ -17,15 +17,13 @@
             h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
           })(document);
 
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-69263056-1', 'auto');
-            ga('send', 'pageview');
-
-          </script>
+          ga('create', 'UA-69263056-1', 'auto');
+          ga('send', 'pageview');
         </script>
     </head>
     <body>
@@ -303,10 +301,10 @@ $md: 600px;
     @include interior(
         $grid-cols: 3,
         $vert-space: 0,
-        <span class="comment">// Reference the variable name. It can be anything you want, 
+        <span class="comment">// Reference the variable name. It can be anything you want,
         // for the sake of your sanity match the one used in the media query.</span>
         $mq: md
-    );  
+    );
 }
 </code></pre>                           <p class="text-center"><i>Compiles to:</i></p>
                             <pre rel="css" class="snippet language-css"><code>.i-outer {
@@ -759,11 +757,11 @@ $md: 600px;
                                 <dd>Removes floats on all direct column children e.g. <code class="language-css">.i-gup > [class*=i-col]</code> adds <code class="language-css">display: inline-block</code> and <code class="language-css">vertical-align: top</code>. The purpose of this class is to allow columns with uneven heights, which don't clear each other using floats, to clear. The great thing with this is that no matter what order the columns are in, and no matter how much content differs between columns they always clear and align properly.</dd>
                             </dl>
                         </div>
-                        <a class="big-button" href="demo/examples/">View working examples</a> 
+                        <a class="big-button" href="demo/examples/">View working examples</a>
                         <a class="big-button dark" href="https://github.com/morganfeeney/interior" rel="nofollow">View on Github</a>
                     </section>
                 </div>
-            </div>  
+            </div>
         </div>
         <footer class="container-outer theme-1">
             <div class="container-width">
