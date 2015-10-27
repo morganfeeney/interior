@@ -682,6 +682,78 @@ body {
   .eg .i-col-md-12 {
     width: 100%;
   }
+  .eg .i-md-fl-1 {
+    left: 8.3333%;
+  }
+  .eg .i-md-fr-1 {
+    right: 8.3333%;
+  }
+  .eg .i-md-fl-2 {
+    left: 16.6667%;
+  }
+  .eg .i-md-fr-2 {
+    right: 16.6667%;
+  }
+  .eg .i-md-fl-3 {
+    left: 25%;
+  }
+  .eg .i-md-fr-3 {
+    right: 25%;
+  }
+  .eg .i-md-fl-4 {
+    left: 33.3333%;
+  }
+  .eg .i-md-fr-4 {
+    right: 33.3333%;
+  }
+  .eg .i-md-fl-5 {
+    left: 41.6667%;
+  }
+  .eg .i-md-fr-5 {
+    right: 41.6667%;
+  }
+  .eg .i-md-fl-6 {
+    left: 50%;
+  }
+  .eg .i-md-fr-6 {
+    right: 50%;
+  }
+  .eg .i-md-fl-7 {
+    left: 58.3333%;
+  }
+  .eg .i-md-fr-7 {
+    right: 58.3333%;
+  }
+  .eg .i-md-fl-8 {
+    left: 66.6667%;
+  }
+  .eg .i-md-fr-8 {
+    right: 66.6667%;
+  }
+  .eg .i-md-fl-9 {
+    left: 75%;
+  }
+  .eg .i-md-fr-9 {
+    right: 75%;
+  }
+  .eg .i-md-fl-10 {
+    left: 83.3333%;
+  }
+  .eg .i-md-fr-10 {
+    right: 83.3333%;
+  }
+  .eg .i-md-fl-11 {
+    left: 91.6667%;
+  }
+  .eg .i-md-fr-11 {
+    right: 91.6667%;
+  }
+  .eg .i-md-fl-12 {
+    left: 100%;
+  }
+  .eg .i-md-fr-12 {
+    right: 100%;
+  }
   .eg [class*=i-col-md] {
     padding: 1rem;
   }
