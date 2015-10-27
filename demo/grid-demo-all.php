@@ -11,7 +11,7 @@
 				</div>
 			</div>
 		</header>
-		<main class="container-outer">
+		<div id="main" class="container-outer">
 			<div class="container-width">
 				<div class="container-inner">
 					<section class="intro">
@@ -535,5 +535,5 @@
 					</section>
 				</div>
 			</div>	
-		</main>
+		</div>
 	<?php include('includes/footer.php') ?>
