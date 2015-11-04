@@ -21,7 +21,7 @@
 					<section class="grid demo demo-bg-1">
 						<?php include('includes/code-samples/interior-config-3.php') ?>
 						<p>
-							Leaving the default values in place, e.g. <code class="language-scss">$i-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
+							Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
 						</p>
 						<div class="grid i-nums demo demo-bg-1">
 							<div class="i-outer">
