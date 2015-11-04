@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                     precision: 4
                 },
                 files: {
-                    '../dist/css/interior.css': 'scss/style.scss'
+                    'dist/css/interior.css': 'src/scss/style.scss'
                 }
             }
         },
@@ -24,12 +24,12 @@ module.exports = function(grunt) {
                 ]
             },
             interior: {
-                src: '../dist/css/*.css'
+                src: 'dist/css/*.css'
             }
         },
         watch: {
             sass: {
-                files: ['**/*.scss'],
+                files: ['src/scss/*.scss', 'src/scss/**/*.scss'],
                 tasks: 'sass',
                 options: {
                     spawn: false,
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                 }
             },
             html: {
-                files: ['**/*.html'],
+                files: ['*.html'],
                 tasks: 'watch',
                 options: {
                     spawn: false,
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
                 }
             },
             css: {
-                files: ['**/*.css'],
+                files: ['dist/*.css'],
                 tasks: 'postcss',
                 options: {
                     spawn: false,
