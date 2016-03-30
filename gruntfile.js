@@ -1,73 +1,74 @@
 module.exports = function(grunt) {
-// Project configuration.
+ // Project configuration.
  grunt.initConfig({
-  pkg: grunt.file.readJSON('package.json'),
-// Sass task
+  pkg: grunt.file.readJSON("package.json"),
+  // Sass task
   sass: {
    interior: {
     options: {
-     style: 'expanded',
-     sourcemap: 'auto',
+     style: "expanded",
+     sourcemap: "auto",
      precision: 4
     },
     files: {
-     'dist/css/interior.css': 'src/scss/style.scss'
+     "build/css/style.css": "src/scss/style.scss",
+     "build/css/demo/style.css": "src/scss/demo/style.scss"
     }
    }
   },
-// Post CSS task
+  // Post CSS task
   postcss: {
    options: {
     map: true,
     processors: [
-     require('autoprefixer')({
-      browsers: ['last 2 versions']
+     require("autoprefixer")({
+      browsers: ["last 2 versions"]
      })
     ]
    },
    interior: {
-    src: 'dist/css/*.css'
+    src: "build/css/**/*.css"
    }
   },
-// Watch task
+  // Watch task
   watch: {
    sass: {
-    files: ['src/scss/*.scss', 'src/scss/**/*.scss'],
-    tasks: 'sass',
+    files: ["src/scss/**/*.scss"],
+    tasks: "sass",
     options: {
      spawn: false,
      livereload: true
     }
    },
    css: {
-    files: ['dist/*.css'],
-    tasks: 'postcss',
+    files: ["build/**/*.css"],
+    tasks: "postcss",
     options: {
      spawn: false,
      livereload: true
     }
    },
   },
-// Nunjucks task
+  // Nunjucks task
   nunjucks: {
    options: {
-    data: grunt.file.readJSON('data.json'),
-    paths: 'src'
+    data: grunt.file.readJSON("data.json"),
+    paths: "src"
    },
    dev: {
     files: [{
      expand: true,
      cwd: "src/",
      src: [
-      'templates/**/*.html',
-      'partials/**/*.html'
+      "templates/**/*.html",
+      "partials/**/*.html"
      ],
      dest: "build/",
      ext: ".html"
     }],
    }
   },
-// Prettify task
+  // Prettify task
   prettify: {
    options: {
     "indent": 1,
@@ -85,26 +86,26 @@ module.exports = function(grunt) {
    },
    all: {
     expand: true,
-    cwd: '',
-    src: ['**/*.html'],
-    dest: '',
-    ext: '.html'
+    cwd: "",
+    src: ["build/**/*.html"],
+    dest: "",
+    ext: ".html"
    }
   },
  });
 
-// Load the plugins to run your tasks
- require('load-grunt-tasks')(grunt, {
-  scope: 'devDependencies'
+ // Load the plugins to run your tasks
+ require("load-grunt-tasks")(grunt, {
+  scope: "devDependencies"
  });
- require('time-grunt')(grunt);
+ require("time-grunt")(grunt);
 
-// Default task(s).
- grunt.registerTask('default', [
-  'sass',
-  'postcss',
-  'nunjucks',
-  'prettify',
-  'watch'
+ // Default task(s).
+ grunt.registerTask("default", [
+  "sass",
+  "postcss",
+  "nunjucks",
+  "prettify",
+  "watch"
  ]);
 };
