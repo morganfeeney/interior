@@ -48,6 +48,14 @@ module.exports = function(grunt) {
      livereload: true
     }
    },
+   html: {
+    files: ["src/**/*.html", "src/**/*.nunjucks"],
+    tasks: "nunjucks",
+    options: {
+     spawn: false,
+     livereload: true
+    }
+   },
   },
   // Nunjucks task
   nunjucks: {
