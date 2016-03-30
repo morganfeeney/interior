@@ -1,0 +1,46 @@
+// Code
+
+.code-example {
+	background-color: #eee;
+	font-size: 2rem;
+	padding: ($grid-gutter-width / 2) $grid-gutter-width;
+}
+
+code, pre {
+	white-space: pre;
+}
+
+pre {
+	&.snippet {
+		code {
+			background: rgba($demo-bg-1, 0.1);
+			display: block;
+			font-size: ($font-size-normal)-.1;
+			padding: 2rem;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+		&:before {
+			content: attr(rel);
+		    background: $demo-bg-3;
+		    display: block;
+		    color: #fff;
+		    padding: .6rem 2rem;
+		    text-transform: uppercase;
+		    font: normal 600 1.2rem $font-family-base;
+		}		
+	}
+}
+
+pre {
+	tab-size: 4;
+}
+
+code {
+	background: rgba($demo-bg-1, 0.1);
+}
+
+// Code block font styles
+.comment {
+	color: #999;
+}

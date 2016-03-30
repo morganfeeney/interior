@@ -1,7 +1,8 @@
 module.exports = function(grunt) {
- // Project configuration.
+// Project configuration.
  grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
+// Sass task
   sass: {
    interior: {
     options: {
@@ -14,6 +15,7 @@ module.exports = function(grunt) {
     }
    }
   },
+// Post CSS task
   postcss: {
    options: {
     map: true,
@@ -27,6 +29,7 @@ module.exports = function(grunt) {
     src: 'dist/css/*.css'
    }
   },
+// Watch task
   watch: {
    sass: {
     files: ['src/scss/*.scss', 'src/scss/**/*.scss'],
@@ -44,38 +47,64 @@ module.exports = function(grunt) {
      livereload: true
     }
    },
-   nunjucks: {
-    options: {
-     data: grunt.file.readJSON('data.json'),
-     paths: 'src'
-    },
-    dev: {
-     files: [{
-      expand: true,
-      cwd: "src/",
-      src: [
-       'templates/**/*.html',
-       'partials/**/*.html'
-      ],
-      dest: "build/",
-      ext: ".html"
-     }],
-    }
+  },
+// Nunjucks task
+  nunjucks: {
+   options: {
+    data: grunt.file.readJSON('data.json'),
+    paths: 'src'
    },
+   dev: {
+    files: [{
+     expand: true,
+     cwd: "src/",
+     src: [
+      'templates/**/*.html',
+      'partials/**/*.html'
+     ],
+     dest: "build/",
+     ext: ".html"
+    }],
+   }
+  },
+// Prettify task
+  prettify: {
+   options: {
+    "indent": 1,
+    "indent_char": " ",
+    "indent_scripts": "normal",
+    "wrap_line_length": 0,
+    "brace_style": "collapse",
+    "preserve_newlines": true,
+    "max_preserve_newlines": 2,
+    "unformatted": [
+     "a",
+     "code",
+     "pre"
+    ]
+   },
+   all: {
+    expand: true,
+    cwd: '',
+    src: ['**/*.html'],
+    dest: '',
+    ext: '.html'
+   }
   },
  });
 
- // Load the plugins to run your tasks
+// Load the plugins to run your tasks
  require('load-grunt-tasks')(grunt, {
   scope: 'devDependencies'
  });
  require('time-grunt')(grunt);
 
- // Default task(s).
+// Default task(s).
  grunt.registerTask('default', [
   'sass',
-  'nunjucks',
   'postcss',
+  'nunjucks',
+  'prettify',
   'watch'
  ]);
 };

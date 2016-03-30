@@ -1,7 +1,8 @@
 module.exports = function(grunt) {
- // Project configuration.
+// Project configuration.
  grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
+// Sass task
   sass: {
    demo: {
     options: {
@@ -14,6 +15,7 @@ module.exports = function(grunt) {
     }
    }
   },
+// Post CSS task
   postcss: {
    options: {
     map: true,
@@ -27,6 +29,7 @@ module.exports = function(grunt) {
     src: 'css/*.css'
    }
   },
+// Watch task
   watch: {
    sass: {
     files: ['**/*.scss', '../**/*.scss'],
@@ -52,24 +55,33 @@ module.exports = function(grunt) {
      livereload: true
     }
    },
-   nunjucks: {
+   html: {
+    files: ['demo/**/*.html', 'demo/**/*.nunjucks'],
+    tasks: 'nunjucks',
     options: {
-     data: grunt.file.readJSON('data.json'),
-     paths: 'src'
-    },
-    dev: {
-     files: [{
-      expand: true,
-      cwd: "src/",
-      src: [
-       'templates/**/*.html',
-       'partials/**/*.html'
-      ],
-      dest: "build/",
-      ext: ".html"
-     }],
+     spawn: false,
+     livereload: true
     }
    },
+  },
+// Nunjucks task
+  nunjucks: {
+   options: {
+    data: grunt.file.readJSON('data.json'),
+    paths: 'demo'
+   },
+   dev: {
+    files: [{
+     expand: true,
+     cwd: 'demo/',
+     src: [
+      'templates/**/*.html',
+      'partials/**/*.html'
+     ],
+     dest: 'build/',
+     ext: '.html'
+    }],
+   }
   },
   prettify: {
    options: {
@@ -105,11 +117,8 @@ module.exports = function(grunt) {
  // Default task(s).
  grunt.registerTask('default', [
   'sass',
+  'nunjucks',
   'postcss',
   'watch'
- ]);
- grunt.registerTask('demo', [
-  'php2html',
-  'prettify'
  ]);
 };
