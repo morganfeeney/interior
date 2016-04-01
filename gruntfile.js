@@ -50,7 +50,7 @@ module.exports = function(grunt) {
    },
    html: {
     files: ["src/**/*.html", "src/**/*.nunjucks"],
-    tasks: "nunjucks",
+    tasks: ["nunjucks", "prettify"],
     options: {
      spawn: false,
      livereload: true
@@ -82,15 +82,11 @@ module.exports = function(grunt) {
     "indent": 1,
     "indent_char": " ",
     "indent_scripts": "normal",
-    "wrap_line_length": 0,
+    "wrap_line_length": 250,
     "brace_style": "collapse",
     "preserve_newlines": true,
     "max_preserve_newlines": 2,
-    "unformatted": [
-     "a",
-     "code",
-     "pre"
-    ]
+    "unformatted": ["a", "code", "pre"]
    },
    all: {
     expand: true,
