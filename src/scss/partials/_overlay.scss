@@ -1,0 +1,28 @@
+#gridOverlay {
+	@extend .container-set-width;
+	.grid-outer {
+		width: 100%;
+	}
+}
+.grid {
+
+	&.overlay {
+		height: 100vh;
+		padding: 0 ($grid-gutter-width / 2);
+		@include gridAlignment(center);
+		@include transformToCenter;
+		position: fixed;
+
+		[class*=-col] {
+			height: 100%;
+			padding: 0 ($grid-gutter-width / 2);
+		}
+		
+		.i-inner {
+			background: rgba(red, 0.3);
+			height: 100%;
+		}
+	}
+
+
+}
