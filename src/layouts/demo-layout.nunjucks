@@ -11,11 +11,17 @@
 			{% include "partials/head-scripts.nunjucks" %}
 		{% endblock %}
 	</head>
-		<body>
-				{% block header %}{% endblock %}
-				{% block main %}{% endblock %}
-				{% block footer %}
-					{% include "partials/footer.nunjucks" %}
-				{% endblock %}
-		</body>
-	</html>
+	<body>
+			{% block header %}{% endblock %}
+			<div id="main" class="container-outer">
+			  <div class="container-width">
+			    <div class="container-inner">
+						{% block main %}{% endblock %}
+			    </div>
+			  </div>  
+			</div>
+			{% block footer %}
+				{% include "partials/footer.nunjucks" %}
+			{% endblock %}
+	</body>
+</html>
