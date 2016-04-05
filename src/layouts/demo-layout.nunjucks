@@ -11,8 +11,8 @@
 			{% include "partials/head-scripts.nunjucks" %}
 		{% endblock %}
 	</head>
-	<body>
-		<header class="container-outer theme-1">
+	<body class="layout {{ body_classes }}">
+		<header class="container-outer {{ main_header_classes }}">
 	    <div class="container-width">
 	        <div class="container-inner">
 						{% block header %}{% endblock %}
@@ -26,7 +26,7 @@
 		    </div>
 		  </div>  
 		</div>
-		<footer class="container-outer theme-1">
+		<footer class="container-outer {{ main_footer_classes }}">
 			<div class="container-width">
 				<div class="container-inner">
 					{% block footer %}
