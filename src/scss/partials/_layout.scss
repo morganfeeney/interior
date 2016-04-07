@@ -31,6 +31,13 @@ header {
 	clear: both;
 }
 
+.eg #main-footer .container-width {
+	padding: 0 1rem;
+	@media (max-width: $sm) {
+		padding: 0 .5rem;
+	}
+}
+
 // Containers
 .container {
 	&-outer {
