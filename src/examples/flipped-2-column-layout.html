@@ -1,0 +1,34 @@
+{% set base_path = "../.." %}
+{% set page_title = "Interior | Flipped 2 column layout" %}
+{% set page_description = "Learn how to create a flipped 2 column layout using Interior. Don't forget to view the source." %}
+{% extends "../layouts/demo-layout.nunjucks" %}
+{% set body_classes = "eg eg1" %}
+
+{% block header %}
+	<div class="i-col-12 i-col-xs-12 i-col-sm-12">
+		<h1>Example <small><span>#</span>2</small> <span>Flipped 2 column layout</span></h1>
+	</div>
+{% endblock %}
+
+{% block main %}
+	<div class="i-outer">
+		<div class="i-row">
+			<aside class="i-col-12 i-col-sm-4 i-md-fl-8 eg-bg-1">
+				<div class="i-outer">
+					<div class="i-inner">
+						<h3>This is an aside</h3>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>
+			</aside>
+			<div class="i-col-12 i-col-sm-8 i-md-fr-4">
+				<div class="i-inner">
+					<h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					<h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
+					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

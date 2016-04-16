@@ -68,7 +68,8 @@ module.exports = function(grunt) {
      expand: true,
      cwd: "src/",
      src: [
-      "templates/**/*.html",
+      "index.html",
+      "examples/**/*.html",
       "partials/**/*.html"
      ],
      dest: "build/",
