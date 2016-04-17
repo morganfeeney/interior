@@ -1,15 +1,15 @@
 // Mixins
-@import '../../src/scss/mixins/helpers';
-@import '../../src/scss/mixins/grid-alignment';
-@import '../../src/scss/mixins/interior';
+@import '../mixins/helpers';
+@import '../mixins/grid-alignment';
+@import '../mixins/interior';
 
 // Variables
-@import '../../src/scss/partials/variables';
+@import '../partials/variables';
 @import 'partials/demo-variables';
 
 // Utilities
-@import '../../src/scss/partials/reset';
-@import '../../src/scss/partials/utlilities';
+@import '../partials/reset';
+@import '../partials/utlilities';
 @import 'partials/demo';
 
 // Core

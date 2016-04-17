@@ -1,0 +1,63 @@
+#main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(#main):not(h2):not(h3):not(h4):not(section):not(li):not(dt):not(.img-r):not(.price),
+section > :first-child:not(h2),
+.product-lister,
+dl:first-child {
+	margin: 0 0 3rem 0;
+}
+
+@media (max-width: $sm) {
+	aside[class*=-fl-] ~ [class*=i-col] {
+		margin: 3rem 0 0 0;
+	}	
+}
+
+// Header specifics
+header {
+	&.container-outer {
+		overflow: hidden;
+		margin-bottom: 3rem;
+		position: relative;
+		&.theme-1 {
+			background: $theme-bg-1;
+		}
+		@media(min-width: $md) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+}
+
+#main {
+	clear: both;
+}
+
+.eg #main-footer .container-width {
+	padding: 0 1rem;
+	@media (max-width: $sm) {
+		padding: 0 .5rem;
+	}
+}
+
+// Containers
+.container {
+	&-outer {
+		padding: 0 $grid-gutter-width--2;
+	}
+	&-width {
+		max-width: 80rem;
+		@include gridAlignment(center);
+	}
+}
+
+// Default grid
+@include interior(
+	$vert-space: 0
+);
+
+ // Grid with MQs
+@media(min-width: $xs) {
+	@include interior(
+		$vert-space: 0,
+		$mq: xs
+	);
+}

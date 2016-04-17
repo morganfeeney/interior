@@ -1,0 +1,20 @@
+.dev {
+	&-controls {
+		position: fixed;
+		z-index: 100;
+		background: #ccc;
+		width: 100%;
+		padding: ($grid-gutter-width / 2);
+		box-shadow: 0 0 1rem .2rem rgba(0, 0, 0, 0.5);
+		border-bottom: .1rem solid rgba(255, 255, 255, 0.2);
+		opacity: 0.1;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+// Helpers
+@import 'partials/overlay';
