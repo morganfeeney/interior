@@ -138,6 +138,9 @@ footer {
 			text-transform: uppercase;
 			font-weight: bold;
 			letter-spacing: .1rem;
+			a {
+				color: $font-color-4;
+			}
 		}
 	}
 }
