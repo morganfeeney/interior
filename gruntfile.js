@@ -6,8 +6,8 @@ module.exports = function(grunt) {
   sass: {
    interior: {
     options: {
-     style: "expanded",
-     sourcemap: "auto",
+     style: "compressed",
+     sourcemap: "inline",
      precision: 4
     },
     files: {
