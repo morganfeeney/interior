@@ -50,32 +50,50 @@ module.exports = function(grunt) {
    },
    html: {
     files: ["src/**/*.html", "src/**/*.nunjucks"],
-    tasks: ["nunjucks", "prettify"],
+    tasks: ["clean:html", "nunjucks", "prettify"],
     options: {
      spawn: false,
      livereload: true
     }
    },
+   gruntfile: {
+    files: "gruntfile.js",
+    options: {
+     spawn: false,
+     livereload: true,
+     reload: true
+    }
+   }
   },
   // Nunjucks task
   nunjucks: {
    options: {
     data: grunt.file.readJSON("data.json"),
-    paths: "src"
+    paths: "src/html"
    },
    dev: {
     files: [{
      expand: true,
-     cwd: "src/",
+     cwd: "src/html",
      src: [
-      "index.html",
-      "examples/**/*.html",
-      "partials/**/*.html"
+      "**/*.html"
      ],
      dest: "build/",
      ext: ".html"
     }],
    }
+  },
+  // Clean task
+  clean: {
+    html: {
+      src: ["build/**/*.html"]
+    },
+    css: {
+      src: ["build/css/**/*.css"]
+    },
+    all: {
+      src: ["build/*"]
+    }
   },
   // Prettify task
   prettify: {
@@ -107,6 +125,7 @@ module.exports = function(grunt) {
 
  // Default task(s).
  grunt.registerTask("default", [
+  "clean:all",
   "sass",
   "postcss",
   "nunjucks",
