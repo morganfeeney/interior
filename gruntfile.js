@@ -11,8 +11,8 @@ module.exports = function(grunt) {
      precision: 4
     },
     files: {
-     "build/css/style.css": "src/scss/style.scss",
-     "build/css/demo/style.css": "src/scss/demo/style.scss"
+     "css/style.css": "src/scss/style.scss",
+     "css/demo/style.css": "src/scss/demo/style.scss"
     }
    }
   },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     ]
    },
    interior: {
-    src: "build/css/**/*.css"
+    src: "css/**/*.css"
    }
   },
   // Watch task
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     }
    },
    css: {
-    files: ["build/**/*.css"],
+    files: ["css/**/*.css"],
     tasks: "postcss",
     options: {
      spawn: false,
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
      src: [
       "**/*.html"
      ],
-     dest: "build/",
+     dest: "",
      ext: ".html"
     }],
    }
@@ -86,13 +86,13 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     html: {
-      src: ["build/**/*.html"]
+      src: ["index.html", "examples/**/*.html"]
     },
     css: {
-      src: ["build/css/**/*.css"]
+      src: ["css/**/*.css"]
     },
     all: {
-      src: ["build/*"]
+      src: ["index.html", "examples/**/*.html", "css/**/*.css"]
     }
   },
   // Prettify task
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
    all: {
     expand: true,
     cwd: "",
-    src: ["build/**/*.html"],
+    src: ["index.html", "examples/**/*.html"],
     dest: "",
     ext: ".html"
    }
