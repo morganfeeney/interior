@@ -14,7 +14,7 @@
   <h2>What is this?</h2>
   <p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">Sass</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs by simply changing the default variables.</p>
 </section>
-<section class="grid demo demo-bg-1">
+<section id="demo-1" class="grid demo demo-bg-1">
   {% include "partials/code-samples/interior-config-3.nunjucks" %}
   <p>
     Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
@@ -261,7 +261,7 @@
   </div>
 </section>
 
-<section class="grid demo demo-bg-1">
+<section id="demo-2" class="grid demo demo-bg-1">
   <div class="accompanying-text">
     <h2>Include media queries</h2>
     <p>
@@ -371,7 +371,7 @@
   </div>
 </section>
 
-<section class="grid demo demo-bg-2">
+<section id="demo-3" class="grid demo demo-bg-2">
   <div class="accompanying-text">
     <h2>Group nested columns</h2>
     <p>
@@ -409,9 +409,7 @@
   {% include "partials/code-samples/nested-demo-1.nunjucks" %}
 </section>
 
-<!-- Demo 2 -->
-
-<section class="grid demo demo-bg-1">
+<section id="demo-4" class="grid demo demo-bg-1">
   <div class="accompanying-text">
     <h2>Nest columns within columns</h2>
     <p>
@@ -520,9 +518,7 @@
   </div>
 </section>
 
-<!-- Demo 3 -->
-
-<section class="grid demo demo-bg-3 clearfix">
+<section id="demo-5" class="grid demo demo-bg-3 clearfix">
   <div class="accompanying-text">
     <h2>Offset columns</h2>
     <p>
@@ -558,9 +554,7 @@
   {% include "partials/code-samples/offset-demo-1.nunjucks" %}
 </section>
 
-<!-- Demo 4 -->
-
-<section class="grid demo demo-bg-3">
+<section id="demo-6" class="grid demo demo-bg-3">
   <div class="accompanying-text">
     <h2>Flipping columns</h2>
     <p><i>No, that wasn't me complaining again...</i> One use case scenario for 'flipping' visual appearance of columns is for use with Responsive Web Design (RWD).</p>
@@ -600,7 +594,8 @@
   </div>
   {% include "partials/code-samples/flipping-demo-1.nunjucks" %}
 </section>
-<section class="grid demo demo-bg-3">
+
+<section id="demo-7" class="grid demo demo-bg-3">
   <div class="accompanying-text">
     <h2>Classes explained</h2>
     <p>I have abbreviated some words so that the amount of text in class names is smaller; therefore at first the class names may appear like jargon. I will explain what each class should do.</p>
