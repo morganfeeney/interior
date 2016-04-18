@@ -1,15 +1,15 @@
 // Mixins
-@import 'mixins/helpers';
-@import 'mixins/grid-alignment';
-@import 'mixins/interior';
+@import '../mixins/helpers';
+@import '../mixins/grid-alignment';
+@import '../mixins/interior';
 
 // Variables
-@import 'partials/variables';
+@import '../partials/variables';
 @import 'partials/demo-variables';
 
 // Utilities
-@import 'partials/reset';
-@import 'partials/utlilities';
+@import '../partials/reset';
+@import '../partials/utlilities';
 @import 'partials/demo';
 
 // Core

@@ -1,70 +1,135 @@
 module.exports = function(grunt) {
-    // Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        sass: {
-            interior: {
-                options: {
-                    style: 'expanded',
-                    sourcemap: 'auto',
-                    precision: 4
-                },
-                files: {
-                    'dist/css/interior.css': 'src/scss/style.scss'
-                }
-            }
-        },
-        postcss: {
-            options: {
-                map: true,
-                processors: [
-                    require('autoprefixer')({
-                        browsers: ['last 2 versions']
-                    })
-                ]
-            },
-            interior: {
-                src: 'dist/css/*.css'
-            }
-        },
-        watch: {
-            sass: {
-                files: ['src/scss/*.scss', 'src/scss/**/*.scss'],
-                tasks: 'sass',
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            },
-            html: {
-                files: ['*.html'],
-                tasks: 'watch',
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            },
-            css: {
-                files: ['dist/*.css'],
-                tasks: 'postcss',
-                options: {
-                    spawn: false,
-                    livereload: true
-                }
-            },
-        },
-    });
+ // Project configuration.
+ grunt.initConfig({
+  pkg: grunt.file.readJSON("package.json"),
+  // Sass task
+  sass: {
+   interior: {
+    options: {
+     style: "compressed",
+     sourcemap: "inline",
+     precision: 4
+    },
+    files: {
+     "css/style.css": "src/scss/style.scss",
+     "css/demo/style.css": "src/scss/demo/style.scss"
+    }
+   }
+  },
+  // Post CSS task
+  postcss: {
+   options: {
+    map: true,
+    processors: [
+     require("autoprefixer")({
+      browsers: ["last 2 versions"]
+     })
+    ]
+   },
+   interior: {
+    src: "css/**/*.css"
+   }
+  },
+  // Watch task
+  watch: {
+   sass: {
+    files: ["src/scss/**/*.scss"],
+    tasks: "sass",
+    options: {
+     spawn: false,
+     livereload: true
+    }
+   },
+   css: {
+    files: ["css/**/*.css"],
+    tasks: "postcss",
+    options: {
+     spawn: false,
+     livereload: true
+    }
+   },
+   html: {
+    files: ["src/**/*.html", "src/**/*.nunjucks"],
+    tasks: ["clean:html", "nunjucks", "prettify"],
+    options: {
+     spawn: false,
+     livereload: true
+    }
+   },
+   gruntfile: {
+    files: "gruntfile.js",
+    options: {
+     spawn: false,
+     livereload: true,
+     reload: true
+    }
+   }
+  },
+  // Nunjucks task
+  nunjucks: {
+   options: {
+    data: grunt.file.readJSON("data.json"),
+    paths: "src/html"
+   },
+   dev: {
+    files: [{
+     expand: true,
+     cwd: "src/html",
+     src: [
+      "**/*.html"
+     ],
+     dest: "",
+     ext: ".html"
+    }],
+   }
+  },
+  // Clean task
+  clean: {
+    html: {
+      src: ["index.html", "examples/**/*.html"]
+    },
+    css: {
+      src: ["css/**/*.css"]
+    },
+    all: {
+      src: ["index.html", "examples/**/*.html", "css/**/*.css"]
+    }
+  },
+  // Prettify task
+  prettify: {
+   options: {
+    "indent": 1,
+    "indent_char": " ",
+    "indent_scripts": "normal",
+    "wrap_line_length": 250,
+    "brace_style": "collapse",
+    "preserve_newlines": true,
+    "max_preserve_newlines": 2,
+    "unformatted": ["a", "code", "pre"]
+   },
+   all: {
+    expand: true,
+    cwd: "",
+    src: ["index.html", "examples/**/*.html"],
+    dest: "",
+    ext: ".html"
+   }
+  },
+ });
 
-    // Load the plugins to run your tasks
-    require('load-grunt-tasks')(grunt, {
-        scope: 'devDependencies'
-    });
-    require('time-grunt')(grunt);
+ // Load the plugins to run your tasks
+ require("load-grunt-tasks")(grunt, {
+  scope: "devDependencies"
+ });
+ require("time-grunt")(grunt);
 
-    // Default task(s).
-    grunt.registerTask('default', [
-        'sass',
-        'postcss',
-        'watch'
-    ]);
+ // Default task(s).
+ grunt.registerTask("default", [
+  "clean:all",
+  "sass",
+  "postcss",
+  "nunjucks",
+  "prettify",
+  "watch"
+ ]);
 };

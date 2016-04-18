@@ -1,0 +1,42 @@
+{% set base_path = "../" %}
+{% set page_title = "Example layouts built with Interior" %}
+{% set page_description = "Learn how to create practical web layouts using Interior." %}
+{% extends "../layouts/demo-layout.nunjucks" %}
+{% set body_classes = "eg eg1" %}
+
+{% block header %}
+	<div class="i-col-12 i-col-sm-12">
+		<h1>Examples <span>Example layouts built with Interior</span></h1>
+	</div>
+{% endblock %}
+{% block main %}
+	<div class="i-outer">
+		<div class="i-row">
+			<div class="i-col-12 i-col-sm-8">
+				<div class="i-inner">
+					<dl>
+						<dt>
+							<a href="simple-2-column-layout.html">Simple 2 column layout</a>
+						</dt>
+						<dd>
+							A main content area with an aside. A simple, yet practical layout which crops up time and again.
+						</dd>
+						<dt>
+							<a href="flipped-2-column-layout.html">Flipped 2 column layout.</a>
+						</dt>
+						<dd>
+							A main content area with an aside, with visual source order flipped. A responsive version of the simple 2 column layout.
+						</dd>
+						<dt>
+							<a href="product-lister.html">Product lister page layout</a>
+						</dt>
+						<dd>
+							An example of a product lister page layout with an aside. This example demonstrates a worst-case scenario for unpredictably long product titles.
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

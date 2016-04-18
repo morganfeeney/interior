@@ -1,0 +1,32 @@
+// Base Colours
+$brand-primary: #FF7070; // Funky Salmon
+$brand-primary-outset: #FFF; // White
+$brand-primary-offset: #000; // Black
+$brand-secondary: #555; // Dark grey
+
+$theme-bg-1: $brand-primary;
+$theme-bg-2: $brand-primary-outset;
+
+$demo-bg-1: rgba($theme-bg-1, 0.3);
+$demo-bg-1--single: $theme-bg-1;
+$demo-bg-1--group: $theme-bg-2;
+$demo-bg-1--border: 1px solid $theme-bg-1;
+
+$demo-bg-2: $brand-primary;
+$demo-bg-2--single: rgba($demo-bg-2, 0.3);
+$demo-bg-2--group: $theme-bg-2;
+
+$demo-bg-3: $brand-secondary;
+
+// Fonts
+$font-family-base: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-normal: 1.6rem;
+$font-size-large: 2rem;
+
+$font-color-1: $brand-primary;
+$font-color-2: $brand-primary-outset;
+$font-color-3: $brand-primary-offset;
+$font-color-4: $brand-secondary;
+
+// Borders
+$demo-border-colour-1: rgba($demo-bg-1, 0.3);
