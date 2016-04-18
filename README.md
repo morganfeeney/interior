@@ -5,9 +5,9 @@ Interior is a CSS grid system built with Sass; aimed towards front-end developer
 ## Examples
 
 * [Interior home-page](http://interiorsystem.co.uk)
-* [Simple 2 column layout](http://interiorsystem.co.uk/demo/examples/simple-2-column-layout.html)
-* [Flipped 2 column layout](http://interiorsystem.co.uk/demo/examples/flipped-2-column-layout.html)
-* [Product lister page layout](http://interiorsystem.co.uk/demo/examples/product-lister.html)
+* [Simple 2 column layout](http://interiorsystem.co.uk/examples/simple-2-column-layout.html)
+* [Flipped 2 column layout](http://interiorsystem.co.uk/examples/flipped-2-column-layout.html)
+* [Product lister page layout](http://interiorsystem.co.uk/examples/product-lister.html)
 
 ## Features
 
