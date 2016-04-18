@@ -1,7 +1,7 @@
 {
   "name": "interior",
   "description": "Modular CSS grid system, built with Sass.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Morgan Feeney",
   "license": "MIT",
   "devDependencies": {
