@@ -1,0 +1,21 @@
+/* ==============================================================
+   Column mixin
+   ============================================================== */
+
+@mixin col(
+  $col,
+  $sibling-offset: $grid-gutter + $grid-gutter,
+  $width: 100% / $cols * $col,
+  $sibling: false,
+  $grid-gutter: $grid-gutter,
+  $fg: 1,
+  $fs: 1
+){
+  @if $sibling == true {
+    flex: $fg $fs calc(#{$width} - #{$sibling-offset});
+    min-width: calc(#{$width} - #{$sibling-offset}); 
+  } @else {
+    flex: $fg $fs calc(#{$width} - #{$grid-gutter});
+    min-width: calc(#{$width} - #{$grid-gutter}); 
+  }
+}

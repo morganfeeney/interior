@@ -1,0 +1,41 @@
+/* ==============================================================
+   Comments
+   ============================================================== */
+
+.blog-comments {
+  * {
+    margin: 0 0 $vspace/3;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  &-item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+  .avatar {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex: 1 1 auto;
+    order: 1;
+  }
+  &-meta {
+    display: flex;
+    flex: 1 1 auto;
+    order: 3;
+    justify-content: flex-end;
+    margin: 0;
+    p {
+      font-size: .8rem;
+      display: inline-flex;
+      margin-left: $hspace/2;
+    }
+  }
+  &-content {
+    @include col(12, $gutter: 50px);
+    padding-left: ($grid-gutter);
+    order: 2;
+  }
+}
