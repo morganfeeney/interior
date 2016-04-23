@@ -4,18 +4,29 @@
 
 @mixin col(
   $col,
-  $sibling-offset: $grid-gutter + $grid-gutter,
+  $n: $grid-gutter + $grid-gutter,
   $width: 100% / $cols * $col,
-  $sibling: false,
-  $grid-gutter: $grid-gutter,
+  $nested-siblings: false,
+  $gutter: $grid-gutter,
   $fg: 1,
   $fs: 1
 ){
-  @if $sibling == true {
-    flex: $fg $fs calc(#{$width} - #{$sibling-offset});
-    min-width: calc(#{$width} - #{$sibling-offset}); 
+  @if $nested-siblings == true {
+    // $n stands for Nested sibling offset
+    flex: $fg $fs calc(
+      #{$width} - #{$n}
+    );
+    // min-width to stop Safari being a dick.
+    min-width: calc(
+      #{$width} - #{$n}
+    );
   } @else {
-    flex: $fg $fs calc(#{$width} - #{$grid-gutter});
-    min-width: calc(#{$width} - #{$grid-gutter}); 
+    flex: $fg $fs calc(
+      #{$width} - #{$gutter}
+    );
+    // min-width to stop Safari being a dick.
+    min-width: calc(
+      #{$width} - #{$gutter}
+    ); 
   }
 }

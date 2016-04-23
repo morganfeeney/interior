@@ -1,0 +1,17 @@
+/* ==============================================================
+   Base
+   ============================================================== */
+
+// Reset
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $brandbg;
+  font-family: $fs1;
+}
+.main {
+  padding: 0 $grid-gutter;
+  margin: auto;
+}
