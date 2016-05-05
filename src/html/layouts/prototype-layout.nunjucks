@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ page_title }}</title>
+		<meta name="description" content="{{ page_description }}">
+		<link rel="stylesheet" href="{{ base_path }}css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block header_scripts %}
+			{% include "partials/head-scripts.nunjucks" %}
+		{% endblock %}
+	</head>
+	<body class="{{ body_classes }}">
+		<article>
+			<header id="main-header" class="{{ main_header_classes }}">
+		    <div class="container-width">
+					{% block header %}{% endblock %}
+		    </div>
+			</header>
+			<div id="main" class="container-outer">
+				<div class="container-width">
+					{% block main %}{% endblock %}
+				</div>
+			</div>
+			<footer id="main-footer" class="{{ main_footer_classes }}">
+				<div class="container-width">
+					{% block footer %}
+						{% include "partials/footer.nunjucks" %}
+					{% endblock %}
+				</div>
+			</footer>
+		</article>
+		<script src="http://localhost:35729/livereload.js"></script>
+	</body>
+</html>
