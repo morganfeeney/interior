@@ -101,17 +101,17 @@ module.exports = function(grunt) {
    options: {
     "indent": 1,
     "indent_char": " ",
-    "indent_scripts": "normal",
     "wrap_line_length": 250,
     "brace_style": "collapse",
     "preserve_newlines": true,
+    "condense": true,
     "max_preserve_newlines": 2,
     "unformatted": ["a", "code", "pre"]
    },
    all: {
     expand: true,
     cwd: "",
-    src: ["index.html", "examples/**/*.html"],
+    src: ["index.html", "examples/**/*.html", "prototypes/**/*.html"],
     dest: "",
     ext: ".html"
    }
