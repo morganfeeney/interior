@@ -1,0 +1,4 @@
+{% set images = ["1","2","3"] %}
+{% for image in images %}
+  {% include "partials/cards/card-image.nunjucks" %}
+{% endfor %}
