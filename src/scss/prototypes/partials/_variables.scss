@@ -11,7 +11,7 @@ $hspace: 1rem;
 $vspace: 1.17rem;
 $grid-gutter: $hspace;
 $m: $hspace;
-$wrapper-width--large: 80rem;
+$wrapper-width-large: 80rem;
 
 // Colours
 $brand-color-1: #FF7070;
@@ -21,8 +21,13 @@ $brand-color-4: #000;
 $brandbg: $brand-color-1;
 $lightbg: $brand-color-2;
 $nobg: transparent;
-$brandbg--light: #FFD4D4;
+$brandbg-light: lighten($brandbg, 20);
 $darkbg: $brand-color-3;
+
+$font-color-1: $brand-color-1;
+$font-color-2: $brand-color-2;
+$font-color-3: $brand-color-3;
+$font-color-4: $brand-color-4;
 
 // Fonts
 $fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
