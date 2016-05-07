@@ -7,11 +7,33 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  background: $brandbg;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $brandbg-light;
   font-family: $fs1;
 }
-.main {
+
+.container {
+  //padding: 0 $grid-gutter;
+}
+
+.container-max-width {
+  max-width: 80rem;
   padding: 0 $grid-gutter;
   margin: auto;
+  background: $brand-color-2;
+}
+
+a {
+  &,
+  &:link,
+  &:focus,
+  &:hover {
+    color: $font-color-1;
+  }
 }
