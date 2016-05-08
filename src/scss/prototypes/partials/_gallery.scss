@@ -1,9 +1,13 @@
 .gallery {
   display: flex;
   flex-flow: row wrap;
+  @extend %grid-container;
 }
 .gallery-item {
   @include col(4, $fg: 0);
+  @media(min-width: $bp2) {
+    @include col(3, $fg: 0);
+  }
   img {
     display: block;
   }

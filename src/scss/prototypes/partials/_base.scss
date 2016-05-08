@@ -18,6 +18,11 @@ body {
   font-family: $fs1;
 }
 
+%grid-container {
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+}
+
 .container {
   //padding: 0 $grid-gutter;
 }
