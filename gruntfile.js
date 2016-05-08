@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     }
    },
    html: {
-    files: ["src/**/*.html", "src/**/*.nunjucks"],
+    files: ["src/**/*.html", "src/**/*.njk"],
     tasks: ["clean:html", "nunjucks", "prettify"],
     options: {
      spawn: false,

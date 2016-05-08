@@ -7,14 +7,14 @@
 		<link rel="stylesheet" href="{{ base_path }}/css/prototypes/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% block header_scripts %}
-			{% include "partials/head-scripts.nunjucks" %}
+			{% include "partials/head-scripts.njk" %}
 		{% endblock %}
 	</head>
 	<body class="{{ body_classes }}">
 		<article>
 			<aside>
 				<div class="container-max-width">
-					{% include "partials/components/nav-main.nunjucks" %}
+					{% include "partials/components/nav-main.njk" %}
 				</div>
 			</aside>
 			<header id="main-header" class="container {{ main_header_classes }}">
@@ -30,7 +30,7 @@
 			<footer id="main-footer" class="container {{ main_footer_classes }}">
 				<div class="container-max-width">
 					{% block footer %}
-						{% include "partials/footer.nunjucks" %}
+						{% include "partials/footer.njk" %}
 					{% endblock %}
 				</div>
 			</footer>

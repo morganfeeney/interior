@@ -1,5 +1,0 @@
-<div class="post">
-  <h3><a href="">{{ post.title }}</a></h3>
-  {% include "partials/cards/card-image.nunjucks" %}
-  <p>{{ post.text }}</p>
-</div>

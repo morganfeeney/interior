@@ -1,7 +1,7 @@
 {% set base_path = "" %}
 {% set page_title = "Interior, the Modular Sass Grid System" %}
 {% set page_description = "Use this Grid System to build responsive &amp; fluid web layouts. Modular, simple, Sass." %}
-{% extends "layouts/demo-layout.nunjucks" %}
+{% extends "layouts/demo-layout.njk" %}
 {% block page_title %}Home page test{% endblock %}
 {% set main_header_classes = "theme-1" %}
 {% set main_footer_classes = "theme-1" %}
@@ -15,7 +15,7 @@
   <p class="large">Interior is a set of fluid and responsive layout tools for front-end web developers &amp; web designers. Built from <a href="http://sass-lang.com/">Sass</a> (SCSS flavour); the idea behind Interior is that it can be configured to suit your needs by simply changing the default variables.</p>
 </section>
 <section id="demo-1" class="grid demo demo-bg-1">
-  {% include "partials/code-samples/interior-config-3.nunjucks" %}
+  {% include "partials/code-samples/interior-config-3.njk" %}
   <p>
     Leaving the default values in place, e.g. <code class="language-scss">$grid-cols: 12</code> will produce a 12 column grid, with a <strong>total</strong> gutter width of .8rem, with grid columns aligned from the left:
   </p>
@@ -153,16 +153,16 @@
       </div>
     </div>
   </div>
-  {% include "partials/code-samples/interior-config-1.nunjucks" %}
+  {% include "partials/code-samples/interior-config-1.njk" %}
   <div class="accompanying-text">
     <h2>As simple as you make it</h2>
     <p>
       Create simple layouts, and output as many columns as required, nested within in as many different classes as needed. For example, simply creating a mini-grid system out of a total of 3 columns yields a number of possible layouts.
     </p>
   </div>
-  {% include "partials/code-samples/interior-config-2.nunjucks" %}
+  {% include "partials/code-samples/interior-config-2.njk" %}
   <p class="text-center"><i>Compiles to:</i></p>
-  {% include "partials/code-samples/interior-css-1.nunjucks" %}
+  {% include "partials/code-samples/interior-css-1.njk" %}
   <p class="text-center"><i>Allowing you to create:</i></p>
   <div class="visual-example">
     <div class="grid i-nums demo demo-bg-1 simple-demo-1">
@@ -267,11 +267,11 @@
     <p>
       Create the same simple layouts, yet with the advantages of media queries. E.g. <i>adjust your layout at your desired screen width</i>.
     </p>
-    {% include "partials/code-samples/interior-config-4.nunjucks" %}
+    {% include "partials/code-samples/interior-config-4.njk" %}
     <p class="text-center"><i>Compiles to:</i></p>
-    {% include "partials/code-samples/interior-css-2.nunjucks" %}
+    {% include "partials/code-samples/interior-css-2.njk" %}
     <p class="text-center"><i>Adjust your markup accordingly, e.g.:</i></p>
-    {% include "partials/code-samples/interior-html-1.nunjucks" %}
+    {% include "partials/code-samples/interior-html-1.njk" %}
     <p class="text-center"><i>Results in:</i></p>
     <div class="visual-example">
       <div class="grid i-nums demo demo-bg-1 simple-demo-1">
@@ -406,7 +406,7 @@
       </div>
     </div>
   </div>
-  {% include "partials/code-samples/nested-demo-1.nunjucks" %}
+  {% include "partials/code-samples/nested-demo-1.njk" %}
 </section>
 
 <section id="demo-4" class="grid demo demo-bg-1">
@@ -551,7 +551,7 @@
       </div>
     </div>
   </div>
-  {% include "partials/code-samples/offset-demo-1.nunjucks" %}
+  {% include "partials/code-samples/offset-demo-1.njk" %}
 </section>
 
 <section id="demo-6" class="grid demo demo-bg-3">
@@ -592,7 +592,7 @@
       </div>
     </div>
   </div>
-  {% include "partials/code-samples/flipping-demo-1.nunjucks" %}
+  {% include "partials/code-samples/flipping-demo-1.njk" %}
 </section>
 
 <section id="demo-7" class="grid demo demo-bg-3">
