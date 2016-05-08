@@ -3,18 +3,10 @@
     e.g. how many columns I want to specify for each gallery section.
     The default setting with specific overrides.
  -->
-{% if gallery %}
-  <section class="gallery">
-    {% for galleryItem in gallery %}
-      <div class="gallery-item">
-        {% include "partials/cards/card-image.njk" %}
-      </div>
-    {% endfor %}
-  </section>
-{% else %}
-  <section class="gallery">
+<section class="gallery">
+  {% for galleryItem in gallery %}
     <div class="gallery-item">
       {% include "partials/cards/card-image.njk" %}
     </div>
-  </section>
-{% endif %}
+  {% endfor %}
+</section>
