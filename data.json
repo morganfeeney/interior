@@ -2,5 +2,10 @@
   "pages" : [{
     "id" : 1,
     "title" : "Home page"
-    }]
+    }],
+    "posts" : [
+      { "title": "This title is the first one and it's a fair size", "text": "here's some test blah" },
+      { "title": "Title 2", "text": "test" },
+      { "title": "Title 3", "text": "test" }
+    ]
 }
