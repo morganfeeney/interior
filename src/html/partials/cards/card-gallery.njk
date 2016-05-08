@@ -11,4 +11,10 @@
       </div>
     {% endfor %}
   </section>
+{% else %}
+  <section class="gallery">
+    <div class="gallery-item">
+      {% include "partials/cards/card-image.njk" %}
+    </div>
+  </section>
 {% endif %}
