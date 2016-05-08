@@ -1,4 +1,14 @@
-{% set images = ["1","2","3"] %}
-{% for image in images %}
-  {% include "partials/cards/card-image.nunjucks" %}
-{% endfor %}
+<!-- Need to set up different configurations for gallery presentation
+    for example gallery wit a hero image, a gallery column width setting
+    e.g. how many columns I want to specify for each gallery section.
+    The default setting with specific overrides.
+ -->
+
+{% set gallery = ["1","2","3","4","5"] %}
+<section class="gallery">
+  {% for galleryItem in gallery %}
+    <div class="gallery-item">
+      {% include "partials/cards/card-image.nunjucks" %}
+    </div>
+  {% endfor %}
+</section>
