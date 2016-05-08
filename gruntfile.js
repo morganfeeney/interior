@@ -87,13 +87,13 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     html: {
-      src: ["index.html", "examples/**/*.html"]
+      src: ["index.html", "examples/**/*.html", "prototypes/**/*.html"]
     },
     css: {
       src: ["css/**/*.css"]
     },
     all: {
-      src: ["index.html", "examples/**/*.html", "css/**/*.css"]
+      src: ["index.html", "examples/**/*.html", "prototypes/**/*.html", "css/**/*.css"]
     }
   },
   // Prettify task
