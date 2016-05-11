@@ -1,3 +1,28 @@
 .posts {
   display: flex;
+  flex-flow: row wrap;
+  @extend %grid-container;
+}
+.post {
+  @include col(6, $fg: 0);
+  @media(min-width: $bp2) {
+    @include col(4);
+  }
+}
+// Post layouts
+%post-thumb-right {
+  img {
+    float: right;
+    max-width: 120px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.post-layouts-1 {
+  .post {
+    &:first-child {
+      @extend %post-thumb-right;
+    }
+  }
 }
