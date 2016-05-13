@@ -3,6 +3,8 @@
 {% set page_description = "TBA" %}
 {% extends "layouts/prototype-layout.njk" %}
 
+{% import "../partials/cards/card-image.njk" as images %}
+
 {% block header %}
   <h1>This is a fake blog post about something non-existant</h1>
 {% endblock %}
@@ -25,6 +27,9 @@
 
 <!-- Posts -->
 <div class="post-layouts-1">
+  {% include "partials/cards/card-post.njk" %} 
+</div>
+<div class="post-layouts-2">
   {% include "partials/cards/card-post.njk" %}  
 </div>
 <!-- /Posts -->

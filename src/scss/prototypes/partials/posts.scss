@@ -21,8 +21,6 @@
 
 .post-layouts-1 {
   .post {
-    &:first-child {
-      @extend %post-thumb-right;
-    }
+    @extend %post-thumb-right;
   }
 }

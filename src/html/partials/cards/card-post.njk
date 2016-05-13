@@ -2,7 +2,7 @@
   {% for post in posts %}
     <div class="post">
       <h3><a href="">{{ post.title }}</a></h3>
-      {% include "partials/cards/card-image.njk" %}
+      {{ images.image('360') }}
       <p>{{ post.text }}</p>
     </div>
   {% endfor %}
