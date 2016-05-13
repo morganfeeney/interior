@@ -6,7 +6,7 @@
 <section class="gallery">
   {% for galleryItem in gallery %}
     <div class="gallery-item">
-      {% include "partials/cards/card-image.njk" %}
+      {{ images.image('360') }}
     </div>
   {% endfor %}
 </section>
