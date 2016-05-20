@@ -3,7 +3,17 @@ html {
 }
 
 body {
-  font: 1.6rem/1.6 $font-family-base;
+  font: 1.6rem/1.6 $fs1;
   counter-reset: counter;
   text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: $vertical-space/3*2;
+  margin-bottom: $vertical-space / 2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $vertical-space / 4;
 }

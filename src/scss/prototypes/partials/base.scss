@@ -13,22 +13,23 @@ body {
   padding: 0;
 }
 
+// Base styles
 body {
   background: $brandbg-light;
   font-family: $fs1;
 }
 
 %grid-container {
+  // Align non-grid content with grid columns
   margin-left: -$grid-gutter;
   margin-right: -$grid-gutter;
 }
 
 .container {
-  //padding: 0 $grid-gutter;
-}
-
-.container-max-width {
-  max-width: 80rem;
+  // Overcome collapsing margins... somehow.
+  display: flex;
+  flex-flow: column;
+  max-width: $wrapper-width-large;
   padding: 0 $grid-gutter;
   margin: auto;
   background: $brand-color-2;

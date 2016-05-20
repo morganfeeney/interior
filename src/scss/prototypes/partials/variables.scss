@@ -6,12 +6,11 @@
 $bp1: 580px;
 $bp2: 700px;
 $cols: 12;
-$vspace: 3rem;
-$hspace: 1rem;
-$vspace: 1.17rem;
-$grid-gutter: $hspace;
-$m: $hspace;
-$wrapper-width-large: 80rem;
+$horizontal-space: 1rem;
+$vertical-space: 3rem;
+$grid-gutter: $horizontal-space;
+$m: $horizontal-space;
+$wrapper-width-large: 120rem;
 
 // Colours
 $brand-color-1: #FF7070;

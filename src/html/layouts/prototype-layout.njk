@@ -13,22 +13,22 @@
 	<body class="{{ body_classes }}">
 		<article>
 			<aside>
-				<div class="container-max-width">
+				<div class="container">
 					{% include "partials/components/nav-main.njk" %}
 				</div>
 			</aside>
-			<header id="main-header" class="container {{ main_header_classes }}">
-		    <div class="container-max-width">
+			<header id="main-header" class="container-full-width {{ main_header_classes }}">
+		    <div class="container">
 					{% block header %}{% endblock %}
 		    </div>
 			</header>
-			<section class="container">
-				<div class="container-max-width">
+			<section id="main-section" class="container-full-width {{ main_section_classes }}">
+				<div class="container">
 					{% block main %}{% endblock %}
 				</div>
 			</section>
-			<footer id="main-footer" class="container {{ main_footer_classes }}">
-				<div class="container-max-width">
+			<footer id="main-footer" class="container-full-width {{ main_footer_classes }}">
+				<div class="container">
 					{% block footer %}
 						{% include "partials/footer.njk" %}
 					{% endblock %}
