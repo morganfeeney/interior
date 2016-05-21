@@ -1,31 +1,30 @@
 {% set base_path = ".." %}
-{% set page_title = "Example work page" %}
+
 {% set page_description = "TBA" %}
 {% extends "layouts/prototype-layout.njk" %}
 
 {% import "../partials/cards/card-image.njk" as images %}
+{% import "../data-files/dummy-data.njk" as lipsum %}
 
 {% block header %}
-  <h1>
-    {{ test | dump }} {{ posts.title }}
-  </h1>
-
-  <p>There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...</p>
+  <h1>{{ lipsum.title_long }}</h1>
+  <p>{{ lipsum.paragraph_medium }}</p>
 {% endblock %}
 
 {% block main %}
-<h2>This sub title doesn't really exist</h2>
-<p>I enable businesses like yours to beat your competition by making you look more professional, &amp; placing you in front of your target audience. If this sounds like something you could benefit from <a href="#">get in touch</a>.</p>
-<h3>Web design</h3>
-<p>Websites are where it's at, let's face it. I can design and build websites in a variety of flavours and styles to suit all.</p>
-{% include "partials/cards/card-image.njk" %}
-<h3>Graphic design</h3>
-<p>I can design &amp; output print-ready artwork for you, all within deadline. Need printing too? No problem.</p>
-<h3>Seo services</h3>
-<p>Snake oil for sale, only joking. There's no point in a website that doesn't get found, I can ensure your website gets found on the internet.</p>
-<!-- Gallery -->
-{% set gallery = ["1","2","3","4","5"] %}
-{% include "partials/cards/card-gallery.njk" %}
-<!-- /Gallery -->
+  <h2>{{ lipsum.title_medium }}</h2>
+  <p>{{ lipsum.paragraph_short }} <a href="#">get in touch</a>.</p>
 
+  <h3>{{ lipsum.title_short }}</h3>
+  <p>{{ lipsum.paragraph_medium }}</p>
+
+{{ images.image() }}
+  <h3>Graphic design</h3>
+  <p>I can design &amp; output print-ready artwork for you, all within deadline. Need printing too? No problem.</p>
+  <h3>Seo services</h3>
+  <p>Snake oil for sale, only joking. There's no point in a website that doesn't get found, I can ensure your website gets found on the internet.</p>
+  <!-- Gallery -->
+  {% set gallery = ["1","2","3","4","5"] %}
+  {% include "partials/cards/card-gallery.njk" %}
+  <!-- /Gallery -->
 {% endblock %}
