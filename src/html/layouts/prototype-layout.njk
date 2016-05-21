@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{{ page_title }}</title>
+		<title>{{ page_title | capitalize | replace("-", " ") }}</title>
 		<meta name="description" content="{{ page_description }}">
 		<link rel="stylesheet" href="{{ base_path }}/css/prototypes/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,17 +17,17 @@
 					{% include "partials/components/nav-main.njk" %}
 				</div>
 			</aside>
-			<header id="main-header" class="container-full-width {{ main_header_classes }}">
+			<header id="main-header" class="container-outer {{ main_header_classes }}">
 		    <div class="container">
 					{% block header %}{% endblock %}
 		    </div>
 			</header>
-			<section id="main-section" class="container-full-width {{ main_section_classes }}">
+			<section id="main-section" class="container-outer {{ main_section_classes }}">
 				<div class="container">
 					{% block main %}{% endblock %}
 				</div>
 			</section>
-			<footer id="main-footer" class="container-full-width {{ main_footer_classes }}">
+			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}
 						{% include "partials/footer.njk" %}

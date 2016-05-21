@@ -73,8 +73,10 @@ module.exports = function(grunt) {
     paths: "src/html",
     preprocessData: function(data) {
       var page = require('path').basename(this.src[0], '.html');
+      var page_title = require('path').basename(this.src[0], '.html');
       var result = {
         page: page,
+        page_title: page_title,
         data: data
       };
       return result;
