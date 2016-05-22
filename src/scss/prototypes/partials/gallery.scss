@@ -9,6 +9,6 @@
     @include col(3, $fg: 0);
   }
   img {
-    display: block;
+    @extend %fluid-img;  
   }
 }
