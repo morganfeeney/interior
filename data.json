@@ -4,15 +4,30 @@
     "title" : "Home page"
     }],
     "posts" : [{
-        "title": "This title is the first one and it's a fair size",
-        "text": "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you."
-      },
-      {
-        "title": "Uuummmm, this is a tasty burger!",
-        "text": "Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero."
-        },
-      {
-        "title": "Is she dead, yes or no?",
-        "text": "My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there."
+      "title": "This title is the first one and it's a fair size",
+      "text": "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you."
+    },
+    {
+      "title": "Uuummmm, this is a tasty burger!",
+      "text": "Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero."
+    },
+    {
+      "title": "Is she dead, yes or no?",
+      "text": "My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there."
+    }],
+    "gallery" : [{
+      "id" : 1
+    },
+    {
+      "id" : 2
+    },
+    {
+      "id" : 3
+    },
+    {
+      "id" : 4
+    },
+    {
+      "id" : 5
     }]
 }

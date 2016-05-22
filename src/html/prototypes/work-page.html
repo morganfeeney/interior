@@ -7,8 +7,27 @@
 {% import "../data-files/dummy-data.njk" as lipsum %}
 
 {% block header %}
-  <h1>{{ lipsum.title_long }}</h1>
-  <p>{{ lipsum.paragraph_medium }}</p>
+  <h1>{{ lipsum.title_short }}</h1>
+  <p>{{ lipsum.paragraph_short }}</p>
+  <!-- Hero image -->
+  {{ images.image("1200x600","HERO IMAGE") }}
+  <!-- /Hero image -->
+  <div class="page-meta">
+    <p>22/05/2016</p>
+    <p>Category</p>
+    <p>Client</p>
+  </div>
+  <div class="disciplines">
+    <p>Design</p>
+    <p>Front-end development</p>
+    <p>CSS</p>
+  </div>
+  <div class="languages">
+    <p>Less</p>
+    <p>Nunjucks</p>
+    <p>CSS</p>
+    <p>HTML</p>
+  </div>
 {% endblock %}
 
 {% block main %}
@@ -18,13 +37,26 @@
   <h3>{{ lipsum.title_short }}</h3>
   <p>{{ lipsum.paragraph_medium }}</p>
 
-{{ images.image() }}
-  <h3>Graphic design</h3>
-  <p>I can design &amp; output print-ready artwork for you, all within deadline. Need printing too? No problem.</p>
-  <h3>Seo services</h3>
-  <p>Snake oil for sale, only joking. There's no point in a website that doesn't get found, I can ensure your website gets found on the internet.</p>
   <!-- Gallery -->
-  {% set gallery = ["1","2","3","4","5"] %}
   {% include "partials/cards/card-gallery.njk" %}
   <!-- /Gallery -->
+
+  <blockquote>
+    <p>
+      {{ lipsum.title_long }}
+    </p>
+  </blockquote>
+
+  <h3>{{ lipsum.title_long }}</h3>
+  <p>{{ lipsum.paragraph_medium }}</p>
+
+  <h4>{{ lipsum.title_short }}</h4>
+  <p>{{ lipsum.paragraph_long }}</p>
+
+  <nav>
+    <a href="#">Prev</a>
+    <a href="#">Next</a>
+    <a href="#">View site</a>
+  </nav>
+
 {% endblock %}
