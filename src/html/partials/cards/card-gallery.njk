@@ -4,9 +4,9 @@
     The default setting with specific overrides.
  -->
 <section class="gallery">
-  {% for galleryItem in gallery %}
+  {% for gallery_item in data.gallery %}
     <div class="gallery-item">
-      {{ images.image('360') }}
+      {{ images.image() }}
     </div>
   {% endfor %}
 </section>

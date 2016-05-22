@@ -1,21 +1,12 @@
-%img {
+%fluid-img {
   max-width: 100%;
   height: auto;
 }
-@mixin img {
+@mixin fluid-img {
   max-width: 100%;
   height: auto;
-}
-%test {
-  background: #000;
-}
-@mixin test {
-  background: red;
 }
 .container > img {
   align-self: center;
-  //@extend %test;
-  @include test;
-  //@extend %img;
-  @include img;
+  @extend %fluid-img;
 }
