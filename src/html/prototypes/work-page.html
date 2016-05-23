@@ -4,11 +4,10 @@
 {% extends "layouts/prototype-layout.njk" %}
 
 {% import "../partials/cards/card-image.njk" as images %}
-{% import "../data-files/dummy-data.njk" as lipsum %}
 
 {% block header %}
-  <h1>{{ lipsum.title_short }}</h1>
-  <p>{{ lipsum.paragraph_short }}</p>
+  <h1>{{ data.dummy_text.title_short }}</h1>
+  <p>{{ data.dummy_text.paragraph_short }}</p>
   <!-- Hero image -->
   {{ images.image("1200x600","HERO IMAGE") }}
   <!-- /Hero image -->
@@ -31,11 +30,11 @@
 {% endblock %}
 
 {% block main %}
-  <h2>{{ lipsum.title_medium }}</h2>
-  <p>{{ lipsum.paragraph_short }} <a href="#">get in touch</a>.</p>
+  <h2>{{ data.dummy_text.title_medium }}</h2>
+  <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
 
-  <h3>{{ lipsum.title_short }}</h3>
-  <p>{{ lipsum.paragraph_medium }}</p>
+  <h3>{{ data.dummy_text.title_short }}</h3>
+  <p>{{ data.dummy_text.paragraph_medium }}</p>
 
   <!-- Gallery -->
   {% include "partials/cards/card-gallery.njk" %}
@@ -43,15 +42,15 @@
 
   <blockquote>
     <p>
-      {{ lipsum.title_long }}
+      {{ data.dummy_text.title_long }}
     </p>
   </blockquote>
 
-  <h3>{{ lipsum.title_long }}</h3>
-  <p>{{ lipsum.paragraph_medium }}</p>
+  <h3>{{ data.dummy_text.title_long }}</h3>
+  <p>{{ data.dummy_text.paragraph_medium }}</p>
 
-  <h4>{{ lipsum.title_short }}</h4>
-  <p>{{ lipsum.paragraph_long }}</p>
+  <h4>{{ data.dummy_text.title_short }}</h4>
+  <p>{{ data.dummy_text.paragraph_long }}</p>
 
   <nav>
     <a href="#">Prev</a>
