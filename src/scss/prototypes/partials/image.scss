@@ -10,3 +10,10 @@
   align-self: center;
   @extend %fluid-img;
 }
+
+.image-hero {
+  margin: $vertical-space 0 0;
+  figcaption {
+    margin-bottom: $vertical-space;
+  }
+}
