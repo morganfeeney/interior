@@ -8,14 +8,15 @@
 }
 
 html,
-body {
+body,
+figure {
   margin: 0;
   padding: 0;
 }
 
 // Base styles
 body {
-  background: $brandbg-light;
+  //background: $brandbg-light;
   font-family: $fs1;
 }
 

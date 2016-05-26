@@ -9,7 +9,7 @@
   <h1>{{ data.dummy_text.title_short }}</h1>
   <p>{{ data.dummy_text.paragraph_short }}</p>
   <!-- Hero image -->
-  {{ images.image("1200x600","HERO IMAGE") }}
+  {{ images.image_figure_placeholder(image_size="1200x600",image_text="HERO IMAGE",image_class="image-hero",figure_class="figure-hero",figure_caption="Caption") }}
   <!-- /Hero image -->
   <div class="page-meta">
     <p>22/05/2016</p>
@@ -30,12 +30,13 @@
 {% endblock %}
 
 {% block main %}
-  <h2>{{ data.dummy_text.title_medium }}</h2>
-  <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+  <div class="content">
+    <h2>{{ data.dummy_text.title_medium }}</h2>
+    <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
 
-  <h3>{{ data.dummy_text.title_short }}</h3>
-  <p>{{ data.dummy_text.paragraph_medium }}</p>
-
+    <h3>{{ data.dummy_text.title_short }}</h3>
+    <p>{{ data.dummy_text.paragraph_medium }}</p>
+  </div>
   <!-- Gallery -->
   {% include "partials/cards/card-gallery.njk" %}
   <!-- /Gallery -->
@@ -46,12 +47,13 @@
     </p>
   </blockquote>
 
-  <h3>{{ data.dummy_text.title_long }}</h3>
-  <p>{{ data.dummy_text.paragraph_medium }}</p>
+  <div class="content">
+    <h3>{{ data.dummy_text.title_long }}</h3>
+    <p>{{ data.dummy_text.paragraph_medium }}</p>
 
-  <h4>{{ data.dummy_text.title_short }}</h4>
-  <p>{{ data.dummy_text.paragraph_long }}</p>
-
+    <h4>{{ data.dummy_text.title_short }}</h4>
+    <p>{{ data.dummy_text.paragraph_long }}</p>
+  </div>
   <nav>
     <a href="#">Prev</a>
     <a href="#">Next</a>
