@@ -1,14 +1,15 @@
 .gallery {
   display: flex;
   flex-flow: row wrap;
-  @extend %grid-container;
+  //@extend %grid-container;
+  @extend %container;
 }
 .gallery-item {
-  @include col(4, $fg: 0);
+  @include col(4);
   @media(min-width: $bp2) {
-    @include col(3, $fg: 0);
+    @include col(3);
   }
   img {
-    @extend %fluid-img;  
+    @extend %fluid-img;
   }
 }

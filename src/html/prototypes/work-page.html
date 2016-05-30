@@ -11,26 +11,28 @@
   <!-- Hero image -->
   {{ images.image_figure_placeholder(image_size="1200x600",image_text="HERO IMAGE",image_class="image-hero",figure_class="figure-hero",figure_caption="Caption") }}
   <!-- /Hero image -->
-  <div class="page-meta">
-    <p>22/05/2016</p>
-    <p>Category</p>
-    <p>Client</p>
-  </div>
-  <div class="disciplines">
-    <p>Design</p>
-    <p>Front-end development</p>
-    <p>CSS</p>
-  </div>
-  <div class="languages">
-    <p>Less</p>
-    <p>Nunjucks</p>
-    <p>CSS</p>
-    <p>HTML</p>
-  </div>
 {% endblock %}
 
 {% block main %}
-  <div class="content">
+  <div class="content-sub">
+    <div class="page-meta">
+      <p>22/05/2016</p>
+      <p>Category</p>
+      <p>Client</p>
+    </div>
+    <div class="disciplines">
+      <p>Design</p>
+      <p>Front-end development</p>
+      <p>CSS</p>
+    </div>
+    <div class="languages">
+      <p>Less</p>
+      <p>Nunjucks</p>
+      <p>CSS</p>
+      <p>HTML</p>
+    </div>
+  </div>
+  <div class="content-main">
     <h2>{{ data.dummy_text.title_medium }}</h2>
     <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
 
@@ -47,7 +49,7 @@
     </p>
   </blockquote>
 
-  <div class="content">
+  <div class="content-main">
     <h3>{{ data.dummy_text.title_long }}</h3>
     <p>{{ data.dummy_text.paragraph_medium }}</p>
 

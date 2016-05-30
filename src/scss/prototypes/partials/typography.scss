@@ -35,6 +35,9 @@ h1 + p {
   font-size: 2.5rem;
 }
 
-.content {
+.content-main {
   @include col(8);
+}
+.content-sub {
+  @include col(4);
 }

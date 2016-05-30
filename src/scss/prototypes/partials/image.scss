@@ -13,6 +13,7 @@
 
 .image-hero {
   margin: $vertical-space 0 0;
+  @extend %fluid-img;
   figcaption {
     margin-bottom: $vertical-space;
   }

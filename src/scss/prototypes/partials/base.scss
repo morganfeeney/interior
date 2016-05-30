@@ -14,26 +14,29 @@ figure {
   padding: 0;
 }
 
-// Base styles
-body {
-  //background: $brandbg-light;
-  font-family: $fs1;
-}
+// HOPEFULLY THIS CAN BE A THING OF THE PAST SOOOOON,
+// Commenting out until further notice.
+//
+// // Base styles
+// %grid-container {
+//   // Align non-grid content with grid columns
+//   margin-left: -$grid-gutter;
+//   margin-right: -$grid-gutter;
+// }
 
-%grid-container {
-  // Align non-grid content with grid columns
-  margin-left: -$grid-gutter;
-  margin-right: -$grid-gutter;
+%container {
+  // Overcome collapsing margins... somehow.
+  display: flex;
+  flex-flow: row wrap;
+  max-width: $wrapper-width-large;
+  margin: auto;
+  background: $brand-color-2;
+  justify-content: space-between;
 }
 
 .container {
-  // Overcome collapsing margins... somehow.
-  display: flex;
-  flex-flow: column;
-  max-width: $wrapper-width-large;
+  @extend %container;
   padding: 0 $grid-gutter;
-  margin: auto;
-  background: $brand-color-2;
 }
 
 a {
