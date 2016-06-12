@@ -1,13 +1,3 @@
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font: 1.6rem/1.6 $fs2;
-  counter-reset: counter;
-  text-size-adjust: 100%;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin-top: $vertical-space/3*2;
   margin-bottom: $vertical-space / 2;
@@ -35,9 +25,9 @@ h1 + p {
   font-size: 2.5rem;
 }
 
-.content-main {
-  @include col(8);
-}
+.content-main,
 .content-sub {
-  @include col(4);
+  > :first-child {
+    margin-top: 0;
+  }
 }

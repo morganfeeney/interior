@@ -1,0 +1,6 @@
+.content-main {
+  @include col(8);
+}
+.content-sub {
+  @include col(4);
+}

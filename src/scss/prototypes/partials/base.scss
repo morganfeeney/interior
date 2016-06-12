@@ -3,8 +3,20 @@
    ============================================================== */
 
 // Reset
-*, *:before, *:after {
+html {
   box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  // Set a base font size that allows px-like units on elements.
+  font: 1.6rem/1.6 $fs2;
+  // Control resizing of text whenswitching orientation.
+  text-size-adjust: 100%;
 }
 
 html,
@@ -13,16 +25,6 @@ figure {
   margin: 0;
   padding: 0;
 }
-
-// HOPEFULLY THIS CAN BE A THING OF THE PAST SOOOOON,
-// Commenting out until further notice.
-//
-// // Base styles
-// %grid-container {
-//   // Align non-grid content with grid columns
-//   margin-left: -$grid-gutter;
-//   margin-right: -$grid-gutter;
-// }
 
 %container {
   // Overcome collapsing margins... somehow.
