@@ -9,7 +9,8 @@
   <h1>{{ data.dummy_text.title_short }}</h1>
   <p>{{ data.dummy_text.paragraph_short }}</p>
   <!-- Hero image -->
-  {{ images.image_figure_placeholder(image_size="1200x600",image_text="HERO IMAGE",image_class="image-hero",figure_class="figure-hero",figure_caption="Caption") }}
+  {{ images.image_figure_placeholder(size="1200x600",text="HERO IMAGE",image_class="image-hero",figure_class="figure-hero",caption="Caption") }}
+  {{ images.image_figure_placeholder() }}
   <!-- /Hero image -->
 {% endblock %}
 
