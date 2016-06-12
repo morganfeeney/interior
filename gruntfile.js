@@ -6,9 +6,10 @@ module.exports = function(grunt) {
   sass: {
    interior: {
     options: {
-     style: "compressed",
-     sourcemap: "inline",
-     precision: 4
+      outputStyle: "expanded",
+      sourceMapContents: true,
+      sourceMap: true,
+      precision: 4
     },
     files: {
      "css/style.css": "src/scss/style.scss",
