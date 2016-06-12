@@ -6,3 +6,7 @@ config.codekit
 .sublime-project
 *style.css
 *style.css.map
+css/*style.css,
+css/*style.css.map,
+examples/*.html,
+prototypes/*.html
