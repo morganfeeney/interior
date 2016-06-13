@@ -7,7 +7,7 @@ $bp1: 580px;
 $bp2: 700px;
 $cols: 12;
 $horizontal-space: 1rem;
-$vertical-space: 3rem;
+$vertical-space: 4rem;
 $grid-gutter: $horizontal-space;
 $m: $horizontal-space;
 $wrapper-width-large: 120rem;
@@ -17,6 +17,7 @@ $brand-color-1: #FF7070;
 $brand-color-2: #FFF;
 $brand-color-3: #555;
 $brand-color-4: #000;
+
 $brandbg: $brand-color-1;
 $lightbg: $brand-color-2;
 $nobg: transparent;
@@ -31,3 +32,11 @@ $font-color-4: $brand-color-4;
 // Fonts
 $fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//** Vertical rythm
+//
+
+// Rivers
+$vertical-space-small: $vertical-space / 4;
+
+// Islands

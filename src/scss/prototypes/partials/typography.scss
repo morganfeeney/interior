@@ -1,15 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  margin-top: $vertical-space/3*2;
-  margin-bottom: $vertical-space / 2;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: $vertical-space / 4;
-}
-
-.page-meta, .disciplines, .languages {
-  display: inline-flex;
+  margin-bottom: $vertical-space-small;
 }
 
 h1 {
@@ -18,8 +8,20 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 4rem;
+  margin-top: $vertical-space;
 }
+
+p {
+  margin-top: 0;
+  margin-bottom: $vertical-space-small;
+}
+
+.page-meta,
+.disciplines,
+.languages {
+  display: inline-flex;
+}
+
 
 h1 + p {
   font-size: 2.5rem;

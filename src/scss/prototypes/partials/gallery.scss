@@ -1,8 +1,9 @@
 .gallery {
   display: flex;
   flex-flow: row wrap;
-  //@extend %grid-container;
   @extend %container;
+  margin-top: $vertical-space;
+  margin-bottom: $vertical-space;
 }
 .gallery-item {
   @include col(4);
