@@ -12,18 +12,28 @@ $grid-gutter: $horizontal-space;
 $m: $horizontal-space;
 $wrapper-width-large: 120rem;
 
-// Colours
+//** Colours
+//
+// Brand colours (base colours)
 $brand-color-1: #FF7070;
 $brand-color-2: #FFF;
 $brand-color-3: #555;
 $brand-color-4: #000;
 
+// Colour variants
 $brandbg: $brand-color-1;
 $lightbg: $brand-color-2;
 $nobg: transparent;
 $brandbg-light: lighten($brandbg, 20);
 $darkbg: $brand-color-3;
 
+// Grayscale
+$base-gray: #000;
+$dark-gray: lighten($base-gray, 10%);
+$mid-gray: lighten($base-gray, 50%);
+$light-gray: lighten($base-gray, 90%);
+
+// Font colours
 $font-color-1: $brand-color-1;
 $font-color-2: $brand-color-2;
 $font-color-3: $brand-color-3;
