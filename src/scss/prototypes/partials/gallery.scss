@@ -1,3 +1,7 @@
+/* ==============================================================
+   Gallery
+   ============================================================== */
+
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -6,7 +10,7 @@
   margin-bottom: $vertical-space;
 }
 .gallery-item {
-  @include col(4);
+  @include col(4, $square: true);
   @media(min-width: $bp2) {
     @include col(3);
   }

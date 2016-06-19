@@ -5,7 +5,11 @@
 @mixin col(
   $col,
   $width: 100% / $cols * $col,
-  $gutter: $grid-gutter
+  $gutter: $grid-gutter,
+  $square: false
 ){
   width: calc(#{$width} - #{$gutter});
+  @if $square == true {
+    margin-bottom: $gutter+($gutter/$col);
+  }
 }

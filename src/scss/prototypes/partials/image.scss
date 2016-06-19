@@ -1,6 +1,11 @@
+/* ==============================================================
+   Image
+   ============================================================== */
+
 %fluid-img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 @mixin fluid-img {
   max-width: 100%;
@@ -21,4 +26,9 @@
 
 figure {
   margin-bottom: $vertical-space;
+}
+
+figcaption {
+  background: $light-gray;
+  padding: inherit;
 }
