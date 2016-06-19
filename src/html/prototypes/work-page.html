@@ -14,9 +14,8 @@
     text="HERO IMAGE",
     image_class="image-hero",
     figure_class="figure-hero",
-    caption="Caption for this dummy image.") 
+    caption="Caption for this dummy image.")
   }}
-  {{ images.image_figure_placeholder() }}
   <!-- /Hero image -->
 {% endblock %}
 
@@ -42,6 +41,7 @@
   <div class="content-main">
     <h2>{{ data.dummy_text.title_medium }}</h2>
     <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+    {{ images.image_figure_placeholder() }}
 
     <h3>{{ data.dummy_text.title_short }}</h3>
     <p>{{ data.dummy_text.paragraph_medium }}</p>
