@@ -4,12 +4,12 @@
 
 @mixin col(
   $col,
-  $width: 100% / $cols * $col,
-  $gutter: $grid-gutter,
-  $square: false
+  $column-width: 100% / $cols * $col
 ){
-  width: calc(#{$width} - #{$gutter});
-  @if $square == true {
-    margin-bottom: $gutter+($gutter/$col);
-  }
+  width: calc(#{$column-width} - #{$grid-gutter});
+}
+
+@mixin gallery-item($col){
+  @include col($col);
+  margin-bottom: 1/($cols/$col)+$grid-gutter;
 }
