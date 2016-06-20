@@ -11,5 +11,5 @@
 
 @mixin gallery-item($col){
   @include col($col);
-  margin-bottom: 1/($cols/$col)+$grid-gutter;
+  margin-bottom: $grid-gutter/($cols/($col)-1)+$grid-gutter;
 }
