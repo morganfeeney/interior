@@ -2,14 +2,24 @@
    Column mixin
    ============================================================== */
 
-@mixin col(
-  $col,
-  $column-width: 100% / $cols * $col
-){
-  width: calc(#{$column-width} - #{$grid-gutter});
-}
-
+// @mixin col(
+//   $col,
+//   $column-width: 100% / $cols * $col
+// ){
+//   width: calc(#{$column-width} - #{$grid-gutter});
+// }
+//
 @mixin gallery-item($col){
   @include col($col);
-  margin-bottom: $grid-gutter/($cols/($col)-1)+$grid-gutter;
+  //margin-bottom: $grid-gutter/($cols/($col)-1)+$grid-gutter;
+}
+
+@mixin col(
+  $col,
+  $g: $cols*$cols/100,
+  $width: 100% / $cols * $col,
+  $gutter: ($cols * $grid-gutter) * ($cols - $col)/100/$g
+){
+  width: calc(#{$width} - #{$gutter});
+  margin-bottom: $grid-gutter;
 }
