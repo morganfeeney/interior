@@ -10,9 +10,10 @@
   margin-bottom: $vertical-space;
 }
 .gallery-item {
-  @include gallery-item(4);
+  @include col(4);
+  margin-bottom: $grid-gutter;
   @media(min-width: $bp2) {
-    @include gallery-item(3);
+    @include col(3);
   }
   img {
     @extend %fluid-img;

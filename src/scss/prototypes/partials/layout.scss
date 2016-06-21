@@ -1,6 +1,12 @@
 .content-main {
-  @include col(8);
+  @include col(12);
+  @media(min-width: $bp1) {
+    @include col(8);
+  }
 }
 .content-sub {
-  @include col(4);
+  @include col(12);
+  @media(min-width: $bp1) {
+    @include col(4);
+  }
 }
