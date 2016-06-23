@@ -17,27 +17,27 @@
     caption="Caption for this dummy image.")
   }}
   <!-- /Hero image -->
+  <dl class="dl-horizontal dl-page-meta">
+    <dt>Date</dt><dd>22/05/2016</dd>
+    <dt>Category</dt><dd>Design</dd>
+    <dt>Client</dt><dd>Moi</dd>
+  </dl>
+  <dl class="dl-horizontal dl-disciplines">
+    <dt>Disciplines</dt>
+    <dd>Design</dd>
+    <dd>Front-end development</dd>
+    <dd>CSS</dd>
+  </dl>
+  <dl class="dl-horizontal dl-languages">
+    <dt>Languages</dt>
+    <dd>Less</dd>
+    <dd>Nunjucks</dd>
+    <dd>CSS</dd>
+    <dd>HTML</dd>
+  </dl>
 {% endblock %}
 
 {% block main %}
-  <div class="content-sub">
-    <div class="page-meta">
-      <p>22/05/2016</p>
-      <p>Category</p>
-      <p>Client</p>
-    </div>
-    <div class="disciplines">
-      <p>Design</p>
-      <p>Front-end development</p>
-      <p>CSS</p>
-    </div>
-    <div class="languages">
-      <p>Less</p>
-      <p>Nunjucks</p>
-      <p>CSS</p>
-      <p>HTML</p>
-    </div>
-  </div>
   <div class="content-main">
     <h2>{{ data.dummy_text.title_medium }}</h2>
     <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
@@ -45,6 +45,9 @@
 
     <h3>{{ data.dummy_text.title_short }}</h3>
     <p>{{ data.dummy_text.paragraph_medium }}</p>
+  </div>
+  <div class="content-sub">
+
   </div>
   <!-- Gallery -->
   {% include "partials/cards/card-gallery.njk" %}
