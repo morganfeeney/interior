@@ -1,12 +1,34 @@
+/* ==============================================================
+   Layout
+   ============================================================== */
+
 .content-main {
   @include col(12);
   @media(min-width: $bp1) {
-    @include col(8);
+    @include col(7);
   }
 }
 .content-sub {
   @include col(12);
   @media(min-width: $bp1) {
     @include col(4);
+  }
+}
+.dl-horizontal {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  @include col(12);
+  @media(min-width: $bp2) {
+    @include col(4);
+  }
+  dt {
+    @include col(4);
+    font-weight: bold;
+  }
+  dd {
+    @include col(8);
+    margin-left: auto;
   }
 }
