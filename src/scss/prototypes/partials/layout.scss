@@ -24,11 +24,30 @@
     @include col(4);
   }
   dt {
-    @include col(4);
+    @include text-col(4, $max: true);
     font-weight: bold;
+    margin-right: auto;
+    padding-right: 1rem;
   }
   dd {
-    @include col(8);
-    margin-left: auto;
+    @include text-col(8);
+    margin: 0;
   }
+}
+
+.dl-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  @include col(12);
+  @media(min-width: $bp2) {
+    @include col(4);
+  }
+  .dl-horizontal {
+    @include col(12);
+  }
+}
+dl {
+  margin: 0 0 1rem;
 }

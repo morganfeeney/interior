@@ -10,3 +10,17 @@
 ){
   width: calc(#{$width} - #{$gutter});
 }
+
+// For Definition lists only at the time of writing
+@mixin text-col(
+  $col,
+  $width: 100% / $cols * $col,
+  $max: false
+){
+  @if $max != false {
+    min-width: #{$width};
+  } @else {
+    min-width: #{$width};
+    max-width: #{$width};
+  }
+}
