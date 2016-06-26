@@ -1,6 +1,5 @@
 .posts {
-  //@extend %grid-container;
-  @extend %container;
+  @extend %flex-container;
 }
 .post {
   @include col(6);

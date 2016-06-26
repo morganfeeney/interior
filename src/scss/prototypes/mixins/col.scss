@@ -4,11 +4,10 @@
 
 @mixin col(
   $col,
-  $g: $cols*$cols/100,
   $width: 100% / $cols * $col,
-  $gutter: ($cols * $grid-gutter) * ($cols - $col)/100/$g
 ){
-  width: calc(#{$width} - #{$gutter});
+  width: calc(#{$width} - #{$grid-gutter});
+  margin: 0 $grid-gutter/2;
 }
 
 // For Definition lists only at the time of writing

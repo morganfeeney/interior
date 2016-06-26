@@ -27,18 +27,26 @@ figure {
 }
 
 %container {
-  // Overcome collapsing margins... somehow.
-  display: flex;
-  flex-flow: row wrap;
   max-width: $wrapper-width-large;
   margin: auto;
   background: $brand-color-2;
-  justify-content: space-between;
+}
+
+%flex-container {
+  // Overcome collapsing margins... somehow.
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .container {
   @extend %container;
   padding: 0 $grid-gutter;
+}
+
+.grid {
+  @extend %flex-container;
+  margin-left: -$horizontal-space-small;
+  margin-right: -$horizontal-space-small;
 }
 
 a {

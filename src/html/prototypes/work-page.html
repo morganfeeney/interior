@@ -17,7 +17,7 @@
     caption="Caption for this dummy image.")
   }}
   <!-- /Hero image -->
-  <div class="dl-wrapper">
+  <div class="grid">
     <dl class="dl-horizontal dl-page-meta">
       <dt>Date</dt><dd>22/05/2016</dd>
     </dl>
@@ -27,7 +27,6 @@
     <dl class="dl-horizontal dl-page-meta">
       <dt>Client</dt><dd>Moi</dd>
     </dl>
-  </div>
   <dl class="dl-horizontal dl-disciplines">
     <dt>Disciplines</dt>
     <dd>Design</dd>
@@ -41,19 +40,22 @@
     <dd>CSS</dd>
     <dd>HTML</dd>
   </dl>
+</div>
 {% endblock %}
 
 {% block main %}
-  <div class="content-main">
-    <h2>{{ data.dummy_text.title_medium }}</h2>
-    <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-    {{ images.image_figure_placeholder() }}
+  <div class="grid">
+    <div class="content-main">
+      <h2>{{ data.dummy_text.title_medium }}</h2>
+      <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+      {{ images.image_figure_placeholder() }}
 
-    <h3>{{ data.dummy_text.title_short }}</h3>
-    <p>{{ data.dummy_text.paragraph_medium }}</p>
-  </div>
-  <div class="content-sub">
+      <h3>{{ data.dummy_text.title_short }}</h3>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
+    </div>
+    <div class="content-sub">
 
+    </div>
   </div>
   <!-- Gallery -->
   {% include "partials/cards/card-gallery.njk" %}
@@ -64,18 +66,19 @@
       {{ data.dummy_text.title_long }}
     </p>
   </blockquote>
+  <div class="grid">
+    <div class="content-main">
+      <h3>{{ data.dummy_text.title_long }}</h3>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
 
-  <div class="content-main">
-    <h3>{{ data.dummy_text.title_long }}</h3>
-    <p>{{ data.dummy_text.paragraph_medium }}</p>
-
-    <h4>{{ data.dummy_text.title_short }}</h4>
-    <p>{{ data.dummy_text.paragraph_long }}</p>
+      <h4>{{ data.dummy_text.title_short }}</h4>
+      <p>{{ data.dummy_text.paragraph_long }}</p>
+    </div>
+    <nav class="posts-nav">
+      <a href="#">Prev</a>
+      <a href="#">Next</a>
+      <a href="#">View site</a>
+    </nav>
   </div>
-  <nav class="posts-nav">
-    <a href="#">Prev</a>
-    <a href="#">Next</a>
-    <a href="#">View site</a>
-  </nav>
 
 {% endblock %}

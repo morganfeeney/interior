@@ -7,10 +7,12 @@ $bp1: 580px;
 $bp2: 700px;
 $cols: 12;
 $horizontal-space: 3rem;
+$horizontal-space-small: $horizontal-space/2;
 $vertical-space: 4rem;
 $grid-gutter: $horizontal-space;
 $m: $horizontal-space;
 $wrapper-width-large: 120rem;
+$g: $cols*$cols/100;
 
 //** Colours
 //

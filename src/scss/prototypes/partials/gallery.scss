@@ -3,9 +3,7 @@
    ============================================================== */
 
 .gallery {
-  display: flex;
-  flex-flow: row wrap;
-  @extend %container;
+  @extend .grid;
   margin-top: $vertical-space;
   margin-bottom: $vertical-space;
 }
