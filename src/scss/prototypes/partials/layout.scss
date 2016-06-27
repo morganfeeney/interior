@@ -34,7 +34,10 @@
   }
   dd {
     @include text-col(8);
-    margin: 0;
+    margin: 0 0 .75rem;
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 

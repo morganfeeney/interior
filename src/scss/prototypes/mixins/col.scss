@@ -11,7 +11,7 @@
   margin-right: $grid-gutter/2;
 }
 
-// For Definition lists only at the time of writing
+// For Description lists only at the time of writing
 @mixin text-col(
   $col,
   $width: 100% / $cols * $col,
