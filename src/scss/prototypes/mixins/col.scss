@@ -4,7 +4,7 @@
 
 @mixin col(
   $col,
-  $width: 100% / $cols * $col,
+  $width: 100% / $cols * $col
 ){
   width: calc(#{$width} - #{$grid-gutter});
   margin: 0 $grid-gutter/2;
@@ -14,12 +14,11 @@
 @mixin text-col(
   $col,
   $width: 100% / $cols * $col,
-  $max: false
+  $mw: false
 ){
-  @if $max != false {
+  @if $mw == true {
     min-width: #{$width};
   } @else {
-    min-width: #{$width};
-    max-width: #{$width};
+    width: #{$width};
   }
 }
