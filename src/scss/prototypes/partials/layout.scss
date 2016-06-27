@@ -20,6 +20,9 @@
   justify-content: flex-end;
   align-content: flex-start;
   @include col(12);
+  &:last-child {
+    margin-bottom: $vertical-space;
+  }
   @media(min-width: $bp2) {
     @include col(4);
   }
@@ -35,19 +38,7 @@
   }
 }
 
-.dl-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-content: flex-start;
-  @include col(12);
-  @media(min-width: $bp2) {
-    @include col(4);
-  }
-  .dl-horizontal {
-    @include col(12);
-  }
-}
 dl {
-  margin: 0 0 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
