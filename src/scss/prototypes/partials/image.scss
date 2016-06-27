@@ -16,16 +16,4 @@ img {
 
 .image-hero {
   @extend %fluid-img;
-  figcaption {
-    margin-bottom: $vertical-space;
-  }
-}
-
-figure {
-  margin-bottom: $vertical-space;
-}
-
-figcaption {
-  background: $light-gray;
-  padding: inherit;
 }

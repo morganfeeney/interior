@@ -37,3 +37,16 @@ h1 + p {
 blockquote > p {
   margin: 0;
 }
+
+
+figure {
+  margin-bottom: $vertical-space;
+}
+
+figcaption {
+  background: $light-gray;
+  padding: inherit;
+  font-style: italic;
+  font-size: 80%;
+  padding: $vertical-space-small $horizontal-space-small;
+}
