@@ -21,7 +21,7 @@
 {% endblock %}
 
 {% block main %}
-  <div class="grid">
+  <div class="grid grid-main">
     <div class="content-main">
       <h2>{{ data.dummy_text.title_medium }}</h2>
       <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
@@ -68,7 +68,7 @@
   {% include "partials/cards/card-gallery.njk" %}
   <!-- /Gallery -->
 
-  <div class="grid">
+  <div class="grid grid-main">
     <div class="content-main">
       <h3>{{ data.dummy_text.title_long }}</h3>
       <p>{{ data.dummy_text.paragraph_medium }}</p>
@@ -86,6 +86,10 @@
         </p>
       </blockquote>
       <p>{{ data.dummy_text.paragraph_medium }}</p>
+    </div>
+    <div class="content-sub">
+      <!--  TO DO Make posts partial into a macro -->
+      {% include "partials/cards/card-post.njk" %}
     </div>
     <nav class="posts-nav">
       <a href="#">Prev</a>

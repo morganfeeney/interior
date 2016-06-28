@@ -2,29 +2,54 @@
    Layout
    ============================================================== */
 
+ %container {
+   max-width: $wrapper-width-large;
+   margin: auto;
+   background: $brand-color-2;
+ }
+
+ %flex-container {
+   // Overcome collapsing margins... somehow.
+   display: flex;
+   flex-flow: row wrap;
+ }
+
+ .container {
+   @extend %container;
+   padding: 0 $grid-gutter;
+ }
+
+ .grid {
+   @extend %flex-container;
+   margin-left: -$horizontal-space-small;
+   margin-right: -$horizontal-space-small;
+ }
+
+ .grid-main {
+   justify-content: space-between;
+ }
+
 .content-main {
   @include col(12);
   @media(min-width: $bp1) {
     @include col(7);
   }
 }
+
 .content-sub {
   @include col(12);
   @media(min-width: $bp1) {
     @include col(4);
   }
 }
+
 .dl-horizontal {
-  display: flex;
-  flex-flow: row wrap;
+  @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
   @include col(12);
   &:last-child {
     margin-bottom: $vertical-space;
-  }
-  @media(min-width: $bp2) {
-    @include col(4);
   }
   dt {
     @include text-col(4, $min: true);

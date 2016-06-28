@@ -2,10 +2,10 @@
   @extend %flex-container;
 }
 .post {
-  @include col(6);
-  @media(min-width: $bp2) {
-    @include col(4);
-  }
+  // @include col(6);
+  // @media(min-width: $bp2) {
+  //   @include col(4);
+  // }
 }
 // Post layouts
 %post-thumb-right {
