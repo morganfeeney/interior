@@ -27,7 +27,7 @@
     @include col(4);
   }
   dt {
-    @include text-col(4, $mw: true);
+    @include text-col(4, $min: true);
     font-weight: bold;
     margin-right: auto;
     padding-right: 1rem;

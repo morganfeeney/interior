@@ -15,9 +15,9 @@
 @mixin text-col(
   $col,
   $width: 100% / $cols * $col,
-  $mw: false
+  $min: false
 ){
-  @if $mw == true {
+  @if $min == true {
     min-width: #{$width};
   } @else {
     width: #{$width};
