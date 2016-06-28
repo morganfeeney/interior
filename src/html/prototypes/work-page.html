@@ -17,37 +17,7 @@
     caption="Caption for this dummy image.")
   }}
   <!-- /Hero image -->
-  <div class="grid">
-    <dl class="dl-horizontal dl-page-meta">
-      <dt>Date</dt><dd>22/05/2016</dd>
-    </dl>
-    <dl class="dl-horizontal dl-page-meta">
-      <dt>Category</dt><dd>Design</dd>
-    </dl>
-    <dl class="dl-horizontal dl-page-meta">
-      <dt>Client</dt><dd>Moi</dd>
-    </dl>
-  <dl class="dl-horizontal dl-disciplines">
-    <dt>Disciplines</dt>
-    <dd>Design</dd>
-    <dd>Front-end development</dd>
-    <dd>CSS</dd>
-  </dl>
-  <dl class="dl-horizontal dl-languages">
-    <dt>Languages</dt>
-    <dd>Less</dd>
-    <dd>Nunjucks</dd>
-    <dd>CSS</dd>
-    <dd>HTML</dd>
-  </dl>
-  <dl class="dl-horizontal dl-test">
-    <dt>Really long title for test purposes</dt>
-    <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry</dd>
-    <dd>It is a long established fact that a reader will be distracted by the readable content</dd>
-    <dd>CSS</dd>
-    <dd>HTML</dd>
-  </dl>
-</div>
+
 {% endblock %}
 
 {% block main %}
@@ -61,25 +31,61 @@
       <p>{{ data.dummy_text.paragraph_medium }}</p>
     </div>
     <div class="content-sub">
-
+      <div class="grid">
+        <dl class="dl-horizontal dl-page-meta">
+          <dt>Date</dt><dd>22/05/2016</dd>
+        </dl>
+        <dl class="dl-horizontal dl-page-meta">
+          <dt>Category</dt><dd>Design</dd>
+        </dl>
+        <dl class="dl-horizontal dl-page-meta">
+          <dt>Client</dt><dd>Moi</dd>
+        </dl>
+        <dl class="dl-horizontal dl-disciplines">
+          <dt>Disciplines</dt>
+          <dd>Design</dd>
+          <dd>Front-end development</dd>
+          <dd>CSS</dd>
+        </dl>
+        <dl class="dl-horizontal dl-languages">
+          <dt>Languages</dt>
+          <dd>Less</dd>
+          <dd>Nunjucks</dd>
+          <dd>CSS</dd>
+          <dd>HTML</dd>
+        </dl>
+        <dl class="dl-horizontal dl-test">
+          <dt>Really long title for test purposes</dt>
+          <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry</dd>
+          <dd>It is a long established fact that a reader will be distracted by the readable content</dd>
+          <dd>CSS</dd>
+          <dd>HTML</dd>
+        </dl>
+      </div>
     </div>
   </div>
   <!-- Gallery -->
   {% include "partials/cards/card-gallery.njk" %}
   <!-- /Gallery -->
 
-  <blockquote>
-    <p>
-      {{ data.dummy_text.title_long }}
-    </p>
-  </blockquote>
   <div class="grid">
     <div class="content-main">
       <h3>{{ data.dummy_text.title_long }}</h3>
       <p>{{ data.dummy_text.paragraph_medium }}</p>
-
+      <blockquote>
+        <p>
+          {{ data.dummy_text.title_long }}
+        </p>
+      </blockquote>
       <h4>{{ data.dummy_text.title_short }}</h4>
       <p>{{ data.dummy_text.paragraph_long }}</p>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
+      <blockquote>
+        <p>
+          {{ data.dummy_text.title_long }}
+        </p>
+      </blockquote>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
     </div>
     <nav class="posts-nav">
       <a href="#">Prev</a>
