@@ -4,7 +4,7 @@
   <section class="gallery">
     {% for gallery_item in data_src %}
       <div class="gallery-item">
-        {{ images.image_placeholder() }}
+        {{ images.image_placeholder(size=image_size) }}
       </div>
     {% endfor %}
   </section>

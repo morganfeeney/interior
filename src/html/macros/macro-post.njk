@@ -1,0 +1,23 @@
+{% import "../macros/macro-image.njk" as images %}
+
+{% macro postsmacro(data_src="data.posts", post_title=title, image_size="360") %}
+  <section class="posts {{ posts_class }}">
+    {% for post in data_src %}
+      <div class="post">
+        <h3 class="post-title"><a href="">{{ post_title }}</a></h3>
+        {{ images.image_placeholder(size=image_size) }}
+        <p>{{ data.posts.text }}</p>
+      </div>
+    {% endfor %}
+  </section>
+{% endmacro %}
+
+<section class="posts">
+  {% for post in data.posts %}
+    <div class="post">
+      <h3><a href="">{{ post.title }}</a></h3>
+      {{ images.image_placeholder('360') }}
+      <p>{{ post.text }}</p>
+    </div>
+  {% endfor %}
+</section>

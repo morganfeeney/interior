@@ -1,9 +1,0 @@
-<section class="posts {{ posts_class }}">
-  {% for post in data.posts %}
-    <div class="post">
-      <h3 class="post-title"><a href="">{{ post.title }}</a></h3>
-      {{ images.image_placeholder('360') }}
-      <p>{{ post.text }}</p>
-    </div>
-  {% endfor %}
-</section>

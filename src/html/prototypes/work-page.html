@@ -6,6 +6,7 @@
 
 {% import "../macros/macro-image.njk" as images %}
 {% import "../macros/macro-gallery.njk" as galleries %}
+{% import "../macros/macro-post.njk" as post_feed %}
 
 {% block header %}
   <h1>{{ data.dummy_text.title_short }}</h1>
@@ -67,7 +68,7 @@
     </div>
   </div>
   <!-- Gallery -->
-  {{ galleries.gallery() }}
+  {{ galleries.gallery(image_size="300") }}
   <!-- /Gallery -->
 
   <div class="grid grid-main">
@@ -91,7 +92,7 @@
     </div>
     <div class="content-sub">
       <!--  TO DO Make posts partial into a macro -->
-      {% include "partials/cards/card-post.njk" %}
+      {{ post_feed.postsmacro(image_size="300x100") }}
     </div>
     <nav class="posts-nav">
       <a href="#">Prev</a>
