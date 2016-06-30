@@ -4,7 +4,8 @@
 {% set posts_class = "posts-feed" %}
 {% extends "layouts/prototype-layout.njk" %}
 
-{% import "../partials/cards/card-image.njk" as images %}
+{% import "../macros/macro-image.njk" as images %}
+{% import "../macros/macro-gallery.njk" as galleries %}
 
 {% block header %}
   <h1>{{ data.dummy_text.title_short }}</h1>
@@ -66,7 +67,7 @@
     </div>
   </div>
   <!-- Gallery -->
-  {% include "partials/cards/card-gallery.njk" %}
+  {{ galleries.gallery() }}
   <!-- /Gallery -->
 
   <div class="grid grid-main">
