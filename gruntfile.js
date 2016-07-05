@@ -71,17 +71,7 @@ module.exports = function(grunt) {
   nunjucks: {
    options: {
     data: grunt.file.readJSON("data.json"),
-    paths: "src/html",
-    preprocessData: function(data) {
-      var page = require('path').basename(this.src[0], '.html');
-      var page_title = page;
-      var result = {
-        page: page,
-        page_title: page_title,
-        data: data
-      };
-      return result;
-    }
+    paths: "src/html"
    },
    dev: {
     files: [{
