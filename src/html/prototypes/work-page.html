@@ -9,8 +9,8 @@
 {% import "../macros/macro-post.njk" as post_feed %}
 
 {% block header %}
-  <h1>{{ data.dummy_text.title_short }}</h1>
-  <p>{{ data.dummy_text.paragraph_short }}</p>
+  <h1>{{ dummy_text.title_short }}</h1>
+  <p>{{ dummy_text.paragraph_short }}</p>
   <!-- Hero image -->
   {{ images.image_figure_placeholder(
     size="1200x600",
@@ -26,12 +26,12 @@
 {% block main %}
   <div class="grid grid-main">
     <div class="content-main">
-      <h2>{{ data.dummy_text.title_medium }}</h2>
-      <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+      <h2>{{ dummy_text.title_medium }}</h2>
+      <p>{{ dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
       {{ images.image_figure_placeholder() }}
 
-      <h3>{{ data.dummy_text.title_short }}</h3>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
+      <h3>{{ dummy_text.title_short }}</h3>
+      <p>{{ dummy_text.paragraph_medium }}</p>
     </div>
     <div class="content-sub">
       <div class="grid">
@@ -73,26 +73,40 @@
 
   <div class="grid grid-main">
     <div class="content-main">
-      <h3>{{ data.dummy_text.title_long }}</h3>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
+      <h3>{{ dummy_text.title_long }}</h3>
+      <p>{{ dummy_text.paragraph_medium }}</p>
       <blockquote>
         <p>
-          {{ data.dummy_text.title_long }}
+          {{ dummy_text.title_long }}
         </p>
       </blockquote>
-      <h4>{{ data.dummy_text.title_short }}</h4>
-      <p>{{ data.dummy_text.paragraph_long }}</p>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
+      <h4>{{ dummy_text.title_short }}</h4>
+      <p>{{ dummy_text.paragraph_long }}</p>
+      <p>{{ dummy_text.paragraph_medium }}</p>
       <blockquote>
         <p>
-          {{ data.dummy_text.title_long }}
+          {{ dummy_text.title_long }}
         </p>
       </blockquote>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
+      <p>{{ dummy_text.paragraph_medium }}</p>
     </div>
     <div class="content-sub">
       <!--  TO DO Make posts partial into a macro -->
-      {{ post_feed.postsmacro(image_size="300x100") }}
+      <section class="posts {{ posts_class }}">
+        {% for post in posts %}
+          {{ post_feed.postsmacro(image_size="300x100", post_title=post.title, post_text=post.text) }}
+        {% endfor %}
+      </section>
+
+      <!-- <section class="posts {{ posts_class }}">
+        {% for post in data.posts %}
+          <div class="post">
+            <h3 class="post-title"><a href="">{{ post.title }}</a></h3>
+            {{ images.image_placeholder(size=210) }}
+            <p>{{ post.text }}</p>
+          </div>
+        {% endfor %}
+      </section> -->
     </div>
     <nav class="posts-nav">
       <a href="#">Prev</a>
