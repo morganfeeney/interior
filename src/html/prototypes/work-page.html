@@ -91,22 +91,7 @@
       <p>{{ dummy_text.paragraph_medium }}</p>
     </div>
     <div class="content-sub">
-      <!--  TO DO Make posts partial into a macro -->
-      <section class="posts {{ posts_class }}">
-        {% for post in posts %}
-          {{ post_feed.postsmacro(image_size="300x100", post_title=post.title, post_text=post.text) }}
-        {% endfor %}
-      </section>
-
-      <!-- <section class="posts {{ posts_class }}">
-        {% for post in data.posts %}
-          <div class="post">
-            <h3 class="post-title"><a href="">{{ post.title }}</a></h3>
-            {{ images.image_placeholder(size=210) }}
-            <p>{{ post.text }}</p>
-          </div>
-        {% endfor %}
-      </section> -->
+      {{ post_feed.postsmacro(image_size="300x100", posts) }}
     </div>
     <nav class="posts-nav">
       <a href="#">Prev</a>
