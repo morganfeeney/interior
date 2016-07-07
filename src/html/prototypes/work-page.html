@@ -1,12 +1,11 @@
 {% set base_path = ".." %}
 
 {% set page_description = "TBA" %}
-{% set posts_class = "posts-feed" %}
 {% extends "layouts/prototype-layout.njk" %}
 
 {% import "../macros/macro-image.njk" as images %}
 {% import "../macros/macro-gallery.njk" as galleries %}
-{% import "../macros/macro-post.njk" as post_feed %}
+{% import "../macros/macro-post.njk" as posts %}
 
 {% block header %}
   <h1>{{ dummy_text.title_short }}</h1>
@@ -91,7 +90,13 @@
       <p>{{ dummy_text.paragraph_medium }}</p>
     </div>
     <div class="content-sub">
-      {{ post_feed.postsmacro(image_size="300x100", posts) }}
+      {{
+        posts.posts_feed (
+          posts=post_feed,
+          posts_class="posts-feed",
+          image_size="350x150"
+        )
+      }}
     </div>
     <nav class="posts-nav">
       <a href="#">Prev</a>
