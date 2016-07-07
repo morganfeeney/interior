@@ -23,6 +23,11 @@
   }
 }
 
-.posts-feed .post-title {
-  margin-top: 0;
+.posts-feed {
+  .post-title {
+    margin-top: 0;
+  }
+  img {
+    margin-bottom: $vertical-space-small;
+  }
 }
