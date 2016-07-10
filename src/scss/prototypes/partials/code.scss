@@ -1,0 +1,39 @@
+// Code
+
+code, pre {
+	white-space: pre;
+}
+
+pre {
+	margin: 0 0 $vertical-space;
+	code {
+		background: rgba($brand-color-1, 0.1);
+		display: block;
+		//font-size: ($font-size-normal)-.1;
+		padding: 2rem;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	&:before {
+		content: attr(rel);
+    background: $brand-color-3;
+    display: block;
+    color: $brand-color-2;
+    padding: .6rem 2rem;
+    text-transform: uppercase;
+    font: normal 600 1.2rem $font-family-base;
+	}
+}
+
+pre {
+	tab-size: 4;
+}
+
+code {
+	background: rgba($brand-color-1, 0.1);
+}
+
+// Code block font styles
+.comment {
+	color: #999;
+}

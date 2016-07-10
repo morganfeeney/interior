@@ -1,0 +1,11 @@
+{% extends "../card-code.njk" %}
+{% set language="scss" %}
+{% block code %}@mixin col(
+  $col,
+  $width: 100% / $cols * $col
+){
+  width: calc(#{$width} - #{$grid-gutter});
+  margin-left: $grid-gutter/2;
+  margin-right: $grid-gutter/2;
+}
+{% endblock %}
