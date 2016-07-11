@@ -1,109 +1,119 @@
 {% set base_path = ".." %}
-
 {% set page_description = "TBA" %}
 {% extends "layouts/prototype-layout.njk" %}
 
-{% import "../macros/macro-image.njk" as images %}
-{% import "../macros/macro-gallery.njk" as galleries %}
-{% import "../macros/macro-post.njk" as posts %}
-
 {% block header %}
-  <h1>{{ dummy_text.title_short }}</h1>
-  <p>{{ dummy_text.paragraph_short }}</p>
-  <!-- Hero image -->
-  {{ images.image_figure_placeholder(
-    size="1200x600",
-    text="HERO IMAGE",
-    image_class="image-hero",
-    figure_class="figure-hero",
-    caption="Caption for this dummy image.")
-  }}
+  {% block header_intro %}
+    <h1>{{ dummy_text.title_short }}</h1>
+    <p>{{ dummy_text.paragraph_short }}</p>
+  {% endblock %}
+  {% block header_hero %}
+    <!-- Hero image -->
+    {{ images.image_figure_placeholder(
+      size="1200x600",
+      text="HERO IMAGE",
+      image_class="image-hero",
+      figure_class="figure-hero",
+      caption="Caption for this dummy image.")
+    }}
   <!-- /Hero image -->
-
+  {% endblock %}
 {% endblock %}
 
 {% block main %}
   <div class="grid grid-main">
-    <div class="content-main">
-      <h2>{{ dummy_text.title_medium }}</h2>
-      <p>{{ dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-      {{ images.image_figure_placeholder() }}
+    {% block content_main_1 %}
+      <div class="content-main">
+          <h2>{{ dummy_text.title_medium }}</h2>
+          <p>{{ dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+          {{ images.image_figure_placeholder() }}
 
-      <h3>{{ dummy_text.title_short }}</h3>
-      <p>{{ dummy_text.paragraph_medium }}</p>
-    </div>
-    <div class="content-sub">
-      <div class="grid">
-        <dl class="dl-horizontal dl-page-meta">
-          <dt>Date</dt><dd>22/05/2016</dd>
-        </dl>
-        <dl class="dl-horizontal dl-page-meta">
-          <dt>Category</dt><dd>Design</dd>
-        </dl>
-        <dl class="dl-horizontal dl-page-meta">
-          <dt>Client</dt><dd>Moi</dd>
-        </dl>
-        <dl class="dl-horizontal dl-disciplines">
-          <dt>Disciplines</dt>
-          <dd>Design</dd>
-          <dd>Front-end development</dd>
-          <dd>CSS</dd>
-        </dl>
-        <dl class="dl-horizontal dl-languages">
-          <dt>Languages</dt>
-          <dd>Less</dd>
-          <dd>Nunjucks</dd>
-          <dd>CSS</dd>
-          <dd>HTML</dd>
-        </dl>
-        <dl class="dl-horizontal dl-test">
-          <dt>Really long title for test purposes</dt>
-          <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry</dd>
-          <dd>It is a long established fact that a reader will be distracted by the readable content</dd>
-          <dd>CSS</dd>
-          <dd>HTML</dd>
-        </dl>
+          <h3>{{ dummy_text.title_short }}</h3>
+          <p>{{ dummy_text.paragraph_medium }}</p>
       </div>
-    </div>
+    {% endblock %}
+    {% block content_sub_1 %}
+      <div class="content-sub">
+        <div class="grid">
+          <dl class="dl-horizontal dl-page-meta">
+            <dt>Date</dt><dd>22/05/2016</dd>
+          </dl>
+          <dl class="dl-horizontal dl-page-meta">
+            <dt>Category</dt><dd>Design</dd>
+          </dl>
+          <dl class="dl-horizontal dl-page-meta">
+            <dt>Client</dt><dd>Moi</dd>
+          </dl>
+          <dl class="dl-horizontal dl-disciplines">
+            <dt>Disciplines</dt>
+            <dd>Design</dd>
+            <dd>Front-end development</dd>
+            <dd>CSS</dd>
+          </dl>
+          <dl class="dl-horizontal dl-languages">
+            <dt>Languages</dt>
+            <dd>Less</dd>
+            <dd>Nunjucks</dd>
+            <dd>CSS</dd>
+            <dd>HTML</dd>
+          </dl>
+          <dl class="dl-horizontal dl-test">
+            <dt>Really long title for test purposes</dt>
+            <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry</dd>
+            <dd>It is a long established fact that a reader will be distracted by the readable content</dd>
+            <dd>CSS</dd>
+            <dd>HTML</dd>
+          </dl>
+        </div>
+      </div>
+    {% endblock %}
   </div>
-  <!-- Gallery -->
-  {{ galleries.gallery(image_size="300") }}
-  <!-- /Gallery -->
+  {% block gallery %}
+    <!-- Gallery -->
+    {{ galleries.gallery(image_size="300") }}
+    <!-- /Gallery -->
+  {% endblock %}
 
   <div class="grid grid-main">
-    <div class="content-main">
-      <h3>{{ dummy_text.title_long }}</h3>
-      <p>{{ dummy_text.paragraph_medium }}</p>
-      <blockquote>
-        <p>
-          {{ dummy_text.title_long }}
-        </p>
-      </blockquote>
-      <h4>{{ dummy_text.title_short }}</h4>
-      <p>{{ dummy_text.paragraph_long }}</p>
-      {% include "../partials/cards/code/code-scss.njk" %}
-      <p>{{ dummy_text.paragraph_medium }}</p>
-      <blockquote>
-        <p>
-          {{ dummy_text.title_long }}
-        </p>
-      </blockquote>
-      <p>{{ dummy_text.paragraph_medium }}</p>
-    </div>
-    <div class="content-sub">
-      {{
-        posts.posts_feed (
-          posts=post_feed,
-          posts_class="posts-feed",
-          image_size="350x150"
-        )
-      }}
-    </div>
-    <nav class="posts-nav">
-      <a href="#">Prev</a>
-      <a href="#">Next</a>
-      <a href="#">View site</a>
-    </nav>
+    {% block content_main_2 %}
+      <div class="content-main">
+        <h3>{{ dummy_text.title_long }}</h3>
+        <p>{{ dummy_text.paragraph_medium }}</p>
+        <blockquote>
+          <p>
+            {{ dummy_text.title_long }}
+          </p>
+        </blockquote>
+        <h4>{{ dummy_text.title_short }}</h4>
+        <p>{{ dummy_text.paragraph_long }}</p>
+        {% include "../partials/cards/code/code-scss.njk" %}
+        <p>{{ dummy_text.paragraph_medium }}</p>
+        <blockquote>
+          <p>
+            {{ dummy_text.title_long }}
+          </p>
+        </blockquote>
+        <p>{{ dummy_text.paragraph_medium }}</p>
+      </div>
+    {% endblock %}
+    {% block content_sub_2 %}
+      <div class="content-sub">
+        {{
+          posts.posts_feed (
+            posts=post_feed,
+            posts_class="posts-feed",
+            image_size="350x150"
+          )
+        }}
+      </div>
+    {% endblock %}
+    {% block posts_nav %}
+      <nav class="posts-nav">
+        <a href="#">Prev</a>
+        <a href="#">Next</a>
+        <a href="#">View site</a>
+      </nav>
+    {% endblock %}
   </div>
 
 {% endblock %}
