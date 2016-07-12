@@ -43,6 +43,20 @@
   }
 }
 
+.content-header {
+  @include col(12);
+}
+
+.layout-thin {
+  .content-header,
+  .content-main {
+    @media(min-width: $bp1) {
+      @include col(9);
+      margin: auto;
+    }
+  }
+}
+
 .dl-horizontal {
   @extend %flex-container;
   justify-content: flex-end;

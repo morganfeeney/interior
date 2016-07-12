@@ -3,21 +3,25 @@
 {% extends "layouts/prototype-layout.njk" %}
 
 {% block header %}
-  {% block header_intro %}
-    <h1>{{ dummy_text.title_short }}</h1>
-    <p>{{ dummy_text.paragraph_short }}</p>
-  {% endblock %}
-  {% block header_hero %}
-    <!-- Hero image -->
-    {{ images.image_figure_placeholder(
-      size="1200x600",
-      text="HERO IMAGE",
-      image_class="image-hero",
-      figure_class="figure-hero",
-      caption="Caption for this dummy image.")
-    }}
-  <!-- /Hero image -->
-  {% endblock %}
+  <div class="grid grid-main">
+    <div class="content-header">
+      {% block header_intro %}
+        <h1>{{ dummy_text.title_short }}</h1>
+        <p>{{ dummy_text.paragraph_short }}</p>
+      {% endblock %}
+      {% block header_hero %}
+        <!-- Hero image -->
+        {{ images.image_figure_placeholder(
+          size="1200x600",
+          text="HERO IMAGE",
+          image_class="image-hero",
+          figure_class="figure-hero",
+          caption="Caption for this dummy image.")
+        }}
+      <!-- /Hero image -->
+      {% endblock %}
+    </div>
+  </div>
 {% endblock %}
 
 {% block main %}
