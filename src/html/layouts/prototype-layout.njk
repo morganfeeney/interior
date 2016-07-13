@@ -30,17 +30,15 @@
 					{% block main %}{% endblock %}
 				</div>
 			</section>
-			{% if posts != false %}
-				{% block posts_nav %}
-					<section>
-						<nav class="posts-nav">
-							<a href="#">Prev</a>
-							<a href="#">Next</a>
-							<a href="#">View site</a>
-						</nav>
-					</section>
-				{% endblock %}
-			{% endif %}
+			{% block posts_nav %}
+			<section id="main-section" class="container-outer {{ main_section_classes }}">
+				<div class="container">
+					{% block posts_nav_content %}
+						{% include "../partials/components/posts-nav.njk" %}
+					{% endblock %}
+				</div>
+			</section>
+			{% endblock %}
 			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}

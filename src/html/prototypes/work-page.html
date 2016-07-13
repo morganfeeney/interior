@@ -1,7 +1,6 @@
 {% set base_path = ".." %}
 {% set page_description = "TBA" %}
 {% extends "layouts/prototype-layout.njk" %}
-{% set posts = true %}
 
 {% block header %}
   <div class="grid grid-main">
@@ -112,13 +111,5 @@
         }}
       </div>
     {% endblock %}
-    {% block posts_nav %}
-      <nav class="posts-nav">
-        <a href="#">Prev</a>
-        <a href="#">Next</a>
-        <a href="#">View site</a>
-      </nav>
-    {% endblock %}
   </div>
-
 {% endblock %}

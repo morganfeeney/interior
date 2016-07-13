@@ -3,8 +3,10 @@
    ============================================================== */
 
 // Units
-$bp1: 580px;
-$bp2: 700px;
+$screen-small: 580px;
+$screen-medium: 700px;
+$screen-large: 1000px;
+$screen-larger: 1200px;
 $cols: 12;
 $horizontal-space: 3rem;
 $horizontal-space-small: $horizontal-space/2;
