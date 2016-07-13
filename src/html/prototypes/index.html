@@ -2,34 +2,17 @@
 {% set page_title = "Prototypes home page" %}
 {% set page_description = "TBA" %}
 {% extends "layouts/prototype-layout.njk" %}
-
-{% import "../macros/macro-image.njk" as images %}
-{% import "../macros/macro-gallery.njk" as galleries %}
+{% set body_classes="layout-thin" %}
 
 {% block header %}
-  <h1>This is a fake blog post about something non-existant</h1>
+  <h1>Prototypes</h1>
 {% endblock %}
 
 {% block main %}
-<h2>This sub title doesn't really exist</h2>
-<p>I enable businesses like yours to beat your competition by making you look more professional, &amp; placing you in front of your target audience. If this sounds like something you could benefit from <a href="#">get in touch</a>.</p>
-<h3>Web design</h3>
-<p>Websites are where it's at, let's face it. I can design and build websites in a variety of flavours and styles to suit all.</p>
+  <h2>This sub title doesn't really exist</h2>
+  <p>I enable businesses like yours to beat your competition by making you look more professional, &amp; placing you in front of your target audience. If this sounds like something you could benefit from <a href="#">get in touch</a>.</p>
 
-<h3>Graphic design</h3>
-<p>I can design &amp; output print-ready artwork for you, all within deadline. Need printing too? No problem.</p>
-<h3>Seo services</h3>
-<p>Snake oil for sale, only joking. There's no point in a website that doesn't get found, I can ensure your website gets found on the internet.</p>
-
-<!-- Gallery -->
-{{ galleries.gallery() }}
-<!-- /Gallery -->
-
-<!-- Posts -->
-<div class="post-layouts-1">
-</div>
-<div class="post-layouts-2">
-</div>
-<!-- /Posts -->
+  <a href="work-page.html">Work page</a>
+  <a href="work-page-single-column.html">Work page single column</a>
 
 {% endblock %}

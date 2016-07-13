@@ -4,11 +4,25 @@
 
 @mixin col(
   $col,
-  $width: 100% / $cols * $col
+  $width: 100% / $cols * $col,
+  $margin: true,
+  $calc: true
 ){
-  width: calc(#{$width} - #{$grid-gutter});
-  margin-left: $grid-gutter/2;
-  margin-right: $grid-gutter/2;
+  @if $calc == false {
+    width: $width;
+  } @else {
+    width: calc(#{$width} - #{$grid-gutter});
+  }
+  @if $margin == false {
+    margin-left: 0;
+    margin-right: 0;
+  } @else if $margin == auto {
+    margin-left: auto;
+    margin-right: auto;
+  } @else {
+    margin-left: $grid-gutter/2;
+    margin-right: $grid-gutter/2;
+  }
 }
 
 // For Description lists only at the time of writing

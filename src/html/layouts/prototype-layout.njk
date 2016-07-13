@@ -30,6 +30,17 @@
 					{% block main %}{% endblock %}
 				</div>
 			</section>
+			{% if posts != false %}
+				{% block posts_nav %}
+					<section>
+						<nav class="posts-nav">
+							<a href="#">Prev</a>
+							<a href="#">Next</a>
+							<a href="#">View site</a>
+						</nav>
+					</section>
+				{% endblock %}
+			{% endif %}
 			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}

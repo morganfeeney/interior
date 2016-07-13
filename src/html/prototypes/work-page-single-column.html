@@ -1,0 +1,49 @@
+{% set base_path = ".." %}
+{% set page_title = "Single column layout" %}
+{% set page_description = "TBA" %}
+{% extends "layouts/prototype-layout.njk" %}
+{% set body_classes="layout-thin" %}
+
+{% block header %}
+  <div class="content-header">
+    {% block header_intro %}
+      <h1>{{ page_title }}</h1>
+      <p>{{ dummy_text.paragraph_short }}</p>
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block main %}
+  {% block content_main_1 %}
+    <div class="content-main">
+        <h2>{{ dummy_text.title_medium }}</h2>
+        <p>{{ dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+        {{ images.image_figure_placeholder() }}
+
+        <h3>{{ dummy_text.title_short }}</h3>
+        <p>{{ dummy_text.paragraph_medium }}</p>
+    </div>
+  {% endblock %}
+
+  {% block content_main_2 %}
+    <div class="content-main">
+      <h3>{{ dummy_text.title_long }}</h3>
+      <p>{{ dummy_text.paragraph_medium }}</p>
+      <blockquote>
+        <p>
+          {{ dummy_text.title_long }}
+        </p>
+      </blockquote>
+      <h4>{{ dummy_text.title_short }}</h4>
+      <p>{{ dummy_text.paragraph_long }}</p>
+      {% include "../partials/cards/code/code-scss.njk" %}
+      <p>{{ dummy_text.paragraph_medium }}</p>
+      <blockquote>
+        <p>
+          {{ dummy_text.title_long }}
+        </p>
+      </blockquote>
+      <p>{{ dummy_text.paragraph_medium }}</p>
+    </div>
+  {% endblock %}
+{% endblock %}
