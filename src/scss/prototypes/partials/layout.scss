@@ -49,22 +49,7 @@
 
 .layout-thin {
   .container {
-    @media(min-width: $screen-small) {
-      @include col(10, $calc: false, $margin: auto);
-    }
-    @media(min-width: $screen-medium) {
-      @include col(8, $calc: false, $margin: auto);
-    }
-    @media(min-width: $screen-large) {
-      @include col(7, $calc: false, $margin: auto);
-    }
-    @media(min-width: $screen-larger) {
-      @include col(6, $calc: false, $margin: auto);
-    }
-  }
-  .content-header,
-  .content-main {
-    @include col(12, $calc: false, $margin: false);
+    max-width: 80rem;
   }
 }
 
