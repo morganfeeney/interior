@@ -39,7 +39,6 @@ h1 + p {
   }
 }
 
-
 figure {
   margin-bottom: $vertical-space;
 }
@@ -50,4 +49,13 @@ figcaption {
   font-style: italic;
   font-size: 80%;
   padding: $vertical-space-small $horizontal-space-small;
+}
+
+blockquote.outset {
+  @media(min-width: $screen-large) {
+    @include col(4, $calc: false, $margin: false);
+    float: right;
+    margin-right: 0;
+    font-size: 2rem;
+  }
 }
