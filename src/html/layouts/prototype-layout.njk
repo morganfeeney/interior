@@ -30,15 +30,17 @@
 					{% block main %}{% endblock %}
 				</div>
 			</section>
-			{% block posts_nav %}
-			<section id="main-section" class="container-outer {{ main_section_classes }}">
-				<div class="container">
-					{% block posts_nav_content %}
-						{% include "../partials/components/posts-nav.njk" %}
-					{% endblock %}
-				</div>
-			</section>
-			{% endblock %}
+			{% if post_page %}
+				{% block posts_nav %}
+					<section id="posts-nav-section" class="container-outer {{ posts_nav_section_classes }}">
+						<div class="container">
+							{% block posts_nav_content %}
+								{% include "../partials/components/posts-nav.njk" %}
+							{% endblock %}
+						</div>
+					</section>
+				{% endblock %}
+			{% endif %}
 			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}
