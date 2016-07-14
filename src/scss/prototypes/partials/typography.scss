@@ -16,6 +16,11 @@ p {
   margin-bottom: $vertical-space;
 }
 
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $vertical-space;
+}
+
 .page-meta,
 .disciplines,
 .languages {
