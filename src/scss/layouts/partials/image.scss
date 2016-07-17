@@ -16,4 +16,5 @@ img {
 
 .image-hero {
   @extend %fluid-img;
+  margin-bottom: $vertical-space;
 }

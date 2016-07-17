@@ -1,23 +1,22 @@
 {% set base_path = ".." %}
+{% set page_title = "Main and aside layout" %}
 {% set page_description = "TBA" %}
 {% set post_page = true %}
-{% extends "layouts/prototype-layout.njk" %}
+{% extends "templates/prototype-template.njk" %}
 
 {% block header %}
   <div class="grid grid-main">
     <div class="content-header">
       {% block header_intro %}
-        <h1>{{ dummy_text.title_short }}</h1>
+        <h1>{{ page_title }}</h1>
         <p>{{ dummy_text.paragraph_short }}</p>
       {% endblock %}
       {% block header_hero %}
         <!-- Hero image -->
-        {{ images.image_figure_placeholder(
+        {{ images.image_placeholder(
           size="1200x600",
           text="HERO IMAGE",
-          image_class="image-hero",
-          figure_class="figure-hero",
-          caption="Caption for this dummy image.")
+          class="image-hero")
         }}
       <!-- /Hero image -->
       {% endblock %}
@@ -31,7 +30,11 @@
       <div class="content-main">
           <h2>{{ dummy_text.title_medium }}</h2>
           <p>{{ dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-          {{ images.image_figure_placeholder() }}
+          {{ images.image_placeholder(
+            size="800x400",
+            text="SMALLER IMAGE"
+            )
+          }}
 
           <h3>{{ dummy_text.title_short }}</h3>
           <p>{{ dummy_text.paragraph_medium }}</p>

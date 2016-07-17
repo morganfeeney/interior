@@ -1,7 +1,7 @@
 {% set base_path = ".." %}
 {% set page_title = "Thin layout" %}
 {% set page_description = "TBA" %}
-{% extends "layouts/prototype-layout.njk" %}
+{% extends "templates/prototype-template.njk" %}
 {% set body_classes="layout-thin" %}
 {% set post_page = true %}
 
@@ -16,7 +16,11 @@
   {% block content_main_1 %}
     <h2>{{ dummy_text.title_medium }}</h2>
     <p>{{ dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-    {{ images.image_figure_placeholder() }}
+    {{ images.image_placeholder(
+      size="800x400",
+      text="SMALLER IMAGE"
+      )
+    }}
 
     <h3>{{ dummy_text.title_short }}</h3>
     <p>{{ dummy_text.paragraph_medium }}</p>

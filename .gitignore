@@ -9,4 +9,4 @@ config.codekit
 css/*style.css,
 css/*style.css.map,
 examples/*.html,
-prototypes/*.html
+layouts/*.html

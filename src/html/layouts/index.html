@@ -1,0 +1,20 @@
+{% set base_path = ".." %}
+{% set page_title = "Layouts home page" %}
+{% set page_description = "TBA" %}
+{% extends "templates/prototype-template.njk" %}
+{% set body_classes="layout-thin" %}
+
+{% block header %}
+  <h1>Interior Layouts</h1>
+{% endblock %}
+
+{% block main %}
+  <h2>Hello world, thanks for visiting.</h2>
+  <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system.</p>
+  <h3>Layouts</h3>
+<ul>
+  <li><a href="main-and-aside-layout.html">Main and aside layout</a></li>
+  <li><a href="single-column-layout.html">Single column layout</a></li>
+</ul>
+
+{% endblock %}
