@@ -1,5 +1,25 @@
 module.exports = function(grunt) {
  // Project configuration.
+
+  var layouts = grunt.file.expand({
+    filter: "isFile",
+    cwd: "src/html/layouts"
+  },["*"]);
+
+  // layouts_object = (function(){
+  //    var returnObj = {};
+  //    for (var i = 0; i < layouts.length; i++) {
+  //      returnObj['layout' + layouts[i]] = 'fart' + layouts[i] + 'whoops'
+  //    }
+  //    return returnObj;
+  //  })()
+
+ // Setup a data file
+if (!grunt.file.exists('layouts.json')){
+    grunt.file.write('layouts.json', layouts);
+}
+
+
  grunt.initConfig({
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
@@ -70,6 +90,17 @@ module.exports = function(grunt) {
   // Nunjucks task
   nunjucks: {
    options: {
+    //  preprocessData: function(data) {
+    //    var layouts = grunt.file.expand({
+    //      filter: "isFile",
+    //      cwd: "src/html/layouts"
+    //    },["*"]);
+    //    var result = {
+    //      layouts: layouts,
+    //      data: data
+    //    };
+    //    return result;
+    //  },
     data: grunt.file.readJSON("data.json"),
     paths: "src/html"
    },
@@ -134,4 +165,22 @@ module.exports = function(grunt) {
   "prettify",
   "watch"
  ]);
+
+ grunt.registerTask('something', 'Do something interesting.', function(arg) {
+  var msg = 'Doing something...';
+  var layouts = grunt.file.expand({
+    filter: "isFile",
+    cwd: "src/html/layouts"
+  },["*"]);
+  grunt.verbose.write(layouts);
+  try {
+    //doSomethingThatThrowsAnExceptionOnError(arg);
+    // Success!
+    grunt.verbose.ok();
+  } catch(e) {
+    // Something went wrong.
+    grunt.verbose.or.write(layouts).error().error(e.message);
+    //grunt.fail.warn('Something went wrong.');
+  }
+});
 };
