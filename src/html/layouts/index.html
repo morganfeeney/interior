@@ -13,8 +13,9 @@
   <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system.</p>
   <h3>Layouts</h3>
 <ul>
-  <li><a href="main-and-aside-layout.html">Main and aside layout</a></li>
-  <li><a href="single-column-layout.html">Single column layout</a></li>
+  {% for layout in layouts %}
+      <li><a href="{{ layout }}">{{ layout | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+  {% endfor %}
 </ul>
 
 {% endblock %}
