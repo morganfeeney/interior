@@ -76,7 +76,7 @@ module.exports = function(grunt) {
        var layouts = grunt.file.expand({
          filter: "isFile",
          cwd: "src/html/layouts"
-       },["*.html"]);
+       },["*.html","!index.html"]);
        var result = {
          layouts: layouts,
          page: page,
