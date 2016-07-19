@@ -1,16 +1,20 @@
-{% extends "layouts/portfolio-page-layout.html" %}
+{% extends "templates/prototype-template.njk" %}
 
-{% block header_hero %}
+{% block header %}
+  <div class="grid grid-main">
+    <div class="content-header">
+      {% block header_intro %}
+        <h1>{{ page | capitalize | replace("-", " ") }}</h1>
+        <p>{{ data.dummy_text.paragraph_short }}</p>
+      {% endblock %}
+    </div>
+  </div>
 {% endblock %}
 
-{% block content_main_1 %}
-{% endblock %}
-
-{% block content_sub_1 %}
-{% endblock %}
-
-{% block content_main_2 %}
-{% endblock %}
-
-{% block content_sub_2 %}
+{% block main %}
+  {% block gallery %}
+    <!-- Gallery -->
+    {{ galleries.gallery(image_size="300") }}
+    <!-- /Gallery -->
+  {% endblock %}
 {% endblock %}
