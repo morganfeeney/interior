@@ -14,17 +14,12 @@
 		{% endblock %}
 	</head>
 	<body class="{{ page }} {{ body_classes }}">
-		<article>
-			<aside>
-				<div class="container">
-					{# {% include "partials/components/nav-main.njk" %} #}
-				</div>
-			</aside>
-			<header id="main-header" class="container-outer {{ main_header_classes }}">
-		    <div class="container">
-					{% block header %}{% endblock %}
-		    </div>
-			</header>
+		<header id="main-header" class="container-outer {{ main_header_classes }}">
+			<div class="container">
+				{% block header %}{% endblock %}
+			</div>
+		</header>
+		<article id="main-article" class="{{ article_classes }}">
 			<section id="main-section" class="container-outer {{ main_section_classes }}">
 				<div class="container">
 					{% block main %}{% endblock %}
@@ -41,6 +36,8 @@
 					</section>
 				{% endblock %}
 			{% endif %}
+		</article>
+		{% block main_footer %}
 			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}
@@ -48,7 +45,14 @@
 					{% endblock %}
 				</div>
 			</footer>
-		</article>
+		{% endblock %}
+		{% block main_aside %}
+			<aside id="main-aside" class="{{ aside_classes }}">
+				<div class="container">
+					{% block aside_content %}{% endblock %}
+				</div>
+			</aside>
+		{% endblock %}
 		<script src="http://localhost:35729/livereload.js"></script>
 	</body>
 </html>

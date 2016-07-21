@@ -1,9 +1,10 @@
 {% set post_page = true %}
+{% set body_classes = "aside-layout" %}
 {% extends "templates/prototype-template.njk" %}
 
 {% block header %}
 <div class="grid grid-main">
-  <div class="content-header content-main">
+  <div class="content-header">
     {% block header_intro %}
       <h1>{{ page | capitalize | replace("-", " ") }}</h1>
       <p>{{ data.dummy_text.paragraph_short }}</p>
@@ -24,59 +25,22 @@
 {% block main %}
   <div class="grid grid-main">
     {% block content_main_1 %}
-      <div class="content-main">
-          <h2>{{ data.dummy_text.title_medium }}</h2>
-          <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-          {{ images.image_placeholder(
-            size="800x400",
-            text="SMALLER IMAGE"
-            )
-          }}
+      <h2>{{ data.dummy_text.title_medium }}</h2>
+      <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+      {{ images.image_placeholder(
+        size="800x400",
+        text="SMALLER IMAGE"
+        )
+      }}
 
-          <h3>{{ data.dummy_text.title_short }}</h3>
-          <p>{{ data.dummy_text.paragraph_medium }}</p>
-      </div>
+      <h3>{{ data.dummy_text.title_short }}</h3>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
     {% endblock %}
-    {% block content_sub_1 %}
-      <div class="content-sub">
-        <div class="grid">
-          <dl class="dl-horizontal dl-page-meta">
-            <dt>Date</dt><dd>22/05/2016</dd>
-          </dl>
-          <dl class="dl-horizontal dl-page-meta">
-            <dt>Category</dt><dd>Design</dd>
-          </dl>
-          <dl class="dl-horizontal dl-page-meta">
-            <dt>Client</dt><dd>Moi</dd>
-          </dl>
-          <dl class="dl-horizontal dl-disciplines">
-            <dt>Disciplines</dt>
-            <dd>Design</dd>
-            <dd>Front-end development</dd>
-            <dd>CSS</dd>
-          </dl>
-          <dl class="dl-horizontal dl-languages">
-            <dt>Languages</dt>
-            <dd>Less</dd>
-            <dd>Nunjucks</dd>
-            <dd>CSS</dd>
-            <dd>HTML</dd>
-          </dl>
-          <dl class="dl-horizontal dl-test">
-            <dt>Really long title for test purposes</dt>
-            <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry</dd>
-            <dd>It is a long established fact that a reader will be distracted by the readable content</dd>
-            <dd>CSS</dd>
-            <dd>HTML</dd>
-          </dl>
-        </div>
-      </div>
-    {% endblock %}
+    {% block content_sub_1 %}{% endblock %}
   </div>
 
   <div class="grid grid-main">
     {% block content_main_2 %}
-      <div class="content-main">
         {% block gallery %}
           <!-- Gallery -->
           {{ galleries.gallery(image_size="300") }}
@@ -99,18 +63,48 @@
           </p>
         </blockquote>
         <p>{{ data.dummy_text.paragraph_medium }}</p>
-      </div>
     {% endblock %}
-    {% block content_sub_2 %}
-      <div class="content-sub">
-        {{
-          posts.posts_feed (
-            posts=data.post_feed,
-            posts_class="posts-feed",
-            image_size="350x150"
-          )
-        }}
-      </div>
-    {% endblock %}
+    {% block content_sub_2 %}{% endblock %}
+  </div>
+{% endblock %}
+
+{% block aside_content %}
+  {{
+    posts.posts_feed (
+      posts=data.post_feed,
+      posts_class="posts-feed",
+      image_size="350x150"
+    )
+  }}
+  <div class="grid">
+    <dl class="dl-horizontal dl-page-meta">
+      <dt>Date</dt><dd>22/05/2016</dd>
+    </dl>
+    <dl class="dl-horizontal dl-page-meta">
+      <dt>Category</dt><dd>Design</dd>
+    </dl>
+    <dl class="dl-horizontal dl-page-meta">
+      <dt>Client</dt><dd>Moi</dd>
+    </dl>
+    <dl class="dl-horizontal dl-disciplines">
+      <dt>Disciplines</dt>
+      <dd>Design</dd>
+      <dd>Front-end development</dd>
+      <dd>CSS</dd>
+    </dl>
+    <dl class="dl-horizontal dl-languages">
+      <dt>Languages</dt>
+      <dd>Less</dd>
+      <dd>Nunjucks</dd>
+      <dd>CSS</dd>
+      <dd>HTML</dd>
+    </dl>
+    <dl class="dl-horizontal dl-test">
+      <dt>Really long title for test purposes</dt>
+      <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry</dd>
+      <dd>It is a long established fact that a reader will be distracted by the readable content</dd>
+      <dd>CSS</dd>
+      <dd>HTML</dd>
+    </dl>
   </div>
 {% endblock %}

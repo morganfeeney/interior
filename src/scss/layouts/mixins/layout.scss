@@ -1,0 +1,13 @@
+@mixin content-main {
+  @include col(12);
+  @media(min-width: $screen-small) {
+    @include col(7);
+  }
+}
+
+@mixin content-sub {
+  @include col(12);
+  @media(min-width: $screen-small) {
+    @include col(4);
+  }
+}
