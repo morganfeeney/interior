@@ -1,29 +1,23 @@
 {% set post_page = true %}
-{% set body_classes = "aside-layout" %}
-{% extends "templates/prototype-template.njk" %}
+{% extends "templates/aside-template.njk" %}
 
 {% block header %}
-<div class="grid grid-main">
-  <div class="content-header">
-    {% block header_intro %}
-      <h1>{{ page | capitalize | replace("-", " ") }}</h1>
-      <p>{{ data.dummy_text.paragraph_short }}</p>
-    {% endblock %}
-    {% block header_hero %}
-      <!-- Hero image -->
-      {{ images.image_placeholder(
-        size="1200x600",
-        text="HERO IMAGE",
-        class="image-hero")
-      }}
-    <!-- /Hero image -->
-    {% endblock %}
-  </div>
-</div>
+  {% block header_intro %}
+    <h1>{{ page | capitalize | replace("-", " ") }}</h1>
+    <p>{{ data.dummy_text.paragraph_short }}</p>
+  {% endblock %}
+  {% block header_hero %}
+    <!-- Hero image -->
+    {{ images.image_placeholder(
+      size="1200x600",
+      text="HERO IMAGE",
+      class="image-hero")
+    }}
+  <!-- /Hero image -->
+  {% endblock %}
 {% endblock %}
 
 {% block main %}
-  <div class="grid grid-main">
     {% block content_main_1 %}
       <h2>{{ data.dummy_text.title_medium }}</h2>
       <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
@@ -37,9 +31,7 @@
       <p>{{ data.dummy_text.paragraph_medium }}</p>
     {% endblock %}
     {% block content_sub_1 %}{% endblock %}
-  </div>
 
-  <div class="grid grid-main">
     {% block content_main_2 %}
         {% block gallery %}
           <!-- Gallery -->
@@ -65,10 +57,9 @@
         <p>{{ data.dummy_text.paragraph_medium }}</p>
     {% endblock %}
     {% block content_sub_2 %}{% endblock %}
-  </div>
-{% endblock %}
 
-{% block aside_content %}
+{% endblock %}
+  {% block aside_content %}
   {{
     posts.posts_feed (
       posts=data.post_feed,
@@ -106,5 +97,4 @@
       <dd>CSS</dd>
       <dd>HTML</dd>
     </dl>
-  </div>
 {% endblock %}

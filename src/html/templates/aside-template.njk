@@ -1,0 +1,61 @@
+{% import "../macros/macro-image.njk" as images %}
+{% import "../macros/macro-gallery.njk" as galleries %}
+{% import "../macros/macro-post.njk" as posts %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ page | capitalize | replace("-", " ") }}</title>
+		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
+		<link rel="stylesheet" href="{% if base_path %}{{ base_path }}{% else %}..{% endif %}/css/layouts/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block header_scripts %}
+			{% include "partials/head-scripts.njk" %}
+		{% endblock %}
+	</head>
+	<body class="{{ page }} {{ body_classes }}">
+		<main class="container-outer {{ main_header_classes }}">
+			<div class="container">
+				<div class="grid grid-main">
+					<article id="main-article" class="content-main {{ article_classes }}">
+						<header id="main-header" class="{{ main_header_classes }}">
+							{% block header %}{% endblock %}
+						</header>
+						<section id="main-section" class="{{ main_section_classes }}">
+							{% block main %}{% endblock %}
+						</section>
+					</article>
+					{% block main_aside %}
+						<aside id="main-aside" class="content-sub {{ aside_classes }}">
+							{% block aside_content %}{% endblock %}
+						</aside>
+					{% endblock %}
+				</div>
+			</div>
+		</main>
+
+		{% if post_page %}
+			{% block posts_nav %}
+				<section id="posts-nav-section" class="container-outer {{ posts_nav_section_classes }}">
+					<div class="container">
+						{% block posts_nav_content %}
+							{% include "../partials/components/posts-nav.njk" %}
+						{% endblock %}
+					</div>
+				</section>
+			{% endblock %}
+		{% endif %}
+
+		{% block main_footer %}
+			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
+				<div class="container">
+					{% block footer %}
+						{% include "partials/footer.njk" %}
+					{% endblock %}
+				</div>
+			</footer>
+		{% endblock %}
+
+		<script src="http://localhost:35729/livereload.js"></script>
+	</body>
+</html>
