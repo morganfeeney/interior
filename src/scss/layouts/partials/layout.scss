@@ -14,15 +14,15 @@
    flex-flow: row wrap;
  }
 
- .aside-layout {
-   @extend  %flex-container;
-   #main-article {
-    @include content-main;
-   }
-   #main-aside {
-    @include content-sub;
-   }
- }
+ // .aside-layout {
+ //   @extend  %flex-container;
+ //   #main-article {
+ //    @include content-main;
+ //   }
+ //   #main-aside {
+ //    @include content-sub;
+ //   }
+ // }
 
  .container {
    @extend %container;

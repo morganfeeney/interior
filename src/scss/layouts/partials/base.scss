@@ -5,7 +5,7 @@
 // Reset
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: ms(0, 62.5%);
 }
 
 *, *::before, *::after {
@@ -14,7 +14,10 @@ html {
 
 body {
   // Set a base font size that allows px-like units on elements.
-  font: 1.6rem/1.6 $fs2;
+  font-size: ms(0, 1.6rem);
+  font-family: $fs2;
+  line-height: $golden;
+  // 1.6rem/1.6
   // Control resizing of text whenswitching orientation.
   text-size-adjust: 100%;
 }

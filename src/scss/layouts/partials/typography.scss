@@ -3,12 +3,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4.5rem;
-  margin-top: 6rem;
+  font-size: ms(0, 4.5rem);
+  margin-top: $v-space-h1;
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: $vertical-space;
+  margin-top: $v-space-h1-horizontal-pairing;
 }
 
 p {

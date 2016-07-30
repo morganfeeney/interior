@@ -1,9 +1,12 @@
+@import 'modular-scale/modular-scale';
+
 // Variables
 @import 'partials/variables';
 
 // Mixins
 @import 'mixins/col';
 @import 'mixins/layout';
+@import 'mixins/typography';
 
 // Core
 @import 'partials/base';
@@ -14,4 +17,8 @@
 @import 'partials/gallery';
 @import 'partials/posts';
 @import 'partials/code';
-@import 'partials/footer'
+@import 'partials/footer';
+
+
+
+//@debug ms-list($start, $end, $ms-base, $ms-ratio);
