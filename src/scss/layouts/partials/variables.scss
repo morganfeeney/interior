@@ -2,23 +2,13 @@
    Variables
    ============================================================== */
 
-$ms-base: 1rem;
-$ms-ratio: 1.6;
-$v-space-h1: ms(4);
-$v-space-h1-horizontal-pairing: ms(4) + 1.6rem;
-
 // Units
 $screen-small: 580px;
 $screen-medium: 700px;
 $screen-large: 1000px;
 $screen-larger: 1200px;
 $cols: 12;
-$horizontal-space: 3rem;
-$horizontal-space-small: $horizontal-space/2;
-$vertical-space: 4rem;
-$vertical-space-small: $vertical-space / 4;
-$grid-gutter: $horizontal-space;
-$m: $horizontal-space;
+
 $wrapper-width-large: 120rem;
 $g: $cols*$cols/100;
 
@@ -50,10 +40,23 @@ $font-color-3: $brand-color-3;
 $font-color-4: $brand-color-4;
 
 // Fonts
+$font-size-base: 1.6rem;
+
 $fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-family-base: $fs1;
+
+$ms-base: 1rem;
+$ms-ratio: 1.6;
+$v-space-h1: ms(4);
+$v-space-h1-horizontal-pairing: ms(4) + $font-size-base;
+$horizontal-space: 3rem;
+$horizontal-space-small: $horizontal-space/2;
+$vertical-space: ms(3);
+$vertical-space-small: $vertical-space / 4;
+$grid-gutter: $horizontal-space;
+$m: $horizontal-space;
 
 //** Borders
 $light-border: 1px solid $brand-color-3;

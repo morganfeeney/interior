@@ -14,15 +14,13 @@
    flex-flow: row wrap;
  }
 
- // .aside-layout {
- //   @extend  %flex-container;
- //   #main-article {
- //    @include content-main;
- //   }
- //   #main-aside {
- //    @include content-sub;
- //   }
- // }
+ .aside-layout {
+   #main-aside {
+     > :first-child {
+       margin-top: $v-space-h1-horizontal-pairing;
+     }
+   }
+ }
 
  .container {
    @extend %container;
