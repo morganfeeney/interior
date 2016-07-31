@@ -17,7 +17,10 @@
  .aside-layout {
    #main-aside {
      > :first-child {
-       margin-top: $v-space-h1-horizontal-pairing;
+       margin-top: $v-space-h1;
+       > :first-child {
+         padding-top: $v-space-h1-pairing;
+       }
      }
    }
  }

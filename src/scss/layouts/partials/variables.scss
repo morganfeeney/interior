@@ -39,6 +39,8 @@ $font-color-2: $brand-color-2;
 $font-color-3: $brand-color-3;
 $font-color-4: $brand-color-4;
 
+// Work out the line-height in rems, subtract the font size, divide by 2, add that value to the margin.
+
 // Fonts
 $font-size-base: 1.6rem;
 
@@ -48,9 +50,17 @@ $fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-base: $fs1;
 
 $ms-base: 1rem;
-$ms-ratio: 1.6;
+$ms-ratio: $minor-sixth;
+$line-height-base: $minor-sixth;
+
+$font-size-h1: ms(0, 4.5rem);
+$font-size-h2: ms(0, 3.5rem);
+
+$computed-line-height: $line-height-base * $font-size-h1;
+
 $v-space-h1: ms(4);
-$v-space-h1-horizontal-pairing: ms(4) + $font-size-base;
+$v-space-h1-pairing: vspace($font-size: $font-size-h1);
+$v-space-h2-pairing: vspace($font-size: $font-size-h2);
 $horizontal-space: 3rem;
 $horizontal-space-small: $horizontal-space/2;
 $vertical-space: ms(3);

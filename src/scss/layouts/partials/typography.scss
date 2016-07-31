@@ -1,10 +1,16 @@
+// Set up a page with h tags in columns and get them to align.
+
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: $vertical-space-small;
 }
 
 h1 {
-  font-size: ms(0, 4.5rem);
+  font-size: $font-size-h1;
   margin-top: $v-space-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
 }
 
 h2, h3, h4, h5, h6 {

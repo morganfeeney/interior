@@ -16,7 +16,7 @@ body {
   // Set a base font size that allows px-like units on elements.
   font-size: ms(0, $font-size-base);
   font-family: $fs2;
-  line-height: $golden;
+  line-height: $line-height-base;
   // 1.6rem/1.6
   // Control resizing of text whenswitching orientation.
   text-size-adjust: 100%;
