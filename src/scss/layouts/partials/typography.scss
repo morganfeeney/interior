@@ -67,7 +67,80 @@ blockquote.outset {
 }
 
 .horizontal-heading-alignment {
-  .col {
+  .col-header {
+    @include col(12);
+    margin-top: $v-space-h1;
+    background: $brand-color-1;
+    h2 {
+      font-size: ms(0, 4rem);
+      color: $brand-color-2;
+      margin: 0;
+      text-align: right;
+      margin-right: $horizontal-space-small;
+    }
+  }
+  section .col {
     @include col(6);
   }
+  #main-section {
+    section:nth-child(1) {
+      .col {
+        //border-top: 2px solid red;
+        h1, h2, h3, h4, h5 {
+          margin-top: $v-space-h1;
+          border-top: 8px solid $brandbg-light;
+        }
+        h2 {
+          padding-top: vspace($font-size: $font-size-h2);
+        }
+        h3 {
+          padding-top: vspace($font-size: $font-size-h1);
+        }
+        h4 {
+          padding-top: vspace($font-size: $font-size-h1);
+        }
+        h5 {
+          padding-top: vspace($font-size: $font-size-h1);
+        }
+      }
+    }
+    section:nth-child(2) {
+      .col {
+        //border-top: 2px solid red;
+        h1, h2, h3, h4, h5 {
+          margin-top: $v-space-h2;
+          border-top: 8px solid $brandbg-light;
+        }
+        h3 {
+          padding-top: vspace($font-size: $font-size-h2);
+        }
+        h4 {
+          padding-top: vspace($font-size: $font-size-h2);
+        }
+        h5 {
+          padding-top: vspace($font-size: $font-size-h2);
+        }
+      }
+    }
+    section:nth-child(3) {
+      .col {
+        //border-top: 2px solid red;
+        h1, h2, h3, h4, h5 {
+          margin-top: $v-space-h3;
+          border-top: 8px solid $brandbg-light;
+        }
+        h3 {
+          padding-top: vspace($font-size: $font-size-h3);
+        }
+        h4 {
+          padding-top: vspace($font-size: $font-size-h3);
+        }
+        h5 {
+          padding-top: vspace($font-size: $font-size-h3);
+        }
+      }
+    }
+  }
+
+
 }

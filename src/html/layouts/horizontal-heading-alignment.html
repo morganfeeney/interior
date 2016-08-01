@@ -13,7 +13,13 @@
 {% endblock %}
 
 {% block main %}
+<section>
   <div class="grid grid-main">
+    <header class="col-header">
+      <h2>
+        H1
+      </h2>
+    </header>
     <div class="col">
       <h1>{{ data.dummy_text.title_short }}</h1>
     </div>
@@ -39,6 +45,55 @@
       <h5>{{ data.dummy_text.title_short }}</h5>
     </div>
   </div>
+</section>
+<section>
+  <div class="grid grid-main">
+    <header class="col-header">
+      <h2>
+        H2
+      </h2>
+    </header>
+    <div class="col">
+      <h2>{{ data.dummy_text.title_short }}</h2>
+    </div>
+    <div class="col">
+      <h3>{{ data.dummy_text.title_short }}</h3>
+    </div>
+    <div class="col">
+      <h2>{{ data.dummy_text.title_short }}</h2>
+    </div>
+    <div class="col">
+      <h4>{{ data.dummy_text.title_short }}</h4>
+    </div>
+    <div class="col">
+      <h2>{{ data.dummy_text.title_short }}</h2>
+    </div>
+    <div class="col">
+      <h5>{{ data.dummy_text.title_short }}</h5>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="grid grid-main">
+    <header class="col-header">
+      <h2>
+        H3
+      </h2>
+    </header>
+    <div class="col">
+      <h3>{{ data.dummy_text.title_short }}</h3>
+    </div>
+    <div class="col">
+      <h4>{{ data.dummy_text.title_short }}</h4>
+    </div>
+    <div class="col">
+      <h3>{{ data.dummy_text.title_short }}</h3>
+    </div>
+    <div class="col">
+      <h5>{{ data.dummy_text.title_short }}</h5>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 {% block main_aside %}{% endblock %}
