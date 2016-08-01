@@ -1,0 +1,44 @@
+{% extends "templates/prototype-template.njk" %}
+
+{% block header %}
+  <div class="grid grid-main">
+    <div class="content-header">
+      {% block header_intro %}
+        <h1>{{ page | capitalize | replace("-", " ") }}</h1>
+      {% endblock %}
+      {% block header_hero %}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block main %}
+  <div class="grid grid-main">
+    <div class="col">
+      <h1>{{ data.dummy_text.title_short }}</h1>
+    </div>
+    <div class="col">
+      <h2>{{ data.dummy_text.title_short }}</h2>
+    </div>
+    <div class="col">
+      <h1>{{ data.dummy_text.title_short }}</h1>
+    </div>
+    <div class="col">
+      <h3>{{ data.dummy_text.title_short }}</h3>
+    </div>
+    <div class="col">
+      <h1>{{ data.dummy_text.title_short }}</h1>
+    </div>
+    <div class="col">
+      <h4>{{ data.dummy_text.title_short }}</h4>
+    </div>
+    <div class="col">
+      <h1>{{ data.dummy_text.title_short }}</h1>
+    </div>
+    <div class="col">
+      <h5>{{ data.dummy_text.title_short }}</h5>
+    </div>
+  </div>
+{% endblock %}
+
+{% block main_aside %}{% endblock %}

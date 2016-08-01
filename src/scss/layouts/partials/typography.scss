@@ -65,3 +65,9 @@ blockquote.outset {
     font-size: 2rem;
   }
 }
+
+.horizontal-heading-alignment {
+  .col {
+    @include col(6);
+  }
+}
