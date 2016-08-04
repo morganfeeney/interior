@@ -20,6 +20,10 @@ body {
   // 1.6rem/1.6
   // Control resizing of text whenswitching orientation.
   text-size-adjust: 100%;
+  background-image: -moz-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+  background-image: linear-gradient(to bottom,#0ff 0,#fff0 1px);
+  background-repeat: repeat-y;
+  background-size: 100% 1.6rem;
 }
 
 html,
