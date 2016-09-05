@@ -80,9 +80,9 @@ module.exports = function(grunt) {
          cwd: "src/html/layouts"
        },["*.html","!index.html"]);
        var result = {
-         layouts: layouts,
-         page: page,
          file: file,
+         page: page,
+         layouts: layouts,
          data: data
        };
        return result;
