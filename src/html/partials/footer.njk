@@ -1,3 +1,10 @@
 <div class="sig">
 	<p><span class="name"><a href="http://interiorsystem.co.uk">Interior</a></span> © 2015 by <cite><a href="http://www.morganfeeney.com">Morgan Feeney</a></cite></p>
 </div>
+{% for layout in layouts %}
+  {% if layout == file %}
+    <li><a style="color: black" href="{{ layout }}">{{ layout | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+  {% else %}
+      <li><a href="{{ layout }}">{{ layout | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+  {% endif %}
+{% endfor %}

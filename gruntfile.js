@@ -72,7 +72,10 @@ module.exports = function(grunt) {
   nunjucks: {
    options: {
      preprocessData: function(data) {
-       var page = require('path').basename(this.src[0], '.html');
+       const path = require('path');
+       var page = path.basename(this.src[0], '.html');
+       var file = path.basename(this.src);
+
        var layouts = grunt.file.expand({
          filter: "isFile",
          cwd: "src/html/layouts"
@@ -80,6 +83,7 @@ module.exports = function(grunt) {
        var result = {
          layouts: layouts,
          page: page,
+         file: file,
          data: data
        };
        return result;
