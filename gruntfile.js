@@ -13,9 +13,7 @@ module.exports = function(grunt) {
       precision: 4
     },
     files: {
-     //"css/style.css": "src/scss/style.scss",
-     //"css/demo/style.css": "src/scss/demo/style.scss",
-     "css/layouts/style.css": "src/scss/layouts/style.scss"
+     "css/style.css": "src/scss/style.scss"
     }
    }
   },

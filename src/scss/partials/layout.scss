@@ -1,63 +1,87 @@
-#main * ~ *:not([class*=i-col]):not(.i-row):not(.i-outer):not(#main):not(h2):not(h3):not(h4):not(section):not(li):not(dt):not(.img-r):not(.price),
-section > :first-child:not(h2),
-.product-lister,
-dl:first-child {
-	margin: 0 0 3rem 0;
+/* ==============================================================
+   Layout
+   ============================================================== */
+
+ %container {
+   max-width: $wrapper-width-large;
+   margin: auto;
+   //background: $brand-color-2;
+ }
+
+ %flex-container {
+   // Overcome collapsing margins... somehow.
+   display: flex;
+   flex-flow: row wrap;
+ }
+
+ // .aside-layout {
+ //   #main-aside {
+ //     > :first-child {
+ //       margin-top: $v-space-h1;
+ //       > :first-child {
+ //         padding-top: $v-space-h1-pairing;
+ //       }
+ //     }
+ //   }
+ // }
+
+ .container {
+   @extend %container;
+   padding: 0 $grid-gutter;
+ }
+
+ .grid {
+   @extend %flex-container;
+   margin-left: -$horizontal-space-small;
+   margin-right: -$horizontal-space-small;
+ }
+
+ .grid-main {
+   justify-content: space-between;
+ }
+
+.content-main {
+  @include content-main;
 }
 
-@media (max-width: $sm) {
-	aside[class*=-fl-] ~ [class*=i-col] {
-		margin: 3rem 0 0 0;
-	}	
+.content-sub {
+  @include content-sub;
 }
 
-// Header specifics
-header {
-	&.container-outer {
-		overflow: hidden;
-		margin-bottom: 3rem;
-		position: relative;
-		&.theme-1 {
-			background: $theme-bg-1;
-		}
-		@media(min-width: $md) {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
-		}
-	}
+.content-header {
+  @include col(12);
 }
 
-#main {
-	clear: both;
+.layout-thin {
+  .container {
+    max-width: $screen-large;
+  }
 }
 
-.eg #main-footer .container-width {
-	padding: 0 1rem;
-	@media (max-width: $sm) {
-		padding: 0 .5rem;
-	}
+.dl-horizontal {
+  @extend %flex-container;
+  justify-content: flex-end;
+  align-content: flex-start;
+  @include col(12);
+  &:last-child {
+    margin-bottom: $vertical-space;
+  }
+  dt {
+    @include text-col(4, $min: true);
+    font-weight: bold;
+    margin-right: auto;
+    padding-right: 1rem;
+  }
+  dd {
+    @include text-col(8);
+    margin: 0 0 .75rem;
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 
-// Containers
-.container {
-	&-outer {
-		padding: 0 $grid-gutter-width--2;
-	}
-	&-width {
-		max-width: 80rem;
-		@include gridAlignment(center);
-	}
-}
-
-// Default grid
-@include interior(
-	$vert-space: 0
-);
-
- // Grid with MQs
-@media(min-width: $xs) {
-	@include interior(
-		$vert-space: 0,
-		$mq: xs
-	);
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }

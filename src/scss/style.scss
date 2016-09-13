@@ -1,24 +1,24 @@
-// Mixins
-@import 'mixins/helpers';
-@import 'mixins/grid-alignment';
-@import 'mixins/interior';
+// Functions
+@import 'functions/vertical-rhythm';
 
 // Variables
 @import 'partials/variables';
-@import 'partials/demo-variables';
 
-// Utilities
-@import 'partials/reset';
-@import 'partials/utlilities';
-@import 'partials/demo';
+
+
+// Mixins
+@import 'mixins/baseline';
+@import 'mixins/col';
+@import 'mixins/layout';
+@import 'mixins/typography';
 
 // Core
+@import 'partials/base';
 @import 'partials/typography';
-@import 'partials/code';
-
-// Theme
 @import 'partials/layout';
-@import 'partials/links';
-
-// Helpers
-@include clearfix;
+@import 'partials/nav';
+@import 'partials/image';
+@import 'partials/gallery';
+@import 'partials/posts';
+@import 'partials/code';
+@import 'partials/footer';

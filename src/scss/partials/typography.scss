@@ -1,155 +1,86 @@
-html {
-	font-size: 62.5%;
-}
-
-body {
-	font: 1.6rem/1.6 $font-family-base;
-	counter-reset: counter;
-	text-size-adjust: 100%;
-}
+// Set up a page with h tags in columns and get them to align.
 
 h1 {
-	color: $font-color-2;
-	font: normal 600 4rem/1 $font-family-base;
-	text-transform: uppercase;
-	margin: 0 0 0 -.4rem;
-	padding: 2rem 0;
-	span {
-		@media(min-width: $sm) {
-			margin: 0 0 0 .4rem;
-		}
-		margin: 0 0 0 .2rem;
-		font-size: 1.6rem;
-		display: block;
-		font-weight: 300;
-		padding-bottom: .6rem;
-	}
-	small {
-		span {
-			display: inline;
-			font-size: 2rem;
-		}
-	}
-	@media(min-width: $sm) {
-		font: normal 600 8rem/1 $font-family-base;	
-		span {
-			font-size: 2rem;
-		}
-		small {
-			span {
-				font-size: 4rem;
-			}
-		}
-	}
+  @include baseline($fs-four-line-brevier);
 }
 
-h2, h3, h4, h5, h6 {
-	color: inherit;
-	font-size: 2rem;
-	text-transform: uppercase;
-	margin: 0 0 1rem 0;
+h2 {
+  @include baseline($fs-two-line-pica);
 }
 
-// Paragraphs
+h3 {
+  @include baseline($fs-double-pica, $line-height: 1.1, $above: 1.2, $below: 1.1);
+}
+
 p {
-	@extend .medium;
-	margin-bottom: 1.6rem;
-	.i-names &,
-	.i-nums & {
-		font-size: 1.4rem;
-	}
+  @include baseline($font-base, $line-height: 1.5, $above: .3);
 }
 
-.text-center {
-	text-align: center;
+// Text directly after a main heading
+.sub-heading {
+  @include baseline($fs-two-line-pica, $line-height: 1, $below: .5);
 }
 
-.i-outer.demo [class*=i-row] {
-	margin: 0;
+blockquote p {
+  @include baseline($fs-two-line-pica);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: times;
+  font-style: italic;
 }
 
-.large {
-	font-size: 2rem;
+ul, ol {
 }
 
-.medium {
-	font-size: 1.8rem;
+.page-meta,
+.disciplines,
+.languages {
+  //display: inline-flex;
 }
 
-.small {
-	font-size: 1.6rem;
+
+h1 + p {
+  font-size: 2.5rem;
 }
 
-// Demo heading example
-section {
-	margin-bottom: 6rem;
-	&:not(.intro) {
-		padding-top: 3rem;
-	}
+// .content-main,
+// .content-sub {
+//   > :first-child {
+//     margin-top: 0;
+//   }
+// }
+
+// figure {
+//   margin-bottom: $vertical-space;
+// }
+
+figcaption {
+  background: $light-gray;
+  padding: inherit;
+  font-style: italic;
+  padding: $vertical-space-small $horizontal-space-small;
 }
 
-// Demo headings etc.
-.demo {
-	position: relative;
-	@extend .clearfix;
-	@at-root {
-		section#{&} {
-			counter-increment: counter;
-			&:before {
-			    content: 'Demo ' counter(counter);
-			    text-transform: uppercase;
-			    font-weight: 600;
-			    background-color: $theme-bg-2;
-			    position: absolute;
-			    text-align: right;
-			    color: $font-color-1;
-			    top: -1rem;
-			    right: 0;
-			    font-size: 1.3rem;
-			    letter-spacing: .1rem;
-			    padding: 0 0 0 2rem;
-			    z-index: 1;
-			}
-			&:after {
-				content: "";
-				top: -.1rem;
-			    left: -2rem;
-			    height: 1.5rem;
-			    position: absolute;
-			    @media(min-width: $md) {
-			    	border-left: .1rem solid $demo-border-colour-1;
-			    }
-			    border-top: .1rem solid $demo-border-colour-1;
-			    z-index: 0;
-			    width: 100%;
-			}
-		}		
-	}
+blockquote.outset {
+  @media(min-width: $screen-large) {
+    @include col(4, $calc: false, $margin: false);
+    float: right;
+    margin-right: 0;
+  }
 }
 
-// Footer
-footer {
-	.sig {
-		position: relative;
-		p {
-			font-size: 1.4rem;
-		}
-		.name {
-			text-transform: uppercase;
-			font-weight: bold;
-			letter-spacing: .1rem;
-			a {
-				color: $font-color-4;
-			}
-		}
-	}
-}
-
-mark {
-	background: rgba($demo-bg-1, 0.3);
-}
-
-// Products
-.product-title {
-	@extend .small;
+.horizontal-heading-alignment {
+  .col-header {
+    @include col(12);
+    background: $brand-color-1;
+    h2 {
+      color: $brand-color-2;
+      margin: 0;
+      text-align: right;
+      margin-right: $horizontal-space-small;
+    }
+  }
+  section .col {
+    @include col(6);
+  }
 }
