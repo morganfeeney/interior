@@ -1,0 +1,14 @@
+// Calculate the unit of line-height, as opposed to the unitless value - useful for other caclulations.
+@function line-height($ratio, $font-size: $font-base, $line-height: $font-ratio) {
+  @return $font-size * $line-height * $ratio;
+}
+
+// Calculate vertical space for the rhythm based on cap height and other variables
+@function cap-height($font-size, $line-height: $font-ratio, $cap-height: 0.68) {
+  @return $font-size * ($line-height - $cap-height) / 2;
+}
+
+// This is for creating scalable font sizes based upon variables
+@function bs($scale, $font-size: $font-base) {
+  @return $font-size * $scale;
+}
