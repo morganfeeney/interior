@@ -1,12 +1,11 @@
-@import 'modular-scale/modular-scale';
-
-// Functions
-@import 'functions/vertical-space';
-
 // Variables
 @import 'partials/variables';
 
+// Functions
+@import 'functions/vertical-rhythm';
+
 // Mixins
+@import 'mixins/baseline';
 @import 'mixins/col';
 @import 'mixins/layout';
 @import 'mixins/typography';
@@ -21,7 +20,3 @@
 @import 'partials/posts';
 @import 'partials/code';
 @import 'partials/footer';
-
-
-
-//@debug ms-list($start, $end, $ms-base, $ms-ratio);

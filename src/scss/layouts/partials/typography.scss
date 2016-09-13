@@ -1,46 +1,35 @@
 // Set up a page with h tags in columns and get them to align.
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: $vertical-space-small;
-}
-
 h1 {
-  font-size: $font-size-h1;
-  margin-top: $v-space-h1;
+  @include bassline($fs-four-line-brevier);
 }
 
 h2 {
-  font-size: $font-size-h2;
+  @include bassline($fs-two-line-pica);
 }
 
 h3 {
-  font-size: $font-size-h3;
-}
-
-h4 {
-  font-size: $font-size-h4;
-}
-
-h5 {
-  font-size: $font-size-h5;
-}
-
-h6 {
-  font-size: $font-size-h6;
-}
-
-h2, h3, h4, h5, h6 {
-  margin-top: $vertical-space;
+  @include bassline($fs-double-pica, $line-height: 1.1, $above: 1.2, $below: 1.1);
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: $vertical-space;
+  @include bassline($font-base, $line-height: 1.5, $above: .3);
+}
+
+// Text directly after a main heading
+.sub-heading {
+  @include bassline($fs-two-line-pica, $line-height: 1, $below: .5);
+}
+
+blockquote p {
+  @include bassline($fs-two-line-pica);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: times;
+  font-style: italic;
 }
 
 ul, ol {
-  margin-top: 0;
-  margin-bottom: $vertical-space;
 }
 
 .page-meta,
@@ -54,22 +43,21 @@ h1 + p {
   font-size: 2.5rem;
 }
 
-.content-main,
-.content-sub {
-  > :first-child {
-    margin-top: 0;
-  }
-}
+// .content-main,
+// .content-sub {
+//   > :first-child {
+//     margin-top: 0;
+//   }
+// }
 
-figure {
-  margin-bottom: $vertical-space;
-}
+// figure {
+//   margin-bottom: $vertical-space;
+// }
 
 figcaption {
   background: $light-gray;
   padding: inherit;
   font-style: italic;
-  font-size: 80%;
   padding: $vertical-space-small $horizontal-space-small;
 }
 
@@ -78,7 +66,6 @@ blockquote.outset {
     @include col(4, $calc: false, $margin: false);
     float: right;
     margin-right: 0;
-    font-size: 2rem;
   }
 }
 
@@ -88,7 +75,6 @@ blockquote.outset {
     margin-top: $v-space-h1;
     background: $brand-color-1;
     h2 {
-      font-size: ms(0, 4rem);
       color: $brand-color-2;
       margin: 0;
       text-align: right;
@@ -98,65 +84,4 @@ blockquote.outset {
   section .col {
     @include col(6);
   }
-  #main-section {
-    section:nth-child(1) {
-      .col {
-        //border-top: 2px solid red;
-        h1, h2, h3, h4, h5 {
-          margin-top: $v-space-h1;
-          border-top: 8px solid $brandbg-light;
-        }
-        h2 {
-          padding-top: vspace($font-size: $font-size-h2);
-        }
-        h3 {
-          padding-top: vspace($font-size: $font-size-h1);
-        }
-        h4 {
-          padding-top: vspace($font-size: $font-size-h1);
-        }
-        h5 {
-          padding-top: vspace($font-size: $font-size-h1);
-        }
-      }
-    }
-    section:nth-child(2) {
-      .col {
-        //border-top: 2px solid red;
-        h1, h2, h3, h4, h5 {
-          margin-top: $v-space-h2;
-          border-top: 8px solid $brandbg-light;
-        }
-        h3 {
-          padding-top: vspace($font-size: $font-size-h2);
-        }
-        h4 {
-          padding-top: vspace($font-size: $font-size-h2);
-        }
-        h5 {
-          padding-top: vspace($font-size: $font-size-h2);
-        }
-      }
-    }
-    section:nth-child(3) {
-      .col {
-        //border-top: 2px solid red;
-        h1, h2, h3, h4, h5 {
-          margin-top: $v-space-h3;
-          border-top: 8px solid $brandbg-light;
-        }
-        h3 {
-          padding-top: vspace($font-size: $font-size-h3);
-        }
-        h4 {
-          padding-top: vspace($font-size: $font-size-h3);
-        }
-        h5 {
-          padding-top: vspace($font-size: $font-size-h3);
-        }
-      }
-    }
-  }
-
-
 }

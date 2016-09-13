@@ -39,37 +39,30 @@ $font-color-2: $brand-color-2;
 $font-color-3: $brand-color-3;
 $font-color-4: $brand-color-4;
 
-// Work out the line-height in rems, subtract the font size, divide by 2, add that value to the margin.
-
-// Fonts
-$font-size-base: 1.6rem;
-
+// Font familiess
 $fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-family-base: $fs1;
 
-$ms-base: 1rem;
-$ms-ratio: $minor-sixth;
-$line-height-base: $minor-sixth;
+// Font sizes
+$font-base: 1rem;
+$font-ratio: 1;
+$base-line-unit: $font-base*$font-ratio;
+$cap-height: 0.68;
+$font-size-body: $font-base;
 
-$font-size-h1: ms(0, 4.5rem);
-$font-size-h2: ms(0, 3rem);
-$font-size-h3: ms(0, 2rem);
-$font-size-h4: ms(0, 1.8rem);
-$font-size-h5: ms(0, 1.8rem);
-$font-size-h6: ms(0, 1.8rem);
+// Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
+$fs-canon: bs(3); // 48px
+$fs-double-great-primer: bs(2.250); // 36px
+$fs-four-line-brevier: bs(2); // 32px
+$fs-two-line-pica: bs(1.5); // 24px
+$fs-double-pica: bs(1.313); // 21px
+$fs-great-primer: bs(1.125); // 18px
+$fs-english: bs(.875); // 14px
+$fs-pica: bs(.75); // 12px
 
-$computed-line-height: $line-height-base * $font-size-h1;
 
-$v-space-h1: ms(4);
-$v-space-h2: ms(3);
-$v-space-h3: ms(2);
-$v-space-h1-pairing: vspace($font-size: $font-size-h1);
-$v-space-h2-pairing: vspace($font-size: $font-size-h2);
-$horizontal-space: 3rem;
-$horizontal-space-small: $horizontal-space/2;
-$vertical-space: ms(3);
 $vertical-space-small: $vertical-space / 4;
 $grid-gutter: $horizontal-space;
 $m: $horizontal-space;
