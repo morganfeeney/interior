@@ -73,7 +73,7 @@ module.exports = function(grunt) {
    options: {
      preprocessData: function(data) {
        const path = require('path');
-       var file = path.basename(this.src);
+       var file = path.basename(this.src[0]);
        var page = path.basename(this.src[0], '.html');
        var layouts = grunt.file.expand({
          filter: "isFile",
@@ -94,9 +94,7 @@ module.exports = function(grunt) {
     files: [{
      expand: true,
      cwd: "src/html",
-     src: [
-      "**/*.html"
-     ],
+     src: ["**/*.html"],
      dest: "",
      ext: ".html"
     }],
