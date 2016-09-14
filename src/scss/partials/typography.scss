@@ -1,7 +1,7 @@
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
-  @include baseline($fs-four-line-brevier);
+  @include baseline($fs-four-line-brevier, $margin: 2);
 }
 
 h2 {
@@ -9,7 +9,11 @@ h2 {
 }
 
 h3 {
-  @include baseline($fs-double-pica, $line-height: 1.1, $above: 1.2, $below: 1.1);
+  @include baseline($fs-double-pica, $line-height: 1.12, $above: 1.12, $below: 1.1);
+}
+
+h4 {
+  @include baseline($fs-double-pica, $line-height: 1.12, $above: 1.12, $below: 1.1);
 }
 
 p {
@@ -38,10 +42,6 @@ ul, ol {
   //display: inline-flex;
 }
 
-
-h1 + p {
-  font-size: 2.5rem;
-}
 
 // .content-main,
 // .content-sub {
