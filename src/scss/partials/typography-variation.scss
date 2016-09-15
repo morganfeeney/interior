@@ -1,0 +1,28 @@
+
+blockquote.outset {
+  @media(min-width: $screen-large) {
+    @include col(4, $calc: false, $margin: false);
+    float: right;
+    margin-right: 0;
+  }
+}
+
+.horizontal-heading-alignment {
+  .col-header {
+    @include col(12);
+    background: $brand-color-1;
+    h2 {
+      color: $brand-color-2;
+      margin: 0;
+      text-align: right;
+      margin-right: $horizontal-space-small;
+    }
+  }
+  section .col {
+    @include col(6);
+  }
+}
+
+// .sig p {
+//   @extend %small;
+// }

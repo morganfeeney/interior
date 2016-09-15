@@ -1,3 +1,10 @@
+// Reset
+html {
+ // @media(min-width: 800px) {
+ //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
+ // }
+}
+
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
@@ -17,6 +24,14 @@ h4 {
 }
 
 p {
+  @include baseline($font-base, $line-height: 1.5, $above: .3);
+}
+
+%small, small {
+  @include baseline($fs-pica);
+}
+
+ul, ol {
   @include baseline($font-base, $line-height: 1.5, $above: .3);
 }
 
@@ -59,28 +74,4 @@ figcaption {
   padding: inherit;
   font-style: italic;
   padding: $vertical-space-small $horizontal-space-small;
-}
-
-blockquote.outset {
-  @media(min-width: $screen-large) {
-    @include col(4, $calc: false, $margin: false);
-    float: right;
-    margin-right: 0;
-  }
-}
-
-.horizontal-heading-alignment {
-  .col-header {
-    @include col(12);
-    background: $brand-color-1;
-    h2 {
-      color: $brand-color-2;
-      margin: 0;
-      text-align: right;
-      margin-right: $horizontal-space-small;
-    }
-  }
-  section .col {
-    @include col(6);
-  }
 }

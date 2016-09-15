@@ -5,9 +5,6 @@
 // Reset
 html {
  box-sizing: border-box;
- @media(min-width: 800px) {
-  font-size: 125%; // Increases body font size to 20px if it's 1rem.
- }
 }
 
 *, *::before, *::after {
