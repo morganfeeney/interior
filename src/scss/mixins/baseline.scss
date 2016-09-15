@@ -1,0 +1,18 @@
+@mixin baseline(
+    $font-size,
+    $unit: 1,
+    $line-height: $font-ratio * $unit,
+    $margin: 0,
+    $above: 0,
+    $below: 0,
+    $padding-top: (cap-height($font-size))+($above*$base-line-unit),
+    $margin-bottom: ($base-line-unit - $padding-top)+($below*$base-line-unit),
+    $margin-top: ($margin*$base-line-unit)
+  ) {
+  font-size: $font-size;
+  line-height: $line-height;
+  padding-top: $padding-top;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  position: relative;
+}

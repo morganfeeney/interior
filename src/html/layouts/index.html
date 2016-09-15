@@ -14,7 +14,12 @@
   <h3>Layouts</h3>
 <ul>
   {% for layout in layouts %}
-      <li><a href="{{ layout }}">{{ layout | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+  {# Check to see if the current page matches a link #}
+    {% if layout == file %}
+      <li><a style="color: black" href="{{ layout }}">{{ layout | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+    {% else %}
+        <li><a href="{{ layout }}">{{ layout | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+    {% endif %}
   {% endfor %}
 </ul>
 

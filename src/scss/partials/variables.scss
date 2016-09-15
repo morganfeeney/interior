@@ -1,24 +1,81 @@
-$grid-cols: 12; // Set the number of columns in your grid.
-$push-cols: $grid-cols;
-$flip-cols: $grid-cols;
+/* ==============================================================
+   Variables
+   ============================================================== */
 
-// Set the grid gutter width, this will be divided by 2 then added back together by adjacent columns.
+// Units
+$screen-small: 580px;
+$screen-medium: 700px;
+$screen-large: 1000px;
+$screen-larger: 1200px;
+$cols: 12;
 
-$grid-gutter-width: .8rem;
-$grid-gutter-width--2: 2rem;
+$wrapper-width-large: $screen-larger;
+$g: $cols*$cols/100;
 
-$grid-outer: ($grid-gutter-width / 2); // Add or remove padding from the wrapper `.grid-outer`.
+//** Colours
+//
+// Brand colours (base colours)
+$brand-color-1: #FF7070;
+$brand-color-2: #FFF;
+$brand-color-3: #555;
+$brand-color-4: #000;
 
-$align: left; // Set the default grid alignment.
-$vert-space: 1rem 0; // Set the vertical spacing.
+// Colour variants
+$brandbg: $brand-color-1;
+$lightbg: $brand-color-2;
+$nobg: transparent;
+$brandbg-light: lighten($brandbg, 20);
+$darkbg: $brand-color-3;
 
-$col-min-height: .1rem; // Ensures `.i-col-*` won't collapse.
-$col-group-padding: 0; // Use this class to remove padding on the parent of nested columns.
+// Grayscale
+$base-gray: #000;
+$dark-gray: lighten($base-gray, 10%);
+$mid-gray: lighten($base-gray, 50%);
+$light-gray: lighten($base-gray, 90%);
 
-// Media widths; not based on specific devices, just rough demo widths.
+// Font colours
+$font-color-1: $brand-color-1;
+$font-color-2: $brand-color-2;
+$font-color-3: $brand-color-3;
+$font-color-4: $brand-color-4;
 
-$xs: 400px;
-$sm: 600px;
-$md: 800px;
-$lg: 1000px;
-$xl: 1200px;
+// Font familiess
+$fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-family-base: $fs1;
+
+// Font sizes
+$font-base: 1rem;
+$font-ratio: 1;
+$base-line-unit: $font-base*$font-ratio;
+$cap-height: 0.68;
+$font-size-body: $font-base;
+
+// Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
+$fs-canon: bs(3); // 48px
+$fs-double-great-primer: bs(2.250); // 36px
+$fs-four-line-brevier: bs(2); // 32px
+$fs-two-line-pica: bs(1.5); // 24px
+$fs-double-pica: bs(1.313); // 21px
+$fs-great-primer: bs(1.125); // 18px
+$fs-english: bs(.875); // 14px
+$fs-pica: bs(.75); // 12px
+
+$vertical-space: bs(3);
+$horizontal-space: bs(3);
+$vertical-space-small: $vertical-space / 4;
+$horizontal-space-small: $horizontal-space / 2;
+$grid-gutter: $horizontal-space;
+$m: $horizontal-space;
+
+//** Borders
+$light-border: 1px solid $brand-color-3;
+
+//** Vertical rythm
+//
+
+// Rivers
+
+
+// Islands

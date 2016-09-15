@@ -13,9 +13,7 @@ module.exports = function(grunt) {
       precision: 4
     },
     files: {
-     //"css/style.css": "src/scss/style.scss",
-     //"css/demo/style.css": "src/scss/demo/style.scss",
-     "css/layouts/style.css": "src/scss/layouts/style.scss"
+     "css/style.css": "src/scss/style.scss"
     }
    }
   },
@@ -73,7 +71,7 @@ module.exports = function(grunt) {
    options: {
      preprocessData: function(data) {
        const path = require('path');
-       var file = path.basename(this.src);
+       var file = path.basename(this.src[0]);
        var page = path.basename(this.src[0], '.html');
        var layouts = grunt.file.expand({
          filter: "isFile",
@@ -94,9 +92,7 @@ module.exports = function(grunt) {
     files: [{
      expand: true,
      cwd: "src/html",
-     src: [
-      "**/*.html"
-     ],
+     src: ["**/*.html"],
      dest: "",
      ext: ".html"
     }],
