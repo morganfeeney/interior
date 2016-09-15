@@ -3,12 +3,15 @@ html {
  // @media(min-width: 800px) {
  //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
  // }
+ @media(min-width: $screen-medium) {
+  font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
+ }
 }
 
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
-  @include baseline($fs-four-line-brevier, $margin: 2);
+  @include baseline($fs-four-line-brevier);
 }
 
 h2 {
@@ -27,6 +30,10 @@ p {
   @include baseline($font-base, $line-height: 1.5, $above: .3);
 }
 
+%plarge {
+  @include baseline($fs-double-pica, $line-height: 1.16, $above: .1);
+}
+
 %small, small {
   @include baseline($fs-pica);
 }
@@ -41,7 +48,7 @@ ul, ol {
 }
 
 blockquote p {
-  @include baseline($fs-two-line-pica);
+  @include baseline($fs-two-line-pica, $margin: 3, $below: 2);
   margin-left: 2rem;
   margin-right: 2rem;
   font-family: times;

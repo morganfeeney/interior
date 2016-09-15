@@ -52,6 +52,10 @@
   @include col(12);
 }
 
+#main-header {
+  @include baseline($font-base, $line-height: 2, $above: .4, $below: 1.7, $margin: 3);
+}
+
 .layout-thin {
   .container {
     max-width: $screen-large;
@@ -84,4 +88,12 @@
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+blockquote.outset-right {
+  @media(min-width: $screen-large) {
+    @include col(5, $calc: false, $margin: false);
+    float: right;
+    margin-right: 0;
+  }
 }
