@@ -12,6 +12,7 @@ img {
 }
 .container > img {
   align-self: center;
+  @include baseline($font-base, $no-text: true, $margin: 2);
 }
 
 .image-hero {
