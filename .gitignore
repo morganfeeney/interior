@@ -4,13 +4,4 @@ config.codekit
 /.sass-cache
 .DS_Store
 .sublime-project
-*style.css
-*style.css.map
-css/*style.css,
-css/*style.css.map,
-examples/*.html,
-layouts/*.html
-css/
-examples/
-layouts/
-index.html
+build/
