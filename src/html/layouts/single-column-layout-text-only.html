@@ -1,0 +1,50 @@
+{% extends "templates/prototype-template.njk" %}
+{% set body_classes="layout-thin" %}
+{% set post_page = true %}
+
+{% block header %}
+  {% block header_intro %}
+    <h1>{{ page | capitalize | replace("-", " ") }}</h1>
+    <p>{{ data.dummy_text.paragraph_short }}</p>
+  {% endblock %}
+{% endblock %}
+
+{% block main %}
+  {% block content_main_1 %}
+    <h2>{{ data.dummy_text.title_medium }}</h2>
+    <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+    <h3>{{ data.dummy_text.title_short }}</h3>
+    <p>{{ data.dummy_text.paragraph_medium }}</p>
+  {% endblock %}
+
+  {% block content_main_2 %}
+    <h3>{{ data.dummy_text.title_long }}</h3>
+    <p>{{ data.dummy_text.paragraph_medium }}</p>
+    <h4>{{ data.dummy_text.title_short }}</h4>
+    <blockquote class="outset-right">
+      <p>
+        {{ data.dummy_text.title_long }}
+      </p>
+    </blockquote>
+    <p>{{ data.dummy_text.paragraph_long }}</p>
+    <p>{{ data.dummy_text.paragraph_medium }}</p>
+    <blockquote>
+      <p>
+        {{ data.dummy_text.title_long }}
+      </p>
+    </blockquote>
+    <p>{{ data.dummy_text.paragraph_medium }}</p>
+  {% endblock %}
+  <div class="grid cols-2">
+    <div>
+      <h5>{{ data.dummy_text.title_long }}</h5>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
+    </div>
+    <div>
+      <h5>{{ data.dummy_text.title_short }}</h5>
+      <p>{{ data.dummy_text.paragraph_medium }}</p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block aside %}{% endblock %}
