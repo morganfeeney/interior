@@ -94,6 +94,27 @@ blockquote.outset-right {
   @media(min-width: $screen-large) {
     @include col(5, $calc: false, $margin: false);
     float: right;
-    margin-right: 0;
+    p {
+      margin-right: 0;
+    }
   }
+}
+
+blockquote.outset-left {
+  @media(min-width: $screen-large) {
+    @include col(5, $calc: false, $margin: false);
+    float: right;
+    p {
+      margin-left: 0;
+    }
+  }
+}
+
+// Multi column layout
+.cols-2 > div {
+  @include col(6);
+}
+
+.cols-3 > div {
+  @include col(4);
 }
