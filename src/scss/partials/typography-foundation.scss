@@ -11,7 +11,7 @@ html {
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
-  @include baseline($fs-canon);
+  @include baseline($fs-canon, $above: -.1);
 }
 
 h2 {
