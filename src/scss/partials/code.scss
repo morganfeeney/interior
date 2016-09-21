@@ -5,7 +5,6 @@ code, pre {
 }
 
 pre {
-	margin: 0 0 $vertical-space;
 	tab-size: 4;
 	code {
 		background: rgba($brand-color-1, 0.1);
@@ -19,9 +18,8 @@ pre {
     background: $brand-color-3;
     display: block;
     color: $brand-color-2;
-    padding: .6rem 2rem;
     text-transform: uppercase;
-    font: normal 600 1.2rem $font-family-base;
+    font-family: $font-family-base;
 	}
 }
 

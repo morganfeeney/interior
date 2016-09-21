@@ -18,7 +18,6 @@ h1 {
 }
 
 h2 {
-
     @include baseline($fs-four-line-brevier);
 }
 
@@ -43,7 +42,7 @@ p {
 }
 
 %plarge {
-  @include baseline($fs-double-pica, $line-height: 1.16, $above: .1);
+  @include baseline($fs-double-pica, $line-height: 1.16, $above: .1, $below: 1);
 }
 
 %small, small {
@@ -52,6 +51,17 @@ p {
 
 ul, ol {
   @include baseline($font-base, $line-height: 1.5, $above: .3);
+}
+
+pre, code {
+  @include baseline($font-base, $line-height: 1.5, $above: .3);
+}
+
+pre:before {
+  @include baseline($fs-english, $line-height: 1.75);
+  // Use mixin but override unwanted parts
+  margin-bottom: 0;
+  padding-left: 1rem;
 }
 
 // Text directly after a main heading
