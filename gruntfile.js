@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     ]
    },
    interior: {
-    src: "css/**/*.css"
+    src: "build/css/**/*.css"
    }
   },
   // Watch task
