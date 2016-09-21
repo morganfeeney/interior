@@ -1,37 +1,41 @@
 // Reset
 html {
- // @media(min-width: 800px) {
- //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
- // }
- @media(min-width: $screen-medium) {
+ @media(min-width: $screen-large) {
   font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
  }
+ // @media(min-width: $screen-larger) {
+ //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
+ // }
 }
 
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
-  @include baseline($fs-canon, $above: -.1);
+  @include baseline($fs-canon - .5);
+  @media(min-width: $screen-large) {
+    @include baseline($fs-canon);
+  }
 }
 
 h2 {
-  @include baseline($fs-four-line-brevier);
+
+    @include baseline($fs-four-line-brevier);
 }
 
 h3 {
-  @include baseline($fs-two-line-pica, $above: 1, $below: .5);
+    @include baseline($fs-two-line-pica, $above: 1, $below: .5);
 }
 
 h4 {
-  @include baseline($fs-double-pica, $above: 1.3, $below: .65);
+  @include baseline($fs-double-pica, $line-height: 1.15, $above: 1.1, $below: .5);
 }
 
 h5 {
-  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.25, $below: .6);
+  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.25, $below: .5);
 }
 
 h6 {
-  @include baseline($fs-english, $line-height: 1.2, $above: 1.15, $below: .5);
+  @include baseline($fs-english, $line-height: 1.2, $above: 1.1, $below: .5);
 }
 
 p {
