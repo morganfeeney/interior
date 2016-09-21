@@ -1,4 +1,6 @@
 #main-footer > .container {
   border-top: $light-border;
+  margin-top: calc(#{$vertical-space} + #{$footer-border-width});
+  //margin-top: $vertical-space;
   padding-top: $vertical-space;
 }
