@@ -1,11 +1,10 @@
 {% extends "templates/prototype-template.njk" %}
-{% set body_classes="layout-thin" %}
+{# {% set body_classes="layout-thin" %} #}
 {% set post_page = true %}
 
 {% block header %}
   {% block header_intro %}
     <h1>{{ page | capitalize | replace("-", " ") }}</h1>
-    <p>{{ data.dummy_text.paragraph_short }}</p>
   {% endblock %}
 {% endblock %}
 

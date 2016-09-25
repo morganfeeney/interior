@@ -4,7 +4,7 @@
 }
 
 // Calculate vertical space for the rhythm based on cap height and other variables
-@function cap-height($font-size, $line-height: $font-ratio, $cap-height: 0.68) {
+@function cap-height($font-size, $line-height: $font-ratio, $cap-height: $cap-height) {
   @return $font-size * ($line-height - $cap-height) / 2;
 }
 
