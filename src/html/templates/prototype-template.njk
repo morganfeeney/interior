@@ -2,6 +2,7 @@
 {% import "../macros/macro-gallery.njk" as galleries %}
 {% import "../macros/macro-post.njk" as posts %}
 {% set title = page | capitalize | replace("-", " ") %}
+{% set home_url = "http://local.interior.com/layouts/" %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,7 +16,7 @@
 		{% endblock %}
 		<style>
 			h1:before {
-				content: 'Layout: {{ title }}'
+				content: 'Page: {{ title }}'
 			}
 		</style>
 	</head>
@@ -23,8 +24,7 @@
 		<header id="main-header" class="container-outer {{ main_header_classes }}">
 			<div class="container">
 				{% block header %}
-					<p>Interior</p>
-					<p>Grid system</p>
+					<a id="main-header-home-link" class="home-link" href="{{ home_url }}"><p>Interior</p><p>Grid system</p></a>
 				{% endblock %}
 			</div>
 		</header>
