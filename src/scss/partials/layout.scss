@@ -14,17 +14,6 @@
    flex-flow: row wrap;
  }
 
- // .aside-layout {
- //   #main-aside {
- //     > :first-child {
- //       margin-top: $v-space-h1;
- //       > :first-child {
- //         padding-top: $v-space-h1-pairing;
- //       }
- //     }
- //   }
- // }
-
  .container {
    @extend %container;
    padding: 0 $grid-gutter;
@@ -54,7 +43,14 @@
 
 #main-header {
   //margin: 3rem 0;
-  @include baseline($font-base, $above: .4, $below: 0, $margin: 3);
+  @include baseline($font-base, $above: 1, $below: 10);
+  border-top: 4px solid $brand-color-1;
+  text-transform: uppercase;
+  p {
+    @include baseline($fs-two-line-pica);
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 
 .layout-thin {
@@ -93,10 +89,11 @@ dl {
 
 blockquote.outset-right {
   @media(min-width: $screen-large) {
-    @include col(5, $calc: false, $margin: false);
+    @include col(4, $calc: false, $margin: false);
     float: right;
     p {
       margin-right: 0;
+      padding-right: 0;
     }
   }
 }

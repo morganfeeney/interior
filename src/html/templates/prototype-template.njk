@@ -1,22 +1,31 @@
 {% import "../macros/macro-image.njk" as images %}
 {% import "../macros/macro-gallery.njk" as galleries %}
 {% import "../macros/macro-post.njk" as posts %}
+{% set title = page | capitalize | replace("-", " ") %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{{ page | capitalize | replace("-", " ") }}</title>
+		<title>{{ title }}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
 		<link rel="stylesheet" href="{% if base_path %}{{ base_path }}{% else %}..{% endif %}/css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% block header_scripts %}
 			{% include "partials/head-scripts.njk" %}
 		{% endblock %}
+		<style>
+			h1:before {
+				content: 'Layout: {{ title }}'
+			}
+		</style>
 	</head>
 	<body class="{{ page }} {{ body_classes }}">
 		<header id="main-header" class="container-outer {{ main_header_classes }}">
 			<div class="container">
-				{% block header %}{% endblock %}
+				{% block header %}
+					<p>Interior</p>
+					<p>Grid system</p>
+				{% endblock %}
 			</div>
 		</header>
 		<article id="main-article" class="{{ article_classes }}">

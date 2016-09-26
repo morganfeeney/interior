@@ -43,9 +43,9 @@ $font-color-4: $brand-color-4;
 $fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fs3: "times", "times new roman", serif;
-$fs5: "letter-gothic-std", sans-serif;
+$fs5: "letter-gothic-std", Helvetica, Arial, sans-serif;
 
-$font-family-base: $fs1;
+$font-family-base: $fs5;
 
 // Font sizes
 $font-base: 1rem;

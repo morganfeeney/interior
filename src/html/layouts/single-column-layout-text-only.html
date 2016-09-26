@@ -2,13 +2,13 @@
 {# {% set body_classes="layout-thin" %} #}
 {% set post_page = true %}
 
-{% block header %}
+{# {% block header %}
+
+{% endblock %} #}
+{% block main %}
   {% block header_intro %}
     <h1>{{ page | capitalize | replace("-", " ") }}</h1>
   {% endblock %}
-{% endblock %}
-
-{% block main %}
   {% block content_main_1 %}
     <h2>{{ data.dummy_text.title_medium }}</h2>
     <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>

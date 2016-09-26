@@ -13,7 +13,7 @@ html {
 h1 {
   @include baseline($fs-canon - .5);
   @media(min-width: $screen-large) {
-    @include baseline($fs-canon, $above: .75, $below: 8);
+    @include baseline($fs-canon, $above: .75, $below: 8, $margin: 6);
   }
   border-top: $light-border;
   padding-right: 30%;
@@ -88,7 +88,7 @@ blockquote p {
   @include baseline($fs-two-line-pica, $above: 1.6, $below:3);
   margin-left: $horizontal-space;
   margin-right: $horizontal-space;
-  font-family: $fs3;
+  //font-family: $fs3;
   font-style: italic;
 }
 
