@@ -13,9 +13,9 @@ body {
   }
 }
 
-.vh100-layout .intro  > p {
+.vh100-layout .intro  > p:first-of-type {
   @include border-with-content('intro');
-  @include baseline($font-base, $line-height: 1.5, $above: .6);
+  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 1);
 }
 
 

@@ -43,7 +43,7 @@
 
 #main-header {
   //margin: 3rem 0;
-  @include baseline($font-base, $above: 1, $below: 10);
+  @include baseline($font-base, $above: 1, $below: 6);
   border-top: 4px solid $brand-color-1;
   text-transform: uppercase;
 }
@@ -59,7 +59,7 @@
     .intro {
       display: flex;
       flex-flow: row wrap;
-      > p {
+      > p:first-of-type {
         align-self: flex-end;
       }
     }
