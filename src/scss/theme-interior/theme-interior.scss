@@ -6,4 +6,23 @@ body {
 
 .home-link {
   text-decoration: none;
+  p {
+    @include baseline($fs-two-line-pica);
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+.vh100-layout .intro  > p {
+  @include border-with-content('intro');
+  @include baseline($font-base, $line-height: 1.5, $above: .6);
+}
+
+
+p {
+ padding-right: $horizontal-offset;
+}
+
+[class*=cols-] p {
+  padding-right: 0;
 }

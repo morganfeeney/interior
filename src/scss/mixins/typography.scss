@@ -1,0 +1,9 @@
+@mixin border-with-content($content: 'Page title') {
+  border-top: $light-border;
+  &:before {
+    content: '#{$content}';
+    @include baseline($fs-pica);
+    position: absolute;
+    top: -1.25rem;
+  }
+}
