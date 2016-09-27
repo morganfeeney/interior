@@ -4,7 +4,7 @@
 
 @mixin col(
   $col,
-  $width: 100% / $cols * $col,
+  $width: cw($col),
   $margin: true,
   $calc: true
 ){
@@ -26,7 +26,7 @@
 // For Description lists only at the time of writing
 @mixin text-col(
   $col,
-  $width: 100% / $cols * $col,
+  $width: cw($col),
   $min: false
 ){
   @if $min == true {
