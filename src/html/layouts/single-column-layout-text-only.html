@@ -6,16 +6,18 @@
 {% block header %}
   {{ super() }}
   <div class="intro">
-    <h1>{{ page | capitalize | replace("-", " ") }}</h1>
-    <p>{{ data.dummy_text.paragraph_short }}</p>
+    <h1>Things are what they used to be</h1>
+    <p>The way things are built on the web changes frequently. New succeeds old, things (supposedly) get faster.
+      To enable a less-restricted level of creativity, whilst accommodating web, <i>must succeed</i>.
+      However... It's important we remember that before the web there was a wealth of layout design.</p>
   </div>
 {% endblock %}
 
 {% block main %}
-    <h2>{{ data.dummy_text.title_medium }}</h2>
-    <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-    <h3>{{ data.dummy_text.title_short }}</h3>
-    <p>{{ data.dummy_text.paragraph_medium }}</p>
+  <h2>{{ data.dummy_text.title_medium }}</h2>
+  <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
+  <h3>{{ data.dummy_text.title_short }}</h3>
+  <p>{{ data.dummy_text.paragraph_medium }}</p>
 
   {% block content_main_2 %}
     <h3>{{ data.dummy_text.title_long }}</h3>
