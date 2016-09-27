@@ -116,3 +116,15 @@ blockquote.outset-left {
 .cols-3 > div {
   @include col(4);
 }
+
+.column-count-experiment {
+  column-count: 2;
+  column-width: 100vw;
+  height: 100vh;
+  column-gap: 7rem;
+  max-width: none;
+}
+
+.fill {
+  height: 100%;
+}

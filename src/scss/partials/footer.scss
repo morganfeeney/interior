@@ -1,5 +1,4 @@
-#main-footer > .container {
+#main-footer .sig {
   border-top: $light-border;
-  margin-top: calc(#{$vertical-space} + #{$footer-border-width});
   //margin-top: $vertical-space;
 }
