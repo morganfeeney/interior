@@ -46,19 +46,34 @@
   @include baseline($font-base, $above: 1, $below: 10);
   border-top: 4px solid $brand-color-1;
   text-transform: uppercase;
-  p {
-    @include baseline($fs-two-line-pica);
-    margin-bottom: 0;
-    padding: 0;
+}
+
+.vh100-layout {
+  #main-header {
+    height: 100vh;
+    > .container {
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .intro {
+      display: flex;
+      flex-flow: row wrap;
+      > p {
+        align-self: flex-end;
+      }
+    }
   }
 }
 
+// Skinny single column layout
 .layout-thin {
   .container {
     max-width: $screen-large;
   }
 }
 
+// Flexible Description lists
 .dl-horizontal {
   @extend %flex-container;
   justify-content: flex-end;

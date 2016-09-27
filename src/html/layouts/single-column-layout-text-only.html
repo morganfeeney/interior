@@ -1,20 +1,21 @@
 {% extends "templates/prototype-template.njk" %}
 {# {% set body_classes="layout-thin" %} #}
 {% set post_page = true %}
+{% set body_classes = "vh100-layout" %}
 
-{# {% block header %}
-
-{% endblock %} #}
-{% block main %}
-  {% block header_intro %}
+{% block header %}
+  {{ super() }}
+  <div class="intro">
     <h1>{{ page | capitalize | replace("-", " ") }}</h1>
-  {% endblock %}
-  {% block content_main_1 %}
+    <p>{{ data.dummy_text.paragraph_short }}</p>
+  </div>
+{% endblock %}
+
+{% block main %}
     <h2>{{ data.dummy_text.title_medium }}</h2>
     <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
     <h3>{{ data.dummy_text.title_short }}</h3>
     <p>{{ data.dummy_text.paragraph_medium }}</p>
-  {% endblock %}
 
   {% block content_main_2 %}
     <h3>{{ data.dummy_text.title_long }}</h3>
