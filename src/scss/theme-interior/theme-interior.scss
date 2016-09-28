@@ -26,15 +26,33 @@ body {
   }
 }
 
-
 .vh100-layout .intro h1 {
   width: cw(12);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5 {
+  padding-right: $horizontal-offset;
+  @media(min-width: $screen-medium) {
+    padding-right: $horizontal-offset-larger;
+  }
+}
+
 p {
- padding-right: $horizontal-offset;
+  padding-right: $horizontal-offset;
+  @media(min-width: $screen-medium) {
+    padding-right: $horizontal-offset-larger;
+  }
 }
 
 [class*=cols-] p {
   padding-right: 0;
+}
+
+.link-group {
+  display: flex;
+  flex-flow: column;
 }
