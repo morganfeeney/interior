@@ -14,12 +14,13 @@ body {
 }
 
 .vh100-layout .intro  > p:first-of-type {
-  @include border-with-content('introduction');
-  //@include baseline($font-base, $line-height: 1.5, $above: .6, $below: 1);
-  //@include baseline($fs-great-primer, $line-height: 1.35, $above: 1, $below: 1.5);
-  @include baseline($fs-double-pica, $line-height: 1.15, $above: 1.1, $below: 2)
+  @include border-with-content('Content');
+  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 0);
 }
 
+.vh100-layout .intro h1 {
+  flex: 1;
+}
 
 p {
  padding-right: $horizontal-offset;
