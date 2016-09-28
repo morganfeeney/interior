@@ -1,4 +1,4 @@
-@mixin border-with-content($content: 'Page title') {
+@mixin border-with-content($content: 'Title') {
   border-top: $light-border;
   &:before {
     content: '#{$content}';

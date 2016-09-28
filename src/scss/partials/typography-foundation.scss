@@ -15,7 +15,7 @@ h1, .h1 {
   @media(min-width: $screen-large) {
     @include baseline($fs-canon, $above: .75, $below: 8, $margin: 6);
   }
-  @include border-with-content('Page title');
+  @include border-with-content('Title');
 }
 
 h2, .h2 {
