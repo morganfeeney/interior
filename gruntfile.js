@@ -71,6 +71,9 @@ module.exports = function(grunt) {
    options: {
      preprocessData: function(data) {
        const path = require('path');
+       var date = new Date();
+       var iso_date = date.toISOString();
+       var nice_date = date.toDateString();
        var file = path.basename(this.src[0]);
        var page = path.basename(this.src[0], '.html');
        var layouts = grunt.file.expand({
@@ -78,6 +81,8 @@ module.exports = function(grunt) {
          cwd: "src/html/layouts"
        },["*.html","!index.html"]);
        var result = {
+         iso_date: iso_date,
+         nice_date: nice_date,
          file: file,
          page: page,
          layouts: layouts,
