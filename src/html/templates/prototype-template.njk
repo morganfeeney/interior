@@ -24,11 +24,11 @@
 			</div>
 		</header>
 		<article id="main-article" class="{{ article_classes }}">
-			<section id="main-section" class="container-outer {{ main_section_classes }}">
+			<main class="container-outer {{ main_classes }}">
 				<div class="container {{ container_class }}">
 					{% block main %}{% endblock %}
 				</div>
-			</section>
+			</main>
 			{% if post_page %}
 				{% block posts_nav %}
 					<section id="posts-nav-section" class="container-outer {{ posts_nav_section_classes }}">

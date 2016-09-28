@@ -15,9 +15,8 @@
     line-height: $line-height;
   }
   padding-top: $padding-top;
-  @if $margin > 0 {
+  @if $margin > 0 or $margin < 0 {
     margin-top: $margin-top;
   }
   margin-bottom: $margin-bottom;
-  position: relative;
 }
