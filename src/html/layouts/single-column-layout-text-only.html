@@ -7,59 +7,18 @@
   {{ super() }}
   <div class="intro">
     <h1>Web layout design is evolving.</h1>
-    <p>Something <u>big</u> is happening, specificaton is pushing the web forward in unprecedented ways.
-      Those ready to receive such gifts are on the verge of a new era.
-      However, we mustn't forget that beyond the web is a wealth of layout design resource to learn from.</p>
+    <p>Something <u>big</u> is happening, specificaton is pushing the web forward in an unprecedented way.
+      Those ready to embrace change are on the verge of a new era.
+      <i>However</i>, we mustn't forget that beyond the web is a wealth of layout design resource to learn from.</p>
   </div>
 {% endblock %}
 
 {% block main %}
-  <h5>But aren't web and print different beasts?</h5>
-  <p>Paper can fold yet it doesn't shrink. You needn't worry about a paper layout bursting at the seams when it is rotated on it's side.
-  The fluidity of web browsers alone presents us with a unique set of challenges those in the world of print don't experience.</p>
-  <p>Unreliable hacks, dependency upon javascript frameworks, and float based grid systems are problematic, and will eventually break if you push too hard. We now have a range of different features to play with.</p>
-  {% block content_main_2 %}
-    <h4>{{ data.dummy_text.title_long }}</h4>
-    <p>{{ data.dummy_text.paragraph_medium }}</p>
-    <h4>{{ data.dummy_text.title_short }}</h4>
-    <p>{{ data.dummy_text.paragraph_long }}</p>
-    <blockquote class="outset-right">
-      <p>
-        {{ data.dummy_text.title_long }}
-      </p>
-    </blockquote>
-    <p>{{ data.dummy_text.paragraph_medium }}</p>
-    <blockquote>
-      <p>
-        {{ data.dummy_text.title_long }}
-      </p>
-    </blockquote>
-    <p>{{ data.dummy_text.paragraph_medium }}</p>
-  {% endblock %}
-  <div class="grid cols-2">
-    <div>
-      <h5>{{ data.dummy_text.title_long }}</h5>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
-    </div>
-    <div>
-      <h5>{{ data.dummy_text.title_short }}</h5>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
-    </div>
-  </div>
-  <div class="grid cols-3">
-    <div>
-      <h6>{{ data.dummy_text.title_long }}</h5>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
-    </div>
-    <div>
-      <h6>{{ data.dummy_text.title_short }}</h5>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
-    </div>
-    <div>
-      <h6>{{ data.dummy_text.title_short }}</h5>
-      <p>{{ data.dummy_text.paragraph_medium }}</p>
-    </div>
-  </div>
+  <h5>Web and print are different beasts</h5>
+  <p>Paper can fold yet it doesn't shrink. You needn't worry about a paper layout bursting at the seams when it is rotated.
+  The fluidity of web alone presents a unique set of challenges, the world of print won't experience.</p>
+  <p>The transition/translation from print to web is challenging, you can't apply that 'pretty' layout you created in Illustrator to the browser, whilst solving issues surounding content reflow. Besides... we've been limited by browser capability, we still are but we're <i>moving forward</i>.</p>
+  <p>The capability of browsers has lead to unreliable hacks, javascript frameworks for presentation, and float based grid systems for scaffolding. They are <i>workarounds</i>, are problematic, and will eventually break if you push (or scroll) too hard. We've wanted to be able to create those lovely designs yet until now haven't had the tools.</p>
 {% endblock %}
 
 {% block aside %}{% endblock %}
