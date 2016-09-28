@@ -1,6 +1,6 @@
 {% extends "templates/prototype-template.njk" %}
 {# {% set body_classes="layout-thin" %} #}
-{% set post_page = true %}
+
 {% set body_classes = "vh100-layout" %}
 
 {% block header %}
@@ -28,9 +28,12 @@
 <section id="interior">
   <h5>The need for Interior</h5>
   <p>Automation, structure, re-usable &amp; familiar code. I wanted a framework that suits my needs, <i>it's designed for me</i>. I always end up customising things in the end so thought it was time to bite the bullet. Feel free to use it &amp; get involved if you feel strongly about contributing.</p>
-</section>
-<section id="playground">
-
+  <h5>next</h5>
+  <nav class="link-group">
+    <a class="button" href="{{ home_url }}/documentation.html">Read the documentation</a>
+    <a class="button" href="{{ home_url }}/demos/index.html">View the demos</a>
+    <a class="button" href="https://github.com/morganfeeney/interior">View on Github</a>
+  </nav>
 </section>
 
 {% endblock %}
