@@ -7,21 +7,19 @@
   {{ super() }}
   <div class="intro">
     <h1>Web layout design is evolving.</h1>
-    <p>Something <u>big</u> is happening, specificatons are pushing the web forward in unprecedented ways.
-      People ready to receive such gifts are on the verge of a new era.
-      <i>However...</i> It is important to remember that outside the web there is a wealth of layout design ready and waiting to direct us.
-      <br><br>But why?</p>
+    <p>Something <u>big</u> is happening, specificaton is pushing the web forward in unprecedented ways.
+      Those ready to receive such gifts are on the verge of a new era.
+      However, we mustn't forget that beyond the web is a wealth of layout design resource to learn from.</p>
   </div>
 {% endblock %}
 
 {% block main %}
-  <h2>{{ data.dummy_text.title_medium }}</h2>
-  <p>{{ data.dummy_text.paragraph_short }} <a href="#">get in touch</a>.</p>
-  <h3>{{ data.dummy_text.title_short }}</h3>
-  <p>{{ data.dummy_text.paragraph_medium }}</p>
-
+  <h5>But aren't web and print different beasts?</h5>
+  <p>Paper can fold yet it doesn't shrink. You needn't worry about a paper layout bursting at the seams when it is rotated on it's side.
+  The fluidity of web browsers alone presents us with a unique set of challenges those in the world of print don't experience.</p>
+  <p>Unreliable hacks, dependency upon javascript frameworks, and float based grid systems are problematic, and will eventually break if you push too hard. We now have a range of different features to play with.</p>
   {% block content_main_2 %}
-    <h3>{{ data.dummy_text.title_long }}</h3>
+    <h4>{{ data.dummy_text.title_long }}</h4>
     <p>{{ data.dummy_text.paragraph_medium }}</p>
     <h4>{{ data.dummy_text.title_short }}</h4>
     <p>{{ data.dummy_text.paragraph_long }}</p>
