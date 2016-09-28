@@ -10,7 +10,7 @@ html {
 
 // Set up a page with h tags in columns and get them to align.
 
-h1, .h1 {
+h1 {
   @include baseline($fs-canon - .5, $above: .75);
   @media(min-width: $screen-large) {
     @include baseline($fs-canon, $above: .75, $below: 8, $margin: 6);
@@ -18,28 +18,37 @@ h1, .h1 {
   @include border-with-content();
 }
 
-h2, .h2 {
+h2 {
     @include baseline($fs-four-line-brevier);
 }
 
-h3, .h3 {
+h3 {
     @include baseline($fs-two-line-pica, $above: 1, $below: .5);
 }
 
-h4, .h4 {
+h4 {
   @include baseline($fs-double-pica, $line-height: 1.15, $above: 1.1, $below: .5);
 }
 
-h5, .h5 {
+h5 {
   @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.24, $below: .5);
 }
 
-h6, .h6 {
+h6 {
   @include baseline($fs-english, $line-height: 1.2, $above: 1.1, $below: .5);
 }
 
 p {
   @include baseline($font-base, $line-height: 1.5, $above: .2);
+}
+
+.link-group {
+  @include baseline($font-base, $line-height: 1.5, $above: .2);
+  text-transform: uppercase;
+  > a {
+    //text-decoration: none;
+    text-indent: 1rem;
+  }
 }
 
 %plarge {
@@ -101,4 +110,9 @@ figcaption {
   padding: inherit;
   font-style: italic;
   padding: $vertical-space-small $horizontal-space-small;
+}
+
+.sig {
+  @include border-with-content('Colophon');
+  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 0, $margin: 6);
 }
