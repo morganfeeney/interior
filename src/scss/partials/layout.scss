@@ -59,6 +59,7 @@
     .intro {
       display: flex;
       flex-flow: row wrap;
+      margin-top: 2rem;
       > p:first-of-type {
         align-self: flex-end;
       }

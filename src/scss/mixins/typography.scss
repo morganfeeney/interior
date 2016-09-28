@@ -2,6 +2,7 @@
   border-top: $light-border;
   position: relative;
   &:before {
+    text-transform: uppercase;
     content: '#{$content}';
     @include baseline($fs-pica);
     position: absolute;

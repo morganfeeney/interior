@@ -15,7 +15,7 @@ body {
 
 .vh100-layout .intro  > p:first-of-type {
   @include border-with-content('Foreword:');
-  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 0);
+  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 0, $margin: 2);
 }
 
 .vh100-layout time {
