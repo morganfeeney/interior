@@ -79,12 +79,25 @@ pre:before {
   @include baseline($fs-two-line-pica, $line-height: 1, $below: .5);
 }
 
-blockquote p {
-  @include baseline($fs-two-line-pica, $above: 1.6, $below:3);
-  margin-left: $horizontal-space;
-  margin-right: $horizontal-space;
-  //font-family: $fs3;
-  font-style: italic;
+blockquote {
+  @include baseline($below: 2, $margin: 3);
+  p {
+    @include baseline($fs-two-line-pica, $below: 0);
+    font-style: normal;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    &::before {
+      content: "\2018";
+    }
+    &::after {
+      content: "\2019";
+    }
+  }
+  cite {
+    @include baseline($above: 0);
+    font-style: normal;
+  }
 }
 
 .page-meta,
