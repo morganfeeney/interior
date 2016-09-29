@@ -50,18 +50,26 @@
 
 .vh100-layout {
   #main-header {
-    height: 100vh;
-    > .container {
-      height: 100%;
-      display: flex;
-      flex-flow: row wrap;
-    }
     .intro {
-      display: flex;
-      flex-flow: row wrap;
-      margin-top: 2rem;
-      > p:first-of-type {
-        align-self: flex-end;
+      margin-top: 3rem;
+    }
+  }
+}
+@media(min-width: $screen-medium) {
+  .vh100-layout {
+    #main-header {
+      height: 100vh;
+      > .container {
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .intro {
+        display: flex;
+        flex-flow: row wrap;
+        > p:first-of-type {
+          align-self: flex-end;
+        }
       }
     }
   }

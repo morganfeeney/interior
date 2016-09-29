@@ -11,7 +11,7 @@ html {
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
-  @include baseline($fs-canon - .5, $above: .75);
+  @include baseline($fs-canon - 1, $above: .75);
   @media(min-width: $screen-large) {
     @include baseline($fs-canon, $above: .75, $below: 8, $margin: 6);
   }

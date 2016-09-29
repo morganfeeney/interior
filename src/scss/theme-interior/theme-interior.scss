@@ -1,5 +1,5 @@
 body {
-  font-family: $fs5;
+  font-family: $font-family-base;
   // Can make use of the colour arrangement by overlaying white and funky salmon CSS diagrams on top.
   background: $brandbg-light;
 }
@@ -15,7 +15,7 @@ body {
 
 .vh100-layout .intro  > p:first-of-type {
   @include border-with-content('Foreword:');
-  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 0, $margin: 2);
+  @include baseline($line-height: 1.5, $above: .6, $below: 0, $margin: 3);
 }
 
 .vh100-layout time {

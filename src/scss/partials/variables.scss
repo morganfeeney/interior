@@ -3,14 +3,13 @@
    ============================================================== */
 
 // Units
-$screen-small: 580px;
+$screen-small: 569px;
 $screen-medium: 700px;
 $screen-large: 900px;
 $screen-larger: 1200px;
 $cols: 12;
 
 $wrapper-width-large: $screen-larger;
-$g: $cols*$cols/100;
 
 //** Colours
 //
@@ -40,17 +39,17 @@ $font-color-3: $brand-color-3;
 $font-color-4: $brand-color-4;
 
 // Font familiess
-$fs1: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fs1: "letter-gothic-std", Helvetica, Arial, sans-serif;
 $fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fs3: "times", "times new roman", serif;
-$fs5: "letter-gothic-std", Helvetica, Arial, sans-serif;
 
-$font-family-base: $fs5;
+$font-family-base: $fs1;
 
 // Font sizes
 $font-base: 1rem;
 $font-ratio: 1;
 $base-line-unit: $font-base*$font-ratio;
+// This is for Arial/Helvetica
 $cap-height: 0.68;
 $font-size-body: $font-base;
 
@@ -65,7 +64,7 @@ $fs-english: bs(.875); // 14px
 $fs-pica: bs(.75); // 12px
 
 $vertical-space: bs(3);
-$horizontal-space: bs(3);
+$horizontal-space: bs(2);
 $vertical-space-small: $vertical-space / 4;
 $horizontal-space-small: $horizontal-space / 2;
 $grid-gutter: $horizontal-space;
