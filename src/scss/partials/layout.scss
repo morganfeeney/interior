@@ -112,10 +112,10 @@ dl {
 }
 
 blockquote.outset-right {
+  text-transform: uppercase;
   @media(min-width: $screen-large) {
     @include col(6, $calc: false, $margin: false);
     margin-left: auto;
-    text-transform: uppercase;
     text-align: right;
     p {
       margin-right: 0;

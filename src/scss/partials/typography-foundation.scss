@@ -94,10 +94,11 @@ blockquote {
       content: "\2019";
     }
   }
-  cite {
-    @include baseline($above: 0);
-    font-style: normal;
-  }
+}
+
+cite {
+  @include baseline($above: 0);
+  font-style: normal;
 }
 
 .page-meta,
