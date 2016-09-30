@@ -19,7 +19,8 @@ h1 {
 }
 
 h2 {
-    @include baseline($fs-four-line-brevier);
+    @include baseline($fs-four-line-brevier, $above: .5, $below: 6, $margin: 5);
+    @include border-with-content();
 }
 
 h3 {
