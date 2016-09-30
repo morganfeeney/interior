@@ -9,20 +9,41 @@
 {% endblock %}
 
 {% block intro %}
-  <h2>Documentation.</h2>
+  <h2>Usage documentation.</h2>
+  <div class="grid cols-2">
+    <div>
+      <p>The only rules here are try to avoid describing the layout in the markup.
+        Why? There's no point changing things in more than one place.</p>
+    </div>
+    <div>
+      {# <div class="grid">
+       <dl class="dl-horizontal dl-page-meta">
+        <dt>Date</dt>
+        <dd>22/05/2016</dd>
+       </dl>
+       <dl class="dl-horizontal dl-page-meta">
+        <dt>Category</dt>
+        <dd>Design</dd>
+       </dl>
+     </div> #}
+    </div>
+  </div>
 {% endblock %}
 
 
 {% block main %}
   <section id="mixins">
     <h2>Mixin</h2>
-
     <div class="grid cols-2">
       <div>
         <h5>col</h5>
+        <p>
+          Information about the col() mixin
+        </p>
+        {# <code class="inline-code language-scss">.col()</code> #}
       </div>
       <div>
-        {% include "../partials/cards/code/code-scss.njk" %}
+        {% include "../partials/code-samples/col-scss.njk" %}
       </div>
     </div>
   </section>
