@@ -1,0 +1,16 @@
+{% extends "templates/prototype-template.njk" %}
+
+{% set body_classes = "standard-layout" %}
+
+{% block header %}
+  {{ super() }}
+  <div class="intro">
+    {% block intro %}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block main %}
+{% endblock %}
+
+{% block aside %}{% endblock %}
