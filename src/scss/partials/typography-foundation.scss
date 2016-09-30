@@ -19,7 +19,7 @@ h1 {
 }
 
 h2 {
-    @include baseline($fs-four-line-brevier, $above: .5, $below: 6, $margin: 5);
+    @include baseline($fs-four-line-brevier, $above: .5, $below: 5, $margin: 7);
     @include border-with-content();
 }
 
