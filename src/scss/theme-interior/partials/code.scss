@@ -9,7 +9,7 @@ pre {
 	code {
 		background: rgba($brand-color-1, 0.1);
 		display: block;
-		padding: 2rem;
+		padding: 1rem 2rem;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -20,6 +20,9 @@ pre {
     color: $brand-color-2;
     text-transform: uppercase;
     font-family: $font-family-base;
+		font-size: .65rem;
+		font-weight: bold;
+		letter-spacing: .15rem;
 	}
 }
 
