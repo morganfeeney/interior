@@ -10,12 +10,21 @@
 
 {% block intro %}
   <h2>Documentation.</h2>
-  <h2>This is a sub heading</h2>
 {% endblock %}
 
 
 {% block main %}
-  <section id="">
+  <section id="mixins">
+    <h2>Mixin</h2>
+
+    <div class="grid cols-2">
+      <div>
+        <h5>col</h5>
+      </div>
+      <div>
+        {% include "../partials/cards/code/code-scss.njk" %}
+      </div>
+    </div>
   </section>
   <section id="">
   </section>
