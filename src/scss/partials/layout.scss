@@ -44,13 +44,12 @@
   }
 }
 
-.vh100-layout {
-  #main-header {
-    .intro {
-      margin-top: 3rem;
-    }
+#main-header {
+  .intro {
+    margin-top: 3rem;
   }
 }
+
 @media(min-width: $screen-medium) {
   .vh100-layout {
     #main-header {
