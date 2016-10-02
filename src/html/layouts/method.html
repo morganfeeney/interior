@@ -1,0 +1,43 @@
+{% extends "layouts/standard-layout.njk" %}
+
+{% block embedded_css %}
+<style>
+h1:before {
+  content: "Specification";
+}
+h2:first-of-type:before {
+  content: "Sub heading";
+}
+</style>
+{% endblock %}
+
+{% block intro %}
+<h1>Method.</h1>
+{% endblock %}
+
+
+{% block main %}
+<section id="intro">
+  <h2>Method</h2>
+  <div class="grid cols-2">
+    <div>
+      <p>The main rule: avoid describing the layout in the markup.
+        Why? There's no point changing things in more than one place.</p>
+    </div>
+    <div>
+      {# <div class="grid">
+       <dl class="dl-horizontal dl-page-meta">
+        <dt>Date</dt>
+        <dd>22/05/2016</dd>
+       </dl>
+       <dl class="dl-horizontal dl-page-meta">
+        <dt>Category</dt>
+        <dd>Design</dd>
+       </dl>
+     </div> #}
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block aside %}{% endblock %}
