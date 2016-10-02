@@ -4,6 +4,29 @@ body {
   background: $brandbg-light;
 }
 
+.vh100-layout {
+  .intro > p:first-of-type {
+   @include border-with-content('Foreword');
+   @include baseline($line-height: 1.5, $above: .6, $below: 0, $margin: 3);
+ }
+  time {
+    @include baseline($fs-pica, $line-height: 1.5, $above: .6, $below: 0, $margin: -2);
+    position: absolute;
+    @media(min-width: $screen-large) {
+      @include baseline($fs-pica, $line-height: 1.5, $above: .6, $below: 0, $margin: 4);
+    }
+  }
+  .intro h1 {
+    width: cw(12);
+  }
+  p {
+    padding-right: $horizontal-offset;
+    @media(min-width: $screen-medium) {
+      padding-right: $horizontal-offset-larger;
+    }
+  }
+}
+
 .home-link {
   text-decoration: none;
   p {
@@ -12,36 +35,11 @@ body {
     padding: 0;
   }
 }
-
-.vh100-layout .intro  > p:first-of-type {
-  @include border-with-content('Foreword');
-  @include baseline($line-height: 1.5, $above: .6, $below: 0, $margin: 3);
-}
-
-.vh100-layout time {
-  @include baseline($fs-pica, $line-height: 1.5, $above: .6, $below: 0, $margin: -2);
-  position: absolute;
-  @media(min-width: $screen-large) {
-    @include baseline($fs-pica, $line-height: 1.5, $above: .6, $below: 0, $margin: 4);
-  }
-}
-
-.vh100-layout .intro h1 {
-  width: cw(12);
-}
-
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
 h1, h2, h3, h4, h5 {
-  padding-right: $horizontal-offset;
-  @media(min-width: $screen-medium) {
-    padding-right: $horizontal-offset-larger;
-  }
-}
-
-p {
   padding-right: $horizontal-offset;
   @media(min-width: $screen-medium) {
     padding-right: $horizontal-offset-larger;

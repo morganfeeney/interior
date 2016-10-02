@@ -18,9 +18,27 @@ h1 {
   @include border-with-content();
 }
 
+.standard-layout {
+  h1 {
+    @include baseline($fs-canon - 1, $above: .75);
+    @media(min-width: $screen-large) {
+      @include baseline($fs-canon, $above: .75, $below: 5, $margin: 6);
+    }
+  }
+}
+
 h2 {
-    @include baseline($fs-four-line-brevier, $above: .5, $below: 5, $margin: 7);
+    @include baseline($fs-four-line-brevier, $above: .5, $below: 0, $margin: 1);
     @include border-with-content();
+}
+
+.standard-layout {
+  h2 {
+    @include baseline($fs-two-line-pica, $above: 1, $below: .5, $margin: 4);
+  }
+  h2 + p {
+    @include col(6, $calc: false, $margin: false);
+  }
 }
 
 h3 {
@@ -107,14 +125,6 @@ cite {
 .languages {
   //display: inline-flex;
 }
-
-
-// .content-main,
-// .content-sub {
-//   > :first-child {
-//     margin-top: 0;
-//   }
-// }
 
 // figure {
 //   margin-bottom: $vertical-space;
