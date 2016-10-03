@@ -6,7 +6,7 @@ h1:before {
   content: "Specification"
 }
   h2:first-of-type:before {
-    content: "Sub heading";
+    content: "Mixin";
   }
 </style>
 {% endblock %}
@@ -17,11 +17,11 @@ h1:before {
 
 
 {% block main %}
-  <section id="mixins">
+  <section id="grid">
     <h2>Grid</h2>
     <p>Layouts can be created using a grid structure made from columns. A grid can be constructed in many ways by using the <code class="code-inline language-scss">.col()</code> mixin and then passing in parameters as needed.</p>
     <h5>Required arguments</h5>
-    <p>The <strong>only</strong> required argument is numerical. The value is used to divide the number of columns passed to the <code class="code-inline language-scss">$cols</code> variable.</p>
+    <p>The <strong>only</strong> required argument is numerical. The value is used to calculate the number of columns out of the total passed to the <code class="code-inline language-scss">$cols</code> variable.</p>
     <div class="grid cols-2">
       <div>
         <div class="grid">
@@ -37,7 +37,7 @@ h1:before {
     </div>
     {# Optional parameters #}
     <h5>Optional arguments</h5>
-    <p>To omit one of the following arguments pass it a false value when calling the mixin.</p>
+    <p>To omit one of the following default arguments, pass a false value to the argument when calling the mixin.</p>
     <div class="grid cols-2">
       <div>
         <div class="grid">
@@ -53,6 +53,25 @@ h1:before {
       </div>
       <div>
         {% include "../partials/code-samples/col-scss-optional.njk" %}
+      </div>
+    </div>
+  </section>
+  <section id="baseline">
+    <h2>Baseline</h2>
+    <p>A grid structure made from columns benefits from a baseline grid also. The <code class="code-inline language-scss">.bs()</code> mixin accepts a variety of arguments as needed.</p>
+    <h5>Arguments</h5>
+    <p>There are <strong>no</strong> required arguments.</p>
+    <div class="grid cols-2">
+      <div>
+        <div class="grid">
+          <dl class="dl-horizontal">
+            <dt><code class="code-inline language-scss">$col</code></dt>
+            <dd>The number of grid columns the column must span.</dd>
+          </dl>
+        </div>
+      </div>
+      <div>
+        {% include "../partials/code-samples/baseline-scss-required.njk" %}
       </div>
     </div>
   </section>

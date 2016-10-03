@@ -1,0 +1,7 @@
+{% extends "../cards/card-code.njk" %}
+{% set language="scss" %}
+{% block code %}<span class="comment">// Body copy</span>
+p {
+  @include baseline($font-base, $line-height: 1.5, $above: .3);
+}
+{% endblock %}
