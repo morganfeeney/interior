@@ -50,7 +50,13 @@ h4 {
 }
 
 h5 {
-  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.24, $below: .5);
+  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.24, $below: .75);
+}
+
+.standard-layout {
+  h5 + p {
+    @include col(6, $calc: false, $margin: false);
+  }
 }
 
 h6 {
@@ -58,7 +64,7 @@ h6 {
 }
 
 p {
-  @include baseline($font-base, $line-height: 1.5, $above: .2);
+  @include baseline($font-base, $line-height: 1.5, $above: .3);
 }
 
 .link-group {
@@ -79,11 +85,11 @@ p {
 }
 
 ul, ol {
-  @include baseline($font-base, $line-height: 1.5, $above: .3);
+  @include baseline($line-height: 1.5, $above: .3);
 }
 
-pre, code {
-  @include baseline($font-base, $line-height: 1.5, $above: .3);
+pre, .code-block code {
+  @include baseline($line-height: 1.5, $above: .3);
 }
 
 pre:before {
@@ -91,6 +97,15 @@ pre:before {
   // Use mixin but override unwanted parts
   margin-bottom: 0;
   padding-left: 1rem;
+}
+
+.code-inline {
+  font-family: $font-family-inline-code;
+  font-weight: bold;
+}
+
+.dl-horizontal {
+  @include baseline($line-height: 1.5, $above: .3);
 }
 
 // Text directly after a main heading

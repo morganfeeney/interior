@@ -1,0 +1,22 @@
+{% extends "../cards/card-code.njk" %}
+{% set language="scss" %}
+{% block code %}<span class="comment">// Set max columns to 12 in variables.less</span>
+$cols: 12
+<span class="comment">// 1 x 100% width column</span>
+.default-example {
+  @include col(12);
+}
+{# <span class="comment">// 2 x 50% width columns</span>
+.cols-2 > div {
+  @include col(6);
+}
+<span class="comment">// 2 x columns, 40% &amp; 80%</span>
+.layout-example > div {
+  &amp;:first-child {
+    @include col(4);
+  }
+  &amp;:last-child {
+    @include col(8);
+  }
+} #}
+{% endblock %}

@@ -4,9 +4,9 @@ code, pre {
 	white-space: pre;
 }
 
-pre {
+pre.code-block {
 	tab-size: 4;
-	code {
+	 code {
 		background: rgba($brand-color-1, 0.1);
 		display: block;
 		padding: 1rem 2rem;

@@ -78,9 +78,9 @@
   justify-content: flex-end;
   align-content: flex-start;
   @include col(12);
-  &:last-child {
-    margin-bottom: $vertical-space;
-  }
+  // &:last-child {
+  //   margin-bottom: $vertical-space;
+  // }
   dt {
     @include text-col(4, $min: true);
     font-weight: bold;
@@ -89,7 +89,7 @@
   }
   dd {
     @include text-col(8);
-    margin: 0 0 .75rem;
+    //margin: 0 0 .75rem;
     &:last-child {
       margin: 0;
     }
