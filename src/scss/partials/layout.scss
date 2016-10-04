@@ -87,16 +87,16 @@
   dd {
     @include text-col(8);
     //margin: 0 0 .75rem;
-    &:last-child {
-      margin: 0;
-    }
+    // &:last-child {
+    //   margin: 0;
+    // }
   }
 }
-
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
+//
+// dl {
+//   margin-top: 0;
+//   margin-bottom: 1rem;
+// }
 
 blockquote.outset-right {
   text-transform: uppercase;
