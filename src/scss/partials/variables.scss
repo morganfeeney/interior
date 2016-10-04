@@ -39,12 +39,12 @@ $font-color-3: $brand-color-3;
 $font-color-4: $brand-color-4;
 
 // Font familiess
-$fs1: "letter-gothic-std", Helvetica, Arial, sans-serif;
-$fs2: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$fs3: "times", "times new roman", serif;
+$font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-monospace: "Inconsolata", monospace, courier;
+//$font-serif: "times", "times new roman", serif;
 
-$font-family-base: $fs1;
-$font-family-inline-code: $fs1;
+$font-family-base: $font-sans-serif;
+$font-family-inline-code: $font-monospace;
 
 // Font sizes
 $font-base: 1rem;
