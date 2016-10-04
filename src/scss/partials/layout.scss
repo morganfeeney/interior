@@ -77,6 +77,8 @@
   @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
+  margin-bottom: 0;
+  padding-top: 0;
   @include col(12);
   // &:last-child {
   //   margin-bottom: $vertical-space;
