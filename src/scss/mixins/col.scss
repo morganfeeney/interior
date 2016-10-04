@@ -2,6 +2,10 @@
    Column mixin
    ============================================================== */
 
+// TO DO
+// 
+// Create a mixin called baseline-shift so I can use all the vertical alignment goodness without some of the things like line-heighty and padding and margin defaults.
+
 @mixin col(
   $col,
   $width: cw($col),
