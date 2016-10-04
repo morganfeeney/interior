@@ -77,12 +77,7 @@
   @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
-  margin-bottom: 0;
-  padding-top: 0;
   @include col(12);
-  // &:last-child {
-  //   margin-bottom: $vertical-space;
-  // }
   dt {
     @include text-col(4, $min: true);
     font-weight: bold;
@@ -128,7 +123,10 @@ blockquote.outset-left {
 
 // Multi column layout
 .cols-2 > div {
-  @include col(6);
+  @include col(12);
+  @media(min-width: $screen-medium) {
+    @include col(6);
+  }
 }
 
 .cols-3 > div {
@@ -149,5 +147,12 @@ blockquote.outset-left {
   flex-flow: row wrap;
   h1 {
     flex: 1 1 auto;
+  }
+}
+
+pre.code-block {
+  @media(max-width: $screen-medium-max) {
+    margin-left: -$horizontal-space-small;
+    margin-right: -$horizontal-space-small;
   }
 }

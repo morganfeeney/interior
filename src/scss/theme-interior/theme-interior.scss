@@ -7,9 +7,10 @@ body {
 .vh100-layout {
   .intro > p:first-of-type {
    @include border-with-content('Foreword');
-   @include baseline($line-height: 1.5, $above: .6, $below: 0, $margin: 3);
+   @include baseline($line-height: 1.5, $above: 1, $below: 0, $margin: 3);
  }
   time {
+    font-weight: $font-weight-border-with-content;
     @include baseline($fs-pica, $line-height: 1.5, $above: .6, $below: 0, $margin: -2);
     position: absolute;
     @media(min-width: $screen-large) {

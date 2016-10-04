@@ -36,8 +36,15 @@ h2 {
   h2 {
     @include baseline($fs-two-line-pica, $above: 1, $below: .5, $margin: 4);
   }
-  h2 + p {
-    @include col(6, $calc: false, $margin: false);
+  @media(min-width: $screen-small) {
+    h2 + p {
+      @include col(8, $calc: false, $margin: false);
+    }
+  }
+  @media(min-width: $screen-medium) {
+    h2 + p {
+      @include col(6, $calc: false, $margin: false);
+    }
   }
 }
 
@@ -54,8 +61,15 @@ h5 {
 }
 
 .standard-layout {
-  h5 + p {
-    @include col(6, $calc: false, $margin: false);
+  @media(min-width: $screen-small) {
+    h5 + p {
+      @include col(8, $calc: false, $margin: false);
+    }
+  }
+  @media(min-width: $screen-medium) {
+    h5 + p {
+      @include col(6, $calc: false, $margin: false);
+    }
   }
 }
 

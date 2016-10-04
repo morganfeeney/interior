@@ -2,13 +2,24 @@
    Variables
    ============================================================== */
 
-// Units
+//** Units
+//
+// Screen widths (min-width)
 $screen-small: 569px;
 $screen-medium: 700px;
 $screen-large: 900px;
 $screen-larger: 1200px;
+
+// Screen widths max-width
+$screen-small-max: ($screen-small)-1;
+$screen-medium-max: ($screen-medium)-1;
+$screen-large-max: ($screen-large)-1;
+$screen-larger-max: ($screen-larger)-1;
+
+// Columns
 $cols: 12;
 
+// Wrappers
 $wrapper-width-large: $screen-larger;
 
 //** Colours
@@ -41,8 +52,7 @@ $font-color-4: $brand-color-4;
 // Font familiess
 $font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-monospace: "Inconsolata", monospace, courier;
-//$font-serif: "times", "times new roman", serif;
-
+// Apply font families to generic variables
 $font-family-base: $font-sans-serif;
 $font-family-inline-code: $font-monospace;
 
@@ -53,6 +63,9 @@ $base-line-unit: $font-base*$font-ratio;
 // This is for Arial/Helvetica
 $cap-height: 0.68;
 $font-size-body: $font-base;
+
+// Font weights
+$font-weight-border-with-content: bold;
 
 // Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
 $fs-canon: bs(3); // 48px
@@ -73,14 +86,6 @@ $m: $horizontal-space;
 
 //** Borders
 $light-border: 1px solid $brand-color-3;
-
-//** Vertical rythm
-//
-
-// Rivers
-
-
-// Islands
 
 // Footer
 $footer-border-width: 1px;
