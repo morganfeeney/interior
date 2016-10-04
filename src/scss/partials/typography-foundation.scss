@@ -102,12 +102,16 @@ ul, ol {
   @include baseline($line-height: 1.5, $above: .3);
 }
 
-pre, .code-block code {
-  @include baseline($line-height: 1.5, $above: .3);
+pre {
+  @include baseline($line-height: 1.5, $above: .7, $below: -0.45);
+}
+
+.code-block code {
+  @include baseline($line-height: 1.5, $above: .7, $below: 0);
 }
 
 pre:before {
-  @include baseline($fs-english, $line-height: 1.75);
+  @include baseline($fs-english, $line-height: 1.65);
   // Use mixin but override unwanted parts
   margin-bottom: 0;
   padding-left: 1rem;
@@ -120,7 +124,7 @@ pre:before {
 }
 
 .dl-horizontal {
-  @include baseline($line-height: 1.5, $above: .3, $below: 0);
+  @include baseline($line-height: 1.5, $above: .7, $below: 0);
 }
 
 // Text directly after a main heading
