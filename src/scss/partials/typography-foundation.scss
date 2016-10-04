@@ -20,9 +20,9 @@ h1 {
 
 .standard-layout {
   h1 {
-    @include baseline($fs-canon - 1, $above: .75);
+    @include baseline($fs-canon - 1, $above: .9, $below: .09);
     @media(min-width: $screen-large) {
-      @include baseline($fs-canon, $above: .75, $below: 5, $margin: 6);
+      @include baseline($fs-canon, $above: .8, $below: 5, $margin: 5);
     }
   }
 }
@@ -34,7 +34,7 @@ h2 {
 
 .standard-layout {
   h2 {
-    @include baseline($fs-two-line-pica, $above: 1, $below: .5, $margin: 4);
+    @include baseline($fs-two-line-pica, $above: 1, $below: .4, $margin: 4);
   }
   @media(min-width: $screen-small) {
     h2 + p {
@@ -49,7 +49,7 @@ h2 {
 }
 
 h3 {
-    @include baseline($fs-two-line-pica, $above: 1, $below: .5);
+  @include baseline($fs-two-line-pica, $above: 1, $below: .5);
 }
 
 h4 {
@@ -57,7 +57,7 @@ h4 {
 }
 
 h5 {
-  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.24, $below: .75);
+  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.24, $below: .5);
 }
 
 .standard-layout {

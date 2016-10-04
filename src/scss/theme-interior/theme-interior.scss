@@ -1,7 +1,7 @@
 body {
   font-family: $font-family-base;
   // Can make use of the colour arrangement by overlaying white and funky salmon CSS diagrams on top.
-  background: $brandbg-light;
+  //background: $brandbg-light;
 }
 
 .vh100-layout {
@@ -30,10 +30,12 @@ body {
 
 .home-link {
   text-decoration: none;
+  margin-top: .4rem;
+  @media(min-width: $screen-large) {
+    margin-top: .5rem;
+  }
   p {
-    @include baseline($fs-two-line-pica);
-    margin-bottom: 0;
-    padding: 0;
+    @include baseline($fs-two-line-pica, $above: 0, $below: 0, $line-height: 1, $margin: -.9);
   }
 }
 h1, h2, h3, h4, h5, h6 {

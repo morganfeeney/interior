@@ -31,7 +31,7 @@
 
 #main-header {
   //margin: 3rem 0;
-  @include baseline($font-base, $above: 1, $below: 0);
+  @include baseline($above: 1, $below: 0);
   border-top: 4px solid $brand-color-1;
   text-transform: uppercase;
   > .container {
