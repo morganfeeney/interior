@@ -1,12 +1,14 @@
-@mixin border-with-content($content: null) {
-  border-top: $light-border;
+@mixin border-with-content($content: "\00a0") {
   position: relative;
   &:before {
+    @include baseline($fs-pica, $below: 0, $padding-bottom: .4rem, $margin-bottom: 0, $margin-top: -1px);
+    border-bottom: $light-border;
     font-weight: $font-weight-border-with-content;
     text-transform: uppercase;
     content: '#{$content}';
-    @include baseline($fs-pica);
     position: absolute;
+    left: 0;
+    right: 0;
     top: -1.25rem;
   }
 }

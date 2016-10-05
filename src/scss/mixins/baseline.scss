@@ -6,6 +6,7 @@
     $above: 0,
     $below: 0,
     $padding-top: (cap-height($font-size))+($above*$base-line-unit),
+    $padding-bottom: null,
     $margin-bottom: ($base-line-unit - $padding-top)+($below*$base-line-unit),
     $margin-top: ($margin*$base-line-unit),
     $no-text: false
@@ -15,6 +16,7 @@
     line-height: $line-height;
   }
   padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
   margin-top: $margin-top;
   margin-bottom: $margin-bottom;
 }

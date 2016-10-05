@@ -11,30 +11,21 @@ html {
 // Set up a page with h tags in columns and get them to align.
 
 h1 {
-  @include baseline($fs-canon - 1, $above: .75);
+  @include baseline($fs-canon - 1, $above: .9, $below: .09);
   @media(min-width: $screen-large) {
-    @include baseline($fs-canon, $above: .75, $below: 8, $margin: 6);
+    @include baseline($fs-canon, $above: .9, $below: 5.1, $margin: 4.9);
   }
   @include border-with-content();
 }
 
-.standard-layout {
-  h1 {
-    @include baseline($fs-canon - 1, $above: .9, $below: .09);
-    @media(min-width: $screen-large) {
-      @include baseline($fs-canon, $above: .8, $below: 5, $margin: 5);
-    }
-  }
-}
-
 h2 {
-    @include baseline($fs-four-line-brevier, $above: .5, $below: 0, $margin: 1);
-    @include border-with-content();
+  @include baseline($fs-four-line-brevier, $above: .5, $below: 0, $margin: 1);
+  @include border-with-content();
 }
 
 .standard-layout {
   h2 {
-    @include baseline($fs-two-line-pica, $above: 1, $below: .4, $margin: 4);
+    @include baseline($fs-two-line-pica, $above: 1, $below: .5, $margin: 4.1);
   }
   @media(min-width: $screen-small) {
     h2 + p {
@@ -57,7 +48,7 @@ h4 {
 }
 
 h5 {
-  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.24, $below: .5);
+  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.1, $below: .5);
 }
 
 .standard-layout {
@@ -78,7 +69,7 @@ h6 {
 }
 
 p {
-  @include baseline($font-base, $line-height: 1.5, $above: .3);
+  @include baseline($font-base, $line-height: 1.5, $above: .24);
 }
 
 .link-group {
@@ -103,15 +94,15 @@ ul, ol {
 }
 
 pre {
-  @include baseline($line-height: 1.5, $above: .7, $below: -0.45);
+  @include baseline($line-height: 1.5, $above: .25);
 }
 
 .code-block code {
-  @include baseline($line-height: 1.5, $above: .7, $below: 0);
+  @include baseline($line-height: 1.5, $above: .5, $below: 0, $padding-bottom: 1rem);
 }
 
 pre:before {
-  @include baseline($fs-english, $line-height: 1.65);
+  @include baseline($fs-english, $line-height: 1.5);
   // Use mixin but override unwanted parts
   margin-bottom: 0;
   padding-left: 1rem;
@@ -119,12 +110,13 @@ pre:before {
 }
 
 .code-inline {
+  line-height: 1;
   font-family: $font-family-inline-code;
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 .dl-horizontal {
-  @include baseline($line-height: 1.5, $above: .7, $below: 0);
+  @include baseline($line-height: 1.5, $above: .2, $below: 0);
 }
 
 // Text directly after a main heading
