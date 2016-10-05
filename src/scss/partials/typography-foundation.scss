@@ -125,9 +125,12 @@ pre:before {
 }
 
 blockquote {
-  @include baseline($below: 2, $margin: 3);
+  @include baseline($below: 2, $margin: 2.5);
   p {
-    @include baseline($fs-two-line-pica, $below: 0);
+    @include baseline($fs-two-line-pica, $above: 0.4, $below: 0.7);
+    @media(min-width: $screen-large) {
+      @include baseline($fs-two-line-pica, $above: 0.3, $below: 0);
+    }
     font-style: normal;
     font-weight: bold;
     margin-left: auto;
