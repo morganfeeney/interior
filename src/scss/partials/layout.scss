@@ -130,7 +130,16 @@ blockquote.outset-left {
 }
 
 // Multi column layout
+//
+// 1 x columns, then 2 x columns on medium screens
 .cols-2 > div {
+  @include col(12);
+  @media(min-width: $screen-medium) {
+    @include col(6);
+  }
+}
+
+.layout-1 > div {
   @include col(12);
   @media(min-width: $screen-medium) {
     @include col(6);

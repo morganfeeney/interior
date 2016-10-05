@@ -1,0 +1,10 @@
+{% extends "../cards/card-code.njk" %}
+{% set language="scss" %}
+{% block code %}<span class="comment">// 1 x column, then 2 x columns</span>
+.layout-1 > div {
+  @include col(12);
+  @media(min-width: $screen-medium) {
+    @include col(6);
+  }
+}
+{% endblock %}

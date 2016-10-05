@@ -2,11 +2,15 @@
 
 {% block embedded_css %}
 <style>
-h1:before {
-  content: "Specification";
+h1::before {
+  content: "Madness";
 }
-h2:first-of-type:before {
-  content: "Sub heading";
+h2:first-of-type::before {
+  counter-increment: section;
+  content: "Method: " counter(section);
+}
+body {
+  counter-reset: section;
 }
 </style>
 {% endblock %}
@@ -18,23 +22,17 @@ h2:first-of-type:before {
 
 {% block main %}
 <section id="intro">
-  <h2>Method</h2>
-  <div class="grid cols-2">
+  <h2>Separation</h2>
+  <p>Keeping markup and presentation separate makes life easier going forward. There are many benefits, the main one being that changes can be made <strong>via CSS only</strong>.</p>
+  <h5>Example</h5>
+  <div class="grid layout-1">
     <div>
-      <p>The main rule: avoid describing the layout in the markup.
-        Why? There's no point changing things in more than one place.</p>
+      <p>Think about it... you have a layout, you want to change it, you can either change both HTML and CSS or change CSS only. This means you are not limited by the markup. For example you have series of columns inside a container, when you created the first design those columns were lined up in rows of 3.
+        You then decide to change that layout so that there are only 2 columns. If you keep your markup <strong>generic</strong> this change could be a matter of updating the CSS only.</p>
+        <p>This is a great approach to use when coding layouts in the browser using livereload to refresh when you make changes.</p>
     </div>
     <div>
-      {# <div class="grid">
-       <dl class="dl-horizontal dl-page-meta">
-        <dt>Date</dt>
-        <dd>22/05/2016</dd>
-       </dl>
-       <dl class="dl-horizontal dl-page-meta">
-        <dt>Category</dt>
-        <dd>Design</dd>
-       </dl>
-     </div> #}
+      {% include "../partials/code-samples/col-scss-layout-1.njk" %}
     </div>
   </div>
 </section>
