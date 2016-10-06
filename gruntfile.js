@@ -76,16 +76,29 @@ module.exports = function(grunt) {
        var nice_date = date.toDateString();
        var file = path.basename(this.src[0]);
        var page = path.basename(this.src[0], '.html');
-       var layouts = grunt.file.expand({
+       // Posts
+       var posts = grunt.file.expand({
          filter: "isFile",
-         cwd: "src/html/layouts"
+         cwd: "src/html/posts"
+       },["*.html","!index.html"]);
+       // Docs
+       var docs = grunt.file.expand({
+         filter: "isFile",
+         cwd: "src/html/docs"
+       },["*.html","!index.html"]);
+       // Examples
+       var examples = grunt.file.expand({
+         filter: "isFile",
+         cwd: "src/html/examples"
        },["*.html","!index.html"]);
        var result = {
          iso_date: iso_date,
          nice_date: nice_date,
          file: file,
          page: page,
-         layouts: layouts,
+         posts: posts,
+         docs: docs,
+         examples: examples,
          data: data
        };
        return result;

@@ -62,6 +62,10 @@ h5 {
       @include col(6, $calc: false, $margin: false);
     }
   }
+  // Override previous width styles
+  .grid h5 + p {
+    width: auto;
+  }
 }
 
 h6 {

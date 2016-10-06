@@ -1,0 +1,44 @@
+{% set base_path = ".." %}
+{% set page_title = "Examples home page" %}
+{% set page_description = "TBA" %}
+{% extends "layouts/standard-layout.njk" %}
+
+{% block embedded_css %}
+<style>
+  h1::before {
+    content: "blah"
+  }
+  h2::before {
+    content: "blah"
+  }
+</style>
+{% endblock %}
+
+{% block intro %}
+  <h1>Examples</h1>
+{% endblock %}
+
+{% block main %}
+  <h2>Title about this page</h2>
+  <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system.</p>
+  <div class="grid layout-1">
+    <div>
+      <h5>Title</h5>
+      <p>Links to layouts created to demonstrate the potential of Interior.</p>
+      <ul>
+        {% for example in examples %}
+        {# Check to see if the current page matches a link #}
+          {% if example == file %}
+            <li><a style="color: black" href="{{ example }}">{{ example | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+          {% else %}
+              <li><a href="{{ example }}">{{ example | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+{% endblock %}

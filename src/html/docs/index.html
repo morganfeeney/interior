@@ -1,0 +1,40 @@
+{% set base_path = ".." %}
+{% set page_title = "Examples home page" %}
+{% set page_description = "TBA" %}
+{% extends "layouts/standard-layout.njk" %}
+
+{% block embedded_css %}
+<style>
+  h1::before {
+    content: "Information"
+  }
+  h2::before {
+    content: "Navigation"
+  }
+</style>
+{% endblock %}
+
+{% block intro %}
+  <h1>Docs.</h1>
+{% endblock %}
+
+{% block main %}
+<h2>Interior documentation</h2>
+<p>This page links to the documentation on how to use Interior to achieve a state of layout tranquility.</p>
+<div class="grid layout-1">
+  <div>
+    <ul>
+      {% for doc in docs %}
+      {# Check to see if the current page matches a link #}
+        {% if doc == file %}
+          <li><a style="color: black" href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+        {% else %}
+            <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+{% endblock %}
