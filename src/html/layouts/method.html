@@ -23,16 +23,36 @@ body {
 {% block main %}
 <section id="intro">
   <h2>Separation</h2>
-  <p>Keeping markup and presentation separate makes life easier going forward. There are many benefits, the main one being that changes can be made <strong>via CSS only</strong>.</p>
-  <h5>Example</h5>
+  <p>Keeping markup and presentation separate makes life easier going forward. There are many benefits, the primary benefit being that changes can be made using <strong><u>only</u></strong> CSS.</p>
+</section>
+<section id="main">
+  <h5>Don't set things in stone</h5>
+  <p>Describing in markup the appearance of anything limits what may be altered later.</p>
+  <h6>Example 1</h6>
   <div class="grid layout-1">
     <div>
-      <p>Think about it... you have a layout, you want to change it, you can either change both HTML and CSS or change CSS only. This means you are not limited by the markup. For example you have series of columns inside a container, when you created the first design those columns were lined up in rows of 3.
-        You then decide to change that layout so that there are only 2 columns. If you keep your markup <strong>generic</strong> this change could be a matter of updating the CSS only.</p>
-        <p>This is a great approach to use when coding layouts in the browser using livereload to refresh when you make changes.</p>
+      <p>In figure 1 the classes are descriptive of how many columns they span. This is fine until something requires an update, if the width needs to change you have no choice—if you want your markup to be semantic—but to change the markup.</p>
     </div>
     <div>
-      {% include "../partials/code-samples/col-scss-layout-1.njk" %}
+      <figure>
+        {% include "../partials/code-samples/col-scss-set-in-stone.njk" %}
+      <figcaption>Figure 1</figcaption>
+      </figure>
+    </div>
+  </div>
+  {# Choice #}
+  <h5>Choice</h5>
+  <div class="grid layout-1">
+    <div>
+      <p>You could either change both HTML and CSS, change HTML only—but be limited by existing styles—or change CSS only.</p>
+      <h6>Example 2</h6>
+      <p>If you keep your markup <strong>generic</strong> this change could be a matter of updating the CSS only. In figure 2 the generic <code class="code-inline language-markup">&lt;div&gt;</code> tag replaces the specific <code class="code-inline language-markup">&lt;div class="col"&gt;</code> tag.</p>
+    </div>
+    <div>
+      <figure>
+        {% include "../partials/code-samples/col-scss-layout-1.njk" %}
+      <figcaption>Figure 2</figcaption>
+      </figure>
     </div>
   </div>
 </section>

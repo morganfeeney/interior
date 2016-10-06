@@ -160,10 +160,10 @@ cite {
 // }
 
 figcaption {
-  background: $light-gray;
-  padding: inherit;
-  font-style: italic;
-  padding: $vertical-space-small $horizontal-space-small;
+  @include baseline($fs-pica, $line-height: 1.4, $margin: -.5);
+  @media(min-width: $screen-medium) {
+    padding-left: .5rem;
+  }
 }
 
 .sig {
