@@ -1,0 +1,45 @@
+#typography-specimin {
+  figure {
+  @extend .grid;
+    figcaption {
+      @include col(3);
+      order: 1;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding-right: 0;
+    display: flex;
+    flex-flow: row wrap;
+    @include col(9);
+    order: 2;
+    &::before {
+      content: none;
+    }
+  }
+}
+
+#typography-specimin {
+  h1 {
+    @include baseline($fs-canon);
+    + figcaption {
+      &::before {
+        content: "$fs-canon";
+      }
+    }
+  }
+  h2 {
+    @include baseline($fs-four-line-brevier);
+  }
+  h3 {
+    @include baseline($fs-two-line-pica);
+  }
+  h4 {
+    @include baseline($fs-double-pica);
+  }
+  h5 {
+    @include baseline($fs-great-primer);
+  }
+  h6 {
+    @include baseline($fs-english);
+  }
+}
