@@ -17,6 +17,8 @@ h2:first-of-type::before {
 
 
 {% block main %}
+
+<div id="output"></div>
 <section id="intro">
   <h2>Scale</h2>
   <p>I found whilst building Interior a deep-seated urge to apply some of the knowledge I have gained from reading Robert Bringhurst's book: the elements of typographic style.
@@ -24,30 +26,32 @@ h2:first-of-type::before {
 </section>
 <section id="typography-specimin">
   <figure>
-    <h1>Pack my box with five dozen liquor jugs.</h1>
+    <h1 id="h1">Pack my box with five dozen liquor jugs.</h1>
+    <figcaption></figcaption>
+  </figure>
+  <figure>
+    <h2 id="h2">Pack my box with five dozen liquor jugs.</h2>
     <figcaption>Font-size: blah</figcaption>
   </figure>
   <figure>
-    <h2>Pack my box with five dozen liquor jugs.</h2>
+    <h3 id="h3">Pack my box with five dozen liquor jugs.</h3>
     <figcaption>Font-size: blah</figcaption>
   </figure>
   <figure>
-    <h3>Pack my box with five dozen liquor jugs.</h3>
+    <h4 id="h4">Pack my box with five dozen liquor jugs.</h4>
     <figcaption>Font-size: blah</figcaption>
   </figure>
   <figure>
-    <h4>Pack my box with five dozen liquor jugs.</h4>
+    <h5 id="h5">Pack my box with five dozen liquor jugs.</h5>
     <figcaption>Font-size: blah</figcaption>
   </figure>
   <figure>
-    <h5>Pack my box with five dozen liquor jugs.</h5>
-    <figcaption>Font-size: blah</figcaption>
-  </figure>
-  <figure>
-    <h6>Pack my box with five dozen liquor jugs.</h6>
+    <h6 id="h6">Pack my box with five dozen liquor jugs.</h6>
     <figcaption>Font-size: blah</figcaption>
   </figure>
 </section>
+
+
 {% endblock %}
 
 {% block aside %}{% endblock %}

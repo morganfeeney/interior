@@ -3,6 +3,7 @@
   @extend .grid;
     figcaption {
       @include col(3);
+      padding-left: 0;
       order: 1;
     }
   }
@@ -20,10 +21,11 @@
 
 #typography-specimin {
   h1 {
-    @include baseline($fs-canon);
+    //@include baseline($fs-canon);
+    @extend h1;
     + figcaption {
       &::before {
-        content: "$fs-canon";
+        content: "#{$fs-canon}";
       }
     }
   }
