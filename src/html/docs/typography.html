@@ -60,7 +60,7 @@ h2:first-of-type::before {
     var convertedFontSize = (unitlessFontSize / 16) + "rem";
     var lineHeight = window.getComputedStyle(elem,null).getPropertyValue("line-height");
     var unitlessLineHeight = (lineHeight.split('px')[0]);
-    var convertedLineHeight = unitlessLineHeight / unitlessFontSize;
+    var convertedLineHeight = (unitlessLineHeight / unitlessFontSize);
     elem.nextElementSibling.innerHTML = convertedFontSize+", "+convertedLineHeight;
    }
 
