@@ -27,27 +27,27 @@ h2:first-of-type::before {
 <section id="typography-specimin">
   <figure id="h1">
     <h1>Pack my box with five dozen liquor jugs.</h1>
-    <figcaption>nkjljil</figcaption>
+    <figcaption>...</figcaption>
   </figure>
   <figure id="h2">
     <h2>Pack my box with five dozen liquor jugs.</h2>
-    <figcaption>Font-size: blah</figcaption>
+    <figcaption>...</figcaption>
   </figure>
   <figure id="h3">
     <h3>Pack my box with five dozen liquor jugs.</h3>
-    <figcaption>Font-size: blah</figcaption>
+    <figcaption>...</figcaption>
   </figure>
   <figure id="h4">
     <h4>Pack my box with five dozen liquor jugs.</h4>
-    <figcaption>Font-size: blah</figcaption>
+    <figcaption>...</figcaption>
   </figure>
   <figure id="h5">
     <h5>Pack my box with five dozen liquor jugs.</h5>
-    <figcaption>Font-size: blah</figcaption>
+    <figcaption>...</figcaption>
   </figure>
   <figure id="h6">
     <h6>Pack my box with five dozen liquor jugs.</h6>
-    <figcaption>Font-size: blah</figcaption>
+    <figcaption>...</figcaption>
   </figure>
 </section>
 
@@ -58,7 +58,8 @@ h2:first-of-type::before {
     var fontSize = window.getComputedStyle(elem,null).getPropertyValue("font-size");
     var unitlessFontSize = (fontSize.split('px')[0]);
     var convertedFontSize = (unitlessFontSize / 16) + "rem";
-    var lineHeight = window.getComputedStyle(elem,null).getPropertyValue("line-height");
+    var htag = document.getElementById(tag).getElementsByTagName(tag)[0];
+    var lineHeight = window.getComputedStyle(htag,null).getPropertyValue("line-height");
     var unitlessLineHeight = (lineHeight.split('px')[0]);
     var convertedLineHeight = (unitlessLineHeight / unitlessFontSize);
     elem.innerHTML = convertedFontSize+"/"+convertedLineHeight;
