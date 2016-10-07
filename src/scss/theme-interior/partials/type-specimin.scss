@@ -3,35 +3,37 @@
   @extend .grid;
     figcaption {
       @include col(3);
+      @include baseline($fs-english);
       padding-left: 0;
       order: 1;
-    }
-  }
-  h1, h2, h3, h4, h5, h6 {
-    padding-right: 0;
-    display: flex;
-    flex-flow: row wrap;
-    @include col(9);
-    order: 2;
-    &::before {
-      content: none;
     }
   }
 }
 
 $h-map: (
-  h1: $fs-canon,
-  h2: $fs-four-line-brevier,
-  h3: $fs-two-line-pica,
-  h4: $fs-double-pica,
-  h5: $fs-great-primer,
-  h6: $fs-english
+  h1: ($fs-canon, 2),
+  h2: ($fs-four-line-brevier, 1),
+  h3: ($fs-two-line-pica, 1),
+  h4: ($fs-double-pica, .5),
+  h5: ($fs-great-primer, 0),
+  h6: ($fs-english, 0)
 );
 
 #typography-specimin {
   @each $name, $map in $h-map {
     #{$name} {
-      @include baseline($map);
+      @include baseline(nth($map, 1));
+      + figcaption {
+        @include baseline($fs-pica, $above: nth($map, 2));
+      }
+      padding-right: 0;
+      display: flex;
+      flex-flow: row wrap;
+      @include col(9);
+      order: 2;
+      &::before {
+        content: none;
+      }
     }
   }
 }
