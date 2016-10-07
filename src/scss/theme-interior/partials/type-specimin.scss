@@ -1,7 +1,7 @@
 #typography-specimin {
   figure {
     @include baseline($margin: 2.5, $below: 0, $above: 0.5);
-  @extend .grid;
+    @extend .grid;
     figcaption {
       @include baseline($fs-english);
       padding-left: 0;
@@ -15,15 +15,16 @@
 }
 
 $h-map: (
-  h1: $fs-canon,
-  h2: $fs-four-line-brevier,
-  h3: $fs-two-line-pica,
-  h4: $fs-double-pica,
-  h5: $fs-great-primer,
-  h6: $fs-english
+  h1: ($fs-canon, 1),
+  h2: ($fs-four-line-brevier, 1),
+  h3: ($fs-two-line-pica, 1),
+  h4: ($fs-double-pica, 1.15),
+  h5: ($fs-great-primer, 1.35),
+  h6: ($fs-english, 1.2)
 );
 
 #typography-specimin {
+  // Pseudo element
   @each $name, $map in $h-map {
     ##{$name} {
       @include border-with-content($content: $name);
@@ -34,7 +35,7 @@ $h-map: (
   }
   @each $name, $map in $h-map {
     #{$name} {
-      @include baseline($map);
+      @include baseline(nth($map,1), $line-height: nth($map,2));
       padding-right: 0;
       display: flex;
       flex-flow: row wrap;
@@ -44,7 +45,7 @@ $h-map: (
         @include col(8);
       }
       + figcaption {
-        @include baseline($map);
+        @include baseline(nth($map,1));
       }
       &::before {
         content: none;
