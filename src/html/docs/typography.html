@@ -51,6 +51,24 @@ h2:first-of-type::before {
   </figure>
 </section>
 
+<script>
+  // Props to John Ruane fpr this JS
+  function getTheStyle(tag){
+    var elem = document.getElementById(tag);
+    var fontSize = window.getComputedStyle(elem,null).getPropertyValue("font-size");
+    var unitlessFontSize = (fontSize.split('px')[0]);
+    var convertedFontSize = (unitlessFontSize / 16) + "rem";
+    var lineHeight = window.getComputedStyle(elem,null).getPropertyValue("line-height");
+    var unitlessLineHeight = (lineHeight.split('px')[0]);
+    var convertedLineHeight = unitlessLineHeight / unitlessFontSize;
+    elem.nextElementSibling.innerHTML = convertedFontSize+", "+convertedLineHeight;
+   }
+
+   var tags = ["h1","h2","h3","h4","h5","h6"];
+   for(var i = 0; i < tags.length; i++){
+    getTheStyle(tags[i])
+   }
+</script>
 
 {% endblock %}
 
