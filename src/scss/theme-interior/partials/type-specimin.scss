@@ -1,36 +1,51 @@
 #typography-specimin {
   figure {
+    @include baseline($margin: 2.5, $below: 0, $above: 0.5);
   @extend .grid;
     figcaption {
-      @include col(3);
       @include baseline($fs-english);
       padding-left: 0;
       order: 1;
+      @include col(12);
+      @media(min-width: $screen-large) {
+        @include col(4);
+      }
     }
   }
 }
 
 $h-map: (
-  h1: ($fs-canon, 2),
-  h2: ($fs-four-line-brevier, 1),
-  h3: ($fs-two-line-pica, 1),
-  h4: ($fs-double-pica, .5),
-  h5: ($fs-great-primer, 0),
-  h6: ($fs-english, 0)
+  h1: $fs-canon,
+  h2: $fs-four-line-brevier,
+  h3: $fs-two-line-pica,
+  h4: $fs-double-pica,
+  h5: $fs-great-primer,
+  h6: $fs-english
 );
 
 #typography-specimin {
   @each $name, $map in $h-map {
-    #{$name} {
-      @include baseline(nth($map, 1));
-      + figcaption {
-        @include baseline($fs-pica, $above: nth($map, 2));
+    ##{$name} {
+      @include border-with-content($content: $name);
+      &::before {
+        @include col(12);
       }
+    }
+  }
+  @each $name, $map in $h-map {
+    #{$name} {
+      @include baseline($map);
       padding-right: 0;
       display: flex;
       flex-flow: row wrap;
-      @include col(9);
       order: 2;
+      @include col(12);
+      @media(min-width: $screen-large) {
+        @include col(8);
+      }
+      + figcaption {
+        @include baseline($map);
+      }
       &::before {
         content: none;
       }

@@ -25,28 +25,28 @@ h2:first-of-type::before {
     There was also some influence from the likes of Sassline layout which is primarily made from type there was a need to </p>
 </section>
 <section id="typography-specimin">
-  <figure>
-    <h1 id="h1">Pack my box with five dozen liquor jugs.</h1>
-    <figcaption></figcaption>
+  <figure id="h1">
+    <h1>Pack my box with five dozen liquor jugs.</h1>
+    <figcaption>nkjljil</figcaption>
   </figure>
-  <figure>
-    <h2 id="h2">Pack my box with five dozen liquor jugs.</h2>
+  <figure id="h2">
+    <h2>Pack my box with five dozen liquor jugs.</h2>
     <figcaption>Font-size: blah</figcaption>
   </figure>
-  <figure>
-    <h3 id="h3">Pack my box with five dozen liquor jugs.</h3>
+  <figure id="h3">
+    <h3>Pack my box with five dozen liquor jugs.</h3>
     <figcaption>Font-size: blah</figcaption>
   </figure>
-  <figure>
-    <h4 id="h4">Pack my box with five dozen liquor jugs.</h4>
+  <figure id="h4">
+    <h4>Pack my box with five dozen liquor jugs.</h4>
     <figcaption>Font-size: blah</figcaption>
   </figure>
-  <figure>
-    <h5 id="h5">Pack my box with five dozen liquor jugs.</h5>
+  <figure id="h5">
+    <h5>Pack my box with five dozen liquor jugs.</h5>
     <figcaption>Font-size: blah</figcaption>
   </figure>
-  <figure>
-    <h6 id="h6">Pack my box with five dozen liquor jugs.</h6>
+  <figure id="h6">
+    <h6>Pack my box with five dozen liquor jugs.</h6>
     <figcaption>Font-size: blah</figcaption>
   </figure>
 </section>
@@ -54,14 +54,14 @@ h2:first-of-type::before {
 <script>
   // Props to John Ruane fpr this JS
   function getTheStyle(tag){
-    var elem = document.getElementById(tag);
+    var elem = document.getElementById(tag).getElementsByTagName('figcaption')[0];
     var fontSize = window.getComputedStyle(elem,null).getPropertyValue("font-size");
     var unitlessFontSize = (fontSize.split('px')[0]);
     var convertedFontSize = (unitlessFontSize / 16) + "rem";
     var lineHeight = window.getComputedStyle(elem,null).getPropertyValue("line-height");
     var unitlessLineHeight = (lineHeight.split('px')[0]);
     var convertedLineHeight = (unitlessLineHeight / unitlessFontSize);
-    elem.nextElementSibling.innerHTML = convertedFontSize+", "+convertedLineHeight;
+    elem.innerHTML = convertedFontSize+"/"+convertedLineHeight;
    }
 
    var tags = ["h1","h2","h3","h4","h5","h6"];
