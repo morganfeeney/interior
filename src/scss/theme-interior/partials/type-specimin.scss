@@ -46,6 +46,9 @@ $h-map: (
       }
       + figcaption {
         @include baseline(nth($map,1));
+        &::before {
+          content: "#{nth($map,1)}/#{nth($map,2)}";
+        }
       }
       &::before {
         content: none;
