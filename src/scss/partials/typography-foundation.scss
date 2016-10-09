@@ -92,7 +92,7 @@ p {
 }
 
 ul, ol {
-  @include baseline($line-height: 1.5, $above: .3);
+  @include baseline($line-height: 1.5, $above: .24);
 }
 
 pre {
