@@ -8,8 +8,6 @@ html {
  // }
 }
 
-// Set up a page with h tags in columns and get them to align.
-
 h1 {
   @include baseline($fs-canon - 1, $above: .9, $below: .09);
   @media(min-width: $screen-large) {
