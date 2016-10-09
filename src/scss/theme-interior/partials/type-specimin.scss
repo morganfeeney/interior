@@ -14,7 +14,8 @@
   }
 }
 
-$h-map: (
+// Bit of code duplication here, I want the typography styles to be readable so I'm not going to
+$headings: (
   h1: ($fs-canon, 1),
   h2: ($fs-four-line-brevier, 1),
   h3: ($fs-two-line-pica, 1),
@@ -25,7 +26,7 @@ $h-map: (
 
 #typography-specimin {
   // Pseudo element
-  @each $name, $map in $h-map {
+  @each $name, $map in $headings {
     ##{$name} {
       @include border-with-content($content: $name);
       &::before {
@@ -33,7 +34,7 @@ $h-map: (
       }
     }
   }
-  @each $name, $map in $h-map {
+  @each $name, $map in $headings {
     #{$name} {
       @include baseline(nth($map,1), $line-height: nth($map,2));
       padding-right: 0;
