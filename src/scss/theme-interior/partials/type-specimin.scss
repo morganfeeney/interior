@@ -50,7 +50,7 @@ $headings: (
         @include col(8);
       }
       + figcaption {
-        @include baseline(nth($map,1));
+        @include baseline(nth($map,1), $line-height: nth($map,2));
         &::before {
           content: "#{nth($map,1)}/#{nth($map,2)}";
         }
