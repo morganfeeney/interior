@@ -1,4 +1,4 @@
-@mixin border-with-content($content: "\00a0") {
+@mixin border-with-content($content: "\00a0", $top: -1.25rem) {
   position: relative;
   &:before {
     @include baseline($fs-pica, $below: 0, $padding-bottom: .4rem, $margin-bottom: 0, $margin-top: -1px);
@@ -9,6 +9,6 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -1.25rem;
+    top: $top;
   }
 }
