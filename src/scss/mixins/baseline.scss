@@ -1,7 +1,7 @@
 @mixin baseline(
     $font-size: $font-base,
     $unit: 1,
-    $line-height: $font-ratio * $unit,
+    $line-height: $line-height-base * $unit,
     $margin: 0,
     $above: 0,
     $below: 0,

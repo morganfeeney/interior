@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  line-height: $font-ratio;
+  line-height: $line-height-base;
   font-size: $font-base;
   -webkit-text-size-adjust: 100%;
   background-image: -moz-linear-gradient(top,#FF7070 0,rgba(255,255,255,0)1px);

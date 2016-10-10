@@ -58,8 +58,8 @@ $font-family-inline-code: $font-monospace;
 
 // Font sizes
 $font-base: 1rem;
-$font-ratio: 1;
-$base-line-unit: $font-base*$font-ratio;
+$line-height-base: 1;
+$base-line-unit: $font-base*$line-height-base;
 // This is for Arial/Helvetica
 $cap-height: 0.68;
 $font-size-body: $font-base;
