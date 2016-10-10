@@ -11,9 +11,17 @@ html {
 h1 {
   @include baseline($fs-canon - 1, $above: .9, $below: .09);
   @media(min-width: $screen-large) {
-    @include baseline($fs-canon, $above: .9, $below: 5.1, $margin: 4.9);
+    @include baseline($fs-canon, $above: .9, $below: 5, $margin: 5);
   }
   @include border-with-content();
+}
+
+.vh100-layout h1 {
+  // Flex is at play
+  @media(min-width: $screen-large) {
+    @include baseline($fs-canon, $above: 1.1, $below: 5, $margin: 5);
+    @include border-with-content($top: -1rem);
+  }
 }
 
 h2 {
