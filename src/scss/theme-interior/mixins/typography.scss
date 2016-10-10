@@ -1,7 +1,7 @@
 @mixin border-with-content($content: "\00a0", $top: -1.25rem) {
   position: relative;
   &:before {
-    @include baseline($fs-pica, $below: 0, $padding-bottom: .4rem, $margin-bottom: 0, $margin-top: -1px);
+    @include baseline($fs-pica, $above: .1, $below: 0, $padding-bottom: .4rem, $margin-bottom: 0, $margin-top: -1px);
     border-bottom: $light-border;
     font-weight: $font-weight-border-with-content;
     text-transform: uppercase;
