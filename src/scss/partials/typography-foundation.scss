@@ -11,7 +11,7 @@ html {
 h1 {
   @include baseline($fs-canon - 1, $above: .9, $below: .09);
   @media(min-width: $screen-large) {
-    @include baseline($fs-canon, $above: .9, $below: 5, $margin: 5);
+    @include baseline($fs-canon, $above: .8, $below: 5, $margin: 5);
   }
   @include border-with-content();
 }

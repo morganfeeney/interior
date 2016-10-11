@@ -1,7 +1,6 @@
 #typography-specimin {
+  margin: 2rem 0;
   figure {
-    margin-top: 2rem;
-    padding-top: 1rem;
     @extend .grid;
     figcaption {
       @include baseline($fs-english);
@@ -9,7 +8,7 @@
       order: 1;
       @include col(12);
       @media(min-width: $screen-large) {
-        @include col(4);
+        @include col(3);
       }
     }
   }
@@ -31,34 +30,30 @@ $headings: (
   flex-flow: column;
   // Pseudo element
   @each $name, $map in $headings {
-    ##{$name} {
-      @include border-with-content($content: $name);
-      &::before {
-        @include col(12);
-      }
-    }
-  }
-  @each $name, $map in $headings {
     #{$name} {
       @include baseline(nth($map,1), $line-height: nth($map,2));
       padding-right: 0;
       display: flex;
       flex-flow: row wrap;
-      order: 2;
       @include col(12);
       @media(min-width: $screen-large) {
-        @include col(8);
+        @include col(9);
+        order: 2;
       }
       + figcaption {
         display: flex;
-        flex-flow: column;
-        @include baseline(nth($map,1), $line-height: nth($map,2));
+        @media(min-width: $screen-large) {
+          flex-flow: column;
+          @include baseline(nth($map,1), $line-height: nth($map,2));
+        }
         &::before {
-          content: "#{nth($map,1)}/#{nth($map,2)}";
+          content: "#{nth($map,1)}/#{nth($map,2)}\00a0\00a0\00a0";
         }
         &::after {
           content: "$#{nth($map,3)}";
-          @include baseline($fs-english, $margin: .5);
+          @media(min-width: $screen-large) {
+            @include baseline($fs-english, $below: 0, $margin: .5);
+          }
         }
       }
       &::before {

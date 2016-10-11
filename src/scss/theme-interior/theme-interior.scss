@@ -36,6 +36,7 @@ body {
   margin-top: .4rem;
   @media(min-width: $screen-large) {
     margin-top: .9rem;
+    margin-bottom: .1rem;
   }
   p {
     @include baseline($fs-two-line-pica, $above: 0, $below: 0, $line-height: 1, $margin: -1);
