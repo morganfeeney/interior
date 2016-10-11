@@ -12,13 +12,13 @@ h1:before {
 {% endblock %}
 
 {% block intro %}
-  <h1>Usage.</h1>
+  <h1>{{title}}.</h1>
 {% endblock %}
 
 
 {% block main %}
   <section id="grid">
-    <h2>Grid</h2>
+    <h2>Usage</h2>
     <p>Layouts can be created using a grid structure made from columns. A grid can be constructed in many ways by using the <code class="code-inline language-scss">.col()</code> mixin and then passing in parameters as needed.</p>
     <h5>Required arguments</h5>
     <p>The <strong>only</strong> required argument is numerical. The value is used to calculate the number of columns out of the total passed to the <code class="code-inline language-scss">$cols</code> variable.</p>
@@ -55,47 +55,6 @@ h1:before {
         {% include "../partials/code-samples/col-scss-optional.njk" %}
       </div>
     </div>
-  </section>
-  <section id="baseline">
-    <h2>Baseline</h2>
-    <p>Baseline is a vertical grid for aligning type. The <code class="code-inline language-scss">baseline()</code> mixin accepts a variety of arguments.</p>
-    <h5>Arguments</h5>
-    <p>There are <strong>no</strong> required arguments.</p>
-    <div class="grid cols-2">
-      <div>
-        <div class="grid">
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$font-size</code></dt>
-            <dd>Sets the font size. I use a range of variables based upon a <a href="#">typographic scale</a>.</dd>
-          </dl>
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$unit</code></dt>
-            <dd>Multiply the scale of line-height x2, x3 etc.</dd>
-          </dl>
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$line-height</code></dt>
-            <dd>Apply line-height, it should be unitless.</dd>
-          </dl>
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$margin</code></dt>
-            <dd>Adds a <code class="code-inline language-css">margin-top</code> for additional vertical alignment where needed.</dd>
-          </dl>
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$above</code></dt>
-            <dd>Increases the padding above the text, works in conjunction with <code class="code-inline language-scss">$below</code>.</dd>
-          </dl>
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$below</code></dt>
-            <dd>The amount of <code class="code-inline language-css">margin-bottom</code> to apply.</dd>
-          </dl>
-        </div>
-      </div>
-      <div>
-        {% include "../partials/code-samples/baseline-scss-required.njk" %}
-      </div>
-    </div>
-    <h5>Default baseline</h5>
-    <p>I've set up the baseline like so:</p>
   </section>
 {% endblock %}
 
