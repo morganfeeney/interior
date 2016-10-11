@@ -18,12 +18,12 @@
 // Bit of code duplication here, I want the typography styles to be readable therefore
 // not converting everything so it uses maps. Just a single map here for demo purposes.
 $headings: (
-  h1: ($fs-canon, 1),
-  h2: ($fs-four-line-brevier, 1),
-  h3: ($fs-two-line-pica, 1),
-  h4: ($fs-double-pica, 1.15),
-  h5: ($fs-great-primer, 1.35),
-  h6: ($fs-english, 1.2)
+  h1: ($fs-canon, 1, fs-canon),
+  h2: ($fs-four-line-brevier, 1, fs-four-line-brevier),
+  h3: ($fs-two-line-pica, 1, fs-two-line-pica),
+  h4: ($fs-double-pica, 1.15, fs-double-pica),
+  h5: ($fs-great-primer, 1.35, fs-great-primer),
+  h6: ($fs-english, 1, fs-english2)
 );
 
 #typography-specimin {
@@ -50,9 +50,15 @@ $headings: (
         @include col(8);
       }
       + figcaption {
+        display: flex;
+        flex-flow: column;
         @include baseline(nth($map,1), $line-height: nth($map,2));
         &::before {
           content: "#{nth($map,1)}/#{nth($map,2)}";
+        }
+        &::after {
+          content: "$#{nth($map,3)}";
+          @include baseline($fs-pica, $margin: .5);
         }
       }
       &::before {
