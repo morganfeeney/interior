@@ -38,11 +38,6 @@ h2 {
       @include col(8, $calc: false, $margin: false);
     }
   }
-  @media(min-width: $screen-medium) {
-    h2 + p {
-      @include col(6, $calc: false, $margin: false);
-    }
-  }
 }
 
 h3 {
@@ -80,6 +75,10 @@ h6 {
 
 p {
   @include baseline($font-base, $line-height: 1.5, $above: .24);
+}
+
+.vh100-layout p {
+  text-align: justify;
 }
 
 .link-group {
