@@ -23,19 +23,6 @@ h2:first-of-type::before {
   <h2>Scale</h2>
   <p>The font sizes are based upon a typographic scale, traditionally set by printers, adopted for use on the web. The sizes were originally in point yet have been converted to em and are the equivalent in pixel size to what they would have been when set in point.
      The base font size is 1rem, the base line-height is also 1. The baseline grid is .5rem for the sake of granularity traversing the baseline. I wanted a small viewport body font size of 16px, whilst 18px on larger viewports. In order to do this all fonts scale up by 112.5% for large viewports.</p>
-<div class="grid layout-1">
-  <div>
-    <h5>Names</h5>
-      <p>The traditional names lend themselves perfectly for use as a naming convention for web typography. Take for example the variable names I have assigned the font sizes to.</p>
-
-  </div>
-  <div>
-      <figure>
-        {% include "../partials/code-samples/variables-font-names.njk" %}
-      <figcaption>Figure 1</figcaption>
-    </figure>
-  </div>
-</div>
 </section>
 <section id="typography-specimin">
   <figure id="h1">
@@ -63,7 +50,21 @@ h2:first-of-type::before {
     <figcaption></figcaption>
   </figure>
 </section>
+<section>
+  <h2>Names</h2>
+  <div class="grid layout-1">
+    <div>
 
+      <p>The traditional names lend themselves perfectly for use as a naming convention for web typography. Take for example the variable names I have assigned the font sizes to.</p>
+    </div>
+    <div>
+        <figure>
+          {% include "../partials/code-samples/variables-font-names.njk" %}
+        <figcaption>Figure 1</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 {% endblock %}
 
 {% block aside %}{% endblock %}
