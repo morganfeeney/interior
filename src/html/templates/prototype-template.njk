@@ -7,7 +7,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{{ title }}</title>
+		<title>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
 		<link rel="stylesheet" href="{% if base_path %}{{ base_path }}{% else %}..{% endif %}/css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">

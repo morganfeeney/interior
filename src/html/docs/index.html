@@ -1,12 +1,12 @@
-{% set base_path = ".." %}
-{% set page_title = "Examples home page" %}
-{% set page_description = "TBA" %}
+{% set page_description = "Landing page for documentation" %}
+{% set page_title = "Docs" %}
+
 {% extends "layouts/standard-layout.njk" %}
 
 {% block embedded_css %}
 <style>
   h1::before {
-    content: "Information"
+    content: "Title"
   }
   h2::before {
     content: "Navigation"
@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block intro %}
-  <h1>Docs.</h1>
+  <h1>{{page_title}}.</h1>
 {% endblock %}
 
 {% block main %}
