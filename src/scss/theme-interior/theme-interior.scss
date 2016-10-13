@@ -11,10 +11,10 @@ body {
  }
   time {
     font-weight: $font-weight-border-with-content;
-    @include baseline($fs-pica, $above: .6, $below: 0, $margin: -1.9);
+    @include baseline($pica, $above: .6, $below: 0, $margin: -1.9);
     position: absolute;
     @media(min-width: $screen-large) {
-      @include baseline($fs-pica, $below: 0, $above: 4, $padding-bottom: .4rem, $margin-bottom: 0);
+      @include baseline($pica, $below: 0, $above: 4, $padding-bottom: .4rem, $margin-bottom: 0);
     }
   }
   .intro h1 {
@@ -39,7 +39,7 @@ body {
     margin-bottom: .1rem;
   }
   p {
-    @include baseline($fs-two-line-pica, $above: 0, $below: 0, $line-height: 1, $margin: -1);
+    @include baseline($two-line-pica, $above: 0, $below: 0, $line-height: 1, $margin: -1);
   }
 }
 h1, h2, h3, h4, h5, h6 {

@@ -3,7 +3,7 @@
   figure {
     @extend .grid;
     figcaption {
-      @include baseline($fs-english);
+      @include baseline($english);
       padding-left: 0;
       order: 1;
       @include col(12);
@@ -17,12 +17,12 @@
 // Bit of code duplication here, I want the typography styles to be readable therefore
 // not converting everything so it uses maps. Just a single map here for demo purposes.
 $headings: (
-  h1: ($fs-canon, 1, fs-canon),
-  h2: ($fs-four-line-brevier, 1, fs-four-line-brevier),
-  h3: ($fs-two-line-pica, 1, fs-two-line-pica),
-  h4: ($fs-double-pica, 1.15, fs-double-pica),
-  h5: ($fs-great-primer, 1.35, fs-great-primer),
-  h6: ($fs-english, 1, fs-english)
+  h1: ($canon, 1, fs-canon),
+  h2: ($four-line-brevier, 1, four-line-brevier),
+  h3: ($two-line-pica, 1, two-line-pica),
+  h4: ($double-pica, 1.15, double-pica),
+  h5: ($great-primer, 1.35, great-primer),
+  h6: ($english, 1, english)
 );
 
 #typography-specimin {
@@ -52,7 +52,7 @@ $headings: (
         &::after {
           content: "$#{nth($map,3)}";
           @media(min-width: $screen-large) {
-            @include baseline($fs-english, $below: 0, $margin: .5);
+            @include baseline($english, $below: 0, $margin: .5);
           }
         }
       }

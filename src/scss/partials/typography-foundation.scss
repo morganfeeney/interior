@@ -9,9 +9,9 @@ html {
 }
 
 h1 {
-  @include baseline($fs-canon - 1, $above: .9, $below: .09);
+  @include baseline($canon - 1, $above: .9, $below: .09);
   @media(min-width: $screen-large) {
-    @include baseline($fs-canon, $above: .8, $below: 5, $margin: 5);
+    @include baseline($canon, $above: .8, $below: 5, $margin: 5);
   }
   @include border-with-content();
 }
@@ -19,19 +19,19 @@ h1 {
 .vh100-layout h1 {
   // Flex is at play
   @media(min-width: $screen-large) {
-    @include baseline($fs-canon, $above: 1.1, $below: 5, $margin: 5);
+    @include baseline($canon, $above: 1.1, $below: 5, $margin: 5);
     @include border-with-content($top: -1rem);
   }
 }
 
 h2 {
-  @include baseline($fs-four-line-brevier, $above: .5, $below: 0, $margin: 1);
+  @include baseline($four-line-brevier, $above: .5, $below: 0, $margin: 1);
   @include border-with-content();
 }
 
 .standard-layout {
   h2 {
-    @include baseline($fs-two-line-pica, $above: 1, $below: .5, $margin: 4.1);
+    @include baseline($two-line-pica, $above: 1, $below: .5, $margin: 4.1);
   }
   @media(min-width: $screen-small) {
     h2 + p {
@@ -41,15 +41,15 @@ h2 {
 }
 
 h3 {
-  @include baseline($fs-two-line-pica, $above: 1, $below: .5);
+  @include baseline($two-line-pica, $above: 1, $below: .5);
 }
 
 h4 {
-  @include baseline($fs-double-pica, $line-height: 1.15, $above: 1.1, $below: .5);
+  @include baseline($double-pica, $line-height: 1.15, $above: 1.1, $below: .5);
 }
 
 h5 {
-  @include baseline($fs-great-primer, $line-height: 1.35, $above: 1.1, $below: .5);
+  @include baseline($great-primer, $line-height: 1.35, $above: 1.1, $below: .5);
 }
 
 .standard-layout {
@@ -70,7 +70,7 @@ h5 {
 }
 
 h6 {
-  @include baseline($fs-english, $line-height: 1.2, $above: 1.1, $below: .5);
+  @include baseline($english, $line-height: 1.2, $above: 1.1, $below: .5);
 }
 
 p {
@@ -91,11 +91,11 @@ p {
 }
 
 %plarge {
-  @include baseline($fs-double-pica, $line-height: 1.16, $above: .1, $below: 1);
+  @include baseline($double-pica, $line-height: 1.16, $above: .1, $below: 1);
 }
 
 %small, small {
-  @include baseline($fs-pica);
+  @include baseline($pica);
 }
 
 ul, ol {
@@ -111,7 +111,7 @@ pre {
 }
 
 pre:before {
-  @include baseline($fs-english, $line-height: 1.5);
+  @include baseline($english, $line-height: 1.5);
   // Use mixin but override unwanted parts
   margin-bottom: 0;
   padding-left: 1rem;
@@ -130,15 +130,15 @@ pre:before {
 
 // Text directly after a main heading
 .sub-heading {
-  @include baseline($fs-two-line-pica, $line-height: 1, $below: .5);
+  @include baseline($two-line-pica, $line-height: 1, $below: .5);
 }
 
 blockquote {
   @include baseline($below: 2, $margin: 2.5);
   p {
-    @include baseline($fs-two-line-pica, $above: 0.4, $below: 0.7);
+    @include baseline($two-line-pica, $above: 0.4, $below: 0.7);
     @media(min-width: $screen-large) {
-      @include baseline($fs-two-line-pica, $above: 0.3, $below: 0);
+      @include baseline($two-line-pica, $above: 0.3, $below: 0);
     }
     font-style: normal;
     font-weight: bold;
@@ -169,7 +169,7 @@ cite {
 // }
 
 figcaption {
-  @include baseline($fs-pica, $line-height: 1.4, $margin: -.5);
+  @include baseline($pica, $line-height: 1.4, $margin: -.5);
   @media(min-width: $screen-medium) {
     padding-left: .5rem;
   }
