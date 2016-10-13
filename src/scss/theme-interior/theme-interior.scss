@@ -18,7 +18,7 @@ body {
     }
   }
   .intro h1 {
-    width: cw(12);
+    @include col(12, $calc: false, $margin: false);
   }
   section > p,
   .intro > p {
