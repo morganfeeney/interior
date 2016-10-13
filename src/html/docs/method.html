@@ -51,12 +51,18 @@ body {
     </div>
   </div>
 </section>
-<section id="grid">
-  <h2>Using grid</h2>
-  <p>As detailed in <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">this article</a>,
-   what I learnt from the first incarnation of Interior—which was based on Bootstrap—is that you have to walk away as much as possible from the past,
-    and embrace the new tools for layout. Currently Interior v2 doesn't rely on floats for laying out columns, instead the focus is on automation of tedious calculations <em>mixins</em> used to create them.</p>
-  <h5>For layout I use Flexbox</h5>
+<section id="grid" class="section">
+  <h2>Using the grid</h2>
+  <p>As detailed in <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">my article</a>,
+   what I learnt from the first incarnation of Interior—which was based on Bootstrap—is that you have to walk away as much as possible from what came before,
+    and embrace the new tools for layout. Interior v2 doesn't rely on floats for laying out columns, it never will, instead the focus is on using <a href="grid.html">mixins</a> to create them, whilst allowing vanilla Flexbox to do the layout.</p>
+  <h5>Flexbox is the framework</h5>
+  <p>In a nutshell what I realised was that I just need to create a grid and gutters, flexbox does the rest. So that's how it works in Interior v2.</p>
+  <blockquote class="outset-right">
+    <p>I just need to create a grid and gutters, flexbox does the rest.</p>
+    <cite><a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox">Moi</a></cite>
+  </blockquote>
+  <p>Who knows what i will learn from the new Grid spec and what v3 will be but I'm guessing there may not be a need to use Interior for grid layout, yet there will be a benefit to automation using Scss—so Interior will live on—albeit <em>in a state of evolution</em>.</p>
 </section>
 {% endblock %}
 
