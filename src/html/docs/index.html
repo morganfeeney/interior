@@ -19,22 +19,23 @@
 {% endblock %}
 
 {% block main %}
-<h2>Interior documentation</h2>
-<p>This page links to the documentation on not only how to use Interior to achieve ease of layout—but<em>why</em> it is the way it is.</p>
-<div class="grid layout-1">
-  <div>
-    <ul>
-      {% for doc in docs %}
-      {# Check to see if the current page matches a link #}
-        {% if doc == file %}
-          <li><a style="color: black" href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-        {% else %}
-            <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+<section>
+  <h2>Interior documentation</h2>
+  <p>This page links to the documentation on not only how to use Interior to achieve ease of layout—but<em>why</em> it is the way it is.</p>
+  <div class="grid layout-1">
+    <div>
+      <ul>
+        {% for doc in docs %}
+        {# Check to see if the current page matches a link #}
+          {% if doc == file %}
+            <li><a style="color: black" href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+          {% else %}
+              <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-</div>
-
+</section>
 
 {% endblock %}

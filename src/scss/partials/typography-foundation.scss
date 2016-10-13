@@ -34,7 +34,8 @@ h2 {
     @include baseline($two-line-pica, $above: 1, $below: .5, $margin: 4.1);
   }
   @media(min-width: $screen-small) {
-    h2 + p {
+    section > p,
+    .section > p {
       @include col(8, $calc: false, $margin: false);
     }
   }
