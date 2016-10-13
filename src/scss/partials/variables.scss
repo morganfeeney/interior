@@ -35,6 +35,7 @@ $brandbg: $brand-color-1;
 $lightbg: $brand-color-2;
 $nobg: transparent;
 $brandbg-light: lighten($brandbg, 25);
+$brandbg-mid: lighten($brandbg, 15);
 $darkbg: $brand-color-3;
 
 // Grayscale
