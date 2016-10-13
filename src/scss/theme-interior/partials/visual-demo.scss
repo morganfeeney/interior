@@ -3,13 +3,14 @@
   @extend .grid;
   > div {
     @extend .grid;
-    @include col(12);
-    background: $brandbg-mid;
+    @include col(8, $grid-gutter: 1rem, $margin-left: 1rem, $margin-right: 1rem);
+    background: $brand-color-mid;
     min-height: 100px;
     padding: 1rem 0;
     > div {
       @include col(6);
-      background: $brandbg;
+      background: $brand-color-1;
+      color: $brand-color-light;
       display: flex;
       justify-content: center;
       align-items: center;
