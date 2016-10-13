@@ -55,14 +55,20 @@ body {
   <h2>Using the grid</h2>
   <p>As detailed in <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">my article</a>,
    what I learnt from the first incarnation of Interior—which was based on Bootstrap—is that you have to walk away as much as possible from what came before,
-    and embrace the new tools for layout. Interior v2 doesn't rely on floats for laying out columns, it never will, instead the focus is on using <a href="grid.html">mixins</a> to create them, whilst allowing vanilla Flexbox to do the layout.</p>
+    and embrace the new tools for layout. Interior v2 doesn't rely on floats for laying out columns, it never will, instead the focus is on using <a href="grid.html">mixins</a> to create them,
+     whilst allowing vanilla Flexbox to do the layout.</p>
   <h5>Flexbox is the framework</h5>
-  <p>In a nutshell what I realised was that I just need to create a grid and gutters, flexbox does the rest. So that's how it works in Interior v2.</p>
+  <p>In a nutshell what I realised was that I just need to create a grid and gutters, flexbox does the rest. So that's how it works in Interior v2. therefore you won't find any <code class="code-inline language-scss">.push</code>, <code class="code-inline language-scss">.pull</code> or <code class="code-inline language-scss">.offset</code> <code class="code-inline language-scss">.col-[whatever]</code> classes like you get in Bootstrap... <em>well you might</em> but if they exist they'll be for baseline alignment.</p>
   <blockquote class="outset-right">
     <p>I just need to create a grid and gutters, flexbox does the rest.</p>
     <cite><a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox">Moi</a></cite>
   </blockquote>
   <p>Who knows what i will learn from the new Grid spec and what v3 will be but I'm guessing there may not be a need to use Interior for grid layout, yet there will be a benefit to automation using Scss—so Interior will live on—albeit <em>in a state of evolution</em>.</p>
+  <h5>Columns &amp; gutters</h5>
+  <p>In an effort to reduce the amount of markup necessary to create columns with gutters I opted for the use of margin over padding. This means to create a gutter and to apply a background to the content within it that is padded, so you can actually see the gutter, this means less code.</p>
+  <p>
+    visual example needed
+  </p>
 </section>
 {% endblock %}
 
