@@ -1,10 +1,9 @@
 .visual-grid-1 {
-  justify-content: center;
   margin-top: 3rem;
   @extend .grid;
   > div {
     @extend .grid;
-    @include col(6);
+    @include col(12);
     background: $brandbg-mid;
     min-height: 100px;
     padding: 1rem 0;
