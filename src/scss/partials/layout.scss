@@ -95,38 +95,23 @@
   }
   dd {
     @include text-col(8);
-    //margin: 0 0 .75rem;
-    // &:last-child {
-    //   margin: 0;
-    // }
   }
 }
-//
-// dl {
-//   margin-top: 0;
-//   margin-bottom: 1rem;
-// }
 
 blockquote.outset-right {
   text-transform: uppercase;
-  @media(min-width: $screen-large) {
+  @include col(10, $calc: false, $margin: false);
+  @media(min-width: $screen-medium) {
     @include col(6, $calc: false, $margin: false);
     margin-left: auto;
     text-align: right;
-    p {
+  }
+  p {
+    text-align: left;
+    @media(min-width: $screen-medium) {
       margin-right: 0;
       padding-right: 0;
       text-align: right;
-    }
-  }
-}
-
-blockquote.outset-left {
-  @media(min-width: $screen-large) {
-    @include col(5, $calc: false, $margin: false);
-    float: right;
-    p {
-      margin-left: 0;
     }
   }
 }
@@ -166,12 +151,5 @@ blockquote.outset-left {
   flex-flow: row wrap;
   h1 {
     flex: 1 1 auto;
-  }
-}
-
-pre.code-block {
-  @media(max-width: $screen-medium-max) {
-    margin-left: -$horizontal-space-small;
-    margin-right: -$horizontal-space-small;
   }
 }
