@@ -35,3 +35,10 @@ code {
 .comment {
 	color: #999;
 }
+
+pre.code-block {
+  @media(max-width: $screen-medium-max) {
+    margin-left: -$horizontal-space-small;
+    margin-right: -$horizontal-space-small;
+  }
+}
