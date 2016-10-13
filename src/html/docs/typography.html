@@ -23,7 +23,7 @@ h2:first-of-type::before {
   <h2>Scale</h2>
   <p>The font sizes are based upon a <a href="https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d" taget="_blank">typographic scale</a> traditionally set by printers, adopted for use on the web.
      The sizes were originally in <em>point</em> yet have been converted to <em>rem</em>—the resulting size is the equivalent <em>px</em> to what it would have been as <em>point</em>.
-     The base font size is <em>1rem</em>, with a line-height of <em>1</em>. The baseline grid is <em>.5rem</em> for the sake of traversing the baseline in small increments. The resuting body font size is—for small viewports 16px—whilst 18px on larger viewports as all font sizes scale up by 112.5%.</p>
+     The base font size is <em>1rem</em>, with a line-height of <em>1</em>. The baseline grid is <em>.5rem</em> for the sake of traversing the baseline in small increments. The resulting body font size is—for small viewports 16px—whilst 18px on larger viewports as all font sizes scale up by 112.5%.</p>
 </section>
 <section id="typography-specimin">
   <figure id="h1">
@@ -55,7 +55,10 @@ h2:first-of-type::before {
   <h2>Names</h2>
   <div class="grid layout-1">
     <div>
-      <p>The traditional names associated with letterpress sizes lend themselves as a naming convention for web typography. Take for example the variable names where I have assigned the font sizes in figure 1.</p>
+      <p>The traditional names associated with letterpress sizes lend themselves as a naming convention for web typography.
+        Take for example the variable names where I have assigned the font sizes in figure 1.</p>
+      <p>Font sizes have been assigned to specific elements <code class="code-inline language-markup">&lt;h1&gt;</code>...<code class="code-inline language-markup">&lt;h6&gt;</code> using variables and the <a href="baseline.html">baseline</a> mixin,
+         in the case of styles for the current Interior theme. However they could also be used for class names.</p>
     </div>
     <div>
         <figure>
