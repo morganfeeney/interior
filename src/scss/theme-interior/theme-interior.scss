@@ -1,7 +1,7 @@
 body {
   font-family: $font-family-base;
   // Can make use of the colour arrangement by overlaying white and funky salmon CSS diagrams on top.
-  background: $brandbg-light;
+  background: $brand-color-light;
 }
 
 .vh100-layout {
@@ -20,7 +20,8 @@ body {
   .intro h1 {
     width: cw(12);
   }
-  p {
+  section > p,
+  .intro > p {
     padding-right: $horizontal-offset;
     @media(min-width: $screen-medium) {
       padding-right: $horizontal-offset-larger;
