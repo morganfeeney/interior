@@ -1,25 +1,22 @@
 {% extends "layouts/standard-layout.njk" %}
+{% set page_description = "Baseline page..." %}
 
 {% block embedded_css %}
 <style>
 h1:before {
   content: "Docs"
 }
-  h2:first-of-type:before {
-    content: "Mixin";
-  }
+h2:first-of-type:before {
+  content: "Mixin";
+}
 </style>
 {% endblock %}
-
-{% block intro %}
-  <h1>{{title}}.</h1>
-{% endblock %}
-
 
 {% block main %}
   <section id="baseline">
     <h2>Usage</h2>
-    <p>Baseline is a vertical grid for aligning type. The <code class="code-inline language-scss">baseline()</code> mixin accepts a variety of arguments.</p>
+    <p>The <code class="code-inline language-scss">baseline()</code> mixin is a vertical text-alignment tool, it accepts a variety of arguments.
+       It automates baseline alignment with as few restrictions as possible. Therefore use of arguments is necessary with a variety of <code class="code-inline language-scss">font-size</code> and <code class="code-inline language-scss">line-height</code> values.</p>
     <h5>Arguments</h5>
     <p>There are <strong>no</strong> required arguments.</p>
     <div class="grid cols-2">
@@ -27,15 +24,15 @@ h1:before {
         <div class="grid">
           <dl class="dl-horizontal">
             <dt><code class="code-inline language-scss">$font-size</code></dt>
-            <dd>Sets the font size. I use a range of variables based upon a <a href="typography.html">typographic scale</a>.</dd>
+            <dd>Assigns a value to the font size. I use a range of variables based upon a <a href="typography.html">typographic scale</a>.</dd>
           </dl>
           <dl class="dl-horizontal">
             <dt><code class="code-inline language-scss">$unit</code></dt>
-            <dd>Multiply the scale of line-height x2, x3 etc.</dd>
+            <dd>Multiply the scale of line-height x2, x3 etc, x1 is the default.</dd>
           </dl>
           <dl class="dl-horizontal">
             <dt><code class="code-inline language-scss">$line-height</code></dt>
-            <dd>Apply line-height, it should be unitless.</dd>
+            <dd>Apply line-height, I've used unitless however should work otherwise.</dd>
           </dl>
           <dl class="dl-horizontal">
             <dt><code class="code-inline language-scss">$margin</code></dt>
