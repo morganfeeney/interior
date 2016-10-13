@@ -15,11 +15,6 @@ body {
 </style>
 {% endblock %}
 
-{% block intro %}
-<h1>Method.</h1>
-{% endblock %}
-
-
 {% block main %}
 <section id="intro">
   <h2>Separation</h2>
@@ -55,6 +50,13 @@ body {
       </figure>
     </div>
   </div>
+</section>
+<section id="grid">
+  <h2>Using grid</h2>
+  <p>As detailed in <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">this article</a>,
+   what I learnt from the first incarnation of Interior—which was based on Bootstrap—is that you have to walk away as much as possible from the past,
+    and embrace the new tools for layout. Currently Interior v2 doesn't rely on floats for laying out columns, instead the focus is on automation of tedious calculations <em>mixins</em> used to create them.</p>
+  <h5>For layout I use Flexbox</h5>
 </section>
 {% endblock %}
 
