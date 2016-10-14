@@ -180,6 +180,7 @@ blockquote {
 
 figcaption {
   @include baseline($pica, $line-height: 1.4, $margin: -.5);
+  color: $mid-gray;
   @media(min-width: $screen-medium) {
     padding-left: .5rem;
   }
