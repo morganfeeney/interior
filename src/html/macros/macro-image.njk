@@ -1,10 +1,10 @@
-{% macro image_placeholder (size="360", text="IMAGE", class) %}
-  <img class="{{ class }}" src="http://placehold.it/{{ size }}/FFF1F1/FF7070?text={{ text }}" alt="" />
+{% macro image_placeholder (size="360", text="IMAGE", bgcolor="FFF1F1", color="FF7070", class) %}
+  <img class="{{ class }}" src="http://placehold.it/{{ size }}/{{ bgcolor }}/{{ color }}?text={{ text }}" alt="" />
 {% endmacro %}
 
-{% macro image_figure_placeholder (size="360", text="IMAGE", figure_class, image_class, caption) %}
+{% macro image_figure_placeholder (size="360", text="IMAGE", bgcolor="FFF1F1", color="FF7070", figure_class, image_class, caption) %}
   <figure class="{{ figure_class }}">
-    <img class="{{ image_class }}" src="http://placehold.it/{{ size }}/FFF1F1/FF7070?text={{ text }}" alt="" />
+    <img class="{{ image_class }}" src="http://placehold.it/{{ size }}/{{ bgcolor }}/{{ color }}?text={{ text }}" alt="" />
     {% if caption %}
       <figcaption>{{ caption }}</figcaption>
     {% endif %}
