@@ -3,16 +3,16 @@
 
 {% block embedded_css %}
 <style>
-h1::before {
-  content: "Docs";
-}
-h2:first-of-type::before {
-  counter-increment: section;
-  content: "Method: " counter(section);
-}
-body {
-  counter-reset: section;
-}
+  h1::before {
+    content: "Docs";
+  }
+  h2:first-of-type::before {
+    counter-increment: section;
+    content: "Method: " counter(section);
+  }
+  body {
+    counter-reset: section;
+  }
 </style>
 {% endblock %}
 

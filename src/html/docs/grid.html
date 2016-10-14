@@ -1,10 +1,11 @@
 {% extends "layouts/standard-layout.njk" %}
+{% set page_description = "Use the col() mixin to create columns for use with flexbox layouts." %}
 
 {% block embedded_css %}
 <style>
-h1:before {
-  content: "Docs"
-}
+  h1:before {
+    content: "Docs"
+  }
   h2:first-of-type:before {
     content: "Mixin";
   }
