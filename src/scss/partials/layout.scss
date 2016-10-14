@@ -100,7 +100,9 @@
 
 blockquote.outset-right {
   text-transform: uppercase;
-  @include col(10, $calc: false, $margin: false);
+  @media(min-width: $screen-small) {
+    @include col(10, $calc: false, $margin: false);
+  }
   @media(min-width: $screen-medium) {
     @include col(6, $calc: false, $margin: false);
     margin-left: auto;
