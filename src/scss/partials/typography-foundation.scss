@@ -33,9 +33,12 @@ h2 {
   h2 {
     @include baseline($two-line-pica, $above: 1, $below: .5, $margin: 4.1);
   }
-  @media(min-width: $screen-small) {
-    section > p,
-    .section > p {
+  section > p,
+  .section > p {
+    @media(min-width: $screen-small) {
+      @include col(10, $calc: false, $margin: false);
+    }
+    @media(min-width: $screen-medium) {
       @include col(8, $calc: false, $margin: false);
     }
   }
@@ -154,9 +157,15 @@ blockquote {
   }
 }
 
-cite {
-  @include baseline($above: 0);
-  font-style: normal;
+blockquote {
+  cite {
+    @include baseline($above: .25, $margin: -.6);
+    @media(min-width: $screen-large) {
+      @include baseline($above: .35);
+    }
+    display: block;
+    font-style: normal;
+  }
 }
 
 .page-meta,

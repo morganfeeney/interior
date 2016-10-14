@@ -1,9 +1,12 @@
 .visual-grid-1 {
-  margin-top: 3rem;
+  @include baseline($no-text: true, $above: .35, $below: .65, $margin: 1);
   @extend .grid;
   > div {
     @extend .grid;
-    @include col(8, $grid-gutter: 1rem, $margin-left: 1rem, $margin-right: 1rem);
+    @include col(12);
+    @media(min-width: $screen-medium) {
+      @include col(8, $grid-gutter: 1rem, $margin-left: 1rem, $margin-right: 1rem);
+    }
     background: $brand-color-mid;
     min-height: 100px;
     padding: 1rem 0;
@@ -14,6 +17,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 1rem;
+      > img {
+        object-fit: cover;
+        height: 100%;
+      }
     }
   }
 }
