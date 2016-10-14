@@ -1,3 +1,26 @@
+#main-nav {
+  @media(max-width: $screen-small-max) {
+    align-self: flex-end;  
+  }
+  @include baseline($pica, $above: 1.7);
+  @media(min-width: $screen-large) {
+    @include baseline($pica, $above: 2);
+  }
+  display: flex;
+  align-items: flex-start;
+  a {
+    text-decoration: none;
+    padding: 0 .5rem;
+    border-left: 1px solid #000;
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
 .posts-nav {
   text-align: right;
   margin-bottom: $vertical-space;

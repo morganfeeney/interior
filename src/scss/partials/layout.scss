@@ -45,7 +45,11 @@
   > .container {
     height: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
+    justify-content: space-between;
+    @media(min-width: $screen-small) {
+      flex-flow: row wrap;
+    }
   }
   .intro {
     width: 100%;
