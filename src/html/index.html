@@ -12,27 +12,35 @@
 {% block main %}
   <section id="foreword">
     <h5>Web and print are different beasts</h5>
-    <p>Paper can fold yet it doesn't shrink. You needn't worry about a paper layout bursting at the seams when it is rotated.
+    <p>Paper will fold yet it doesn't shrink. You needn't worry about a paper layout bursting at the seams when it's orientation changes.
     The fluidity of web alone presents a unique set of challenges, the world of print won't experience.</p>
-    <p>The transition/translation from print to web is challenging, you can't apply that 'pretty' layout you created in Illustrator to the browser, without also solving content reflow issues. Besides... we've been limited by browser capability, we still are but we're <i>moving forward</i>.</p>
+    <p>The transition/translation from print to web is challenging, applying that 'perfect' layout you created in Illustrator to the browser, without also solving content reflow issues, isn't straight forward.
+      Besides... we've been limited by browser capability — but we're <i>moving forward</i>.</p>
     <blockquote class="outset-right">
       <p>We finally have the tools necessary to create amazing page designs on the web</p>
       <cite><a href="http://jensimmons.com/presentation/revolutionize-your-page-real-art-direction-web" rel="nofollow">Jen Simmons</a></cite>
     </blockquote>
-    <p>The capability of browsers has lead to unreliable hacks, javascript frameworks for presentation, and float based grid systems for scaffolding. They are <i>workarounds</i>, are problematic, and will eventually break if you push (or scroll) too hard. We've wanted to be able to create those lovely designs yet until now haven't had the tools.</p>
+    <p>The capability of browsers and the desires of designers have been at odds for years — this has lead to unreliable hacks, javascript frameworks for presentation, and float based grid systems for scaffolding.
+      They are <i>workarounds</i>, problematic, and prone to break when pushed to extremes. The desire for the ability to create stunning designs in the browser has always been there, yet until now we haven't had the ability with plain old CSS and HTML.</p>
+    <h6>New CSS layout tools</h6>
+    <p>Interior v.2 is intended for use with <a href="https://www.w3.org/TR/css-flexbox-1/">Flexbox</a>, according to <a href="https://rachelandrew.co.uk/archives/2016/09/29/css-grid-layout-module-level-1-at-candidate-recommendation/">this article</a> in 2017 we'll have the eagerly awaited <a href="https://www.w3.org/TR/2016/CR-css-grid-1-20160929/">Grid</a>.</p>
     <h5>Time to see what the shiny new toys can do</h5>
-    <p>It's so important that we move on from how things have been. In order to do this we need direction. People often draw a line between web and print, <i>I see the line becoming blurred</i>.</p>
-    <p>We can use some great examples of print layouts and see how far they can go when applied with the new features that we have.</p>
+    <p>It's so important that we move on from how things have been. In order to do this we need direction. People often draw a line between web and print, I see the line <i>becoming blurred</i>.</p>
+    <p>The talk <strong>Real Art Direction on the Web</strong> by Jen Simmons has been a wake up call, it's reminded me of some fundamentals I learnt back in Art College when I was 17 — I'm now 38 — thanks for that.</p>
+    <p>I suppose the main thing I'm reminded of is, back before I had access to the internet, going to the library digging out some books and learning about the work of artists &amp; designers from the 20th century. I always enjoyed that part of the process and somehow felt it had got lost along the way.</p>
+    <h6>the medium of web is coming of age</h6>
+    <p>The web is still so young, whereas print is mature. In her talk Jen focuses on the typical layouts we are so used to seeing on the web every day, 3 column layouts for example, Jen is 100% right for illuminating how devoid of creativity they are. These layouts have become <i>normalised</i>.</p>
+       <p>Taking the time to stop and re-assess things is therefore crucial in order to move forward and break free of old habits.</p>
   </section>
   <section id="interior">
     <h5>The need for Interior</h5>
-    <p>Automation, structure, re-usable &amp; familiar code. I wanted a framework that suits my needs, <i>it's designed for me</i>. I always end up customising things in the end so thought it was time to bite the bullet. Feel free to use it &amp; get involved if you feel strongly about contributing.</p>
-    <h5>next</h5>
-    <nav class="link-group">
-      <a class="button" href="{{ home_url }}docs/">Read the documentation</a>
-      <a class="button" href="{{ home_url }}examples/">View the examples</a>
-      <a class="button" href="https://github.com/morganfeeney/interior">View on Github</a>
-    </nav>
+    <p>Automation, structure, re-usable &amp; familiar code. I wanted a series of layout tools that suit my needs — it's designed for me — but you can use it too. Feel free to get involved if you feel strongly about contributing.</p>
+    <h6>next</h6>
+    <ul>
+      <li><a class="button" href="{{ home_url }}docs/">Read the documentation</a></li>
+      <li><a class="button" href="{{ home_url }}examples/">View the examples</a></li>
+      <li><a class="button" href="https://github.com/morganfeeney/interior">View on Github</a></li>
+    </ul>
   </section>
 {% endblock %}
 
