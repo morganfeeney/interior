@@ -1,8 +1,9 @@
 {% extends "layouts/vh100-layout.njk" %}
+{% set page_title = "Web layout design is evolving." %}
 
 {% block intro %}
-  <time datetime="{{ iso_date }}" title="Published: {{ nice_date }}">Published: {{ nice_date }}</time>
-  <h1>Web layout design is evolving.</h1>
+  <time datetime="{{ iso_date }}" title="Published: {{ nice_date }}">{{ nice_date }}</time>
+  <h1>{{ page_title }}</h1>
   <p>Something <strong><u>big</u></strong> is happening, specification is pushing the web forward in an unprecedented way.
     Those ready to embrace change are on the verge of a new era.
     <strong>However</strong>, we mustn't forget that beyond the web is a wealth of layout design resource to learn from.</p>
@@ -21,13 +22,13 @@
       <cite><a href="http://jensimmons.com/presentation/revolutionize-your-page-real-art-direction-web" rel="nofollow">Jen Simmons</a></cite>
     </blockquote>
     <p>The capability of browsers and the desires of designers have been at odds for years — this has lead to unreliable hacks, javascript frameworks for presentation, and float based grid systems for scaffolding.
-      They are <i>workarounds</i>, problematic, and prone to break when pushed to extremes. The desire for the ability to create stunning designs in the browser has always been there, yet until recently we haven't had the same level of precision we have with DTP applications with plain old CSS and HTML.</p>
+      They are <i>workarounds</i>, problematic, and prone to break when pushed to the extremes some layouts require. The desire for the ability to create stunning designs in the browser has always been there, yet until recently we haven't had the same level of precision we've had with DTP applications with plain old CSS and HTML.</p>
     <h6>New CSS layout tools</h6>
     <p>Interior v.2 is intended for use with <a href="https://www.w3.org/TR/css-flexbox-1/">Flexbox</a>, according to <a href="https://rachelandrew.co.uk/archives/2016/09/29/css-grid-layout-module-level-1-at-candidate-recommendation/">this article</a> in 2017 we'll have the eagerly awaited <a href="https://www.w3.org/TR/2016/CR-css-grid-1-20160929/">Grid</a>.</p>
     <h5>Time to see what the shiny new toys can do</h5>
     <p>It's so important that we move on from how things have been. In order to do this we need direction. People often draw a line between web and print, I see the line <i>becoming blurred</i>.</p>
     <p>The talk <strong>Real Art Direction on the Web</strong> by Jen Simmons has been a wake up call, it's reminded me of some fundamentals I learnt back in Art College when I was 17 — I'm now 38 — thanks for that.</p>
-    <p>I suppose the main thing I'm reminded of is, back before I had access to the internet, going to the library digging out some books and learning about the work of artists &amp; designers from the 20th century. I always enjoyed that part of the process, somehow it's got lost along the way.</p>
+    <p>I suppose the main thing I'm reminded of is, back before I had access to the internet, going to the library digging out some books and learning about the work of artists &amp; designers from the 20th century. I always enjoyed that part of the process, somehow it got lost along the way.</p>
     <h6>the medium of web is coming of age</h6>
     <p>The web is still so young, whereas print is mature. In her talk Jen focuses on the typical layouts we are so used to seeing on the web every day, 3 column layouts for example, and is 100% right for illuminating how devoid of creativity they are. These layouts have become <i>normalised</i>.</p>
        <p>Taking the time to stop and re-assess things is therefore crucial in order to move forward and break free of old habits. Researching the works of layout specialists from the world of print design is defintiely a way forward, however web is it's own medium with it's own unique challenges and features. It needs to evolve into its own thing,
