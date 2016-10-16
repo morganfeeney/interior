@@ -22,7 +22,9 @@ body {
   }
   section > p,
   .intro > p {
-    padding-right: $horizontal-offset;
+    @media(min-width: $screen-small) {
+      padding-right: $horizontal-offset;
+    }
     @media(min-width: $screen-medium) {
       padding-right: $horizontal-offset-larger;
     }
@@ -48,7 +50,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5 {
-  padding-right: $horizontal-offset;
+  @media(min-width: $screen-small) {
+    padding-right: $horizontal-offset;
+  }
   @media(min-width: $screen-medium) {
     padding-right: $horizontal-offset-larger;
   }
