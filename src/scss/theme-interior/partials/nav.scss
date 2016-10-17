@@ -2,7 +2,6 @@
   @media(max-width: $screen-small-max) {
     @include baseline($pica, $above: 1);
     align-self: flex-end;
-    font-weight: bold;
   }
   @include baseline($pica, $above: 1.7);
   @media(min-width: $screen-large) {
