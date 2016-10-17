@@ -31,6 +31,12 @@
   a {
     text-transform: uppercase;
     text-decoration: none;
+    &:only-child.next {
+      margin-left: auto;
+    }
+    &:only-child.prev {
+      margin-right: auto;
+    }
   }
   .next, .prev {
     display: flex;
