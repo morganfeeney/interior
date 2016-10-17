@@ -104,16 +104,15 @@
 
 blockquote.outset-right {
   text-transform: uppercase;
+  margin-left: auto;
+  text-align: right;
   @media(min-width: $screen-small) {
     @include col(10, $calc: false, $margin: false);
   }
   @media(min-width: $screen-medium) {
     @include col(6, $calc: false, $margin: false);
-    margin-left: auto;
-    text-align: right;
   }
   p {
-    text-align: left;
     @media(min-width: $screen-medium) {
       margin-right: 0;
       padding-right: 0;
