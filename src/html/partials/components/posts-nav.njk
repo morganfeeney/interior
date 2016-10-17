@@ -7,11 +7,13 @@
     {% set nice_next = docs[next] | capitalize | replace("-", " ") | replace(".html", "") %}
     {% if nice_prev %}
       <a class="prev" href="{{ docs[prev] }}">{{ nice_prev }}</a>
-      {% else %}
+    {% else %}
+      {# NOWT #}
     {% endif %}
     {% if nice_next %}
       <a class="next" href="{{ docs[next] }}">{{ nice_next }}</a>
-      {% else %}
+    {% else %}
+      {# NOWT #}
     {% endif %}
   {% endif %}
 {% endfor %}
