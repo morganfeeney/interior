@@ -21,12 +21,7 @@
     <div>
       <ul>
         {% for doc in docs %}
-        {# Check to see if the current page matches a link #}
-          {% if doc == file %}
-            <li><a style="color: black" href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-          {% else %}
-              <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-          {% endif %}
+          <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
         {% endfor %}
       </ul>
     </div>

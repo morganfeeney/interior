@@ -1,5 +1,17 @@
-<nav class="posts-nav">
-  <a href="#">Prev</a>
-  <a href="#">Next</a>
-  <a href="#">View site</a>
-</nav>
+{# Needs making into a macro #}
+{% for doc in docs %}
+  {% if file == doc %}
+    {% set next = loop.index %}
+    {% set prev = loop.index-2 %}
+    {% set nice_prev = docs[prev] | capitalize | replace("-", " ") | replace(".html", "") %}
+    {% set nice_next = docs[next] | capitalize | replace("-", " ") | replace(".html", "") %}
+    {% if nice_prev %}
+      <a class="prev" href="{{ docs[prev] }}">{{ nice_prev }}</a>
+      {% else %}
+    {% endif %}
+    {% if nice_next %}
+      <a class="next" href="{{ docs[next] }}">{{ nice_next }}</a>
+      {% else %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
