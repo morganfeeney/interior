@@ -1,3 +1,7 @@
+/* ==============================================================
+   Style
+   ============================================================== */
+
 // Functions
 @import "functions/units";
 @import "functions/vertical-rhythm";
@@ -10,12 +14,11 @@
 @import "mixins/col";
 
 // Theme Mixins
-@import "theme-interior/mixins/layout";
 @import "theme-interior/mixins/typography";
 
 // Core partials
 @import "partials/base";
-@import "partials/typography-foundation";
+@import "partials/typography";
 @import "partials/layout";
 
 // Theme partials
@@ -26,8 +29,10 @@
 @import "theme-interior/partials/code";
 @import "theme-interior/partials/type-specimin";
 
-// Theme
-@import "theme-interior/theme-interior";
+// Theme layouts
+@import "theme-interior/partials/vh100-layout";
+
+// Theme visuals
 @import "theme-interior/partials/visual-demo";
 
 // Custom web fonts

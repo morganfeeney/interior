@@ -1,8 +1,6 @@
-body {
-  font-family: $font-family-base;
-  // Can make use of the colour arrangement by overlaying white and funky salmon CSS diagrams on top.
-  background: $brand-color-light;
-}
+/* ==============================================================
+   VH100 layout
+   ============================================================== */
 
 .vh100-layout {
   .intro > p:first-of-type {
@@ -34,37 +32,18 @@ body {
   }
 }
 
-.home-link {
-  text-decoration: none;
-  margin-top: .4rem;
-  @media(min-width: $screen-large) {
-    margin-top: .9rem;
-    margin-bottom: .1rem;
+@media(min-width: $screen-medium) {
+  .vh100-layout {
+    #main-header {
+      height: 100vh;
+      margin-bottom: 0rem;
+      .intro {
+        display: flex;
+        flex-flow: row wrap;
+        > p:first-of-type {
+          align-self: flex-end;
+        }
+      }
+    }
   }
-  p {
-    @include baseline($two-line-pica, $above: 0, $below: 0, $line-height: 1, $margin: -1);
-  }
-}
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-}
-
-h1, h2, h3, h4, h5 {
-  @media(min-width: $screen-small) {
-    padding-right: $horizontal-offset;
-  }
-  @media(min-width: $screen-medium) {
-    padding-right: $horizontal-offset-larger;
-  }
-}
-
-.grid {
-  h2, h3, h4, h5, h6, p {
-    padding-right: 0;
-  }
-}
-
-.link-group {
-  display: flex;
-  flex-flow: column;
 }

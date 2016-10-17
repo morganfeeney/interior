@@ -5,7 +5,6 @@
 %container {
    max-width: $wrapper-width-large;
    margin: auto;
-   //background: $brand-color-2;
 }
 
 %flex-container {
@@ -59,65 +58,6 @@
 #main-header {
   .intro {
     margin-top: 3rem;
-  }
-}
-
-@media(min-width: $screen-medium) {
-  .vh100-layout {
-    #main-header {
-      height: 100vh;
-      margin-bottom: 0rem;
-      .intro {
-        display: flex;
-        flex-flow: row wrap;
-        > p:first-of-type {
-          align-self: flex-end;
-        }
-      }
-    }
-  }
-}
-
-// Skinny single column layout
-.layout-thin {
-  .container {
-    max-width: $screen-large;
-  }
-}
-
-// Flexible Description lists
-.dl-horizontal {
-  @extend %flex-container;
-  justify-content: flex-end;
-  align-content: flex-start;
-  @include col(12);
-  dt {
-    @include text-col(4, $min: true);
-    font-weight: bold;
-    margin-right: auto;
-    padding-right: 1rem;
-  }
-  dd {
-    @include text-col(8);
-  }
-}
-
-blockquote.outset-right {
-  text-transform: uppercase;
-  margin-left: auto;
-  text-align: right;
-  @media(min-width: $screen-small) {
-    @include col(10, $calc: false, $margin: false);
-  }
-  @media(min-width: $screen-medium) {
-    @include col(6, $calc: false, $margin: false);
-  }
-  p {
-    @media(min-width: $screen-medium) {
-      margin-right: 0;
-      padding-right: 0;
-      text-align: right;
-    }
   }
 }
 
