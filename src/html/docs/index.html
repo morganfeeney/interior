@@ -18,13 +18,15 @@
   <h2>Read all about it</h2>
   <p>This page links to the documentation on not only how to use Interior to achieve ease of layout — but<em>why</em> it is the way it is.</p>
   <div class="grid layout-1">
-    <div>
-      <ul>
-        {% for doc in docs %}
-          <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
+    {% if docs %}
+      <div>
+        <ul>
+          {% for doc in docs %}
+            <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
   </div>
 </section>
 
