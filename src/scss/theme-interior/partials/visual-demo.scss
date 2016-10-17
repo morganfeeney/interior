@@ -5,7 +5,7 @@
     @extend .grid;
     @include col(12);
     @media(min-width: $screen-medium) {
-      @include col(8, $grid-gutter: 1rem, $margin-left: 1rem, $margin-right: 1rem);
+      @include col(8, $grid-gutter: $horizontal-space-small, $margin-left: $horizontal-space-small, $margin-right: $horizontal-space-small);
     }
     background: $brand-color-mid;
     min-height: 100px;
