@@ -157,6 +157,10 @@ blockquote {
   }
 }
 
+cite {
+  font-style: normal;
+}
+
 blockquote {
   cite {
     @include baseline($above: .25, $margin: -.6);
@@ -167,16 +171,6 @@ blockquote {
     font-style: normal;
   }
 }
-
-.page-meta,
-.disciplines,
-.languages {
-  //display: inline-flex;
-}
-
-// figure {
-//   margin-bottom: $vertical-space;
-// }
 
 figcaption {
   @include baseline($pica, $line-height: 1.4, $margin: -.5);
