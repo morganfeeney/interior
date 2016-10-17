@@ -9,8 +9,8 @@ pre.code-block {
 	 code {
 		background: rgba($brand-color-1, 0.1);
 		display: block;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: $horizontal-space;
+		padding-right: $horizontal-space;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 	}
