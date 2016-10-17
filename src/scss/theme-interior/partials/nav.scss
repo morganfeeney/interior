@@ -24,6 +24,31 @@
 }
 
 .posts-nav {
-  text-align: right;
-  margin-bottom: $vertical-space;
+  @include baseline($pica, $below: 0, $margin: 3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .next, .prev {
+    display: flex;
+    align-items: center;
+  }
+  .prev::before,
+  .next::after {
+    content: "";
+    border-top: .15rem solid;
+    border-left: .15rem solid;
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+  }
+  .prev::before {
+    transform: rotate(-45deg);
+  }
+  .next::after {
+    transform: rotate(135deg);
+  }
 }
