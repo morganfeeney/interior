@@ -59,6 +59,7 @@ $font-family-inline-code: $font-monospace;
 $font-base: 1rem;
 $line-height-base: 1;
 $base-line-unit: $font-base*$line-height-base;
+
 // This is for Arial/Helvetica
 $cap-height: 0.68;
 $font-size-body: $font-base;
@@ -85,6 +86,7 @@ $m: $horizontal-space;
 
 //** Borders
 $light-border: 1px solid $brand-color-3;
+$mid-border: .15rem solid $brand-color-mid;
 
 // Footer
 $footer-border-width: 1px;

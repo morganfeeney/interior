@@ -12,8 +12,8 @@
   align-items: flex-start;
   a {
     text-decoration: none;
-    padding: 0 .5rem;
-    border-left: 1px solid $brand-color-mid;
+    padding: 0 $horizontal-space-small/2;
+    border-left: $mid-border;
     &:first-child {
       border-left: none;
     }
@@ -28,16 +28,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    &:only-child.next {
-      margin-left: auto;
-    }
-    &:only-child.prev {
-      margin-right: auto;
-    }
-  }
   .next, .prev {
     display: flex;
     align-items: center;
@@ -45,8 +35,8 @@
   .prev::before,
   .next::after {
     content: "";
-    border-top: .15rem solid;
-    border-left: .15rem solid;
+    border-top: $mid-border;
+    border-left: $mid-border;
     width: 1rem;
     height: 1rem;
     display: inline-flex;
@@ -56,5 +46,19 @@
   }
   .next::after {
     transform: rotate(135deg);
+  }
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    &:only-child.next {
+      margin-left: auto;
+    }
+    &:only-child.prev {
+      margin-right: auto;
+    }
+    &:hover::before,
+    &:hover::after {
+      border-color: inherit;
+    }
   }
 }
