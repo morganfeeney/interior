@@ -5,11 +5,11 @@
 #main-nav {
   display: flex;
   align-items: flex-start;
+  @include baseline($pica, $above: 1.7);
   @media(max-width: $screen-small-max) {
     @include baseline($pica, $above: 1);
     align-self: flex-end;
   }
-  @include baseline($pica, $above: 1.7);
   @media(min-width: $screen-large) {
     @include baseline($pica, $above: 2.15);
   }
