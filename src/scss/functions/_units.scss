@@ -1,0 +1,4 @@
+// Column width
+@function column-width($col) {
+  @return 100% / $cols * $col;
+}

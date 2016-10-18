@@ -1,0 +1,67 @@
+{% extends "layouts/standard-layout.njk" %}
+{% set page_description = "Typographic scale and naming convention used for theme styles, made with Interior." %}
+{% set post_page = true %}
+{% set layout_classes = "docs" %}
+
+{% block embedded_css %}
+<style>
+  h1::before {
+    content: "Docs";
+  }
+  h2:first-of-type::before {
+    content: "Typography";
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+  <section id="intro">
+    <h2>Scale</h2>
+    <p>The font sizes are based upon a <a href="https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d" taget="_blank">typographic scale</a> traditionally set by printers, adopted for use on the web.
+       The sizes were originally in <em>point</em> yet have been converted to <em>rem</em> — the resulting size is the equivalent <em>px</em> to what it would have been as <em>point</em>.
+       The base font size is <em>1rem</em>, with a line-height of <em>1</em>. The baseline grid is <em>.5rem</em> for the sake of traversing the baseline in small increments. The resulting body font size is — for small viewports 16px — whilst 18px on larger viewports as all font sizes scale up by 112.5%.</p>
+  </section>
+  <section id="typography-specimin">
+    <div id="h1">
+      <h1>Pack my box with five dozen liquor jugs.</h1>
+      <span></span>
+    </div>
+    <div id="h2">
+      <h2>Pack my box with five dozen liquor jugs.</h2>
+      <span></span>
+    </div>
+    <div id="h3">
+      <h3>Pack my box with five dozen liquor jugs.</h3>
+      <span></span>
+    </div>
+    <div id="h4">
+      <h4>Pack my box with five dozen liquor jugs.</h4>
+      <span></span>
+    </div>
+    <div id="h5">
+      <h5>Pack my box with five dozen liquor jugs.</h5>
+      <span></span>
+    </div>
+    <div id="h6">
+      <h6>Pack my box with five dozen liquor jugs.</h6>
+      <span></span>
+    </div>
+  </section>
+  <section>
+    <h2>Names</h2>
+    <div class="grid layout-1">
+      <div>
+        <p>The traditional names associated with letterpress sizes lend themselves as a naming convention for web typography.
+          Take for example the variable names where I have assigned the font sizes in div 1.</p>
+        <p>Font sizes have been assigned to specific elements <code class="code-inline language-markup">&lt;h1&gt;</code>...<code class="code-inline language-markup">&lt;h6&gt;</code> using variables and the <a href="baseline.html">baseline</a> mixin,
+           in the case of styles for the current Interior theme. However they could also be used for class names.</p>
+      </div>
+      <div>
+        <figure>
+            {% include "../partials/code-samples/variables-font-names.njk" %}
+          <figcaption>Figure 1</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+{% endblock %}

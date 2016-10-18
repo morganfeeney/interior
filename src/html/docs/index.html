@@ -1,0 +1,35 @@
+{% extends "layouts/standard-layout.njk" %}
+{% set page_title = "Docs" %}
+{% set page_description = "Read the documentation on how to use Interior" %}
+
+{% block embedded_css %}
+<style>
+  h1::before {
+    content: "Title"
+  }
+  h2::before {
+    content: "Navigation"
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+<section>
+  <h2>Read all about it</h2>
+  <p>This page links to the documentation on not only how to use Interior to achieve ease of layout — but<em>why</em> it is the way it is.</p>
+  <div class="grid layout-1">
+    {% if docs %}
+      <div>
+        <nav role="navigation">
+          <ul>
+            {% for doc in docs %}
+              <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

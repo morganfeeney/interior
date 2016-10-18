@@ -1,0 +1,65 @@
+{% import "../macros/macro-image.njk" as images %}
+{% import "../macros/macro-gallery.njk" as galleries %}
+{% import "../macros/macro-post.njk" as posts %}
+{% set title = page | capitalize | replace("-", " ") %}
+{% set home_url = "http://local.interior.com/" %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</title>
+		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
+		<link rel="stylesheet" href="{% if base_path %}{{ base_path }}{% else %}..{% endif %}/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block header_scripts %}
+			{% include "partials/head-scripts.njk" %}
+		{% endblock %}
+		{% block embedded_css %}
+		{% endblock %}
+	</head>
+	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">
+		<header id="main-header" class="container-outer {{ main_header_classes }}">
+			<div class="container">
+				{% block header %}
+					<a id="main-header-home-link" class="home-link" href="{{ home_url }}"><p>Interior</p><p>Layout system</p></a>
+					<nav id="main-nav">
+						<a href="{{ home_url }}docs">Docs</a>
+						<a href="{{ home_url }}examples">Examples</a>
+					</nav>
+				{% endblock %}
+			</div>
+		</header>
+		<article id="main-article" class="container-outer {{ article_classes }}">
+			<main class="container-outer {{ main_classes }}">
+				<div class="container {{ container_class }}">
+					{% block main %}{% endblock %}
+				</div>
+			</main>
+			{% if post_page %}
+				{% block posts_nav %}
+					<section id="posts-nav-section" class="container-outer {{ posts_nav_section_classes }}">
+						<div class="container">
+							{% block posts_nav_content %}
+								{% include "../partials/components/posts-nav.njk" %}
+							{% endblock %}
+						</div>
+					</section>
+				{% endblock %}
+			{% endif %}
+		</article>
+		{% block main_footer %}
+			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
+				<div class="container">
+					{% block footer %}
+						{% include "partials/footer.njk" %}
+					{% endblock %}
+				</div>
+			</footer>
+		{% endblock %}
+		{% if develop %}
+  		<script src="http://localhost:35729/livereload.js"></script>
+		{% else %}
+		  {# NOWT #}
+		{% endif %}
+	</body>
+</html>

@@ -1,0 +1,68 @@
+/* ==============================================================
+   Type specimin
+   ============================================================== */
+
+#typography-specimin {
+  margin: $vertical-space-small 0;
+  > div {
+    @extend .grid;
+    span {
+      @include baseline($english);
+      padding-left: 0;
+      order: 1;
+      @include col(12);
+      @media(min-width: $screen-large) {
+        @include col(3);
+      }
+    }
+  }
+}
+
+// Bit of code duplication here, I want the typography styles to be readable therefore
+// not converting everything so it uses maps. Just a single map here for demo purposes.
+$headings: (
+  h1: ($canon, 1, fs-canon),
+  h2: ($four-line-brevier, 1, four-line-brevier),
+  h3: ($two-line-pica, 1, two-line-pica),
+  h4: ($double-pica, 1.15, double-pica),
+  h5: ($great-primer, 1.35, great-primer),
+  h6: ($english, 1, english)
+);
+
+#typography-specimin {
+  display: flex;
+  flex-flow: column;
+  // Pseudo element
+  @each $name, $map in $headings {
+    #{$name} {
+      @include baseline(nth($map,1), $line-height: nth($map,2));
+      padding-right: 0;
+      display: flex;
+      flex-flow: row wrap;
+      @include col(12);
+      @media(min-width: $screen-large) {
+        @include col(9);
+        order: 2;
+      }
+      + span {
+        display: flex;
+        @media(min-width: $screen-large) {
+          flex-flow: column;
+          @include baseline(nth($map,1), $line-height: nth($map,2));
+        }
+        &::before {
+          content: "#{nth($map,1)}/#{nth($map,2)}\00a0\00a0\00a0";
+        }
+        &::after {
+          content: "$#{nth($map,3)}";
+          @media(min-width: $screen-large) {
+            @include baseline($english, $below: 0, $margin: .5);
+          }
+        }
+      }
+      &::before {
+        content: none;
+      }
+    }
+  }
+}

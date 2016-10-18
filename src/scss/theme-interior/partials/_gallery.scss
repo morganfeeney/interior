@@ -1,0 +1,19 @@
+/* ==============================================================
+   Gallery
+   ============================================================== */
+
+.gallery {
+  @extend .grid;
+  margin-top: $vertical-space;
+  margin-bottom: $vertical-space;
+}
+.gallery-item {
+  @include col(4);
+  margin-bottom: $grid-gutter;
+  @media(min-width: $screen-medium) {
+    @include col(3);
+  }
+  img {
+    @extend %fluid-img;
+  }
+}

@@ -1,0 +1,32 @@
+/* ==============================================================
+   Posts
+   ============================================================== */
+
+.posts {
+  @extend %flex-container;
+}
+
+// Post layouts
+%post-thumb-right {
+  img {
+    float: right;
+    max-width: 120px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.post-layouts-1 {
+  .post {
+    @extend %post-thumb-right;
+  }
+}
+
+.posts-feed {
+  .post-title {
+    margin-top: 0;
+  }
+  img {
+    margin-bottom: $vertical-space-small;
+  }
+}

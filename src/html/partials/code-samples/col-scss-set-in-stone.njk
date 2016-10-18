@@ -1,0 +1,12 @@
+{% extends "../cards/card-code.njk" %}
+{% set language="scss" %}
+{% block code %}<span class="comment">// 3 x columns</span>
+.col-4 {
+  @include col(4);
+}
+
+<span class="comment">// 2 x columns</span>
+.col-6 {
+  @include col(6);
+}
+{% endblock %}
