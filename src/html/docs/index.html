@@ -20,11 +20,13 @@
   <div class="grid layout-1">
     {% if docs %}
       <div>
-        <ul>
-          {% for doc in docs %}
-            <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-          {% endfor %}
-        </ul>
+        <nav role="navigation">
+          <ul>
+            {% for doc in docs %}
+              <li><a href="{{ doc }}">{{ doc | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
       </div>
     {% endif %}
   </div>

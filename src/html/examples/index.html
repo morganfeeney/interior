@@ -1,12 +1,11 @@
-{% set base_path = ".." %}
+{% extends "layouts/standard-layout.njk" %}
 {% set page_title = "Examples" %}
 {% set page_description = "Example layouts created with Interior." %}
-{% extends "layouts/standard-layout.njk" %}
 
 {% block embedded_css %}
 <style>
   h1::before {
-    content: "Examples"
+    content: "Title"
   }
   h2::before {
     content: "Navigation"
@@ -15,17 +14,21 @@
 {% endblock %}
 
 {% block main %}
-  <h2>Title about this page</h2>
-  <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system.</p>
-  <ul>
-    {% for example in examples %}
-    {# Check to see if the current page matches a link #}
-      {% if example == file %}
-        <li><a style="color: black" href="{{ example }}">{{ example | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-      {% else %}
-          <li><a href="{{ example }}">{{ example | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
+<section>
+  <h2>Simple examples</h2>
+  <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system — keep checking back as this page will be regularly updated.</p>
+  <div class="grid layout-1">
+    {% if examples %}
+      <div>
+        <nav role="navigation">
+          <ul>
+            {% for example in examples %}
+              <li><a href="{{ example }}">{{ example | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    {% endif %}
+  </div>
+</section>
 {% endblock %}
