@@ -17,8 +17,13 @@ body {
   line-height: $line-height-base;
   font-size: $font-base;
   -webkit-text-size-adjust: 100%;
-  background-image: -moz-linear-gradient(top,#FF7070 0,rgba(255,255,255,0)1px);
-  background-image: -webkit-linear-gradient(top,#FF7070 0,rgba(255,255,255,0)1px);
+  font-family: $font-family-base;
+  background: $brand-color-light;
+}
+
+.baseline-grid {
+  background-image: -moz-linear-gradient(top,#FF7070 0,rgba($brand-color-light,0)1px);
+  background-image: -webkit-linear-gradient(top,#FF7070 0,rgba($brand-color-light,0)1px);
   background-image: linear-gradient(to bottom,#FF7070 0,#fff0 1px);
   background-repeat: repeat-y;
   // Finer leading
