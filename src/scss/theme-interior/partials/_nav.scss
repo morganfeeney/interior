@@ -27,7 +27,7 @@
 }
 
 .posts-nav {
-  @include baseline($pica, $below: 0, $margin: 3);
+  @include baseline($pica, $above: .1, $below: -1, $margin: 3);
   display: flex;
   align-items: center;
   justify-content: space-between;
