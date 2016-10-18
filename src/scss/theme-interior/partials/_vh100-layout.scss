@@ -8,6 +8,7 @@
    @include baseline($line-height: 1.5, $above: 1.1, $below: .5, $margin: 3);
  }
   time {
+    z-index: 1;
     font-weight: $font-weight-border-with-content;
     @include baseline($pica, $above: .6, $below: 0, $margin: -1.9);
     position: absolute;
