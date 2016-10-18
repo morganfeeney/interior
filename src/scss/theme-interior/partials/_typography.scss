@@ -241,10 +241,6 @@ blockquote.outset-right {
   }
 }
 
-cite {
-  font-style: normal;
-}
-
 blockquote {
   cite {
     @include baseline($above: .25, $margin: -.6);
@@ -266,5 +262,9 @@ figcaption {
 
 .sig {
   @include border-with-content('Colophon');
-  @include baseline($font-base, $line-height: 1.5, $above: .6, $below: 0, $margin: 6);
+  @include baseline($pica, $line-height: 1.5, $above: .6, $below: 0, $margin: 6);
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 }
