@@ -1,21 +1,16 @@
 {% extends "layouts/standard-layout.njk" %}
+{% set layout_classes = "baseline-grid" %}
 
 {% block embedded_css %}
 <style>
-h1:before {
-  content: "Specification";
-}
-h2:first-of-type:before {
-  content: "Sub heading";
-}
+  h1:before {
+    content: "Title";
+  }
+  h2:first-of-type:before {
+    content: "Sub heading";
+  }
 </style>
 {% endblock %}
-
-
-{% block intro %}
-<h1>{{title}}.</h1>
-{% endblock %}
-
 
 {% block main %}
   <section>
