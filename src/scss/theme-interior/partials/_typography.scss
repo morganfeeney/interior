@@ -232,10 +232,11 @@ blockquote.outset-right {
     @include col(6, $calc: false, $margin: false);
   }
   p {
+    text-align: right;
+    hyphens: none;
     @media(min-width: $screen-medium) {
       margin-right: 0;
       padding-right: 0;
-      text-align: right;
     }
   }
 }
