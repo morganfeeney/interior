@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
  // Project configuration.
-
+ var develop = grunt.option('prod') ? false : true;
  grunt.initConfig({
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       precision: 4
     },
     files: {
-     "build/css/style.css": "src/scss/style.scss"
+     "css/style.css": "src/scss/style.scss"
     }
    }
   },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     ]
    },
    interior: {
-    src: "build/css/**/*.css"
+    src: "css/**/*.css"
    }
   },
   // Watch task
@@ -103,6 +103,9 @@ module.exports = function(grunt) {
        };
        return result;
      },
+     configureEnvironment: function(env, nunjucks) {
+      env.addGlobal('develop', develop);
+    },
     data: grunt.file.readJSON("data.json"),
     paths: "src/html"
    },
@@ -111,7 +114,7 @@ module.exports = function(grunt) {
      expand: true,
      cwd: "src/html",
      src: ["**/*.html"],
-     dest: "build/",
+     dest: "",
      ext: ".html"
     }],
    }
@@ -119,13 +122,13 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     html: {
-      src: ["build/**/*.html"]
+      src: ["**/*.html", "!src/**/*","!node_modules/**/*"]
     },
     css: {
-      src: ["build/**/*.css"]
+      src: ["**/*.css", "**/*.css.map", "!src/**/*","!node_modules/**/*"]
     },
     all: {
-      src: ["build/**/*.html", "build/**/*.css"]
+      src: ["**/*.html", "!src/**/*", "**/*.css", "**/*.css.map", "!node_modules/**/*"]
     }
   },
   // Prettify task
@@ -143,7 +146,7 @@ module.exports = function(grunt) {
    all: {
     expand: true,
     cwd: "",
-    src: ["build/**/*.html"],
+    src: ["**/*.html", "!src/**/*.html", "!node_modules"],
     dest: "",
     ext: ".html"
    }
