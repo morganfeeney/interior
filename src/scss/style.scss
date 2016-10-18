@@ -7,7 +7,7 @@
 @import "functions/vertical-rhythm";
 
 // Variables
-@import "partials/variables";
+@import "theme-interior/partials/variables";
 
 // Mixins
 @import "mixins/baseline";
@@ -17,9 +17,9 @@
 @import "theme-interior/mixins/typography";
 
 // Core partials
-@import "partials/base";
-@import "partials/typography";
-@import "partials/layout";
+@import "theme-interior/partials/base";
+@import "theme-interior/partials/typography";
+@import "theme-interior/partials/layout";
 
 // Theme partials
 @import "theme-interior/partials/nav";
