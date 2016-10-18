@@ -1,0 +1,12 @@
+{% extends "../cards/card-code.njk" %}
+{% set language="scss" %}
+{% block code %}p {
+  @include baseline($font-base, $line-height: 1.5, $above: .24);
+}
+h1 {
+  @include baseline($canon, $above: .8, $below: 5, $margin: 5);
+}
+h5 {
+  @include baseline($great-primer, $line-height: 1.35, $above: 1.1, $below: .5);
+}
+{% endblock %}

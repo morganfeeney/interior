@@ -1,0 +1,40 @@
+/* ==============================================================
+   Column mixin
+   ============================================================== */
+
+@mixin col(
+  $col,
+  $width: column-width($col),
+  $grid-gutter: $grid-gutter,
+  $margin-left: $grid-gutter/2,
+  $margin-right: $grid-gutter/2,
+  $margin: true,
+  $calc: true
+){
+  @if $calc == false {
+    width: $width;
+  } @else {
+    width: calc(#{$width} - #{$grid-gutter});
+  }
+  @if $margin == false {}
+  @else if $margin == auto {
+    margin-left: auto;
+    margin-right: auto;
+  } @else {
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+  }
+}
+
+// For Description lists only at the time of writing
+@mixin text-col(
+  $col,
+  $width: column-width($col),
+  $min: false
+){
+  @if $min == true {
+    min-width: #{$width};
+  } @else {
+    width: #{$width};
+  }
+}

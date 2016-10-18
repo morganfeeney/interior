@@ -1,42 +1,34 @@
-{% set base_path = "../" %}
-{% set page_title = "Example layouts built with Interior" %}
-{% set page_description = "Learn how to create practical web layouts using Interior." %}
-{% extends "../layouts/demo-layout.nunjucks" %}
-{% set body_classes = "eg eg1" %}
+{% extends "layouts/standard-layout.njk" %}
+{% set page_title = "Examples" %}
+{% set page_description = "Example layouts created with Interior." %}
 
-{% block header %}
-	<div class="i-col-12 i-col-sm-12">
-		<h1>Examples <span>Example layouts built with Interior</span></h1>
-	</div>
+{% block embedded_css %}
+<style>
+  h1::before {
+    content: "Title"
+  }
+  h2::before {
+    content: "Navigation"
+  }
+</style>
 {% endblock %}
+
 {% block main %}
-	<div class="i-outer">
-		<div class="i-row">
-			<div class="i-col-12 i-col-sm-8">
-				<div class="i-inner">
-					<dl>
-						<dt>
-							<a href="simple-2-column-layout.html">Simple 2 column layout</a>
-						</dt>
-						<dd>
-							A main content area with an aside. A simple, yet practical layout which crops up time and again.
-						</dd>
-						<dt>
-							<a href="flipped-2-column-layout.html">Flipped 2 column layout.</a>
-						</dt>
-						<dd>
-							A main content area with an aside, with visual source order flipped. A responsive version of the simple 2 column layout.
-						</dd>
-						<dt>
-							<a href="product-lister.html">Product lister page layout</a>
-						</dt>
-						<dd>
-							An example of a product lister page layout with an aside. This example demonstrates a worst-case scenario for unpredictably long product titles.
-						</dd>
-					</dl>
-				</div>
-			</div>
-		</div>
-	</div>
+<section>
+  <h2>Simple examples</h2>
+  <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system — keep checking back as this page will be regularly updated.</p>
+  <div class="grid layout-1">
+    {% if examples %}
+      <div>
+        <nav role="navigation">
+          <ul>
+            {% for example in examples %}
+              <li><a href="{{ example }}">{{ example | capitalize | replace("-", " ") | replace(".html", "") }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    {% endif %}
+  </div>
+</section>
 {% endblock %}
-

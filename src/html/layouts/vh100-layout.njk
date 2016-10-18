@@ -1,0 +1,16 @@
+{% extends "templates/prototype-template.njk" %}
+{% set body_classes = "vh100-layout" %}
+
+{% block header %}
+  {{ super() }}
+  <div class="intro">
+    {% block intro %}
+      <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block main %}
+{% endblock %}
+
+{% block aside %}{% endblock %}

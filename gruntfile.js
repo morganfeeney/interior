@@ -1,18 +1,19 @@
 module.exports = function(grunt) {
  // Project configuration.
+ var develop = grunt.option('prod') ? false : true;
  grunt.initConfig({
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
   sass: {
    interior: {
     options: {
-     style: "compressed",
-     sourcemap: "inline",
-     precision: 4
+      outputStyle: "expanded",
+      sourceMapContents: true,
+      sourceMap: true,
+      precision: 4
     },
     files: {
-     "css/style.css": "src/scss/style.scss",
-     "css/demo/style.css": "src/scss/demo/style.scss"
+     "css/style.css": "src/scss/style.scss"
     }
    }
   },
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
     map: true,
     processors: [
      require("autoprefixer")({
-      browsers: ["last 2 versions"]
+      browsers: ["last 4 versions"]
      })
     ]
    },
@@ -49,7 +50,7 @@ module.exports = function(grunt) {
     }
    },
    html: {
-    files: ["src/**/*.html", "src/**/*.nunjucks"],
+    files: ["src/**/*.html", "src/**/*.njk"],
     tasks: ["clean:html", "nunjucks", "prettify"],
     options: {
      spawn: false,
@@ -68,6 +69,43 @@ module.exports = function(grunt) {
   // Nunjucks task
   nunjucks: {
    options: {
+     preprocessData: function(data) {
+       const path = require('path');
+       var date = new Date();
+       var iso_date = date.toISOString();
+       var nice_date = date.toDateString();
+       var file = path.basename(this.src[0]);
+       var page = path.basename(this.src[0], '.html');
+       // Posts
+       var posts = grunt.file.expand({
+         filter: "isFile",
+         cwd: "src/html/posts"
+       },["*.html","!index.html"]);
+       // Docs
+       var docs = grunt.file.expand({
+         filter: "isFile",
+         cwd: "src/html/docs"
+       },["*.html","!index.html"]);
+       // Examples
+       var examples = grunt.file.expand({
+         filter: "isFile",
+         cwd: "src/html/examples"
+       },["*.html","!index.html"]);
+       var result = {
+         iso_date: iso_date,
+         nice_date: nice_date,
+         file: file,
+         page: page,
+         posts: posts,
+         docs: docs,
+         examples: examples,
+         data: data
+       };
+       return result;
+     },
+     configureEnvironment: function(env, nunjucks) {
+      env.addGlobal('develop', develop);
+    },
     data: grunt.file.readJSON("data.json"),
     paths: "src/html"
    },
@@ -75,9 +113,7 @@ module.exports = function(grunt) {
     files: [{
      expand: true,
      cwd: "src/html",
-     src: [
-      "**/*.html"
-     ],
+     src: ["**/*.html"],
      dest: "",
      ext: ".html"
     }],
@@ -86,13 +122,13 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     html: {
-      src: ["index.html", "examples/**/*.html"]
+      src: ["**/*.html", "!src/**/*","!node_modules/**/*"]
     },
     css: {
-      src: ["css/**/*.css"]
+      src: ["**/*.css", "**/*.css.map", "!src/**/*","!node_modules/**/*"]
     },
     all: {
-      src: ["index.html", "examples/**/*.html", "css/**/*.css"]
+      src: ["**/*.html", "!src/**/*", "**/*.css", "**/*.css.map", "!node_modules/**/*"]
     }
   },
   // Prettify task
@@ -100,17 +136,17 @@ module.exports = function(grunt) {
    options: {
     "indent": 1,
     "indent_char": " ",
-    "indent_scripts": "normal",
     "wrap_line_length": 250,
     "brace_style": "collapse",
     "preserve_newlines": true,
+    "condense": true,
     "max_preserve_newlines": 2,
     "unformatted": ["a", "code", "pre"]
    },
    all: {
     expand: true,
     cwd: "",
-    src: ["index.html", "examples/**/*.html"],
+    src: ["**/*.html", "!src/**/*.html", "!node_modules"],
     dest: "",
     ext: ".html"
    }

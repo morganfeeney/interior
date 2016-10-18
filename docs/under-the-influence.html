@@ -2,8 +2,8 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Examples</title>
-  <meta name="description" content="Example layouts created with Interior.">
+  <title>Under the influence</title>
+  <meta name="description" content="The research that helped lead me to produce v.2 of Interior.">
   <link rel="stylesheet" href="../css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -23,15 +23,15 @@
   </script>
   <style>
   h1::before {
-   content: "Title"
+   content: "Docs";
   }
   
-  h2::before {
-   content: "Navigation"
+  h2:first-of-type::before {
+   content: "Under the influence";
   }
   </style>
  </head>
- <body class="page-index  standard-layout">
+ <body class="page-under-the-influence  standard-layout">
   <header id="main-header" class="container-outer ">
    <div class="container">
     <a id="main-header-home-link" class="home-link" href="http://local.interior.com/">
@@ -43,30 +43,34 @@
      <a href="http://local.interior.com/examples">Examples</a>
     </nav>
     <div class="intro">
-     <h1>Examples.</h1>
+     <h1>Under the influence.</h1>
     </div>
    </div>
   </header>
   <article id="main-article" class="container-outer ">
    <main class="container-outer ">
     <div class="container ">
-     <section>
-      <h2>Simple examples</h2>
-      <p>This page links to all of the different layouts created to demonstrate the potential of the Interior system — keep checking back as this page will be regularly updated.</p>
-      <div class="grid layout-1">
-       <div>
-        <nav role="navigation">
-         <ul>
-          <li><a href="grid-columns-text-only.html">Grid columns text only</a></li>
-          <li><a href="paragraphs-and-headings.html">Paragraphs and headings</a></li>
-          <li><a href="paragraphs.html">Paragraphs</a></li>
-         </ul>
-        </nav>
-       </div>
-      </div>
+     <section id="intro">
+      <h2>references</h2>
+      <p>I found whilst creating Interior — a deep-seated urge — to apply some knowledge gained by studying publications by the following people:</p>
+      <ul>
+       <li><a href="https://24ways.org/2015/grid-flexbox-box-alignment-our-new-system-for-layout/">Rachel Andrew</a></li>
+       <li><a href="https://zellwk.com/blog/migrating-from-bootstrap-to-susy/">Zell Liew</a></li>
+       <li><a href="https://en.wikipedia.org/wiki/Robert_Bringhurst">Robert Bringhurst</a></li>
+       <li><a href="https://medium.com/written-in-code/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b#.t1twk87d9">Razvan Onefri</a></li>
+       <li><a href="http://sassline.com">Jake Giltsoff</a></li>
+       <li><a href="http://jensimmons.com/presentation/revolutionize-your-page-real-art-direction-web">Jenn Simmons</a></li>
+      </ul>
      </section>
     </div>
    </main>
+   <section id="posts-nav-section" class="container-outer ">
+    <div class="container">
+     <nav class="posts-nav" role="navigation">
+      <a class="prev" href="typography.html">Typography</a>
+     </nav>
+    </div>
+   </section>
   </article>
   <footer id="main-footer" class="container-outer ">
    <div class="container">
