@@ -2,7 +2,7 @@
 {% import "../macros/macro-gallery.njk" as galleries %}
 {% import "../macros/macro-post.njk" as posts %}
 {% set title = page | capitalize | replace("-", " ") %}
-{% if develop %}
+{% if dev %}
 	{% set home_url = "http://local.interior.com/" %}
 {% else %}
 	{% set home_url = "http://interiorsystem.co.uk/" %}
@@ -13,7 +13,7 @@
 		<meta charset="UTF-8">
 		<title>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
-		<link rel="stylesheet" href="{{ home_url }}css/style.css">
+		<link rel="stylesheet" href="/css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% block header_scripts %}
 			{% include "partials/head-scripts.njk" %}
@@ -60,7 +60,7 @@
 				</div>
 			</footer>
 		{% endblock %}
-		{% if develop %}
+		{% if dev %}
   		<script src="http://localhost:35729/livereload.js"></script>
 		{% else %}
 		  {# NOWT #}
