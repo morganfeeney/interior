@@ -2,14 +2,18 @@
 {% import "../macros/macro-gallery.njk" as galleries %}
 {% import "../macros/macro-post.njk" as posts %}
 {% set title = page | capitalize | replace("-", " ") %}
-{% set home_url = "http://local.interior.com/" %}
+{% if develop %}
+	{% set home_url = "http://local.interior.com/" %}
+{% else %}
+	{% set home_url = "http://interiorsystem.co.uk/" %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
-		<link rel="stylesheet" href="{% if base_path %}{{ base_path }}{% else %}..{% endif %}/css/style.css">
+		<link rel="stylesheet" href="{{ home_url }}css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% block header_scripts %}
 			{% include "partials/head-scripts.njk" %}
