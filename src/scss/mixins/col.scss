@@ -4,7 +4,7 @@
 
 @mixin col(
   $col,
-  $width: cw($col),
+  $width: column-width($col),
   $grid-gutter: $grid-gutter,
   $margin-left: $grid-gutter/2,
   $margin-right: $grid-gutter/2,
@@ -29,7 +29,7 @@
 // For Description lists only at the time of writing
 @mixin text-col(
   $col,
-  $width: cw($col),
+  $width: column-width($col),
   $min: false
 ){
   @if $min == true {

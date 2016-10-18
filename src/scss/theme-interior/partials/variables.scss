@@ -68,17 +68,17 @@ $font-size-body: $font-base;
 $font-weight-border-with-content: bold;
 
 // Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
-$canon: bs(3); // 48px
-$double-great-primer: bs(2.250); // 36px
-$four-line-brevier: bs(2); // 32px
-$two-line-pica: bs(1.5); // 24px
-$double-pica: bs(1.313); // 21px
-$great-primer: bs(1.125); // 18px
-$english: bs(.875); // 14px
-$pica: bs(.75); // 12px
+$canon: font-scale(3); // 48px
+$double-great-primer: font-scale(2.250); // 36px
+$four-line-brevier: font-scale(2); // 32px
+$two-line-pica: font-scale(1.5); // 24px
+$double-pica: font-scale(1.313); // 21px
+$great-primer: font-scale(1.125); // 18px
+$english: font-scale(.875); // 14px
+$pica: font-scale(.75); // 12px
 
-$vertical-space: bs(3);
-$horizontal-space: bs(2);
+$vertical-space: font-scale(3);
+$horizontal-space: font-scale(2);
 $vertical-space-small: $vertical-space / 4;
 $horizontal-space-small: $horizontal-space / 2;
 $grid-gutter: $horizontal-space;
@@ -92,5 +92,5 @@ $mid-border: .15rem solid $brand-color-mid;
 $footer-border-width: 1px;
 
 //** Horizontal alignment
-$horizontal-offset: cw(2);
-$horizontal-offset-larger: cw(4);
+$horizontal-offset: column-width(2);
+$horizontal-offset-larger: column-width(4);

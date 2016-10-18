@@ -9,6 +9,6 @@
 }
 
 // This is for creating scalable font sizes based upon variables
-@function bs($scale, $font-size: $font-base) {
+@function font-scale($scale, $font-size: $font-base) {
   @return $font-size * $scale;
 }
