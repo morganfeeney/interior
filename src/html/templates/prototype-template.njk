@@ -56,6 +56,10 @@
 				</div>
 			</footer>
 		{% endblock %}
-		<script src="http://localhost:35729/livereload.js"></script>
+		{% if develop %}
+  		<script src="http://localhost:35729/livereload.js"></script>
+		{% else %}
+		  {# NOWT #}
+		{% endif %}
 	</body>
 </html>
