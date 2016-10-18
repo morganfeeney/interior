@@ -256,7 +256,7 @@ figcaption {
 
 .sig {
   @include border-with-content('Colophon');
-  @include baseline($pica, $line-height: 1.5, $above: .6, $below: 0, $margin: 6);
+  @include baseline($pica, $line-height: 1.5, $above: .5, $below: 0, $margin: 5.15);
   a {
     text-decoration: none;
     text-transform: uppercase;
