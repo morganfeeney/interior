@@ -1,7 +1,6 @@
-/* ==============================================================
-   Mixins - typography
-   ============================================================== */
-
+// ** Typography mixin
+//
+//
 @mixin border-with-content($content: "\00a0", $top: -1.4rem) {
   position: relative;
   &:before {
