@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
  // Project configuration.
- var develop = grunt.option('prod') ? false : true;
+ var dev = grunt.option('prod') || true;
  grunt.initConfig({
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       precision: 4
     },
     files: {
-     "css/style.css": "src/scss/style.scss"
+     "docs/css/style.css": "src/scss/style.scss"
     }
    }
   },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     ]
    },
    interior: {
-    src: "css/**/*.css"
+    src: "docs/css/**/*.css"
    }
   },
   // Watch task
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     }
    },
    css: {
-    files: ["css/**/*.css"],
+    files: ["docs/css/**/*.css"],
     tasks: "postcss",
     options: {
      spawn: false,
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
    },
    html: {
     files: ["src/**/*.html", "src/**/*.njk"],
-    tasks: ["clean:html", "nunjucks", "prettify"],
+    tasks: ["clean", "nunjucks", "prettify"],
     options: {
      spawn: false,
      livereload: true
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
        return result;
      },
      configureEnvironment: function(env, nunjucks) {
-      env.addGlobal('develop', develop);
+      env.addGlobal('dev', dev);
     },
     data: grunt.file.readJSON("data.json"),
     paths: "src/html"
@@ -114,22 +114,14 @@ module.exports = function(grunt) {
      expand: true,
      cwd: "src/html",
      src: ["**/*.html"],
-     dest: "",
+     dest: "docs/",
      ext: ".html"
     }],
    }
   },
   // Clean task
   clean: {
-    html: {
-      src: ["**/*.html", "!src/**/*","!node_modules/**/*"]
-    },
-    css: {
-      src: ["**/*.css", "**/*.css.map", "!src/**/*","!node_modules/**/*"]
-    },
-    all: {
-      src: ["**/*.html", "!src/**/*", "**/*.css", "**/*.css.map", "!node_modules/**/*"]
-    }
+    src: ["docs/**/*","!docs/CNAME"]
   },
   // Prettify task
   prettify: {
@@ -145,9 +137,9 @@ module.exports = function(grunt) {
    },
    all: {
     expand: true,
-    cwd: "",
-    src: ["**/*.html", "!src/**/*.html", "!node_modules"],
-    dest: "",
+    cwd: "docs/",
+    src: ["**/*.html"],
+    dest: "docs/",
     ext: ".html"
    }
   },
@@ -161,7 +153,7 @@ module.exports = function(grunt) {
 
  // Default task(s).
  grunt.registerTask("default", [
-  "clean:all",
+  "clean",
   "sass",
   "postcss",
   "nunjucks",

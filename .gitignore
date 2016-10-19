@@ -4,4 +4,3 @@ config.codekit
 /.sass-cache
 .DS_Store
 .sublime-project
-build/

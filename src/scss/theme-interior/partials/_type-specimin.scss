@@ -21,7 +21,7 @@
 // Bit of code duplication here, I want the typography styles to be readable therefore
 // not converting everything so it uses maps. Just a single map here for demo purposes.
 $headings: (
-  h1: ($canon, 1, fs-canon),
+  h1: ($canon, 1, canon),
   h2: ($four-line-brevier, 1, four-line-brevier),
   h3: ($two-line-pica, 1, two-line-pica),
   h4: ($double-pica, 1.15, double-pica),

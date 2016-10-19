@@ -784,6 +784,7 @@ img, .image-hero, .gallery-item img {
 .container > img {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
           align-self: center;
   padding-top: 0.16rem;
   margin-top: 2rem;
@@ -975,7 +976,7 @@ code {
 }
 
 #typography-specimin h1 + span::after {
-  content: "$fs-canon";
+  content: "$canon";
 }
 
 @media (min-width: 900px) {
