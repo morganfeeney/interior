@@ -2,7 +2,7 @@
 {% import "../macros/macro-gallery.njk" as galleries %}
 {% import "../macros/macro-post.njk" as posts %}
 {% set title = page | capitalize | replace("-", " ") %}
-{% if dev %}
+{% if development %}
 	{% set home_url = "http://local.interior.com/" %}
 {% else %}
 	{% set home_url = "http://interiorsystem.co.uk/" %}
@@ -60,7 +60,7 @@
 				</div>
 			</footer>
 		{% endblock %}
-		{% if dev %}
+		{% if development %}
   		<script src="http://localhost:35729/livereload.js"></script>
 		{% else %}
 		  {# NOWT #}

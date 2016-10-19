@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
  // Project configuration.
- var dev = grunt.option('prod') || true;
+ var development = grunt.option('prod') ? false : true;
  grunt.initConfig({
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
        return result;
      },
      configureEnvironment: function(env, nunjucks) {
-      env.addGlobal('dev', dev);
+      env.addGlobal('development', development);
     },
     data: grunt.file.readJSON("data.json"),
     paths: "src/html"
