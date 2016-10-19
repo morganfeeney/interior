@@ -22,9 +22,7 @@ body {
 }
 
 .baseline-grid {
-  background-image: -moz-linear-gradient(top,#FF7070 0,rgba($brand-color-light,0)1px);
-  background-image: -webkit-linear-gradient(top,#FF7070 0,rgba($brand-color-light,0)1px);
-  background-image: linear-gradient(to bottom,#FF7070 0,#fff0 1px);
+  background-image: linear-gradient(to bottom, $brand-color-1 0, $brand-color-light 1px);
   background-repeat: repeat-y;
   // Finer leading
   background-size: 100% .5rem;
