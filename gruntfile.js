@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     map: true,
     processors: [
      require("autoprefixer")({
-      browsers: ["last 4 versions"]
+      browsers: ["last 3 versions"]
      })
     ]
    },
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
    },
    html: {
     files: ["src/**/*.html", "src/**/*.njk"],
-    tasks: ["clean", "nunjucks", "prettify"],
+    tasks: ["clean:html", "nunjucks", "prettify"],
     options: {
      spawn: false,
      livereload: true
@@ -121,7 +121,15 @@ module.exports = function(grunt) {
   },
   // Clean task
   clean: {
-    src: ["docs/**/*","!docs/CNAME"]
+    all: {
+      src: ["docs/**/*","!docs/CNAME"]
+    },
+    html: {
+      src: ["docs/**/*.html"]
+    },
+    css: {
+      src: ["docs/css/**/*"]
+    }
   },
   // Prettify task
   prettify: {
@@ -153,7 +161,7 @@ module.exports = function(grunt) {
 
  // Default task(s).
  grunt.registerTask("default", [
-  "clean",
+  "clean:all",
   "sass",
   "postcss",
   "nunjucks",

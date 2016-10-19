@@ -3,11 +3,11 @@
    ============================================================== */
 
 #typography-specimin {
-  margin: $vertical-space-small 0;
+  @include baseline($no-text: true, $above: .75, $below: -2.15);
   > div {
     @extend .grid;
     span {
-      @include baseline($english);
+      @include baseline();
       padding-left: 0;
       order: 1;
       @include col(12);

@@ -71,7 +71,7 @@ h2 {
 
 .standard-layout {
   h2 {
-    @include baseline($two-line-pica, $above: .9, $below: .4, $margin: 4.1);
+    @include baseline($two-line-pica, $above: 1, $below: .5, $margin: 4.1);
   }
   section > p,
   .section > p {
@@ -89,11 +89,11 @@ h3 {
 }
 
 h4 {
-  @include baseline($double-pica, $line-height: 1.15, $above: 1.1, $below: .5);
+  @include baseline($double-pica, $line-height: 1.15, $above: 1, $below: .5);
 }
 
 h5 {
-  @include baseline($great-primer, $line-height: 1.35, $above: 1.2, $below: .5);
+  @include baseline($great-primer, $line-height: 1.35, $above: 1.1, $below: .5);
 }
 
 .docs {
@@ -196,16 +196,16 @@ pre:before {
 }
 
 blockquote {
-  @include baseline($below: 2, $margin: 2.5);
+  @include baseline($below: 2, $margin: 2.6);
   p {
-    @include baseline($two-line-pica, $above: 0.4, $below: 0.7);
-    @media(min-width: $screen-large) {
-      @include baseline($two-line-pica, $above: 0.3, $below: 0);
-    }
     font-style: normal;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
+    @include baseline($two-line-pica, $above: 0.4, $below: 0.7);
+    @media(min-width: $screen-large) {
+      @include baseline($two-line-pica, $above: 0.3, $below: 0);
+    }
     &::before {
       content: "\2018";
     }
