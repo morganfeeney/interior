@@ -21,7 +21,7 @@ body {
 }
 
 .baseline-grid {
-  background-image: linear-gradient(to bottom, #FF7070 0, #fff0 1px);
+  background-image: linear-gradient(to bottom, #FF7070 0, #fff0f0 1px);
   background-repeat: repeat-y;
   background-size: 100% .5rem;
 }
@@ -187,7 +187,7 @@ h2:before {
 .standard-layout h2 {
   font-size: 1.5rem;
   line-height: 1;
-  padding-top: 1.14rem;
+  padding-top: 1.24rem;
   margin-top: 4.1rem;
   margin-bottom: 0.26rem;
 }
@@ -217,17 +217,17 @@ h3 {
 h4 {
   font-size: 1.313rem;
   line-height: 1.15;
-  padding-top: 1.3101rem;
+  padding-top: 1.2101rem;
   margin-top: 0rem;
-  margin-bottom: 0.1899rem;
+  margin-bottom: 0.2899rem;
 }
 
 h5 {
   font-size: 1.125rem;
   line-height: 1.35;
-  padding-top: 1.38rem;
+  padding-top: 1.28rem;
   margin-top: 0rem;
-  margin-bottom: 0.12rem;
+  margin-bottom: 0.22rem;
 }
 
 @media (min-width: 569px) {
@@ -375,20 +375,20 @@ blockquote {
   font-size: 1rem;
   line-height: 1;
   padding-top: 0.16rem;
-  margin-top: 2.5rem;
+  margin-top: 2.6rem;
   margin-bottom: 2.84rem;
 }
 
 blockquote p {
+  font-style: normal;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.5rem;
   line-height: 1;
   padding-top: 0.64rem;
   margin-top: 0rem;
   margin-bottom: 1.06rem;
-  font-style: normal;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media (min-width: 900px) {
@@ -707,10 +707,10 @@ figcaption {
 
 .posts-nav {
   font-size: 0.75rem;
-  line-height: 1;
-  padding-top: 0.22rem;
+  line-height: 1.65;
+  padding-top: 0.12rem;
   margin-top: 3rem;
-  margin-bottom: -0.22rem;
+  margin-bottom: 0.88rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -784,7 +784,6 @@ img, .image-hero, .gallery-item img {
 .container > img {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
           align-self: center;
   padding-top: 0.16rem;
   margin-top: 2rem;
@@ -888,15 +887,17 @@ code {
    Type specimin
    ============================================================== */
 #typography-specimin {
-  margin: 0.75rem 0;
+  padding-top: 0.91rem;
+  margin-top: 0rem;
+  margin-bottom: -2.06rem;
 }
 
 #typography-specimin > div span {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1;
-  padding-top: 0.14rem;
+  padding-top: 0.16rem;
   margin-top: 0rem;
-  margin-bottom: 0.86rem;
+  margin-bottom: 0.84rem;
   padding-left: 0;
   -webkit-order: 1;
       -ms-flex-order: 1;
@@ -1440,9 +1441,9 @@ code {
    Visual demo
    ============================================================== */
 .visual-grid-1 {
-  padding-top: 0.51rem;
-  margin-top: 1rem;
-  margin-bottom: 0.49rem;
+  padding-top: 0.16rem;
+  margin-top: 1.32rem;
+  margin-bottom: 0.84rem;
 }
 
 .visual-grid-1 > div {
