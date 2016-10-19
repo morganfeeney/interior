@@ -3,7 +3,7 @@
    ============================================================== */
 
 .visual-grid-1 {
-  @include baseline($no-text: true, $above: .35, $below: 0, $margin: 1);
+  @include baseline($no-text: true, $above: 0, $below: 0, $margin: 1.32);
   @extend .grid;
   > div {
     @extend .grid;
