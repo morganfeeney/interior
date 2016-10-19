@@ -196,16 +196,16 @@ pre:before {
 }
 
 blockquote {
-  @include baseline($below: 2, $margin: 2.5);
+  @include baseline($below: 2, $margin: 2.6);
   p {
-    @include baseline($two-line-pica, $above: 0.4, $below: 0.7);
-    @media(min-width: $screen-large) {
-      @include baseline($two-line-pica, $above: 0.3, $below: 0);
-    }
     font-style: normal;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
+    @include baseline($two-line-pica, $above: 0.4, $below: 0.7);
+    @media(min-width: $screen-large) {
+      @include baseline($two-line-pica, $above: 0.3, $below: 0);
+    }
     &::before {
       content: "\2018";
     }
