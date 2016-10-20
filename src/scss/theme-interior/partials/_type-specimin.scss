@@ -5,7 +5,7 @@
 #typography-specimin {
   @include baseline($no-text: true, $above: .75, $below: -2.15);
   > div {
-    @extend .grid;
+    @include grid();
     span {
       @include baseline();
       padding-left: 0;

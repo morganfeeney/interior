@@ -1,0 +1,7 @@
+// Layout
+
+@mixin grid($negative-gutter: $horizontal-space-small) {
+   @extend %flex-container;
+   margin-left: -$negative-gutter;
+   margin-right: -$negative-gutter;
+}

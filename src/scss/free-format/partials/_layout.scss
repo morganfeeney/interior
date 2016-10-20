@@ -1,0 +1,35 @@
+// Layout
+//
+////
+
+.page-free-format-1 #main-article .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.page-free-format-1 {
+  aside {
+    @include col(3);
+  }
+  .layout-contents {
+    display: flex;
+    flex-flow: row wrap;
+    @include col(8);
+    .item {
+      display: flex;
+      flex-flow: row wrap;
+      &:nth-child(1) {
+        align-items: flex-end;
+        @include grid();
+        > img {
+          @include col(6);
+          order: 2;
+        }
+        > div {
+          @include col(6);
+        }
+      }
+    }
+  }
+}

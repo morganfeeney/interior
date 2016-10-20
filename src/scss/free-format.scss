@@ -1,6 +1,6 @@
-// ** Style
-//
-// Main stylesheet
+// Style
+// - Main stylesheet
+////
 @import "free-format/partials/variables";
 
 // Functions
@@ -16,16 +16,18 @@
 
 // Theme Mixins
 @import "theme-interior/mixins/typography";
+@import "mixins/layout";
 
 // Core partials
-@import "theme-interior/partials/base";
-@import "free-format/partials/typography";
+@import "partials/layout";
 
 // Theme partials
+@import "theme-interior/partials/base";
+@import "theme-interior/partials/layout";
+@import "free-format/partials/typography";
+@import "theme-interior/partials/image";
 
 // Theme layouts
-
-// Theme visuals
+@import "free-format/partials/layout";
 
 // Custom web fonts
-@import "https://fonts.googleapis.com/css?family=Inconsolata";
