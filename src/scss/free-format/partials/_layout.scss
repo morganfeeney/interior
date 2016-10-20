@@ -2,23 +2,34 @@
 //
 ////
 
+.page-free-format-1 #main-header::before {
+  content: none;
+}
+
 .page-free-format-1 #main-article .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 0 10rem 0 0;
+  //padding: 0 10rem 0 0;
 }
 
 .page-free-format-1 {
   aside {
-    @include col(3);
+    @include col(5);
+    @include baseline($margin: 12);
+    @media(min-width: $screen-medium) {
+      @include col(2);
+    }
   }
   .layout-contents {
     display: flex;
     flex-flow: row wrap;
     @include col(8);
+    @media(min-width: $screen-medium) {
+      @include col(9, $margin: auto);
+    }
     .item {
-      padding: 1rem 0;
+      @include baseline($above: 1, $below: 2);
       display: flex;
       flex-flow: row wrap;
       @include grid($negative-gutter: 0);
@@ -32,12 +43,18 @@
       }
       &:nth-child(1) {
         align-items: flex-end;
+        @include baseline($margin: 12);
         &::before {
           content: none;
         }
         > img {
           @include col(6);
+          height: $hero-image-offset-top;
+          object-fit: cover;
           order: 2;
+          position: absolute;
+          right: 0;
+          bottom: 0;
         }
         > div {
           @include col(6);
@@ -57,8 +74,7 @@
 }
 
 .layout-contents .item:nth-child(2) {
-  margin: 0 0 $vertical-space;
-  padding-top: $vertical-space;
+  @include baseline($no-text: true, $above: 3, $below: 4);
 }
 
 .layout-contents .item:nth-child(3) {
@@ -84,6 +100,7 @@
   @include col(8, $calc: false, $margin: false);
   margin-right: auto;
   align-items: flex-start;
+  margin-left: -(column-width(1));
   > img {
     @include col(6);
     order: 1;

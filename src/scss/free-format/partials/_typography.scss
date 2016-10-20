@@ -1,12 +1,17 @@
 /* ==============================================================
    Typography
    ============================================================== */
+h1 {
+  margin-left: $horizontal-space-small;
+  text-transform: capitalize;
+  font-style: italic;
+}
 
 h4 {
   font-style: italic;
 }
 
-h3, h4 {
+h2, h3, h4 {
   @include baseline($below: -.75, $line-height: 1.5);
 }
 
