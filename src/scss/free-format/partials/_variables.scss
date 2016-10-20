@@ -1,2 +1,3 @@
-$brand-color-1: #000!default;
-//$brand-color-light: lighten($brand-color-1, 25);
+$light-gray: lightgray;
+$brand-color-1: $light-gray;
+$brand-color-light: lighten($brand-color-1, 50);
