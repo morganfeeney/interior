@@ -55,6 +55,12 @@
     }
   }
 }
+
+.layout-contents .item:nth-child(2) {
+  margin: 0 0 $vertical-space;
+  padding-top: $vertical-space;
+}
+
 .layout-contents .item:nth-child(3) {
   @include col(8, $calc: false, $margin: false);
   margin-left: auto;
@@ -68,6 +74,7 @@
 }
 
 .layout-contents .item:nth-child(4) {
+  margin-bottom: $vertical-space;
   &::before {
     content: none;
   }
