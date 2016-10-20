@@ -15,6 +15,10 @@ img {
   @include baseline($font-base, $no-text: true, $margin: 2);
 }
 
+.item > img {
+  align-self: center;
+}
+
 .image-hero {
   @extend %fluid-img;
   margin-bottom: $vertical-space;

@@ -20,7 +20,7 @@ $screen-larger-max: ($screen-larger)-1;
 $cols: 12;
 
 // Wrappers
-$wrapper-width-large: $screen-larger;
+$wrapper-width-large: $screen-larger !default;
 
 //** Colours
 //
