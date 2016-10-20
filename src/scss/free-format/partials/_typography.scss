@@ -1,3 +1,19 @@
 /* ==============================================================
    Typography
    ============================================================== */
+
+h4 {
+  font-style: italic;
+}
+
+h3, h4 {
+  @include baseline($below: -.75, $line-height: 1.5);
+}
+
+p {
+  @include baseline($english, $line-height: 1.5);
+}
+
+img {
+  @include baseline($no-text: true);
+}
