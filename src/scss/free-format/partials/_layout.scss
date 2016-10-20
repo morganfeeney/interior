@@ -22,8 +22,19 @@
       display: flex;
       flex-flow: row wrap;
       @include grid($negative-gutter: 0);
+      position: relative;
+      &::before {
+        content: "";
+        border-top: $light-border;
+        @include col(12);
+        position: absolute;
+        top: 0
+      }
       &:nth-child(1) {
         align-items: flex-end;
+        &::before {
+          content: none;
+        }
         > img {
           @include col(6);
           order: 2;
@@ -53,6 +64,12 @@
   }
   > img {
     @include col(6);
+  }
+}
+
+.layout-contents .item:nth-child(4) {
+  &::before {
+    content: none;
   }
 }
 
