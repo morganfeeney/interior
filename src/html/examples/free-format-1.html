@@ -1,15 +1,31 @@
 {% extends "layouts/free-format-layout.njk" %}
 
+{% block intro %}
+  <h1>Contents</h1>
+{% endblock %}
+
 {% block main %}
-
-<div class="item">
-  <p>Nite Jewel</p>
-  <a href="#">Stereo, Glasgow 16 September</a>
-</div>
-
-<div class="item">
-  {{ images.image_placeholder(size="200x200",bgcolor="DDD",color="000") }}
-  <p>All saints</p>
-  <a href="#">Glasgow ABC / Manchester Academy 7 / 8 October £27.50</a>
+<aside>
+  <h2>Regular features</h2>
+  <h3>Editorial - 23</h3>
+  <p>One of the greatest</p>
+  <h3>New music - 27</h3>
+  <p>From the periphery</p>
+  <h3>Reviews - 65</h3>
+  <p>Festival reports, product reviews and our verdict on the latest releases in film and music</p>
+  <h3>Turning points: Altern 8's Mark Archer - 87</h3>
+  <p>Following the 25th anniversary of the debut album from the rave scene's quintessential masked marauders, Mark Archer reminisces on mischief with Theo Kotz</p>
+  <h3>20 Questions: Ho99o9 - 89</h3>
+  <p>One half of the New Jersey noise-rap duo talks PBJ sandwiches and the case for disrobing with Jason Hunter</p>
+  <h3>Perspective: The Subversive Stride of Mykki Blanco - 90</h3>
+  <p>The fearlessly progressive performance artist and musician has restrung categorisations of hip-hop and helped push radical queer ideas toward the mainstream. Here, he refelcts on the freedom this platform has granted him</p>
+</aside>
+<div class="layout-contents">
+  <div class="item">
+    <img src="/images/Bjorkcoverphoto-large.jpg" alt="Björk - credits: crack magazine">
+    <h4>Björk: With all the earth’s electricity - 28</h4>
+    <p>Offering unique ways to connect with her artistry with her <em>Björk Digital Exhibition</em>, the Icelandic icon takes one step further into unchartered dimensions.
+speaking to Jazz Monroe, Björk explores the harmonioous balance to be found with nature and technology</p>
+  </div>
 </div>
 {% endblock %}
