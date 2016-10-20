@@ -18,9 +18,10 @@
     flex-flow: row wrap;
     @include col(8);
     .item {
+      padding: 1rem 0;
       display: flex;
       flex-flow: row wrap;
-      @include grid();
+      @include grid($negative-gutter: 0);
       &:nth-child(1) {
         align-items: flex-end;
         > img {
@@ -44,17 +45,26 @@
   }
 }
 .layout-contents .item:nth-child(3) {
+  @include col(8, $calc: false, $margin: false);
+  margin-left: auto;
   align-items: center;
   > div {
     @include col(6);
-    &:nth-child(1) {
-      height: 20rem;
-      overflow: hidden;
-    }
-    > img {
-      width: 100%;
-      object-fit: fill;
-          object-position: 0rem -10rem;
-    }
+  }
+  > img {
+    @include col(6);
+  }
+}
+
+.layout-contents .item:nth-child(5) {
+  @include col(8, $calc: false, $margin: false);
+  margin-right: auto;
+  align-items: flex-start;
+  > img {
+    @include col(6);
+    order: 1;
+  }
+  > div {
+    @include col(6);
   }
 }
