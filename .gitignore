@@ -6,3 +6,4 @@ config.codekit
 .sublime-project
 docs/
 docs/!CNAME
+!src/html/docs
