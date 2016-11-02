@@ -1,6 +1,11 @@
 /* ==============================================================
    Typography
    ============================================================== */
+
+body {
+  @include baseline-grid();
+}
+
 h1 {
   margin-left: $horizontal-space-small;
   text-transform: capitalize;
@@ -12,13 +17,17 @@ h4 {
 }
 
 h2, h3, h4 {
-  @include baseline($below: -.75, $line-height: 1.5);
+  @include baseline($below: -1, $line-height: 1.5);
 }
 
 p {
-  @include baseline($english, $line-height: 1.5);
+  @include baseline($english, $line-height: 1.75, $above: .25);
 }
 
 img {
   @include baseline($no-text: true);
+}
+
+.page-free-format-1 aside > h2 {
+  @include baseline($below: 0, $line-height: 1.5);
 }

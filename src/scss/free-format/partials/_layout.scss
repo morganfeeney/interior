@@ -10,7 +10,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  //padding: 0 10rem 0 0;
 }
 
 .page-free-format-1 {
@@ -29,7 +28,7 @@
       @include col(9, $margin: auto);
     }
     .item {
-      @include baseline($above: 1, $below: 2);
+      @include baseline($above: 1, $below: 2, $no-text: true);
       display: flex;
       flex-flow: row wrap;
       @include grid($negative-gutter: 0);
@@ -74,10 +73,11 @@
 }
 
 .layout-contents .item:nth-child(2) {
-  @include baseline($no-text: true, $above: 3, $below: 4);
+  @include baseline($no-text: true, $above: 3, $below: 5);
 }
 
 .layout-contents .item:nth-child(3) {
+  @include baseline($no-text: true, $above: 1, $below: 2.75);
   @include col(8, $calc: false, $margin: false);
   margin-left: auto;
   align-items: center;
@@ -90,7 +90,7 @@
 }
 
 .layout-contents .item:nth-child(4) {
-  margin-bottom: $vertical-space;
+  @include baseline($no-text: true, $above: 1, $below: 3);
   &::before {
     content: none;
   }
