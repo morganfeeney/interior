@@ -15,7 +15,7 @@
 .page-free-format-1 {
   aside {
     @include col(5);
-    @include baseline($margin: 12);
+    @include baseline($margin: 12.34);
     @media(min-width: $screen-medium) {
       @include col(2);
     }
@@ -42,12 +42,12 @@
       }
       &:nth-child(1) {
         align-items: flex-end;
-        @include baseline($margin: 12);
+        @include baseline($margin: 12, $no-text: true, $above: .34);
         &::before {
           content: none;
         }
         > img {
-          @include col(6);
+          @include col(7);
           height: $hero-image-offset-top;
           object-fit: cover;
           order: 2;
@@ -56,7 +56,7 @@
           bottom: 0;
         }
         > div {
-          @include col(6);
+          @include col(5);
         }
       }
     }
@@ -73,7 +73,7 @@
 }
 
 .layout-contents .item:nth-child(2) {
-  @include baseline($no-text: true, $above: 3, $below: 5);
+  @include baseline($no-text: true, $above: 7.34, $below: 10);
 }
 
 .layout-contents .item:nth-child(3) {
@@ -82,7 +82,7 @@
   margin-left: auto;
   align-items: center;
   > div {
-    @include col(6);
+    @include col(6, $margin-left: auto);
   }
   > img {
     @include col(6);
@@ -100,9 +100,9 @@
   @include col(8, $calc: false, $margin: false);
   margin-right: auto;
   align-items: flex-start;
-  margin-left: -(column-width(1));
+  //margin-left: -(column-width(1));
   > img {
-    @include col(6);
+    @include col(6, $margin-left: auto);
     order: 1;
   }
   > div {

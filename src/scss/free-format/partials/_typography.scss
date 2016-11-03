@@ -7,6 +7,7 @@ body {
 }
 
 h1 {
+  @include baseline($double-great-primer, $below: .25);
   margin-left: $horizontal-space-small;
   text-transform: capitalize;
   font-style: italic;
@@ -17,11 +18,11 @@ h4 {
 }
 
 h2, h3, h4 {
-  @include baseline($below: -1, $line-height: 1.5);
+  @include baseline($below: -1, $line-height: 1.5, $above: .25);
 }
 
 p {
-  @include baseline($english, $line-height: 1.75, $above: .25);
+  @include baseline($english, $line-height: 1.75, $above: 0.3);
 }
 
 img {
@@ -29,5 +30,5 @@ img {
 }
 
 .page-free-format-1 aside > h2 {
-  @include baseline($below: 0, $line-height: 1.5);
+  @include baseline($above: .5, $below: .5);
 }
