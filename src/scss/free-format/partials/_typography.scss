@@ -2,9 +2,9 @@
    Typography
    ============================================================== */
 
-body {
- @include baseline-grid();
-}
+// body {
+//  @include baseline-grid();
+// }
 
 h1 {
   @include baseline($double-great-primer, $below: .25);
