@@ -1,3 +1,7 @@
+// -----------------------------
+// Function — Vertical Rhythm
+// -----------------------------
+
 // Calculate the unit of line-height, as opposed to the unitless value - useful for other caclulations.
 @function line-height($ratio, $font-size: $font-base, $line-height: $line-height-base) {
   @return $font-size * $line-height * $ratio;

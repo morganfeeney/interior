@@ -1,6 +1,7 @@
-// ** Baseline mixin
-//
-//
+// -----------------------------
+// Mixin — Baseline
+// -----------------------------
+
 @mixin baseline(
     $font-size: $font-base,
     $unit: 1,
@@ -22,4 +23,10 @@
   padding-bottom: $padding-bottom;
   margin-top: $margin-top;
   margin-bottom: $margin-bottom;
+}
+
+@mixin baseline-grid($grid-color: $brand-color-1, $grid-bg: $brand-color-light, $grid-bg-size: 100% .5rem) {
+  background-image: linear-gradient(to bottom, $grid-color 0, $grid-bg 1px);
+  background-repeat: repeat-y;
+  background-size: $grid-bg-size;
 }

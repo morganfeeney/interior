@@ -1,15 +1,14 @@
-/* ==============================================================
-   Typography
-   ============================================================== */
+// -----------------------------
+// Typography
+// -----------------------------
 
-// Reset
 html {
- @media(min-width: $screen-large) {
-  font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
- }
- // @media(min-width: $screen-larger) {
- //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
- // }
+  @media(min-width: $screen-large) {
+   font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
+  }
+  // @media(min-width: $screen-larger) {
+  //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
+  // }
 }
 
 .home-link {

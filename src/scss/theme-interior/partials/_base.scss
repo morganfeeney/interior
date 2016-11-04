@@ -1,6 +1,6 @@
-/* ==============================================================
-   Base
-   ============================================================== */
+// -----------------------------
+// Base
+// -----------------------------
 
 // Reset
 html {
@@ -22,10 +22,7 @@ body {
 }
 
 .baseline-grid {
-  background-image: linear-gradient(to bottom, $brand-color-1 0, $brand-color-light 1px);
-  background-repeat: repeat-y;
-  // Finer leading
-  background-size: 100% .5rem;
+  @include baseline-grid();
 }
 
 html,
@@ -40,6 +37,6 @@ a {
   &:link,
   &:focus,
   &:hover {
-    color: $font-color-1;
+    color: $link-color;
   }
 }

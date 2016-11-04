@@ -1,6 +1,4 @@
 {% import "../macros/macro-image.njk" as images %}
-{% import "../macros/macro-gallery.njk" as galleries %}
-{% import "../macros/macro-post.njk" as posts %}
 {% set title = page | capitalize | replace("-", " ") %}
 {% if development %}
 	{% set home_url = "http://local.interior.com/" %}
@@ -11,9 +9,11 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</title>
-		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
-		<link rel="stylesheet" href="/css/style.css">
+		<title>{% if page_title %}{{ page_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
+		<meta name="description" content="{% if page_description %}{{ page_description | safe }}{% else %}TBA{% endif %}">
+		{% block linked_css %}
+			<link rel="stylesheet" href="/css/style.css">
+		{% endblock %}
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% block header_scripts %}
 			{% include "partials/head-scripts.njk" %}

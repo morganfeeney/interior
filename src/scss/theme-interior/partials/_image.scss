@@ -1,6 +1,6 @@
-/* ==============================================================
-   Image
-   ============================================================== */
+// -----------------------------
+// Image
+// -----------------------------
 
 %fluid-img {
   max-width: 100%;
@@ -13,6 +13,10 @@ img {
 .container > img {
   align-self: center;
   @include baseline($font-base, $no-text: true, $margin: 2);
+}
+
+.item > img {
+  align-self: center;
 }
 
 .image-hero {

@@ -13,7 +13,8 @@ module.exports = function(grunt) {
       precision: 4
     },
     files: {
-     "docs/css/style.css": "src/scss/style.scss"
+     "docs/css/style.css": "src/scss/style.scss",
+     "docs/css/free-format.css": "src/scss/free-format.scss"
     }
    }
   },
@@ -122,7 +123,7 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     all: {
-      src: ["docs/**/*","!docs/CNAME"]
+      src: ["docs/**/*","!docs/**/CNAME","!docs/images","!docs/**/images/*"]
     },
     html: {
       src: ["docs/**/*.html"]
