@@ -2,11 +2,17 @@
    Typography
    ============================================================== */
 
+body {
+ @include baseline-grid();
+}
+
 h1 {
   @include baseline($double-great-primer, $below: .25);
-  margin-left: $horizontal-space-small;
   text-transform: capitalize;
   font-style: italic;
+  @media(min-width: $screen-medium) {
+    margin-left: $horizontal-space-small;
+  }
 }
 
 h2, h3, h4 {
