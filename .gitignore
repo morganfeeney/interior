@@ -4,6 +4,5 @@ config.codekit
 /.sass-cache
 .DS_Store
 .sublime-project
-docs/
+/docs/
 docs/!CNAME
-!src/html/docs
