@@ -9,8 +9,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</title>
-		<meta name="description" content="{% if page_description %}{{ page_description }}{% else %}TBA{% endif %}">
+		<title>{% if page_title %}{{ page_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
+		<meta name="description" content="{% if page_description %}{{ page_description | safe }}{% else %}TBA{% endif %}">
 		{% block linked_css %}
 			<link rel="stylesheet" href="/css/style.css">
 		{% endblock %}
