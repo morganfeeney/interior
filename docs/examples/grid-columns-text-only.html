@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Grid columns text only</title>
+  <meta name="description" content="Example of how to use Interior to align columns of text.">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(i, s, o, g, r, a, m) {
+   i['GoogleAnalyticsObject'] = r;
+   i[r] = i[r] || function() {
+    (i[r].q = i[r].q || []).push(arguments)
+   }, i[r].l = 1 * new Date();
+   a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0];
+   a.async = 1;
+   a.src = g;
+   m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-69263056-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <style>
+  h1:before {
+   content: "Title";
+  }
+  
+  h2:first-of-type:before {
+   content: "Sub heading";
+  }
+  </style>
+ </head>
+ <body class="page-grid-columns-text-only baseline-grid standard-layout">
+  <header id="main-header" class="container-outer ">
+   <div class="container">
+    <a id="main-header-home-link" class="home-link" href="http://interiorsystem.co.uk/">
+     <p>Interior</p>
+     <p>Layout system</p>
+    </a>
+    <nav id="main-nav">
+     <a href="http://interiorsystem.co.uk/docs">Docs</a>
+     <a href="http://interiorsystem.co.uk/examples">Examples</a>
+    </nav>
+    <div class="intro">
+     <h1>Grid columns text only.</h1>
+    </div>
+   </div>
+  </header>
+  <article id="main-article" class="container-outer ">
+   <main class="container-outer ">
+    <div class="container ">
+     <section id="grid">
+      <h2>Blah</h2>
+      <p>Layouts can be created using a grid structure made from columns. A grid can be constructed in many ways by using the <code class="code-inline language-scss">.col()</code> mixin and then passing in parameters as needed.</p>
+      <h5>Required arguments</h5>
+      <p>The
+       <strong>only</strong> required argument is numerical. The value is used to calculate the number of columns out of the total passed to the <code class="code-inline language-scss">$cols</code> variable.</p>
+      <div class="grid cols-2">
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+      </div>
+      <div class="grid cols-2">
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+      </div>
+      <div class="grid cols-2">
+       <div>
+        <div class="grid cols-2">
+         <div>
+          <p>
+           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+         </div>
+         <div>
+          <p>
+           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+         </div>
+        </div>
+       </div>
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+      </div>
+      <h5>Optional arguments</h5>
+      <p>To omit one of the following default arguments, pass a false value to the argument when calling the mixin.</p>
+      <div class="grid cols-2">
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+      </div>
+     </section>
+     <section id="baseline">
+      <h2>Baseline</h2>
+      <p>Baseline is a vertical grid for aligning type. The <code class="code-inline language-scss">baseline()</code> mixin accepts a variety of arguments.</p>
+      <h5>Arguments</h5>
+      <p>There are
+       <strong>no</strong> required arguments.</p>
+      <div class="grid cols-2">
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+      </div>
+      <h5>Default baseline</h5>
+      <p>I've set up the baseline like so:</p>
+      <div class="grid cols-2">
+       <div>
+        <div class="grid cols-2">
+         <div>
+          <p>
+           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+         </div>
+         <div>
+          <p>
+           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+         </div>
+        </div>
+       </div>
+       <div>
+        <p>
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+         in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+       </div>
+      </div>
+     </section>
+    </div>
+   </main>
+  </article>
+  <footer id="main-footer" class="container-outer ">
+   <div class="container">
+    <p class="sig">
+     <span class="name">
+      <a href="http://interiorsystem.co.uk">
+       <cite>Interior</cite>
+      </a>
+     </span> © 2015-2016 by <a href="http://www.morganfeeney.com">Morgan Feeney</a>
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
