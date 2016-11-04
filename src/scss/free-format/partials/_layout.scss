@@ -2,17 +2,17 @@
 //
 ////
 
-.page-free-format-1 #main-header::before {
+.page-crack-magazine-1 #main-header::before {
   content: none;
 }
 
-.page-free-format-1 #main-article .container {
+.page-crack-magazine-1 #main-article .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.page-free-format-1 {
+.page-crack-magazine-1 {
   aside {
     @include col(12, $calc: false, $margin: false);
     @include baseline($margin: .34);
