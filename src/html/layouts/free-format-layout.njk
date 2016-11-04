@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block header %}
-  {{ super() }}
   <div class="intro">
     {% block intro %}
       <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
@@ -15,4 +14,7 @@
 {% endblock %}
 
 {% block main %}
+{% endblock %}
+
+{% block footer %}
 {% endblock %}

@@ -1,6 +1,6 @@
-// ** Variables
-//
-//
+// -----------------------------
+// Variables
+// -----------------------------
 
 //** Units
 //
@@ -20,33 +20,36 @@ $screen-larger-max: ($screen-larger)-1;
 $cols: 12;
 
 // Wrappers
-$wrapper-width-large: $screen-larger;
+$wrapper-width-large: $screen-larger !default;
 
 //** Colours
 //
 // Brand colours (base colours)
-$brand-color-1: #FF7070;
-$brand-color-2: #FFF;
-$brand-color-3: #555;
-$brand-color-4: #000;
+$brand-color-1: #FF7070 !default;
+$brand-color-2: #FFF !default;
+$brand-color-3: #555 !default;
+$brand-color-4: #000 !default;
 
 // Colour variants
-$nobg: transparent;
-$brand-color-light: lighten($brand-color-1, 25);
-$brand-color-mid: lighten($brand-color-1, 15);
-$darkbg: $brand-color-3;
+$nobg: transparent !default;
+$brand-color-light: lighten($brand-color-1, 25) !default;
+$brand-color-mid: lighten($brand-color-1, 15) !default;
+$darkbg: $brand-color-3 !default;
 
 // Grayscale
-$base-gray: #000;
-$dark-gray: lighten($base-gray, 10%);
-$mid-gray: lighten($base-gray, 60%);
-$light-gray: lighten($base-gray, 90%);
+$base-gray: #000 !default;
+$dark-gray: lighten($base-gray, 10%) !default;
+$mid-gray: lighten($base-gray, 60%) !default;
+$light-gray: lighten($base-gray, 90%) !default;
 
 // Font colours
-$font-color-1: $brand-color-1;
-$font-color-2: $brand-color-2;
-$font-color-3: $brand-color-3;
-$font-color-4: $brand-color-4;
+$font-color-1: $brand-color-1 !default;
+$font-color-2: $brand-color-2 !default;
+$font-color-3: $brand-color-3 !default;
+$font-color-4: $brand-color-4 !default;
+
+// Link colours
+$link-color: $font-color-1 !default;
 
 // Font familiess
 $font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -1,0 +1,36 @@
+// -----------------------------
+// Typography
+// -----------------------------
+
+// body {
+//  @include baseline-grid();
+// }
+
+h1 {
+  @include baseline($double-great-primer, $below: .25);
+  text-transform: capitalize;
+  font-style: italic;
+  @media(min-width: $screen-medium) {
+    margin-left: $horizontal-space-small;
+  }
+}
+
+h2, h3, h4 {
+  @include baseline($below: -1, $line-height: 1.5, $above: .25);
+}
+
+h4 {
+  font-style: italic;
+}
+
+p {
+  @include baseline($english, $line-height: 1.75, $above: 0.3);
+}
+
+img {
+  @include baseline($no-text: true);
+}
+
+.page-crack-magazine-1 aside > h2 {
+  @include baseline($above: .5, $below: .5);
+}

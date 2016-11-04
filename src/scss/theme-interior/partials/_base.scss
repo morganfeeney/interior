@@ -1,16 +1,10 @@
-/* ==============================================================
-   Base
-   ============================================================== */
+// -----------------------------
+// Base
+// -----------------------------
 
 // Reset
 html {
  box-sizing: border-box;
- @media(min-width: $screen-large) {
-  font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
- }
- // @media(min-width: $screen-larger) {
- //  font-size: 125%; // Increases body font size to 20px if it's 1rem.
- // }
 }
 
 *, *::before, *::after {
@@ -28,10 +22,7 @@ body {
 }
 
 .baseline-grid {
-  background-image: linear-gradient(to bottom, $brand-color-1 0, $brand-color-light 1px);
-  background-repeat: repeat-y;
-  // Finer leading
-  background-size: 100% .5rem;
+  @include baseline-grid();
 }
 
 html,
@@ -46,6 +37,6 @@ a {
   &:link,
   &:focus,
   &:hover {
-    color: $font-color-1;
+    color: $link-color;
   }
 }

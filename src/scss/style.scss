@@ -1,6 +1,6 @@
-// ** Style
-//
-// Main stylesheet
+// -----------------------------
+// Style — Main stylesheet
+// -----------------------------
 
 // Functions
 @import "functions/units";
@@ -12,16 +12,18 @@
 // Mixins
 @import "mixins/baseline";
 @import "mixins/col";
+@import "mixins/layout";
 
 // Theme Mixins
 @import "theme-interior/mixins/typography";
 
 // Core partials
+@import "partials/layout";
+
+// Theme partials
 @import "theme-interior/partials/base";
 @import "theme-interior/partials/typography";
 @import "theme-interior/partials/layout";
-
-// Theme partials
 @import "theme-interior/partials/nav";
 @import "theme-interior/partials/image";
 @import "theme-interior/partials/gallery";

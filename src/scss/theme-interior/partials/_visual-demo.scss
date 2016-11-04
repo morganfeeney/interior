@@ -1,12 +1,12 @@
-/* ==============================================================
-   Visual demo
-   ============================================================== */
+// -----------------------------
+// Visual demo
+// -----------------------------
 
 .visual-grid-1 {
   @include baseline($no-text: true, $above: 0, $below: 0, $margin: 1.32);
-  @extend .grid;
+  @include grid();
   > div {
-    @extend .grid;
+    @include grid();
     @include col(12);
     @media(min-width: $screen-medium) {
       @include col(8, $grid-gutter: $horizontal-space-small, $margin-left: $horizontal-space-small, $margin-right: $horizontal-space-small);
