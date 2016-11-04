@@ -2,10 +2,6 @@
    Typography
    ============================================================== */
 
-body {
-  @include baseline-grid();
-}
-
 h1 {
   @include baseline($double-great-primer, $below: .25);
   margin-left: $horizontal-space-small;
@@ -13,12 +9,12 @@ h1 {
   font-style: italic;
 }
 
-h4 {
-  font-style: italic;
-}
-
 h2, h3, h4 {
   @include baseline($below: -1, $line-height: 1.5, $above: .25);
+}
+
+h4 {
+  font-style: italic;
 }
 
 p {

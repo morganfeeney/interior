@@ -8,7 +8,6 @@
 }
 
 %flex-container {
-   // Overcome collapsing margins... somehow.
    display: flex;
    flex-flow: row wrap;
 }
