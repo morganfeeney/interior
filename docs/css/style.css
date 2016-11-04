@@ -352,8 +352,8 @@ pre:before {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
+  -ms-flex-line-pack: start;
+      -webkit-align-content: flex-start;
           align-content: flex-start;
   width: calc(100% - 2rem);
   margin-left: 1rem;
@@ -669,8 +669,8 @@ figcaption {
     padding-top: 1.32rem;
     margin-top: 0rem;
     margin-bottom: -0.57rem;
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
+    -ms-flex-item-align: end;
+        -webkit-align-self: flex-end;
             align-self: flex-end;
   }
 }
@@ -773,8 +773,8 @@ img, .image-hero, .gallery-item img {
 }
 
 .container > img {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
+  -ms-flex-item-align: center;
+      -webkit-align-self: center;
           align-self: center;
   padding-top: 0.16rem;
   margin-top: 2rem;
@@ -782,8 +782,8 @@ img, .image-hero, .gallery-item img {
 }
 
 .item > img {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
+  -ms-flex-item-align: center;
+      -webkit-align-self: center;
           align-self: center;
 }
 
@@ -1432,8 +1432,8 @@ code {
             flex-flow: row wrap;
   }
   .vh100-layout #main-header .intro > p:first-of-type {
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
+    -ms-flex-item-align: end;
+        -webkit-align-self: flex-end;
             align-self: flex-end;
   }
 }
