@@ -163,10 +163,10 @@ module.exports = function(grunt) {
  // Default task(s).
  grunt.registerTask("default", [
   "clean:all",
-  "sass",
-  "postcss",
   "nunjucks",
   "prettify",
+  "sass",
+  "postcss",
   "watch"
  ]);
 };

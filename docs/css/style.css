@@ -352,8 +352,8 @@ pre:before {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -ms-flex-line-pack: start;
-      -webkit-align-content: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
           align-content: flex-start;
   width: calc(100% - 2rem);
   margin-left: 1rem;
@@ -669,8 +669,8 @@ figcaption {
     padding-top: 1.32rem;
     margin-top: 0rem;
     margin-bottom: -0.57rem;
-    -ms-flex-item-align: end;
-        -webkit-align-self: flex-end;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
             align-self: flex-end;
   }
 }
@@ -773,8 +773,8 @@ img, .image-hero, .gallery-item img {
 }
 
 .container > img {
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
   padding-top: 0.16rem;
   margin-top: 2rem;
@@ -782,8 +782,8 @@ img, .image-hero, .gallery-item img {
 }
 
 .item > img {
-  -ms-flex-item-align: center;
-      -webkit-align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
           align-self: center;
 }
 
@@ -1348,6 +1348,24 @@ code {
   content: none;
 }
 
+@media (min-width: 700px) {
+  .vh100-layout #main-header {
+    height: 100vh;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .vh100-layout .intro {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
 .vh100-layout .intro > p:first-of-type {
   position: relative;
   font-size: 1rem;
@@ -1355,6 +1373,7 @@ code {
   padding-top: 1.26rem;
   margin-top: 3rem;
   margin-bottom: 0.24rem;
+  text-transform: none;
 }
 
 .vh100-layout .intro > p:first-of-type:before {
@@ -1372,6 +1391,14 @@ code {
   left: 0;
   right: 0;
   top: -1.4rem;
+}
+
+@media (min-width: 700px) {
+  .vh100-layout .intro > p:first-of-type {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+  }
 }
 
 .vh100-layout time {
@@ -1416,26 +1443,6 @@ code {
 
 .vh100-layout .home-link p {
   padding-right: 0;
-}
-
-@media (min-width: 700px) {
-  .vh100-layout #main-header {
-    height: 100vh;
-    margin-bottom: 0rem;
-  }
-  .vh100-layout #main-header .intro {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
-  .vh100-layout #main-header .intro > p:first-of-type {
-    -ms-flex-item-align: end;
-        -webkit-align-self: flex-end;
-            align-self: flex-end;
-  }
 }
 
 .visual-grid-1 {
