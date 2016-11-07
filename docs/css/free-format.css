@@ -42,20 +42,17 @@ a, a:link, a:focus, a:hover {
 }
 
 .grid {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   margin-left: -1rem;
   margin-right: -1rem;
 }
 
 .grid-main {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 #main-header {
@@ -79,22 +76,18 @@ a, a:link, a:focus, a:hover {
 
 #main-header > .container {
   height: 100%;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 @media (min-width: 569px) {
   #main-header > .container {
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
   }
 }
 
@@ -141,33 +134,27 @@ a, a:link, a:focus, a:hover {
 }
 
 .column-count-experiment {
-  -webkit-column-count: 2;
-     -moz-column-count: 2;
-          column-count: 2;
-  -webkit-column-width: 100vw;
-     -moz-column-width: 100vw;
-          column-width: 100vw;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-width: 100vw;
+       column-width: 100vw;
   height: 100vh;
-  -webkit-column-gap: 7rem;
-     -moz-column-gap: 7rem;
-          column-gap: 7rem;
+  -moz-column-gap: 7rem;
+       column-gap: 7rem;
   max-width: none;
 }
 
 .fill {
   height: 100%;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 .fill h1 {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 h1 {
@@ -227,18 +214,18 @@ img, .image-hero {
 }
 
 .container > img {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding-top: 0.16rem;
   margin-top: 2rem;
   margin-bottom: 0.84rem;
 }
 
 .item > img {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .image-hero {
@@ -250,15 +237,12 @@ img, .image-hero {
 }
 
 .page-crack-magazine-1 #main-article .container {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .page-crack-magazine-1 aside {
@@ -284,12 +268,10 @@ img, .image-hero {
 }
 
 .page-crack-magazine-1 .layout-contents {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 @media (min-width: 700px) {
@@ -304,12 +286,10 @@ img, .image-hero {
   padding-top: 1.16rem;
   margin-top: 0rem;
   margin-bottom: 1.84rem;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   margin-left: -1rem;
   margin-right: -1rem;
   position: relative;
@@ -317,12 +297,10 @@ img, .image-hero {
 
 @media (min-width: 700px) {
   .page-crack-magazine-1 .layout-contents .item {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
     margin-left: 0;
     margin-right: 0;
   }
@@ -339,10 +317,8 @@ img, .image-hero {
 }
 
 .layout-contents .item:nth-child(1) {
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   padding-top: 0.5rem;
   margin-top: 0rem;
   margin-bottom: 0.5rem;
@@ -362,9 +338,8 @@ img, .image-hero {
 
 @media (max-width: 699px) {
   .layout-contents .item:nth-child(1) > img {
-    -webkit-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
   }
 }
 
@@ -375,9 +350,8 @@ img, .image-hero {
     margin-right: 1rem;
     height: 25rem;
     object-fit: cover;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+        order: 2;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -400,9 +374,8 @@ img, .image-hero {
 
 .layout-contents .item:nth-child(2),
 .layout-contents .item:nth-child(4) {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .layout-contents .item:nth-child(2) > div,
@@ -445,10 +418,8 @@ img, .image-hero {
   .layout-contents .item:nth-child(3) {
     width: 66.6667%;
     margin-left: auto;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
   }
 }
 
@@ -484,10 +455,8 @@ img, .image-hero {
   .layout-contents .item:nth-child(5) {
     width: 66.6667%;
     margin-right: auto;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
   }
 }
 
@@ -495,9 +464,8 @@ img, .image-hero {
   width: calc(50% - 2rem);
   margin-left: auto;
   margin-right: 1rem;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
+  -ms-flex-order: 1;
+      order: 1;
 }
 
 .layout-contents .item:nth-child(5) > div {
