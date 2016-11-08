@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   sass: {
    interior: {
     options: {
-      outputStyle: "expanded",
+      outputStyle: "compressed",
       sourceMapContents: true,
       sourceMap: true,
       precision: 4

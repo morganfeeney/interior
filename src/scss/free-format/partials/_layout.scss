@@ -60,8 +60,10 @@
     }
     @media(min-width: $screen-medium) {
       @include col(7);
-      height: $hero-image-offset-top;
-      object-fit: cover;
+      @supports(object-fit: cover){
+        height: $hero-image-offset-top;
+        object-fit: cover;
+      }
       order: 2;
       position: absolute;
       right: 0;
