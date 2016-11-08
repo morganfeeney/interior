@@ -69,8 +69,9 @@
       <p>Who knows what I will learn from the new Grid spec and what Interior v.3 will be, I'm guessing there may not be a need to use Interior for grid layout, yet there will be a benefit to automation using Scss — so it will live on — albeit in a
        <em>state of evolution</em>.</p>
       <h5>Columns &amp; gutters</h5>
-      <p>In an effort to reduce the amount of markup necessary to create columns with gutters I opted for the use of margin over padding. This ultimately means less code.
-       <em>Feel free to inspect figure 1</em>.</p>
+      <p>In an effort to reduce the markup I chose margin over padding to create the gutter width. This is combined with percentages and <code class="code-inline language-scss">calc()</code> to create the overall gutter width — this approach allows mixed
+       units such as rems to be used instead of percentages for gutters;
+       <em>feel free to inspect figure 1</em>.</p>
       <figure>
        <div class="visual-grid-1 gutter-demo">
         <div>
