@@ -3,14 +3,13 @@
 
 {% endblock %}
 {% block main %}
+{% set specimins = ["canon","double great primer","four line brevier","two line pica","double pica"] %}
 <aside class="measuring-stick">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+  {% for specimin in specimins %}
+    <div id="{{ loop.index }}">
+      <span>{{ specimin }}</span>
+    </div>
+  {% endfor %}
 </aside>
   <section>
     <h1>Pack my box with five dozen liquor jugs.</h1>

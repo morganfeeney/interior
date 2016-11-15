@@ -31,22 +31,23 @@ p {
 // Measuring stick
 .measuring-stick {
   div {
-    background: red;
-    color: white;
+    border-right: 8px solid red;
+    border-bottom: 1px solid;
     display: flex;
-    align-items: center;
+    flex-flow: column;
+    align-items: flex-end;
     justify-content: center;
     @each $scale, $map in $modular-scale {
       @for $i from 1 through length($map) {
         $item: nth($map, $i);
         &:nth-child(#{$i}) {
           height: #{nth($item,2)}rem;
-          &:before {
-            content: "#{nth($item,1)}";
-          }
         }
       }
     }
+  }
+  span {
+    margin-right: 1rem;
   }
 }
 
