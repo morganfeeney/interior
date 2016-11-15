@@ -1,0 +1,48 @@
+// -----------------------------
+// Typography
+// -----------------------------
+
+// body {
+//  @include baseline-grid();
+// }
+
+h1 {
+  @include baseline($canon);
+}
+h2 {
+  @include baseline($double-great-primer);
+}
+h3 {
+  @include baseline($four-line-brevier);
+}
+h4 {
+  @include baseline($two-line-pica);
+}
+h5 {
+  @include baseline($double-pica);
+}
+h6 {
+  @include baseline($great-primer);
+}
+p {
+  @include baseline($english);
+}
+// h2, h3, h4 {
+//   @include baseline($below: -1, $line-height: 1.5, $above: .25);
+// }
+//
+// h4 {
+//   font-style: italic;
+// }
+//
+// p {
+//   @include baseline($english, $line-height: 1.75, $above: 0.3);
+// }
+//
+// img {
+//   @include baseline($no-text: true);
+// }
+//
+// .page-crack-magazine-1 aside > h2 {
+//   @include baseline($above: .5, $below: .5);
+// }

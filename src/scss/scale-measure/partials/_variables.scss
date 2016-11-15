@@ -1,0 +1,22 @@
+// -----------------------------
+// variables
+// -----------------------------
+//
+// $light-gray: lightgray;
+// $brand-color-1: $light-gray;
+// $brand-color-light: lighten($brand-color-1, 15);
+// $wrapper-width-large: 100rem;
+// $hero-image-offset-top: 25rem;
+// $link-color: #000;
+$font-base: 1rem !default;
+// Fibonaci scale 1:l.62 - golden section
+$canon: font-scale(18.96); // 48px
+$double-great-primer: font-scale(11.10); // px
+$four-line-brevier: font-scale(6.86); // px
+$two-line-pica: font-scale(4.24); // px
+$double-pica: font-scale(2.62); // px
+$great-primer: font-scale(1.62); // px
+$english: font-scale(1); // px
+$pica: font-scale(.617); // px
+
+// need to set the measure!!!

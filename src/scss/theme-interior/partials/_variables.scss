@@ -59,7 +59,7 @@ $font-family-base: $font-sans-serif;
 $font-family-inline-code: $font-monospace;
 
 // Font sizes
-$font-base: 1rem;
+$font-base: 1rem !default;
 $line-height-base: 1;
 $base-line-unit: $font-base*$line-height-base;
 
@@ -71,14 +71,14 @@ $font-size-body: $font-base;
 $font-weight-border-with-content: bold;
 
 // Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
-$canon: font-scale(3); // 48px
-$double-great-primer: font-scale(2.250); // 36px
-$four-line-brevier: font-scale(2); // 32px
-$two-line-pica: font-scale(1.5); // 24px
-$double-pica: font-scale(1.313); // 21px
-$great-primer: font-scale(1.125); // 18px
-$english: font-scale(.875); // 14px
-$pica: font-scale(.75); // 12px
+$canon: font-scale(3) !default; // 48px
+$double-great-primer: font-scale(2.250) !default; // 36px
+$four-line-brevier: font-scale(2) !default; // 32px
+$two-line-pica: font-scale(1.5) !default; // 24px
+$double-pica: font-scale(1.313) !default; // 21px
+$great-primer: font-scale(1.125) !default; // 18px
+$english: font-scale(.875) !default; // 14px
+$pica: font-scale(.75) !default; // 12px
 
 $vertical-space: font-scale(3);
 $horizontal-space: font-scale(2);

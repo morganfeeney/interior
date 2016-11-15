@@ -1,0 +1,20 @@
+{% extends "templates/prototype-template.njk" %}
+{% set body_classes = "standard-layout" %}
+
+{% block linked_css %}
+  <link rel="stylesheet" href="/css/scale-measure.css">
+{% endblock %}
+
+{% block header %}
+  <div class="intro">
+    {% block intro %}
+      <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block main %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
