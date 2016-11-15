@@ -27,6 +27,34 @@ h6 {
 p {
   @include baseline($english);
 }
+
+// Measuring stick
+.measuring-stick {
+  div {
+    background: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @each $scale, $map in $modular-scale {
+      @each $key, $value in $map {
+        .#{$key} {
+          height: $value;
+        }
+      }
+      @for $i from 1 through length($map) {
+        $item: nth($map, $i);
+        &:nth-child(#{$i}) {
+          height: #{nth($item,2)}rem;
+          &:before {
+            content: "#{nth($item,1)}";
+          }
+        }
+      }
+    }
+  }
+}
+
 // h2, h3, h4 {
 //   @include baseline($below: -1, $line-height: 1.5, $above: .25);
 // }

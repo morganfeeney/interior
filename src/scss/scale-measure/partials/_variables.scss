@@ -9,14 +9,31 @@
 // $hero-image-offset-top: 25rem;
 // $link-color: #000;
 $font-base: 1rem !default;
-// Fibonaci scale 1:l.62 - golden section
-$canon: font-scale(18.96); // 48px
-$double-great-primer: font-scale(11.10); // px
-$four-line-brevier: font-scale(6.86); // px
-$two-line-pica: font-scale(4.24); // px
-$double-pica: font-scale(2.62); // px
-$great-primer: font-scale(1.62); // px
-$english: font-scale(1); // px
-$pica: font-scale(.617); // px
+// Fibonaci sequenced scales
+//
+// 1:1.62 - golden section - scale 1
+// 1:1.5 - fifth - scale 2
 
+$modular-scale: (
+  golden-section: (
+    canon: 18.96,
+    double-great-primer: 11.10,
+    four-line-brevier: 6.86,
+    two-line-pica: 4.24,
+    double-pica: 2.62,
+    great-primer: 1.62,
+    english: 1,
+    pica: .617
+  ),
+  fifth: (
+    canon: 16.5,
+    double-great-primer: 10.5,
+    four-line-brevier: 6.5,
+    two-line-pica: 4,
+    double-pica: 2.5,
+    great-primer: 1.5,
+    english: 1,
+    pica: .667
+  )
+);
 // need to set the measure!!!
