@@ -37,11 +37,6 @@ p {
     align-items: center;
     justify-content: center;
     @each $scale, $map in $modular-scale {
-      @each $key, $value in $map {
-        .#{$key} {
-          height: $value;
-        }
-      }
       @for $i from 1 through length($map) {
         $item: nth($map, $i);
         &:nth-child(#{$i}) {
