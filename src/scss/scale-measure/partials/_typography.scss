@@ -29,44 +29,45 @@ p {
 }
 
 // Measuring stick
-.measuring-stick {
-  div {
-    border-right: 8px solid red;
-    border-bottom: 1px solid;
+.measuring-sticks {
+  display: flex;
+  flex-flow: row wrap;
+  > div {
+    @include col(6);
     display: flex;
-    flex-flow: column;
-    align-items: flex-end;
-    justify-content: center;
-    @each $scale, $map in $modular-scale {
-      @for $i from 1 through length($map) {
-        $item: nth($map, $i);
-        &:nth-child(#{$i}) {
-          height: #{nth($item,2)}rem;
-        }
-      }
+    flex-flow: column wrap;
+    div {
+      border-right: 8px solid red;
+      border-bottom: 1px solid;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-end;
+      justify-content: center;
     }
-  }
-  span {
-    margin-right: 1rem;
+    span {
+      margin-right: 1rem;
+    }
   }
 }
 
-// h2, h3, h4 {
-//   @include baseline($below: -1, $line-height: 1.5, $above: .25);
-// }
-//
-// h4 {
-//   font-style: italic;
-// }
-//
-// p {
-//   @include baseline($english, $line-height: 1.75, $above: 0.3);
-// }
-//
-// img {
-//   @include baseline($no-text: true);
-// }
-//
-// .page-crack-magazine-1 aside > h2 {
-//   @include baseline($above: .5, $below: .5);
-// }
+.golden-section-stick {
+  div {
+    @for $i from 1 through length($golden-section) {
+      $item: nth($golden-section, $i);
+      &:nth-child(#{$i}) {
+        height: #{nth($item,2)}rem;
+      }
+    }
+  }
+}
+
+.fifth-stick {
+  div {
+    @for $i from 1 through length($fifth) {
+      $item: nth($fifth, $i);
+      &:nth-child(#{$i}) {
+        height: #{nth($item,2)}rem;
+      }
+    }
+  }
+}

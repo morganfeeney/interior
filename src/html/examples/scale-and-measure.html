@@ -4,13 +4,22 @@
 {% endblock %}
 {% block main %}
 {% set specimins = ["canon","double great primer","four line brevier","two line pica","double pica"] %}
-<aside class="measuring-stick">
-  {% for specimin in specimins %}
-    <div id="{{ loop.index }}">
-      <span>{{ specimin }}</span>
+  <aside class="measuring-sticks">
+    <div class="golden-section-stick">
+      {% for specimin in specimins %}
+        <div id="{{ loop.index }}">
+          <span>{{ specimin }}</span>
+        </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-</aside>
+    <div class="fifth-stick">
+      {% for specimin in specimins %}
+        <div id="{{ loop.index }}">
+          <span>{{ specimin }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </aside>
   <section>
     <h1>Pack my box with five dozen liquor jugs.</h1>
     <h2>Pack my box with five dozen liquor jugs.</h2>

@@ -36,4 +36,8 @@ $modular-scale: (
     pica: .667
   )
 );
+
+// Split them up if needed
+$golden-section: map-get($modular-scale, golden-section);
+$fifth: map-get($modular-scale, fifth);
 // need to set the measure!!!
