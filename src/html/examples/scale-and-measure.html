@@ -48,36 +48,54 @@
       "pica": ".833"
     }
   %}
-  <aside class="measuring-sticks">
-    <div class="golden-section-stick">
-      {% for scale, scales in golden_section %}
-        <div id="{{ loop.index }}">
-          <span>{{ scales }}</span>
+  <section class="measuring-sticks">
+    <aside class="single-sticks">
+      <div class="golden-section-stick">
+        {% for scale, scales in golden_section %}
+          <div id="{{ loop.index }}">
+            <span>{{ scales }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="fifth-stick">
+        {% for scale, scales in fifth %}
+          <div id="{{ loop.index }}">
+            <span>{{ scales }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="major-third-stick">
+        {% for scale, scales in major_third %}
+          <div id="{{ loop.index }}">
+            <span>{{ scales }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="minor-second-stick">
+        {% for scale, scales in minor_second %}
+          <div id="{{ loop.index }}">
+            <span>{{ scales }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </aside>
+    <aside class="double-stick">
+        <div class="golden-section-stick">
+          {% for scale, scales in golden_section %}
+            <div id="{{ loop.index }}">
+              <span>{{ scales }}</span>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
-    </div>
-    <div class="fifth-stick">
-      {% for scale, scales in fifth %}
-        <div id="{{ loop.index }}">
-          <span>{{ scales }}</span>
+        <div class="minor-second-stick">
+          {% for scale, scales in minor_second %}
+            <div id="{{ loop.index }}">
+              <span>{{ scales }}</span>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
-    </div>
-    <div class="major-third-stick">
-      {% for scale, scales in major_third %}
-        <div id="{{ loop.index }}">
-          <span>{{ scales }}</span>
-        </div>
-      {% endfor %}
-    </div>
-    <div class="minor-second-stick">
-      {% for scale, scales in minor_second %}
-        <div id="{{ loop.index }}">
-          <span>{{ scales }}</span>
-        </div>
-      {% endfor %}
-    </div>
-  </aside>
+    </aside>
+  </section>
   <section>
     <h1>Pack my box with five dozen liquor jugs.</h1>
     <h2>Pack my box with five dozen liquor jugs.</h2>
