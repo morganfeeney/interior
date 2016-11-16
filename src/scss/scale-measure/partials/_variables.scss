@@ -57,4 +57,6 @@ $modular-scale: (
 // Split them up if needed
 $golden-section: map-get($modular-scale, golden-section);
 $fifth: map-get($modular-scale, fifth);
+$major-third: map-get($modular-scale, major-third);
+$minor-second: map-get($modular-scale, minor-second);
 // need to set the measure!!!

@@ -26,6 +26,28 @@
       "pica": ".667"
     }
   %}
+  {% set major_third = {
+      "canon": "14.1",
+      "double-great-primer": "8.8",
+      "four-line-brevier": "5.3",
+      "two-line-pica": "3.5",
+      "double-pica": "2.25",
+      "great-primer": "1.25",
+      "english": "1",
+      "pica": ".8"
+    }
+  %}
+  {% set minor_second = {
+      "canon": "13.536",
+      "double-great-primer": "8.335",
+      "four-line-brevier": "5.201",
+      "two-line-pica": "3.134",
+      "double-pica": "2.067",
+      "great-primer": "1.067",
+      "english": "1",
+      "pica": ".833"
+    }
+  %}
   <aside class="measuring-sticks">
     <div class="golden-section-stick">
       {% for scale, scales in golden_section %}
@@ -36,6 +58,20 @@
     </div>
     <div class="fifth-stick">
       {% for scale, scales in fifth %}
+        <div id="{{ loop.index }}">
+          <span>{{ scales }}</span>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="major-third-stick">
+      {% for scale, scales in major_third %}
+        <div id="{{ loop.index }}">
+          <span>{{ scales }}</span>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="minor-second-stick">
+      {% for scale, scales in minor_second %}
         <div id="{{ loop.index }}">
           <span>{{ scales }}</span>
         </div>

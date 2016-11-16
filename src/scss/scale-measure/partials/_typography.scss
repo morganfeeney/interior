@@ -33,9 +33,10 @@ p {
   display: flex;
   flex-flow: row wrap;
   > div {
-    @include col(6, $calc: false, $margin: false);
+    //@include col(6, $calc: false, $margin: false);
     display: flex;
     flex-flow: column wrap;
+    justify-content: flex-end;
     div {
       border-right: 1rem solid $brand-color-1;
       display: flex;
@@ -58,23 +59,17 @@ p {
 }
 
 .golden-section-stick {
-  div {
-    @for $i from 1 through length($golden-section) {
-      $item: nth($golden-section, $i);
-      &:nth-child(#{$i}) {
-        height: #{nth($item,2)}rem;
-      }
-    }
-  }
+  @include stick($golden-section);
 }
 
 .fifth-stick {
-  div {
-    @for $i from 1 through length($fifth) {
-      $item: nth($fifth, $i);
-      &:nth-child(#{$i}) {
-        height: #{nth($item,2)}rem;
-      }
-    }
-  }
+  @include stick($fifth);
+}
+
+.major-third-stick {
+  @include stick($major-third);
+}
+
+.minor-second-stick {
+  @include stick($minor-second);
 }
