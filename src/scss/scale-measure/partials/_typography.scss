@@ -33,19 +33,26 @@ p {
   display: flex;
   flex-flow: row wrap;
   > div {
-    @include col(6);
+    @include col(6, $calc: false, $margin: false);
     display: flex;
     flex-flow: column wrap;
     div {
-      border-right: 8px solid red;
-      border-bottom: 1px solid;
+      border-right: 1rem solid $brand-color-1;
       display: flex;
       flex-flow: column;
       align-items: flex-end;
-      justify-content: center;
+      justify-content: flex-start;
+      &:before {
+        border-top: 1px solid #000;
+        content: "";
+        width: 1rem;
+      }
     }
     span {
       margin-right: 1rem;
+      margin-top: -.5rem;
+      background: $brand-color-light;
+      padding: 0 .5rem;
     }
   }
 }

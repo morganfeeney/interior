@@ -9,14 +9,11 @@
 // $hero-image-offset-top: 25rem;
 // $link-color: #000;
 $font-base: 1rem !default;
-// Fibonaci sequenced scales
-//
-// 1:1.62 - golden section - scale 1
-// 1:1.5 - fifth - scale 2
 
+// Fibonaci sequenced modular scales
 $modular-scale: (
   golden-section: (
-    canon: 18.96,
+    canon: 17.96,
     double-great-primer: 11.10,
     four-line-brevier: 6.86,
     two-line-pica: 4.24,
@@ -34,6 +31,26 @@ $modular-scale: (
     great-primer: 1.5,
     english: 1,
     pica: .667
+  ),
+  major-third: (
+    canon: 14.1,
+    double-great-primer: 8.8,
+    four-line-brevier: 5.3,
+    two-line-pica: 3.5,
+    double-pica: 2.25,
+    great-primer: 1.25,
+    english: 1,
+    pica: .8
+  ),
+  minor-second: (
+    canon: 13.536,
+    double-great-primer: 8.335,
+    four-line-brevier: 5.201,
+    two-line-pica: 3.134,
+    double-pica: 2.067,
+    great-primer: 1.067,
+    english: 1,
+    pica: .833
   )
 );
 

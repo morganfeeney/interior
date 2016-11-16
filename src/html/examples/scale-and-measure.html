@@ -1,21 +1,43 @@
 {% extends "layouts/scale-measure-layout.njk" %}
-{% block header %}
 
+{% block header %}
 {% endblock %}
+
 {% block main %}
-{% set specimins = ["canon","double great primer","four line brevier","two line pica","double pica"] %}
+  {% set golden_section = {
+      "canon": "18.96",
+      "double great primer": "11.10",
+      "four line brevier": "6.86",
+      "two line pica": "4.24",
+      "double pica": "2.62",
+      "great primer": "1.62",
+      "english": "1",
+      "pica": ".617"
+    }
+  %}
+  {% set fifth = {
+      "canon": "16.5",
+      "double-great-primer": "10.5",
+      "four-line-brevier": "6.5",
+      "two-line-pica": "4",
+      "double-pica": "2.5",
+      "great-primer": "1.5",
+      "english": "1",
+      "pica": ".667"
+    }
+  %}
   <aside class="measuring-sticks">
     <div class="golden-section-stick">
-      {% for specimin in specimins %}
+      {% for scale, scales in golden_section %}
         <div id="{{ loop.index }}">
-          <span>{{ specimin }}</span>
+          <span>{{ scales }}</span>
         </div>
       {% endfor %}
     </div>
     <div class="fifth-stick">
-      {% for specimin in specimins %}
+      {% for scale, scales in fifth %}
         <div id="{{ loop.index }}">
-          <span>{{ specimin }}</span>
+          <span>{{ scales }}</span>
         </div>
       {% endfor %}
     </div>
