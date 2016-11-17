@@ -130,19 +130,30 @@ p {
 }
 
 .multiple-sticks {
+  @include col(6);
   position: relative;
   display: flex;
   flex-flow: column;
+  align-items: center;
   > div {
-  text-align: right;
-    span {
-      margin-right: 55%;
-    }
+    min-width: 8rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
     &:nth-of-type(odd) {
-      text-align: left;
+      justify-content: flex-start;
+      margin-right: 10rem;
+      margin-left: 0;
       span {
-        margin-left: 55%;
-        text-align: right;
+        align-self: flex-end;
+      }
+    }
+    &:nth-of-type(even) {
+      justify-content: flex-end;
+      margin-left: 10rem;
+      margin-right: 0;
+      span {
+        align-self: flex-start;
       }
     }
   }
