@@ -1,0 +1,64 @@
+// Fibonaci sequenced modular scales
+$modular-scale: (
+  golden-section: (
+    canon: 17.96,
+    double-great-primer: 11.10,
+    four-line-brevier: 6.86,
+    two-line-pica: 4.24,
+    double-pica: 2.62,
+    great-primer: 1.62,
+    english: 1,
+    pica: .617
+  ),
+  fifth: (
+    canon: 16.5,
+    double-great-primer: 10.5,
+    four-line-brevier: 6.5,
+    two-line-pica: 4,
+    double-pica: 2.5,
+    great-primer: 1.5,
+    english: 1,
+    pica: .667
+  ),
+  major-third: (
+    canon: 14.1,
+    double-great-primer: 8.8,
+    four-line-brevier: 5.3,
+    two-line-pica: 3.5,
+    double-pica: 2.25,
+    great-primer: 1.25,
+    english: 1,
+    pica: .8
+  ),
+  minor-second: (
+    canon: 13.536,
+    double-great-primer: 8.335,
+    four-line-brevier: 5.201,
+    two-line-pica: 3.134,
+    double-pica: 2.067,
+    great-primer: 1.067,
+    english: 1,
+    pica: .833
+  )
+);
+
+// Combined scales
+$modular-scales: (
+  golden-section-and-minor-second: (
+    five-line-pica: 17.96,
+    canon: 13.536,
+    two-line-great-primer: 11.10,
+    double-great-primer: 8.335,
+    four-line-brevier: 6.86,
+    two-line-english: 5.201,
+    double-english: 4.24,
+    two-line-pica: 3.134,
+    double-pica: 2.62,
+    paragon: 2.067,
+    great-primer: 1.62,
+    mittel: 1.067,
+    english: 1,
+    pica: .833,
+    philosophy: .617
+  )
+);

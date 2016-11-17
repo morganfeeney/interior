@@ -10,53 +10,13 @@
 // $link-color: #000;
 $font-base: 1rem !default;
 
-// Fibonaci sequenced modular scales
-$modular-scale: (
-  golden-section: (
-    canon: 17.96,
-    double-great-primer: 11.10,
-    four-line-brevier: 6.86,
-    two-line-pica: 4.24,
-    double-pica: 2.62,
-    great-primer: 1.62,
-    english: 1,
-    pica: .617
-  ),
-  fifth: (
-    canon: 16.5,
-    double-great-primer: 10.5,
-    four-line-brevier: 6.5,
-    two-line-pica: 4,
-    double-pica: 2.5,
-    great-primer: 1.5,
-    english: 1,
-    pica: .667
-  ),
-  major-third: (
-    canon: 14.1,
-    double-great-primer: 8.8,
-    four-line-brevier: 5.3,
-    two-line-pica: 3.5,
-    double-pica: 2.25,
-    great-primer: 1.25,
-    english: 1,
-    pica: .8
-  ),
-  minor-second: (
-    canon: 13.536,
-    double-great-primer: 8.335,
-    four-line-brevier: 5.201,
-    two-line-pica: 3.134,
-    double-pica: 2.067,
-    great-primer: 1.067,
-    english: 1,
-    pica: .833
-  )
-);
-
 // Split them up if needed
 $golden-section: map-get($modular-scale, golden-section);
 $fifth: map-get($modular-scale, fifth);
 $major-third: map-get($modular-scale, major-third);
 $minor-second: map-get($modular-scale, minor-second);
+
+// Dual scales
+$golden-section-and-minor-second: map-get($modular-scales, golden-section-and-minor-second);
+
 // need to set the measure!!!

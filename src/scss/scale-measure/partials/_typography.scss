@@ -128,3 +128,31 @@ p {
     }
   }
 }
+
+.multiple-sticks {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  > div {
+  text-align: right;
+    span {
+      margin-right: 55%;
+    }
+    &:nth-of-type(odd) {
+      text-align: left;
+      span {
+        margin-left: 55%;
+        text-align: right;
+      }
+    }
+  }
+  &:before {
+    content: "";
+    width: 1rem;
+    background: $brand-color-1;
+    align-self: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+}

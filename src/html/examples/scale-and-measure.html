@@ -48,8 +48,26 @@
       "pica": ".833"
     }
   %}
+  {% set golden_section_and_minor_second = {
+      "five-line-pica": "17.96",
+      "canon": "13.536",
+      "two-line-great-primer": "11.10",
+      "double-great-primer": "8.335",
+      "four-line-brevier": "6.86",
+      "two-line-english": "5.201",
+      "double-english": "4.24",
+      "two-line-pica": "3.134",
+      "double-pica": "2.62",
+      "paragon": "2.067",
+      "great-primer": "1.62",
+      "mittel": "1.067",
+      "english": "1",
+      "pica": ".833",
+      "philosophy": ".617"
+    }
+  %}
   <section class="measuring-sticks">
-    <aside class="single-sticks">
+    {# <aside class="single-sticks">
       <div class="golden-section-stick">
         {% for scale, scales in golden_section %}
           <div id="{{ loop.index }}">
@@ -94,7 +112,19 @@
             </div>
           {% endfor %}
         </div>
+    </aside> #}
+  </section>
+  <section class="multiple-measures">
+    <aside>
+      <div class="multiple-sticks golden-section-and-minor-second-stick">
+        {% for scale, scales in golden_section_and_minor_second %}
+          <div id="{{ loop.index }}">
+            <span>{{ scales }}</span>
+          </div>
+        {% endfor %}
+      </div>
     </aside>
+
   </section>
   <section>
     <h1>Pack my box with five dozen liquor jugs.</h1>
