@@ -7,19 +7,19 @@
 // }
 
 h1 {
-  @include baseline($canon);
+  @include baseline($two-line-english);
 }
 h2 {
-  @include baseline($double-great-primer);
+  @include baseline($double-english);
 }
 h3 {
-  @include baseline($four-line-brevier);
-}
-h4 {
   @include baseline($two-line-pica);
 }
-h5 {
+h4 {
   @include baseline($double-pica);
+}
+h5 {
+  @include baseline($paragon);
 }
 h6 {
   @include baseline($great-primer);
@@ -33,53 +33,8 @@ p {
   display: flex;
   flex-flow: row wrap;
 }
-.single-sticks {
-  display: flex;
-  flex-flow: row wrap;
-  > div {
-    //@include col(6, $calc: false, $margin: false);
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    div {
-      border-right: 1rem solid $brand-color-1;
-      display: flex;
-      flex-flow: column;
-      align-items: flex-end;
-      justify-content: flex-start;
-      &:before {
-        border-top: 1px solid #000;
-        content: "";
-        width: 1rem;
-      }
-    }
-    span {
-      margin-right: 1rem;
-      margin-top: -.5rem;
-      background: $brand-color-light;
-      padding: 0 .5rem;
-    }
-  }
-}
-
-.golden-section-stick {
-  @include stick($golden-section);
-}
-
-.fifth-stick {
-  @include stick($fifth);
-}
-
-.major-third-stick {
-  @include stick($major-third);
-}
-
-.minor-second-stick {
-  @include stick($minor-second);
-}
 
 .double-stick {
-  @include col(6);
   position: relative;
   display: flex;
   flex-flow: column;

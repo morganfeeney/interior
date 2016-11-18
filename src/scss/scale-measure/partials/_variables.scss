@@ -8,15 +8,31 @@
 // $wrapper-width-large: 100rem;
 // $hero-image-offset-top: 25rem;
 // $link-color: #000;
-$font-base: 1rem !default;
+//$font-base: 1rem;
 
-// Split them up if needed
+// Divide modular scales into separate variables.
 $golden-section: map-get($modular-scale, golden-section);
 $fifth: map-get($modular-scale, fifth);
 $major-third: map-get($modular-scale, major-third);
 $minor-second: map-get($modular-scale, minor-second);
 
-// Dual scales
 $golden-section-and-minor-second: map-get($modular-scales, golden-section-and-minor-second);
+
+// Divide individual font name variables from modular scales
+$five-line-pica: map-get($golden-section-and-minor-second, five-line-pica);
+$canon: map-get($golden-section-and-minor-second, canon);
+$two-line-great-primer: map-get($golden-section-and-minor-second, two-line-great-primer);
+$double-great-primer: map-get($golden-section-and-minor-second, double-great-primer);
+$four-line-brevier: map-get($golden-section-and-minor-second, four-line-brevier);
+$two-line-english: map-get($golden-section-and-minor-second, two-line-english);
+$double-english: map-get($golden-section-and-minor-second, double-english);
+$two-line-pica: map-get($golden-section-and-minor-second, two-line-pica);
+$double-pica: map-get($golden-section-and-minor-second, double-pica);
+$paragon: map-get($golden-section-and-minor-second, paragon);
+$great-primer: map-get($golden-section-and-minor-second, great-primer);
+$mittel: map-get($golden-section-and-minor-second, mittel);
+$english: map-get($golden-section-and-minor-second, english);
+$pica: map-get($golden-section-and-minor-second, pica);
+$philosophy: map-get($golden-section-and-minor-second, philosophy);
 
 // need to set the measure!!!

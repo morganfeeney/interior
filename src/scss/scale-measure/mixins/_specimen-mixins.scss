@@ -5,7 +5,7 @@
     @for $i from 1 through length($stick-name) {
       $item: nth($stick-name, $i);
       &:nth-child(#{$i}) {
-        height: #{nth($item,2)}rem;
+        height: #{nth($item,2)};
       }
     }
   }

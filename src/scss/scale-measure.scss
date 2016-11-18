@@ -2,14 +2,14 @@
 // Scale & Measure — Main stylesheet
 // -----------------------------
 
-// Functions
-@import "functions/units";
-@import "functions/vertical-rhythm";
-
 // Variables
 @import "scale-measure/partials/modular-scale";
 @import "scale-measure/partials/variables";
 @import "theme-interior/partials/variables";
+
+// Functions
+@import "functions/units";
+@import "functions/vertical-rhythm";
 
 // Mixins
 @import "mixins/baseline";
