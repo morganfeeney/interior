@@ -79,57 +79,6 @@ p {
 }
 
 .double-stick {
-  display: flex;
-  flex-flow: row wrap;
-  margin-left: auto;
-  > div {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    &:nth-child(1) {
-      border-right: .5rem solid $brand-color-1;
-      span {
-        margin-right: 1rem;
-        margin-top: -.5rem;
-        background: $brand-color-light;
-        padding: 0 .5rem;
-      }
-    }
-    &:nth-child(2) {
-      border-left: .5rem solid $brand-color-1;
-      span {
-        margin-left: 1rem;
-        margin-top: -.5rem;
-        background: $brand-color-light;
-        padding: 0 .5rem;
-      }
-    }
-    div {
-      display: flex;
-      flex-flow: column;
-      justify-content: flex-start;
-      &:before {
-        border-top: 1px solid #000;
-        content: "";
-        width: 1rem;
-      }
-    }
-  }
-  .golden-section-stick {
-    @include stick($golden-section);
-    div {
-      align-items: flex-end;
-    }
-  }
-  .minor-second-stick {
-    @include stick($minor-second);
-    div {
-      align-items: flex-start;
-    }
-  }
-}
-
-.multiple-sticks {
   @include col(6);
   position: relative;
   display: flex;
