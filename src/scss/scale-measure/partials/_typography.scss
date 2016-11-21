@@ -10,19 +10,19 @@ h1 {
   @include baseline($two-line-english, $line-height: .97, $above: .7, $below: 2);
 }
 h2 {
-  @include baseline($double-english);
+  @include baseline($double-english, $line-height: .95, $above: .8, $below: 2);
 }
 h3 {
-  @include baseline($two-line-pica);
+  @include baseline($two-line-pica, $line-height: .96, $above: .8, $below: 2);
 }
 h4 {
-  @include baseline($double-pica);
+  @include baseline($double-pica, $line-height: 1.15, $above: 0.1, $below: 1);
 }
 h5 {
-  @include baseline($paragon);
+  @include baseline($paragon, $line-height: .95, $below: 0);
 }
 h6 {
-  @include baseline($great-primer);
+  @include baseline($great-primer, $line-height: 1.25, $above: .3, $below: .1);
 }
 p {
   @include baseline($english);
