@@ -5,19 +5,19 @@
 //** Units
 //
 // Screen widths (min-width)
-$screen-small: 569px;
-$screen-medium: 700px;
-$screen-large: 900px;
-$screen-larger: 1200px;
+$screen-small: 569px !default;
+$screen-medium: 700px !default;
+$screen-large: 900px !default;
+$screen-larger: 1200px !default;
 
 // Screen widths max-width
-$screen-small-max: ($screen-small)-1;
-$screen-medium-max: ($screen-medium)-1;
-$screen-large-max: ($screen-large)-1;
-$screen-larger-max: ($screen-larger)-1;
+$screen-small-max: ($screen-small)-1 !default;
+$screen-medium-max: ($screen-medium)-1 !default;
+$screen-large-max: ($screen-large)-1 !default;
+$screen-larger-max: ($screen-larger)-1 !default;
 
 // Columns
-$cols: 12;
+$cols: 12 !default;
 
 // Wrappers
 $wrapper-width-large: $screen-larger !default;
@@ -51,24 +51,24 @@ $font-color-4: $brand-color-4 !default;
 // Link colours
 $link-color: $font-color-1 !default;
 
-// Font familiess
-$font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-monospace: "Inconsolata", monospace, courier;
+// Font families
+$font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-monospace: "Inconsolata", monospace, courier !default;
 // Apply font families to generic variables
-$font-family-base: $font-sans-serif;
-$font-family-inline-code: $font-monospace;
+$font-family-base: $font-sans-serif !default;
+$font-family-inline-code: $font-monospace !default;
 
 // Font sizes
 $font-base: 1rem !default;
-$line-height-base: 1;
-$base-line-unit: $font-base*$line-height-base;
+$line-height-base: 1 !default;
+$base-line-unit: $font-base*$line-height-base !default;
 
 // This is for Arial/Helvetica
-$cap-height: 0.68;
-$font-size-body: $font-base;
+$cap-height: 0.68 !default;
+$font-size-body: $font-base !default;
 
 // Font weights
-$font-weight-border-with-content: bold;
+$font-weight-border-with-content: bold !default
 
 // Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
 $canon: font-scale(3) !default; // 48px
@@ -80,20 +80,20 @@ $great-primer: font-scale(1.125) !default; // 18px
 $english: font-scale(.875) !default; // 14px
 $pica: font-scale(.75) !default; // 12px
 
-$vertical-space: font-scale(3);
-$horizontal-space: font-scale(2);
-$vertical-space-small: $vertical-space / 4;
-$horizontal-space-small: $horizontal-space / 2;
-$grid-gutter: $horizontal-space;
-$m: $horizontal-space;
+$vertical-space: font-scale(3) !default;
+$horizontal-space: font-scale(2) !default;
+$vertical-space-small: $vertical-space / 4 !default;
+$horizontal-space-small: $horizontal-space / 2 !default;
+$grid-gutter: $horizontal-space !default;
+$m: $horizontal-space !default;
 
 //** Borders
-$light-border: 1px solid $brand-color-3;
-$mid-border: .15rem solid $brand-color-mid;
+$light-border: 1px solid $brand-color-3 !default;
+$mid-border: .15rem solid $brand-color-mid !default;
 
 // Footer
-$footer-border-width: 1px;
+$footer-border-width: 1px !default;
 
 //** Horizontal alignment
-$horizontal-offset: column-width(2);
-$horizontal-offset-larger: column-width(4);
+$horizontal-offset: column-width(2) !default;
+$horizontal-offset-larger: column-width(4) !default;
