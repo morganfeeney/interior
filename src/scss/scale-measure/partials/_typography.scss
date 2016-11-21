@@ -2,12 +2,12 @@
 // Typography
 // -----------------------------
 
-// body {
-//  @include baseline-grid();
-// }
+body {
+ @include baseline-grid($grid-bg-size: 100% 1rem);
+}
 
 h1 {
-  @include baseline($two-line-english);
+  @include baseline($two-line-english, $line-height: .97, $above: .7, $below: 2);
 }
 h2 {
   @include baseline($double-english);
