@@ -8,7 +8,7 @@
 // $wrapper-width-large: 100rem;
 // $hero-image-offset-top: 25rem;
 // $link-color: #000;
-//$font-base: 1rem;
+//$font-base: $font-base;
 
 // Divide modular scales into separate variables.
 $golden-section: map-get($modular-scale, golden-section);
@@ -34,5 +34,8 @@ $mittel: map-get($golden-section-and-minor-second, mittel);
 $english: map-get($golden-section-and-minor-second, english);
 $pica: map-get($golden-section-and-minor-second, pica);
 $philosophy: map-get($golden-section-and-minor-second, philosophy);
+
+// Measuring sticks
+$measuring-stick-width: font-scale(1.5);
 
 // need to set the measure!!!
