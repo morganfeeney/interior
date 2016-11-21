@@ -2,14 +2,14 @@
 // Scale & Measure — Main stylesheet
 // -----------------------------
 
-// Variables
-@import "scale-measure/partials/modular-scale";
-@import "scale-measure/partials/variables";
-@import "theme-interior/partials/variables";
-
 // Functions
 @import "functions/units";
 @import "functions/vertical-rhythm";
+
+// Variables
+@import "theme-interior/partials/variables";
+@import "scale-measure/partials/modular-scale";
+@import "scale-measure/partials/variables";
 
 // Mixins
 @import "mixins/baseline";
@@ -27,9 +27,4 @@
 @import "theme-interior/partials/base";
 @import "theme-interior/partials/layout";
 @import "scale-measure/partials/typography";
-@import "theme-interior/partials/image";
-
-// Theme layouts
-//@import "free-format/partials/layout";
-
-// Custom web fonts
+@import "scale-measure/partials/measuring-sticks";
