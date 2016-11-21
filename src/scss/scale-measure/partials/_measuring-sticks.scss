@@ -18,6 +18,7 @@
     flex-flow: column;
     &:before {
       border-top: 1px solid $brand-color-light;
+      margin-top: -1px;
       content: "";
       width: $measuring-stick-width;
       z-index: 1;
