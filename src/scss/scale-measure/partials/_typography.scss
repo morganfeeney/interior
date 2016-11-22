@@ -7,7 +7,7 @@ html {
   }
 }
 body {
- @include baseline-grid($grid-bg-size: 100% 1rem);
+ @include baseline-grid($grid-bg-size: 100vw 1rem);
 }
 
 h1 {
