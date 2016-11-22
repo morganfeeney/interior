@@ -11,19 +11,19 @@ body {
 }
 
 h1 {
-  @include baseline($double-english, $line-height: 1.18, $above: 1.3, $below: 1.8);
+  @include baseline($double-english, $line-height: 1.18, $above: 1.3, $below: 2);
 }
 h2 {
-  @include baseline($two-line-pica, $line-height: 1.3, $above: .5, $below: 1.05);
+  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1);
 }
 h3 {
   @include baseline($double-pica, $line-height: 1.15, $above: .1, $below: 1);
 }
 h4 {
-  @include baseline($paragon, $line-height: .97, $below: 0);
+  @include baseline($paragon, $line-height: .96, $below: 0);
 }
 h5 {
-  @include baseline($great-primer, $line-height: 1.2, $above: .3, $below: .1);
+  @include baseline($great-primer, $line-height: 1.25, $above: .3, $below: .1);
 }
 h6 {
   @include baseline($mittel, $line-height: 1.9, $above: .5);
