@@ -1,29 +1,33 @@
 // -----------------------------
 // Typography
 // -----------------------------
-
+html {
+  @media(min-width: $screen-large) {
+   font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
+  }
+}
 body {
  @include baseline-grid($grid-bg-size: 100% 1rem);
 }
 
 h1 {
-  @include baseline($two-line-english, $line-height: .97, $above: .7, $below: 2);
-}
-h2 {
   @include baseline($double-english, $line-height: .95, $above: .8, $below: 2);
 }
-h3 {
-  @include baseline($two-line-pica, $line-height: .96, $above: .8, $below: 2);
+h2 {
+  @include baseline($two-line-pica, $line-height: .97, $above: .8, $below: 2);
 }
-h4 {
+h3 {
   @include baseline($double-pica, $line-height: 1.15, $above: 0.1, $below: 1);
 }
+h4 {
+  @include baseline($paragon, $line-height: .97, $below: 0);
+}
 h5 {
-  @include baseline($paragon, $line-height: .95, $below: 0);
+  @include baseline($great-primer, $line-height: 1.2, $above: .3, $below: .1);
 }
 h6 {
-  @include baseline($great-primer, $line-height: 1.25, $above: .3, $below: .1);
+  @include baseline($mittel, $line-height: 1.9, $above: .5);
 }
 p {
-  @include baseline($english);
+  @include baseline($english, $line-height: 2, $above: .5);
 }
