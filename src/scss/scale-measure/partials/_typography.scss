@@ -32,5 +32,8 @@ p {
   @include baseline($english, $line-height: 2, $above: .5);
 }
 p.large {
-  @include baseline($great-primer, $line-height: 1.25, $above: .25, $below: 2);
+  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: 2);
+}
+p.small {
+  @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2);
 }
