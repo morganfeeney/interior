@@ -39,4 +39,21 @@ $philosophy: map-get($golden-section-and-minor-second, philosophy);
 $measuring-stick-width: font-scale(1.5);
 $measuring-stick-after-width: 2px;
 
-// need to set the measure!!!
+// Isaiah scroll converted to web
+$isaiah-scroll-page:;
+$isaiah-scroll-measure: 25rem; // roughly 28pc
+$isaiah-scroll-header-margin: 100vh/12;
+$isaiah-scroll-footer-margin: $isaiah-scroll-header-margin*1.5;
+$isaiah-scroll-grid-gutter: 100vw/18;
+$isaiah-scroll-text-block: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4)});
+
+$header-margin: $isaiah-scroll-header-margin;
+$footer-margin: $isaiah-scroll-footer-margin;
+$grid-gutter: $isaiah-scroll-grid-gutter*2;
+$text-block: $isaiah-scroll-text-block;
+
+$wrapper-width-large: $text-block;
+
+// Serif font this time
+$cap-height: $serif-cap-height;
+$font-family-base: $font-serif;

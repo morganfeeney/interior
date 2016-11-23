@@ -1,0 +1,6 @@
+section.multicolumn {
+  @include baseline($no-text: true,$margin-top: $header-margin, $margin-bottom: $footer-margin);
+  column-count: 2;
+  column-width: auto;
+  column-gap: $grid-gutter/4;
+}

@@ -37,3 +37,18 @@ p.large {
 p.small {
   @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2);
 }
+
+// Reset multicolumn <p> due to wrapping
+.multicolumn p {
+  margin: 0;
+  padding: 0;
+  &:not(:first-child) {
+    text-indent: 1.62rem;  
+  }
+}
+@media(min-width: $screen-large) {
+  .multicolumn {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
