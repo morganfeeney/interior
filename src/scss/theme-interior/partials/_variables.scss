@@ -53,6 +53,7 @@ $link-color: $font-color-1 !default;
 
 // Font families
 $font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-serif: serif, georgia !default;
 $font-monospace: "Inconsolata", monospace, courier !default;
 // Apply font families to generic variables
 $font-family-base: $font-sans-serif !default;
@@ -63,8 +64,9 @@ $font-base: 1rem !default;
 $line-height-base: 1 !default;
 $base-line-unit: $font-base*$line-height-base !default;
 
-// This is for Arial/Helvetica
-$cap-height: 0.68 !default;
+$helvetica-cap-height: 0.68 !default
+$serif-cap-height: 0.66 !default
+$cap-height: $helvetica-cap-height !default;
 $font-size-body: $font-base !default;
 
 // Font weights
