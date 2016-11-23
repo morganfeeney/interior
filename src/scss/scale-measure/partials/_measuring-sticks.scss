@@ -32,7 +32,7 @@
       margin-left: 0;
       align-items: flex-end;
       &:before {
-        margin-right: -$measuring-stick-width*1.5;
+        margin-right: -$measuring-stick-width;
       }
       span {
         align-self: flex-end;
@@ -43,7 +43,7 @@
       margin-right: 0;
       align-items: flex-start;
       &:before {
-        margin-left: -$measuring-stick-width*1.5;
+        margin-left: -$measuring-stick-width;
       }
       span {
         align-self: flex-start;
@@ -59,6 +59,17 @@
     top: 0;
     bottom: 0;
     left: calc(50% - #{$measuring-stick-width/2});
+  }
+  &:after {
+    content: "";
+    width: $measuring-stick-after-width;
+    background: $brand-color-light;
+    align-self: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - #{$measuring-stick-after-width/2});
+    z-index: 2
   }
 }
 
