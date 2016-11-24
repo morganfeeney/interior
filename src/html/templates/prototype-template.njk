@@ -64,6 +64,37 @@
 		{% endblock %}
 		{% if development %}
   		<script src="http://localhost:35729/livereload.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script>
+			(function(jQuery) {
+				function gridOverlay(){
+					$('#gridOverlay').remove();
+					$('body').append(
+						'<div class="grid-overlay">'+
+						'</div>'
+					);
+					for (var overlayGridCol = 0; overlayGridCol < 4; overlayGridCol++) {
+						$('.grid-overlay').append(
+							'<div></div>'
+						);
+					}
+				}
+				function overlayToggle(){
+					$('body').on('click', function(e){
+						if (!$('body').hasClass('overlay-active')) {
+							$('body').addClass('overlay-active');
+							gridOverlay();
+						} else if ($('body').hasClass('overlay-active')) {
+							$('body').removeClass('overlay-active');
+							$('.grid-overlay').remove();
+						}
+						e.preventDefault();
+					});
+				}
+				overlayToggle();
+			})(jQuery);
+
+			</script>
 		{% else %}
 		  {# NOWT #}
 		{% endif %}

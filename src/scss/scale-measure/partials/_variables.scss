@@ -52,6 +52,9 @@ $footer-margin: $isaiah-scroll-footer-margin;
 $grid-gutter: $isaiah-scroll-grid-gutter*2;
 $text-block: $isaiah-scroll-text-block;
 
+$column-gap: $grid-gutter/4;
+$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
+
 $wrapper-width-large: $text-block;
 
 // Serif font this time

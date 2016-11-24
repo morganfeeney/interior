@@ -1,0 +1,19 @@
+.grid-overlay {
+  width: $text-block-grid-overlay;
+  padding: 0 $grid-gutter/2;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-flow: row nowrap;
+  > div {
+    background: rgba(0,0,0,0.5);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    @include col(4, $grid-gutter: $column-gap);
+  }
+}
