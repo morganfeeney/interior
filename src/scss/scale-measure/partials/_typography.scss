@@ -8,6 +8,11 @@ html {
 }
 body {
  @include baseline-grid($grid-bg-size: 100vw 1rem);
+ font-feature-settings: 'dlig' 1,'liga' 1,'kern' 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-headings;
 }
 
 h1 {
@@ -43,7 +48,7 @@ p.small {
   margin: 0;
   padding: 0;
   &:not(:first-child) {
-    text-indent: 1.62rem;  
+    text-indent: 1.62rem;
   }
 }
 @media(min-width: $screen-large) {
