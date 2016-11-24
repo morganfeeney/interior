@@ -43,6 +43,9 @@ p.small {
   @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2);
 }
 
+.whopper {
+  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 8.4);
+}
 // Reset multicolumn <p> due to wrapping
 .multicolumn p {
   margin: 0;
