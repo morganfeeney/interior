@@ -1,0 +1,29 @@
+<script src="http://localhost:35729/livereload.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  function gridOverlay(cols){
+    $('#gridOverlay').remove();
+    $('body').append(
+      '<div class="grid-overlay">'+
+      '</div>'
+    );
+    for (var overlayGridCol = 0; overlayGridCol < cols; overlayGridCol++) {
+      $('.grid-overlay').append(
+        '<div></div>'
+      );
+    }
+  }
+  function overlayToggle(cols){
+    $('body').on('click', function(e){
+      if (!$('body').hasClass('overlay-active')) {
+        $('body').addClass('overlay-active');
+        gridOverlay(cols);
+      } else if ($('body').hasClass('overlay-active')) {
+        $('body').removeClass('overlay-active');
+        $('.grid-overlay').remove();
+      }
+      // Helpful if used on an <a> tag.
+      e.preventDefault();
+    });
+  }
+  </script>
