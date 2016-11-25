@@ -7,7 +7,6 @@ html {
   }
 }
 body {
- @include baseline-grid($grid-bg-size: 100vw 1rem);
  font-feature-settings: 'dlig' 1,'liga' 1,'kern' 1;
 }
 

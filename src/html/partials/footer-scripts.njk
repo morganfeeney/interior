@@ -19,6 +19,7 @@
   function overlayToggle(e){
     body.addEventListener('click', function(e) {
       body.classList.toggle('grid-overlay-active');
+      body.classList.toggle('baseline-grid');
       e.preventDefault();
     });
   }

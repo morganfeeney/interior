@@ -1,0 +1,5 @@
+// Set a visual baseline
+
+.baseline-grid {
+  @include baseline-grid();
+}

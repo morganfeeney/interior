@@ -21,10 +21,6 @@ body {
   background: $brand-color-light;
 }
 
-.baseline-grid {
-  @include baseline-grid();
-}
-
 html,
 body,
 figure {
