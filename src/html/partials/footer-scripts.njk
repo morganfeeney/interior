@@ -1,11 +1,14 @@
 <script src="http://localhost:35729/livereload.js"></script>
+{% if cols %}
+  <script>var cols = {{ cols }};</script>
+{% else %}
+  <script>var cols = 0;</script>
+{% endif %}
 <script>
   var body = document.querySelector('body');
   var gridOverLay = document.querySelector('.grid-overlay');
   var grid = document.createElement('div');
   grid.setAttribute('class', 'grid-overlay');
-  var cols = 4;
-
   function gridOverlay(cols){
     body.appendChild(grid);
     for (var i = 0; i < cols; i++) {
@@ -19,7 +22,8 @@
       e.preventDefault();
     });
   }
-
-  overlayToggle();
-  gridOverlay(cols);
+  if (cols >= 1) {
+    overlayToggle();
+    gridOverlay(cols);
+  }
 </script>
