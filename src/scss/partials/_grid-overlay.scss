@@ -1,5 +1,8 @@
 .grid-overlay {
-  width: $text-block-grid-overlay;
+  @media(min-width: $screen-larger) {
+    width: $text-block-grid-overlay;
+  }
+  width: (100vw + $column-gap);
   padding: 0 $grid-gutter/2;
   position: fixed;
   top: 0;
@@ -10,7 +13,7 @@
   transform: translateX(-50%);
   flex-flow: row nowrap;
   > div {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.2);
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
