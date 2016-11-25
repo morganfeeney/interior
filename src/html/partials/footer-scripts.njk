@@ -1,29 +1,25 @@
 <script src="http://localhost:35729/livereload.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
+  var body = document.querySelector('body');
+  var gridOverLay = document.querySelector('.grid-overlay');
+  var grid = document.createElement('div');
+  grid.setAttribute('class', 'grid-overlay');
+  var cols = 4;
+
   function gridOverlay(cols){
-    $('#gridOverlay').remove();
-    $('body').append(
-      '<div class="grid-overlay">'+
-      '</div>'
-    );
-    for (var overlayGridCol = 0; overlayGridCol < cols; overlayGridCol++) {
-      $('.grid-overlay').append(
-        '<div></div>'
-      );
+    body.appendChild(grid);
+    for (var i = 0; i < cols; i++) {
+      var gridChild = document.createElement('div');
+      grid.appendChild(gridChild);
     }
   }
-  function overlayToggle(cols){
-    $('body').on('click', function(e){
-      if (!$('body').hasClass('overlay-active')) {
-        $('body').addClass('overlay-active');
-        gridOverlay(cols);
-      } else if ($('body').hasClass('overlay-active')) {
-        $('body').removeClass('overlay-active');
-        $('.grid-overlay').remove();
-      }
-      // Helpful if used on an <a> tag.
+  function overlayToggle(e){
+    body.addEventListener('click', function(e) {
+      body.classList.toggle('grid-overlay-active');
       e.preventDefault();
     });
   }
-  </script>
+
+  overlayToggle();
+  gridOverlay(cols);
+</script>

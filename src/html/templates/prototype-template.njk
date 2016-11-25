@@ -65,13 +65,6 @@
 		{% if development %}
 			{% block footer_scripts %}
 				{% include "../partials/footer-scripts.njk" %}
-				<script>
-					{% block overlay %}
-						(function($) {
-							overlayToggle(4);
-						})($);
-					{% endblock %}
-				</script>
 			{% endblock %}
 		{% else %}
 		  {# NOWT #}
