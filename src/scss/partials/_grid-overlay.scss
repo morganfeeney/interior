@@ -1,25 +1,40 @@
-.grid-overlay {
-  display: none;
-  @media(min-width: $screen-larger) {
-    width: $text-block-grid-overlay;
-  }
-  width: (100vw + $column-gap);
-  padding: 0 $grid-gutter/2;
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
-  flex-flow: row nowrap;
-  > div {
-    background: rgba(0,0,0,0.2);
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    @include col(4, $grid-gutter: $column-gap);
+// Needs to be a mixin()!!!
+@mixin grid-overlay(
+  $width: 100%,
+  $max-width: $grid-overlay-width,
+  $centred: false,
+  $right: false,
+  $grid-offset: $grid-gutter/2
+) {
+  .grid-overlay {
+    display: none;
+    max-width: $max-width;
+    width: $width;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    padding: $grid-offset;
+    @if $centred == true {
+      left: 50%;
+      transform: translateX(-50%);
+    } @else if $right == true  {
+      right: 0;
+    } @else {
+      left: 0;
+    }
+    flex-flow: row nowrap;
+    > div {
+      background: rgba(0,0,0,0.2);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+      @include col(4, $grid-gutter: $grid-gutter);
+    }
   }
 }
+
+@include grid-overlay();
 
 .grid-overlay-active .grid-overlay {
   display: flex;
