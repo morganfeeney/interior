@@ -14,7 +14,7 @@
     top: 0;
     height: 100vh;
     z-index: 2;
-    padding: $grid-offset;
+    padding: 0 $grid-offset;
     @if $centred == true {
       left: 50%;
       transform: translateX(-50%);
