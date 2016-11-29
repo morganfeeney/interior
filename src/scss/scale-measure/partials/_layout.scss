@@ -2,5 +2,26 @@ section.multicolumn {
   @include baseline($no-text: true,$margin-top: $header-margin, $margin-bottom: $footer-margin);
   column-count: 2;
   column-width: auto;
-  column-gap: $grid-gutter/4;
+  column-gap: $grid-gutter;
+}
+
+.multicolumn-aside {
+  display: flex;
+  flex-flow: row wrap;
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  h5 {
+    @include col(12);
+  }
+  .whopper {
+    @include col(9);
+  }
+  aside {
+    @include col(3);
+  }
+  section {
+    @include col(9);
+  }
 }

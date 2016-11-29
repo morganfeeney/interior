@@ -41,6 +41,12 @@
 					{% block main %}{% endblock %}
 				</div>
 			</main>
+			{% if aside %}
+				<aside class="{{ aside_classes }}">
+					{% block aside %}
+					{% endblock %}
+				</aside>
+			{% endif %}
 			{% if post_page %}
 				{% block posts_nav %}
 					<section id="posts-nav-section" class="container-outer {{ posts_nav_section_classes }}">

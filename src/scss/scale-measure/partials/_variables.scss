@@ -49,13 +49,14 @@ $isaiah-scroll-text-block: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scrol
 
 $header-margin: $isaiah-scroll-header-margin;
 $footer-margin: $isaiah-scroll-footer-margin;
-$grid-gutter: $isaiah-scroll-grid-gutter*2;
-$text-block: $isaiah-scroll-text-block;
 
+$grid-gutter: $grid-gutter*1.25;
 $column-gap: $grid-gutter/4;
-$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
+//$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
 
-$wrapper-width-large: $text-block;
+$wrapper-width-large: 70rem;
+
+$grid-overlay-width: $wrapper-width-large;
 
 // Serif font this time
 $cap-height: $serif-cap-height;
