@@ -34,7 +34,7 @@
   }
 }
 
-@include grid-overlay();
+@include grid-overlay($grid-offset: $container-padding-horizontal);
 
 .grid-overlay-active .grid-overlay {
   display: flex;

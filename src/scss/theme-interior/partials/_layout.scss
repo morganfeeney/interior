@@ -2,15 +2,6 @@
 // Layout
 // -----------------------------
 
-.container {
-   @extend %container;
-   padding: 0 $grid-gutter/2;
-}
-
-.grid {
-  @include grid();
-}
-
 .grid-main {
   justify-content: space-between;
 }

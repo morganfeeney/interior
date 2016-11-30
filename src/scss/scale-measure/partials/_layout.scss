@@ -1,5 +1,5 @@
 section.multicolumn {
-  @include baseline($no-text: true,$margin-top: $header-margin, $margin-bottom: $footer-margin);
+  @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: $footer-margin);
   column-count: 2;
   column-width: auto;
   column-gap: $grid-gutter;
@@ -20,8 +20,32 @@ section.multicolumn {
   }
   aside {
     @include col(3);
+    @include baseline($no-text: true, $margin-top: $header-margin, $above: .3);
   }
   section {
     @include col(9);
+  }
+  footer {
+    @include col(9);
+  }
+}
+
+.multicolumn-aside-re-ordered {
+  h5 {
+    @include col(3);
+    order: 1;
+  }
+  .whopper {
+    order: 2;
+  }
+  aside {
+    order: 3;
+  }
+  section,
+  footer {
+    order: 4;
+  }
+  footer {
+    @include col(9, $offset-left: true);
   }
 }

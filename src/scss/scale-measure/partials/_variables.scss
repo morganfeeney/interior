@@ -54,12 +54,14 @@ $grid-gutter: $grid-gutter*1.25;
 $column-gap: $grid-gutter/4;
 //$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
 
-$wrapper-width-large: 70rem;
+$wrapper-width-large: 76rem;
 
 $grid-overlay-width: $wrapper-width-large;
 
 // Serif font this time
 $cap-height: $serif-cap-height;
-$font-family-base: $font-serif;
+//$font-family-base: $font-serif;
 
 $grid-bg-size: 100vw 1rem;
+
+$container-padding-horizontal: 3rem;

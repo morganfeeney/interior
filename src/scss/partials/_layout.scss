@@ -11,3 +11,12 @@
    display: flex;
    flex-flow: row wrap;
 }
+
+.container {
+   @extend %container;
+   padding: 0 $container-padding-horizontal;
+}
+
+.grid {
+  @include grid();
+}
