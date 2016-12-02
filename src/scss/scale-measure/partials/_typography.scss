@@ -56,16 +56,31 @@ p.small {
   &:not(:first-child) {
     text-indent: 1.62rem;
   }
-  &:first-of-type:first-letter {
-    font-size: 2rem;
-    line-height: .5;
-    font-family: serif;
-    background: $brand-color-1;
-    border-radius: 50%;
-    padding: .5rem 1.35rem;
-    margin-left: -3rem;;
+  // &:first-of-type:first-letter {
+  //   font-size: 2rem;
+  //   line-height: .5;
+  //   font-family: serif;
+  //   background: $brand-color-1;
+  //   border-radius: 50%;
+  //   padding: .5rem 1.35rem;
+  //   margin-left: -3rem;
+  //   @supports(initial-letter:blah){}
+  // }
+  @supports (initial-letter: 2 ) or
+    (-webkit-initial-letter: 2 ) {
+    &:first-of-type::first-letter {
+      color: $brand-color-light;
+      background: $brand-color-1;
+      font-weight: bold;
+      font-family: serif;
+      margin-right: 0.5em;
+      -webkit-initial-letter: 2 2;
+      initial-letter: 2 2;
+      padding: .5rem 1rem
+    }
   }
 }
+
 @media(min-width: $screen-large) {
   .multicolumn {
     text-align: justify;
