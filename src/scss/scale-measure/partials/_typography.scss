@@ -27,7 +27,7 @@ h4 {
   @include baseline($paragon, $line-height: .96, $below: 0);
 }
 h5 {
-  @include baseline($great-primer, $line-height: 1.25, $above: .3, $below: .1);
+  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: .1);
 }
 h6 {
   @include baseline($mittel, $line-height: 1.9, $above: .5);
@@ -43,14 +43,27 @@ p.small {
 }
 
 .whopper {
-  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15.4);
+  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
 }
+.tiddler {
+  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: .1, $margin: 4);
+}
+
 // Reset multicolumn <p> due to wrapping
 .multicolumn p {
   margin: 0;
   padding: 0;
   &:not(:first-child) {
     text-indent: 1.62rem;
+  }
+  &:first-of-type:first-letter {
+    font-size: 2rem;
+    line-height: .5;
+    font-family: serif;
+    background: $brand-color-1;
+    border-radius: 50%;
+    padding: .5rem 1.35rem;
+    margin-left: -3rem;;
   }
 }
 @media(min-width: $screen-large) {

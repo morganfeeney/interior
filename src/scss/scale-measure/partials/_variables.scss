@@ -47,14 +47,14 @@ $isaiah-scroll-footer-margin: $isaiah-scroll-header-margin*1.5;
 $isaiah-scroll-grid-gutter: 100vw/18;
 $isaiah-scroll-text-block: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4)});
 
-$header-margin: $isaiah-scroll-header-margin;
+$header-margin: 2.5rem;
 $footer-margin: $isaiah-scroll-footer-margin;
 
 $grid-gutter: $grid-gutter*1.25;
 $column-gap: $grid-gutter/4;
 //$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
 
-$wrapper-width-large: 76rem;
+$wrapper-width-large: 100%;
 
 $grid-overlay-width: $wrapper-width-large;
 
