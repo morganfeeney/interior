@@ -44,6 +44,7 @@ section.multicolumn {
     flex-flow: column;
     > p {
       order: 2;
+      @include col(6, $margin: false);
     }
   }
   section,
