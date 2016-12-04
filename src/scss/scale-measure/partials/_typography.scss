@@ -7,7 +7,7 @@ html {
   }
 }
 body {
- font-feature-settings: 'dlig' 1,'liga' 1,'kern' 1;
+ font-kerning: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,10 +35,10 @@ h6 {
 p {
   @include baseline($english, $line-height: 2, $above: .5);
 }
-p.large {
+.large {
   @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: 2);
 }
-p.small {
+.small {
   @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2);
 }
 
