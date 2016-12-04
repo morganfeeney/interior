@@ -20,7 +20,7 @@ section.multicolumn {
   }
   aside {
     @include col(6);
-    @include baseline($no-text: true, $margin-top: $header-margin, $above: .3);
+    @include baseline($no-text: true, $margin-top: $header-margin, $above: .35);
   }
   section {
     @include col(6);
@@ -42,9 +42,15 @@ section.multicolumn {
     order: 4;
     display: flex;
     flex-flow: column;
+    > img {
+      align-self: flex-start;
+    }
     > p {
       order: 2;
       @include col(6, $margin: false);
+    }
+    > p + img {
+      @include baseline($no-text: true, $below: .1);
     }
   }
   section,

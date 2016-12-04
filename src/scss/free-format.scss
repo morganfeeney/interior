@@ -21,12 +21,13 @@
 
 // Core partials
 @import "partials/layout";
+@import "partials/image";
+
 
 // Theme partials
 @import "theme-interior/partials/base";
 @import "theme-interior/partials/layout";
 @import "free-format/partials/typography";
-@import "theme-interior/partials/image";
 
 // Theme layouts
 @import "free-format/partials/layout";
