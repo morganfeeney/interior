@@ -43,9 +43,9 @@ p {
 }
 
 .whopper {
-  @include baseline($paragon, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+  @include baseline($paragon, $line-height: 1.23, $above: .6, $below: 1, $margin: 5);
   @media(min-width: $screen-large) {
-    @include baseline($double-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+    @include baseline($double-pica, $line-height: 1.15, $above: 0, $below: 1, $margin: 10);
   }
   @media(min-width: $screen-larger) {
     @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);

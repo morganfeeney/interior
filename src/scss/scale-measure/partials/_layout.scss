@@ -6,7 +6,9 @@
 
 section.multicolumn {
   @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: $footer-margin);
-  column-count: 2;
+  @media(min-width: $screen-small) {
+    column-count: 2;  
+  }
   column-width: auto;
   column-gap: $grid-gutter/1.5;
   @media(min-width: $screen-large) {
@@ -75,21 +77,21 @@ section.multicolumn {
     }
     > img {
       align-self: flex-start;
-      @media(max-width: $screen-large-max) {
+      @include col(12);
+      @media(min-width: $screen-medium) {
         @include col(9);
-        order: -1;
       }
       @media(min-width: $screen-large) and (max-width: $screen-larger-max) {
         @include col(8);
       }
     }
     > p {
+      order: 2;
       @include col(6);
       @media(min-width: $screen-large) {
         @include col(4);
       }
       @media(min-width: $screen-larger) {
-        order: 2;
         @include col(6, $margin: false);
       }
     }
@@ -102,6 +104,6 @@ section.multicolumn {
     order: 4;
   }
   footer {
-    @include col(9);  
+    @include col(9);
   }
 }
