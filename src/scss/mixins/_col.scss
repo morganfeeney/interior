@@ -20,10 +20,7 @@
   } @else {
     width: calc(#{$width} - #{$grid-gutter});
   }
-  @if $margin == false {
-    margin-left: 0;
-    margin-right: 0;
-  }
+  @if $margin == false {}
   @else if $margin == auto {
     margin-left: auto;
     margin-right: auto;
