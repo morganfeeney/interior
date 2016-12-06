@@ -37,6 +37,14 @@
 
 @include grid-overlay($grid-offset: $container-padding-horizontal-small);
 
+@media(max-width: $screen-small) {
+  .grid-overlay > div {
+    &:nth-of-type(odd) {
+      display: none;
+    }
+  }
+}
+
 @media(min-width: $screen-medium) {
   @include grid-overlay($grid-offset: $container-padding-horizontal);
 }
