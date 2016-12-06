@@ -92,6 +92,9 @@ section.multicolumn {
       @media(min-width: $screen-large) and (max-width: $screen-larger-max) {
         @include col(8);
       }
+      @media(min-width: $screen-larger) {
+        @include col(12, $calc: false, $margin: false);
+      }
     }
     > p {
       order: 2;
