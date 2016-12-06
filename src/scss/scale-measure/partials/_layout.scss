@@ -6,13 +6,21 @@
 
 section.multicolumn {
   @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: $footer-margin);
-  @media(min-width: $screen-small) {
-    column-count: 2;  
-  }
   column-width: auto;
   column-gap: $grid-gutter/1.5;
+  @media(min-width: $screen-small) {
+    column-count: 2;
+  }
   @media(min-width: $screen-large) {
     column-gap: $grid-gutter;
+  }
+  img {
+    @media(max-width: $screen-small) {
+      @include col(6, $margin: false, $calc: false);
+      margin-left: $grid-gutter/2;
+      margin-right: -$grid-gutter;
+      float: right;
+    }
   }
 }
 
