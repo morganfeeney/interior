@@ -35,7 +35,11 @@
   }
 }
 
-@include grid-overlay($grid-offset: $container-padding-horizontal);
+@include grid-overlay($grid-offset: $container-padding-horizontal-small);
+
+@media(min-width: $screen-medium) {
+  @include grid-overlay($grid-offset: $container-padding-horizontal);
+}
 
 .grid-overlay-active .grid-overlay {
   display: flex;

@@ -43,7 +43,13 @@ p {
 }
 
 .whopper {
-  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+  @include baseline($paragon, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+  @media(min-width: $screen-large) {
+    @include baseline($double-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+  }
+  @media(min-width: $screen-larger) {
+    @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+  }
 }
 .tiddler {
   @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: .1, $margin: 4);
