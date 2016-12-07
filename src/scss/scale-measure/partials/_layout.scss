@@ -93,7 +93,7 @@ section.multicolumn {
         @include col(8);
       }
       @media(min-width: $screen-larger) {
-        @include col(12, $calc: false, $margin: false);
+        @include col(12, $calc: false, $margin: 0);
       }
     }
     > p {
@@ -103,7 +103,7 @@ section.multicolumn {
         @include col(4);
       }
       @media(min-width: $screen-larger) {
-        @include col(6, $margin: false);
+        @include col(6, $margin: 0);
       }
     }
     > p + img {
