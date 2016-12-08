@@ -52,7 +52,7 @@ p {
   }
 }
 .tiddler {
-  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: .1, $margin: 4);
+  @include baseline($great-primer, $line-height: 1.25, $above: .15, $below: .1, $margin: 4);
 }
 
 // Reset multicolumn <p> due to wrapping
