@@ -13,11 +13,14 @@
   $offset-right: false,
   $offset-left: false,
   $offset: (100% - $width),
-  $offset-calc: calc(#{$offset} + #{$grid-gutter/2})
+  $offset-calc: calc(#{$offset} + #{$grid-gutter/2}),
+  $custom-margin: false,
+  $custom-width: false
 ){
   @if $calc == false {
     width: $width;
-  } @else {
+  }
+  @else {
     width: calc(#{$width} - #{$grid-gutter});
   }
   @if $margin == false {
@@ -37,8 +40,11 @@
   @if $offset-right == true {
     margin-right: $offset-calc;
   }
-  @else if $offset-left == true {
+  @if $offset-left == true {
     margin-left: $offset-calc;
+  }
+  @elseif $custom-margin == true {
+    @content;
   }
   // @else if ($offset-right == true) && ($calc == false) {
   //   margin-right: $offset;
