@@ -98,7 +98,10 @@
     }
     > p {
       order: 2;
-      @include col(6);
+      @include col(12);
+      @media(min-width: $screen-small) {
+        @include col(6);
+      }
       @media(min-width: $screen-large) {
         @include col(4);
       }
