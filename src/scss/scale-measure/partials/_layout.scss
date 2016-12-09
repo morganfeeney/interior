@@ -2,9 +2,12 @@
   @media(max-width: $screen-medium-max) {
     padding: 0 $container-padding-horizontal-small;
   }
+  @media(max-width: $screen-small-max) {
+    padding: 0 $container-padding-horizontal-small/2;
+  }
 }
 
-section.multicolumn {
+.multicolumn {
   @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: $footer-margin);
   column-width: auto;
   column-gap: $grid-gutter;
@@ -13,9 +16,9 @@ section.multicolumn {
   }
   img {
     @media(max-width: $screen-small) {
-      width: calc(50% + #{font-scale(1)});
+      width: calc(50% + #{font-scale(1.25)});
       margin-left: $grid-gutter/2;
-      margin-right: -($grid-gutter/2 + $grid-gutter/2.5);
+      margin-right: -$grid-gutter*.7;
       float: right;
     }
   }
