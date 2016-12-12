@@ -15,6 +15,7 @@
     column-count: 2;
   }
   img {
+    @include baseline($no-text: true, $below: .1);
     @media(max-width: $screen-small) {
       width: calc(50% + #{font-scale(1.25)});
       margin-left: $grid-gutter/2;
