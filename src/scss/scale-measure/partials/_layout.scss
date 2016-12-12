@@ -15,7 +15,10 @@
     column-count: 2;
   }
   img {
-    @include baseline($no-text: true, $below: .1);
+    @include baseline($no-text: true, $margin: .75, $below: .1);
+    @media(min-width: $screen-large) {
+      @include baseline($no-text: true, $below: .5);
+    }
     @media(max-width: $screen-small) {
       width: calc(50% + #{font-scale(1.25)});
       margin-left: $grid-gutter/2;
@@ -100,6 +103,9 @@
     > p {
       order: 2;
       @include col(12);
+      @media(min-width: $screen-smaller) {
+        @include col(9);
+      }
       @media(min-width: $screen-small) {
         @include col(6);
       }
