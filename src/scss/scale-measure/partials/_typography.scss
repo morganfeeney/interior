@@ -41,6 +41,9 @@ p {
 .small {
   @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2);
 }
+aside .small {
+  @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2.5);
+}
 
 .whopper {
   @include baseline($paragon, $line-height: 1.23, $above: .6, $below: 1, $margin: 5);
@@ -49,6 +52,9 @@ p {
   }
   @media(min-width: $screen-larger) {
     @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+  }
+  @media(min-width: $screen-whopper) {
+    @include baseline($double-english, $line-height: 1.19, $above: 0.15, $below: 4, $margin: 15);
   }
 }
 .tiddler {
@@ -75,14 +81,10 @@ p {
   @supports (initial-letter: 2 ) or
     (-webkit-initial-letter: 2 ) {
     &:first-of-type::first-letter {
-      color: $brand-color-light;
-      background: $brand-color-1;
-      font-weight: bold;
-      font-family: serif;
-      margin-right: 0.5em;
-      -webkit-initial-letter: 2 2;
-      initial-letter: 2 2;
-      padding: .5rem 1rem
+      font-family: serif, garamond, times;
+      -webkit-initial-letter: 3 2;
+      initial-letter: 3 2;
+      padding: .25rem;
     }
   }
 }
