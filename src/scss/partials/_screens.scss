@@ -1,11 +1,12 @@
 //** Units
 //
 // Screen widths (min-width)
+$screen-smaller: 400px !default;
 $screen-small: 569px !default;
 $screen-medium: 700px !default;
 $screen-large: 900px !default;
 $screen-larger: 1200px !default;
-$screen-whopper: 1700px !default;
+$screen-whopper: 2000px !default;
 
 // Screen widths max-width
 $screen-small-max: ($screen-small)-1 !default;
