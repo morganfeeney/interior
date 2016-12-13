@@ -3,7 +3,7 @@
     padding: 0 $container-padding-horizontal-small;
   }
   @media(max-width: $screen-small-max) {
-    padding: 0 $container-padding-horizontal-small/2;
+    padding: 0 $container-padding-horizontal-smaller;
   }
 }
 

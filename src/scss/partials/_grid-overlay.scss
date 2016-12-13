@@ -46,7 +46,7 @@
   }
 }
 @media(max-width: $screen-small-max) {
-  @include grid-overlay($grid-offset: $container-padding-horizontal-small*1.25, $grid-gutter: $grid-gutter/2.5);
+  @include grid-overlay($grid-offset: $container-padding-horizontal-smaller, $grid-gutter: $grid-gutter/2.5);
 }
 
 @media(min-width: $screen-medium) {

@@ -45,8 +45,21 @@ aside .small {
   @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2.5);
 }
 
+.tiddler {
+  @include baseline($mittel, $line-height: 1.9, $above: 0.5, $below: 0, $margin: 1);
+  @media(min-width: $screen-small) {
+    @include baseline($great-primer, $line-height: 1.25, $above: .15, $below: .1, $margin: 1);
+  }
+  @media(min-width: $screen-large) {
+    @include baseline($great-primer, $line-height: 1.25, $above: .15, $below: .1, $margin: 4);
+  }
+}
+
 .whopper {
-  @include baseline($paragon, $line-height: 1.23, $above: .6, $below: 1, $margin: 5);
+  @include baseline($great-primer, $line-height: 1.25, $above: 0.25, $below: 1, $margin: 2);
+  @media(min-width: $screen-small) {
+    @include baseline($paragon, $line-height: 1.23, $above: .6, $below: 1, $margin: 5);
+  }
   @media(min-width: $screen-large) {
     @include baseline($double-pica, $line-height: 1.15, $above: 0, $below: 1, $margin: 10);
   }
@@ -57,9 +70,6 @@ aside .small {
     @include baseline($double-english, $line-height: 1.19, $above: 0.2, $below: 4, $margin: 15);
   }
 }
-.tiddler {
-  @include baseline($great-primer, $line-height: 1.25, $above: .15, $below: .1, $margin: 4);
-}
 
 // Reset multicolumn <p> due to wrapping
 .multicolumn p {
@@ -68,16 +78,6 @@ aside .small {
   &:not(:first-child) {
     text-indent: 1.62rem;
   }
-  // &:first-of-type:first-letter {
-  //   font-size: 2rem;
-  //   line-height: .5;
-  //   font-family: serif;
-  //   background: $brand-color-1;
-  //   border-radius: 50%;
-  //   padding: .5rem 1.35rem;
-  //   margin-left: -3rem;
-  //   @supports(initial-letter:blah){}
-  // }
   @supports (initial-letter: 2 ) or
     (-webkit-initial-letter: 2 ) {
     &:first-of-type::first-letter {
