@@ -46,12 +46,6 @@
   @elseif $custom-margin == true {
     @content;
   }
-  // @else if ($offset-right == true) && ($calc == false) {
-  //   margin-right: $offset;
-  // }
-  // @else if ($offset-left == true) && ($calc == false) {
-  //   margin-left: $offset;
-  // }
 }
 
 // For Description lists only at the time of writing
