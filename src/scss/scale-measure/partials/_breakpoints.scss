@@ -1,0 +1,10 @@
+$breakpoints: (
+  smaller: (
+    mq: $screen-smaller,
+    gutter: $grid-gutter/2
+  ),
+  small: (
+    mq: $screen-small,
+    gutter: $grid-gutter
+  )
+)!default;

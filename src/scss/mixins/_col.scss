@@ -15,10 +15,27 @@
   $offset: (100% - $width),
   $offset-calc: calc(#{$offset} + #{$grid-gutter/2}),
   $custom-margin: false,
-  $custom-width: false
+  $custom-width: false,
+  $breakpoint: false
 ){
   @if $calc == false {
     width: $width;
+  }
+  @else if $breakpoint == true {
+
+    @for $i from 1 through length($breakpoints) {
+      $bp: nth($breakpoints, $i);
+      $bp-mq: map-get(nth($bp, 2), mq);
+      $bp-gutter: map-get(nth($bp, 2), gutter);
+
+      @media(min-width: $bp-mq) {
+        /* new shit */
+        width: calc(#{$width} - #{$bp-gutter});
+        margin-left: $bp-gutter/2;
+        margin-right: $bp-gutter/2;
+        /* end new shit */
+      }
+    }
   }
   @else {
     width: calc(#{$width} - #{$grid-gutter});
@@ -33,7 +50,7 @@
   @else if $margin == auto {
     margin-left: auto;
     margin-right: auto;
-  } @else {
+  } @else if $breakpoint == false {
     margin-left: $margin-left;
     margin-right: $margin-right;
   }
