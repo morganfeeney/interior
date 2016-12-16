@@ -1,7 +1,14 @@
-// -----------------------------
-// Mixin — col
-// -----------------------------
+// ----------------------------------------------------------------------------- //
+// Mixin — col()
+// ----------------------------------------------------------------------------- //
+// This is what creates the columns for use with Interior. A plethora of
+// arguments are available to configure them.
+// -----------------------------------------------------------------------------
 
+// break-points() is required, so let's @import it.
+@import "break-points";
+
+// Start the col() mixin
 @mixin col(
   $col,
   $width: column-width($col),
@@ -16,56 +23,51 @@
   $offset-calc: calc(#{$offset} + #{$grid-gutter/2}),
   $custom-margin: false,
   $custom-width: false,
-  $breakpoint: false
+  $break-point: false
 ){
+  // If we omit calc using this argument there will be no gutters.
   @if $calc == false {
     width: $width;
   }
-  @else if $breakpoint == true {
-
-    @for $i from 1 through length($breakpoints) {
-      $bp: nth($breakpoints, $i);
-      $bp-mq: map-get(nth($bp, 2), mq);
-      $bp-gutter: map-get(nth($bp, 2), gutter);
-
-      @media(min-width: $bp-mq) {
-        /* new shit */
-        width: calc(#{$width} - #{$bp-gutter});
-        margin-left: $bp-gutter/2;
-        margin-right: $bp-gutter/2;
-        /* end new shit */
-      }
-    }
+  // Iterate through the break-points sass-map.
+  @else if $break-point == true {
+    @include break-points($break-points, $width);
   }
   @else {
     width: calc(#{$width} - #{$grid-gutter});
   }
-  @if $margin == false {
-    // Look Ma, no margin rules applied.
-  }
+  // Look Ma, no margin rules applied - in this case, rather than outputting
+  // rules set to 0, just don't output the rules.
+  @if $margin == false {}
+  // This is useful for overriding cascading styles.
   @else if $margin == 0 {
     margin-left: 0;
     margin-right: 0;
   }
+  // Otherwise make things centered.
   @else if $margin == auto {
     margin-left: auto;
     margin-right: auto;
-  } @else if $breakpoint == false {
+  // We'll need margins if there are no break-points.
+  } @else if $break-point == false {
     margin-left: $margin-left;
     margin-right: $margin-right;
   }
+  // Offset using a margin based upon column with.
   @if $offset-right == true {
     margin-right: $offset-calc;
   }
   @if $offset-left == true {
     margin-left: $offset-calc;
   }
+  // If all else fails and a bespoke margin is the only thing that can do the
+  // job, create one.
   @elseif $custom-margin == true {
     @content;
   }
 }
 
-// For Description lists only at the time of writing
+// For Description lists - only at the time of writing
 @mixin text-col(
   $col,
   $width: column-width($col),
