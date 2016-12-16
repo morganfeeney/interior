@@ -1,11 +1,10 @@
-// Needs to be a mixin()!!!
 @mixin grid-overlay(
   $width: 100%,
   $max-width: $grid-overlay-width,
   $centred: false,
   $right: false,
-  $grid-offset: $grid-gutter/2,
-  $grid-gutter: $grid-gutter
+  $grid-overlay-container: $grid-gutter/2,
+  $grid-overlay-gutter: $grid-gutter
 ) {
   .grid-overlay {
     display: none;
@@ -15,7 +14,7 @@
     top: 0;
     height: 100vh;
     z-index: 2;
-    padding: 0 $grid-offset;
+    padding: 0 $grid-overlay-container;
     @if $centred == true {
       left: 50%;
       transform: translateX(-50%);
@@ -31,12 +30,12 @@
       padding: 0;
       border-left: 1px solid red;
       border-right: 1px solid red;
-      @include col(4, $grid-gutter: $grid-gutter);
+      @include col(4, $grid-gutter: $grid-overlay-gutter);
     }
   }
 }
 
-@include grid-overlay($grid-offset: $container-padding-horizontal-small);
+@include grid-overlay($grid-overlay-container: $container-padding-horizontal-small);
 
 @media(max-width: $screen-large) {
   .grid-overlay > div {
@@ -46,11 +45,11 @@
   }
 }
 @media(max-width: $screen-small-max) {
-  @include grid-overlay($grid-offset: $container-padding-horizontal-smaller, $grid-gutter: $grid-gutter/2.5);
+  @include grid-overlay($grid-overlay-container: $container-padding-horizontal-smaller, $grid-overlay-gutter: $grid-gutter/2.5);
 }
 
 @media(min-width: $screen-medium) {
-  @include grid-overlay($grid-offset: $container-padding-horizontal);
+  @include grid-overlay($grid-overlay-container: $container-padding-horizontal);
 }
 
 .grid-overlay-active .grid-overlay {

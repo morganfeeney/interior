@@ -36,10 +36,10 @@
     flex-flow: row wrap;
   }
   .tiddler {
-    @include col(12, $breakpoint: true);
+    @include col(12, $break-point: true);
   }
   .whopper {
-    @include col(12, $breakpoint: true);
+    @include col(12, $break-point: true);
     @media(min-width: $screen-large) {
       @include col(10);
     }
@@ -54,19 +54,19 @@
     @include baseline($no-text: true, $margin-top: $header-margin, $above: .35);
   }
   section {
-    @include col(12, $breakpoint: true);
+    @include col(12, $break-point: true);
     @media(min-width: $screen-larger) {
       @include col(6);
     }
   }
   footer {
-    @include col(6, $breakpoint: true);
+    @include col(6, $break-point: true);
   }
 }
 
 .multicolumn-aside-re-ordered {
   .tiddler {
-    @include col(12, $breakpoint: true);
+    @include col(12, $break-point: true);
     @media(min-width: $screen-larger) {
       @include col(3);
     }
@@ -89,7 +89,7 @@
     }
     > img {
       align-self: flex-start;
-      @include col(12, $breakpoint: true);
+      @include col(12, $break-point: true);
       @media(min-width: $screen-medium) {
         @include col(9);
       }
@@ -102,9 +102,9 @@
     }
     > p {
       order: 2;
-      @include col(12, $breakpoint: true);
+      @include col(12, $break-point: true);
       @media(min-width: $screen-smaller) {
-        @include col(9, $breakpoint: true);
+        @include col(9, $break-point: true);
       }
       @media(min-width: $screen-small) {
         @include col(6);
@@ -125,6 +125,6 @@
     order: 4;
   }
   footer {
-    @include col(9, $breakpoint: true);
+    @include col(9, $break-point: true);
   }
 }
