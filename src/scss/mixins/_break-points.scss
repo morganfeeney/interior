@@ -5,7 +5,7 @@
 // for use at a range of break-points.
 // -----------------------------------------------------------------------------
 
-@mixin break-points($break-points, $width) {
+@mixin column-break-points($break-points: $break-points, $width: $width) {
   @for $i from 1 through length($break-points) {
     $bp: nth($break-points, $i);
     $screen: map-get(nth($bp, 2), screen);
@@ -15,6 +15,19 @@
       width: calc(#{$width} - #{$grid-gutter});
       margin-left: $grid-gutter/2;
       margin-right: $grid-gutter/2;
+    }
+  }
+}
+
+@mixin container-break-points($break-points: $break-points) {
+  @for $i from 1 through length($break-points) {
+    $bp: nth($break-points, $i);
+    $screen: map-get(nth($bp, 2), screen);
+    $grid-container-gutter: map-get(nth($bp, 2), grid-container-gutter);
+    // Compile the width with varying gutters at different breakpoints
+    @media(min-width: $screen) {
+      padding-left: $grid-container-gutter/2;
+      padding-right: $grid-container-gutter/2;
     }
   }
 }

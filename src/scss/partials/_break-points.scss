@@ -8,5 +8,10 @@ $break-points: (
     screen: $screen-small,
     grid-gutter: $grid-gutter,
     grid-container-gutter: $container-padding-horizontal-small
+  ),
+  screen-medium: (
+    screen: $screen-medium,
+    grid-gutter: $grid-gutter,
+    grid-container-gutter: $container-padding-horizontal
   )
 )!default;

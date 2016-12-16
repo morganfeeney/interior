@@ -31,10 +31,15 @@
   }
   // Iterate through the break-points sass-map.
   @else if $break-point == true {
-    @include break-points($break-points, $width);
+    width: calc(#{$width} - #{$grid-gutter});
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+    @include column-break-points($break-points, $width);
   }
   @else {
     width: calc(#{$width} - #{$grid-gutter});
+    margin-left: $margin-left;
+    margin-right: $margin-right;
   }
   // Look Ma, no margin rules applied - in this case, rather than outputting
   // rules set to 0, just don't output the rules.
@@ -48,10 +53,6 @@
   @else if $margin == auto {
     margin-left: auto;
     margin-right: auto;
-  // We'll need margins if there are no break-points.
-  } @else if $break-point == false {
-    margin-left: $margin-left;
-    margin-right: $margin-right;
   }
   // Offset using a margin based upon column with.
   @if $offset-right == true {

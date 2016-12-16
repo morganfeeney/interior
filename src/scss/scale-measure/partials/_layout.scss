@@ -1,10 +1,6 @@
 .container {
-  @media(max-width: $screen-medium-max) {
-    padding: 0 $container-padding-horizontal-small;
-  }
-  @media(max-width: $screen-small-max) {
-    padding: 0 $container-padding-horizontal-smaller;
-  }
+  padding: 0 $container-padding-horizontal-smaller;
+  @include container-break-points();
 }
 
 .multicolumn {
@@ -36,10 +32,10 @@
     flex-flow: row wrap;
   }
   .tiddler {
-    @include col(12, $break-point: true);
+    @include col(12);
   }
   .whopper {
-    @include col(12, $break-point: true);
+    @include col(12);
     @media(min-width: $screen-large) {
       @include col(10);
     }
@@ -54,19 +50,19 @@
     @include baseline($no-text: true, $margin-top: $header-margin, $above: .35);
   }
   section {
-    @include col(12, $break-point: true);
+    @include col(12);
     @media(min-width: $screen-larger) {
       @include col(6);
     }
   }
   footer {
-    @include col(6, $break-point: true);
+    @include col(6);
   }
 }
 
 .multicolumn-aside-re-ordered {
   .tiddler {
-    @include col(12, $break-point: true);
+    @include col(12);
     @media(min-width: $screen-larger) {
       @include col(3);
     }
@@ -89,7 +85,7 @@
     }
     > img {
       align-self: flex-start;
-      @include col(12, $break-point: true);
+      @include col(12);
       @media(min-width: $screen-medium) {
         @include col(9);
       }
@@ -102,9 +98,9 @@
     }
     > p {
       order: 2;
-      @include col(12, $break-point: true);
+      @include col(12);
       @media(min-width: $screen-smaller) {
-        @include col(9, $break-point: true);
+        @include col(9);
       }
       @media(min-width: $screen-small) {
         @include col(6);
@@ -125,6 +121,6 @@
     order: 4;
   }
   footer {
-    @include col(9, $break-point: true);
+    @include col(9);
   }
 }

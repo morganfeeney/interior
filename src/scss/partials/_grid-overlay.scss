@@ -1,10 +1,20 @@
+// ----------------------------------------------------------------------------- //
+// Mixin — grid-overlay()
+// ----------------------------------------------------------------------------- //
+// This is what creates the overlay used to align columns for use with Interior.
+// -----------------------------------------------------------------------------
+
+// break-points() is required, so let's @import it.
+@import "break-points";
+
 @mixin grid-overlay(
   $width: 100%,
   $max-width: $grid-overlay-width,
   $centred: false,
   $right: false,
   $grid-overlay-container: $grid-gutter/2,
-  $grid-overlay-gutter: $grid-gutter
+  $grid-overlay-gutter: $grid-gutter,
+  $break-point: true
 ) {
   .grid-overlay {
     display: none;
@@ -14,7 +24,11 @@
     top: 0;
     height: 100vh;
     z-index: 2;
-    padding: 0 $grid-overlay-container;
+    // Default grid overlay container padding.
+    padding-left: $grid-gutter/2.5;
+    padding-right: $grid-gutter/2.5;
+    // Iterate through the break-points sass-map.
+    @include container-break-points($break-points);
     @if $centred == true {
       left: 50%;
       transform: translateX(-50%);
@@ -30,7 +44,7 @@
       padding: 0;
       border-left: 1px solid red;
       border-right: 1px solid red;
-      @include col(4, $grid-gutter: $grid-overlay-gutter);
+      @include col(4, $break-point: true);
     }
   }
 }
@@ -44,13 +58,13 @@
     }
   }
 }
-@media(max-width: $screen-small-max) {
-  @include grid-overlay($grid-overlay-container: $container-padding-horizontal-smaller, $grid-overlay-gutter: $grid-gutter/2.5);
-}
+// @media(max-width: $screen-small-max) {
+//   @include grid-overlay($grid-overlay-container: $container-padding-horizontal-smaller, $grid-overlay-gutter: $grid-gutter/2.5);
+// }
 
-@media(min-width: $screen-medium) {
-  @include grid-overlay($grid-overlay-container: $container-padding-horizontal);
-}
+// @media(min-width: $screen-medium) {
+//   @include grid-overlay($grid-overlay-container: $container-padding-horizontal);
+// }
 
 .grid-overlay-active .grid-overlay {
   display: flex;

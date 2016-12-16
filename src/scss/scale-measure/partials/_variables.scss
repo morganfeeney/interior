@@ -1,14 +1,7 @@
 // -----------------------------
 // variables
 // -----------------------------
-//
-// $light-gray: lightgray;
-// $brand-color-1: $light-gray;
-// $brand-color-light: lighten($brand-color-1, 15);
-// $wrapper-width-large: 100rem;
-// $hero-image-offset-top: 25rem;
-// $link-color: #000;
-//$font-base: $font-base;
+
 
 // Divide modular scales into separate variables.
 $golden-section: map-get($modular-scale, golden-section);
@@ -64,7 +57,7 @@ $cap-height: $serif-cap-height;
 
 $grid-bg-size: 100vw 1rem;
 
-$container-padding-horizontal: 3rem;
+$container-padding-horizontal: 6rem;
 
-$container-padding-horizontal-small: 1rem;
+$container-padding-horizontal-small: $container-padding-horizontal/2;
 $container-padding-horizontal-smaller: $container-padding-horizontal-small/2;
