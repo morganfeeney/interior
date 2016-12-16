@@ -1,0 +1,12 @@
+$break-points: (
+  screen-smaller: (
+    screen: $screen-smaller,
+    grid-gutter: $grid-gutter/2,
+    grid-container-gutter: $container-padding-horizontal-smaller
+  ),
+  screen-small: (
+    screen: $screen-small,
+    grid-gutter: $grid-gutter,
+    grid-container-gutter: $container-padding-horizontal-small
+  )
+)!default;

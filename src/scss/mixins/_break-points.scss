@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------- //
+// Mixin — break-points()
+// ----------------------------------------------------------------------------- //
+// Works with Sass maps, iterates through the map passing in different values
+// for use at a range of break-points.
+// -----------------------------------------------------------------------------
+
+@mixin break-points($break-points, $width) {
+  @for $i from 1 through length($break-points) {
+    $bp: nth($break-points, $i);
+    $screen: map-get(nth($bp, 2), screen);
+    $grid-gutter: map-get(nth($bp, 2), grid-gutter);
+    // Compile the width with varying gutters at different breakpoints
+    @media(min-width: $screen) {
+      width: calc(#{$width} - #{$grid-gutter});
+      margin-left: $grid-gutter/2;
+      margin-right: $grid-gutter/2;
+    }
+  }
+}
