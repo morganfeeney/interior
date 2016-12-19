@@ -5,44 +5,39 @@
 // for use at a range of break-points.
 // -----------------------------------------------------------------------------
 
-@mixin column-break-points($screens: $screens, $width: $width) {
+@mixin grid-gutters($screens: $screens, $width: null, $container: false) {
   @for $i from 1 through length($screens) {
     $bp: nth($screens, $i);
     $screen: map-get(nth($bp, 2), screen);
     $gutter: map-get(nth($bp, 2), grid-gutter);
     $grid-container-gutter: map-get(nth($bp, 2), grid-container-gutter);
-    // Output default width & gutters
-    @if $screen == null {
-      width: calc(#{$width} - #{$gutter});
-      margin-left: $gutter/2;
-      margin-right: $gutter/2;
-    }
-    @else {
-      // Output the width with varying gutters at different breakpoints
-      @media(min-width: $screen) {
+    @if $container == false {
+      // Output default width & gutters
+      @if $screen == null {
         width: calc(#{$width} - #{$gutter});
         margin-left: $gutter/2;
         margin-right: $gutter/2;
       }
-    }
-  }
-}
-
-@mixin container-break-points($screens: $screens, $width: 100%) {
-  @for $i from 1 through length($screens) {
-    $bp: nth($screens, $i);
-    $screen: map-get(nth($bp, 2), screen);
-    $grid-container-gutter: map-get(nth($bp, 2), grid-container-gutter);
-    // Output default width & gutters
-    @if $screen == null {
-      padding-left: $grid-container-gutter/2;
-      padding-right: $grid-container-gutter/2;
-    }
-    @else {
-      // Output the width with varying gutters at different breakpoints
-      @media(min-width: $screen) {
+      @else {
+        // Output the width with varying gutters at different breakpoints
+        @media(min-width: $screen) {
+          width: calc(#{$width} - #{$gutter});
+          margin-left: $gutter/2;
+          margin-right: $gutter/2;
+        }
+      }
+    } @else {
+      // Output default width & gutters
+      @if $screen == null {
         padding-left: $grid-container-gutter/2;
         padding-right: $grid-container-gutter/2;
+      }
+      @else {
+        // Output the width with varying gutters at different breakpoints
+        @media(min-width: $screen) {
+          padding-left: $grid-container-gutter/2;
+          padding-right: $grid-container-gutter/2;
+        }
       }
     }
   }
