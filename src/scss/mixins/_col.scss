@@ -5,7 +5,7 @@
 // arguments are available to configure them.
 // -----------------------------------------------------------------------------
 
-// break-points() is required, so let's @import it.
+// The col() mixin depends upon another...
 @import "break-points";
 
 // Start the col() mixin
@@ -23,7 +23,7 @@
   $offset-calc: calc(#{$offset} + #{$grid-gutter/2}),
   $custom-margin: false,
   $custom-width: false,
-  $break-point: false
+  $break-point: true
 ){
   // If we omit calc using this argument there will be no gutters.
   @if $calc == false {
@@ -31,9 +31,6 @@
   }
   // Iterate through the break-points sass-map.
   @else if $break-point == true {
-    width: calc(#{$width} - #{$grid-gutter});
-    margin-left: $margin-left;
-    margin-right: $margin-right;
     @include column-break-points($screens, $width);
   }
   @else {
