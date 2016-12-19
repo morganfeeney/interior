@@ -1,6 +1,6 @@
-// -----------------------------
+// -----------------------------------------------------------------------------
 // Scale & Measure — Main stylesheet
-// -----------------------------
+// -----------------------------------------------------------------------------
 
 // Functions
 @import "functions/units";
@@ -23,7 +23,7 @@
 
 // Core partials
 @import "partials/layout";
-@import "partials/grid-overlay";
+@import "mixins/grid-overlay";
 @import "partials/baseline-grid";
 @import "partials/image";
 
