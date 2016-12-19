@@ -125,14 +125,14 @@ $screen-whopper-max: ($screen-whopper)-1 !default;
 
 // Sass map for screens
 $screens: (
-  // screen-default: (
-  //   screen: null,
-  //   grid-gutter: $grid-gutter/2,
-  //   grid-container-gutter: $container-padding-horizontal-smaller
-  // ),
+  screen-default: (
+    screen: null,
+    grid-gutter: $grid-gutter/2,
+    grid-container-gutter: $grid-gutter/2
+  ),
   screen-smaller: (
     screen: $screen-smaller,
-    grid-gutter: $grid-gutter,
+    grid-gutter: $container-padding-horizontal-smaller,
     grid-container-gutter: $container-padding-horizontal-smaller
   ),
   screen-small: (

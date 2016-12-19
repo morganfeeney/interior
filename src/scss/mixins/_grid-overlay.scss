@@ -22,10 +22,10 @@
     height: 100vh;
     z-index: 2;
     // Default grid overlay container padding.
-    padding-left: $grid-gutter/2.5;
-    padding-right: $grid-gutter/2.5;
+    padding-left: $grid-overlay-gutter/2;
+    padding-right: $grid-overlay-gutter/2;
     // Iterate through the break-points sass-map.
-    @include container-break-points();
+    @include container-break-points($screens, $width);
     @if $centred == true {
       left: 50%;
       transform: translateX(-50%);

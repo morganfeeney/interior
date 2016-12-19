@@ -1,5 +1,4 @@
 .container {
-  padding: 0 $container-padding-horizontal-smaller;
   @include container-break-points();
 }
 
