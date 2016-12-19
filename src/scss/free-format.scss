@@ -9,8 +9,7 @@
 @import "functions/vertical-rhythm";
 
 // Variables
-@import "partials/screens";
-@import "theme-interior/partials/variables";
+@import "partials/variables";
 
 // Mixins
 @import "mixins/baseline";
@@ -32,5 +31,3 @@
 
 // Theme layouts
 @import "free-format/partials/layout";
-
-// Custom web fonts

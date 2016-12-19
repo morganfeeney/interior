@@ -7,11 +7,9 @@
 @import "functions/vertical-rhythm";
 
 // Variables
-@import "partials/screens";
-@import "theme-interior/partials/variables";
 @import "scale-measure/partials/modular-scale";
 @import "scale-measure/partials/variables";
-@import "partials/break-points";
+@import "partials/variables";
 
 // Mixins
 @import "mixins/baseline";

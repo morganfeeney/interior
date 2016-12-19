@@ -34,7 +34,7 @@
     width: calc(#{$width} - #{$grid-gutter});
     margin-left: $margin-left;
     margin-right: $margin-right;
-    @include column-break-points($break-points, $width);
+    @include column-break-points($screens, $width);
   }
   @else {
     width: calc(#{$width} - #{$grid-gutter});

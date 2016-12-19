@@ -1,7 +1,9 @@
-// -----------------------------
-// variables
-// -----------------------------
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
 
+$font-base: 1rem !default;
+$serif-cap-height: 0.66 !default
 
 // Divide modular scales into separate variables.
 $golden-section: map-get($modular-scale, golden-section);
@@ -43,7 +45,7 @@ $isaiah-scroll-text-block: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scrol
 $header-margin: 2.5rem;
 $footer-margin: $isaiah-scroll-footer-margin;
 
-$grid-gutter: $grid-gutter*1.25;
+$grid-gutter: font-scale(2.5);
 $column-gap: $grid-gutter/4;
 //$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
 
@@ -58,6 +60,3 @@ $cap-height: $serif-cap-height;
 $grid-bg-size: 100vw 1rem;
 
 $container-padding-horizontal: 6rem;
-
-$container-padding-horizontal-small: $container-padding-horizontal/2;
-$container-padding-horizontal-smaller: $container-padding-horizontal-small/2;

@@ -5,7 +5,7 @@
 // for use at a range of break-points.
 // -----------------------------------------------------------------------------
 
-@mixin column-break-points($break-points: $break-points, $width: $width) {
+@mixin column-break-points($break-points: $screens, $width: $width) {
   @for $i from 1 through length($break-points) {
     $bp: nth($break-points, $i);
     $screen: map-get(nth($bp, 2), screen);
@@ -19,7 +19,7 @@
   }
 }
 
-@mixin container-break-points($break-points: $break-points) {
+@mixin container-break-points($break-points: $screens) {
   @for $i from 1 through length($break-points) {
     $bp: nth($break-points, $i);
     $screen: map-get(nth($bp, 2), screen);

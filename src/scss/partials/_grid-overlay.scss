@@ -28,7 +28,7 @@
     padding-left: $grid-gutter/2.5;
     padding-right: $grid-gutter/2.5;
     // Iterate through the break-points sass-map.
-    @include container-break-points($break-points);
+    @include container-break-points();
     @if $centred == true {
       left: 50%;
       transform: translateX(-50%);
@@ -49,7 +49,7 @@
   }
 }
 
-@include grid-overlay($grid-overlay-container: $container-padding-horizontal-small);
+@include grid-overlay();
 
 @media(max-width: $screen-large) {
   .grid-overlay > div {
