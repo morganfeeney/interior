@@ -2,6 +2,10 @@
 // Layout
 // -----------------------------------------------------------------------------
 
+.container {
+  padding: 0 $container-padding-horizontal;
+}
+
 .grid-main {
   justify-content: space-between;
 }
@@ -43,21 +47,21 @@
 //
 // 1 x columns, then 2 x columns on medium screens
 .cols-2 > div {
-  @include col(12);
+  @include columns(12);
   @media(min-width: $screen-medium) {
-    @include col(6);
+    @include columns(6);
   }
 }
 
 .layout-1 > div {
-  @include col(12);
+  @include columns(12);
   @media(min-width: $screen-medium) {
-    @include col(6);
+    @include columns(6);
   }
 }
 
 .cols-3 > div {
-  @include col(4);
+  @include columns(4);
 }
 
 .column-count-experiment {

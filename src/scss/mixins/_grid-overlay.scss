@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------------
 
 @mixin grid-overlay(
-  $width: 100%,
+  $width: $grid-overlay-width,
   $max-width: $grid-overlay-width,
   $centred: false,
   $right: false,
@@ -21,11 +21,8 @@
     top: 0;
     height: 100vh;
     z-index: 2;
-    // Default grid overlay container padding.
-    padding-left: $grid-overlay-gutter/2;
-    padding-right: $grid-overlay-gutter/2;
     // Iterate through the break-points sass-map.
-    @include container-break-points($screens, $width);
+    @include grid-gutters($container: true);
     @if $centred == true {
       left: 50%;
       transform: translateX(-50%);
@@ -41,7 +38,7 @@
       padding: 0;
       border-left: 1px solid red;
       border-right: 1px solid red;
-      @include col(4, $break-point: true);
+      @include columns(4, $screens: true);
     }
   }
 }

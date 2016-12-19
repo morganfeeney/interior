@@ -1,17 +1,17 @@
 // -----------------------------------------------------------------------------
-// Mixin — col()
+// Mixin — columns()
 // -----------------------------------------------------------------------------
 // This is what creates the columns for use with Interior. A plethora of
 // arguments are available to configure them.
 // -----------------------------------------------------------------------------
 
-// The col() mixin depends upon another...
+// The columns() mixin depends upon another...
 @import "break-points";
 
-// Start the col() mixin
-@mixin col(
-  $col,
-  $width: column-width($col),
+// Start the columns() mixin
+@mixin columns(
+  $columns,
+  $column-width: column-width($columns),
   $grid-gutter: $grid-gutter,
   $margin-left: $grid-gutter/2,
   $margin-right: $grid-gutter/2,
@@ -19,22 +19,22 @@
   $calc: true,
   $offset-right: false,
   $offset-left: false,
-  $offset: (100% - $width),
+  $offset: (100% - $column-width),
   $offset-calc: calc(#{$offset} + #{$grid-gutter/2}),
   $custom-margin: false,
   $custom-width: false,
-  $break-point: true
+  $screens: false
 ){
   // If we omit calc using this argument there will be no gutters.
   @if $calc == false {
-    width: $width;
+    width: $column-width;
   }
   // Iterate through the break-points sass-map.
-  @else if $break-point == true {
-    @include column-break-points($screens, $width);
+  @else if $screens == true {
+    @include grid-gutters($width: $column-width);
   }
   @else {
-    width: calc(#{$width} - #{$grid-gutter});
+    width: calc(#{$column-width} - #{$grid-gutter});
     margin-left: $margin-left;
     margin-right: $margin-right;
   }
@@ -66,14 +66,14 @@
 }
 
 // For Description lists - only at the time of writing
-@mixin text-col(
+@mixin text-columns(
   $col,
-  $width: column-width($col),
+  $column-width: column-width($columns),
   $min: false
 ){
   @if $min == true {
-    min-width: #{$width};
+    min-width: #{$column-width};
   } @else {
-    width: #{$width};
+    width: #{$column-width};
   }
 }

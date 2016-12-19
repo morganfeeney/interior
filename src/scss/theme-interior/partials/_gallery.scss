@@ -8,10 +8,10 @@
   margin-bottom: $vertical-space;
 }
 .gallery-item {
-  @include col(4);
+  @include columns(4);
   margin-bottom: $grid-gutter;
   @media(min-width: $screen-medium) {
-    @include col(3);
+    @include columns(3);
   }
   img {
     @extend %fluid-img;
