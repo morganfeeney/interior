@@ -3,5 +3,9 @@
 // -----------------------------------------------------------------------------
 
 @function column-width($col) {
-  @return 100% / $columns * $col;
+  @if $col == null or false {
+    @return false;
+  }
+  @return (100% / $columns * $col);
+  @warn "blah" $col;
 }

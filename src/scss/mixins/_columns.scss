@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// Mixin — columns
+// -----------------------------------------------------------------------------
+// These mixins create the columns for use with Interior. A plethora of
+// arguments are available to configure them.
+// -----------------------------------------------------------------------------
+
+// column-generator() - allows bespoke, individual columns to be created where needed.
+// As many possibilites as I can currently imagine have been catered for.
+
+@mixin column-generator($margin: null, $padding: null, $columns: null, $calc: null, $gutter: null, $breakpoint: null, $margin-left: $grid-gutter/2, $margin-right: $grid-gutter/2, $offset-right: false, $offset-left: false, $offset: null, $offset-calc: calc(#{(column-width($offset))} + #{$gutter/2}), $custom-margin: false, $custom-width: false) {
+  // Margin config
+  @if $margin == true {
+    @if $offset-right == true {
+      margin-right: $offset-calc;
+      margin-left: $gutter/2;
+    }
+    @else if $offset-left == true {
+      margin-left: $offset-calc;
+      margin-right: $gutter/2;
+    }
+    @else {
+      margin-left: $gutter/2;
+      margin-right: $gutter/2;
+    }
+  }
+  @else if $margin == 0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @else if $margin == auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @else if $margin == null {}
+
+  // Padding config
+  @if $padding == true {
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+  }
+  @else if $padding == 0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @else if $padding == null {}
+
+  // Column width config
+  @if $columns == null {}
+  @else if $calc == false {
+    width: column-width($columns);
+  }
+  @else {
+    width: calc(#{column-width($columns)} - #{$gutter});
+  }
+}
+
+// auto-columns() - works by allowing a map to be passed in. The map stores all
+// of the data needed to generate a range of columns & gutters with or without
+// media queries. The variety comes from maps. It's intended for batches of
+// styles that can be shared, or just for convenience.
+
+@mixin auto-columns($map, $container: false){
+  @each $t in $test {
+    // Scoped variables for use with @each.
+    $gutter: map-get($t, gutter);
+    $container-gutter: map-get($t, container-gutter);
+    $breakpoint: map-get($t, breakpoint);
+    $columns: map-get($t, columns);
+    $container-columns: map-get($t, container-columns);
+    /* Check if its a container */
+    @if $container == false {
+      @if $breakpoint == false {
+        @include column-generator($gutter: $gutter, $columns: $columns,
+        $calc: true, $margin: true)
+      }
+      @else {
+        @media(min-width: $breakpoint) {
+          @include column-generator($gutter: $gutter, $columns: $columns,
+          $calc: true, $margin: true)
+        }
+      }
+    }
+    @else {
+      @if $breakpoint == false {
+        @include column-generator($gutter: $container-gutter, $columns: $container-columns, $calc: false, $margin: false, $padding: true)
+      }
+      @else {
+        @media(min-width: $breakpoint) {
+          @include column-generator($gutter: $container-gutter, $columns: $container-columns, $calc: false, $margin: false, $padding: true)
+        }
+      }
+    }
+  }
+}
+
+// column() - nests columns in media queries where required. All of the config
+// for each column comes from column-generator();
+@mixin column($columns: null, $gutter: $grid-gutter, $breakpoint: false, $calc: true, $margin: true, $padding: false, $offset-left: false, $offset-right: false, $offset: null) {
+  @if $breakpoint == false {
+    @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
+  }
+  @else if $breakpoint {
+    @media(min-width: $breakpoint) {
+      @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
+    }
+  }
+}
+
+// For Description lists - only at the time of writing
+@mixin text-columns($col, $column-width: column-width($columns), $min: false){
+  @if $min == true {min-width: #{$column-width};
+  }
+  @else {
+    width: #{$column-width};
+  }
+}

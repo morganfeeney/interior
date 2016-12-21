@@ -125,29 +125,48 @@ $screen-large-max: ($screen-large)-1 !default;
 $screen-larger-max: ($screen-larger)-1 !default;
 $screen-whopper-max: ($screen-whopper)-1 !default;
 
-// Sass map for screens
+$gutters: (
+  smaller: $grid-gutter/2,
+  small: $container-padding-horizontal-smaller,
+  medium: $grid-gutter,
+  large: $grid-gutter
+);
+
 $screens: (
-  screen-default: (
-    screen: null,
-    grid-gutter: $grid-gutter/2,
-    grid-container-gutter: $grid-gutter/2
+  smaller: $screen-smaller,
+  small: $screen-small,
+  medium: $screen-medium,
+  large: $screen-large
+)
+
+$breakpoints: (
+  smaller: (
+    gutter: map-get($gutters, smaller),
+    container-gutter: $grid-gutter/2,
+    breakpoint: false,
+    width: null
   ),
-  screen-smaller: (
-    screen: $screen-smaller,
-    grid-gutter: $container-padding-horizontal-smaller,
-    grid-container-gutter: $container-padding-horizontal-smaller
+  small: (
+    gutter: map-get($gutters, small),
+    container-gutter: $container-padding-horizontal-smaller,
+    breakpoint: map-get($screens, small),
+    width: null
   ),
-  screen-small: (
-    screen: $screen-small,
-    grid-gutter: $grid-gutter,
-    grid-container-gutter: $container-padding-horizontal-small
+  medium: (
+    gutter: map-get($gutters, medium),
+    container-gutter: $container-padding-horizontal-small,
+    breakpoint: map-get($screens, medium),
+    width: null
   ),
-  screen-medium: (
-    screen: $screen-medium,
-    grid-gutter: $grid-gutter,
-    grid-container-gutter: $container-padding-horizontal
+  large: (
+    gutter: map-get($gutters, large),
+    container-gutter: $container-padding-horizontal,
+    breakpoint: map-get($screens, large),
+    width: null
   )
 )!default;
+
+$breakpoint-values: map-values($breakpoints);
 
 //** Wrappers
 $wrapper-width-large: $screen-larger !default;
