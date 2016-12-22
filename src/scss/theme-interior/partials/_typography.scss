@@ -179,13 +179,13 @@ pre:before {
   align-content: flex-start;
   @include columns(12);
   dt {
-    @include text-columns(4, $min: true);
+    @include dl-columns(4, $min: true);
     font-weight: bold;
     margin-right: auto;
     padding-right: 1rem;
   }
   dd {
-    @include text-columns(8);
+    @include dl-columns(8);
   }
 }
 

@@ -66,7 +66,7 @@
 }
 
 // For Description lists - only at the time of writing
-@mixin text-columns(
+@mixin dl-columns(
   $col,
   $column-width: column-width($columns),
   $min: false

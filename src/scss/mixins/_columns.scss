@@ -121,8 +121,8 @@
   }
 }
 
-// For Description lists - only at the time of writing
-@mixin text-columns($col, $column-width: column-width($columns), $min: false) {
+// For Description lists only!
+@mixin dl-columns($col, $column-width: column-width($columns), $min: false) {
   @if $min == true {
     min-width: #{$column-width};
   }
