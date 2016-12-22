@@ -52,13 +52,6 @@
     }
   }
 }
-// @media(max-width: $screen-small-max) {
-//   @include grid-overlay($grid-overlay-container: $container-padding-horizontal-smaller, $grid-overlay-gutter: $grid-gutter/2.5);
-// }
-
-// @media(min-width: $screen-medium) {
-//   @include grid-overlay($grid-overlay-container: $container-padding-horizontal);
-// }
 
 .grid-overlay-active .grid-overlay {
   display: flex;

@@ -101,12 +101,12 @@ $m: $horizontal-space !default;
 $grid-gutter: $horizontal-space !default;
 
 // Container gutters
-$container-padding-horizontal: $grid-gutter/2 !default;
+$container-gutter: $grid-gutter/2 !default;
 
-// $container-padding-horizontal: 6rem;
+// $container-gutter: 6rem;
 
-$container-padding-horizontal-small: $container-padding-horizontal/2 !default;
-$container-padding-horizontal-smaller: $container-padding-horizontal-small/2 !default;
+$container-gutter-small: $container-gutter/2 !default;
+$container-gutter-smaller: $container-gutter-small/2 !default;
 
 //** Screens
 //
@@ -127,7 +127,7 @@ $screen-whopper-max: ($screen-whopper)-1 !default;
 
 // Gutter widths
 $gutter-smaller: $grid-gutter/2;
-$gutter-small: $container-padding-horizontal-smaller;
+$gutter-small: $grid-gutter/2;
 $gutter-medium: $grid-gutter;
 $gutter-large: $grid-gutter;
 
@@ -140,19 +140,19 @@ $breakpoints-map: (
   ),
   small: (
     gutter: $gutter-small,
-    container-gutter: $container-padding-horizontal-smaller,
+    container-gutter: $container-gutter-smaller,
     breakpoint: $screen-small,
     columns: null
   ),
   medium: (
     gutter: $gutter-medium,
-    container-gutter: $container-padding-horizontal-small,
+    container-gutter: $container-gutter-small,
     breakpoint: $screen-medium,
     columns: null
   ),
   large: (
     gutter: $gutter-large,
-    container-gutter: $container-padding-horizontal,
+    container-gutter: $container-gutter,
     breakpoint: $screen-large,
     columns: null
   )
@@ -161,25 +161,25 @@ $breakpoints-map: (
 $overlay-breakpoints-map: (
   smaller: (
     gutter: $gutter-smaller,
-    container-gutter: $grid-gutter/2,
+    container-gutter: $container-gutter-smaller,
     breakpoint: false,
     columns: 4
   ),
   small: (
     gutter: $gutter-small,
-    container-gutter: $container-padding-horizontal-smaller,
+    container-gutter: $container-gutter-smaller,
     breakpoint: $screen-small,
     columns: 4
   ),
   medium: (
     gutter: $gutter-medium,
-    container-gutter: $container-padding-horizontal-small,
+    container-gutter: $gutter-medium,
     breakpoint: $screen-medium,
     columns: 4
   ),
   large: (
     gutter: $gutter-large,
-    container-gutter: $container-padding-horizontal,
+    container-gutter: $container-gutter,
     breakpoint: $screen-large,
     columns: 4
   )
