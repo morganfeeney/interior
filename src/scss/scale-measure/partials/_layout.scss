@@ -1,5 +1,5 @@
 .container {
-  @include grid-gutters($container: true);
+  @include auto-columns($map: $breakpoints, $container: true);
 }
 
 .multicolumn {
@@ -31,40 +31,32 @@
     flex-flow: row wrap;
   }
   .tiddler {
-    @include columns(12);
+    @include column(12, $gutter: $gutter-smaller);
+    @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+    @include column(3, $breakpoint: $screen-larger);
   }
   .whopper {
-    @include columns(12, $screens: true);
-    @media(min-width: $screen-large) {
-      @include columns(10);
-    }
-    @media(min-width: $screen-larger) {
-      @include columns(9);
-    }
+    @include column(12, $gutter: $gutter-smaller);
+    @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+    @include column(9, $breakpoint: $screen-larger);
   }
   aside {
-    @media(min-width: $screen-larger) {
-      @include columns(6);
-    }
+    @include column(6, $breakpoint: $screen-larger);
     @include baseline($no-text: true, $margin-top: $header-margin, $above: .35);
   }
   section {
-    @include columns(12);
-    @media(min-width: $screen-larger) {
-      @include columns(6);
-    }
+    @include column(12, $gutter: $gutter-smaller);
+    @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+    @include column(6, $breakpoint: $screen-larger);
   }
   footer {
-    @include columns(6);
+    @include column(6);
+    @include column(6, $breakpoint: $screen-medium, $gutter: $gutter-medium);
   }
 }
 
 .multicolumn-aside-re-ordered {
   .tiddler {
-    @include columns(12);
-    @media(min-width: $screen-larger) {
-      @include columns(3);
-    }
     order: 1;
   }
   .whopper {
@@ -78,38 +70,24 @@
       align-content: flex-start;
     }
     flex-flow: column;
-    @media(min-width: $screen-larger) {
-      order: 4;
-      @include columns(6);
-    }
+      @include column(6, $breakpoint: $screen-larger) {
+        order: 4;
+      };
     > img {
       align-self: flex-start;
-      @include columns(12, $screens: true);
-      @media(min-width: $screen-medium) {
-        @include columns(9);
-      }
-      @media(min-width: $screen-large) and (max-width: $screen-larger-max) {
-        @include columns(8);
-      }
-      @media(min-width: $screen-larger) {
-        @include columns(12, $calc: false, $margin: 0);
-      }
+      @include column(12, $gutter: $gutter-smaller);
+      @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+      @include column(8, $breakpoint: $screen-large, $margin: null);
+      @include column(12, $breakpoint:$screen-larger, $margin: 0, $calc: false);
     }
     > p {
       order: 2;
-      @include columns(12, $screens: true);
-      @media(min-width: $screen-smaller) {
-        @include columns(9, $screens: true);
-      }
-      @media(min-width: $screen-small) {
-        @include columns(6);
-      }
-      @media(min-width: $screen-large) {
-        @include columns(4);
-      }
-      @media(min-width: $screen-larger) {
-        @include columns(6, $margin: 0);
-      }
+      @include column(12, $gutter: $gutter-smaller);
+      @include column(9, $breakpoint: $screen-smaller, $gutter: $gutter-smaller, $margin: null);
+      @include column(6, $breakpoint: $screen-small, $gutter: $gutter-smaller, $margin: null);
+      @include column(6, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+      @include column(4, $breakpoint: $screen-large);
+      @include column(6, $breakpoint: $screen-larger, $margin: 0);
     }
     > p + img {
       @include baseline($no-text: true, $below: .1);
@@ -120,6 +98,7 @@
     order: 4;
   }
   footer {
-    @include columns(9);
+    @include column(9, $gutter: $gutter-smaller);
+    @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
   }
 }
