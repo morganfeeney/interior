@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
-// Function — Unit
+// Function — Units
 // -----------------------------------------------------------------------------
+
+// column-width() - Generates column widths based on a bit of mathematics.
 
 @function column-width($col) {
   @if $col == null or false {
