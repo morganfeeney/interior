@@ -2,7 +2,7 @@
 // Variables
 // -----------------------------------------------------------------------------
 
-//$width: null !default;
+//$columns: null !default;
 
 //** Columns
 //
@@ -125,48 +125,68 @@ $screen-large-max: ($screen-large)-1 !default;
 $screen-larger-max: ($screen-larger)-1 !default;
 $screen-whopper-max: ($screen-whopper)-1 !default;
 
-$gutters: (
-  smaller: $grid-gutter/2,
-  small: $container-padding-horizontal-smaller,
-  medium: $grid-gutter,
-  large: $grid-gutter
-);
+// Gutter widths
+$gutter-smaller: $grid-gutter/2;
+$gutter-small: $container-padding-horizontal-smaller;
+$gutter-medium: $grid-gutter;
+$gutter-large: $grid-gutter;
 
-$screens: (
-  smaller: $screen-smaller,
-  small: $screen-small,
-  medium: $screen-medium,
-  large: $screen-large
-)
-
-$breakpoints: (
+$breakpoints-map: (
   smaller: (
-    gutter: map-get($gutters, smaller),
+    gutter: $gutter-smaller,
     container-gutter: $grid-gutter/2,
     breakpoint: false,
-    width: null
+    columns: null
   ),
   small: (
-    gutter: map-get($gutters, small),
+    gutter: $gutter-small,
     container-gutter: $container-padding-horizontal-smaller,
-    breakpoint: map-get($screens, small),
-    width: null
+    breakpoint: $screen-small,
+    columns: null
   ),
   medium: (
-    gutter: map-get($gutters, medium),
+    gutter: $gutter-medium,
     container-gutter: $container-padding-horizontal-small,
-    breakpoint: map-get($screens, medium),
-    width: null
+    breakpoint: $screen-medium,
+    columns: null
   ),
   large: (
-    gutter: map-get($gutters, large),
+    gutter: $gutter-large,
     container-gutter: $container-padding-horizontal,
-    breakpoint: map-get($screens, large),
-    width: null
+    breakpoint: $screen-large,
+    columns: null
   )
 )!default;
 
-$breakpoint-values: map-values($breakpoints);
+$overlay-breakpoints-map: (
+  smaller: (
+    gutter: $gutter-smaller,
+    container-gutter: $grid-gutter/2,
+    breakpoint: false,
+    columns: 4
+  ),
+  small: (
+    gutter: $gutter-small,
+    container-gutter: $container-padding-horizontal-smaller,
+    breakpoint: $screen-small,
+    columns: 4
+  ),
+  medium: (
+    gutter: $gutter-medium,
+    container-gutter: $container-padding-horizontal-small,
+    breakpoint: $screen-medium,
+    columns: 4
+  ),
+  large: (
+    gutter: $gutter-large,
+    container-gutter: $container-padding-horizontal,
+    breakpoint: $screen-large,
+    columns: 4
+  )
+)!default;
+
+$breakpoints: map-values($breakpoints-map);
+$overlay-breakpoints: map-values($overlay-breakpoints-map);
 
 //** Wrappers
 $wrapper-width-large: $screen-larger !default;
