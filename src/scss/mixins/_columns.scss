@@ -9,8 +9,9 @@
 // As many possibilites as I can currently imagine have been catered for.
 
 @mixin column-generator($margin: null, $padding: null, $columns: null, $calc: null, $gutter: null, $breakpoint: null, $margin-left: $grid-gutter/2, $margin-right: $grid-gutter/2, $offset-right: false, $offset-left: false, $offset: null, $offset-calc: calc(#{(column-width($offset))} + #{$gutter/2}), $custom-margin: false, $custom-width: false) {
-  // Margin config
+  // See if margin is required.
   @if $margin == true {
+    // See if an offset is also required...
     @if $offset-right == true {
       margin-right: $offset-calc;
       margin-left: $gutter/2;
@@ -19,37 +20,46 @@
       margin-left: $offset-calc;
       margin-right: $gutter/2;
     }
+    // ...if not then use the default margin-left and margin-right.
     @else {
       margin-left: $gutter/2;
       margin-right: $gutter/2;
     }
   }
+  // If margin == 0 then output a 0 value.
   @else if $margin == 0 {
     margin-left: 0;
     margin-right: 0;
   }
+  // If auto is passed in as a value then set the value to auto.
   @else if $margin == auto {
     margin-left: auto;
     margin-right: auto;
   }
+  // Otherwise no margin rules should be output whatsoever.
   @else if $margin == null {}
 
-  // Padding config
+  // See if padding is required.
   @if $padding == true {
+    // If so set the default padding based upon the gutter variable value.
     padding-left: $gutter/2;
     padding-right: $gutter/2;
   }
+  // If padding == 0 then output a 0 value.
   @else if $padding == 0 {
     padding-left: 0;
     padding-right: 0;
   }
+  // Otherwise no padding rules should be output whatsoever.
   @else if $padding == null {}
 
-  // Column width config
+  // See if a column width has not been passed in. If not then output nothing.
   @if $columns == null {}
+  // Otherwise if $clac is false create a column width without calc().
   @else if $calc == false {
     width: column-width($columns);
   }
+  // Otherwise create a column width with calc() to subtract the gutter width.
   @else {
     width: calc(#{column-width($columns)} - #{$gutter});
   }
@@ -61,30 +71,31 @@
 // styles that can be shared, or just for convenience.
 
 @mixin auto-columns($map, $container: false){
-  @each $t in $test {
+  @each $var in $map {
     // Scoped variables for use with @each.
-    $gutter: map-get($t, gutter);
-    $container-gutter: map-get($t, container-gutter);
-    $breakpoint: map-get($t, breakpoint);
-    $columns: map-get($t, columns);
-    $container-columns: map-get($t, container-columns);
-    /* Check if its a container */
+    $gutter: map-get($var, gutter);
+    $container-gutter: map-get($var, container-gutter);
+    $breakpoint: map-get($var, breakpoint);
+    $columns: map-get($var, columns);
+    $container-columns: map-get($var, container-columns);
+    // Check if the column is not a container, check no breakpoints are required, then generate columns.
     @if $container == false {
       @if $breakpoint == false {
-        @include column-generator($gutter: $gutter, $columns: $columns,
-        $calc: true, $margin: true)
+        @include column-generator($gutter: $gutter, $columns: $columns, $calc: true, $margin: true)
       }
       @else {
+        // We want a breakpoint here > Generate columns nested in a media query.
         @media(min-width: $breakpoint) {
-          @include column-generator($gutter: $gutter, $columns: $columns,
-          $calc: true, $margin: true)
+          @include column-generator($gutter: $gutter, $columns: $columns, $calc: true, $margin: true)
         }
       }
     }
+    // If this is not a container, check no breakpoints are required, then generate columns.
     @else {
       @if $breakpoint == false {
         @include column-generator($gutter: $container-gutter, $columns: $container-columns, $calc: false, $margin: false, $padding: true)
       }
+      // Otherwise generate columns nested in a media query.
       @else {
         @media(min-width: $breakpoint) {
           @include column-generator($gutter: $container-gutter, $columns: $container-columns, $calc: false, $margin: false, $padding: true)
@@ -96,10 +107,13 @@
 
 // column() - nests columns in media queries where required. All of the config
 // for each column comes from column-generator();
+
 @mixin column($columns: null, $gutter: $grid-gutter, $breakpoint: false, $calc: true, $margin: true, $padding: false, $offset-left: false, $offset-right: false, $offset: null) {
+  // Check no breakpoints are required > Generate columns.
   @if $breakpoint == false {
     @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
   }
+  // Otherwise generate columns nested in a media query.
   @else if $breakpoint {
     @media(min-width: $breakpoint) {
       @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
@@ -108,8 +122,9 @@
 }
 
 // For Description lists - only at the time of writing
-@mixin text-columns($col, $column-width: column-width($columns), $min: false){
-  @if $min == true {min-width: #{$column-width};
+@mixin text-columns($col, $column-width: column-width($columns), $min: false) {
+  @if $min == true {
+    min-width: #{$column-width};
   }
   @else {
     width: #{$column-width};
