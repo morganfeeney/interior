@@ -112,12 +112,14 @@
   // Check no breakpoints are required > Generate columns.
   @if $breakpoint == false {
     @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
+    // Add scoped content.
     @content;
   }
   // Otherwise generate columns nested in a media query.
   @else if $breakpoint {
     @media(min-width: $breakpoint) {
-      @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
+      @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset    )
+      // Add scoped content.
       @content;
     }
   }
