@@ -4,19 +4,19 @@
 $cols: 12
 <span class="comment">// 1 x 100% width column</span>
 .default-example {
-  @include columns(12);
+  @include column(12);
 }
 {# <span class="comment">// 2 x 50% width columns</span>
 .cols-2 > div {
-  @include columns(6);
+  @include column(6);
 }
 <span class="comment">// 2 x columns, 40% &amp; 80%</span>
 .layout-example > div {
   &amp;:first-child {
-    @include columns(4);
+    @include column(4);
   }
   &amp;:last-child {
-    @include columns(8);
+    @include column(8);
   }
 } #}
 {% endblock %}

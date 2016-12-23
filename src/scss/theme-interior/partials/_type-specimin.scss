@@ -10,9 +10,9 @@
       @include baseline();
       padding-left: 0;
       order: 1;
-      @include columns(12);
+      @include column(12);
       @media(min-width: $screen-large) {
-        @include columns(3);
+        @include column(3);
       }
     }
   }
@@ -39,9 +39,9 @@ $headings: (
       padding-right: 0;
       display: flex;
       flex-flow: row wrap;
-      @include columns(12);
+      @include column(12);
       @media(min-width: $screen-large) {
-        @include columns(9);
+        @include column(9);
         order: 2;
       }
       + span {

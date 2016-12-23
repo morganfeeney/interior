@@ -7,15 +7,15 @@
   @include grid();
   > div {
     @include grid();
-    @include columns(12);
+    @include column(12);
     @media(min-width: $screen-medium) {
-      @include columns(8, $grid-gutter: $horizontal-space-small, $margin-left: $horizontal-space-small, $margin-right: $horizontal-space-small);
+      @include column(8, $gutter: $horizontal-space-small, $margin-left: $horizontal-space-small, $margin-right: $horizontal-space-small);
     }
     background: $brand-color-mid;
     min-height: 100px;
     padding: 1rem 0;
     > div {
-      @include columns(6);
+      @include column(6);
       background: $brand-color-1;
       color: $brand-color-light;
       display: flex;

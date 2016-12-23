@@ -47,21 +47,21 @@
 //
 // 1 x columns, then 2 x columns on medium screens
 .cols-2 > div {
-  @include columns(12);
+  @include column(12);
   @media(min-width: $screen-medium) {
-    @include columns(6);
+    @include column(6);
   }
 }
 
 .layout-1 > div {
-  @include columns(12);
+  @include column(12);
   @media(min-width: $screen-medium) {
-    @include columns(6);
+    @include column(6);
   }
 }
 
 .cols-3 > div {
-  @include columns(4);
+  @include column(4);
 }
 
 .column-count-experiment {

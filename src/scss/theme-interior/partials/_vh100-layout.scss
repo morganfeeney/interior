@@ -33,7 +33,7 @@
     }
   }
   .intro h1 {
-    @include columns(12, $calc: false, $margin: false);
+    @include column(12, $calc: false, $margin: false);
   }
   section > p,
   .intro > p {

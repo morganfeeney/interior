@@ -75,10 +75,10 @@ h2 {
   section > p,
   .section > p {
     @media(min-width: $screen-small) {
-      @include columns(10, $calc: false, $margin: false);
+      @include column(10, $calc: false, $margin: false);
     }
     @media(min-width: $screen-medium) {
-      @include columns(8, $calc: false, $margin: false);
+      @include column(8, $calc: false, $margin: false);
     }
   }
 }
@@ -98,12 +98,12 @@ h5 {
 .docs {
   @media(min-width: $screen-small) {
     h5 + p {
-      @include columns(8, $calc: false, $margin: false);
+      @include column(8, $calc: false, $margin: false);
     }
   }
   @media(min-width: $screen-medium) {
     h5 + p {
-      @include columns(6, $calc: false, $margin: false);
+      @include column(6, $calc: false, $margin: false);
     }
   }
   // Override previous width styles
@@ -177,15 +177,15 @@ pre:before {
   @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
-  @include columns(12);
+  @include column(12);
   dt {
-    @include dl-columns(4, $min: true);
+    @include dl-column(4, $min: true);
     font-weight: bold;
     margin-right: auto;
     padding-right: 1rem;
   }
   dd {
-    @include dl-columns(8);
+    @include dl-column(8);
   }
 }
 
@@ -219,10 +219,10 @@ blockquote.outset-right {
   margin-left: auto;
   text-align: right;
   @media(min-width: $screen-small) {
-    @include columns(10, $calc: false, $margin: false);
+    @include column(10, $calc: false, $margin: false);
   }
   @media(min-width: $screen-medium) {
-    @include columns(6, $calc: false, $margin: false);
+    @include column(6, $calc: false, $margin: false);
   }
   p {
     text-align: right;
