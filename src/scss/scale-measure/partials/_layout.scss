@@ -23,9 +23,11 @@
   }
 }
 
-.multicolumn-aside {
+.multicolumn-with-aside {
   display: flex;
   flex-flow: row wrap;
+  // Center .container
+  justify-content: center;
   .container {
     display: flex;
     flex-flow: row wrap;
@@ -55,7 +57,7 @@
   }
 }
 
-.multicolumn-aside-re-ordered {
+.multicolumn-with-aside-re-ordered {
   .tiddler {
     order: 1;
   }

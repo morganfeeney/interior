@@ -16,7 +16,7 @@
   .grid-overlay {
     display: none;
     max-width: $max-width;
-    width: $width;
+    width: 100%;
     position: fixed;
     top: 0;
     height: 100vh;
@@ -24,8 +24,7 @@
     // Iterate through the break-points sass-map.
     @include auto-columns($map: $breakpoints, $container: true);
     @if $centred == true {
-      left: 50%;
-      transform: translateX(-50%);
+      left: calc(50% - $max-width/2);
     } @else if $right == true  {
       right: 0;
     } @else {
@@ -43,7 +42,7 @@
   }
 }
 
-@include grid-overlay();
+@include grid-overlay($centred: true);
 
 @media(max-width: $screen-large) {
   .grid-overlay > div {

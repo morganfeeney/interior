@@ -49,7 +49,8 @@ $grid-gutter: font-scale(2.5);
 $column-gap: $grid-gutter/4;
 //$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
 
-$wrapper-width-large: 100%;
+$screen-whopper: 2000px !default;
+$wrapper-width-large: $screen-whopper;
 
 $grid-overlay-width: $wrapper-width-large;
 

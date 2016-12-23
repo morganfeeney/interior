@@ -158,6 +158,8 @@ $breakpoints-map: (
   )
 )!default;
 
+$breakpoints: map-values($breakpoints-map);
+
 $overlay-breakpoints-map: (
   smaller: (
     gutter: $gutter-smaller,
@@ -185,7 +187,6 @@ $overlay-breakpoints-map: (
   )
 )!default;
 
-$breakpoints: map-values($breakpoints-map);
 $overlay-breakpoints: map-values($overlay-breakpoints-map);
 
 //** Wrappers
