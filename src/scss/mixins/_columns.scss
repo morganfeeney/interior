@@ -8,7 +8,7 @@
 // column-generator() - allows bespoke, individual columns to be created where needed.
 // As many possibilites as I can currently imagine have been catered for.
 
-@mixin column-generator($margin: null, $padding: null, $columns: null, $calc: null, $gutter: null, $breakpoint: null, $margin-left: $grid-gutter/2, $margin-right: $grid-gutter/2, $offset-right: false, $offset-left: false, $offset: null, $offset-calc: calc(#{(column-width($offset))} + #{$gutter/2}), $custom-margin: false, $custom-width: false) {
+@mixin column-generator($margin: null, $padding: null, $columns: null, $calc: null, $gutter: null, $breakpoint: null, $margin-left: $gutter/2, $margin-right: $gutter/2, $padding-left: $gutter/2, $padding-right: $gutter/2, $offset-right: false, $offset-left: false, $offset: null, $offset-calc: calc(#{(column-width($offset))} + #{$gutter/2}), $custom-margin: false, $custom-width: false) {
   // See if margin is required.
   @if $margin == true {
     // See if an offset is also required...
@@ -20,10 +20,29 @@
       margin-left: $offset-calc;
       margin-right: $gutter/2;
     }
-    // ...if not then use the default margin-left and margin-right.
     @else {
-      margin-left: $gutter/2;
-      margin-right: $gutter/2;
+      // ...if not then use gutters or/and margin-left and/or margin-right.
+      @if $margin-left == null and $margin-right == null {
+        margin-left: $gutter/2;
+        margin-right: $gutter/2;
+      }
+      @else if $margin-left == null {
+        margin-left: $gutter/2;
+        margin-right: $margin-right;
+      }
+      @else if $margin-right == null {
+        margin-left: $margin-left;
+        margin-right: $gutter/2;
+      }
+      @else if $margin-left and $margin-right {
+        margin-left: $margin-left;
+        margin-right: $margin-right;
+      }
+      // ...otherwise use the standard gutters.
+      @else {
+        margin-left: $gutter/2;
+        margin-right: $gutter/2;
+      }
     }
   }
   // If margin == 0 then output a 0 value.
@@ -108,17 +127,17 @@
 // column() - nests columns in media queries where required. All of the config
 // for each column comes from column-generator();
 
-@mixin column($columns: null, $gutter: $grid-gutter, $breakpoint: false, $calc: true, $margin: true, $padding: false, $offset-left: false, $offset-right: false, $offset: null) {
+@mixin column($columns: null, $gutter: $grid-gutter, $breakpoint: false, $calc: true, $margin: true, $padding: false, $margin-left: null, $margin-right: null, $offset-left: false, $offset-right: false, $offset: null) {
   // Check no breakpoints are required > Generate columns.
   @if $breakpoint == false {
-    @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
+    @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $margin-left: $margin-left, $margin-right: $margin-right, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
     // Add scoped content.
     @content;
   }
   // Otherwise generate columns nested in a media query.
   @else if $breakpoint {
     @media(min-width: $breakpoint) {
-      @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset    )
+      @include column-generator($columns: $columns, $gutter: $gutter, $calc: $calc, $margin: $margin, $margin-left: $margin-left, $margin-right: $margin-right, $padding: $padding, $offset-left: $offset-left, $offset-right: $offset-right, $offset: $offset)
       // Add scoped content.
       @content;
     }
@@ -126,7 +145,7 @@
 }
 
 // For Description lists only!
-@mixin dl-columns($col, $column-width: column-width($columns), $min: false) {
+@mixin dl-column($col, $column-width: column-width($columns), $min: false) {
   @if $min == true {
     min-width: #{$column-width};
   }
