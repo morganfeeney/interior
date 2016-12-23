@@ -3,11 +3,14 @@
 }
 
 .multicolumn {
-  @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: $footer-margin);
+  @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: 6rem);
   column-width: auto;
-  column-gap: $grid-gutter;
+  column-gap: $gutter-smaller;
   @media(min-width: $screen-small) {
     column-count: 2;
+  }
+  @media(min-width: $screen-medium) {
+    column-gap: $gutter-medium;
   }
   img {
     @include baseline($no-text: true, $margin: .75, $below: .1);

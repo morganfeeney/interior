@@ -44,7 +44,7 @@
 
 @include grid-overlay($centred: true);
 
-@media(max-width: $screen-large) {
+@media(max-width: $screen-larger) {
   .grid-overlay > div {
     &:nth-of-type(odd) {
       display: none;

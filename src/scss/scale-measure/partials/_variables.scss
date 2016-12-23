@@ -2,10 +2,13 @@
 // Variables
 // -----------------------------------------------------------------------------
 
+//** Fonts
+//
+// Default font units, required for functions amongst other things.
 $font-base: 1rem !default;
 $serif-cap-height: 0.66 !default
 
-// Divide modular scales into separate variables.
+// Modular Scales - use map-get() to split modular scales up.
 $golden-section: map-get($modular-scale, golden-section);
 $fifth: map-get($modular-scale, fifth);
 $major-third: map-get($modular-scale, major-third);
@@ -13,7 +16,7 @@ $minor-second: map-get($modular-scale, minor-second);
 
 $golden-section-and-minor-second: map-get($modular-scales, golden-section-and-minor-second);
 
-// Divide individual font name variables from modular scales
+// Create individual font name variables from the modular scales
 $five-line-pica: map-get($golden-section-and-minor-second, five-line-pica);
 $canon: map-get($golden-section-and-minor-second, canon);
 $two-line-great-primer: map-get($golden-section-and-minor-second, two-line-great-primer);
@@ -30,34 +33,23 @@ $english: map-get($golden-section-and-minor-second, english);
 $pica: map-get($golden-section-and-minor-second, pica);
 $philosophy: map-get($golden-section-and-minor-second, philosophy);
 
-// Measuring sticks
+// Measuring sticks - visual demonstration of modular scale units.
 $measuring-stick-width: font-scale(1.5);
 $measuring-stick-after-width: 2px;
 
-// Isaiah scroll converted to web
-$isaiah-scroll-page:;
-$isaiah-scroll-measure: 25rem; // roughly 28pc
-$isaiah-scroll-header-margin: 100vh/12;
-$isaiah-scroll-footer-margin: $isaiah-scroll-header-margin*1.5;
-$isaiah-scroll-grid-gutter: 100vw/18;
-$isaiah-scroll-text-block: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4)});
-
-$header-margin: 2.5rem;
-$footer-margin: $isaiah-scroll-footer-margin;
-
+//** Spacing
+//
+// Default spacing units
 $grid-gutter: font-scale(2.5);
+$header-margin: font-scale(2.5);
+
 $column-gap: $grid-gutter/4;
-//$text-block-grid-overlay: calc(#{($isaiah-scroll-measure*2)} + #{($isaiah-scroll-grid-gutter*4) + $column-gap});
 
 $screen-whopper: 2000px !default;
 $wrapper-width-large: $screen-whopper;
 
 $grid-overlay-width: $wrapper-width-large;
 
-// Serif font this time
-$cap-height: $serif-cap-height;
-//$font-family-base: $font-serif;
+$grid-bg-size: 100vw font-scale(1);
 
-$grid-bg-size: 100vw 1rem;
-
-$container-gutter: 6rem;
+$container-gutter: font-scale(6);
