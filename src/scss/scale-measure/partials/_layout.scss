@@ -43,7 +43,7 @@
   .whopper {
     @include column(12, $gutter: $gutter-smaller);
     @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-    @include column(9, $breakpoint: $screen-larger);
+    @include column(9, $breakpoint: $screen-larger, $margin: null);
   }
   aside {
     @include column(6, $breakpoint: $screen-larger);
