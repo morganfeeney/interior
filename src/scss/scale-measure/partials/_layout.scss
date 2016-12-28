@@ -15,7 +15,7 @@
   img {
     @include baseline($no-text: true, $margin: .75, $below: .1);
     @media(min-width: $screen-large) {
-      @include baseline($no-text: true, $below: .5);
+      @include baseline($no-text: true, $margin: .75, $below: .5);
     }
     @media(max-width: $screen-small) {
       width: calc(50% + #{$gutter-smaller});
@@ -103,6 +103,7 @@
     order: 4;
   }
   footer {
+    @include baseline($no-text: true, $above: .15);
     @include column(9, $gutter: $gutter-smaller);
     @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
   }
