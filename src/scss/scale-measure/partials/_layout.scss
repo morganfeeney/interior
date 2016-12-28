@@ -18,9 +18,9 @@
       @include baseline($no-text: true, $below: .5);
     }
     @media(max-width: $screen-small) {
-      width: calc(50% + #{font-scale(1.25)});
-      margin-left: $grid-gutter/2;
-      margin-right: -$grid-gutter*.7;
+      width: calc(50% + #{$gutter-smaller});
+      margin-left: $gutter-smaller;
+      margin-right: -$gutter-smaller;
       float: right;
     }
   }
