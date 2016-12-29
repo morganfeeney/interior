@@ -38,7 +38,7 @@
   .tiddler {
     @include column(12, $gutter: $gutter-smaller);
     @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-    @include column(3, $breakpoint: $screen-larger);
+    @include column(3, $breakpoint: $screen-larger, $margin: null);
   }
   .whopper {
     @include column(12, $gutter: $gutter-smaller);
@@ -46,6 +46,8 @@
     @include column(9, $breakpoint: $screen-larger, $margin: null);
   }
   aside {
+    @include column(12, $gutter: $gutter-smaller);
+    @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
     @include column(6, $breakpoint: $screen-larger);
     @include baseline($no-text: true, $margin-top: $header-margin, $above: .35);
   }
@@ -55,7 +57,7 @@
     @include column(6, $breakpoint: $screen-larger);
   }
   footer {
-    @include column(6);
+    @include column(6, $gutter: $gutter-smaller);
     @include column(6, $breakpoint: $screen-medium, $gutter: $gutter-medium);
   }
 }
