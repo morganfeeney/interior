@@ -26,7 +26,9 @@
 		<header id="main-header" class="container-outer {{ main_header_classes }}">
 			<div class="container">
 				{% block header_content %}
-					<a id="main-header-home-link" class="home-link" href="{{ home_url }}"><p>Interior</p><p>Layout system</p></a>
+					<a id="main-header-home-link" class="home-link" href="{{ home_url }}">
+						{% include "partials/logo.njk" %}
+					</a>
 					<nav id="main-nav">
 						<a href="{{ home_url }}docs">Docs</a>
 						<a href="{{ home_url }}examples">Examples</a>
