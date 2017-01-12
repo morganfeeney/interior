@@ -1,0 +1,13 @@
+@include grid-overlay($centred: true);
+
+@media(max-width: $screen-larger) {
+  .grid-overlay > div {
+    &:nth-of-type(odd) {
+      display: none;
+    }
+  }
+}
+
+.grid-overlay-active .grid-overlay {
+  display: flex;
+}
