@@ -46,8 +46,6 @@
     @include column(9, $breakpoint: $screen-larger, $margin: null);
   }
   aside {
-    @include column(12, $gutter: $gutter-smaller);
-    @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
     @include column(6, $breakpoint: $screen-larger);
     @include baseline($no-text: true, $margin-top: $header-margin, $above: .35);
   }
@@ -84,7 +82,7 @@
       align-self: flex-start;
       @include column(12, $gutter: $gutter-smaller);
       @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-      @include column(8, $breakpoint: $screen-large, $margin: null);
+      @include column(7.5, $breakpoint: $screen-large, $margin: null);
       @include column(12, $breakpoint:$screen-larger, $margin: 0, $calc: false);
     }
     > p {
@@ -93,7 +91,7 @@
       @include column(9, $breakpoint: $screen-smaller, $gutter: $gutter-smaller, $margin: null);
       @include column(6, $breakpoint: $screen-small, $gutter: $gutter-smaller, $margin: null);
       @include column(6, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-      @include column(4, $breakpoint: $screen-large);
+      @include column(4.5, $breakpoint: $screen-large);
       @include column(6, $breakpoint: $screen-larger, $margin: 0);
     }
     > p + img {
