@@ -191,3 +191,5 @@ $overlay-breakpoints: map-values($overlay-breakpoints-map);
 
 //** Wrappers
 $wrapper-width-large: $screen-larger !default;
+
+$grid-overlay-width: $wrapper-width-large !default;

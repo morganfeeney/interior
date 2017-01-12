@@ -24,7 +24,7 @@
     // Iterate through the break-points sass-map.
     @include auto-columns($map: $breakpoints, $container: true);
     @if $centred == true {
-      left: calc(50% - $max-width/2);
+      left: calc(50% - #{$max-width/2});
     } @else if $right == true  {
       right: 0;
     } @else {
@@ -40,4 +40,8 @@
       @include auto-columns($map: $overlay-breakpoints);
     }
   }
+}
+
+.grid-overlay-active .grid-overlay {
+  display: flex;
 }
