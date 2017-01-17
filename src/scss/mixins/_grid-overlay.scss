@@ -23,14 +23,6 @@
     z-index: 2;
     // Iterate through the break-points sass-map.
     @include auto-columns($map: $breakpoints, $container: true);
-    @if $centred == true {
-      left: calc(50% - #{$max-width/2});
-    } @else if $right == true  {
-      right: 0;
-    } @else {
-      left: 0;
-    }
-    flex-flow: row nowrap;
     > div {
       margin-top: 0;
       margin-bottom: 0;
@@ -39,9 +31,20 @@
       border-right: 1px solid red;
       @include auto-columns($map: $overlay-breakpoints);
     }
+    &-active {
+      @if $centred == true {
+        @media(min-width: $max-width) {
+         left: calc(50% - #{$max-width/2});
+        }
+      } @else if $right == true {
+        right: 0
+      } @else {
+        left: 0
+      }
+      .grid-overlay {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+    }
   }
-}
-
-.grid-overlay-active .grid-overlay {
-  display: flex;
 }
