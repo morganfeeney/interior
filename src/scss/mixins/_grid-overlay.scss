@@ -36,6 +36,7 @@
       .grid-overlay {
         display: flex;
         flex-flow: row nowrap;
+        pointer-events: none;
       }
     }
     // Iterate through the break-points sass-map.

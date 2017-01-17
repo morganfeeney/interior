@@ -16,8 +16,12 @@
       grid.appendChild(gridChild);
     }
   }
+  // Create a button to togglethe grid overlay.
   function overlayToggle(e){
-    body.addEventListener('click', function(e) {
+    var toggle = document.createElement('button');
+    toggle.innerHTML = "Click me";
+    body.appendChild(toggle);
+    toggle.addEventListener('click', function(e) {
       body.classList.toggle('grid-overlay-active');
       body.classList.toggle('baseline-grid');
       e.preventDefault();
