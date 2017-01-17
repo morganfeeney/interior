@@ -21,6 +21,23 @@
     top: 0;
     height: 100vh;
     z-index: 2;
+    // When the screen is bigger than the width of the grid, center it using
+    // calc()
+    @if $centred == true {
+      @media(min-width: $max-width) {
+       left: calc(50% - #{$max-width/2});
+      }
+    } @else if $right == true {
+      right: 0
+    } @else {
+      left: 0
+    }
+    &-active {
+      .grid-overlay {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+    }
     // Iterate through the break-points sass-map.
     @include auto-columns($map: $breakpoints, $container: true);
     > div {
@@ -30,21 +47,6 @@
       border-left: 1px solid red;
       border-right: 1px solid red;
       @include auto-columns($map: $overlay-breakpoints);
-    }
-    &-active {
-      @if $centred == true {
-        @media(min-width: $max-width) {
-         left: calc(50% - #{$max-width/2});
-        }
-      } @else if $right == true {
-        right: 0
-      } @else {
-        left: 0
-      }
-      .grid-overlay {
-        display: flex;
-        flex-flow: row nowrap;
-      }
     }
   }
 }
