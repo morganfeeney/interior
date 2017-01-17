@@ -11,6 +11,7 @@
 
 // Mixins
 @import "mixins/baseline";
+@import "mixins/grid-overlay";
 @import "mixins/columns";
 @import "mixins/layout";
 
@@ -20,6 +21,7 @@
 // Core partials
 @import "partials/layout";
 @import "partials/baseline-grid";
+@import "theme-interior/partials/grid-overlay";
 @import "partials/image";
 
 
