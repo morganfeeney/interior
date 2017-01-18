@@ -1,0 +1,19 @@
+.container-outer {
+  width: 100%;
+}
+.home-link {
+  display: block;
+}
+header {
+  .home-link svg {
+    max-width: 8rem;
+  }
+  nav {
+    display: flex;
+    flex-flow: column;
+  }
+  nav,
+  .home-link {
+    @include column(2, $margin-left: auto);
+  }
+}

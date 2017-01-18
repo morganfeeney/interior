@@ -146,48 +146,6 @@ ul, ol {
   @include baseline($line-height: 1.5, $above: .24);
 }
 
-pre {
-  @include baseline($line-height: 1.5, $above: .25);
-}
-
-.code-block code {
-  @include baseline($line-height: 1.5, $above: .5, $below: 0, $padding-bottom: 1rem);
-}
-
-pre:before {
-  @include baseline($english, $line-height: 1.5);
-  // Use mixin but override unwanted parts
-  margin-bottom: 0;
-  padding-left: 1rem;
-  padding-bottom: .05rem;
-}
-
-.code-inline {
-  line-height: 1;
-  font-family: $font-family-inline-code;
-  font-weight: normal;
-}
-
-.dl-horizontal {
-  @include baseline($line-height: 1.5, $above: .2, $below: 0);
-}
-
-// Flexible Description lists
-.dl-horizontal {
-  @extend %flex-container;
-  justify-content: flex-end;
-  align-content: flex-start;
-  @include column(12);
-  dt {
-    @include dl-column(4, $min: true);
-    font-weight: bold;
-    margin-right: auto;
-    padding-right: 1rem;
-  }
-  dd {
-    @include dl-column(8);
-  }
-}
 
 // Text directly after a main heading
 .sub-heading {

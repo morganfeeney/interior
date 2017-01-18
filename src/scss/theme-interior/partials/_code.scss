@@ -38,9 +38,31 @@ code {
 	color: $mid-gray;
 }
 
+pre {
+  @include baseline($line-height: 1.5, $above: .25);
+}
+
 pre.code-block {
   @media(max-width: $screen-medium-max) {
     margin-left: -$horizontal-space-small;
     margin-right: -$horizontal-space-small;
   }
+}
+
+pre:before {
+  @include baseline($english, $line-height: 1.5);
+  // Use mixin but override unwanted parts
+  margin-bottom: 0;
+  padding-left: 1rem;
+  padding-bottom: .05rem;
+}
+
+.code-inline {
+  line-height: 1;
+  font-family: $font-family-inline-code;
+  font-weight: normal;
+}
+
+.code-block code {
+  @include baseline($line-height: 1.5, $above: .5, $below: 0, $padding-bottom: 1rem);
 }

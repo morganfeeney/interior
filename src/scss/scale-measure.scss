@@ -27,9 +27,11 @@
 @import "partials/baseline-grid";
 @import "partials/image";
 @import "partials/buttons";
+@import "theme-interior/partials/code";
 
 // Theme partials
 @import "theme-interior/partials/base";
 @import "scale-measure/partials/typography";
+@import "theme-interior/partials/dl-horizontal";
 @import "scale-measure/partials/measuring-sticks";
 @import "scale-measure/partials/layout";
