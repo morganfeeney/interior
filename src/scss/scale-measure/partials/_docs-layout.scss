@@ -10,8 +10,10 @@ header {
     max-width: 8rem;
   }
   nav {
-    display: flex;
-    flex-flow: column;
+    a {
+      @include baseline();
+      display: block;
+    }
   }
   nav,
   .home-link {

@@ -25,6 +25,6 @@
   font-weight: bold;
 }
 @mixin heading-whopper() {
-  @include baseline($two-line-pica, $line-height: 1.28, $margin: 6, $above: .45, $below: 10);
+  @include baseline($two-line-pica, $line-height: 1.28, $margin: 4, $above: .45, $below: 10);
   font-weight: bold;
 }
