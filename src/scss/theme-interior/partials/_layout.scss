@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .container {
-  padding: 0 $container-gutter;
+  @include auto-columns($map: $breakpoints, $container: true);
 }
 
 .grid-main {
