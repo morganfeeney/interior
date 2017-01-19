@@ -1,57 +1,34 @@
-{% extends "layouts/standard-layout.njk" %}
+{% extends "layouts/docs-layout.njk" %}
 {% set page_description = "Use the column() mixin to create columns for use with flexbox layouts." %}
 {% set post_page = true %}
-{% set layout_classes = "docs" %}
-
-{% block embedded_css %}
-<style>
-  h1:before {
-    content: "Docs"
-  }
-  h2:first-of-type:before {
-    content: "Mixin";
-  }
-</style>
-{% endblock %}
+{# set these for dev purposes #}
+{% set layout_classes = "grid-overlay-active baseline-grid" %}
 
 {% block main %}
+  {{ super() }}
   <section id="grid">
     <h2>Usage</h2>
     <p>Layouts can be created using a grid structure, made from columns, whilst allowing Flexbox to take care of alignment. A grid can be constructed in many ways by using the <code class="code-inline language-scss">.column()</code> mixin and then passing in parameters as needed.</p>
     <h5>Required arguments</h5>
     <p>The <strong>only</strong> required argument is numerical. The value is used to calculate the number of columns out of the total passed to the <code class="code-inline language-scss">$cols</code> variable.</p>
-    <div class="grid cols-2">
-      <div>
-        <div class="grid">
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$col</code></dt>
-            <dd>The number of grid columns the column must span.</dd>
-          </dl>
-        </div>
-      </div>
-      <div>
-        {% include "../partials/code-samples/col-scss-required.njk" %}
-      </div>
-    </div>
+
+    <dl class="dl-horizontal">
+      <dt><code class="code-inline language-scss">$col</code></dt>
+      <dd>The number of grid columns the column must span.</dd>
+    </dl>
+    {% include "../partials/code-samples/col-scss-required.njk" %}
+
     {# Optional parameters #}
     <h5>Optional arguments</h5>
     <p>To omit one of the following default arguments, pass a false value to the argument when calling the mixin.</p>
-    <div class="grid cols-2">
-      <div>
-        <div class="grid">
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$calc</code></dt>
-            <dd>Subtracts the <code class="code-inline language-scss">$grid-gutter</code> from the column width using CSS <code class="code-inline language-css">calc()</code>.</dd>
-          </dl>
-          <dl class="dl-horizontal">
-            <dt><code class="code-inline language-scss">$margin</code></dt>
-            <dd>Aligns grid content with non-grid content using a negative margin. Otherwise centers the column.</dd>
-          </dl>
-        </div>
-      </div>
-      <div>
-        {% include "../partials/code-samples/col-scss-optional.njk" %}
-      </div>
-    </div>
+    <dl class="dl-horizontal">
+      <dt><code class="code-inline language-scss">$calc</code></dt>
+      <dd>Subtracts the <code class="code-inline language-scss">$grid-gutter</code> from the column width using CSS <code class="code-inline language-css">calc()</code>.</dd>
+    </dl>
+    <dl class="dl-horizontal">
+      <dt><code class="code-inline language-scss">$margin</code></dt>
+      <dd>Aligns grid content with non-grid content using a negative margin. Otherwise centers the column.</dd>
+    </dl>
+    {% include "../partials/code-samples/col-scss-optional.njk" %}
   </section>
 {% endblock %}

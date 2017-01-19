@@ -1,0 +1,20 @@
+.dl-horizontal {
+  @include baseline($line-height: 1.5, $above: .2, $below: 0);
+}
+
+// Flexible Description lists
+.dl-horizontal {
+  @extend %flex-container;
+  justify-content: flex-end;
+  align-content: flex-start;
+  @include column(12);
+  dt {
+    @include dl-column(4, $min: true);
+    font-weight: bold;
+    margin-right: auto;
+    padding-right: 1rem;
+  }
+  dd {
+    @include dl-column(8);
+  }
+}

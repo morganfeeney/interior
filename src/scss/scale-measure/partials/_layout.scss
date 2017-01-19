@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .container {
   @include auto-columns($map: $breakpoints, $container: true);
 }
@@ -24,6 +29,12 @@
       float: right;
     }
   }
+}
+
+footer {
+  @include baseline($no-text: true, $above: .15);
+  @include column(9, $gutter: $gutter-smaller);
+  @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
 }
 
 .multicolumn-with-aside {
@@ -101,10 +112,5 @@
   section,
   footer {
     order: 4;
-  }
-  footer {
-    @include baseline($no-text: true, $above: .15);
-    @include column(9, $gutter: $gutter-smaller);
-    @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
   }
 }

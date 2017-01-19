@@ -14,27 +14,32 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
 }
-
 h1 {
-  @include baseline($double-english, $line-height: 1.18, $above: 1.3, $below: 2);
+  @include heading-whopper();
 }
-h2 {
-  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1);
+h2, h2, h3, h4, h5, h6 {
+  @include heading-6()
 }
-h3 {
-  @include baseline($double-pica, $line-height: 1.15, $above: .1, $below: 1);
+.heading-1 {
+  @include heading-1();
 }
-h4 {
-  @include baseline($paragon, $line-height: .96, $below: 0);
+.heading-2 {
+  @include heading-2();
 }
-h5 {
-  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: .1);
+.heading-3 {
+  @include heading-3();
 }
-h6 {
-  @include baseline($mittel, $line-height: 1.9, $above: .5);
+.heading-4 {
+  @include heading-4()
+}
+.heading-5 {
+  @include heading-5();
+}
+.heading-6 {
+  @include heading-6();
 }
 p {
-  @include baseline($english, $line-height: 2, $above: .5);
+  @include body-1();
 }
 .large {
   @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: 2);

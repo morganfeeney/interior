@@ -1,0 +1,13 @@
+{% extends "templates/prototype-template.njk" %}
+{% set body_classes = "docs-layout" %}
+{% set cols = 6 %}
+
+{% block linked_css %}
+  <link rel="stylesheet" href="/css/interior.css">
+{% endblock %}
+
+{% block main %}
+  {% block intro %}
+    <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
+  {% endblock %}
+{% endblock %}
