@@ -1,0 +1,30 @@
+// Opting for @include over @extend here.
+
+@mixin heading-1() {
+  @include baseline($double-english, $line-height: 1.18, $above: 1.3, $below: 2);
+  font-weight: bold;
+}
+@mixin heading-2() {
+  @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1);
+  font-weight: bold;
+}
+@mixin heading-3() {
+  @include baseline($double-pica, $line-height: 1.15, $above: .1, $below: 1);
+  font-weight: bold;
+}
+@mixin heading-4() {
+  @include baseline($paragon, $line-height: .96, $below: 0);
+  font-weight: bold;
+}
+@mixin heading-5() {
+  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: .1);
+  font-weight: bold;
+}
+@mixin heading-6() {
+  @include baseline($english, $line-height: 2, $above: .5, $below: -1);
+  font-weight: bold;
+}
+@mixin heading-whopper() {
+  @include baseline($two-line-pica, $line-height: 1.28, $margin: 6, $above: .45, $below: 10);
+  font-weight: bold;
+}
