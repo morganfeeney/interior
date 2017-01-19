@@ -6,6 +6,7 @@
 }
 header {
   .home-link svg {
+    @include baseline($no-text: true, $margin: 4, $below: .15);
     max-width: 8rem;
   }
   nav {
@@ -16,4 +17,10 @@ header {
   .home-link {
     @include column(2, $margin-left: auto);
   }
+}
+h1 {
+  @include column(6, $offset-left: true, $offset: 2);
+}
+section {
+  @include column(6, $offset-left: true, $offset: 2);
 }
