@@ -39,7 +39,7 @@ code {
 }
 
 pre {
-  @include baseline($line-height: 1.5, $above: .25);
+  @include baseline($line-height: 1.5, $margin: 1, $above: .25, $below: 2);
 }
 
 pre.code-block {
