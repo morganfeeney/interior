@@ -23,7 +23,7 @@ header {
 h1 {
   @include column(6, $offset-left: true, $offset: 4);
 }
-section {
+.container section {
   @include column(6, $offset-left: true, $offset: 2);
   display: flex;
   flex-flow: row wrap;
