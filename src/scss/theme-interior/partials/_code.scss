@@ -39,7 +39,7 @@ code {
 }
 
 pre {
-  @include baseline($line-height: 1.5, $margin: 1, $above: .25, $below: 2);
+  @include baseline($no-text: true, $margin: 1, $padding-top: 0, $below: 2);
 }
 
 pre.code-block {
@@ -64,5 +64,6 @@ pre:before {
 }
 
 .code-block code {
-  @include baseline($line-height: 1.5, $above: .5, $below: 0, $padding-bottom: 1rem);
+  @include baseline($line-height: 2, $above: .5, $margin-bottom: 0);
+	padding-bottom: 1rem;
 }
