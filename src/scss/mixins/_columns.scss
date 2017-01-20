@@ -5,8 +5,8 @@
 // arguments are available to configure them.
 // -----------------------------------------------------------------------------
 
-// column-generator() - allows bespoke, individual columns to be created where needed.
-// As many possibilites as I can currently imagine have been catered for.
+// column-generator() - allows bespoke, individual columns to be created where
+// needed. As many possibilites as I can currently imagine have been catered for.
 
 @mixin column-generator($margin: null, $padding: null, $columns: null, $calc: null, $gutter: null, $breakpoint: null, $margin-left: $gutter/2, $margin-right: $gutter/2, $padding-left: $gutter/2, $padding-right: $gutter/2, $offset-right: false, $offset-left: false, $offset: null, $offset-calc: calc(#{(column-width($offset))} + #{$gutter/2}), $custom-margin: false, $custom-width: false) {
   // See if margin is required.
@@ -145,7 +145,7 @@
 }
 
 // For Description lists only!
-@mixin dl-column($col, $column-width: column-width($columns), $min: false) {
+@mixin dl-column($column, $column-width: column-width($column), $min: false) {
   @if $min == true {
     min-width: #{$column-width};
   }
