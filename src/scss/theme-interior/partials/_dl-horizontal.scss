@@ -3,15 +3,15 @@
   @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
-  @include column(12);
+  @include column(12, $margin: false, $calc: false);
   dt {
-    @include dl-column(4, $min: true);
+    @include dl-column(3, $min: true);
     font-weight: bold;
     margin-right: auto;
     padding-right: 1rem;
   }
   dd {
-    @include dl-column(8);
+    @include dl-column(9);
   }
   dt, dd {
     @include baseline($line-height: 2, $above: .5);

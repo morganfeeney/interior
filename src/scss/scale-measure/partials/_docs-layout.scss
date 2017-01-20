@@ -21,8 +21,22 @@ header {
   }
 }
 h1 {
-  @include column(6, $offset-left: true, $offset: 2);
+  @include column(6, $offset-left: true, $offset: 4);
 }
 section {
   @include column(6, $offset-left: true, $offset: 2);
+  display: flex;
+  flex-flow: row wrap;
+  h2, h3, h4, h5 {
+    @include column(4);
+  }
+  p {
+    @include column(8);
+  }
+}
+.dl-wrapper {
+  @include column(8, $offset-left: true, $offset: 4);
+}
+.code-block {
+  @include column(8, $offset-left: true, $offset: 4);
 }
