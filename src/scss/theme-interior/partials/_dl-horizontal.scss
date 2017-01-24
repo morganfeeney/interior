@@ -3,22 +3,29 @@
   @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
-  @include column(12, $gutter: $gutter-small);
+  @media(max-width: $screen-medium-max) {
+    @include column(12, $gutter: $gutter-small);
+  }
+  @include column(12, $gutter: $gutter-small, $breakpoint: $screen-medium, $margin: false, $calc: false);
   @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-small);
   dt {
-    //@include column(4, $margin: false, $calc: false);
-    @include column(4, $gutter: $gutter-small) {
-      font-weight: bold;
-      margin-right: auto;
-    };
-    @include column(3, $gutter: $gutter-small, $breakpoint: $screen-larger);
+    @include column(4, $gutter: $gutter-small);
+    @include column(1, $master-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
+    @include column(1, $master-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
+    @include column(2, $master-columns: 2, $gutter: $gutter-small, $breakpoint: $screen-largest);
   }
   dd {
-    //@include column(8, $margin: false, $calc: false);
     @include column(8, $gutter: $gutter-small);
-    @include column(9, $gutter: $gutter-small, $breakpoint: $screen-larger);
+    @include column(4, $master-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
+    @include column(3, $master-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
+    @include column(2, $master-columns: 2, $gutter: $gutter-small, $breakpoint: $screen-largest);
   }
   dt, dd {
     @include baseline($line-height: 2, $above: .5);
+  }
+  dt {
+    @media(min-width: $screen-largest) {
+      @include baseline($line-height: 2, $above: 1.5);
+    }
   }
 }

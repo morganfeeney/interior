@@ -44,5 +44,5 @@ h1 {
 .dl-wrapper,
 .code-block {
   @include column(12);
-  @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4);
+  //@include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4);
 }

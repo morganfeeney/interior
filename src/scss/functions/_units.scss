@@ -4,10 +4,10 @@
 
 // column-width() - Generates column widths based on a bit of mathematics.
 
-@function column-width($col) {
+@function column-width($col, $master-columns: $master-columns) {
   @if $col == null or false {
     @return false;
   }
-  @return (100% / $columns * $col);
+  @return (100% / $master-columns * $col);
   @warn "blah" $col;
 }
