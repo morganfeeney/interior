@@ -3,15 +3,20 @@
   @extend %flex-container;
   justify-content: flex-end;
   align-content: flex-start;
-  @include column(12, $margin: false, $calc: false);
+  @include column(12, $gutter: $gutter-small);
+  @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-small);
   dt {
-    @include dl-column(3, $min: true);
-    font-weight: bold;
-    margin-right: auto;
-    padding-right: 1rem;
+    //@include column(4, $margin: false, $calc: false);
+    @include column(4, $gutter: $gutter-small) {
+      font-weight: bold;
+      margin-right: auto;
+    };
+    @include column(3, $gutter: $gutter-small, $breakpoint: $screen-larger);
   }
   dd {
-    @include dl-column(9);
+    //@include column(8, $margin: false, $calc: false);
+    @include column(8, $gutter: $gutter-small);
+    @include column(9, $gutter: $gutter-small, $breakpoint: $screen-larger);
   }
   dt, dd {
     @include baseline($line-height: 2, $above: .5);

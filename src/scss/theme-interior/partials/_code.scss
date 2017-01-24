@@ -42,12 +42,12 @@ pre {
   @include baseline($no-text: true, $margin: 1, $padding-top: 0, $below: 2);
 }
 
-pre.code-block {
-  @media(max-width: $screen-medium-max) {
-    margin-left: -$horizontal-space-small;
-    margin-right: -$horizontal-space-small;
-  }
-}
+// pre.code-block {
+//   @media(max-width: $screen-medium-max) {
+//     margin-left: -$horizontal-space-small;
+//     margin-right: -$horizontal-space-small;
+//   }
+// }
 
 pre:before {
   @include baseline($english, $line-height: 1.5);

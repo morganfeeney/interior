@@ -1,6 +1,6 @@
 @include grid-overlay($centred: true);
 
-@media(max-width: $screen-larger) {
+@media(max-width: $screen-small) {
   .grid-overlay > div {
     &:nth-of-type(odd) {
       display: none;
