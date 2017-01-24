@@ -132,6 +132,13 @@ $gutter-small: $grid-gutter/2;
 $gutter-medium: $grid-gutter/2;
 $gutter-large: $grid-gutter/2;
 
+// MODULAR MAN NEEDS THE GUTTERS LIKE THIS — ALSO CHECK ON CRACK MAG
+//
+// $gutter-smaller: $grid-gutter;
+// $gutter-small: $grid-gutter;
+// $gutter-medium: $grid-gutter;
+// $gutter-large: $grid-gutter;
+
 $breakpoints-map: (
   smaller: (
     gutter: $gutter-smaller,
