@@ -6,9 +6,12 @@
 }
 header {
   .home-link svg {
-    @include baseline($no-text: true, $margin: 2, $below: .15);
+    @include baseline($no-text: true, $margin: 2, $below: -.15);
     max-width: 8rem;
     @media(min-width: $screen-small) {
+      @include baseline($no-text: true, $margin: 4, $below: -.15);
+    }
+    @media(min-width: $screen-large) {
       @include baseline($no-text: true, $margin: 4, $below: .15);
     }
   }
@@ -54,7 +57,7 @@ h1 {
 }
 footer {
   @media(min-width: $screen-large) {
-    margin: 0;  
+    margin: 0;
   }
 }
 .sig {

@@ -4,7 +4,7 @@
   justify-content: flex-end;
   align-content: flex-start;
   @media(max-width: $screen-medium-max) {
-    @include column(12, $gutter: $gutter-small);
+    @include column(12, $calc: false, $margin: false);
   }
   @include column(12, $gutter: $gutter-small, $breakpoint: $screen-medium, $margin: false, $calc: false);
   @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-small);
