@@ -74,7 +74,7 @@
 
   // See if a column width has not been passed in. If not then output nothing.
   @if $columns == null {}
-  // Otherwise if $clac is false create a column width without calc().
+  // Otherwise if $calc is false create a column width without calc().
   @else if $calc == false {
     width: column-width($columns, $master-columns);
   }

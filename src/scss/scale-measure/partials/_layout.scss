@@ -7,6 +7,13 @@ body {
   @include auto-columns($map: $breakpoints, $container: true);
 }
 
+.grid {
+  // TEMPFIX
+  @media(max-width: $screen-large-max) {
+    @include grid($negative-gutter: -$horizontal-space-small/2);
+  }
+}
+
 .multicolumn {
   @include baseline($no-text: true, $margin-top: $header-margin, $margin-bottom: 6rem);
   column-width: auto;

@@ -1,4 +1,6 @@
 .posts-nav {
+  @include auto-columns($map: $breakpoints);
+  @include column(8, $gutter: $gutter-small, $margin: auto, $breakpoint: $screen-large);
   @include baseline($pica, $line-height: 1.65, $above: 0, $below: 0, $margin: 3);
   display: flex;
   align-items: center;

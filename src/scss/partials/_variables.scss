@@ -129,8 +129,8 @@ $screen-whopper-max: ($screen-whopper)-1 !default;
 // Gutter widths
 $gutter-smaller: $grid-gutter/2;
 $gutter-small: $grid-gutter/2;
-$gutter-medium: $grid-gutter;
-$gutter-large: $grid-gutter;
+$gutter-medium: $grid-gutter/2;
+$gutter-large: $grid-gutter/2;
 
 $breakpoints-map: (
   smaller: (
@@ -146,13 +146,13 @@ $breakpoints-map: (
     columns: null
   ),
   medium: (
-    gutter: $gutter-medium,
+    gutter: $gutter-small,
     container-gutter: $container-gutter-small,
     breakpoint: $screen-medium,
     columns: null
   ),
   large: (
-    gutter: $gutter-large,
+    gutter: $gutter-small,
     container-gutter: $container-gutter,
     breakpoint: $screen-large,
     columns: null
@@ -163,7 +163,7 @@ $breakpoints: map-values($breakpoints-map);
 
 $overlay-breakpoints-map: (
   smaller: (
-    gutter: $gutter-smaller,
+    gutter: $gutter-small,
     container-gutter: $container-gutter-smaller,
     breakpoint: false,
     columns: 4
@@ -175,13 +175,13 @@ $overlay-breakpoints-map: (
     columns: 4
   ),
   medium: (
-    gutter: $gutter-medium,
+    gutter: $gutter-small,
     container-gutter: $gutter-medium,
     breakpoint: $screen-medium,
     columns: 4
   ),
   large: (
-    gutter: $gutter-large,
+    gutter: $gutter-small,
     container-gutter: $container-gutter,
     breakpoint: $screen-large,
     columns: 4

@@ -12,20 +12,20 @@
     @include column(4, $gutter: $gutter-small);
     @include column(1, $master-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
     @include column(1, $master-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
-    @include column(2, $master-columns: 2, $gutter: $gutter-small, $breakpoint: $screen-largest);
+    @include column(2, $master-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
   }
   dd {
     @include column(8, $gutter: $gutter-small);
     @include column(4, $master-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
     @include column(3, $master-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
-    @include column(2, $master-columns: 2, $gutter: $gutter-small, $breakpoint: $screen-largest);
+    @include column(2, $master-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
   }
   dt, dd {
     @include baseline($line-height: 2, $above: .5);
   }
   dt {
     @media(min-width: $screen-largest) {
-      @include baseline($line-height: 2, $above: 1.5);
+      @include baseline($line-height: 2, $above: 1.5, $margin: -1);
     }
   }
 }
