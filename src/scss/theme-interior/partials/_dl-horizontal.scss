@@ -9,6 +9,9 @@
   @include column(12, $gutter: $gutter-small, $breakpoint: $screen-medium, $margin: false, $calc: false);
   @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-small);
   dt {
+    @media(max-width: $screen-largest-max){
+      text-align: right;      
+    }
     @include column(4, $gutter: $gutter-small);
     @include column(1, $max-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
     @include column(1, $max-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
