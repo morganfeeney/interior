@@ -10,15 +10,15 @@
   @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-small);
   dt {
     @include column(4, $gutter: $gutter-small);
-    @include column(1, $master-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
-    @include column(1, $master-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
-    @include column(2, $master-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
+    @include column(1, $max-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
+    @include column(1, $max-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
+    @include column(2, $max-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
   }
   dd {
     @include column(8, $gutter: $gutter-small);
-    @include column(4, $master-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
-    @include column(3, $master-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
-    @include column(2, $master-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
+    @include column(4, $max-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
+    @include column(3, $max-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
+    @include column(2, $max-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
   }
   dt, dd {
     @include baseline($line-height: 2, $above: .5);
