@@ -45,6 +45,7 @@
       }
     }
   }
+
   // If margin == 0 then output a 0 value.
   @else if $margin == 0 {
     margin-left: 0;
@@ -97,19 +98,20 @@
     $breakpoint: map-get($var, breakpoint);
     $columns: map-get($var, columns);
     $container-columns: map-get($var, container-columns);
+    $margin: map-get($var, margin);
     // Check if the column is not a container, check no breakpoints are required, then generate columns.
     @if $container == false {
       @if $breakpoint == false {
-        @include column-generator($gutter: $gutter, $columns: $columns, $calc: true, $margin: true)
+        @include column-generator($gutter: $gutter, $columns: $columns, $calc: true, $margin: $margin)
       }
       @else {
         // We want a breakpoint here > Generate columns nested in a media query.
         @media(min-width: $breakpoint) {
-          @include column-generator($gutter: $gutter, $columns: $columns, $calc: true, $margin: true)
+          @include column-generator($gutter: $gutter, $columns: $columns, $calc: true, $margin: $margin)
         }
       }
     }
-    // If this is not a container, check no breakpoints are required, then generate columns.
+    // If this is a container, check no breakpoints are required, then generate columns.
     @else {
       @if $breakpoint == false {
         @include column-generator($gutter: $container-gutter, $columns: $container-columns, $calc: false, $margin: false, $padding: true)

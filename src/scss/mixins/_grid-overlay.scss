@@ -11,7 +11,8 @@
   $right: false,
   $grid-overlay-container: $grid-gutter/2,
   $grid-overlay-gutter: $grid-gutter,
-  $break-point: true
+  $break-point: true,
+  $overlay-map: $overlay-breakpoints
 ) {
   .grid-overlay {
     display: none;
@@ -47,7 +48,7 @@
       padding: 0;
       border-left: 1px solid red;
       border-right: 1px solid red;
-      @include auto-columns($map: $overlay-breakpoints);
+      @include auto-columns($map: $overlay-map);
     }
   }
 }

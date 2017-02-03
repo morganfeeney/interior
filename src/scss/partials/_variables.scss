@@ -128,10 +128,10 @@ $screen-largest-max: ($screen-largest)-1 !default;
 $screen-whopper-max: ($screen-whopper)-1 !default;
 
 // Gutter widths
-$gutter-smaller: $grid-gutter/2;
-$gutter-small: $grid-gutter/2;
-$gutter-medium: $grid-gutter/2;
-$gutter-large: $grid-gutter/2;
+$gutter-smaller: $grid-gutter/2 !default;
+$gutter-small: $grid-gutter/2 !default;
+$gutter-medium: $grid-gutter/2 !default;
+$gutter-large: $grid-gutter/2 !default;
 
 // MODULAR MAN NEEDS THE GUTTERS LIKE THIS — ALSO CHECK ON CRACK MAG
 //
@@ -144,59 +144,82 @@ $breakpoints-map: (
   smaller: (
     gutter: $gutter-smaller,
     container-gutter: $grid-gutter/2,
-    breakpoint: false,
-    columns: null
+    breakpoint: false
   ),
   small: (
     gutter: $gutter-small,
     container-gutter: $container-gutter-smaller,
-    breakpoint: $screen-small,
-    columns: null
+    breakpoint: $screen-small
   ),
   medium: (
     gutter: $gutter-small,
     container-gutter: $container-gutter-small,
-    breakpoint: $screen-medium,
-    columns: null
+    breakpoint: $screen-medium
   ),
   large: (
     gutter: $gutter-small,
     container-gutter: $container-gutter,
-    breakpoint: $screen-large,
-    columns: null
+    breakpoint: $screen-large
   )
 )!default;
 
-$breakpoints: map-values($breakpoints-map);
+$breakpoints: map-values($breakpoints-map)!default;
+
+$breakpoints-mm-map: (
+  smaller: (
+    gutter: font-scale(1),
+    container-gutter: $grid-gutter/2,
+    columns: 4,
+    breakpoint: false,
+    margin: true
+  ),
+  small: (
+    gutter: font-scale(1),
+    container-gutter: $container-gutter-smaller,
+    breakpoint: $screen-small
+  ),
+  medium: (
+    gutter: font-scale(1),
+    container-gutter: $container-gutter-small,
+    breakpoint: $screen-medium
+  ),
+  large: (
+    gutter: font-scale(2.5),
+    container-gutter: $container-gutter,
+    breakpoint: $screen-large,
+    margin: true
+  )
+)!default;
+
+$breakpoints-mm: map-values($breakpoints-mm-map)!default;
 
 $overlay-breakpoints-map: (
   smaller: (
     gutter: $gutter-small,
     container-gutter: $container-gutter-smaller,
     breakpoint: false,
-    columns: 4
+    columns: 4,
+    margin: true
   ),
   small: (
     gutter: $gutter-small,
     container-gutter: $container-gutter-smaller,
     breakpoint: $screen-small,
-    columns: 4
+    columns: 2
   ),
   medium: (
     gutter: $gutter-small,
     container-gutter: $gutter-medium,
-    breakpoint: $screen-medium,
-    columns: 4
+    breakpoint: $screen-medium
   ),
   large: (
     gutter: $gutter-small,
     container-gutter: $container-gutter,
-    breakpoint: $screen-large,
-    columns: 4
+    breakpoint: $screen-large
   )
 )!default;
 
-$overlay-breakpoints: map-values($overlay-breakpoints-map);
+$overlay-breakpoints: map-values($overlay-breakpoints-map)!default;
 
 //** Wrappers
 $wrapper-width-large: $screen-larger !default;
