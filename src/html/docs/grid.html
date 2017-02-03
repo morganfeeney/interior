@@ -10,8 +10,8 @@
     <div class="grid">
       <h2>Usage</h2>
       <p>Layouts are created using a grid structure made from a combination of vertical columns laid upon a visual grid, and a variety of — mostly Flexbox — CSS alignment methods. Grid columns are generated via the <code class="code-inline language-scss">.column()</code> mixin.</p>
-      <h5>Required arguments</h5>
-      <p>The <strong>only</strong> required argument is a simple little number.</p>
+      <h5>Arguments</h5>
+      <p>The <strong>only</strong> required argument is a number representing the column width, passed in to the following argument.</p>
         <dl class="dl-horizontal">
           <dt><code class="code-inline language-scss">$columns</code></dt>
           <dd>The value is used to calculate how many columns from the grid you want to span.</dd>
@@ -20,8 +20,8 @@
     </div>
 
     <div class="grid">
-      <h5>Optional arguments</h5>
-      <p>To omit one of the following default arguments, pass a false value to the argument when calling the mixin.</p>
+      <h5>Keyword arguments</h5>
+      <p>The following detail default keyword arguments.</p>
         <dl class="dl-horizontal">
           <dt><code class="code-inline language-scss">$calc</code></dt>
           <dd>Subtracts the <code class="code-inline language-scss">$grid-gutter</code> from the column width using CSS <code class="code-inline language-css">calc()</code>.</dd>
