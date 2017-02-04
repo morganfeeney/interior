@@ -21,8 +21,8 @@ body {
   @media(min-width: $screen-small) {
     column-count: 2;
   }
-  @media(min-width: $screen-medium) {
-    column-gap: $gutter-medium;
+  @media(min-width: $screen-large) {
+    column-gap: font-scale(2.5);
   }
   img {
     @include baseline($no-text: true, $margin: .75, $below: .1);
@@ -56,12 +56,14 @@ footer {
   .tiddler {
     @include column(12, $gutter: $gutter-smaller);
     @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-    @include column(3, $breakpoint: $screen-larger, $margin: null);
+    @include column(12, $breakpoint: $screen-large);
+    @include column(3, $breakpoint: $screen-larger);
   }
   .whopper {
     @include column(12, $gutter: $gutter-smaller);
     @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-    @include column(9, $breakpoint: $screen-larger, $margin: null);
+    @include column(12, $breakpoint: $screen-large);
+    @include column(9, $breakpoint: $screen-larger);
   }
   aside {
     @include column(6, $breakpoint: $screen-larger);
@@ -70,11 +72,13 @@ footer {
   section {
     @include column(12, $gutter: $gutter-smaller);
     @include column(12, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+    @include column(12, $breakpoint: $screen-large);
     @include column(6, $breakpoint: $screen-larger);
   }
   footer {
     @include column(6, $gutter: $gutter-smaller);
     @include column(6, $breakpoint: $screen-medium, $gutter: $gutter-medium);
+    @include column(6, $breakpoint: $screen-large);
   }
 }
 
@@ -100,7 +104,7 @@ footer {
       align-self: flex-start;
       @include column(12, $gutter: $gutter-smaller);
       @include column(9, $breakpoint: $screen-medium, $gutter: $gutter-medium);
-      @include column(7.5, $breakpoint: $screen-large, $margin: null);
+      @include column(7.5, $breakpoint: $screen-large);
       @include column(12, $breakpoint:$screen-larger, $margin: 0, $calc: false);
     }
     > p {

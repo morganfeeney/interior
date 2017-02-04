@@ -164,22 +164,25 @@ $breakpoints-map: (
 )!default;
 
 $breakpoints: map-values($breakpoints-map)!default;
-
+// Need to see how MM was before the code changed
+// got scoping issues surrounding shared code in different layouts using the
+// same theme.
+// approach to displaying grid overlay using Nunjjucks over JS needs implementing too.
 $breakpoints-mm-map: (
   smaller: (
-    gutter: font-scale(1),
-    container-gutter: $grid-gutter/2,
+    gutter: $gutter-smaller,
+    container-gutter: $container-gutter-smaller,
     columns: 4,
     breakpoint: false,
     margin: true
   ),
   small: (
-    gutter: font-scale(1),
+    gutter: $gutter-small,
     container-gutter: $container-gutter-smaller,
     breakpoint: $screen-small
   ),
   medium: (
-    gutter: font-scale(1),
+    gutter: f$gutter-small,
     container-gutter: $container-gutter-small,
     breakpoint: $screen-medium
   ),
@@ -195,7 +198,7 @@ $breakpoints-mm: map-values($breakpoints-mm-map)!default;
 
 $overlay-breakpoints-map: (
   smaller: (
-    gutter: $gutter-small,
+    gutter: $gutter-smaller,
     container-gutter: $container-gutter-smaller,
     breakpoint: false,
     columns: 4,
