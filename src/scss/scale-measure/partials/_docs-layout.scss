@@ -9,10 +9,10 @@ header {
     @include baseline($no-text: true, $margin: 2, $below: -.15);
     max-width: 8rem;
     @media(min-width: $screen-small) {
-      @include baseline($no-text: true, $margin: 4, $below: -.15);
+      @include baseline($no-text: true, $margin: 2, $below: -.15);
     }
     @media(min-width: $screen-large) {
-      @include baseline($no-text: true, $margin: 4, $below: .15);
+      @include baseline($no-text: true, $margin: 2, $below: .15);
     }
   }
   nav {
@@ -35,7 +35,6 @@ h1 {
   @include column(10, $gutter: $gutter-smaller);
   @include column(10, $gutter: $gutter-medium, $breakpoint: $screen-medium);
   @include column(10, $gutter: $gutter-medium, $breakpoint: $screen-large, $offset-left: true, $offset: 2);
-  @include column(6, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-smaller);
 }
 .container section {
   @include column(12, $gutter: $gutter-smaller);
