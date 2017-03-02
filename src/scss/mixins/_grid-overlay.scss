@@ -12,7 +12,8 @@
   $grid-overlay-container: $grid-gutter/2,
   $grid-overlay-gutter: $grid-gutter,
   $break-point: true,
-  $overlay-map: $overlay-breakpoints
+  $overlay-map: $overlay-breakpoints,
+  $parent: null
 ) {
   .grid-overlay {
     display: none;
@@ -33,22 +34,23 @@
     } @else {
       left: 0
     }
-    &-active {
+    &-active#{$parent} {
       .grid-overlay {
         display: flex;
         flex-flow: row nowrap;
         pointer-events: none;
+        > div {
+          margin-top: 0;
+          margin-bottom: 0;
+          padding: 0;
+          border-left: 1px solid red;
+          border-right: 1px solid red;
+          @include auto-columns($map: $overlay-map);
+        }
       }
     }
     // Iterate through the break-points sass-map.
     @include auto-columns($map: $breakpoints, $container: true);
-    > div {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding: 0;
-      border-left: 1px solid red;
-      border-right: 1px solid red;
-      @include auto-columns($map: $overlay-map);
-    }
+    @content;
   }
 }

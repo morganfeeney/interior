@@ -1,9 +1,0 @@
-@include grid-overlay($centred: true, $overlay-map: $breakpoints-mm);
-
-@media(max-width: $screen-small) {
-  .grid-overlay > div {
-    &:nth-of-type(odd) {
-      display: none;
-    }
-  }
-}
