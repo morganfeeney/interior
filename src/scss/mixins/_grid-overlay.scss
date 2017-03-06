@@ -23,8 +23,7 @@
     top: 0;
     height: 100vh;
     z-index: 2;
-    // When the screen is bigger than the width of the grid, center it using
-    // calc()
+    // When the screen is bigger than the width of the grid, center using calc()
     @if $centred == true {
       @media(min-width: $max-width) {
        left: calc(50% - #{$max-width/2});
@@ -39,7 +38,7 @@
     // Allow nested content so the parent class scopes the CSS.
     @content;
   }
-  #{$parent} .grid-overlay  > div {
+  #{$parent} .grid-overlay > div {
     @include auto-columns($map: $overlay-map);
   }
 }

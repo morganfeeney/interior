@@ -2,6 +2,10 @@
 // Layout
 // -----------------------------------------------------------------------------
 
+.grid-main {
+  justify-content: space-between;
+}
+
 .page-crack-magazine-1 #main-header::before {
   content: none;
 }

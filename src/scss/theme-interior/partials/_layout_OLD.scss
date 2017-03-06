@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+
+.container {
+  @include auto-columns($map: $breakpoints, $container: true);
+}
+
+.grid-main {
+  justify-content: space-between;
+}
+
+#main-header {
+  @include baseline($above: 1, $below: 0);
+  text-transform: uppercase;
+  // Border at top of header
+  &:before {
+    content: "";
+    height: .25rem;
+    background: $brand-color-1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  > .container {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    @media(min-width: $screen-small) {
+      flex-flow: row wrap;
+    }
+  }
+  .intro {
+    width: 100%;
+  }
+}
+
+#main-header {
+  .intro {
+    margin-top: $vertical-space;
+  }
+}
+
+// Multi column layout
+//
+// 1 x columns, then 2 x columns on medium screens
+.cols-2 > div {
+  @include column(12);
+  @media(min-width: $screen-medium) {
+    @include column(6);
+  }
+}
+
+.layout-1 > div {
+  @include column(12);
+  @media(min-width: $screen-medium) {
+    @include column(6);
+  }
+}
+
+.cols-3 > div {
+  @include column(4);
+}
+
+.column-count-experiment {
+  column-count: 2;
+  column-width: 100vw;
+  height: 100vh;
+  column-gap: 7rem;
+  max-width: none;
+}
+
+.fill {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  h1 {
+    flex: 1 1 auto;
+  }
+}

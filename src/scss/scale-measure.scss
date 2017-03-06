@@ -7,8 +7,8 @@
 @import "functions/vertical-rhythm";
 
 // Variables
-@import "scale-measure/partials/modular-scale";
-@import "scale-measure/partials/variables";
+@import "theme-interior/partials/modular-scale";
+@import "theme-interior/partials/variables";
 @import "partials/variables";
 
 // Mixins
@@ -17,9 +17,9 @@
 
 // Theme Mixins
 @import "theme-interior/mixins/typography";
-@import "scale-measure/mixins/specimen-mixins";
-@import "scale-measure/mixins/headings";
-@import "scale-measure/mixins/body";
+@import "theme-interior/mixins/specimen-mixins";
+@import "theme-interior/mixins/headings";
+@import "theme-interior/mixins/body";
 @import "mixins/layout";
 
 // Core partials
@@ -36,5 +36,5 @@
 @import "theme-interior/partials/base";
 @import "scale-measure/partials/typography";
 @import "theme-interior/partials/dl-horizontal";
-@import "scale-measure/partials/measuring-sticks";
-@import "scale-measure/partials/layout";
+@import "theme-interior/partials/measuring-sticks";
+@import "theme-interior/partials/layout";
