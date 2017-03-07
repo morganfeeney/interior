@@ -11,7 +11,7 @@
 @import "theme-interior/partials/variables";
 @import "partials/variables";
 
-// Mixins
+// Core mixins
 @import "mixins/baseline";
 @import "mixins/columns";
 @import "mixins/layout";
@@ -34,7 +34,7 @@
 @import "theme-interior/partials/grid-overlay";
 @import "theme-interior/partials/code";
 @import "theme-interior/partials/base";
-@import "scale-measure/partials/typography";
+@import "theme-interior/partials/typography";
 @import "theme-interior/partials/dl-horizontal";
 @import "theme-interior/partials/posts-nav";
 @import "theme-interior/partials/measuring-sticks";
