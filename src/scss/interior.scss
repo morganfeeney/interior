@@ -14,25 +14,25 @@
 // Mixins
 @import "mixins/baseline";
 @import "mixins/columns";
+@import "mixins/layout";
+@import "mixins/grid-overlay";
 
 // Theme Mixins
 @import "theme-interior/mixins/typography";
 @import "theme-interior/mixins/specimen-mixins";
 @import "theme-interior/mixins/headings";
 @import "theme-interior/mixins/body";
-@import "mixins/layout";
 
 // Core partials
 @import "partials/layout";
-@import "mixins/grid-overlay";
-@import "theme-interior/partials/grid-overlay";
 @import "partials/grid-overlay";
 @import "partials/baseline-grid";
 @import "partials/image";
 @import "partials/buttons";
-@import "theme-interior/partials/code";
 
 // Theme partials
+@import "theme-interior/partials/grid-overlay";
+@import "theme-interior/partials/code";
 @import "theme-interior/partials/base";
 @import "scale-measure/partials/typography";
 @import "theme-interior/partials/dl-horizontal";
