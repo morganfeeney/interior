@@ -97,9 +97,9 @@ footer {
       align-content: flex-start;
     }
     flex-flow: column;
-      @include column(6, $breakpoint: $screen-larger) {
-        order: 4;
-      };
+    @include column(6, $breakpoint: $screen-larger) {
+      order: 4;
+    };
     > img {
       align-self: flex-start;
       @include column(12, $gutter: $gutter-smaller);

@@ -39,7 +39,12 @@ code {
 }
 
 pre {
-  @include baseline($no-text: true, $margin: 1, $padding-top: 0, $below: 0);
+  @include baseline(
+		$no-text: true,
+		$margin: 1,
+		$padding-top: 0,
+		$below: 0
+	);
 }
 
 // pre.code-block {
@@ -50,7 +55,10 @@ pre {
 // }
 
 pre:before {
-  @include baseline($english, $line-height: 1.5);
+  @include baseline(
+		$english,
+		$line-height: 1.5
+	);
   // Use mixin but override unwanted parts
   margin-bottom: 0;
   padding-left: 1rem;
@@ -64,6 +72,10 @@ pre:before {
 }
 
 .code-block code {
-  @include baseline($line-height: 2, $above: .5, $margin-bottom: 0);
+  @include baseline(
+		$line-height: 2,
+		$above: .5,
+		$margin-bottom: 0
+	);
 	padding-bottom: 1rem;
 }

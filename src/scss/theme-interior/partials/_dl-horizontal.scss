@@ -4,34 +4,109 @@
   justify-content: flex-end;
   align-content: flex-start;
   @media(max-width: $screen-medium-max) {
-    @include column(12, $calc: false, $margin: false);
+    @include column(
+      $columns: 12,
+      $calc: false,
+      $margin: false
+    );
   }
-  @include column(12, $gutter: $gutter-small, $breakpoint: $screen-medium, $margin: false, $calc: false);
-  @include column(8, $breakpoint: $screen-largest, $offset-left: true, $offset: 4, $gutter: $gutter-small);
+  @media(min-width: $screen-medium) {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-small,
+      $margin: false,
+      $calc: false
+    );
+  }
+  @media(min-width: $screen-largest) {
+    @include column(
+      $columns: 8,
+      $offset-left: true, $offset: 4,
+      $gutter: $gutter-small
+    );
+  }
+
   dt {
     @media(min-width: $screen-medium) and (max-width: $screen-largest-max){
       text-align: right;
     }
-    @include column(12, $gutter: $gutter-small);
-    @include column(2, $max-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
-    @include column(1, $max-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
-    @include column(2, $max-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
-  }
-  dd {
-    @include column(12, $gutter: $gutter-small);
-    @include column(3, $max-columns: 5, $gutter: $gutter-medium, $breakpoint: $screen-medium);
-    @include column(3, $max-columns: 4, $gutter: $gutter-medium, $breakpoint: $screen-large);
-    @include column(2, $max-columns: 2, $calc: false, $margin: false, $breakpoint: $screen-largest){margin: 0};
-  }
-  dt, dd {
-    @include baseline($line-height: 2, $above: .5);
-  }
-  dt {
-    @media(max-width: $screen-medium-max) {
-      @include baseline($line-height: 2, $above: 1.5, $margin: -1);
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-small
+    );
+    @media(min-width: $screen-medium) {
+      @include column(
+        $columns: 2,
+        $max-columns: 5
+      );
+    }
+    @media(min-width: $screen-large) {
+      @include column(
+        $columns: 1,
+        $max-columns: 4,
+        $gutter: $gutter-medium
+      );
     }
     @media(min-width: $screen-largest) {
-      @include baseline($line-height: 2, $above: 1.5, $margin: -1);
+      @include column(
+        $columns: 2,
+        $max-columns: 2,
+        $calc: false,
+        $margin: false
+      ) {margin: 0};
+    }
+  }
+
+  dd {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-small
+    );
+    @media(min-width: $screen-medium) {
+      @include column(
+        $columns: 3,
+        $max-columns: 5,
+        $gutter: $gutter-medium
+      );
+    }
+    @media(min-width: $screen-large) {
+      @include column(
+        $columns: 3,
+        $max-columns: 4,
+        $gutter: $gutter-medium
+      );
+    }
+    @media(min-width: $screen-largest) {
+      @include column(
+        $columns: 2,
+        $max-columns: 2,
+        $calc: false,
+        $margin: false
+      ) {margin: 0};
+    }
+  }
+
+  dt, dd {
+    @include baseline(
+      $line-height: 2,
+      $above: .5
+    );
+  }
+
+  dt {
+    @media(max-width: $screen-medium-max) {
+      @include baseline(
+        $line-height: 2,
+        $above: 1.5,
+        $margin: -1
+      );
+    }
+    @media(min-width: $screen-largest) {
+      @include baseline(
+        $line-height: 2,
+        $above: 1.5,
+        $margin: -1
+      );
     }
   }
 }

@@ -34,11 +34,16 @@
       left: 0
     }
     // Iterate through the break-points sass-map.
-    @include auto-columns($map: $breakpoints, $container: true);
+    @include auto-columns(
+      $map: $breakpoints,
+      $container: true
+    );
     // Allow nested content so the parent class scopes the CSS.
     @content;
   }
   #{$parent} .grid-overlay > div {
-    @include auto-columns($map: $overlay-map);
+    @include auto-columns(
+      $map: $overlay-map
+    );
   }
 }

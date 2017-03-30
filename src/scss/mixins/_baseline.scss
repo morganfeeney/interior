@@ -2,7 +2,19 @@
 // Mixin — Baseline
 // -----------------------------------------------------------------------------
 
-@mixin baseline($font-size: $font-base, $unit: 1, $line-height: $line-height-base * $unit, $margin: 0, $above: 0, $below: 0, $padding-top: (cap-height($font-size))+($above*$base-line-unit), $padding-bottom: null, $margin-bottom: ($base-line-unit - $padding-top)+($below*$base-line-unit), $margin-top: ($margin*$base-line-unit), $no-text: false) {
+@mixin baseline(
+  $font-size: $font-base,
+  $unit: 1,
+  $line-height: ($line-height-base * $unit),
+  $margin: 0,
+  $above: 0,
+  $below: 0,
+  $padding-top: ((cap-height($font-size))+($above*$base-line-unit)),
+  $padding-bottom: null,
+  $margin-bottom: (($base-line-unit - $padding-top)+($below*$base-line-unit)),
+  $margin-top: ($margin * $base-line-unit),
+  $no-text: false
+) {
   @if $no-text == false {
     font-size: $font-size;
     line-height: $line-height;
@@ -13,7 +25,11 @@
   margin-bottom: $margin-bottom;
 }
 
-@mixin baseline-grid($grid-color: $grid-color, $grid-bg: $grid-bg, $grid-bg-size: $grid-bg-size) {
+@mixin baseline-grid(
+  $grid-color: $grid-color,
+  $grid-bg: $grid-bg,
+  $grid-bg-size: $grid-bg-size
+) {
   background-image: linear-gradient(to bottom, $grid-color 0, $grid-bg 1px);
   background-repeat: repeat-y;
   background-size: $grid-bg-size;
