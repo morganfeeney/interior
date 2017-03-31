@@ -12,7 +12,11 @@ img {
 }
 .container > img {
   align-self: center;
-  @include baseline($font-base, $no-text: true, $margin: 2);
+  @include baseline(
+    $font-size: $font-base,
+    $no-text: true,
+    $margin: 2
+  );
 }
 
 .item > img {
@@ -20,5 +24,9 @@ img {
 }
 
 p + img {
-  @include baseline($no-text: true, $above: .4, $below: .4);
+  @include baseline(
+    $no-text: true,
+    $above: .4,
+    $below: .4
+  );
 }

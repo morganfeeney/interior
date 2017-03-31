@@ -2,7 +2,7 @@
 
 @mixin heading-1() {
   @include baseline(
-    $double-english, 
+    $font-size: $double-english,
     $line-height: 1.18,
     $above: 1.3,
     $below: 2
@@ -12,7 +12,7 @@
 
 @mixin heading-2() {
   @include baseline(
-    $two-line-pica,
+    $font-size: $two-line-pica,
     $line-height: 1.28,
     $above: .33,
     $below: 1
@@ -22,7 +22,7 @@
 
 @mixin heading-3() {
   @include baseline(
-    $double-pica,
+    $font-size: $double-pica,
     $line-height: 1.15,
     $above: .1,
     $below: 1
@@ -32,7 +32,7 @@
 
 @mixin heading-4() {
   @include baseline(
-    $paragon,
+    $font-size: $paragon,
     $line-height: .96,
     $below: 0
   );
@@ -41,7 +41,7 @@
 
 @mixin heading-5() {
   @include baseline(
-    $great-primer,
+    $font-size: $great-primer,
     $line-height: 1.25,
     $above: .2,
     $below: .1
@@ -51,7 +51,7 @@
 
 @mixin heading-6() {
   @include baseline(
-    $english,
+    $font-size: $english,
     $line-height: 2,
     $above: .5,
     $below: -1
@@ -61,7 +61,7 @@
 
 @mixin heading-whopper() {
   @include baseline(
-    $two-line-pica,
+    $font-size: $two-line-pica,
     $line-height: 1.28,
     $margin: 8,
     $above: .45,

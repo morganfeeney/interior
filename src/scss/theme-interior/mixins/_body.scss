@@ -1,5 +1,9 @@
 // Opting for @include over @extend here.
 
 @mixin body-1() {
-  @include baseline($english, $line-height: 2, $above: .5);
+  @include baseline(
+    $font-size: $english,
+    $line-height: 2,
+    $above: .5
+  );
 }
