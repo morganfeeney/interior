@@ -56,7 +56,7 @@ pre {
 
 pre:before {
   @include baseline(
-		$english,
+		$font-size: $english,
 		$line-height: 1.5
 	);
   // Use mixin but override unwanted parts

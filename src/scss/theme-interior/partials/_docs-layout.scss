@@ -1,4 +1,5 @@
 .docs-layout {
+
   .container-outer {
     width: 100%;
   }
@@ -61,6 +62,7 @@
       }
     }
   }
+
   h1 {
     @include column(
       $columns: 10,
@@ -81,6 +83,7 @@
       );
     }
   }
+
   .container section {
     @include column(
       $columns: 12,
@@ -129,6 +132,7 @@
       );
     }
   }
+
   .dl-wrapper,
   .code-block {
     @include column(
@@ -136,11 +140,13 @@
       $gutter: $gutter-smaller
     );
   }
+
   footer {
     @media(min-width: $screen-large) {
       margin: 0;
     }
   }
+
   .sig {
     @include baseline($margin: 10);
     @include column(
@@ -150,4 +156,5 @@
       $breakpoint: $screen-large
     );
   }
+
 }

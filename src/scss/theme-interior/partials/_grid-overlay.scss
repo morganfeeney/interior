@@ -1,5 +1,9 @@
 // 8 columns with a large gutter - used on Modular Man grid layout
-@include grid-overlay($centred: true, $overlay-map: $breakpoints-mm, $parent: "._8-column-grid-overlay") {
+@include grid-overlay(
+  $centred: true,
+  $overlay-map: $breakpoints-mm,
+  $parent: "._8-column-grid-overlay"
+) {
   @media(max-width: $screen-small) {
     & > div {
       &:nth-of-type(odd) {
@@ -10,7 +14,10 @@
 };
 
 // 6 columns with a small gutter - used on docs layout
-@include grid-overlay($centred: true, $parent: "._6-column-grid-overlay") {
+@include grid-overlay(
+  $centred: true,
+  $parent: "._6-column-grid-overlay"
+) {
   @media(max-width: $screen-small) {
     & > div {
       &:nth-of-type(odd) {
