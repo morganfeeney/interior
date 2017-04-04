@@ -7,6 +7,7 @@ html {
    font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
   }
 }
+
 body {
  font-kerning: normal;
 }
@@ -20,6 +21,8 @@ h1 {
 h2, h2, h3, h4, h5, h6 {
   @include heading-6()
 }
+
+// Used to demonstrate the effects of applying these classes - scale and measure.
 .heading-1 {
   @include heading-1();
 }
@@ -38,42 +41,109 @@ h2, h2, h3, h4, h5, h6 {
 .heading-6 {
   @include heading-6();
 }
+
 p {
   @include body-1();
 }
+
 .large {
-  @include baseline($great-primer, $line-height: 1.25, $above: .2, $below: 2);
+  @include baseline(
+    $font-size: $great-primer,
+    $line-height: 1.25,
+    $above: .2,
+    $below: 2
+  );
 }
+
 .small {
-  @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2);
+  @include baseline(
+    $font-size: $pica,
+    $line-height: 1.25,
+    $above: 0.1,
+    $below: 2
+  );
 }
+
 aside .small {
-  @include baseline($pica, $line-height: 1.25, $above: 0.1, $below: 2.5);
+  @include baseline(
+    $font-size: $pica,
+    $line-height: 1.25,
+    $above: 0.1,
+    $below: 2.5
+  );
 }
 
 .tiddler {
-  @include baseline($mittel, $line-height: 1.9, $above: 0.5, $below: 0, $margin: 1);
+  @include baseline(
+    $font-size: $mittel,
+    $line-height: 1.9,
+    $above: 0.5,
+    $below: 0,
+    $margin: 1
+  );
   @media(min-width: $screen-small) {
-    @include baseline($great-primer, $line-height: 1.25, $above: .15, $below: .1, $margin: 1);
+    @include baseline(
+      $font-size: $great-primer,
+      $line-height: 1.25,
+      $above: .15,
+      $below: .1,
+      $margin: 1
+    );
   }
   @media(min-width: $screen-large) {
-    @include baseline($great-primer, $line-height: 1.25, $above: .15, $below: .1, $margin: 4);
+    @include baseline(
+      $font-size: $great-primer,
+      $line-height: 1.25,
+      $above: .15,
+      $below: .1,
+      $margin: 4
+    );
   }
 }
 
 .whopper {
-  @include baseline($great-primer, $line-height: 1.25, $above: 0.25, $below: 1, $margin: 2);
+  @include baseline(
+    $font-size: $great-primer,
+    $line-height: 1.25,
+    $above: 0.25,
+    $below: 1,
+    $margin: 2
+  );
   @media(min-width: $screen-small) {
-    @include baseline($paragon, $line-height: 1.23, $above: .6, $below: 1, $margin: 5);
+    @include baseline(
+      $font-size: $paragon,
+      $line-height: 1.23,
+      $above: .6,
+      $below: 1,
+      $margin: 5
+    );
   }
   @media(min-width: $screen-large) {
-    @include baseline($double-pica, $line-height: 1.15, $above: 0, $below: 1, $margin: 10);
+    @include baseline(
+      $font-size: $double-pica,
+      $line-height: 1.15,
+      $above: 0,
+      $below: 1,
+      $margin: 10
+    );
   }
   @media(min-width: $screen-larger) {
-    @include baseline($two-line-pica, $line-height: 1.28, $above: .33, $below: 1, $margin: 15);
+    @include baseline(
+      $font-size: $two-line-pica,
+      $line-height: 1.28,
+      $above: .33,
+      $below: 1,
+      $margin: 15
+    );
   }
   @media(min-width: $screen-whopper) {
-    @include baseline($double-english, $line-height: 1.19, $above: 0.3, $below: 4, $margin: 15);
+    @include baseline(
+      $font-size: $double-english,
+      $line-height: 1.19,
+      $above: 0.3,
+      $below: 4,
+      $margin: 15
+    );
   }
 }
 

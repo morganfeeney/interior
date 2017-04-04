@@ -1,9 +1,9 @@
 // -----------------------------------------------------------------------------
 // Mixin — Baseline
 // -----------------------------------------------------------------------------
-
 @mixin baseline(
   $font-size: $font-base,
+  $font-weight: false,
   $unit: 1,
   $line-height: ($line-height-base * $unit),
   $margin: 0,
@@ -18,6 +18,9 @@
   @if $no-text == false {
     font-size: $font-size;
     line-height: $line-height;
+  }
+  @if $font-weight != false {
+    font-weight: $font-weight;
   }
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
