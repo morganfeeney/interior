@@ -3,13 +3,23 @@
 // -----------------------------------------------------------------------------
 
 .visual-grid-1 {
-  @include baseline($no-text: true, $above: 0, $below: 0, $margin: 1.32);
+  @include baseline(
+    $no-text: true,
+    $above: 0,
+    $below: 0,
+    $margin: 1.32
+  );
   @include grid();
   > div {
     @include grid();
     @include column(12);
     @media(min-width: $screen-medium) {
-      @include column(8, $gutter: $horizontal-space-small, $margin-left: $horizontal-space-small, $margin-right: $horizontal-space-small);
+      @include column(
+        $columns: 8,
+        $gutter: $horizontal-space-small,
+        $margin-left: $horizontal-space-small,
+        $margin-right: $horizontal-space-small
+      );
     }
     background: $brand-color-mid;
     min-height: 100px;

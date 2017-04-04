@@ -18,7 +18,11 @@
 
 .page-crack-magazine-1 {
   aside {
-    @include column(12, $calc: false, $margin: false);
+    @include column(
+      $columns: 12,
+      $calc: false,
+      $margin: false
+    );
     @include baseline($margin: .34);
     @media(min-width: $screen-medium) {
       @include baseline($margin: 12.34);
@@ -29,10 +33,17 @@
     display: flex;
     flex-flow: row wrap;
     @media(min-width: $screen-medium) {
-      @include column(9, $margin: auto);
+      @include column(
+        $columns: 9,
+        $margin: auto
+      );
     }
     .item {
-      @include baseline($above: 1, $below: 2, $no-text: true);
+      @include baseline(
+        $above: 1,
+        $below: 2,
+        $no-text: true
+      );
       @include grid($negative-gutter: -1rem);
       @media(min-width: $screen-medium) {
         @include grid($negative-gutter: 0);
@@ -51,9 +62,16 @@
 
 .layout-contents .item:nth-child(1) {
   align-items: flex-end;
-  @include baseline($no-text: true, $above: .34);
+  @include baseline(
+    $no-text: true,
+    $above: .34
+  );
   @media(min-width: $screen-medium) {
-    @include baseline($margin: 12, $no-text: true, $above: .34);
+    @include baseline(
+      $margin: 12,
+      $no-text: true,
+      $above: .34
+    );
   }
   &::before {
     content: none;
@@ -96,21 +114,39 @@
 }
 
 .layout-contents .item:nth-child(2) {
-  @include baseline($no-text: true, $above: .34);
+  @include baseline(
+    $no-text: true,
+    $above: .34
+  );
   @media(min-width: $screen-medium) {
-    @include baseline($no-text: true, $above: 7.34, $below: 10);
+    @include baseline(
+      $no-text: true,
+      $above: 7.34,
+      $below: 10
+    );
   }
 }
 
 .layout-contents .item:nth-child(3) {
-  @include baseline($no-text: true, $above: 1.34, $below: 2.5);
+  @include baseline(
+    $no-text: true,
+    $above: 1.34,
+    $below: 2.5
+  );
   @media(min-width: $screen-medium) {
-    @include column(8, $calc: false, $margin: false);
+    @include column(
+      $columns: 8,
+      $calc: false,
+      $margin: false
+    );
     margin-left: auto;
     align-items: center;
   }
   > div {
-    @include column(6, $margin-left: auto);
+    @include column(
+      $columns: 6,
+      $margin-left: auto
+    );
   }
   > img {
     @include column(6);
@@ -118,21 +154,36 @@
 }
 
 .layout-contents .item:nth-child(4) {
-  @include baseline($no-text: true, $above: 1.34, $below: 3);
+  @include baseline(
+    $no-text: true,
+    $above: 1.34,
+    $below: 3
+  );
   &::before {
     content: none;
   }
 }
 
 .layout-contents .item:nth-child(5) {
-  @include baseline($no-text: true, $above: 1.34, $below: 1.34);
+  @include baseline(
+    $no-text: true,
+    $above: 1.34,
+    $below: 1.34
+  );
   @media(min-width: $screen-medium) {
-    @include column(8, $calc: false, $margin: false);
+    @include column(
+      $columns: 8,
+      $calc: false,
+      $margin: false
+    );
     margin-right: auto;
     align-items: flex-start;
   }
   > img {
-    @include column(6, $margin-left: auto);
+    @include column(
+      $columns: 6, 
+      $margin-left: auto
+    );
     order: 1;
   }
   > div {

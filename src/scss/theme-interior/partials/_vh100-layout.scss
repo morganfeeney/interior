@@ -16,7 +16,12 @@
     }
     > p:first-of-type {
       @include border-with-content('Foreword');
-      @include baseline($line-height: 1.5, $above: 1.1, $below: .5, $margin: 3);
+      @include baseline(
+        $line-height: 1.5,
+        $above: 1.1,
+        $below: .5,
+        $margin: 3
+      );
       text-transform: none;
       @media(min-width: $screen-medium) {
         align-self: flex-end;
@@ -26,14 +31,29 @@
   time {
     z-index: 1;
     font-weight: $font-weight-border-with-content;
-    @include baseline($pica, $above: .6, $below: 0, $margin: -1.9);
+    @include baseline(
+      $font-size: $pica,
+      $above: .6,
+      $below: 0,
+      $margin: -1.9
+    );
     position: absolute;
     @media(min-width: $screen-large) {
-      @include baseline($pica, $below: 0, $above: 4, $padding-bottom: .4rem, $margin-bottom: 0);
+      @include baseline(
+        $font-size: $pica,
+        $below: 0,
+        $above: 4,
+        $padding-bottom: .4rem,
+        $margin-bottom: 0
+      );
     }
   }
   .intro h1 {
-    @include column(12, $calc: false, $margin: false);
+    @include column(
+      $columns: 12,
+      $calc: false,
+      $margin: false
+    );
   }
   section > p,
   .intro > p {
