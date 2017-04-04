@@ -1,96 +1,92 @@
 {% extends "layouts/docs-layout.njk" %}
 {% set page_description = "Use the column() mixin to create columns for use with flexbox layouts." %}
 {% set post_page = true %}
-{# set these for dev purposes #}
-{% set layout_classes = "grid-visible baseline-grid" %}
 
-{% block main %}
-  {{ super() }}
-  <section id="grid">
-    <div class="grid">
-      <h2>Usage</h2>
-      <p>Layouts are created using a grid structure made from a combination of vertical columns laid upon a visual grid, and a variety of — mostly Flexbox — CSS alignment methods. Grid columns are generated via the <code class="code-inline language-scss">.column()</code> mixin.</p>
-      <h5>Arguments</h5>
-      <p>The <strong>only</strong> required argument is a number representing the column width, passed in to the following argument.</p>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$columns</code></dt>
-          <dd>The value is used to calculate how many columns from the grid you want to span.</dd>
-        </dl>
-      {% include "../partials/code-samples/col-scss-required.njk" %}
-    </div>
 
-    <div class="grid">
-      <h5>Keyword arguments</h5>
-      <p>The following detail default keyword arguments.</p>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$calc</code></dt>
-          <dd>Subtracts the <code class="code-inline language-scss">$grid-gutter</code> from the column width using CSS <code class="code-inline language-css">calc()</code>.</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$margin</code></dt>
-          <dd>Aligns grid content with non-grid content using a negative margin. Otherwise centers the column.</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$padding</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$columns</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$max-columns</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$gutter</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$breakpoint</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$margin-left</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$margin-right</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$padding-left</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$padding-right</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$offset-right</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$offset-left</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$offset</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$offset-calc</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$custom-margin</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-        <dl class="dl-horizontal">
-          <dt><code class="code-inline language-scss">$custom-width</code></dt>
-          <dd>Fill me in</dd>
-        </dl>
-      {% include "../partials/code-samples/col-scss-optional.njk" %}
-    </div>
-  </section>
+{% block content %}
+  <div class="grid">
+    <h2>Usage</h2>
+    <p>Layouts are created using a grid structure made from a combination of vertical columns laid upon a visual grid, and a variety of — mostly Flexbox — CSS alignment methods. Grid columns are generated via the <code class="code-inline language-scss">.column()</code> mixin.</p>
+    <h5>Arguments</h5>
+    <p>The <strong>only</strong> required argument is a number representing the column width, passed in to the following argument.</p>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$columns</code></dt>
+        <dd>The value is used to calculate how many columns from the grid you want to span.</dd>
+      </dl>
+    {% include "../partials/code-samples/col-scss-required.njk" %}
+  </div>
+
+  <div class="grid">
+    <h5>Keyword arguments</h5>
+    <p>The following detail default keyword arguments.</p>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$calc</code></dt>
+        <dd>Subtracts the <code class="code-inline language-scss">$grid-gutter</code> from the column width using CSS <code class="code-inline language-css">calc()</code>.</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$margin</code></dt>
+        <dd>Aligns grid content with non-grid content using a negative margin. Otherwise centers the column.</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$padding</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$columns</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$max-columns</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$gutter</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$breakpoint</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$margin-left</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$margin-right</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$padding-left</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$padding-right</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$offset-right</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$offset-left</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$offset</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$offset-calc</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$custom-margin</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+      <dl class="dl-horizontal">
+        <dt><code class="code-inline language-scss">$custom-width</code></dt>
+        <dd>Fill me in</dd>
+      </dl>
+    {% include "../partials/code-samples/col-scss-optional.njk" %}
+  </div>
 {% endblock %}

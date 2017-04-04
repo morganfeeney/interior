@@ -1,5 +1,7 @@
 {% extends "templates/prototype-template.njk" %}
 {% set body_classes = "docs-layout _6-column-grid-overlay" %}
+{# set these for dev purposes #}
+{% set layout_classes = "grid-visible baseline-grid" %}
 {% set cols = 6 %}
 
 {% block linked_css %}
@@ -9,5 +11,10 @@
 {% block main %}
   {% block intro %}
     <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
+  {% endblock %}
+  {% block section %}
+    <section id="{{ page }}">
+      {% block content %}{% endblock %}
+    </section>
   {% endblock %}
 {% endblock %}
