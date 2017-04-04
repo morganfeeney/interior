@@ -114,22 +114,35 @@
         $columns: 12,
         $gutter: $gutter-smaller
       );
-      @include column(
-        $columns: 4,
-        $breakpoint: $screen-largest,
-        $gutter: $gutter-smaller
-      );
+      @media(min-width: $screen-largest) {
+        @include column(
+          $columns: 4,
+          $gutter: $gutter-smaller
+        );
+      }
     }
     p {
       @include column(
         $columns: 12,
         $gutter: $gutter-smaller
       );
-      @include column(
-        $columns: 8,
-        $breakpoint: $screen-largest,
-        $gutter: $gutter-smaller
-      );
+      @media(min-width: $screen-largest) {
+        @include column(
+          $columns: 8,
+          $gutter: $gutter-smaller
+        );
+      }
+    }
+    p + p,
+    blockquote + p {
+      @media(min-width: $screen-largest) {
+        @include column(
+          $columns: 8,
+          $offset: 4,
+          $offset-left: true,
+          $gutter: $gutter-smaller
+        );
+      }
     }
   }
 
