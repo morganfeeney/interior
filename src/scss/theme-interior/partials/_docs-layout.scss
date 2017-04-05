@@ -121,29 +121,34 @@
         );
       }
     }
-    p {
+  }
+
+  .grid > p,
+  .grid > blockquote {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-smaller
+    );
+    @media(min-width: $screen-largest) {
       @include column(
-        $columns: 12,
+        $columns: 8,
         $gutter: $gutter-smaller
       );
-      @media(min-width: $screen-largest) {
-        @include column(
-          $columns: 8,
-          $gutter: $gutter-smaller
-        );
-      }
     }
-    p + p,
-    blockquote + p {
-      @media(min-width: $screen-largest) {
-        @include column(
-          $columns: 8,
-          $offset: 4,
-          $offset-left: true,
-          $gutter: $gutter-smaller
-        );
+  }
+
+  .grid {
+      & > p + p,
+      & > blockquote + p {
+        @media(min-width: $screen-largest) {
+          @include column(
+            $columns: 8,
+            $offset: 4,
+            $offset-left: true,
+            $gutter: $gutter-smaller
+          );
+        }
       }
-    }
   }
 
   .dl-wrapper,

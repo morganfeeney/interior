@@ -64,6 +64,32 @@ p {
   );
 }
 
+blockquote {
+  @include baseline(
+    $margin: .5,
+    $above: 1,
+    $below: 1.5
+  );
+  p, cite {
+    @include body-1();
+    font-style: oblique;
+    display: inline;
+  }
+  p {
+    &::before {
+      content: "\2018";
+    }
+    &::after {
+      content: "\2019";
+    }
+  }
+  cite {
+    &::before {
+      content: "\2014"
+    }
+  }
+}
+
 aside .small {
   @include baseline(
     $font-size: $pica,
