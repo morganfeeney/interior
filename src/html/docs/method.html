@@ -29,16 +29,20 @@
   <div class="grid">
     <h2>Separation</h2>
     <p>Keeping markup and presentation separate makes life easier going forward. There are many benefits, the primary benefit being that changes can be made using <strong><u>only</u></strong> CSS.</p>
-    <h5>Don't set things in stone</h5>
+    <h5>Try not to set things in stone</h5>
     <p>Describing in markup the appearance of anything limits what may be altered later.</p>
-    <h5>Example</h5>
     <p>In figure 2 the classes are descriptive of how many columns they span. This is fine until something requires an update, if the width needs to change you have no choice—if you want your markup to be semantic—but to change the markup.</p>
-    {% include "../partials/code-samples/col-scss-set-in-stone.njk" %}
+    <figure>
+      {% include "../partials/code-samples/col-scss-set-in-stone.njk" %}
+      <figcaption>Figure 2</figcaption>
+    </figure>
     <h5>Choice</h5>
     <p>You could either change both HTML and CSS, change HTML only—but be limited by existing styles—or change CSS only.</p>
-    <h5>Example</h5>
     <p>If you keep your markup <strong>generic</strong> this change could be a matter of updating the CSS only. In figure 3 the generic <code class="code-inline language-markup">&lt;div&gt;</code> tag replaces the specific <code class="code-inline language-markup">&lt;div class="col-4"&gt;</code> &amp; <code class="code-inline language-markup">&lt;div class="col-6"&gt;</code> tags.</p>
-    {% include "../partials/code-samples/col-scss-layout-1.njk" %}
+    <figure>
+      {% include "../partials/code-samples/col-scss-layout-1.njk" %}
+      <figcaption>Figure 3</figcaption>
+    </figure>
   </div>
 {% endblock %}
 

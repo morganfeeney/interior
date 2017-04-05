@@ -10,7 +10,7 @@
     $margin: 1
   );
   > div {
-    @include grid($gutter-small/2);
+    @include grid(0);
     background: $brand-color-mid;
     min-height: 10rem;
     padding: $horizontal-space-small/2;

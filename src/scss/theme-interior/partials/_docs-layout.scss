@@ -151,6 +151,20 @@
       }
   }
 
+  .grid figure {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-smaller
+    );
+    pre {
+      @include column(
+        $columns: 12,
+        $calc: false,
+        $margin: 0
+      );
+    }
+  }
+
   .dl-wrapper,
   .code-block {
     @include column(
