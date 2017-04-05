@@ -197,3 +197,14 @@ aside .small {
     hyphens: auto;
   }
 }
+
+figcaption {
+  @include baseline(
+    $font-size: $pica,
+    $above: .25,
+    $below: .25
+  );
+  color: $mid-gray;
+  padding-right: $horizontal-space-small/2;
+  text-align: right;
+}

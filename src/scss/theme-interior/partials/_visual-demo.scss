@@ -7,25 +7,18 @@
     $no-text: true,
     $above: 0,
     $below: 0,
-    $margin: 1.32
+    $margin: 1
   );
-  @include grid();
   > div {
-    @include grid();
-    @include column(12);
-    @media(min-width: $screen-medium) {
-      @include column(
-        $columns: 8,
-        $gutter: $horizontal-space-small,
-        $margin-left: $horizontal-space-small,
-        $margin-right: $horizontal-space-small
-      );
-    }
+    @include grid($gutter-small/2);
     background: $brand-color-mid;
-    min-height: 100px;
-    padding: 1rem 0;
+    min-height: 10rem;
+    padding: $horizontal-space-small/2;
     > div {
-      @include column(6);
+      @include column(
+        $columns: 6,
+        $gutter: $gutter-medium
+      );
       background: $brand-color-1;
       color: $brand-color-light;
       display: flex;
