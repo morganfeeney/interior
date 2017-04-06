@@ -13,8 +13,15 @@
     <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
   {% endblock %}
   {% block section %}
-    <section id="{{ page }}">
+    <section>
       {% block content %}{% endblock %}
+    </section>
+  {% endblock %}
+  {% block bigmofo %}
+  {% endblock %}
+  {% block closing_section %}
+    <section>
+      {% block closing_content %}{% endblock %}
     </section>
   {% endblock %}
 {% endblock %}

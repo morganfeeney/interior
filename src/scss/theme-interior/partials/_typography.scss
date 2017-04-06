@@ -180,15 +180,6 @@ aside .small {
   &:not(:first-child) {
     text-indent: 1.62rem;
   }
-  // @supports (initial-letter: 2 ) or
-  //   (-webkit-initial-letter: 2 ) {
-  //   &:first-of-type::first-letter {
-  //     font-family: serif, garamond, times;
-  //     -webkit-initial-letter: 3 2;
-  //     initial-letter: 3 2;
-  //     padding: .25rem;
-  //   }
-  // }
 }
 
 @media(min-width: $screen-large) {
@@ -202,7 +193,8 @@ figcaption {
   @include baseline(
     $font-size: $pica,
     $above: .25,
-    $below: .25
+    $below: .25,
+    $margin: -1
   );
   color: $mid-gray;
   text-align: right;

@@ -3,12 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .visual-grid-1 {
-  @include baseline(
-    $no-text: true,
-    $above: 0,
-    $below: 0,
-    $margin: 1
-  );
+  margin: $font-base 0;
   > div {
     @include grid(0);
     background: $brand-color-mid;
