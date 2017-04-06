@@ -3,8 +3,6 @@
 {% set post_page = true %}
 {% set scales = data.modular_scales.golden_section_and_minor_second %}
 
-
-
 {% block content %}
   <div class="grid">
   <h2>Scale</h2>
@@ -20,6 +18,9 @@
       {% if loop.index in [7,8,9,10,11,12,13] %}
         {% set index = loop.index-6 %}
         <p class="heading-{{ index }} {{ i }}">Pack my box with five dozen liquor jugs.</p>
+        <p>${{ i }}<p>
+        <code class="code-inline">font-size: {{ scale }}rem</code>
+        </p>
       {% endif %}
     {% endfor %}
   </figure>
