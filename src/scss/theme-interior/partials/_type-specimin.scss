@@ -2,81 +2,72 @@
 // Type specimin
 // -----------------------------------------------------------------------------
 
+
+
 #typography-specimin {
-  @include baseline(
-    $no-text: true,
-    $above: .75,
-    $below: -2.15
-  );
-  > div {
-    @include grid();
-    span {
-      @include baseline();
-      padding-left: 0;
-      order: 1;
-      @include column(12);
-      @media(min-width: $screen-large) {
-        @include column(3);
-      }
-    }
+  //@include grid();
+  //@include auto-columns($map: $breakpoints);
+    p {
+      @include column(12, $gutter: $gutter-medium);
+    //@include auto-columns($map: $breakpoints);
   }
 }
 
 // Bit of code duplication here, I want the typography styles to be readable therefore
 // not converting everything so it uses maps. Just a single map here for demo purposes.
-$headings: (
-  h1: ($canon, 1, canon),
-  h2: ($four-line-brevier, 1, four-line-brevier),
-  h3: ($two-line-pica, 1, two-line-pica),
-  h4: ($double-pica, 1.15, double-pica),
-  h5: ($great-primer, 1.35, great-primer),
-  h6: ($english, 1, english)
-);
+// $headings: (
+//   h1: ($canon, 1, canon),
+//   h2: ($four-line-brevier, 1, four-line-brevier),
+//   h3: ($two-line-pica, 1, two-line-pica),
+//   h4: ($double-pica, 1.15, double-pica),
+//   h5: ($great-primer, 1.35, great-primer),
+//   h6: ($english, 1, english)
+// );
 
-#typography-specimin {
-  display: flex;
-  flex-flow: column;
-  // Pseudo element
-  @each $name, $map in $headings {
-    #{$name} {
-      @include baseline(
-        nth($map,1),
-        $line-height: nth($map,2)
-      );
-      padding-right: 0;
-      display: flex;
-      flex-flow: row wrap;
-      @include column(12);
-      @media(min-width: $screen-large) {
-        @include column(9);
-        order: 2;
-      }
-      + span {
-        display: flex;
-        @media(min-width: $screen-large) {
-          flex-flow: column;
-          @include baseline(
-            nth($map,1),
-            $line-height: nth($map,2)
-          );
-        }
-        &::before {
-          content: "#{nth($map,1)}/#{nth($map,2)}\00a0\00a0\00a0";
-        }
-        &::after {
-          content: "$#{nth($map,3)}";
-          @media(min-width: $screen-large) {
-            @include baseline(
-              $font-size: $english,
-              $below: 0,
-              $margin: .5
-            );
-          }
-        }
-      }
-      &::before {
-        content: none;
-      }
-    }
-  }
-}
+// #typography-specimin {
+//   display: flex;
+//   flex-flow: column;
+//   // Pseudo element
+//   @each $name, $map in $headings {
+//     #{$name} {
+//       @include baseline(
+//         nth($map,1),
+//         $line-height: nth($map,2)
+//       );
+//       padding-right: 0;
+//       display: flex;
+//       flex-flow: row wrap;
+//       @include column(12);
+//       @media(min-width: $screen-large) {
+//         @include column(9);
+//         order: 2;
+//       }
+//       + span {
+//         display: flex;
+//         @media(min-width: $screen-large) {
+//           flex-flow: column;
+//           @include baseline(
+//             nth($map,1),
+//             $line-height: nth($map,2)
+//           );
+//         }
+//         &::before {
+//           content: "#{nth($map,1)}/#{nth($map,2)}\00a0\00a0\00a0";
+//         }
+//         &::after {
+//           content: "$#{nth($map,3)}";
+//           @media(min-width: $screen-large) {
+//             @include baseline(
+//               $font-size: $english,
+//               $below: 0,
+//               $margin: .5
+//             );
+//           }
+//         }
+//       }
+//       &::before {
+//         content: none;
+//       }
+//     }
+//   }
+// }

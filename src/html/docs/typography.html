@@ -1,6 +1,7 @@
 {% extends "layouts/docs-layout.njk" %}
 {% set page_description = "Typographic scale and naming convention used for theme styles, made with Interior." %}
 {% set post_page = true %}
+{% set scales = data.modular_scales.golden_section_and_minor_second %}
 
 {% block content %}
   <div class="grid">
@@ -10,14 +11,46 @@
      The base font size is <em>1rem</em>, with a line-height of <em>1</em>. The baseline grid is <em>.5rem</em> for the sake of traversing the baseline in small increments. The resulting body font size is — for small viewports 16px — whilst 18px on larger viewports as all font sizes scale up by 112.5%.</p>
   </div>
 {% endblock %}
+
 {% block bigmofo %}
+
+{# {% set test %}
+  {% for scale, i in scales %}
+    {% if loop.index in [7,8] %}
+      {{ scale }}
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{% for t in test %}
+  <p>{{ test }}</p>
+{% endfor %} #}
+  {# <p>{{ test }}</p> #}
+
   <figure id="typography-specimin" class="bigmofo">
-    {% for i in range(1, 7) %}
-      <p class="heading-{{ i }}">Pack my box with five dozen liquor jugs.</p>
-      <span></span>
+
+    {% for i, scale in scales %}
+      {% if loop.index in [7,8,9,10,11,12,13] %}
+        <p class="heading-{{ loop.index }} {{ i }}">{{ i }} — Pack my box with five dozen liquor jugs.</p>
+      {% endif %}
     {% endfor %}
+
+
+{# <p>{{ blah | safe }}</p> #}
+
+
+
+    {# <p>{{ data.modular_scales["golden_section_and_minor_second"]["double-english"] }}</p> #}
+    {# {% for i, thing in data.modular_scales.golden_section_and_minor_second %}
+      <p class="heading-{{ loop.index }}">Pack my box with five dozen liquor jugs.</p>
+      <p>{{ i }}</p>
+    {% endfor %} #}
+    {# {% for i, scales in data.modular_scales.golden_section_and_minor_second %}
+        <p>{{ scales }}</p>
+    {% endfor %} #}
   </figure>
 {% endblock %}
+
 {% block closing_content %}
   <div class="grid">
     <h2>Names</h2>
