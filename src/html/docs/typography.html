@@ -12,30 +12,10 @@
 {% endblock %}
 {% block bigmofo %}
   <figure id="typography-specimin" class="bigmofo">
-    <div id="h1">
-      <h1>Pack my box with five dozen liquor jugs.</h1>
+    {% for i in range(1, 7) %}
+      <p class="heading-{{ i }}">Pack my box with five dozen liquor jugs.</p>
       <span></span>
-    </div>
-    <div id="h2">
-      <h2>Pack my box with five dozen liquor jugs.</h2>
-      <span></span>
-    </div>
-    <div id="h3">
-      <h3>Pack my box with five dozen liquor jugs.</h3>
-      <span></span>
-    </div>
-    <div id="h4">
-      <h4>Pack my box with five dozen liquor jugs.</h4>
-      <span></span>
-    </div>
-    <div id="h5">
-      <h5>Pack my box with five dozen liquor jugs.</h5>
-      <span></span>
-    </div>
-    <div id="h6">
-      <h6>Pack my box with five dozen liquor jugs.</h6>
-      <span></span>
-    </div>
+    {% endfor %}
   </figure>
 {% endblock %}
 {% block closing_content %}
