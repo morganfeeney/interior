@@ -3,6 +3,8 @@
 {% set post_page = true %}
 {% set scales = data.modular_scales.golden_section_and_minor_second %}
 
+
+
 {% block content %}
   <div class="grid">
   <h2>Scale</h2>
@@ -13,41 +15,13 @@
 {% endblock %}
 
 {% block bigmofo %}
-
-{# {% set test %}
-  {% for scale, i in scales %}
-    {% if loop.index in [7,8] %}
-      {{ scale }}
-    {% endif %}
-  {% endfor %}
-{% endset %}
-
-{% for t in test %}
-  <p>{{ test }}</p>
-{% endfor %} #}
-  {# <p>{{ test }}</p> #}
-
   <figure id="typography-specimin" class="bigmofo">
-
     {% for i, scale in scales %}
       {% if loop.index in [7,8,9,10,11,12,13] %}
-        <p class="heading-{{ loop.index }} {{ i }}">{{ i }} — Pack my box with five dozen liquor jugs.</p>
+        {% set index = loop.index-6 %}
+        <p class="heading-{{ index }} {{ i }}">Pack my box with five dozen liquor jugs.</p>
       {% endif %}
     {% endfor %}
-
-
-{# <p>{{ blah | safe }}</p> #}
-
-
-
-    {# <p>{{ data.modular_scales["golden_section_and_minor_second"]["double-english"] }}</p> #}
-    {# {% for i, thing in data.modular_scales.golden_section_and_minor_second %}
-      <p class="heading-{{ loop.index }}">Pack my box with five dozen liquor jugs.</p>
-      <p>{{ i }}</p>
-    {% endfor %} #}
-    {# {% for i, scales in data.modular_scales.golden_section_and_minor_second %}
-        <p>{{ scales }}</p>
-    {% endfor %} #}
   </figure>
 {% endblock %}
 
