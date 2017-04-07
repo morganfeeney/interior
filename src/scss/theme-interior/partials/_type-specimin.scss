@@ -21,8 +21,29 @@
     }
     &:nth-child(8),
     &:nth-child(10),
-    &:nth-child(14) {
+    &:nth-child(14),
+    &:nth-child(16) {
       margin-top: -(font-scale(1));
+    }
+    &:nth-child(17) {
+      @include column(
+        $columns: 8,
+        $gutter: $gutter-medium
+      );
+    }
+    &:nth-child(18) {
+      margin-top: -(font-scale(3));
+      margin-bottom: font-scale(1);
+    }
+    &:nth-child(19) {
+      @include column(
+        $columns: 5,
+        $gutter: $gutter-medium
+      );
+    }
+    &:nth-child(20) {
+      margin-top: -(font-scale(3));
+      margin-bottom: font-scale(1);
     }
   }
   figcaption {
