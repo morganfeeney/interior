@@ -6,27 +6,28 @@ code, pre {
 	white-space: pre;
 }
 
-pre.code-block {
+pre {
 	tab-size: 4;
 	 code {
-		background: rgba($brand-color-1, 0.1);
+		background: $brand-color-mid;
 		display: block;
 		padding-left: $horizontal-space;
 		padding-right: $horizontal-space;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 	}
-	&:before {
-		content: attr(rel);
-    background: $brand-color-3;
-    display: block;
-    color: $brand-color-2;
-    text-transform: uppercase;
-    font-family: $font-monospace;
-		font-size: .65rem;
-		font-weight: bold;
-		letter-spacing: .15rem;
-	}
+}
+
+pre.code-block::before {
+	content: attr(rel);
+  background: $brand-color-3;
+  display: block;
+  color: $brand-color-2;
+  text-transform: uppercase;
+  font-family: $font-monospace;
+	font-size: .65rem;
+	font-weight: bold;
+	letter-spacing: .15rem;
 }
 
 code {
@@ -71,7 +72,7 @@ pre:before {
   font-weight: normal;
 }
 
-.code-block code {
+code:not(.code-inline) {
   @include baseline(
 		$line-height: 2,
 		$above: .5,

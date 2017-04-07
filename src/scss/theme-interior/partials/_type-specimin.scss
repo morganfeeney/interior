@@ -2,15 +2,35 @@
 // Type specimin
 // -----------------------------------------------------------------------------
 
-
-
 #typography-specimin {
-  @include grid(-$container-gutter);
+  @include grid(-$container-gutter/2);
   margin-top: font-scale(2);
   margin-bottom: font-scale(2);
-  padding: font-scale(2) $container-gutter;
-  background: hsla(hue($brand-color-1),100,85,0.2);
-    p {
-      @include column(12, $gutter: $gutter-medium);
+  padding: font-scale(2) $container-gutter/2;
+  p {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-medium
+    );
+    &:nth-child(even) {
+      color: $mid-gray;
+    }
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6) {
+      margin-top: -(font-scale(2));
+      margin-bottom: font-scale(1);
+    }
+    &:nth-child(8),
+    &:nth-child(10),
+    &:nth-child(14) {
+      margin-top: -(font-scale(1));
+    }
+  }
+  figcaption {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-medium
+    );
   }
 }

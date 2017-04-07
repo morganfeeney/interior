@@ -18,11 +18,10 @@
       {% if loop.index in [7,8,9,10,11,12,13] %}
         {% set index = loop.index-6 %}
         <p class="heading-{{ index }} {{ i }}">Pack my box with five dozen liquor jugs.</p>
-        <p>${{ i }}<p>
-        <code class="code-inline">font-size: {{ scale }}rem</code>
-        </p>
+        <p>${{ i }}: {{ scale }}rem</p>
       {% endif %}
     {% endfor %}
+    <figcaption>Figure 1</figcaption>
   </figure>
 {% endblock %}
 
@@ -33,9 +32,5 @@
         Take for example the variable names where I have assigned the font sizes in figure 1.</p>
       <p>Font sizes have been assigned to specific elements <code class="code-inline language-markup">&lt;h1&gt;</code>...<code class="code-inline language-markup">&lt;h6&gt;</code> using variables and the <a href="baseline.html">baseline</a> mixin,
          in the case of styles for the current Interior theme. However they could also be used for class names.</p>
-      <figure>
-          {% include "../partials/code-samples/variables-font-names.njk" %}
-        <figcaption>Figure 1</figcaption>
-      </figure>
     </div>
 {% endblock %}

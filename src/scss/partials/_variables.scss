@@ -54,7 +54,7 @@ $brand-color-4: #000 !default;
 // Colour variants
 $nobg: transparent !default;
 $brand-color-light: lighten($brand-color-1, 25) !default;
-$brand-color-mid: lighten($brand-color-1, 15) !default;
+$brand-color-mid: hsla(hue($brand-color-1),100,85,0.2) !default;
 $darkbg: $brand-color-3 !default;
 
 // Grayscale
