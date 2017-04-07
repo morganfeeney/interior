@@ -3,10 +3,8 @@
 // -----------------------------------------------------------------------------
 
 #typography-specimin {
-  @include grid(-$container-gutter/2);
   margin-top: font-scale(2);
   margin-bottom: font-scale(2);
-  padding: font-scale(2) $container-gutter/2;
   p {
     @include column(
       $columns: 12,
