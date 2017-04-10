@@ -3,8 +3,6 @@
 // -----------------------------------------------------------------------------
 
 #typography-specimin {
-  margin-top: font-scale(2);
-  margin-bottom: font-scale(2);
   p {
     @include column(
       $columns: 12,

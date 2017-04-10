@@ -123,6 +123,20 @@
     }
   }
 
+  .bigmofo {
+    @include grid((-$container-gutter/2));
+    background: $brand-color-mid;
+    margin-top: font-scale(2);
+    margin-bottom: font-scale(2);
+    padding: 0 $container-gutter/2;
+    > figure {
+      @include column(
+        $columns: 8,
+        $calc: false,
+        $margin: false
+      );
+    }
+  }
   .bigmofo .small {
     @include column(
       $columns: 12,
@@ -130,9 +144,12 @@
     );
     @media(min-width: $screen-largest) {
       @include column(
-        $columns: 4,
-        $gutter: $gutter-smaller
+        $columns: 2,
+        $gutter: $gutter-smaller,
+        $offset-left: true,
+        $offset: 2
       );
+  align-self: center;
     }
   }
 
@@ -179,26 +196,6 @@
     pre {
       @include column(
         $columns: 8
-      );
-    }
-  }
-
-  .bigmofo {
-    background: $brand-color-mid;
-    @include grid((-$container-gutter/2));
-    padding: 0 $container-gutter/2;
-    > figure {
-      @include column(
-        $columns: 8,
-        $calc: false,
-        $margin: false
-      );
-    }
-    > .small {
-      @include column(
-        $columns: 4,
-        $calc: false,
-        $margin: 0
       );
     }
   }
