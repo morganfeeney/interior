@@ -2,17 +2,6 @@
 {% set layout_classes = "baseline-grid" %}
 {% set page_description = "Example of how to use Interior to align headings and paragraphs to the baseline." %}
 
-{% block embedded_css %}
-<style>
-  h1:before {
-    content: "Title";
-  }
-  h2:first-of-type:before {
-    content: "Sub heading";
-  }
-</style>
-{% endblock %}
-
 {% block main %}
   <section>
     <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
