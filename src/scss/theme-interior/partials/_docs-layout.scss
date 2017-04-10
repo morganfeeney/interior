@@ -84,7 +84,7 @@
     }
   }
 
-  .container section {
+  .container section:not(.bigmofo) {
     @include column(
       $columns: 12,
       $gutter: $gutter-smaller
@@ -122,6 +122,20 @@
       }
     }
   }
+
+  .bigmofo .small {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-smaller
+    );
+    @media(min-width: $screen-largest) {
+      @include column(
+        $columns: 4,
+        $gutter: $gutter-smaller
+      );
+    }
+  }
+
 
   .grid > p,
   .grid > blockquote {
@@ -164,7 +178,25 @@
     );
     pre {
       @include column(
-        $columns: 12,
+        $columns: 8
+      );
+    }
+  }
+
+  .bigmofo {
+    background: $brand-color-mid;
+    @include grid((-$container-gutter/2));
+    padding: 0 $container-gutter/2;
+    > figure {
+      @include column(
+        $columns: 8,
+        $calc: false,
+        $margin: false
+      );
+    }
+    > .small {
+      @include column(
+        $columns: 4,
         $calc: false,
         $margin: 0
       );

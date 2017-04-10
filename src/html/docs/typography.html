@@ -13,7 +13,9 @@
 {% endblock %}
 
 {% block bigmofo %}
-  <figure id="typography-specimin" class="bigmofo">
+<section class="bigmofo">
+  <p class="small">Some filler text just here yadadadada</p>
+  <figure id="typography-specimin">
     {% for i, scale in scales %}
       {% if loop.index in [7,8,9,10,11,12,13] %}
         {% set index = loop.index-6 %}
@@ -31,6 +33,7 @@
        <p>$small: {{ scale }}rem</p>
     <figcaption>Figure 1</figcaption>
   </figure>
+</section>
 {% endblock %}
 
 {% block closing_content %}
