@@ -13,9 +13,17 @@
         <dd>The value is used to calculate how many columns from the grid you want to span.</dd>
       </dl>
     {% include "../partials/code-samples/col-scss-required.njk" %}
-  </div>
-
-  <div class="grid">
+    <h5>Columns &amp; gutters</h5>
+    <p>In an effort to reduce the markup I chose margin over padding to create the gutter width. This is combined with percentages and <code class="code-inline language-scss">calc()</code> to create the overall gutter width—this approach allows mixed units such as rems to be used instead of percentages for gutters; <em>feel free to inspect figure 1</em>.</p>
+    <figure>
+      <div class="visual-grid-1 gutter-demo">
+        <div>
+          <div>{{ images.image_placeholder(size="500x100",text="IMG", bgcolor="ffbdbd", color="FF7070")}}</div>
+          <div>This is text is to demonstrate the padding applied to this column. This is text is to demonstrate the padding applied to this column.</div>
+        </div>
+      </div>
+      <figcaption>Figure 1</figcaption>
+    </figure>
     <h5>Keyword arguments</h5>
     <p>The following detail default keyword arguments.</p>
       <dl class="dl-horizontal">

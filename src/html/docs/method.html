@@ -4,30 +4,21 @@
 
 {% block content %}
   <div class="grid">
-    <h2>Using the grid</h2>
-    <p>As I detailed in <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">this article</a>,
-     what I learnt from the first incarnation of Interior—which was based on Bootstrap—is, I had to walk away from what came before
-      and embrace new CSS layout tools. Interior v.2 doesn't rely on floats for layout, it never will, <em>I just need to create a grid and gutters, flexbox does the rest</em>.
-      So that's how Interior v2. works you won't find any <code class="code-inline language-scss">.col-[whatever]</code> classes or <code class="code-inline language-scss">.push</code>, <code class="code-inline language-scss">.pull</code> or <code class="code-inline language-scss">.offset</code> classes like you get in Bootstrap...
-      <em>well you might</em> but if they exist they'll be for baseline alignment.</p>
-    <blockquote>
-      <p>I just need to create a grid and gutters, flexbox does the rest.</p><cite><a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox">Moi</a></cite>
-    </blockquote>
-    <p>Who knows what I will learn from the new Grid spec and what Interior v.3 will be, I'm guessing there may not be a need to use Interior for grid layout, yet there will be a benefit to automation using Scss—so it will live on—albeit in a <em>state of evolution</em>.</p>
-    <h5>Columns &amp; gutters</h5>
-    <p>In an effort to reduce the markup I chose margin over padding to create the gutter width. This is combined with percentages and <code class="code-inline language-scss">calc()</code> to create the overall gutter width—this approach allows mixed units such as rems to be used instead of percentages for gutters; <em>feel free to inspect figure 1</em>.</p>
-    <figure>
-      <div class="visual-grid-1 gutter-demo">
-        <div>
-          <div>{{ images.image_placeholder(size="500x100",text="IMG", bgcolor="ffbdbd", color="FF7070")}}</div>
-          <div>This is text is to demonstrate the padding applied to this column. This is text is to demonstrate the padding applied to this column.</div>
-        </div>
-      </div>
-      <figcaption>Figure 1</figcaption>
-    </figure>
+    <p class="intro">I wrote <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">this article</a>
+     to document and explain what I learnt during previous iterations of Interior. The main lesson was to question <em>everything</em>.</p>
+      <h5>Possibilities</h5>
+    <p>There's point in the article where I state that I will be documenting standards, the idea there was not to get too bogged down with specifics <em>such as naming conventions</em>,
+      but more along the lines of suggesting possibilities, not prescribing specific layouts—a demonstration of something different.</p>
   </div>
+{% endblock %}
+{% block bigmofo %}
+<figure class="bigmofo">
+  <p>Detail about the grid tools and how to use them — this page should be about layout only, this time don't focus on coding standards, focus on layout</p>
+</figure>
+{% endblock %}
+{% block closing_content %}
   <div class="grid">
-    <h2>Separation</h2>
+    <h5>Separation</h5>
     <p>Keeping markup and presentation separate makes life easier going forward. There are many benefits, the primary benefit being that changes can be made using <strong><u>only</u></strong> CSS.</p>
     <h5>Try not to set things in stone</h5>
     <p>Describing in markup the appearance of anything limits what may be altered later.</p>
