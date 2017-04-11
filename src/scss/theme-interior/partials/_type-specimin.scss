@@ -25,22 +25,28 @@
     &:nth-child(17) {
       @include column(
         $columns: 8,
-        $gutter: $gutter-medium
+        $margin: false,
+        $calc: false
       );
     }
     &:nth-child(18) {
-      margin-top: -(font-scale(3));
-      margin-bottom: font-scale(1);
+      @include baseline(
+        $margin: -2,
+        $below: 1
+      );
     }
     &:nth-child(19) {
       @include column(
         $columns: 5,
-        $gutter: $gutter-medium
+        $margin: false,
+        $calc: false
       );
     }
     &:nth-child(20) {
-      margin-top: -(font-scale(3));
-      margin-bottom: font-scale(1);
+      @include baseline(
+        $margin: -2,
+        $below: 1
+      );
     }
   }
   figcaption {

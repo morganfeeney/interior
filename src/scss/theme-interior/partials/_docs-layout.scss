@@ -128,7 +128,8 @@
     background: $brand-color-2;
     margin-top: font-scale(2);
     margin-bottom: font-scale(2);
-    padding: 0 $container-gutter/2;
+    padding-left: $container-gutter/2;
+    padding-right: $container-gutter/2;
     > figure {
       @include column(
         $columns: 8,
