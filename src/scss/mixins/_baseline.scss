@@ -33,7 +33,24 @@
   $grid-bg: $grid-bg,
   $grid-bg-size: $grid-bg-size
 ) {
-  background-image: linear-gradient(to bottom, $grid-color 0, $grid-bg 1px);
-  background-repeat: repeat-y;
-  background-size: $grid-bg-size;
+  @at-root {
+    html {
+      position: relative;
+    }
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    mix-blend-mode: multiply;
+    background-image: linear-gradient(to bottom, $grid-color 0, $grid-bg 1px);
+    background-repeat: repeat-y;
+    background-size: $grid-bg-size;
+    pointer-events: none;
+  }
 }
