@@ -23,16 +23,6 @@ $font-size-body: $font-base !default;
 // Font weights
 $font-weight-border-with-content: bold !default
 
-// Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
-$canon: font-scale(3) !default; // 48px
-$double-great-primer: font-scale(2.250) !default; // 36px
-$four-line-brevier: font-scale(2) !default; // 32px
-$two-line-pica: font-scale(1.5) !default; // 24px
-$double-pica: font-scale(1.313) !default; // 21px
-$great-primer: font-scale(1.125) !default; // 18px
-$english: font-scale(.875) !default; // 14px
-$pica: font-scale(.75) !default; // 12px
-
 // Font families
 $font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-serif: serif, georgia !default;
@@ -53,6 +43,7 @@ $brand-color-4: #000 !default;
 
 // Colour variants
 $nobg: transparent !default;
+$brand-color-lightest: hsla(hue($brand-color-2),100,100,0.75) !default;
 $brand-color-light: lighten($brand-color-1, 25) !default;
 $brand-color-mid: hsla(hue($brand-color-1),100,85,0.2) !default;
 $darkbg: $brand-color-3 !default;
@@ -85,7 +76,7 @@ $horizontal-offset-larger: column-width(4) !default;
 
 //** Grid
 $grid-color: $brand-color-1 !default;
-$grid-bg: $brand-color-light !default;
+$grid-bg: transparent !default;
 $grid-bg-size: 100vw .5rem !default;
 
 //** Spacing

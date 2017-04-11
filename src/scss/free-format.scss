@@ -2,7 +2,6 @@
 // Free format — Main stylesheet
 // -----------------------------------------------------------------------------
 
-@import "free-format/partials/variables";
 
 // Functions
 @import "functions/units";
@@ -10,6 +9,7 @@
 
 // Variables
 @import "partials/variables";
+@import "free-format/partials/variables";
 
 // Mixins
 @import "mixins/baseline";
