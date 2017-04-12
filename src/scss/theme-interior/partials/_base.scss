@@ -5,6 +5,8 @@
 // Reset
 html {
  box-sizing: border-box;
+ // Allow the baseline grid overlay to fill the viewport height.
+ min-height: 100%;
 }
 
 *, *::before, *::after {
