@@ -109,6 +109,9 @@
         $offset: 2
       );
     }
+  }
+
+  .container section:not(.bigmofo) {
     h2, h3, h4, h5 {
       @include column(
         $columns: 12,
@@ -173,7 +176,8 @@
 
 
   .grid > p,
-  .grid > blockquote {
+  .grid > blockquote,
+  .grid > nav {
     @include column(
       $columns: 12,
       $gutter: $gutter-smaller
@@ -194,7 +198,8 @@
       );
     }
     & > p + p,
-    & > blockquote + p {
+    & > blockquote + p,
+    & > p + nav {
       @media(min-width: $screen-largest) {
         @include column(
           $columns: 8,

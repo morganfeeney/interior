@@ -83,9 +83,9 @@ module.exports = function(grunt) {
          cwd: "src/html/posts"
        },["*.html","!index.html"]);
        // Docs
-       var docs = grunt.file.expand({
+       var design_principles = grunt.file.expand({
          filter: "isFile",
-         cwd: "src/html/docs"
+         cwd: "src/html/design-principles"
        },["*.html","!index.html"]);
        // Examples
        var examples = grunt.file.expand({
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
          file: file,
          page: page,
          posts: posts,
-         docs: docs,
+         design_principles: design_principles,
          examples: examples,
          data: data
        };

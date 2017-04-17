@@ -1,0 +1,28 @@
+.index-layout {
+  .container section:not(.bigmofo) {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-smaller
+    );
+    @media(min-width: $screen-medium) {
+      @include column(
+        $columns: 10,
+        $gutter: $gutter-medium
+      );
+    }
+    @media(min-width: $screen-large) {
+      @include column(
+        $columns: 8,
+        $offset-left: true,
+        $offset: 2
+      );
+    }
+    @media(min-width: $screen-largest) {
+      @include column(
+        $columns: 6,
+        $offset-left: true,
+        $offset: 2
+      );
+    }
+  }
+}
