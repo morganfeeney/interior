@@ -2,26 +2,33 @@
 // Nav
 // -----------------------------------------------------------------------------
 
-#main-nav {
-  display: flex;
-  align-items: flex-start;
-  @include baseline($pica, $above: 1.7);
-  @media(max-width: $screen-small-max) {
-    @include baseline($pica, $above: 1.2, $below: -.25);
-    align-self: flex-end;
-  }
-  @media(min-width: $screen-large) {
-    @include baseline($pica, $above: 2.15);
-  }
+// #main-nav {
+//   display: flex;
+//   align-items: flex-start;
+//   @include baseline($pica, $above: 1.7);
+//   @media(max-width: $screen-small-max) {
+//     @include baseline($pica, $above: 1.2, $below: -.25);
+//     align-self: flex-end;
+//   }
+//   @media(min-width: $screen-large) {
+//     @include baseline($pica, $above: 2.15);
+//   }
+//   a {
+//     text-decoration: none;
+//     padding: 0 $horizontal-space-small/2;
+//     border-left: $mid-border;
+//     &:first-child {
+//       border-left: none;
+//     }
+//     &:last-child {
+//       padding-right: 0;
+//     }
+//   }
+// }
+
+nav {
   a {
-    text-decoration: none;
-    padding: 0 $horizontal-space-small/2;
-    border-left: $mid-border;
-    &:first-child {
-      border-left: none;
-    }
-    &:last-child {
-      padding-right: 0;
-    }
+    @include baseline();
+    display: block;
   }
 }

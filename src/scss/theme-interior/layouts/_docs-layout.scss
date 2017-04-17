@@ -178,20 +178,4 @@
     );
   }
 
-  footer {
-    @media(min-width: $screen-large) {
-      margin: 0;
-    }
-  }
-
-  .sig {
-    @include baseline($margin: 10);
-    @include column(
-      $columns: 8,
-      $gutter: $gutter-small,
-      $margin: auto,
-      $breakpoint: $screen-large
-    );
-  }
-
 }

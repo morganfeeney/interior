@@ -21,14 +21,9 @@ header {
       );
     }
   }
+}
 
-  nav {
-    a {
-      @include baseline();
-      display: block;
-    }
-  }
-
+#main-header {
   nav,
   .home-link {
     @media(max-width: $screen-smaller) {
@@ -51,5 +46,5 @@ header {
         $margin-left: auto
       );
     }
-  }
+  }  
 }
