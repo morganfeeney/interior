@@ -1,0 +1,41 @@
+.index-layout {
+
+  min-height: 100%;
+
+  .container-outer {
+    width: 100%;
+  }
+
+  .home-link {
+    display: block;
+  }
+
+  h1 {
+    @include column(
+      $columns: 4,
+      $offset-left: true,
+      $offset: 2,
+      $gutter: $gutter-medium
+    );
+  }
+
+  section {
+    @include column(
+      $columns: 8,
+      $gutter: font-scale(2.5),
+      $offset-left: true,
+      $offset: 2
+    );
+  }
+
+  .grid-multicolumn {
+    columns: 2;
+    column-gap: $gutter-smaller;
+    margin-left: -$gutter-smaller/2;
+    margin-right: -$gutter-smaller/2;
+  }
+
+  footer {
+    align-self: flex-end;
+  }
+}
