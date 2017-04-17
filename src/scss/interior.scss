@@ -8,7 +8,7 @@
 
 // Variables
 @import "theme-interior/partials/modular-scale";
-@import "theme-interior/partials/variables";
+@import "theme-interior/variables";
 @import "partials/variables";
 
 // Core mixins
@@ -30,17 +30,19 @@
 @import "partials/image";
 @import "partials/buttons";
 
-// Layouts
+// Theme global styles
+@import "theme-interior/code";
+@import "theme-interior/base";
+@import "theme-interior/typography";
+@import "theme-interior/dl-horizontal";
+
+// Theme layouts
 @import "theme-interior/layouts/layout";
 @import "theme-interior/layouts/docs-layout";
 @import "theme-interior/layouts/index-layout";
 
 // Theme partials
 @import "theme-interior/partials/grid-overlay";
-@import "theme-interior/partials/code";
-@import "theme-interior/partials/base";
-@import "theme-interior/partials/typography";
-@import "theme-interior/partials/dl-horizontal";
 @import "theme-interior/partials/posts-nav";
 @import "theme-interior/partials/measuring-sticks";
 @import "theme-interior/partials/header";
