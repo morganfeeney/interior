@@ -1,50 +1,67 @@
-header {
-  .home-link svg {
+#main-header {
+  background: $brand-color-2;
+  .container {
+    @extend %flex-container;
+  }
+}
+
+#main-header nav {
+  @media(min-width: $screen-small) {
+    text-align: right;
+  }
+  a {
+    @media(min-width: $screen-small) {
+      @include baseline($margin: 3);
+    }
+    display: inline-flex;
+    &:not(:last-child) {
+      margin-right: $horizontal-space-small;
+    }
+  }
+  @include column(
+    $columns: 12,
+    $gutter: $gutter-smaller
+  );
+  @media(min-width: $screen-small) {
+    @include column(
+      $columns: 8,
+      $gutter: $gutter-smaller
+    );
+  }
+}
+
+#main-header .home-link {
+  @include column(
+    $columns: 12,
+    $gutter: $gutter-smaller
+  );
+  @media(min-width: $screen-small) {
+    @include column(
+      $columns: 4,
+      $gutter: $gutter-smaller
+    );
+  }
+}
+
+#main-header .home-link svg {
+  @include baseline(
+    $no-text: true,
+    $margin: 1,
+    $below: -.15
+  );
+  max-width: 8rem;
+  @media(min-width: $screen-small) {
     @include baseline(
       $no-text: true,
       $margin: 2,
       $below: -.15
     );
-    max-width: 8rem;
-    @media(min-width: $screen-small) {
-      @include baseline(
-        $no-text: true,
-        $margin: 2,
-        $below: -.15
-      );
-    }
-    @media(min-width: $screen-large) {
-      @include baseline(
-        $no-text: true,
-        $margin: 2,
-        $below: .15
-      );
-    }
   }
-}
-
-#main-header {
-  nav,
-  .home-link {
-    @media(max-width: $screen-smaller) {
-      @include column(
-        $columns: 6,
-        $gutter: $gutter-smaller,
-        $margin-left: auto
-      );
-      text-align: right;
-    }
-    @include column(
-      $columns: 4,
-      $gutter: $gutter-smaller,
-      $margin-left: auto
+  @media(min-width: $screen-large) {
+    @include baseline(
+      $no-text: true,
+      $margin: 2,
+      $below: .15
     );
-    @media(min-width: $screen-medium) {
-      @include column(
-        $columns: 2,
-        $gutter: $gutter-medium,
-        $margin-left: auto
-      );
-    }
-  }  
+  }
 }
