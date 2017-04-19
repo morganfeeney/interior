@@ -1,18 +1,18 @@
 {# Needs making into a macro #}
-{% for doc in docs %}
-  {% if file == doc %}
+{% for item in design_principles %}
+  {% if file == item %}
     <nav class="posts-nav" role="navigation">
       {% set next = loop.index %}
       {% set prev = loop.index-2 %}
-      {% set nice_prev = docs[prev] | capitalize | replace("-", " ") | replace(".html", "") %}
-      {% set nice_next = docs[next] | capitalize | replace("-", " ") | replace(".html", "") %}
+      {% set nice_prev = design_principles[prev] | capitalize | replace("-", " ") | replace(".html", "") %}
+      {% set nice_next = design_principles[next] | capitalize | replace("-", " ") | replace(".html", "") %}
       {% if nice_prev %}
-        <a class="prev" href="{{ docs[prev] }}">{{ nice_prev }}</a>
+        <a class="prev" href="{{ design_principles[prev] }}">{{ nice_prev }}</a>
       {% else %}
         {# NOWT #}
       {% endif %}
       {% if nice_next %}
-        <a class="next" href="{{ docs[next] }}">{{ nice_next }}</a>
+        <a class="next" href="{{ design_principles[next] }}">{{ nice_next }}</a>
       {% else %}
         {# NOWT #}
       {% endif %}
