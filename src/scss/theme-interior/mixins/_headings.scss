@@ -68,4 +68,14 @@
     $above: .45,
     $below: 7
   );
+  @media(min-width: $screen-largest) {
+    @include baseline(
+      $font-size: $two-line-pica,
+      $line-height: 1.28,
+      $font-weight: bold,
+      $margin: 14,
+      $above: .45,
+      $below: 7
+    );
+  }
 }
