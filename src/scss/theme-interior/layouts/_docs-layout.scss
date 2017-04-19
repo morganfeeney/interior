@@ -21,9 +21,7 @@
     @media(min-width: $screen-large) {
       @include column(
         $columns: 10,
-        $gutter: $gutter-medium,
-        $offset-left: true,
-        $offset: 2
+        $gutter: $gutter-medium
       );
     }
   }
@@ -41,16 +39,12 @@
     }
     @media(min-width: $screen-large) {
       @include column(
-        $columns: 8,
-        $offset-left: true,
-        $offset: 2
+        $columns: 8
       );
     }
     @media(min-width: $screen-largest) {
       @include column(
-        $columns: 6,
-        $offset-left: true,
-        $offset: 2
+        $columns: 6
       );
     }
   }
@@ -78,6 +72,7 @@
     padding-left: $container-gutter/2;
     padding-right: $container-gutter/2;
     position: relative;
+    // Makes the area appear to be full-width
     @media(min-width: $screen-largest) {
       &::before, &::after {
         content: "";
@@ -110,11 +105,9 @@
     @media(min-width: $screen-largest) {
       @include column(
         $columns: 2,
-        $gutter: $gutter-smaller,
-        $offset-left: true,
-        $offset: 2
+        $gutter: $gutter-smaller
       );
-  align-self: center;
+    align-self: center;
     }
   }
 

@@ -12,9 +12,7 @@
 
   h1 {
     @include column(
-      $columns: 4,
-      $offset-left: true,
-      $offset: 2,
+      $columns: 12,
       $gutter: $gutter-medium
     );
   }
@@ -22,9 +20,7 @@
   section {
     @include column(
       $columns: 8,
-      $gutter: font-scale(2.5),
-      $offset-left: true,
-      $offset: 2
+      $gutter: font-scale(2.5)
     );
   }
 

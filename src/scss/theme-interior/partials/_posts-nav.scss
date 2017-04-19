@@ -1,16 +1,15 @@
-// @media(min-height: font-scale(60)) {
-//   #posts-nav-section {
-//     position: sticky;
-//     bottom: 0;
-//   }
-// }
+@media(min-height: font-scale(60)) {
+  #posts-nav-section {
+    position: sticky;
+    bottom: 0;
+  }
+}
 .posts-nav {
   @include auto-columns($map: $breakpoints);
   @media(min-width: $screen-large){
     @include column(
-      $columns: 8,
-      $gutter: $gutter-small,
-      $margin: auto
+      $columns: 6,
+      $gutter: $gutter-small
     );
   }
   @include baseline(

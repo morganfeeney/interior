@@ -9,7 +9,6 @@ footer {
   @include column(
     $columns: 8,
     $gutter: $gutter-small,
-    $margin: auto,
     $breakpoint: $screen-large
   );
 }
