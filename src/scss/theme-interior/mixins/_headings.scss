@@ -68,7 +68,7 @@
     $above: .45,
     $below: 7
   );
-  @media(min-width: $screen-largest) {
+  @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
     @include baseline(
       $font-size: $two-line-pica,
       $line-height: 1.28,
