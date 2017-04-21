@@ -1,7 +1,8 @@
-@media(min-height: font-scale(60)) {
+@media(min-height: 30rem) {
   #posts-nav-section {
     position: sticky;
     bottom: 0;
+    background: $brand-color-light;
   }
 }
 .posts-nav {
@@ -12,12 +13,6 @@
       $gutter: $gutter-small
     );
   }
-  @include baseline(
-    $font-size: $pica,
-    $line-height: 1.65,
-    $above: 0,
-    $below: 0
-  );
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,13 +36,20 @@
     transform: rotate(135deg);
   }
   a {
+      @include baseline(
+        $font-size: $pica,
+        $line-height: 1.65,
+        $above: .5,
+        $below: 0
+      );
+      flex: 1;
     text-transform: uppercase;
     text-decoration: none;
-    &:only-child.next {
-      margin-left: auto;
+    &.next {
+      justify-content: flex-end;
     }
-    &:only-child.prev {
-      margin-right: auto;
+    &.prev {
+      justify-content: flex-start;
     }
     &:hover::before,
     &:hover::after {
