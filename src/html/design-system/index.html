@@ -1,14 +1,14 @@
 {% extends "layouts/index-layout.njk" %}
-{% set page_title = "Design principles" %}
+{% set page_title = "Design system" %}
 {% set page_description = "Read the documentation on how to use Interior" %}
 
 {% block content %}
 <div class="grid-multicolumn">
   <h5>Constants</h5>
   <p>This page links to the documentation on not only how to use Interior to achieve ease of layout — but<em>why</em> it is the way it is.</p>
-  {% if design_principles %}
+  {% if design_system %}
     <nav role="navigation">
-      {% for item in design_principles %}
+      {% for item in design_system %}
         <a href="{{ item }}">{{ item | capitalize | replace("-", " ") | replace(".html", "") }}</a>
       {% endfor %}
     </nav>
