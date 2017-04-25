@@ -3,23 +3,31 @@
 {% set page_description = "Read the documentation on how to use Interior" %}
 
 {% block content %}
-<div class="grid-multicolumn">
-  <h5>Constants</h5>
-  <p>This page links to the documentation on not only how to use Interior to achieve ease of layout — but<em>why</em> it is the way it is.</p>
-  {% if design_system %}
-    <nav role="navigation">
-      {% for item in design_system %}
-        <a href="{{ item }}">{{ item | capitalize | replace("-", " ") | replace(".html", "") }}</a>
-      {% endfor %}
-    </nav>
-  {% endif %}
-  <h5>Transients</h5>
-  <p>Due to the nature of technology constantly evolving, the following do not change the context of the constants</p>
-  <nav role="navigation">
-    <a href="#">Specifications</a>
-    <a href="#">Methodologies, e.g. BEM, OOCSS, Separation of concerns</a>
-    <a href="#">CSS</a>
-    <a href="#">The Universe</a>
-  </nav>
+
+<div class="grid">
+      <p>Whilst using Interior, and simultaneously writing up how it should be used, it occurred to me that I can’t always keep up with the development of new specifications. Not only that but what if I want to switch methodologies? Apply helper classes one day or the separation of concerns on another? Why tie thing down? Therefore separating the fundamental design system—which can apply to a design created with any spec—from the ever-changing is not only logical, but efficient.</p>
+    <div class="subgrid">
+      <div>
+        <h5>Constants</h5>
+        <p>This page links to the documentation on not only how to use Interior to achieve ease of layout — but<em>why</em> it is the way it is.</p>
+        {% if design_system %}
+          <nav role="navigation">
+            {% for item in design_system %}
+              <a href="{{ item }}">{{ item | capitalize | replace("-", " ") | replace(".html", "") }}</a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+      </div>
+      <div>
+        <h5>Transients</h5>
+        <p>Due to the nature of technology constantly evolving, the following do not change the context of the constants</p>
+        <nav role="navigation">
+          <a href="#">Specifications</a>
+          <a href="#">Methodologies, e.g. BEM, OOCSS, Separation of concerns</a>
+          <a href="#">CSS</a>
+          <a href="#">The Universe</a>
+        </nav>
+      </div>
+    </div>
 </div>
 {% endblock %}

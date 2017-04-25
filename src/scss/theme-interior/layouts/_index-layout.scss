@@ -19,8 +19,15 @@
 
   section {
     @include column(
-      $columns: 8,
+      $columns: 10,
       $gutter: font-scale(2.5)
+    );
+  }
+
+  .intro {
+    @include column(
+      $columns: 6,
+      $gutter: $gutter-medium
     );
   }
 
@@ -29,6 +36,29 @@
     column-gap: $gutter-smaller;
     margin-left: -$gutter-smaller/2;
     margin-right: -$gutter-smaller/2;
+  }
+
+  .grid {
+    & > p {
+      @include column(
+        $max-columns: 10,
+        $columns: 4,
+        $gutter: $gutter-medium
+      );
+    }
+  }
+  .subgrid {
+    // Hacking some values for the offset using a sub grid.
+    @include column(
+      $max-columns: 10,
+      $columns: 4,
+      $offset: 2.4,
+      $offset-left: true,
+      $gutter: $gutter-medium
+    );
+    nav {
+      margin-bottom: $vertical-space;
+    }
   }
 
   footer {
