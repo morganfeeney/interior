@@ -39,34 +39,45 @@
   );
 }
 
-@mixin heading-5() {
+@mixin heading-5(
+  $above: .2,
+  $margin: 0
+) {
   @include baseline(
     $font-size: $great-primer,
     $font-weight: bold,
     $line-height: 1.25,
-    $above: .2,
+    $above: $above,
+    $margin: $margin,
     $below: .1
   );
 }
 
-@mixin heading-6() {
+@mixin heading-6(
+  $above: .5,
+  $margin: 0
+) {
   @include baseline(
     $font-size: $english,
     $font-weight: bold,
     $line-height: 2,
     $above: .5,
-    $below: -1
+    $below: -1,
+    $margin: $margin
   );
 }
 
-@mixin heading-whopper() {
+@mixin heading-whopper(
+  $below-small: 7,
+  $below-largest: 7
+) {
   @include baseline(
     $font-size: $two-line-pica,
     $line-height: 1.28,
     $font-weight: bold,
     $margin: 8,
     $above: .45,
-    $below: 7
+    $below: $below-small
   );
   // The value used for min-height should/could come from modular-scale
   @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
@@ -76,7 +87,7 @@
       $font-weight: bold,
       $margin: 14,
       $above: .45,
-      $below: 7
+      $below: $below-largest
     );
   }
 }

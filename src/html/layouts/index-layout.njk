@@ -9,19 +9,17 @@
 {% endblock %}
 
 {% block main %}
-  {% block intro %}
-    <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
-  {% endblock %}
-  {% block section %}
-    <section>
-      {% block content %}{% endblock %}
-    </section>
-  {% endblock %}
-  {% block bigmofo %}
-  {% endblock %}
-  {% block closing_section %}
-    <section>
-      {% block closing_content %}{% endblock %}
-    </section>
-  {% endblock %}
+  <section>
+    <div class="grid">
+      <div class="column-1">
+        {% block column1 %}
+          <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
+        {% endblock %}
+      </div>
+      <div class="column-2">
+        {% block column2 %}
+        {% endblock %}
+      </div>
+    </div>
+  </section>
 {% endblock %}
