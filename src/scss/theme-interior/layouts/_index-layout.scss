@@ -31,9 +31,11 @@
   }
 
   .grid > div {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
+      @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+    }
     @include column(
       $columns: 6,
       $calc: false,
