@@ -11,9 +11,15 @@
   }
 
   h1 {
+    @include auto-columns($map: $breakpoints);
     @include heading-whopper(
       $below-small: 4,
       $below-largest: 4
+    );
+    @include column(
+      $max-columns: 6,
+      $columns: 6,
+      $margin: false
     );
   }
 
@@ -23,6 +29,19 @@
     );
   }
 
+  .column-1 > p {
+    @include auto-columns(
+      $map: $breakpoints
+    );
+    @media(min-width: $screen-medium) {
+      @include column(
+        $max-columns: 6,
+        $columns: 4,
+        $margin: false
+      );
+    }
+  }
+
   section {
     @include column(
       $columns: 12,
@@ -30,43 +49,43 @@
     );
   }
 
+  // The main "wrapping" columns
   .grid > div {
-      @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-end;
+    @include grid(-$gutter-small/2);
+    @media(min-width: $screen-larger) {
+      @include column(
+        $columns: 6,
+        $margin: false
+      );
     }
-    @include column(
-      $columns: 6,
-      $calc: false,
-      $margin: false
-    );
-  }
 
-  h1 {
-    @include column(
-      $max-columns: 6,
-      $columns: 6,
-      $gutter: $gutter-medium
-    );
-  }
-
-  .column-1 > p {
-    @include column(
-      $max-columns: 6,
-      $columns: 4,
-      $gutter: $gutter-medium
-    );
+    // Change the alignment on large screens to
+    @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+    }
   }
 
   .column-2 {
+    // Abritrary unit - maybe change?
     margin-top: 4rem;
     & > div {
-      @include column(
-        $max-columns: 6,
-        $columns: 4,
-        $gutter: $gutter-medium
-      );
+      @include auto-columns($map: $breakpoints);
+      @media(min-width: $screen-medium) {
+        @include column(
+          $max-columns: 6,
+          $columns: 4,
+          $margin: false
+        );
+      }
+      @media(min-width: $screen-large) {
+        @include column(
+          $max-columns: 6,
+          $columns: 4,
+          $margin: false
+        );
+      }
     }
   }
 

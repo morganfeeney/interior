@@ -92,22 +92,24 @@ $breakpoints-map: (
   smaller: (
     gutter: $gutter-smaller,
     container-gutter: $grid-gutter/2,
-    breakpoint: false
+    breakpoint: false,
+    margin: true
   ),
   small: (
-    gutter: $gutter-small,
+    gutter: $horizontal-space,
     container-gutter: $container-gutter-smaller,
     breakpoint: $screen-small
   ),
   medium: (
-    gutter: $gutter-small,
+    gutter: $horizontal-space,
     container-gutter: $container-gutter-small,
     breakpoint: $screen-medium
   ),
   large: (
-    gutter: $gutter-small,
+    gutter: $horizontal-space,
     container-gutter: $container-gutter,
-    breakpoint: $screen-large
+    breakpoint: $screen-large,
+    margin: true
   )
 )!default;
 $breakpoints: map-values($breakpoints-map)!default;
