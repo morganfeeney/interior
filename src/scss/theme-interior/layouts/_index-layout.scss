@@ -51,7 +51,7 @@
 
   // The main "wrapping" columns
   .grid > div {
-    @include grid(-$gutter-small/2);
+    //@include grid(-$gutter-small/2);
     @media(min-width: $screen-larger) {
       @include column(
         $columns: 6,

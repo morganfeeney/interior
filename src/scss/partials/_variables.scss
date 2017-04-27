@@ -106,7 +106,7 @@ $breakpoints-map: (
     breakpoint: $screen-medium
   ),
   large: (
-    gutter: $horizontal-space,
+    gutter: $horizontal-space-small,
     container-gutter: $container-gutter,
     breakpoint: $screen-large,
     margin: true
