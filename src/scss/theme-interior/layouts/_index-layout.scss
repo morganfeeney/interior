@@ -10,6 +10,12 @@
     display: block;
   }
 
+@media(min-width: $screen-large) {
+    .grid {
+        margin: 0
+    }
+}
+
   h1 {
     @include auto-columns($map: $breakpoints);
     @include heading-whopper(
@@ -17,8 +23,8 @@
       $below-largest: 4
     );
     @include column(
-      $max-columns: 6,
-      $columns: 6,
+      $columns: 12,
+      $gutter: $gutter-small,
       $margin: false
     );
   }
@@ -30,37 +36,37 @@
   }
 
   .column-1 > p {
-    @include auto-columns(
-      $map: $breakpoints
-    );
+    @include auto-columns($map: $breakpoints);
     @media(min-width: $screen-medium) {
       @include column(
         $max-columns: 6,
         $columns: 4,
+        $gutter: $gutter-small,
         $margin: false
       );
     }
-  }
-
-  section {
-    @include column(
-      $columns: 12,
-      $gutter: font-scale(2.5)
-    );
   }
 
   // The main "wrapping" columns
   .grid > div {
-    //@include grid(-$gutter-small/2);
+    @include auto-columns($map: $breakpoints);
+    @media(min-width: $screen-medium) {
+      @include column(
+        $columns: 12,
+        $gutter: $gutter-smaller
+      );
+    }
     @media(min-width: $screen-larger) {
       @include column(
         $columns: 6,
+        $gutter: $gutter-smaller,
         $margin: false
       );
     }
 
-    // Change the alignment on large screens to
-    @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
+    // Change the alignment on large screens, approx 1080px high
+    // 1 rem = 18px due to the html element being scaled up to 112.5%.
+    @media screen and (min-width: $screen-large) and (min-height: 50rem) {
       display: flex;
       flex-flow: column;
       justify-content: flex-end;
@@ -73,11 +79,12 @@
     & > div {
       @include auto-columns($map: $breakpoints);
       @media(min-width: $screen-medium) {
-        @include column(
-          $max-columns: 6,
-          $columns: 4,
-          $margin: false
-        );
+          @include column(
+            $max-columns: 6,
+            $columns: 4,
+            $gutter: $gutter-small,
+            $margin: false
+          );
       }
       @media(min-width: $screen-large) {
         @include column(

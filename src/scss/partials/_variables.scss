@@ -96,17 +96,18 @@ $breakpoints-map: (
     margin: true
   ),
   small: (
-    gutter: $horizontal-space,
+    gutter: $gutter-small,
     container-gutter: $container-gutter-smaller,
     breakpoint: $screen-small
   ),
   medium: (
-    gutter: $horizontal-space,
+    gutter: $gutter-medium,
     container-gutter: $container-gutter-small,
-    breakpoint: $screen-medium
+    breakpoint: $screen-medium,
+    margin: true
   ),
   large: (
-    gutter: $horizontal-space-small,
+    gutter: $gutter-large,
     container-gutter: $container-gutter,
     breakpoint: $screen-large,
     margin: true
