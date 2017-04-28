@@ -10,14 +10,11 @@
     display: block;
   }
 
-@media(min-width: $screen-large) {
-    .grid {
-        margin: 0
-    }
-}
+  .grid {
+      margin: 0;
+  }
 
   h1 {
-    @include auto-columns($map: $breakpoints);
     @include heading-whopper(
       $below-small: 4,
       $below-largest: 4
@@ -36,7 +33,6 @@
   }
 
   .column-1 > p {
-    @include auto-columns($map: $breakpoints);
     @media(min-width: $screen-medium) {
       @include column(
         $max-columns: 6,
@@ -77,7 +73,6 @@
     // Abritrary unit - maybe change?
     margin-top: 4rem;
     & > div {
-      @include auto-columns($map: $breakpoints);
       @media(min-width: $screen-medium) {
           @include column(
             $max-columns: 6,
