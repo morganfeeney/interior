@@ -37,7 +37,8 @@
     @media(min-width: $screen-medium) {
       @include column(
         $columns: 2,
-        $max-columns: 5
+        $max-columns: 5,
+        $gutter: $gutter-medium
       );
     }
     @media(min-width: $screen-large) {

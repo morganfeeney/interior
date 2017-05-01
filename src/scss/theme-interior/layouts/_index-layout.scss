@@ -17,8 +17,7 @@
     );
     @include column(
       $columns: 12,
-      $gutter: $gutter-small,
-      $margin: false
+      $gutter: $gutter-small
     );
   }
 
@@ -29,30 +28,33 @@
   }
 
   .column-1 > p {
+    @include column(
+      $columns: 12,
+      $gutter: $gutter-small
+    );
     @media(min-width: $screen-medium) {
       @include column(
         $max-columns: 6,
         $columns: 4,
-        $gutter: $gutter-small,
-        $margin: false
+        $gutter: $gutter-small
       );
     }
   }
 
   // The main "wrapping" columns
   .grid > div {
-    @include auto-columns($map: $breakpoints);
     @media(min-width: $screen-medium) {
       @include column(
         $columns: 12,
-        $gutter: $gutter-smaller
+        $margin: false,
+        $calc: false
       );
     }
     @media(min-width: $screen-larger) {
       @include column(
         $columns: 6,
-        $gutter: $gutter-smaller,
-        $margin: false
+        $margin: false,
+        $calc: false
       );
     }
 
@@ -73,15 +75,14 @@
           @include column(
             $max-columns: 6,
             $columns: 4,
-            $gutter: $gutter-small,
-            $margin: false
+            $gutter: $gutter-medium
           );
       }
       @media(min-width: $screen-large) {
         @include column(
           $max-columns: 6,
           $columns: 4,
-          $margin: false
+          $gutter: $gutter-large
         );
       }
     }
