@@ -13,28 +13,18 @@
 {% endblock %}
 {% block bigmofo %}
 <figure class="bigmofo">
-  <p>Detail about the grid tools and how to use them — this page should be about layout only, this time don't focus on coding standards, focus on layout</p>
+  <p class="small">This is a bit of information about the image</p>
+  <img class="example-1" src="/images/grid-system_grid-1.svg" alt="">
+</figure>
+<figure class="bigmofo">
+  <p class="small">This is a bit of information about the image</p>
+  <img class="example-2" src="/images/grid-system_grid-1.svg" alt="">
+  <p class="small">This is a bit of information about the image</p>
+  <img class="example-3" src="/images/grid-system_grid-1.svg" alt="">
 </figure>
 {% endblock %}
 {% block closing_content %}
-  <div class="grid">
-    <h5>Separation</h5>
-    <p>Keeping markup and presentation separate makes life easier going forward. There are many benefits, the primary benefit being that changes can be made using <strong><u>only</u></strong> CSS.</p>
-    <h5>Try not to set things in stone</h5>
-    <p>Describing in markup the appearance of anything limits what may be altered later.</p>
-    <p>In figure 2 the classes are descriptive of how many columns they span. This is fine until something requires an update, if the width needs to change you have no choice—if you want your markup to be semantic—but to change the markup.</p>
-    <figure>
-      {% include "../partials/code-samples/col-scss-set-in-stone.njk" %}
-      <figcaption>Figure 2</figcaption>
-    </figure>
-    <h5>Choice</h5>
-    <p>You could either change both HTML and CSS, change HTML only—but be limited by existing styles—or change CSS only.</p>
-    <p>If you keep your markup <strong>generic</strong> this change could be a matter of updating the CSS only. In figure 3 the generic <code class="code-inline language-markup">&lt;div&gt;</code> tag replaces the specific <code class="code-inline language-markup">&lt;div class="col-4"&gt;</code> &amp; <code class="code-inline language-markup">&lt;div class="col-6"&gt;</code> tags.</p>
-    <figure>
-      {% include "../partials/code-samples/col-scss-layout-1.njk" %}
-      <figcaption>Figure 3</figcaption>
-    </figure>
-  </div>
+
 {% endblock %}
 
 {% block aside %}{% endblock %}

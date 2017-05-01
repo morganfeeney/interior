@@ -30,3 +30,7 @@ p + img {
     $below: .4
   );
 }
+
+.image-box svg {
+  max-width: 100%;
+}

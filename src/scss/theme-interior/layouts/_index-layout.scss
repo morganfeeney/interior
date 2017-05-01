@@ -19,9 +19,7 @@
   }
 
   h5 {
-    @include heading-6(
-      $margin: 2
-    );
+    @include heading-6($margin: 2);
   }
 
   .column-1 > p {
