@@ -11,14 +11,16 @@
   }
 
   h1 {
-    @include heading-whopper(
-      $below-small: 4,
-      $below-largest: 4
-    );
     @include column(
       $columns: 12,
       $gutter: $gutter-small
     );
+    @media(min-width: $screen-medium) {
+      @include heading-whopper(
+        $below-small: 4,
+        $below-largest: 4
+      );
+    }
   }
 
   h5 {
@@ -68,15 +70,21 @@
   }
 
   .column-2 {
-    // Abritrary unit - maybe change?
-    margin-top: 4rem;
+    margin-top: -(font-scale(1));
+    @media(min-width: $screen-largest) {
+      margin-top: font-scale(4);
+    }
     & > div {
+      @include column(
+        $columns: 12,
+        $gutter: $gutter-small
+      );
       @media(min-width: $screen-medium) {
-          @include column(
-            $max-columns: 6,
-            $columns: 4,
-            $gutter: $gutter-medium
-          );
+        @include column(
+          $max-columns: 6,
+          $columns: 4,
+          $gutter: $gutter-medium
+        );
       }
       @media(min-width: $screen-large) {
         @include column(
@@ -84,6 +92,7 @@
           $columns: 4,
           $gutter: $gutter-large
         );
+        margin-top: font-scale(4);
       }
     }
   }
