@@ -68,25 +68,49 @@
 }
 
 @mixin heading-whopper(
+  $above-smaller: .5,
+  $above-small: .65,
+  $above-medium: .45,
+  $below-smaller: 1,
   $below-small: 7,
-  $below-largest: 7
+  $below-medium: 7,
+  $below-largest: 7,
+  $font-size-smaller: $paragon,
+  $font-size-small: $double-pica,
+  $font-size-medium: $two-line-pica,
+  $line-height-smaller: 1.48,
+  $line-height-small: 1.55,
+  $line-height-large: 1.28,
+  $margin-smaller: 4,
+  $margin-small: 8,
+  $margin-medium: 14
 ) {
   @include baseline(
-    $font-size: $two-line-pica,
-    $line-height: 1.28,
+    $font-size: $font-size-smaller,
+    $line-height: $line-height-smaller,
     $font-weight: bold,
-    $margin: 8,
-    $above: .45,
-    $below: $below-small
+    $margin: $margin-smaller,
+    $above: $above-smaller,
+    $below: $below-smaller
   );
+  @media(min-width: $screen-small) {
+    @include baseline(
+      $font-size: $font-size-medium,
+      $line-height: $line-height-large,
+      $font-weight: bold,
+      $margin: $margin-small,
+      $above: $above-medium,
+      $below: $below-largest
+    );
+  }
   // The value used for min-height should/could come from modular-scale
   @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
     @include baseline(
-      $font-size: $two-line-pica,
-      $line-height: 1.28,
+      $font-size: $font-size-medium,
+      $line-height: $line-height-large,
       $font-weight: bold,
-      $margin: 14,
-      $above: .45,
+      $margin: $margin-medium,
+      $above: $above-medium,
       $below: $below-largest
     );
   }
