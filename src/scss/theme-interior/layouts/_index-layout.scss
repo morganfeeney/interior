@@ -15,12 +15,7 @@
       $columns: 12,
       $gutter: $gutter-small
     );
-    @media(min-width: $screen-medium) {
-      @include heading-whopper(
-        $below-small: 4,
-        $below-largest: 4
-      );
-    }
+    @include heading-whopper($below-largest: 4);
   }
 
   h5 {

@@ -16,13 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
 }
 h1 {
-  @include heading-whopper(
-    $below-small: 4,
-    $below-largest: 4
-  );
-  @media(min-width: $screen-medium) {
-    @include heading-whopper();
-  }
+  @include heading-whopper();
 }
 h2, h2, h3, h4, h5, h6 {
   @include heading-6()

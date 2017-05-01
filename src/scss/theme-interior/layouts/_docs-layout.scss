@@ -9,19 +9,13 @@
 
   h1 {
     @include column(
-      $columns: 10,
+      $columns: 12,
       $gutter: $gutter-smaller
     );
-    @media(min-width: $screen-medium) {
-      @include column(
-        $columns: 10,
-        $gutter: $gutter-medium
-      );
-    }
     @media(min-width: $screen-large) {
       @include column(
         $columns: 10,
-        $gutter: $gutter-medium
+        $gutter: $gutter-large
       );
     }
   }

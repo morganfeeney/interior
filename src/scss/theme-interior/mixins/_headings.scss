@@ -72,8 +72,8 @@
   $above-small: .65,
   $above-medium: .45,
   $below-smaller: 1,
-  $below-small: 7,
-  $below-medium: 7,
+  $below-small: 4,
+  $below-medium: 4,
   $below-largest: 7,
   $font-size-smaller: $paragon,
   $font-size-small: $double-pica,
@@ -95,12 +95,22 @@
   );
   @media(min-width: $screen-small) {
     @include baseline(
+      $font-size: $font-size-small,
+      $line-height: $line-height-small,
+      $font-weight: bold,
+      $margin: $margin-small,
+      $above: $above-small,
+      $below: $below-small
+    );
+  }
+  @media(min-width: $screen-medium) {
+    @include baseline(
       $font-size: $font-size-medium,
       $line-height: $line-height-large,
       $font-weight: bold,
       $margin: $margin-small,
       $above: $above-medium,
-      $below: $below-largest
+      $below: $below-medium
     );
   }
   // The value used for min-height should/could come from modular-scale
