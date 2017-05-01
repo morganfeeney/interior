@@ -29,22 +29,28 @@
   .container section:not(.bigmofo) {
     @include column(
       $columns: 12,
-      $gutter: $gutter-smaller
+      $margin: false,
+      $calc: false
     );
     @media(min-width: $screen-medium) {
       @include column(
         $columns: 10,
-        $gutter: $gutter-medium
+        $margin: false,
+        $calc: false
       );
     }
     @media(min-width: $screen-large) {
       @include column(
-        $columns: 8
+        $columns: 8,
+        $margin: false,
+        $calc: false
       );
     }
     @media(min-width: $screen-largest) {
       @include column(
-        $columns: 6
+        $columns: 6,
+        $margin: false,
+        $calc: false
       );
     }
   }

@@ -44,9 +44,9 @@
         $below: 2,
         $no-text: true
       );
-      @include grid($negative-gutter: -1rem);
+      @include grid($gutter: -1rem);
       @media(min-width: $screen-medium) {
-        @include grid($negative-gutter: 0);
+        @include grid($gutter: 0);
       }
       position: relative;
       &::before {
@@ -181,7 +181,7 @@
   }
   > img {
     @include column(
-      $columns: 6, 
+      $columns: 6,
       $margin-left: auto
     );
     order: 1;

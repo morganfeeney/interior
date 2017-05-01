@@ -10,13 +10,6 @@ body {
   );
 }
 
-.grid {
-  // TEMPFIX
-  @media(max-width: $screen-large-max) {
-    @include grid($negative-gutter: -$horizontal-space-small/2);
-  }
-}
-
 .multicolumn {
   @include baseline(
     $no-text: true,

@@ -10,10 +10,6 @@
     display: block;
   }
 
-  .grid {
-      margin: 0;
-  }
-
   h1 {
     @include heading-whopper(
       $below-small: 4,
