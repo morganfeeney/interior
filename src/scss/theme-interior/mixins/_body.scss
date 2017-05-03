@@ -2,8 +2,15 @@
 
 @mixin body-1() {
   @include baseline(
-    $font-size: $english,
-    $line-height: 2,
+    $font-size: 1.25rem,
+    $line-height: 1.59,
     $above: .5
   );
+  @media(min-width: $screen-large) {
+    @include baseline(
+      $font-size: $english,
+      $line-height: 2,
+      $above: .5
+    );
+  }
 }

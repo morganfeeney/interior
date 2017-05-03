@@ -28,7 +28,7 @@
 
 nav {
   a {
-    @include baseline();
+    @include body-1();
     display: block;
   }
 }

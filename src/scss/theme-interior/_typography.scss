@@ -3,8 +3,12 @@
 // -----------------------------------------------------------------------------
 
 html {
+  // Allows me to change the line-height for mobile use, yet keep a consistent
+  // font-size.
+  font-size: 90%;
+  // Increases body font size to 18px if it's 1rem (16px).
   @media(min-width: $screen-large) {
-   font-size: 112.5%; // Increases body font size to 18px if it's 1rem (16px).
+   font-size: 112.5%;
   }
 }
 

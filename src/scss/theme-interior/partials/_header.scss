@@ -10,8 +10,15 @@
     text-align: right;
   }
   a {
-    @include baseline($below: 1);
+    @include baseline(
+      $font-size: 1.25rem,
+      $line-height: 1.59,
+      $below: 1
+    );
     @media(min-width: $screen-small) {
+      margin-top: font-scale(3);
+    }
+    @media(min-width: $screen-large) {
       @include baseline($margin: 3);
     }
     display: inline-flex;
@@ -50,7 +57,7 @@
     $margin: 1,
     $below: -.15
   );
-  max-width: $four-line-brevier;
+  max-width: $double-great-primer;
 
   @media(min-width: $screen-small) {
     @include baseline(

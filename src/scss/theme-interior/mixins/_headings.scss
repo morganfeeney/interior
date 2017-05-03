@@ -58,9 +58,9 @@
   $margin: 0
 ) {
   @include baseline(
-    $font-size: $english,
+    $font-size: 1.25rem,
     $font-weight: bold,
-    $line-height: 2,
+    $line-height: 1.59,
     $above: .5,
     $below: -1,
     $margin: $margin
