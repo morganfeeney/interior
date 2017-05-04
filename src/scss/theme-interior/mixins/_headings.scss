@@ -65,20 +65,30 @@
     $below: -1,
     $margin: $margin
   );
+  @media(min-width: $screen-large) {
+    @include baseline(
+      $font-size: $english,
+      $font-weight: bold,
+      $line-height: 2,
+      $above: .5,
+      $below: -1,
+      $margin: $margin
+    );
+  }
 }
 
 @mixin heading-whopper(
-  $above-smaller: .5,
+  $above-smaller: .2,
   $above-small: .65,
   $above-medium: .45,
-  $below-smaller: 1,
+  $below-smaller: .6,
   $below-small: 4,
   $below-medium: 4,
   $below-largest: 7,
   $font-size-smaller: $paragon,
   $font-size-small: $double-pica,
   $font-size-medium: $two-line-pica,
-  $line-height-smaller: 1.48,
+  $line-height-smaller: 1.43,
   $line-height-small: 1.55,
   $line-height-large: 1.28,
   $margin-smaller: 4,

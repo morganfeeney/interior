@@ -9,23 +9,6 @@
   @media(min-width: $screen-small) {
     text-align: right;
   }
-  a {
-    @include baseline(
-      $font-size: 1.25rem,
-      $line-height: 1.59,
-      $below: 1
-    );
-    @media(min-width: $screen-small) {
-      margin-top: font-scale(3);
-    }
-    @media(min-width: $screen-large) {
-      @include baseline($margin: 3);
-    }
-    display: inline-flex;
-    &:not(:last-child) {
-      margin-right: $horizontal-space-small;
-    }
-  }
   @include column(
     $columns: 12,
     $gutter: $gutter-smaller
@@ -38,11 +21,33 @@
   }
 }
 
+#main-header nav a {
+  @include baseline(
+    $font-size: 1.25rem,
+    $line-height: 1.59,
+    $below: .8
+  );
+  @media(min-width: $screen-small) {
+    margin-top: font-scale(3);
+  }
+  @media(min-width: $screen-large) {
+    @include baseline($margin: 3);
+  }
+  display: inline-flex;
+  &:not(:last-child) {
+    margin-right: $horizontal-space-small;
+  }
+}
+
 #main-header .home-link {
   @include column(
     $columns: 12,
     $gutter: $gutter-smaller
   );
+
+  // Ensure the logo doesn't grow.
+  flex: 0;
+
   @media(min-width: $screen-small) {
     @include column(
       $columns: 4,
@@ -54,9 +59,10 @@
 #main-header .home-link svg {
   @include baseline(
     $no-text: true,
-    $margin: 1,
-    $below: -.15
+    $margin: .65,
+    $below: -1
   );
+
   max-width: $double-great-primer;
 
   @media(min-width: $screen-small) {

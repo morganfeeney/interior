@@ -88,18 +88,15 @@
   }
 
   dt, dd {
-    @include baseline(
-      $line-height: 2,
-      $above: .5
-    );
+    @include body-1();
   }
 
   dt {
     @media(max-width: $screen-medium-max) {
       @include baseline(
-        $line-height: 2,
+        $no-text: true,
         $above: 1.5,
-        $margin: -1
+        $margin: -1.04
       );
     }
     @media(min-width: $screen-largest) {
