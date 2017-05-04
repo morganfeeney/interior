@@ -12,6 +12,10 @@
   max-width: $wrapper-width-large;
 }
 
+.container-outer {
+  background: $brand-color-light;
+}
+
 .grid {
   @include grid($gutter: 0);
 }
