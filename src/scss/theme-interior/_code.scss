@@ -48,13 +48,6 @@ pre {
 	);
 }
 
-// pre.code-block {
-//   @media(max-width: $screen-medium-max) {
-//     margin-left: -$horizontal-space-small;
-//     margin-right: -$horizontal-space-small;
-//   }
-// }
-
 pre:before {
   @include baseline(
 		$font-size: $english,
@@ -74,9 +67,10 @@ pre:before {
 
 code:not(.code-inline) {
   @include baseline(
+		$font-size: $augustin,
 		$line-height: 2,
 		$above: .5,
 		$margin-bottom: 0
 	);
-	padding-bottom: 1rem;
+	padding-bottom: font-scale(1);
 }

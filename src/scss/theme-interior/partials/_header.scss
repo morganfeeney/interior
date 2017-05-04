@@ -23,7 +23,7 @@
 
 #main-header nav a {
   @include baseline(
-    $font-size: 1.25rem,
+    $font-size: $augustin,
     $line-height: 1.59,
     $below: .8
   );
@@ -46,7 +46,9 @@
   );
 
   // Ensure the logo doesn't grow.
-  flex: 0;
+  @media(max-width: $screen-small-max) {
+    flex: 0;
+  }
 
   @media(min-width: $screen-small) {
     @include column(

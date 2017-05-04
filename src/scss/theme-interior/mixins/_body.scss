@@ -2,7 +2,7 @@
 
 @mixin body-1() {
   @include baseline(
-    $font-size: 1.25rem,
+    $font-size: $augustin,
     $line-height: 1.59,
     $above: .5
   );
