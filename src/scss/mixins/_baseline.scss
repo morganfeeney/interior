@@ -4,6 +4,7 @@
 @mixin baseline(
   $font-size: $font-base,
   $font-weight: false,
+  $text-transform: false,
   $unit: 1,
   $line-height: ($line-height-base * $unit),
   $margin: 0,
@@ -21,6 +22,9 @@
   }
   @if $font-weight != false {
     font-weight: $font-weight;
+  }
+  @if $text-transform != false {
+    text-transform: $text-transform;
   }
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
