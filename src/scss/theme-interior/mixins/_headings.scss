@@ -55,13 +55,14 @@
 
 @mixin heading-6(
   $above: .5,
+  $below: -1,
   $margin: 0
 ) {
   @include baseline(
-    $font-size: 1.25rem,
+    $font-size: $paragon-small,
     $font-weight: bold,
-    $line-height: 1.59,
-    $above: .5,
+    $line-height: 2rem,
+    $above: $above,
     $below: -1,
     $margin: $margin
   );
@@ -78,18 +79,18 @@
 }
 
 @mixin heading-whopper(
-  $above-smaller: .2,
+  $above-smaller: .5,
   $above-small: .65,
   $above-medium: .45,
-  $below-smaller: .6,
+  $below-smaller: 1,
   $below-small: 4,
   $below-medium: 4,
   $below-largest: 7,
-  $font-size-smaller: $paragon,
+  $font-size-smaller: $two-line-pica-small,
   $font-size-small: $double-pica,
   $font-size-medium: $two-line-pica,
-  $line-height-smaller: 1.43,
-  $line-height-small: 1.55,
+  $line-height-smaller: 3rem,
+  $line-height-small: 3rem,
   $line-height-large: 1.28,
   $margin-smaller: 4,
   $margin-small: 8,

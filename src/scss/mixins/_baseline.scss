@@ -4,6 +4,7 @@
 @mixin baseline(
   $font-size: $font-base,
   $font-weight: false,
+  $font-style: false,
   $text-transform: false,
   $unit: 1,
   $line-height: ($line-height-base * $unit),
@@ -22,6 +23,9 @@
   }
   @if $font-weight != false {
     font-weight: $font-weight;
+  }
+  @if $font-style != false {
+    font-style: $font-style;
   }
   @if $text-transform != false {
     text-transform: $text-transform;

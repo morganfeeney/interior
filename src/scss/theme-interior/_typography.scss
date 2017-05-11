@@ -1,12 +1,16 @@
 // -----------------------------------------------------------------------------
 // Typography
 // -----------------------------------------------------------------------------
+// Be warned, using flex removes collapsing margins therefore comparing 2 lots
+// of text, 1 with and 1 without flex will drive you insane.
+//
 
 html {
-  // Allows me to change the line-height for mobile use, yet keep a consistent
-  // font-size.
-  font-size: 90%;
-  // Increases body font size to 18px if it's 1rem (16px).
+  // Set the html font-size to 12px.
+  // font-size: 75%;
+  // Set the html font-size to 14px.
+  font-size: 87.5%;
+  // Sets html font size to 18px.
   @media(min-width: $screen-large) {
    font-size: 112.5%;
   }
@@ -22,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   @include heading-whopper();
 }
-h2, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   @include heading-6()
 }
 

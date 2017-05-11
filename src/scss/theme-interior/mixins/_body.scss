@@ -2,9 +2,10 @@
 
 @mixin body-1() {
   @include baseline(
-    $font-size: $augustin,
-    $line-height: 1.59,
-    $above: .5
+    $font-size: $paragon-small,
+    $line-height: 2rem,
+    $above: .45,
+    $below: 0
   );
   @media(min-width: $screen-large) {
     @include baseline(

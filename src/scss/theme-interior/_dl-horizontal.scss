@@ -95,8 +95,9 @@
     @media(max-width: $screen-medium-max) {
       @include baseline(
         $no-text: true,
-        $above: 1.5,
-        $margin: -1.04
+        $above: 1,
+        $below: -.5,
+        $margin: -.5
       );
     }
     @media(min-width: $screen-largest) {
