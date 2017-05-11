@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       outputStyle: "expanded",
       sourceMapContents: true,
       sourceMap: true,
-      precision: 4
+      precision: 7
     },
     files: {
       "docs/css/free-format.css": "src/scss/free-format.scss",
