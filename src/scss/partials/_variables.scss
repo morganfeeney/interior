@@ -22,13 +22,14 @@ $font-size-body: $font-base !default;
 $font-weight-border-with-content: bold !default
 
 // Font families
+$font-system: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-serif: serif, georgia !default;
 $font-monospace: "Inconsolata", monospace, courier !default;
 
 // Apply font families to generic variables
 $font-family-base: $font-sans-serif !default;
-$font-family-headings: $font-sans-serif !default;
+$font-family-headings: $font-system !default;
 $font-family-inline-code: $font-monospace !default;
 
 $light-border: 1px solid #555 !default;
