@@ -1,21 +1,21 @@
-{% extends "layouts/docs-layout.njk" %}
+{% extends "layouts/post-layout.njk" %}
 {% set page_title = "Web layout design is evolving." %}
 {% set page_description = "The medium of web is coming of age, in this short article I draw a comparison between print and web & explains how much closer they are becoming." %}
 
-{% block intro %}
-
-
-  <time datetime="2016-10-18T09:21:10.590Z" title="Published: Tue Oct 18 2016">Tue Oct 18 2016</time>
-  <h1>{{ page_title }}ARCHIVE THIS PAGE</h1>
-  <p>Something <strong>big</strong> is happening, specification is pushing the web forward in an unprecedented way.
-    Those ready to embrace change are on the verge of a new-era.
-    <em>However</em>, we mustn't forget beyond the web is a wealth of layout design resource to learn from.</p>
-{% endblock %}
-
-
 {% block main %}
-<h1>{{ page_title }}—ARCHIVE THIS PAGE</h1>
+    {% block intro %}
+    <div class="grid">
+    <p>
+        <time datetime="2016-10-18T09:21:10.590Z" title="Published: Tue Oct 18 2016">Tue Oct 18 2016</time>
+    </p>
+      <h1>{{ page_title }}</h1>
+      <p>Something <strong>big</strong> is happening, specification is pushing the web forward in an unprecedented way.
+        Those ready to embrace change are on the verge of a new-era.
+        <em>However</em>, we mustn't forget beyond the web is a wealth of layout design resource to learn from.</p>
+    </div>
+    {% endblock %}
   <section id="foreword">
+  <div class="grid">
     <h5>Web and print are different beasts</h5>
     <p>Paper folds, yet doesn't scale when you pinch it — you needn't worry about copy in a paper layout overflowing when its orientation changes.
     The fluidity of web alone presents a unique set of challenges, the world of print won't experience.</p>
@@ -37,16 +37,19 @@
     <p>It's early days for the web, whereas print has been-around. In her talk, Jen focuses on the typical layouts we are so used to seeing on the web every day, 3 column layouts for example, and is 100% right for illuminating how devoid of creativity they are. These layouts have become engrained within the web and, unfortunately, <em>normalised</em>.</p>
        <p>Taking the time to stop and re-assess things is therefore crucial in order to move forward and break free of old habits. Researching the works of layout specialists from the world of print design is definitely a way forward, however web is its own medium with its own unique challenges and features. It needs to evolve into its own thing,
           yet draw upon the influence required to imagine the possibilities.</p>
+  </div>
   </section>
   <section id="interior">
-    <h5>The need for Interior</h5>
-    <p>Automation, structure, re-usable &amp; familiar code. I wanted a series of layout tools that suit my needs — it's designed for me — but you can use it too. Feel free to get involved if you feel strongly about contributing.</p>
-    <h6>next</h6>
-    <ul>
-      <li><a class="button" href="{{ home_url }}docs/">Read the documentation</a></li>
-      <li><a class="button" href="{{ home_url }}examples/">View the examples</a></li>
-      <li><a class="button" href="https://github.com/morganfeeney/interior">View on Github</a></li>
-    </ul>
+      <div class="grid">
+        <h5>The need for Interior</h5>
+        <p>Automation, structure, re-usable &amp; familiar code. I wanted a series of layout tools that suit my needs — it's designed for me — but you can use it too. Feel free to get involved if you feel strongly about contributing.</p>
+        <h6>next</h6>
+        <ul>
+          <li><a class="button" href="{{ home_url }}docs/">Read the documentation</a></li>
+          <li><a class="button" href="{{ home_url }}examples/">View the examples</a></li>
+          <li><a class="button" href="https://github.com/morganfeeney/interior">View on Github</a></li>
+        </ul>
+    </div>
   </section>
 {% endblock %}
 
