@@ -7,9 +7,18 @@
   flex-flow: row wrap;
 }
 
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .container {
   margin: auto;
   max-width: $wrapper-width-large;
+  @include auto-columns(
+    $map: $breakpoints,
+    $container: true
+  );
 }
 
 .container-outer {

@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     },
     files: {
       "docs/css/free-format.css": "src/scss/free-format.scss",
-      "docs/css/interior.css": "src/scss/interior.scss"
+      "docs/css/interior.css": "src/scss/interior.scss",
+      "docs/css/modular-man-layout.css": "src/scss/modular-man-layout.scss"
     }
    }
   },
