@@ -4,7 +4,7 @@
   $overlay-map: $breakpoints-mm,
   $parent: "._8-column-grid-overlay"
 ) {
-  @media(max-width: $screen-small) {
+  @media(max-width: $screen-small-max) {
     & > div {
       &:nth-of-type(odd) {
         display: none;
@@ -18,7 +18,7 @@
   $centred: true,
   $parent: "._6-column-grid-overlay"
 ) {
-  @media(max-width: $screen-small) {
+  @media(max-width: $screen-small-max) {
     & > div {
       &:nth-of-type(odd) {
         display: none;
