@@ -7,8 +7,13 @@ footer {
 .sig {
   @include baseline($margin: 10);
   @include column(
-    $columns: 8,
-    $gutter: $gutter-small,
-    $breakpoint: $screen-large
+    $columns: 12,
+    $gutter: $gutter-small
   );
+  @media(min-width: $screen-large) {
+      @include column(
+        $columns: 8,
+        $gutter: $gutter-small
+      );
+  }
 }

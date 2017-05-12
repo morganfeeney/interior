@@ -8,8 +8,7 @@
 }
 
 body {
-  display: flex;
-  flex-flow: row wrap;
+    @extend %flex-container;
 }
 
 .container {

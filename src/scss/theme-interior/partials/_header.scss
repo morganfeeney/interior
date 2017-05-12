@@ -28,7 +28,7 @@
     $below: .8
   );
   @media(min-width: $screen-small) {
-    margin-top: font-scale(3);
+    margin-top: font-scale(3.25);
   }
   @media(min-width: $screen-large) {
     @include baseline($margin: 3);
@@ -70,15 +70,15 @@
   @media(min-width: $screen-small) {
     @include baseline(
       $no-text: true,
-      $margin: 2,
-      $below: -.15
+      $margin: 2.55,
+      $below: -.25
     );
   }
   @media(min-width: $screen-large) {
     @include baseline(
       $no-text: true,
       $margin: 2,
-      $below: .15
+      $below: .2
     );
     max-width: $double-great-primer;
   }

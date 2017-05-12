@@ -80,10 +80,10 @@
 
 @mixin heading-whopper(
   $above-smaller: .5,
-  $above-small: .65,
-  $above-medium: .45,
+  $above-small: .15,
+  $above-medium: .4,
   $below-smaller: 1,
-  $below-small: 4,
+  $below-small: 2.85,
   $below-medium: 4,
   $below-large: 4,
   $below-largest: 7,
@@ -92,7 +92,7 @@
   $font-size-medium: $two-line-pica,
   $line-height-smaller: 3rem,
   $line-height-small: 3rem,
-  $line-height-large: 1.28,
+  $line-height-large: 4rem,
   $margin-smaller: 4,
   $margin-small: 8,
   $margin-medium: 14

@@ -41,6 +41,8 @@
 
   // The main "wrapping" columns
   .grid > div {
+      @extend %flex-container;
+      
     @media(min-width: $screen-medium) {
       @include column(
         $columns: 12,
