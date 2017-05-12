@@ -26,9 +26,9 @@
 //   }
 // }
 
-nav {
-  a {
+article nav {
     @include body-1();
+  a {
     display: block;
   }
 }

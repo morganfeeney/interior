@@ -15,7 +15,10 @@
       $columns: 12,
       $gutter: $gutter-small
     );
-    @include heading-whopper($below-largest: 4);
+    @include heading-whopper(
+        $below-largest: 4,
+        $below-medium: 2
+    );
   }
 
   h5 {
@@ -65,7 +68,7 @@
   .column-2 {
     margin-top: -(font-scale(1));
     @media(min-width: $screen-largest) {
-      margin-top: font-scale(4);
+      margin-top: font-scale(2);
     }
     & > div {
       @include column(
