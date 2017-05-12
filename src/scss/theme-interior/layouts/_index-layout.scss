@@ -16,8 +16,8 @@
       $gutter: $gutter-small
     );
     @include heading-whopper(
-        $below-largest: 4,
-        $below-medium: 2
+        $below-medium: 2,
+        $below-largest: 3
     );
   }
 
@@ -42,7 +42,7 @@
   // The main "wrapping" columns
   .grid > div {
       @extend %flex-container;
-      
+
     @media(min-width: $screen-medium) {
       @include column(
         $columns: 12,
