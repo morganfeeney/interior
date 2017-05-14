@@ -7,8 +7,23 @@
   flex-flow: row wrap;
 }
 
+// Position the footer always at the bottom, regardless of how much content
+// there is.
+html {
+  display: flex;
+}
+
 body {
-    @extend %flex-container;
+  display: flex;
+  flex-flow: column;
+}
+
+#main-article {
+  height: 100%;
+}
+
+#main-footer {
+  margin-top: auto;
 }
 
 .container {
