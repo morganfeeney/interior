@@ -17,3 +17,26 @@ footer {
       );
   }
 }
+
+.footer-at-bottom {
+  // Position the footer always at the bottom, regardless of how much content
+  // there is.
+  @at-root {
+    html {
+      display: flex;
+    }
+  }
+
+  body {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #main-article {
+    height: 100%;
+  }
+
+  #main-footer {
+    margin-top: auto;
+  }
+}
