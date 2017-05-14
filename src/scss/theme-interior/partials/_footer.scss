@@ -21,15 +21,12 @@ footer {
 .footer-at-bottom {
   // Position the footer always at the bottom, regardless of how much content
   // there is.
-  @at-root {
-    html {
-      display: flex;
-    }
-  }
+  display: flex;
 
   body {
     display: flex;
     flex-flow: column;
+    width: 100%;
   }
 
   #main-article {
