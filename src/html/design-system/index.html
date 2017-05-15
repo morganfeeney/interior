@@ -1,6 +1,15 @@
 {% extends "layouts/index-layout.njk" %}
 {% set page_title = "Design system" %}
 {% set page_description = "Read the documentation on how to use Interior" %}
+{% block embedded_css %}
+  <style>
+    .baseline-grid::before {
+      background: linear-gradient(to bottom, #FF7070 0, transparent 1px) 0 0 / 100vw 1rem,
+                  linear-gradient(to top, #007323 1px, transparent 0) 0 6rem / 100vw 20rem,
+                  linear-gradient(to top, #007323 1px, transparent 0) 0 7rem / 100vw 20rem
+    }
+  </style>
+{% endblock %}
 
   {% block column1 %}
     {{ super() }}
