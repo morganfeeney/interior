@@ -11,10 +11,6 @@
   }
 
   h1 {
-    @include column(
-      $columns: 12,
-      $gutter: $gutter-small
-    );
     @include heading-whopper(
         $below-medium: 2,
         $below-largest: 3
@@ -25,45 +21,45 @@
     @include heading-6($margin: 2);
   }
 
-  .column-1 > p {
-    @include column(
-      $columns: 12,
-      $gutter: $gutter-small
-    );
-    @media(min-width: $screen-medium) {
-      @include column(
-        $max-columns: 6,
-        $columns: 4,
-        $gutter: $gutter-small
-      );
+  @media(min-width: $screen-larger) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows:
+      /* 3 */ auto
+      /* 4 */ 1fr
+      /* 5 */ auto;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+    }
+
+    .column-1 {
+      grid-column: 1 / span 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      h1 {
+        grid-column: 1 / span 3;
+      }
+      > p {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    .column-2 {
+      grid-column: 4 / span 3;
     }
   }
 
   // The main "wrapping" columns
   .grid > div {
-      @extend %flex-container;
-
     @media(min-width: $screen-medium) {
-      @include column(
-        $columns: 12,
-        $margin: false,
-        $calc: false
-      );
     }
     @media(min-width: $screen-larger) {
-      @include column(
-        $columns: 6,
-        $margin: false,
-        $calc: false
-      );
     }
 
     // Change the alignment on large screens, approx 1080px high
     // 1 rem = 18px due to the html element being scaled up to 112.5%.
     @media screen and (min-width: $screen-large) and (min-height: 50rem) {
-      display: flex;
-      flex-flow: column;
-      justify-content: flex-end;
     }
   }
 
