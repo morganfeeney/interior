@@ -25,10 +25,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows:
-      /* 3 */ auto
-      /* 4 */ 1fr
-      /* 5 */ auto;
+      grid-template-rows: auto 1fr auto;
       grid-column-gap: 1rem;
       grid-row-gap: 1rem;
     }
@@ -36,6 +33,7 @@
     .column-1 {
       grid-column: 1 / span 3;
       display: grid;
+      grid-column-gap: 1rem;
       grid-template-columns: 1fr 1fr 1fr;
       h1 {
         grid-column: 1 / span 3;

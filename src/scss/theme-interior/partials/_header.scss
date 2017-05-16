@@ -1,7 +1,9 @@
 #main-header {
   background: $brand-color-2;
   .container {
-    @extend %flex-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
   }
 }
 
@@ -9,15 +11,12 @@
   @media(min-width: $screen-small) {
     text-align: right;
   }
-  @include column(
-    $columns: 12,
-    $gutter: $gutter-smaller
-  );
+    grid-column: 1 / span 6;
+    grid-row: 2;
+
   @media(min-width: $screen-small) {
-    @include column(
-      $columns: 8,
-      $gutter: $gutter-smaller
-    );
+    grid-column: 3 / span 4;
+    grid-row: 1;
   }
 }
 
@@ -40,10 +39,8 @@
 }
 
 #main-header .home-link {
-  @include column(
-    $columns: 12,
-    $gutter: $gutter-smaller
-  );
+grid-column: 1 / span 6;
+grid-row: 1;
 
   // Ensure the logo doesn't grow.
   @media(max-width: $screen-small-max) {
@@ -51,10 +48,7 @@
   }
 
   @media(min-width: $screen-small) {
-    @include column(
-      $columns: 4,
-      $gutter: $gutter-smaller
-    );
+    grid-column: 1 / span 2;
   }
 }
 
