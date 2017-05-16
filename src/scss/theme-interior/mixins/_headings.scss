@@ -56,6 +56,7 @@
 @mixin heading-6(
   $above: .5,
   $below: -1,
+  $below-large: -1,
   $margin: 0
 ) {
   @include baseline(
@@ -72,7 +73,7 @@
       $font-weight: bold,
       $line-height: 2,
       $above: .5,
-      $below: -1,
+      $below: $below-large,
       $margin: $margin
     );
   }

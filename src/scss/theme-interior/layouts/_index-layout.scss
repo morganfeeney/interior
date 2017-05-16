@@ -18,7 +18,10 @@
   }
 
   h5 {
-    @include heading-6($margin: 2);
+    @include heading-6(
+        $margin: 2,
+        $below-large: 0
+    );
   }
 
 .grid {
@@ -86,9 +89,19 @@
       margin-top: font-scale(2);
     }
     & > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
       @media(min-width: $screen-medium) {
         grid-column: span 2;
       }
+    }
+    p {
+        grid-column: 1 / span 1;
+        @include baseline(
+            $no-text: true,
+            $below: 1
+        );
     }
   }
 
