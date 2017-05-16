@@ -10,12 +10,12 @@
     }
     .baseline-grid .master-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
         grid-column-gap: 1rem;
     }
-    @media(min-width: 569px) {
+    @media(min-width: 900px) {
         .baseline-grid .master-grid {
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(12, 1fr);
         }
     }
     /* Over-riding some CSS here for exeperminetal reasons. */

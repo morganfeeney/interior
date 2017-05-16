@@ -1,15 +1,9 @@
 footer {
-  @media(min-width: $screen-large) {
-    margin: 0;
-  }
+    display: grid;
 }
 
 .sig {
-  @include baseline($margin: 10);
-  @include column(
-    $columns: 12,
-    $gutter: $gutter-small
-  );
+  @include baseline();
   @media(min-width: $screen-large) {
       @include column(
         $columns: 8,

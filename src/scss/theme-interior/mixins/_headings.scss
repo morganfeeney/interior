@@ -57,14 +57,15 @@
   $above: .5,
   $below: -1,
   $below-large: -1,
-  $margin: 0
+  $margin: 0,
+  $margin-large: 2
 ) {
   @include baseline(
     $font-size: $paragon-small,
     $font-weight: bold,
     $line-height: 2rem,
     $above: $above,
-    $below: -1,
+    $below: $below,
     $margin: $margin
   );
   @media(min-width: $screen-large) {
@@ -74,7 +75,7 @@
       $line-height: 2,
       $above: .5,
       $below: $below-large,
-      $margin: $margin
+      $margin: $margin-large
     );
   }
 }
