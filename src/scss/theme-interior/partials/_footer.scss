@@ -1,33 +1,11 @@
-footer {
-    display: grid;
-}
+
 
 .sig {
-  @include baseline();
-  @media(min-width: $screen-large) {
-      @include column(
-        $columns: 8,
-        $gutter: $gutter-small
-      );
-  }
-}
-
-.footer-at-bottom {
-  // Position the footer always at the bottom, regardless of how much content
-  // there is.
-  display: flex;
-
-  body {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-  }
-
-  #main-article {
-    height: 100%;
-  }
-
-  #main-footer {
-    margin-top: auto;
-  }
+  @include baseline(
+    $margin: 1,
+    $above: 1,
+    $below: 1
+  );
+  border-top: 1px solid #ff7070;
+  grid-column: 1 / span 6;
 }
