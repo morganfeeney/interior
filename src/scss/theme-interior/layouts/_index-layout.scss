@@ -127,8 +127,11 @@
     }
     p {
         grid-column: 1 / span 4;
-        @media(min-width: $screen-largest) {
+        @media(min-width: $screen-large) {
             grid-column: 1 / span 3;
+        }
+        @media(min-width: $screen-largest) {
+            grid-column: 1 / span 2;
         }
         @include baseline(
             $no-text: true,
