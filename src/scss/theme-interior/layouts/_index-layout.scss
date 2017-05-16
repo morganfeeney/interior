@@ -63,28 +63,17 @@
 
   .column-2 {
     margin-top: -(font-scale(1));
+    display: grid;
+    @media(min-width: $screen-medium) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1rem;
+    }
     @media(min-width: $screen-largest) {
       margin-top: font-scale(2);
     }
     & > div {
-      @include column(
-        $columns: 12,
-        $gutter: $gutter-small
-      );
       @media(min-width: $screen-medium) {
-        @include column(
-          $max-columns: 6,
-          $columns: 4,
-          $gutter: $gutter-medium
-        );
-      }
-      @media(min-width: $screen-large) {
-        @include column(
-          $max-columns: 6,
-          $columns: 4,
-          $gutter: $gutter-large
-        );
-        margin-top: font-scale(4);
+        grid-column: span 2;
       }
     }
   }
