@@ -92,13 +92,13 @@ $gutter-large: $grid-gutter/2 !default;
 $breakpoints-map: (
   smaller: (
     gutter: $gutter-smaller,
-    container-gutter: $grid-gutter/2,
+    container-gutter: 2rem,
     breakpoint: false,
     margin: true
   ),
   small: (
     gutter: $gutter-small,
-    container-gutter: $container-gutter-smaller,
+    container-gutter: 2rem,
     breakpoint: $screen-small
   ),
   medium: (
