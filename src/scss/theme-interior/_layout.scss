@@ -1,0 +1,32 @@
+body {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto auto 1fr;
+}
+
+#main-header {
+  grid-area: header;
+}
+
+#main-article {
+  grid-area: main;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+#main-footer {
+  grid-area: footer;
+  align-self: end;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+.footer-at-bottom {
+  // Position the footer always at the bottom, regardless of how much content
+  // there is.
+  display: grid;
+}
