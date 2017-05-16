@@ -27,8 +27,19 @@
 // }
 
 article nav {
-    @include body-1();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   a {
-    display: block;
+    grid-area: auto;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 0px 0px 1px #ff7070 inset;
   }
 }
