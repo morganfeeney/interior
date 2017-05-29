@@ -6,6 +6,23 @@
     width: 100%;
   }
 
+  .container,
+  .grid-overlay {
+    @media(min-width: 768px) {
+      width: 768px;
+    }
+    @media(min-width: 1366px) {
+      width: 1366px;
+    }
+    @media(min-width: 1920px) {
+      width: 1920px;
+    }
+  }
+
+  .grid-overlay {
+    left: 0;
+  }
+
   .home-link {
     display: block;
   }
