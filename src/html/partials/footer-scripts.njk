@@ -6,11 +6,12 @@
 {% endif %}
 <script>
   var body = document.querySelector('body');
+  var main = document.querySelector('main');
   var gridOverLay = document.querySelector('.grid-overlay');
   var grid = document.createElement('div');
   grid.setAttribute('class', 'grid-overlay master-grid');
   function gridOverlay(cols){
-    body.appendChild(grid);
+    main.appendChild(grid);
     for (var i = 0; i < cols; i++) {
       var gridChild = document.createElement('div');
       grid.appendChild(gridChild);

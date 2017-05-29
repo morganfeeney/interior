@@ -2,37 +2,6 @@
 {% set page_title = "Design system" %}
 {% set page_description = "Read the documentation on how to use Interior" %}
 {% block embedded_css %}
-  <style>
-    .baseline-grid::before {
-        background: linear-gradient(to bottom, #00FFFF 0, transparent 1px) 0 0 / 100vw 1rem,
-                    linear-gradient(to bottom, #007323 1px, transparent 0) 0 6rem / 100vw 20rem,
-                    linear-gradient(to bottom, #007323 1px, transparent 0) 0 7rem / 100vw 20rem
-    }
-    .baseline-grid .master-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-column-gap: 1rem;
-    }
-    @media(min-width: 900px) {
-        .baseline-grid .master-grid {
-            grid-template-columns: repeat(12, 1fr);
-        }
-    }
-    /* Over-riding some CSS here for exeperminetal reasons. */
-    ._6-column-grid-overlay .grid-overlay > div {
-        width: auto;
-        margin: 0;
-        padding: 0;
-    }
-    /*.baseline-grid .master-grid::before {
-        content: "";
-        width: 100%;
-        border-left: 1px solid #000;
-        border-right: 1px solid #000;
-        background: linear-gradient(90deg, #000 1px, transparent 0) 0 0 / 100vh 1rem,
-                    linear-gradient(90deg, #000 1px, transparent 0) 1rem 0 / 100vh 1rem
-    }*/
-  </style>
 {% endblock %}
 
   {% block column1 %}

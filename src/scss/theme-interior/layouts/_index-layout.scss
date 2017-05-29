@@ -6,8 +6,7 @@
     width: 100%;
   }
 
-  .container,
-  .grid-overlay {
+  .container {
     @media(min-width: 768px) {
       width: 768px;
     }
