@@ -79,6 +79,12 @@ $golden-section-and-minor-second: map-get($modular-scales, golden-section-and-mi
   $pica: map-get($golden-section-and-minor-second, pica);
   $philosophy: map-get($golden-section-and-minor-second, philosophy);
 
+// html font size at 112.5%
+$fibonacci-large: map-get($modular-scales, fibonacci-large);
+
+  $double-english: map-get($fibonacci-large, double-english);
+  $paragon: map-get($fibonacci-large, paragon);
+
 // html font-size at 87.5%
 $fibonacci-small: map-get($modular-scales, fibonacci-small);
 

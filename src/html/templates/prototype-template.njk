@@ -38,10 +38,8 @@
 		</header>
 		{% endblock %}
 		<article id="main-article" class="container-outer {{ article_classes }}">
-			<main class="container-outer {{ main_classes }}">
-				<div class="container {{ container_class }}">
-					{% block main %}{% endblock %}
-				</div>
+			<main class="container {{ main_classes }}">
+				{% block main %}{% endblock %}
 			</main>
 			{% if aside %}
 				<aside class="{{ aside_classes }}">

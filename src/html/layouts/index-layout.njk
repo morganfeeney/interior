@@ -11,17 +11,15 @@
 {% endblock %}
 
 {% block main %}
-  <section>
-    <div class="grid">
-      <div class="column-1">
-        {% block column1 %}
-          <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
-        {% endblock %}
-      </div>
-      <div class="column-2">
-        {% block column2 %}
-        {% endblock %}
-      </div>
-    </div>
-  </section>
+  <div class="grid">
+    <section>
+      {% block column1 %}
+        <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}.</h1>
+      {% endblock %}
+    </section>
+    <section>
+      {% block column2 %}
+      {% endblock %}
+    </section>
+  </div>
 {% endblock %}

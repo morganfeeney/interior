@@ -91,7 +91,7 @@
   $below-largest: 6,
   $font-size-smaller: $two-line-pica-small,
   $font-size-small: $double-pica,
-  $font-size-medium: $two-line-pica,
+  $font-size-medium: $double-english,
   $line-height-smaller: 3rem,
   $line-height-small: 3rem,
   $line-height-large: 4rem,
@@ -127,8 +127,7 @@
       $below: $below-medium
     );
   }
-  // The value used for min-height should/could come from modular-scale
-  @media screen and (min-width: $screen-largest) and (min-height: 58rem) {
+  @media screen and (min-width: $screen-largest) {
     @include baseline(
       $font-size: $font-size-medium,
       $line-height: $line-height-large,

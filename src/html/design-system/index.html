@@ -15,22 +15,39 @@
   {% endblock %}
   {% block column2 %}
     <div>
-      <h5>Constants</h5>
-      <p class="small">These are the fundamentals of Interior; they are constant—and consistent—and can be applied regardless of transients.</p>
-      {% if design_system %}
-        <nav role="navigation">
-          {% for item in design_system %}
-            <a href="{{ item }}">{{ item | capitalize | replace("-", " ") | replace(".html", "") }}</a>
-          {% endfor %}
-        </nav>
-      {% endif %}
+      <div class="section-info">
+        <h5>Design principles</h5>
+        <p class="small">The fundamentals of Interior. Each principle is essential in order to create of consistent and well laid out web designs.</p>
+      </div>
+      <a class="image-link" href="#">
+        <img src="/images/illustrations-web-ready-01.svg" alt="grid system illustration">
+        <p>Grid system</p>
+      </a>
+      <a class="image-link" href="#">
+        <img src="/images/illustrations-web-ready-02.svg" alt="grid system illustration">
+        <p>Modular scale</p>
+      </a>
+      <a class="image-link" href="#">
+        <img src="/images/illustrations-web-ready-03.svg" alt="grid system illustration">
+        <p>Composition</p>
+      </a>
+      <a class="image-link" href="#">
+        <img src="/images/illustrations-web-ready-04.svg" alt="grid system illustration">
+        <p>Baseline grid</p>
+      </a>
     </div>
     <div>
-      <h5>Transients</h5>
-      <p class="small">Due to the nature of technology constantly evolving, constants are not dependant upon transients.</p>
-      <nav role="navigation">
-        <a href="#">Specifications</a>
-        <a href="#">Methodologies</a>
-      </nav>
+    <div class="section-info">
+      <h5>Development principles</h5>
+      <p class="small">Due to the nature of technology constantly evolving, there are some useful considerations to think about and possibly plan into a layout focused workflow.</p>
+    </div>
+        <a class="image-link" href="#">
+          <img src="/images/illustrations-web-ready-05.svg" alt="grid system illustration">
+          <p>Methodologies</p>
+        </a>
+        <a class="image-link" href="#">
+          <img src="/images/illustrations-web-ready-06.svg" alt="grid system illustration">
+          <p>Specifications</p>
+        </a>
     </div>
   {% endblock %}

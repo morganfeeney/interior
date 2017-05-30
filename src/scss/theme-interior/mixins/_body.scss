@@ -11,7 +11,7 @@
   );
   @media(min-width: $screen-large) {
     @include baseline(
-      $font-size: $english,
+      $font-size: $paragon,
       $line-height: $line-height,
       $above: .5
     );

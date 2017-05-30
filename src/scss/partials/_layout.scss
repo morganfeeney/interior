@@ -8,16 +8,14 @@
 }
 
 .container {
-  //margin: auto;
-  max-width: $wrapper-width-large;
-  @include auto-columns(
-    $map: $breakpoints,
-    $container: true
-  );
-}
-
-.container-outer {
-  background: $brand-color-light;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  @media(min-width: 768px) {
+      margin-left: 2.444rem;
+    }
+    @media(min-width: 1366px) {
+      margin-left: 3.556rem;
+    }
 }
 
 .grid {

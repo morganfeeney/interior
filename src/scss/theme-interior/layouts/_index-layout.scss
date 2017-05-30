@@ -1,5 +1,4 @@
 .index-layout {
-
   min-height: 100%;
 
   .container-outer {
@@ -11,161 +10,80 @@
       width: 768px;
     }
     @media(min-width: 1366px) {
-      width: 1366px;
+      width: 1256px;
     }
     @media(min-width: 1920px) {
-      width: 1920px;
+      width: 1576px;
     }
-  }
-
-  .grid-overlay {
-    left: 0;
-  }
-
-  .home-link {
-    display: block;
   }
 
   h1 {
-    @include heading-whopper(
-        $below-medium: 2,
-        $below-largest: 3
-    );
+    @include heading-whopper( $below-medium: 2, $below-largest: 3 );
   }
 
   h5 {
-    @include heading-6(
-        $margin: 4,
-        $margin-large: 2,
-        $below-large: 0,
-        $below: 0
-    );
+    @include heading-6( $margin: 4, $margin-large: 2, $below-large: 0, $below: 0 );
   }
 
-.grid {
+  main > .grid {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(6, 1fr);
+
     & > div {
-        grid-column: span 6;
+      grid-column: span 6;
     }
-}
-@media(min-width: $screen-large) {
-    .grid {
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 1rem;
-        & > div {
-            grid-column: span 12;
-        }
-    }
-}
+  }
 
-.column-1 {
-    display: grid;
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
-    grid-template-columns: repeat(6, 1fr);
-    h1 {
-      grid-column: 1 / span 6;
+  @media(min-width: 1366px) {
+    main > .grid {
+      grid-template-columns: 1fr;
     }
-    > p {
-      grid-column: 1 / span 6;
-    }
-}
-
-@media(min-width: $screen-small) {
-    .column-1 {
-        h1 {
-          grid-column: 1 / span 6;
-        }
-        > p {
-          grid-column: 1 / span 4;
-        }
-    }
-}
-
-  @media(min-width: $screen-larger) {
-    .grid {
-      grid-column-gap: 1rem;
-      grid-row-gap: 1rem;
-      align-items: flex-end;
-      & > div {
-          grid-column: span 6;
-      }
-    }
-
-    .column-1 {
-      grid-column: 1 / span 3;
+    main > .grid section {
       display: grid;
-      grid-column-gap: 1rem;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem 1.333rem;
+    }
+    main > .grid section:nth-of-type(1) {
+      p:nth-of-type(1),
       h1 {
-        grid-column: 1 / span 6;
+        grid-column: 3 / span 2;
       }
-      > p {
-        grid-column: 1 / span 5;
-      }
-      @media(min-width: $screen-largest) {
-          > p {
-            grid-column: span 4;
-          }
+    }
+    @media(max-width: 1919px) {
+      .image-link:nth-of-type(4) {
+        grid-column: 2;
       }
     }
 
-    .column-2 {
-      grid-column: 4 / span 3;
+    main > .grid section:nth-of-type(2) > div {
+      grid-column: span 4;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem 1.333rem;
     }
   }
-
-  // The main "wrapping" columns
-  .grid > div {
-    // Change the alignment on large screens, approx 1080px high
-    // 1 rem = 18px due to the html element being scaled up to 112.5%.
-    @media screen and (min-width: $screen-large) and (min-height: 50rem) {
+  @media(min-width: 1920px) {
+    main > .grid section {
+      grid-template-columns: repeat(5, 1fr);
     }
-  }
 
-  .column-2 {
-    margin-top: -(font-scale(1));
-    @media(min-width: $screen-largest) {
-      margin-top: font-scale(2);
-    }
-    & > div {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-column-gap: 1rem;
-      @media(min-width: $screen-large) {
-        grid-column: span 2;
-      }
-      @media(min-width: $screen-larger) and (max-width: $screen-largest) {
-        grid-column: span 3;
+    main > .grid section:nth-of-type(1) {
+      p:nth-of-type(1),
+      h1 {
+        grid-column: 4 / span 2;
       }
     }
-    p {
-        grid-column: 1 / span 4;
-        @media(min-width: $screen-large) {
-            grid-column: 1 / span 3;
-        }
-        @media(min-width: $screen-largest) {
-            grid-column: 1 / span 2;
-        }
-        @include baseline(
-            $no-text: true,
-            $below: 1
-        );
-    }
-    nav,
-    h5 {
-        grid-column: 1 / span 6;
-    }
-    @media(min-width: $screen-small) {
-        nav,
-        h5 {
-            grid-column: 1 / span 4;
-        }
+
+    main > .grid section:nth-of-type(2) > div {
+      grid-column: span 5;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 1rem 1.333rem;
     }
   }
 }
+
 .grid-multicolumn {
   columns: 2;
   column-gap: $gutter-smaller;

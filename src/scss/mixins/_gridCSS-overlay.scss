@@ -34,23 +34,20 @@
       grid-gap: 1rem 1.333rem;
       width: 616px;
       max-width: 100%;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
       pointer-events: none;
       & > div {
         border: 1px solid;
       }
   }
   @media(min-width: 768px) {
-    .grid-visible .master-grid {
-      padding-left: 2.444rem;
-    }
+    // .grid-visible .master-grid {
+    //   padding-left: 2.444rem;
+    // }
   }
   @media(min-width: 1366px) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(4, 1fr);
           width: 1256px;
-          padding-left: 3.556rem;
       }
   }
   @media(min-width: 1920px) {
