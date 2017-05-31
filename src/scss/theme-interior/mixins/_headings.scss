@@ -73,7 +73,7 @@
       $font-size: $english,
       $font-weight: bold,
       $line-height: 2,
-      $above: .5,
+      $above: $above,
       $below: $below-large,
       $margin: $margin-large
     );

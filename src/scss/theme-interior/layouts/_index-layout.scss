@@ -1,9 +1,5 @@
 .index-layout {
-  min-height: 100%;
-
-  .container-outer {
-    width: 100%;
-  }
+  counter-reset: default-counter;
 
   .container {
     @media(min-width: 768px) {
@@ -18,11 +14,40 @@
   }
 
   h1 {
-    @include heading-whopper( $below-medium: 2, $below-largest: 3 );
+    align-self: flex-end;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
   }
 
   h5 {
-    @include heading-6( $margin: 4, $margin-large: 2, $below-large: 0, $below: 0 );
+    @include heading-6(
+      $margin: -1,
+      $margin-large: -1,
+      $below-large: 0,
+      $below: 0
+    );
+  }
+
+  .image-link {
+    display: grid;
+    text-decoration: none;
+    span {
+      font-weight: bold;
+      color: black;
+      counter-increment: default-counter;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      padding-top: .5rem;
+      &::before {
+        content: counter(default-counter)" ";
+        border-bottom: .15rem solid $brand-color-1;
+        text-align: center;
+        width: .75rem;
+        margin-right: .25rem;
+        display: inline-grid;
+      }
+    }
   }
 
   main > .grid {
@@ -38,18 +63,26 @@
   @media(min-width: 1366px) {
     main > .grid {
       grid-template-columns: 1fr;
+      grid-row-gap: 1rem;
     }
+
     main > .grid section {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem 1.333rem;
     }
+
     main > .grid section:nth-of-type(1) {
+      grid-template-rows: repeat(2, 288px);
+      p:nth-of-type(1) {
+        margin-top: -1rem;
+      }
       p:nth-of-type(1),
       h1 {
         grid-column: 3 / span 2;
       }
     }
+
     @media(max-width: 1919px) {
       .image-link:nth-of-type(4) {
         grid-column: 2;
@@ -60,9 +93,11 @@
       grid-column: span 4;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 288px);
       grid-gap: 1rem 1.333rem;
     }
   }
+
   @media(min-width: 1920px) {
     main > .grid section {
       grid-template-columns: repeat(5, 1fr);
@@ -77,11 +112,11 @@
 
     main > .grid section:nth-of-type(2) > div {
       grid-column: span 5;
-      display: grid;
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: 1rem 1.333rem;
+      grid-template-rows: 288px;
     }
   }
+
 }
 
 .grid-multicolumn {
