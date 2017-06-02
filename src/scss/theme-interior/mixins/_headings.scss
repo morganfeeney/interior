@@ -61,30 +61,20 @@
   $margin-large: 2
 ) {
   @include baseline(
-    $font-size: $paragon-small,
+    $font-size: $english,
     $font-weight: bold,
     $line-height: 2rem,
     $above: $above,
     $below: $below,
     $margin: $margin
   );
-  @media(min-width: $screen-large) {
-    @include baseline(
-      $font-size: $english,
-      $font-weight: bold,
-      $line-height: 2,
-      $above: $above,
-      $below: $below-large,
-      $margin: $margin-large
-    );
-  }
 }
 
 @mixin heading-whopper(
-  $above-smaller: .5,
+  $above-smaller: 0,
   $above-small: .15,
   $above-medium: .4,
-  $below-smaller: 1,
+  $below-smaller: 0,
   $below-small: 2.85,
   $below-medium: 4,
   $below-large: 4,
@@ -95,7 +85,7 @@
   $line-height-smaller: 3rem,
   $line-height-small: 3rem,
   $line-height-large: 4rem,
-  $margin-smaller: 4,
+  $margin-smaller: .4,
   $margin-small: 8,
   $margin-medium: 14
 ) {
@@ -107,17 +97,7 @@
     $above: $above-smaller,
     $below: $below-smaller
   );
-  @media(min-width: $screen-small) {
-    @include baseline(
-      $font-size: $font-size-small,
-      $line-height: $line-height-small,
-      $font-weight: bold,
-      $margin: $margin-small,
-      $above: $above-small,
-      $below: $below-small
-    );
-  }
-  @media(min-width: $screen-medium) {
+  @media(min-width: 1366px) {
     @include baseline(
       $font-size: $font-size-medium,
       $line-height: $line-height-large,

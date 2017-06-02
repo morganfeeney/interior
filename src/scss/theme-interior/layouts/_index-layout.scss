@@ -2,8 +2,8 @@
   counter-reset: default-counter;
 
   .container {
-    @media(min-width: 768px) {
-      width: 768px;
+    @media(min-width: 672px) {
+      width: 616px;
     }
     @media(min-width: 1366px) {
       width: 1256px;
@@ -14,10 +14,17 @@
   }
 
   h1 {
-    align-self: flex-end;
     margin: 0;
-    margin-bottom: 1rem;
     padding: 0;
+  }
+
+  @media(min-width: 1366px) {
+    h1 {
+      align-self: flex-end;
+      margin: 0;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
   }
 
   h5 {
@@ -50,26 +57,55 @@
     }
   }
 
-  main > .grid {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(6, 1fr);
-
-    & > div {
-      grid-column: span 6;
+  main > .grid section:nth-of-type(1) {
+    p:nth-of-type(1),
+    h1 {
+      grid-column: 1 / span 2;
     }
   }
 
-  @media(min-width: 1366px) {
+  @media(max-width: 1365px) {
     main > .grid {
-      grid-template-columns: 1fr;
-      grid-row-gap: 1rem;
+      grid-template-rows: 294px auto;
     }
 
-    main > .grid section {
+    main > .grid > section:nth-child(2) > div {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem 1.333rem;
+      grid-template-rows: repeat(3,294px);
+      grid-template-columns: 1fr 1fr;
+    }
+
+    main > .grid > section:nth-child(2) > div > div:first-child {
+      display: grid;
+      align-content: flex-end;
+    }
+
+    main > .grid > section:nth-child(2) .image-link:nth-child(2) {
+      grid-column-start: 1;
+    }
+  }
+
+  @media(max-width: 1919px) {
+    .image-link:nth-of-type(4) {
+      grid-column: 2;
+    }
+  }
+
+  main > .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+  }
+
+  main > .grid section {
+    display: grid;
+    grid-gap: 1rem 1.333rem;
+  }
+
+  @media(min-width: 1366px) {
+    main > .grid section {
+      grid-template-columns: repeat(4, 1fr);
     }
 
     main > .grid section:nth-of-type(1) {
@@ -80,12 +116,6 @@
       p:nth-of-type(1),
       h1 {
         grid-column: 3 / span 2;
-      }
-    }
-
-    @media(max-width: 1919px) {
-      .image-link:nth-of-type(4) {
-        grid-column: 2;
       }
     }
 

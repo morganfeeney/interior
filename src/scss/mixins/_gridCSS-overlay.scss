@@ -30,11 +30,13 @@
   .grid-visible .master-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(30, 16rem);
+      grid-template-rows: repeat(30, 294px);
       grid-gap: 1rem 1.333rem;
-      width: 616px;
-      max-width: 100%;
+      width: 100%;
       pointer-events: none;
+      @media(min-width: 1366px) {
+        grid-template-rows: repeat(30, 288px);
+      }
       & > div {
         border: 1px solid;
       }
@@ -47,13 +49,11 @@
   @media(min-width: 1366px) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(4, 1fr);
-          width: 1256px;
       }
   }
   @media(min-width: 1920px) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(5, 1fr);
-          width: 1576px;
       }
   }
 }

@@ -2,7 +2,10 @@ body {
   display: grid;
   width: 100%;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: 8rem auto 1fr;
+  @media(min-width: $screen-small) {
+    grid-template-rows: 6rem auto 1fr;
+  }
 }
 
 #main-header {

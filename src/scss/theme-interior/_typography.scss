@@ -11,7 +11,7 @@ html {
   // Set the html font-size to 14px.
   font-size: 87.5%;
   // Sets html font size to 18px.
-  @media(min-width: $screen-large) {
+  @media(min-width: 1366px) {
    font-size: 112.5%;
   }
 }
@@ -64,14 +64,14 @@ p {
 }
 
 .intro {
-  @media(min-width: $screen-medium) {
-    @include baseline(
-      $font-size: $great-primer,
-      $line-height: 1.25,
-      $above: .2,
-      $below: 2
-    );
-  }
+  // @media(min-width: $screen-medium) {
+  //   @include baseline(
+  //     $font-size: $great-primer,
+  //     $line-height: 1.25,
+  //     $above: .2,
+  //     $below: 2
+  //   );
+  // }
 }
 
 .small {
@@ -79,7 +79,7 @@ p {
     $font-size: $pica,
     $line-height: 1.25,
     $above: 0.1,
-    $below: 2
+    $below: -.7
   );
 }
 

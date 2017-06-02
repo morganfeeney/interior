@@ -1,9 +1,11 @@
 #main-header {
   background: $brand-color-2;
+  display: grid;
   .container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1rem;
+    align-items: flex-end;
   }
 }
 
@@ -27,10 +29,10 @@
     $below: .8
   );
   @media(min-width: $screen-small) {
-    margin-top: font-scale(3.25);
+    //margin-top: font-scale(3.25);
   }
-  @media(min-width: $screen-large) {
-    @include baseline($margin: 3);
+  @media(min-width: 1366px) {
+    @include baseline();
   }
   display: inline-flex;
   &:not(:last-child) {
@@ -39,17 +41,17 @@
 }
 
 #main-header .home-link {
-grid-column: 1 / span 12;
-grid-row: 1;
+  // grid-column: 1 / span 12;
+  // grid-row: 1;
 
   // Ensure the logo doesn't grow.
-  @media(max-width: $screen-small-max) {
-    flex: 0;
-  }
+  // @media(max-width: $screen-small-max) {
+  //   flex: 0;
+  // }
 
-  @media(min-width: $screen-small) {
-    grid-column: 1 / span 4;
-  }
+  // @media(min-width: $screen-small) {
+  //   grid-column: 1 / span 4;
+  // }
 }
 
 #main-header .home-link svg {
@@ -64,11 +66,11 @@ grid-row: 1;
   @media(min-width: $screen-small) {
     @include baseline(
       $no-text: true,
-      $margin: 2.55,
+      //$margin: 2.55,
       $below: -.25
     );
   }
-  @media(min-width: $screen-large) {
+  @media(min-width: 1366px) {
     @include baseline(
       $no-text: true,
       $margin: 2,
