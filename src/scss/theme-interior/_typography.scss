@@ -76,11 +76,19 @@ p {
 
 .small {
   @include baseline(
-    $font-size: $pica,
-    $line-height: 1.25,
-    $above: 0.1,
+    $font-size: $english,
+    $line-height: 1rem,
+    $above: 0.25,
     $below: -.7
   );
+  @media(min-width: 1366px) {
+    @include baseline(
+      $font-size: $pica,
+      $line-height: 1rem,
+      $above: 0.1,
+      $below: -.7
+    );
+  }
 }
 
 blockquote {

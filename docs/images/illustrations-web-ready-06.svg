@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="296px" height="236px" viewBox="0 0 296 236" enable-background="new 0 0 296 236" xml:space="preserve">
+	 width="296px" height="234px" viewBox="0 0 296 234" enable-background="new 0 0 296 234" xml:space="preserve">
 <pattern  x="-632" y="-256" width="61" height="68.3" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_1" viewBox="0 -68.3 61 68.3" overflow="visible">
 	<g>
 		<polygon fill="none" points="0,0 61,0 61,-68.3 0,-68.3 		"/>
@@ -10,7 +10,7 @@
 	</g>
 </pattern>
 <g>
-	<rect fill="url(#New_Pattern_Swatch_1)" width="296" height="236"/>
+	<rect fill="url(#New_Pattern_Swatch_1)" width="296" height="234"/>
 	<g>
 		<rect x="69.2" y="56.4" fill="#FFFFFF" width="102.4" height="8.4"/>
 		<rect x="69.2" y="70.8" fill="#FFFFFF" width="102.4" height="8.4"/>

@@ -64,10 +64,19 @@
     $font-size: $english,
     $font-weight: bold,
     $line-height: 2rem,
-    $above: $above,
+    $above: .75,
     $below: $below,
     $margin: $margin
   );
+  @media(min-width: 1366px) {
+    @include baseline(
+      $font-size: $english,
+      $line-height: 2rem,
+      $above: $above,
+      $below: $below,
+      $margin: $margin
+    );
+  }
 }
 
 @mixin heading-whopper(
