@@ -34,17 +34,18 @@
       grid-gap: 1rem 1.333rem;
       width: 100%;
       pointer-events: none;
+
+      @media(max-width: 400px) {
+        grid-template-rows: repeat(30, 140px);
+      }
+
       @media(min-width: 1366px) {
         grid-template-rows: repeat(30, 288px);
       }
+
       & > div {
         border: 1px solid;
       }
-  }
-  @media(min-width: 768px) {
-    // .grid-visible .master-grid {
-    //   padding-left: 2.444rem;
-    // }
   }
   @media(min-width: 1366px) {
     .grid-visible .master-grid {
