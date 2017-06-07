@@ -1,6 +1,30 @@
 .index-layout {
   counter-reset: default-counter;
 
+    h1 {
+      grid-column: 1 / span 2;
+      align-self: flex-end;
+
+      @media(min-width: 1366px) {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          padding: 0;
+      }
+    }
+
+    h5 {
+      @include heading-6(
+        $margin: -1,
+        $margin-large: -1,
+        $below-large: 0,
+        $below: 0
+      );
+    }
+
+    .intro {
+        margin-top: -1rem;
+    }
+
   .container {
     @media(min-width: 656px) {
       width: 610.66px;
@@ -42,11 +66,6 @@
   }
 
   main section:nth-of-type(1) {
-    p:nth-of-type(1),
-    h1 {
-      grid-column: 1 / span 2;
-      align-self: flex-end;
-    }
 
     @media(min-width: 656px) and (max-width: 1366px) {
       grid-template-rows: repeat(2, 294px);
@@ -126,7 +145,7 @@
     @media(min-width: 990px) and (max-width: 1365px) {
         .image-link:nth-child(4) {
           grid-column-start: 2;
-        }    
+        }
     }
 
     @media(min-width: 1366px) {
@@ -139,24 +158,6 @@
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: 288px;
     }
-  }
-
-  @media(min-width: 1366px) {
-    h1 {
-      align-self: flex-end;
-      margin: 0;
-      margin-bottom: 1rem;
-      padding: 0;
-    }
-  }
-
-  h5 {
-    @include heading-6(
-      $margin: -1,
-      $margin-large: -1,
-      $below-large: 0,
-      $below: 0
-    );
   }
 
   .image-link {
@@ -221,10 +222,6 @@
   @media(min-width: 990px) and (max-width: 1365px) {
       main section:nth-of-type(1) {
         grid-template-columns: repeat(3, 1fr);
-        //grid-template-rows: repeat(2, 294px);
-        p:nth-of-type(1) {
-          margin-top: -1rem;
-        }
         p:nth-of-type(1),
         h1 {
           grid-column: 2 / span 2;
