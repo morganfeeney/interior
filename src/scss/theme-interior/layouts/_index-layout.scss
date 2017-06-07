@@ -3,7 +3,10 @@
 
   .container {
     @media(min-width: 656px) {
-      width: 612px;
+      width: 610.66px;
+    }
+    @media(min-width: 990px) {
+      width: 925.33px;
     }
     @media(min-width: 1366px) {
       width: 1256px;
@@ -16,7 +19,7 @@
   @media(max-width: 1366px) {
     #main-header .container {
       width: auto;
-    }  
+    }
   }
 
   main {
@@ -49,14 +52,12 @@
       grid-template-rows: repeat(2, 294px);
     }
 
+    @media(min-width: 1366px) {
+      grid-template-rows: repeat(2, 288px);
+    }
+
     @media(max-width: 655px) {
       align-content: center;
-    }
-  }
-
-  @media(max-width: 1365px) {
-    main > section:nth-child(2) .image-link:nth-child(2) {
-      grid-column-start: 1;
     }
   }
 
@@ -69,7 +70,11 @@
     }
 
     @media(min-width: 656px) {
-      grid-template-rows: repeat(3,294px);
+      grid-template-rows: repeat(3, 294px);
+    }
+
+    @media(min-width: 990px) {
+      grid-template-rows: repeat(2, 294px);
     }
 
     @media(min-width: 1366px) {
@@ -83,6 +88,10 @@
 
     @media(min-width: 400px) {
       grid-template-rows: repeat(2, 294px);
+    }
+
+    @media(min-width: 990px) {
+      grid-template-rows: 294px;
     }
 
     @media(min-width: 1366px) {
@@ -102,6 +111,22 @@
 
     @media(min-width: 656px) {
       grid-template-columns: 1fr 1fr;
+    }
+
+    @media(min-width: 656px) and (max-width: 989px) {
+        .image-link:nth-child(2) {
+          grid-column-start: 1;
+        }
+    }
+
+    @media(min-width: 990px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media(min-width: 990px) and (max-width: 1365px) {
+        .image-link:nth-child(4) {
+          grid-column-start: 2;
+        }    
     }
 
     @media(min-width: 1366px) {
@@ -176,7 +201,7 @@
     display: grid;
     align-content: flex-start;
 
-    @media(max-width: 1365px) {
+    @media(max-width: 989px) {
       align-content: flex-end;
     }
 
@@ -191,6 +216,20 @@
         grid-column: 1;
       }
     }
+  }
+
+  @media(min-width: 990px) and (max-width: 1365px) {
+      main section:nth-of-type(1) {
+        grid-template-columns: repeat(3, 1fr);
+        //grid-template-rows: repeat(2, 294px);
+        p:nth-of-type(1) {
+          margin-top: -1rem;
+        }
+        p:nth-of-type(1),
+        h1 {
+          grid-column: 2 / span 2;
+        }
+      }
   }
 
   @media(min-width: 656px) and (max-width: 1365px) {
@@ -213,10 +252,6 @@
     }
 
     main section:nth-of-type(1) {
-      grid-template-rows: repeat(2, 288px);
-      p:nth-of-type(1) {
-        margin-top: -1rem;
-      }
       p:nth-of-type(1),
       h1 {
         grid-column: 3 / span 2;

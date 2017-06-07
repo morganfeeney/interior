@@ -47,6 +47,11 @@
         border: 1px solid;
       }
   }
+  @media(min-width: 990px) {
+    .grid-visible .master-grid {
+          grid-template-columns: repeat(3, 1fr);
+      }
+  }
   @media(min-width: 1366px) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(4, 1fr);
