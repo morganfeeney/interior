@@ -84,6 +84,7 @@ $fibonacci-large: map-get($modular-scales, fibonacci-large);
 
   $double-english: map-get($fibonacci-large, double-english);
   $paragon: map-get($fibonacci-large, paragon);
+  $great-primer: map-get($fibonacci-large, great-primer);
 
 // html font-size at 87.5%
 $fibonacci-small: map-get($modular-scales, fibonacci-small);

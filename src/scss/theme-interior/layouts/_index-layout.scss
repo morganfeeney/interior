@@ -77,6 +77,7 @@
     }
 
     @media(min-width: 990px) {
+        // using minmax and auto to allow for zooming.
       grid-template-rows: repeat(2, minmax(21rem, auto));
     }
 
