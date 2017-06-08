@@ -83,7 +83,7 @@
   $above-smaller: 0,
   $above-small: .15,
   $above-medium: .4,
-  $below-smaller: 0,
+  $below-smaller: .6,
   $below-small: 2.85,
   $below-medium: 4,
   $below-large: 4,
@@ -114,16 +114,6 @@
       $margin: $margin-small,
       $above: $above-medium,
       $below: $below-medium
-    );
-  }
-  @media screen and (min-width: $screen-largest) {
-    @include baseline(
-      $font-size: $font-size-medium,
-      $line-height: $line-height-large,
-      $font-weight: bold,
-      $margin: $margin-medium,
-      $above: $above-medium,
-      $below: $below-largest
     );
   }
 }
