@@ -55,7 +55,7 @@
 
 @mixin heading-6(
   $above: .5,
-  $below: -1,
+  $below: 0,
   $below-large: -1,
   $margin: 0,
   $margin-large: 2
@@ -64,7 +64,7 @@
     $font-size: $english,
     $font-weight: bold,
     $line-height: 2rem,
-    $above: .75,
+    $above: $above,
     $below: $below,
     $margin: $margin
   );
@@ -74,7 +74,7 @@
       $line-height: 2rem,
       $above: $above,
       $below: $below,
-      $margin: $margin
+      $margin: $margin-large
     );
   }
 }

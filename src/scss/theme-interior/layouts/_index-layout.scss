@@ -23,8 +23,16 @@
       $margin: -1,
       $margin-large: -1,
       $below-large: 0,
-      $below: 0
+      $below: -1
     );
+    @media(min-width: 656px) {
+      @include heading-6(
+        $margin: -1,
+        $margin-large: -1,
+        $below-large: 0,
+        $below: 0
+      );
+    }
   }
 
   .intro {
@@ -175,6 +183,7 @@
 
     @media(max-width: 399px) {
       grid-template-columns: repeat(2, 1fr);
+      grid-column: span 2;
       grid-gap: 1rem 1.333rem;
 
       > img {
@@ -215,22 +224,15 @@
     align-content: flex-start;
 
     @media(max-width: 655px) {
-      align-content: center;
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 1rem 1.333rem;
+      grid-row: span 2;
+      grid-column: span 2;
 
-        grid-row: span 2;
-        h5 {
-            align-self: flex-end;
-        }
+      h5 {
+          align-self: flex-end;
+      }
     }
-
-    // @media(min-width: 488px) and (max-width: 655px) {
-    //   grid-template-columns: repeat(2, 1fr);
-    //   > p {
-    //     grid-column: 1;
-    //   }
-    // }
   }
 
   @media(min-width: 990px) and (max-width: 1365px) {

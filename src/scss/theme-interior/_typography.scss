@@ -63,22 +63,11 @@ p {
   );
 }
 
-.intro {
-  // @media(min-width: $screen-medium) {
-  //   @include baseline(
-  //     $font-size: $great-primer,
-  //     $line-height: 1.25,
-  //     $above: .2,
-  //     $below: 2
-  //   );
-  // }
-}
-
 .small {
   @include baseline(
     $font-size: $english,
     $line-height: 1rem,
-    $above: 0.25,
+    $above: 0,
     $below: -.7
   );
   @media(min-width: 1366px) {
