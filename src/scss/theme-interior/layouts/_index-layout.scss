@@ -66,26 +66,22 @@
   }
 
   .preamble {
-    grid-template-rows: repeat(4, 140px);
+    grid-template-rows: repeat(4, 10rem);
 
     @media screen and (orientation: landscape) {
-        grid-template-rows: repeat(3, 140px);
+        grid-template-rows: repeat(3, 10rem);
     }
 
     @media(min-width: 655px) and (orientation: portrait) {
-        grid-template-rows: repeat(3, 140px);
+        grid-template-rows: repeat(3, 10rem);
     }
 
-    // @media(min-width: 400px) {
-    //     grid-template-rows: repeat(3, 140px);
-    // }
-
     @media(min-width: 990px) {
-      grid-template-rows: repeat(2, 294px);
+      grid-template-rows: repeat(2, minmax(21rem, auto));
     }
 
     @media(min-width: 1366px) {
-      grid-template-rows: repeat(2, 288px);
+      grid-template-rows: repeat(2, minmax(16rem, auto));
     }
 
     @media(max-width: 655px) {
@@ -94,44 +90,32 @@
   }
 
   #design-principles {
-    grid-template-rows: repeat(5, 140px);
+    grid-template-rows: repeat(5, minmax(10rem, auto));
     grid-template-columns: 1fr;
 
-    // @media(min-width: 400px) {
-    //   grid-template-rows: repeat(5, 294px);
-    // }
-
     @media(min-width: 656px) and (orientation: portrait) {
-      grid-template-rows: repeat(6, 140px);
+      grid-template-rows: repeat(6, minmax(10rem, auto));
     }
 
     @media(min-width: 990px) {
-      grid-template-rows: repeat(2, 294px);
+      grid-template-rows: repeat(2, minmax(21rem, auto));
     }
 
     @media(min-width: 1366px) {
-      grid-template-rows: repeat(2, 288px);
+      grid-template-rows: repeat(2, minmax(16rem, auto));
     }
   }
 
   #development-considerations {
-    grid-template-rows: repeat(3, 140px);
+    grid-template-rows: repeat(3, minmax(10rem, auto));
     grid-template-columns: 1fr;
 
-    // @media(min-width: 400px) {
-    //   grid-template-rows: repeat(2, 294px);
-    // }
-
     @media(min-width: 990px) {
-      grid-template-rows: 294px;
+      grid-template-rows: 21rem;
     }
 
     @media(min-width: 1366px) {
-      grid-template-rows: 288px;
-    }
-
-    @media(min-width: 1920px) {
-      grid-template-rows: 294px;
+      grid-template-rows: 16rem;
     }
 
   }
@@ -169,7 +153,7 @@
     @media(min-width: 1920px) {
       grid-column: span 5;
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: 288px;
+      grid-template-rows: 16rem;
     }
   }
 

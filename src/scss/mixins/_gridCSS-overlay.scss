@@ -30,7 +30,7 @@
   .grid-visible .master-grid {
       width: 100%;
       pointer-events: none;
-      grid-template-rows: repeat(30, 140px);
+      grid-template-rows: repeat(30, 10rem);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
@@ -41,7 +41,7 @@
     //   }
 
       @media(min-width: 1366px) {
-        grid-template-rows: repeat(30, 288px);
+        grid-template-rows: repeat(30, 16rem);
       }
 
       & > div {

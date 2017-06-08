@@ -11,13 +11,13 @@
 
 #main-header nav {
   @media(min-width: $screen-small) {
-    text-align: right;
+    //text-align: right;
   }
-    grid-column: 1 / span 12;
+    grid-column: 1 / span 2;
     grid-row: 2;
 
   @media(min-width: $screen-small) {
-    grid-column: 5 / span 8;
+    grid-column: 2;
     grid-row: 1;
   }
 }
@@ -25,12 +25,9 @@
 #main-header nav a {
   @include baseline(
     $font-size: $augustin,
-    $line-height: 1.59,
+    $line-height: 2rem,
     $below: .8
   );
-  @media(min-width: $screen-small) {
-    //margin-top: font-scale(3.25);
-  }
   @media(min-width: 1366px) {
     @include baseline();
   }
@@ -38,20 +35,6 @@
   &:not(:last-child) {
     margin-right: $horizontal-space-small;
   }
-}
-
-#main-header .home-link {
-  // grid-column: 1 / span 12;
-  // grid-row: 1;
-
-  // Ensure the logo doesn't grow.
-  // @media(max-width: $screen-small-max) {
-  //   flex: 0;
-  // }
-
-  // @media(min-width: $screen-small) {
-  //   grid-column: 1 / span 4;
-  // }
 }
 
 #main-header .home-link svg {
