@@ -91,8 +91,12 @@
   }
 
   #design-principles {
-    grid-template-rows: repeat(5, minmax(10rem, auto));
+    grid-template-rows: repeat(6, 10rem);
     grid-template-columns: 1fr;
+
+    @media(min-width: 656px) {
+        grid-template-rows: repeat(5, 10rem);
+    }
 
     @media(min-width: 656px) and (orientation: portrait) {
       grid-template-rows: repeat(6, minmax(10rem, auto));
@@ -108,8 +112,12 @@
   }
 
   #development-considerations {
-    grid-template-rows: repeat(3, minmax(10rem, auto));
+    grid-template-rows: repeat(4, 10rem);
     grid-template-columns: 1fr;
+
+    @media(min-width: 656px) {
+        grid-template-rows: repeat(3, 10rem);
+    }
 
     @media(min-width: 990px) {
       grid-template-rows: 21rem;
@@ -214,10 +222,16 @@
 
     @media(max-width: 655px) {
       align-content: center;
+      grid-template-rows: repeat(2, 1fr);
       grid-gap: 1rem 1.333rem;
+
+        grid-row: span 2;
+        h5 {
+            align-self: flex-end;
+        }
     }
 
-    @media(min-width: 400px) and (max-width: 655px) {
+    @media(min-width: 488px) and (max-width: 655px) {
       grid-template-columns: repeat(2, 1fr);
       > p {
         grid-column: 1;
