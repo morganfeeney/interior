@@ -11,12 +11,12 @@
 {% endblock %}
 
 {% block main %}
-  <section>
+  <section {% if first_section_class %}class="{{ first_section_class }}"{% endif %}>
     {% block column1 %}
       <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</h1>
     {% endblock %}
   </section>
-  <section>
+  <section {% if second_section_class %}class="{{ second_section_class }}"{% endif %}>
     {% block column2 %}
     {% endblock %}
   </section>
