@@ -94,10 +94,6 @@
     @media(min-width: 1366px) {
       grid-template-rows: repeat(2, minmax(16rem, auto));
     }
-
-    @media(max-width: 655px) {
-      align-content: center;
-    }
   }
 
   #design-principles {
