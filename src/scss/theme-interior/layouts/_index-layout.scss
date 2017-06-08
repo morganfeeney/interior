@@ -1,29 +1,44 @@
 .index-layout {
   counter-reset: default-counter;
 
-    h1 {
-      grid-column: 1 / span 2;
-      align-self: flex-end;
+  h1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    align-self: flex-end;
 
-      @media(min-width: 1366px) {
-          margin-top: 0;
-          margin-bottom: 1rem;
-          padding: 0;
-      }
+    @media(min-width: 990px) {
+      grid-row: 2;
     }
 
-    h5 {
-      @include heading-6(
-        $margin: -1,
-        $margin-large: -1,
-        $below-large: 0,
-        $below: 0
-      );
+    @media(min-width: 1366px) {
+      grid-row: 1;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+  }
+
+  h5 {
+    @include heading-6(
+      $margin: -1,
+      $margin-large: -1,
+      $below-large: 0,
+      $below: 0
+    );
+  }
+
+  .intro {
+    grid-row: 2 / span 2;
+    margin-top: -1rem;
+
+    @media(min-width: 990px) {
+      grid-row: 3 / span 2;
     }
 
-    .intro {
-        margin-top: -1rem;
+    @media(min-width: 1366px) {
+      grid-row: 2;
     }
+  }
 
   .container {
     @media(min-width: 656px) {
@@ -51,10 +66,6 @@
     grid-template-columns: 1fr;
     grid-row-gap: 1rem;
 
-    // @media(max-width: 655px) {
-    //   grid-template-rows: 602px auto;
-    // }
-
     @media(min-width: 656px) and (max-width: 1365px) {
       grid-template-rows: auto;
     }
@@ -66,19 +77,10 @@
   }
 
   .preamble {
-    grid-template-rows: repeat(4, 10rem);
-
-    @media screen and (orientation: landscape) {
-        grid-template-rows: repeat(3, 10rem);
-    }
-
-    @media(min-width: 655px) and (orientation: portrait) {
-        grid-template-rows: repeat(3, 10rem);
-    }
+    grid-template-rows: repeat(3, minmax(10rem, auto));
 
     @media(min-width: 990px) {
-        // using minmax and auto to allow for zooming.
-      grid-template-rows: repeat(2, minmax(21rem, auto));
+      grid-template-rows: repeat(4, minmax(10rem, auto));
     }
 
     @media(min-width: 1366px) {
@@ -215,10 +217,6 @@
   .section-info {
     display: grid;
     align-content: flex-start;
-
-    @media(max-width: 989px) {
-      align-content: flex-end;
-    }
 
     @media(max-width: 655px) {
       align-content: center;
