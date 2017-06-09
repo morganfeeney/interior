@@ -82,6 +82,14 @@
   main section {
     display: grid;
     grid-gap: 1rem 1.333rem;
+
+    @media(min-width: 1366px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media(min-width: 1920px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
   }
 
   .preamble {
@@ -91,8 +99,29 @@
       grid-template-rows: repeat(4, minmax(10rem, auto));
     }
 
+    @media(min-width: 990px) and (max-width: 1365px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      p:nth-of-type(1),
+      h1 {
+        grid-column: 2 / span 2;
+      }
+    }
+
     @media(min-width: 1366px) {
-      grid-template-rows: repeat(2, minmax(16rem, auto));
+        grid-template-rows: repeat(2, minmax(16rem, auto));
+
+        p:nth-of-type(1),
+        h1 {
+          grid-column: 3 / span 2;
+        }
+    }
+
+    @media(min-width: 1920px) {
+        p:nth-of-type(1),
+        h1 {
+            grid-column: 4 / span 2;
+        }
     }
   }
 
@@ -204,6 +233,7 @@
         padding-top: 1.15rem;
 
       }
+
       &::before {
         content: counter(default-counter)" ";
         border-bottom: .14rem solid $brand-color-1;
@@ -231,16 +261,6 @@
     }
   }
 
-  @media(min-width: 990px) and (max-width: 1365px) {
-      .preamble {
-        grid-template-columns: repeat(3, 1fr);
-        p:nth-of-type(1),
-        h1 {
-          grid-column: 2 / span 2;
-        }
-      }
-  }
-
   @media(min-width: 656px) and (max-width: 1365px) {
     .image-link > img {
       height: 17rem;
@@ -252,32 +272,6 @@
   @media(min-width: 1366px) and (max-width: 1919px) {
     .image-link:nth-of-type(4) {
       grid-column: 2;
-    }
-  }
-
-  @media(min-width: 1366px) {
-    main section {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .preamble {
-      p:nth-of-type(1),
-      h1 {
-        grid-column: 3 / span 2;
-      }
-    }
-  }
-
-  @media(min-width: 1920px) {
-    main section {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    .preamble {
-      p:nth-of-type(1),
-      h1 {
-        grid-column: 4 / span 2;
-      }
     }
   }
 }
