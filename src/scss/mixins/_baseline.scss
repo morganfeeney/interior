@@ -47,18 +47,18 @@
     }
   }
   &::before {
-    content: "";
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    mix-blend-mode: multiply;
-    background-image: linear-gradient(to bottom, $grid-color 0, $grid-bg 1px);
-    background-repeat: repeat-y;
-    background-size: $grid-bg-size;
-    pointer-events: none;
-  }
+      content: "";
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      mix-blend-mode: multiply;  
+      background:
+        linear-gradient($grid-color 0, transparent 1px) 0 0 / 100vw 1rem repeat-y,
+        linear-gradient(rgba($grid-color, 0.5) 0, transparent 1px) 0 0.5rem / 100vw 0.5rem repeat-y;
+      pointer-events: none;
+    }
 }
