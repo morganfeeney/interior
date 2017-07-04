@@ -5,10 +5,10 @@ body {
 }
 
 .container {
-  @include auto-columns(
-    $map: $breakpoints,
-    $container: true
-  );
+  // @include auto-columns(
+  //   $map: $breakpoints,
+  //   $container: true
+  // );
 }
 
 .multicolumn {

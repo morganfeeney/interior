@@ -10,10 +10,10 @@
     min-height: 10rem;
     padding: $horizontal-space-small/2;
     > div {
-      @include column(
-        $columns: 6,
-        $gutter: $gutter-medium
-      );
+      // @include column(
+      //   $columns: 6,
+      //   $gutter: $gutter-medium
+      // );
       background: $brand-color-1;
       color: $brand-color-light;
       display: flex;

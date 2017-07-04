@@ -4,10 +4,10 @@
 
 #typography-specimin {
   p {
-    @include column(
-      $columns: 12,
-      $gutter: $gutter-medium
-    );
+    // @include column(
+    //   $columns: 12,
+    //   $gutter: $gutter-medium
+    // );
     &:nth-child(even) {
       color: $mid-gray;
     }
@@ -50,9 +50,9 @@
     }
   }
   figcaption {
-    @include column(
-      $columns: 12,
-      $gutter: $gutter-medium
-    );
+    // @include column(
+    //   $columns: 12,
+    //   $gutter: $gutter-medium
+    // );
   }
 }

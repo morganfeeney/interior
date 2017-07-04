@@ -6,13 +6,13 @@
   }
 }
 .posts-nav {
-  @include auto-columns($map: $breakpoints);
-  @media(min-width: $screen-large){
-    @include column(
-      $columns: 6,
-      $gutter: $gutter-small
-    );
-  }
+  //@include auto-columns($map: $breakpoints);
+  // @media(min-width: $screen-large){
+  //   @include column(
+  //     $columns: 6,
+  //     $gutter: $gutter-small
+  //   );
+  // }
   display: flex;
   align-items: center;
   justify-content: space-between;
