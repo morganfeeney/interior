@@ -34,31 +34,28 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      grid-gap: 1rem 1.333rem;
+      grid-gap: $grid-gap-small;
 
-    //   @media(min-width: 990px) {
-    //       grid-template-rows: repeat(30, 294px);
-    //   }
-
-      @media(min-width: 1366px) {
-        grid-template-rows: repeat(30, 16rem);
+      @media(min-width: $screen-large) {
+        grid-template-rows: repeat(30, $grid-row-large);
+        grid-gap: $grid-gap-large;
       }
 
       & > div {
         border: 1px solid;
       }
   }
-  @media(min-width: 990px) {
+  @media(min-width: $screen-medium) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(3, 1fr);
       }
   }
-  @media(min-width: 1366px) {
+  @media(min-width: $screen-large) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(4, 1fr);
       }
   }
-  @media(min-width: 1920px) {
+  @media(min-width: $screen-larger) {
     .grid-visible .master-grid {
           grid-template-columns: repeat(5, 1fr);
       }

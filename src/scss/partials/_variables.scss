@@ -34,10 +34,6 @@ $font-family-inline-code: $font-monospace !default;
 
 $light-border: 1px solid #555 !default;
 
-//** Horizontal alignment
-$horizontal-offset: column-width(2) !default;
-$horizontal-offset-larger: column-width(4) !default;
-
 //** Grid
 $grid-color: red !default;
 $grid-bg: transparent !default;
@@ -51,6 +47,16 @@ $horizontal-space: font-scale(2) !default;
 $vertical-space-small: $vertical-space / 4 !default;
 $horizontal-space-small: $horizontal-space / 2 !default;
 $m: $horizontal-space !default;
+
+// Grid gaps
+$grid-row-gap-small: 1rem;
+$grid-row-gap-large: 2rem;
+
+$grid-gap-small: 1rem 1.714288rem;
+$grid-gap-large: 2rem 1.714288rem;
+
+// Grid rows
+$grid-row-large: 21rem;
 
 // Gutters
 $grid-gutter: $horizontal-space !default;

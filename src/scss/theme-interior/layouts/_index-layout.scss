@@ -6,11 +6,11 @@
     grid-row: 1;
     align-self: flex-end;
 
-    @media(min-width: 990px) {
+    @media(min-width: $screen-medium) {
       grid-row: 2;
     }
 
-    @media(min-width: 1366px) {
+    @media(min-width: $screen-large) {
       grid-row: 1;
       margin-top: 0;
       margin-bottom: 1rem;
@@ -25,7 +25,7 @@
       $below-large: 0,
       $below: -1
     );
-    @media(min-width: 656px) {
+    @media(min-width: $screen-small) {
       @include heading-6(
         $margin: -1,
         $margin-large: -1,
@@ -39,31 +39,31 @@
     grid-row: 2 / span 2;
     margin-top: -1rem;
 
-    @media(min-width: 990px) {
+    @media(min-width: $screen-medium) {
       grid-row: 3 / span 2;
     }
 
-    @media(min-width: 1366px) {
+    @media(min-width: $screen-large) {
       grid-row: 2;
     }
   }
 
   .container {
-    @media(min-width: 656px) {
-      width: 610.66px;
+    @media(min-width: $screen-small) {
+      width: $width-small;
     }
-    @media(min-width: 990px) {
-      width: 925.33px;
+    @media(min-width: $screen-medium) {
+      width: $width-medium;
     }
-    @media(min-width: 1366px) {
-      width: 1256px;
+    @media(min-width: $screen-large) {
+      width: $width-large;
     }
-    @media(min-width: 1920px) {
-      width: 1576px;
+    @media(min-width: $screen-larger) {
+      width: $width-larger;
     }
   }
 
-  @media(max-width: 1366px) {
+  @media(max-width: $screen-large-max) {
     #main-header .container {
       width: auto;
     }
@@ -72,22 +72,27 @@
   main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row-gap: 1rem;
+    grid-row-gap: $grid-row-gap-small;
 
-    @media(min-width: 656px) and (max-width: 1365px) {
+    @media(min-width: $screen-large) {
+      grid-row-gap: $grid-row-gap-large;
+    }
+
+    @media(min-width: $screen-small) and (max-width: $screen-medium-max) {
       grid-template-rows: auto;
     }
   }
 
   main section {
     display: grid;
-    grid-gap: 1rem 1.333rem;
+    grid-gap: $grid-gap-small;
 
-    @media(min-width: 1366px) {
+    @media(min-width: $screen-large) {
         grid-template-columns: repeat(4, 1fr);
+        grid-gap: $grid-gap-large;
     }
 
-    @media(min-width: 1920px) {
+    @media(min-width: $screen-larger) {
         grid-template-columns: repeat(5, 1fr);
     }
   }
@@ -95,11 +100,11 @@
   .preamble {
     grid-template-rows: repeat(3, minmax(10rem, auto));
 
-    @media(min-width: 990px) {
+    @media(min-width: $screen-medium) {
       grid-template-rows: repeat(4, minmax(10rem, auto));
     }
 
-    @media(min-width: 990px) and (max-width: 1365px) {
+    @media(min-width: $screen-medium) and (max-width: $screen-medium-max) {
       grid-template-columns: repeat(3, 1fr);
 
       p:nth-of-type(1),
@@ -108,8 +113,8 @@
       }
     }
 
-    @media(min-width: 1366px) {
-        grid-template-rows: repeat(2, minmax(16rem, auto));
+    @media(min-width: $screen-large) {
+        grid-template-rows: repeat(2, minmax($grid-row-large, auto));
 
         p:nth-of-type(1),
         h1 {
@@ -117,7 +122,7 @@
         }
     }
 
-    @media(min-width: 1920px) {
+    @media(min-width: $screen-larger) {
         p:nth-of-type(1),
         h1 {
             grid-column: 4 / span 2;
@@ -129,16 +134,16 @@
     grid-template-rows: repeat(6, 10rem);
     grid-template-columns: 1fr;
 
-    @media(min-width: 656px) {
+    @media(min-width: $screen-small) {
       grid-template-rows: repeat(6, minmax(10rem, auto));
     }
 
-    @media(min-width: 990px) {
+    @media(min-width: $screen-medium) {
       grid-template-rows: repeat(2, minmax(21rem, auto));
     }
 
-    @media(min-width: 1366px) {
-      grid-template-rows: repeat(2, minmax(16rem, auto));
+    @media(min-width: $screen-large) {
+      grid-template-rows: repeat(2, minmax($grid-row-large, auto));
     }
   }
 
@@ -146,16 +151,16 @@
     grid-template-rows: repeat(4, 10rem);
     grid-template-columns: 1fr;
 
-    @media(min-width: 656px) {
+    @media(min-width: $screen-small) {
         grid-template-rows: repeat(3, 10rem);
     }
 
-    @media(min-width: 990px) {
+    @media(min-width: $screen-medium) {
       grid-template-rows: 21rem;
     }
 
-    @media(min-width: 1366px) {
-      grid-template-rows: 16rem;
+    @media(min-width: $screen-large) {
+      grid-template-rows: $grid-row-large;
     }
 
   }
@@ -163,37 +168,38 @@
   #design-principles,
   #development-considerations {
     display: grid;
-    grid-gap: 1rem 1.333rem;
+    grid-gap: $grid-gap-small;
 
     @media(min-width: 400px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media(min-width: 400px) and (max-width: 989px) {
+    @media(min-width: 400px) and (max-width: $screen-medium-max) {
         .image-link:nth-child(2) {
           grid-column-start: 1;
         }
     }
 
-    @media(min-width: 990px) {
+    @media(min-width: $screen-medium) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media(min-width: 990px) and (max-width: 1365px) {
+    @media(min-width: $screen-medium) and (max-width: $screen-medium-max) {
         .image-link:nth-child(4) {
           grid-column-start: 2;
         }
     }
 
-    @media(min-width: 1366px) {
+    @media(min-width: $screen-large) {
       grid-column: span 4;
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: $grid-gap-large;
     }
 
-    @media(min-width: 1920px) {
+    @media(min-width: $screen-larger) {
       grid-column: span 5;
       grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: 16rem;
+      grid-template-rows: $grid-row-large;
     }
   }
 
@@ -202,14 +208,14 @@
     grid-template-rows: auto 1fr;
     text-decoration: none;
 
-    @media(min-width: 400px) and (max-width: 989px) {
+    @media(min-width: 400px) and (max-width: $screen-medium-max) {
         grid-row: span 2;
     }
 
     @media(max-width: 399px) {
       grid-template-columns: repeat(2, 1fr);
       grid-column: span 2;
-      grid-gap: 1rem 1.333rem;
+      grid-gap: $grid-gap-small;
 
       > img {
         order: 2;
@@ -249,9 +255,9 @@
     display: grid;
     align-content: flex-start;
 
-    @media(max-width: 655px) {
+    @media(max-width: $screen-small-max) {
       grid-template-rows: repeat(2, 1fr);
-      grid-gap: 1rem 1.333rem;
+      grid-gap: $grid-gap-small;
       grid-row: span 2;
       grid-column: span 2;
 
@@ -261,7 +267,7 @@
     }
   }
 
-  @media(min-width: 656px) and (max-width: 1365px) {
+  @media(min-width: $screen-small) and (max-width: $screen-medium-max) {
     .image-link > img {
       height: 17rem;
       object-fit: cover;
@@ -269,7 +275,7 @@
     }
   }
 
-  @media(min-width: 1366px) and (max-width: 1919px) {
+  @media(min-width: $screen-large) and (max-width: $screen-larger-max) {
     .image-link:nth-of-type(4) {
       grid-column: 2;
     }
