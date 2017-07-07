@@ -49,7 +49,7 @@
     $below: -1
   );
 
-  max-width: $double-great-primer;
+  //max-width: $double-great-primer;
 
   @media(min-width: $screen-small) {
     @include baseline(
@@ -64,6 +64,6 @@
       $margin: 2,
       $below: .2
     );
-    max-width: $double-great-primer;
+    //max-width: $double-great-primer;
   }
 }

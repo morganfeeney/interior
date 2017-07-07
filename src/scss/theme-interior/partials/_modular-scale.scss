@@ -62,7 +62,7 @@ $modular-scales: (
     pica: .833rem,
     philosophy: .617rem
   ),
-  // The following are based upon page 157 of "The Elements of Typographic Style"
+  // The following is based upon page 157 of "The Elements of Typographic Style"
   //
   // html font-size at 100%
   fibonacci-large: (
@@ -82,18 +82,23 @@ $modular-scales: (
     english: 0.438rem, //7px
     pica: 0.375rem, //6px
     philosophy: 0.250rem //4px
-  ),
+  )
+);
+
+// Combined scales
+$measuring-systems: (
+  // The following is based on the measure when applied to a grid
+  // more of a Typographic measuring system than modular scale.
   // html font-size at 87.5%
-  fibonacci-small: (
-    double-english: 3.000rem, //42px
-    two-line-pica: 2.071rem, //29px
-    double-pica: 1.857rem, //26px
-    paragon: 1.285711rem, //18px
-    great-primer: 1.143rem, //16px
-    augustin: 0.786rem, //11px
-    mittel: 0.714rem, //10px
-    english: 0.500rem, //7px
-    pica: 0.429rem, //6px
-    philosophy: 0.286rem //4px
+  system-1: (
+    two-line-pica: 3.286rem, // 46px
+      double-pica: 3rem, //42px
+    paragon: 2.143rem, //30px
+      great-primer: 1.857rem, //24px
+    augustin: 1.429rem, // 20px
+      mittel: 1.285711rem, //18px
+    english: 1.143rem, //16px
+      pica: 1rem, //14px
+    philosophy: 0.857rem //12px
   )
 );

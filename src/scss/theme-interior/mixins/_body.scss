@@ -4,16 +4,16 @@
     $line-height: 2rem
 ) {
   @include baseline(
-    $font-size: $paragon-small,
+    $font-size: $english,
     $line-height: $line-height,
     $above: .45,
     $below: 0
   );
-  @media(min-width: 1366px) {
-    @include baseline(
-      $font-size: $paragon,
-      $line-height: $line-height,
-      $above: .5
-    );
-  }
+  // @media(min-width: 1366px) {
+  //   @include baseline(
+  //     $font-size: $paragon,
+  //     $line-height: $line-height,
+  //     $above: .5
+  //   );
+  // }
 }
