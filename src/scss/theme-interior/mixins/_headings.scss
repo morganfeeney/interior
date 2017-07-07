@@ -2,10 +2,10 @@
 
 @mixin heading-1() {
   @include baseline(
-    $font-size: $double-english,
+    $font-size: $paragon,
     $font-weight: bold,
-    $line-height: 1.18,
-    $above: 1.3,
+    $line-height: 3rem,
+    $above: 0,
     $below: 2
   );
 }
@@ -75,45 +75,6 @@
       $above: $above,
       $below: $below,
       $margin: $margin-large
-    );
-  }
-}
-
-@mixin heading-whopper(
-  $above-smaller: 0,
-  $above-small: .15,
-  $above-medium: .4,
-  $below-smaller: .6,
-  $below-small: 2.85,
-  $below-medium: 4,
-  $below-large: 4,
-  $below-largest: 6,
-  $font-size-smaller: $two-line-pica-small,
-  $font-size-small: $double-pica,
-  $font-size-medium: $double-english,
-  $line-height-smaller: 3rem,
-  $line-height-small: 3rem,
-  $line-height-large: 4rem,
-  $margin-smaller: .4,
-  $margin-small: 8,
-  $margin-medium: 14
-) {
-  @include baseline(
-    $font-size: $font-size-smaller,
-    $line-height: $line-height-smaller,
-    $font-weight: bold,
-    $margin: $margin-smaller,
-    $above: $above-smaller,
-    $below: $below-smaller
-  );
-  @media(min-width: 1366px) {
-    @include baseline(
-      $font-size: $font-size-medium,
-      $line-height: $line-height-large,
-      $font-weight: bold,
-      $margin: $margin-small,
-      $above: $above-medium,
-      $below: $below-medium
     );
   }
 }

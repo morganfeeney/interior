@@ -53,52 +53,18 @@ $grid-bg-size: 100vw .5rem !default;
 $font-base: 1rem !default;
 $serif-cap-height: 0.66 !default
 
-// Modular Scales - use map-get() to split modular scales up.
-$golden-section: map-get($modular-scale, golden-section);
-$fifth: map-get($modular-scale, fifth);
-$major-third: map-get($modular-scale, major-third);
-$minor-second: map-get($modular-scale, minor-second);
-
-$golden-section-and-minor-second: map-get($modular-scales, golden-section-and-minor-second);
-
-// Create individual font name variables from the modular scales
-  $five-line-pica: map-get($golden-section-and-minor-second, five-line-pica);
-  $canon: map-get($golden-section-and-minor-second, canon);
-  $two-line-great-primer: map-get($golden-section-and-minor-second, two-line-great-primer);
-  $double-great-primer: map-get($golden-section-and-minor-second, double-great-primer);
-  $four-line-brevier: map-get($golden-section-and-minor-second, four-line-brevier);
-  $two-line-english: map-get($golden-section-and-minor-second, two-line-english);
-  $double-english: map-get($golden-section-and-minor-second, double-english);
-  $two-line-pica: map-get($golden-section-and-minor-second, two-line-pica);
-  $double-pica: map-get($golden-section-and-minor-second, double-pica);
-  $paragon: map-get($golden-section-and-minor-second, paragon);
-  $great-primer: map-get($golden-section-and-minor-second, great-primer);
-  $augustin: map-get($golden-section-and-minor-second, augustin);
-  $mittel: map-get($golden-section-and-minor-second, mittel);
-  $english: map-get($golden-section-and-minor-second, english);
-  $pica: map-get($golden-section-and-minor-second, pica);
-  $philosophy: map-get($golden-section-and-minor-second, philosophy);
-
-// html font size at 112.5%
-$fibonacci-large: map-get($modular-scales, fibonacci-large);
-
-  $double-english: map-get($fibonacci-large, double-english);
-  $paragon: map-get($fibonacci-large, paragon);
-  $great-primer: map-get($fibonacci-large, great-primer);
-
 // html font-size at 87.5%
-$fibonacci-small: map-get($modular-scales, fibonacci-small);
+$system-1: map-get($measuring-systems, system-1);
 
-  $double-english-small: map-get($fibonacci-small, double-english);
-  $two-line-pica-small: map-get($fibonacci-small, two-line-pica);
-  $double-pica-small: map-get($fibonacci-small, double-pica);
-  $paragon-small: map-get($fibonacci-small, paragon);
-  $great-primer-small: map-get($fibonacci-small, great-primer);
-  $augustin-small: map-get($fibonacci-small, augustin);
-  $mittel-small: map-get($fibonacci-small, mittel);
-  $english-small: map-get($fibonacci-small, english);
-  $pica-small: map-get($fibonacci-small, pica);
-  $philosophy-small: map-get($fibonacci-small, philosophy);
+  $two-line-pica: map-get($system-1, two-line-pica);
+  $double-pica: map-get($system-1, double-pica);
+  $paragon: map-get($system-1, paragon);
+  $great-primer: map-get($system-1, great-primer);
+  $augustin: map-get($system-1, augustin);
+  $mittel: map-get($system-1, mittel);
+  $english: map-get($system-1, english);
+  $pica: map-get($system-1, pica);
+  $philosophy: map-get($system-1, philosophy);
 
 // Measuring sticks - visual demonstration of modular scale units.
 $measuring-stick-width: font-scale(1.5);
