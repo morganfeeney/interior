@@ -84,21 +84,3 @@ $modular-scales: (
     philosophy: 0.250rem //4px
   )
 );
-
-// Combined scales
-$measuring-systems: (
-  // The following is based on the measure when applied to a grid
-  // more of a Typographic measuring system than modular scale.
-  // html font-size at 87.5%
-  system-1: (
-    two-line-pica: 3.286rem, // 46px
-      double-pica: 3rem, //42px
-    paragon: 2.143rem, //30px
-      great-primer: 1.857rem, //24px
-    augustin: 1.429rem, // 20px
-      mittel: 1.285711rem, //18px
-    english: 1.143rem, //16px
-      pica: 1rem, //14px
-    philosophy: 0.857rem //12px
-  )
-);
