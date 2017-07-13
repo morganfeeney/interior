@@ -25,6 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   @include heading-1();
+  @media(min-width: $screen-large) {
+    @include heading-1-large();
+  }
 }
 h2, h3, h4, h5, h6 {
   @include heading-6()
@@ -52,6 +55,9 @@ h2, h3, h4, h5, h6 {
 
 p {
   @include body-1();
+  @media(min-width: $screen-large) {
+    @include body-1-large();
+  }
 }
 
 .large {

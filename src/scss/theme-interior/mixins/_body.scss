@@ -1,19 +1,19 @@
 // Opting for @include over @extend here.
 
-@mixin body-1(
-    $line-height: 2rem
-) {
+@mixin body-1() {
   @include baseline(
     $font-size: $english,
-    $line-height: $line-height,
+    $line-height: 2rem,
     $above: .45,
     $below: 0
   );
-  // @media(min-width: 1366px) {
-  //   @include baseline(
-  //     $font-size: $paragon,
-  //     $line-height: $line-height,
-  //     $above: .5
-  //   );
-  // }
+}
+
+@mixin body-1-large() {
+  @include baseline(
+    $font-size: $mittel,
+    $line-height: 2rem,
+    $above: .45,
+    $below: 0
+  );
 }
