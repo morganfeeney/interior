@@ -14,3 +14,16 @@ $measuring-systems: (
     philosophy: 0.857rem //12px
   )
 );
+
+// html font-size at 87.5%
+$system-1: map-get($measuring-systems, system-1);
+
+  $two-line-pica: map-get($system-1, two-line-pica);
+  $double-pica: map-get($system-1, double-pica);
+  $paragon: map-get($system-1, paragon);
+  $great-primer: map-get($system-1, great-primer);
+  $augustin: map-get($system-1, augustin);
+  $mittel: map-get($system-1, mittel);
+  $english: map-get($system-1, english);
+  $pica: map-get($system-1, pica);
+  $philosophy: map-get($system-1, philosophy);
