@@ -6,11 +6,6 @@
     grid-row: 1;
     align-self: flex-end;
 
-    @media(max-width: $screen-large-max) {
-      align-self: flex-start;
-      margin-top: -1rem;
-    }
-
     @media(min-width: $screen-medium) {
       grid-row: 2;
       grid-column: 2 / span 2;
