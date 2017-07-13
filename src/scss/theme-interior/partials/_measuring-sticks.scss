@@ -2,6 +2,10 @@
 // Measuring sticks
 // -----------------------------------------------------------------------------
 
+// Measuring sticks - visual demonstration of modular scale units.
+$measuring-stick-width: font-scale(1.5);
+$measuring-stick-after-width: 2px;
+
 .measuring-sticks {
   display: flex;
   flex-flow: row wrap;
