@@ -6,13 +6,10 @@
 //
 
 html {
-  // Set the html font-size to 12px.
-  // font-size: 75%;
-  // Set the html font-size to 14px.
-  font-size: 87.5%;
-  // Sets html font size to 18px.
+  // font-size: 75%; // Set the html font-size to 12px.
+  font-size: 87.5%; // Set the html font-size to 14px.
   // @media(min-width: 1366px) {
-  //  font-size: 112.5%;
+  //  font-size: 112.5%; // Sets html font size to 18px.
   // }
 }
 
@@ -60,6 +57,13 @@ p {
   }
 }
 
+.intro {
+  @include intro();
+  @media(min-width: $screen-large) {
+    @include intro-large();
+  }
+}
+
 .large {
   @include baseline(
     $font-size: $great-primer,
@@ -70,20 +74,7 @@ p {
 }
 
 .small {
-  @include baseline(
-    $font-size: $english,
-    $line-height: 1rem,
-    $above: 0,
-    $below: -.7
-  );
-  @media(min-width: 1366px) {
-    @include baseline(
-      $font-size: $pica,
-      $line-height: 1rem,
-      $above: 0.1,
-      $below: -.7
-    );
-  }
+  @include small();
 }
 
 blockquote {

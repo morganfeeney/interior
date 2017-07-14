@@ -17,3 +17,39 @@
     $below: 0
   );
 }
+
+@mixin intro() {
+  @include baseline(
+    $font-size: $mittel,
+    $line-height: 2rem,
+    $above: .45,
+    $below: 0
+  );
+}
+
+@mixin intro-large() {
+  @include baseline(
+    $font-size: $augustin,
+    $line-height: 2rem,
+    $above: .25,
+    $below: 0
+  );
+}
+
+@mixin small() {
+  @include baseline(
+    $font-size: $english,
+    $line-height: 1.5rem,
+    $above: 0.25,
+    $below: -.7
+  );
+}
+
+@mixin small-large() {
+  @include baseline(
+    $font-size: $pica,
+    $line-height: 1rem,
+    $above: 0.1,
+    $below: -.7
+  );
+}

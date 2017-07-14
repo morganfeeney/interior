@@ -42,49 +42,31 @@
 
 @mixin heading-4() {
   @include baseline(
-  $font-weight: bold,
+    $font-weight: bold,
     $font-size: $paragon,
     $line-height: .96,
     $below: 0
   );
 }
 
-@mixin heading-5(
-  $above: .2,
-  $margin: 0
-) {
+@mixin heading-5() {
   @include baseline(
     $font-size: $great-primer,
     $font-weight: bold,
     $line-height: 1.25,
-    $above: $above,
-    $margin: $margin,
+    $above: .2,
+    $margin: 0,
     $below: .1
   );
 }
 
-@mixin heading-6(
-  $above: .5,
-  $below: 0,
-  $below-large: -1,
-  $margin: 0,
-  $margin-large: 2
-) {
+@mixin heading-6() {
   @include baseline(
     $font-size: $english,
     $font-weight: bold,
     $line-height: 2rem,
-    $above: $above,
-    $below: $below,
-    $margin: $margin
+    $above: .4,
+    $below: 0,
+    $margin: 0
   );
-  @media(min-width: 1366px) {
-    @include baseline(
-      $font-size: $english,
-      $line-height: 2rem,
-      $above: $above,
-      $below: $below,
-      $margin: $margin-large
-    );
-  }
 }
