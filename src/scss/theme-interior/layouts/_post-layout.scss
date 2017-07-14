@@ -1,0 +1,13 @@
+.post-layout {
+  counter-reset: default-counter;
+
+  h1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    align-self: flex-end;
+
+    @media(max-width: $screen-large-max) {
+      align-self: flex-start;
+      margin-top: -1rem;
+    }
+  }
