@@ -64,12 +64,14 @@ $grid-gutter: $horizontal-space !default;
 //** Screens
 //
 // Screen widths (min-width)
+$screen-smaller: 400px !default;
 $screen-small: 656px !default;
 $screen-medium: 990px !default;
 $screen-large: 1366px !default;
 $screen-larger: 1920px !default;
 
 // Screen widths (max-width)
+$screen-smaller-max: ($screen-smaller)-1 !default;
 $screen-small-max: ($screen-small)-1 !default;
 $screen-medium-max: ($screen-medium)-1 !default;
 $screen-large-max: ($screen-large)-1 !default;
