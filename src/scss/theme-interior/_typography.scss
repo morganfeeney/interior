@@ -166,3 +166,10 @@ figcaption {
   color: $mid-gray;
   text-align: right;
 }
+
+.main-header nav a {
+  @include body-1();
+  @media(min-width: $screen-large) {
+    @include body-1-large();
+  }
+}

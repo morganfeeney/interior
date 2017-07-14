@@ -1,15 +1,8 @@
-#main-header {
+.main-header {
   background: $brand-color-2;
-  display: grid;
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1rem;
-    align-items: flex-end;
-  }
 }
 
-#main-header nav {
+.main-header nav {
   @media(min-width: $screen-small) {
     text-align: right;
   }
@@ -22,48 +15,35 @@
   }
 }
 
-#main-header nav a {
-  @include baseline(
-    $font-size: $augustin,
-    $line-height: 2rem,
-    $below: .8
-  );
-  @media(min-width: 1366px) {
-    @include baseline(
-        $font-size: $great-primer,
-        $line-height: 2rem,
-        $below: .5
-    );
-  }
-
-  display: inline-flex;
+.main-header nav a {
   &:not(:last-child) {
     margin-right: $horizontal-space-small;
   }
 }
 
-#main-header .home-link svg {
-  @include baseline(
-    $no-text: true,
-    $margin: .65,
-    $below: -1
-  );
+.main-header .home-link svg {
+  width: 10rem;
+  // @include baseline(
+  //   $no-text: true,
+  //   $margin: .65,
+  //   $below: -1
+  // );
 
   //max-width: $double-great-primer;
 
   @media(min-width: $screen-small) {
-    @include baseline(
-      $no-text: true,
-      //$margin: 2.55,
-      $below: -.25
-    );
+    // @include baseline(
+    //   $no-text: true,
+    //   //$margin: 2.55,
+    //   $below: -.25
+    // );
   }
   @media(min-width: 1366px) {
-    @include baseline(
-      $no-text: true,
-      $margin: 2,
-      $below: .2
-    );
+    // @include baseline(
+    //   $no-text: true,
+    //   $margin: 2,
+    //   $below: .2
+    // );
     //max-width: $double-great-primer;
   }
 }
