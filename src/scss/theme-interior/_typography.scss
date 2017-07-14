@@ -64,15 +64,6 @@ p {
   }
 }
 
-.large {
-  @include baseline(
-    $font-size: $great-primer,
-    $line-height: 1.25,
-    $above: .2,
-    $below: 0
-  );
-}
-
 .small {
   @include small();
 }
@@ -110,34 +101,6 @@ aside .small {
     $above: 0.1,
     $below: 2.5
   );
-}
-
-.tiddler {
-  @include baseline(
-    $font-size: $mittel,
-    $line-height: 1.9,
-    $above: 0.5,
-    $below: 0,
-    $margin: 1
-  );
-  @media(min-width: $screen-small) {
-    @include baseline(
-      $font-size: $great-primer,
-      $line-height: 1.25,
-      $above: .15,
-      $below: .1,
-      $margin: 1
-    );
-  }
-  @media(min-width: $screen-large) {
-    @include baseline(
-      $font-size: $great-primer,
-      $line-height: 1.25,
-      $above: .15,
-      $below: .1,
-      $margin: 4
-    );
-  }
 }
 
 // Reset multicolumn <p> due to wrapping
