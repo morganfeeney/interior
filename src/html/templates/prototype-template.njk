@@ -37,7 +37,7 @@
 			</div>
 		</header>
 		{% endblock %}
-		<article id="main-article" class="container-outer {{ article_classes }}">
+		<article id="main-article" class="container-outer main-article {{ article_classes }}">
 			<main class="container {{ main_classes }}">
 				{% block main %}{% endblock %}
 			</main>
@@ -60,7 +60,7 @@
 			{% endif %}
 		</article>
 		{% block main_footer %}
-			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
+			<footer id="main-footer" class="container-outer main-footer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}
 						{% include "partials/footer.njk" %}
