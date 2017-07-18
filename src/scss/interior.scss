@@ -19,7 +19,6 @@
 
 // Theme Mixins
 @import "theme-interior/mixins/typography";
-@import "theme-interior/mixins/specimen-mixins";
 @import "theme-interior/mixins/headings";
 @import "theme-interior/mixins/body";
 
@@ -46,8 +45,6 @@
 @import "theme-interior/partials/header";
 @import "theme-interior/partials/nav";
 @import "theme-interior/partials/footer";
-@import "theme-interior/partials/visual-demo";
-@import "theme-interior/partials/type-specimin";
 @import "theme-interior/partials/graphics";
 
 @import "https://fonts.googleapis.com/css?family=Inconsolata";
