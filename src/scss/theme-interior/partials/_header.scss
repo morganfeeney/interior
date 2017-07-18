@@ -3,13 +3,11 @@
 }
 
 .main-header nav {
-  @media(min-width: $screen-small) {
-    text-align: right;
-  }
-    grid-column: 1 / span 2;
-    grid-row: 2;
+  grid-column: 1 / span 2;
+  grid-row: 2;
 
   @media(min-width: $screen-small) {
+    text-align: right;
     grid-column: 2;
     grid-row: 1;
   }
@@ -22,28 +20,13 @@
 }
 
 .main-header .home-link svg {
-  width: 10rem;
-  // @include baseline(
-  //   $no-text: true,
-  //   $margin: .65,
-  //   $below: -1
-  // );
+  width: 8rem; // gives a computed height of 28px (1:4)
 
-  //max-width: $double-great-primer;
+  @media(max-width: $screen-small-max) {
+    margin-bottom: .5rem; // balances vertical rhythm with this width
+  }
 
   @media(min-width: $screen-small) {
-    // @include baseline(
-    //   $no-text: true,
-    //   //$margin: 2.55,
-    //   $below: -.25
-    // );
-  }
-  @media(min-width: 1366px) {
-    // @include baseline(
-    //   $no-text: true,
-    //   $margin: 2,
-    //   $below: .2
-    // );
-    //max-width: $double-great-primer;
+    width: 10rem; // gives a computed height of 35px (1:4)
   }
 }
