@@ -70,3 +70,11 @@
     $margin: 0
   );
 }
+
+@mixin image-link-heading {
+  @include baseline(
+    $font-size: $pica,
+    $font-weight: bold,
+    $margin: 1
+  );
+}

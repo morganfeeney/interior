@@ -53,13 +53,3 @@
     $below: -.7
   );
 }
-
-@mixin image-link-span {
-  @include baseline(
-    $font-size: $pica,
-    $font-weight: bold,
-    $padding-top: 0,
-    $margin-bottom: 0,
-    $margin: 1
-  );
-}

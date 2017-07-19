@@ -148,7 +148,7 @@ figcaption {
 }
 
 .image-link span {
-  @include image-link-span();
+  @include image-link-heading();
 
   color: $brand-color-4;
   counter-increment: default-counter;
