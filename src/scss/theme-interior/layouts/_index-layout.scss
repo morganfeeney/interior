@@ -33,7 +33,7 @@
   }
 
   @media(max-width: $screen-large-max) {
-    #main-header .container {
+    .main-header .container {
       width: auto;
     }
   }
@@ -96,12 +96,6 @@
         grid-column: 3 / span 2;
       }
     }
-    // @media(min-width: $screen-larger) {
-    //     p:nth-of-type(1),
-    //     h1 {
-    //         grid-column: 4 / span 2;
-    //     }
-    // }
   }
 
   #design-principles {
@@ -136,7 +130,6 @@
     @media(min-width: $screen-large) {
       grid-template-rows: $grid-row-large;
     }
-
   }
 
   #design-principles,
@@ -149,9 +142,9 @@
     }
 
     @media(min-width: $screen-smaller) and (max-width: $screen-medium-max) {
-        .image-link:nth-child(2) {
-          grid-column-start: 1;
-        }
+      .image-link:nth-child(2) {
+        grid-column-start: 1;
+      }
     }
 
     @media(min-width: $screen-medium) {
@@ -159,9 +152,9 @@
     }
 
     @media(min-width: $screen-medium) and (max-width: $screen-large-max) {
-        .image-link:nth-child(4) {
-          grid-column-start: 2;
-        }
+      .image-link:nth-child(4) {
+        grid-column-start: 2;
+      }
     }
 
     @media(min-width: $screen-large) {
@@ -201,22 +194,10 @@
     }
 
     span {
-      font-weight: bold;
-      color: black;
-      counter-increment: default-counter;
       display: grid;
       align-items: baseline;
       grid-template-columns: auto 1fr;
-      margin-top: 1rem;
-
-      &::before {
-        content: counter(default-counter)" ";
-        border-bottom: .14rem solid $brand-color-1;
-        text-align: center;
-        width: .75rem;
-        margin-right: .25rem;
-        padding-bottom: .25rem;
-      }
+      // margin-top: 1rem;
     }
   }
 

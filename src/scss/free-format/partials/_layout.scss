@@ -6,11 +6,11 @@
   justify-content: space-between;
 }
 
-.page-crack-magazine-1 #main-header::before {
+.page-crack-magazine-1 .main-header::before {
   content: none;
 }
 
-.page-crack-magazine-1 #main-article .container {
+.page-crack-magazine-1 .main-article .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
