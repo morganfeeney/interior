@@ -146,3 +146,19 @@ figcaption {
     line-height: 3rem;
   }
 }
+
+.image-link span {
+  @include image-link-span();
+
+  color: $brand-color-4;
+  counter-increment: default-counter;
+
+  &::before {
+    content: counter(default-counter)" ";
+    border-bottom: .14rem solid $brand-color-1;
+    text-align: center;
+    width: .75rem;
+    margin-right: .25rem;
+    padding-bottom: .25rem;
+  }
+}
