@@ -2,6 +2,26 @@
 // Layout
 // -----------------------------------------------------------------------------
 
+%flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  @media(min-width: 656px) {
+      margin-left: 2.444rem;
+    }
+    @media(min-width: 1366px) {
+      margin-left: 3.556rem;
+    }
+}
+
+.grid {
+  @include grid($gutter: 0);
+}
+
 .grid-main {
   justify-content: space-between;
 }

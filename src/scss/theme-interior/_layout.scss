@@ -10,6 +10,19 @@ body {
   }
 }
 
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+
+  @media(min-width: $screen-small) {
+    margin-left: 2.444rem;
+  }
+
+  @media(min-width: $screen-large) {
+    margin-left: 3.556rem;
+  }
+}
+
 .main-header {
   grid-area: header;
 
@@ -33,6 +46,7 @@ body {
 .main-footer {
   grid-area: footer;
   align-self: end;
+
   .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
