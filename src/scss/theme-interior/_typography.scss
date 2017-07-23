@@ -153,12 +153,16 @@ figcaption {
   color: $brand-color-4;
   counter-increment: default-counter;
 
+  @media(max-width: $screen-smaller-max) {
+    margin-top: 0;
+  }
+
   &::before {
     content: counter(default-counter)" ";
     border-bottom: .14rem solid $brand-color-1;
     text-align: center;
-    width: .75rem;
-    margin-right: .25rem;
+    width: auto;
+    margin-right: .5rem;
     padding-bottom: .25rem;
   }
 }
