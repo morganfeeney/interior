@@ -7,9 +7,11 @@
   height: auto;
   display: block;
 }
+
 img {
   @extend %fluid-img;
 }
+
 .container > img {
   align-self: center;
   @include baseline(
