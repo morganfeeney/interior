@@ -1,0 +1,20 @@
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "Read this now" %}
+
+{% block content %}
+  {{ super() }}
+  <h2>Why?</h2>
+  <div class="test">
+
+  <p>Much has been written about the benefits of using a Modular Scale. What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
+
+<p>A physical page is finite and does not change, with this in mind a designer may take the measurements and understand—from the dimensions and content—how a layout should be constructed. In this context a page is the starting point for mathematically calculating font size, grid system; and ultimately the layout.</p>
+
+<p>In the web browser some of these principles still apply—yet differently. For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices. Another major difference is that the nature of a web page is by default more like a scroll.</p>
+
+<p>How do we begin to calculate the proportions of a layout? The vertical axis can’t logically be the starting point, as content could update regularly or—worse still—be of an unknown quantity; anyone can be a publisher.</p>
+
+<p>Without a font-size line-length can’t be established, without line-length column-width can’t be determined, unless the column-widths are understood the overall layout width is an unknown quantity—hence why modular scale is the first step.</p>
+
+</div>
+{% endblock %}

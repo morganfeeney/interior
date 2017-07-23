@@ -1,0 +1,18 @@
+{% extends "templates/prototype-template.njk" %}
+{% set html_classes = "footer-at-end" %}
+{% set body_classes = "design-principles-layout" %}
+{# set these for dev purposes #}
+{% set layout_classes = "grid-visible baseline-grid" %}
+{% set cols = 30 %}
+
+{% block linked_css %}
+  <link rel="stylesheet" href="/css/interior.css">
+{% endblock %}
+
+{% block main %}
+  <section {% if first_section_class %}class="{{ first_section_class }}"{% endif %}>
+    {% block content %}
+      <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</h1>
+    {% endblock %}
+  </section>
+{% endblock %}
