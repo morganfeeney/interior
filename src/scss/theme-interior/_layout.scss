@@ -2,12 +2,8 @@ body {
   display: grid;
   width: 100%;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 6rem auto 1fr;
+  grid-template-rows: 6rem minmax(100vh, auto) 1fr;
   grid-row-gap: $grid-row-gap-small;
-
-  @media(min-width: $screen-small) {
-    grid-template-rows: 6rem auto 1fr;
-  }
 }
 
 .container {
@@ -15,10 +11,17 @@ body {
   margin-right: 1.5rem;
 
   @media(min-width: $screen-small) {
+    width: $width-small;
     margin-left: 2.444rem;
   }
-
+  @media(min-width: $screen-medium) {
+    width: $width-medium;
+  }
   @media(min-width: $screen-large) {
+    width: $width-large;
+  }
+  @media(min-width: $screen-larger) {
+    width: $width-larger;
     margin-left: 3.556rem;
   }
 }
@@ -40,7 +43,11 @@ body {
 
 .main-article {
   grid-area: main;
-  height: 100%;
+  min-height: 100%;
+
+  main {
+    min-height: 100%;
+  }
 }
 
 .main-footer {
@@ -54,7 +61,7 @@ body {
   }
 }
 
-.footer-at-bottom {
+.footer-at-end {
   // Position the footer always at the bottom, regardless of how much content
   // there is.
   display: grid;

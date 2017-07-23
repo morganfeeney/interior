@@ -1,0 +1,21 @@
+.design-principles-layout {
+  .test {
+    columns: 2;
+    orphans: 3;
+    column-gap: $grid-row-gap-small;
+
+    @media(min-width: $screen-large) {
+      column-gap: $grid-row-gap-large;
+    }
+
+    p {
+      break-inside: avoid-column;
+      display: inline-grid;
+    }
+
+    // h1, h2 {
+    //   column-span: all;
+    //   break-inside: avoid-column;
+    // }
+  }
+}
