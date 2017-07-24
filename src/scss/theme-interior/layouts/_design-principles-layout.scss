@@ -1,5 +1,26 @@
 .design-principles-layout {
+  main > section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $grid-row-gap-small;
+
+    @media(min-width: $screen-large) {
+      grid-gap: $grid-row-gap-large;
+    }
+  }
+
+  h1, h2 {
+    grid-column: span 2;
+  }
+
+  h2 {
+    grid-row: 2;
+  }
+
   .test {
+    grid-column: span 2;
+    grid-row: 3;
+
     columns: 2;
     orphans: 3;
     column-gap: $grid-row-gap-small;
