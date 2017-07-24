@@ -2,10 +2,12 @@
   main > section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: $grid-row-gap-small;
+    grid-auto-rows: minmax(10rem, auto);
+    grid-gap: $grid-gap-small;
 
     @media(min-width: $screen-large) {
-      grid-gap: $grid-row-gap-large;
+      grid-auto-rows: minmax(21rem, auto);
+      grid-gap: $grid-gap-large;
     }
   }
 
@@ -13,13 +15,18 @@
     grid-column: span 2;
   }
 
+  h1 {
+    align-self: flex-end;
+  }
+
   h2 {
-    grid-row: 2;
+    display: block;
+    column-span: all;
   }
 
   .test {
     grid-column: span 2;
-    grid-row: 3;
+    grid-row: 2;
 
     columns: 2;
     orphans: 3;

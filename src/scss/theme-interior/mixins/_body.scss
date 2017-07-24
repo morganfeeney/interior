@@ -40,8 +40,8 @@
   @include baseline(
     $font-size: $english,
     $line-height: 1.5rem,
-    $above: 0.25,
-    $below: -.7
+    $above: 0.2,
+    $below: 0
   );
 }
 

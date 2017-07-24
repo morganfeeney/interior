@@ -57,6 +57,10 @@ p {
   }
 }
 
+.test > p {
+  @include small();
+}
+
 .intro {
   @include intro();
 
@@ -96,42 +100,6 @@ blockquote {
       content: "\2014"
     }
   }
-}
-
-aside .small {
-  @include baseline(
-    $font-size: $pica,
-    $line-height: 1.25,
-    $above: 0.1,
-    $below: 2.5
-  );
-}
-
-// Reset multicolumn <p> due to wrapping
-.multicolumn p {
-  margin: 0;
-  padding: 0;
-  &:not(:first-child) {
-    text-indent: 1.62rem;
-  }
-}
-
-@media(min-width: $screen-large) {
-  .multicolumn {
-    text-align: justify;
-    hyphens: auto;
-  }
-}
-
-figcaption {
-  @include baseline(
-    $font-size: $pica,
-    $above: .25,
-    $below: .25,
-    $margin: -1
-  );
-  color: $mid-gray;
-  text-align: right;
 }
 
 .main-header nav a {
