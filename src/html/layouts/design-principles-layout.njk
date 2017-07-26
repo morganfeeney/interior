@@ -10,9 +10,7 @@
 {% endblock %}
 
 {% block main %}
-  <section {% if first_section_class %}class="{{ first_section_class }}"{% endif %}>
-    {% block content %}
-      <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</h1>
-    {% endblock %}
-  </section>
+  {% block content %}
+    <h1>{% if page_title %}{{ page_title }}{% else %}{{ title }}{% endif %}</h1>
+  {% endblock %}
 {% endblock %}

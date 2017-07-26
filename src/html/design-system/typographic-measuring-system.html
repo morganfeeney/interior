@@ -2,20 +2,42 @@
 {% set page_description = "Read this now" %}
 
 {% block content %}
-  {{ super() }}
-  <div class="test">
-    <h2>Why?</h2>
+  <section>
+    {{ super() }}
 
+    <img class="main-image" src="/images/page-illustrations_main-image.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman">
 
-  <p>Much has been written about the benefits of using a Modular Scale. What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
+    <div class="passage">
+      <h2>Why?</h2>
 
-<p>A physical page is finite and does not change, with this in mind a designer may take the measurements and understand—from the dimensions and content—how a layout should be constructed. In this context a page is the starting point for mathematically calculating font size, grid system; and ultimately the layout.</p>
+      <p>Much has been written about the benefits of using a Modular Scale. What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
 
-<p>In the web browser some of these principles still apply—yet differently. For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices. Another major difference is that the nature of a web page is by default more like a scroll.</p>
+      <p>A physical page is finite and does not change, with this in mind a designer may take the measurements and understand—from the dimensions and content—how a layout should be constructed. In this context a page is the starting point for mathematically calculating font size, grid system; and ultimately the layout.</p>
 
-<p>How do we begin to calculate the proportions of a layout? The vertical axis can’t logically be the starting point, as content could update regularly or—worse still—be of an unknown quantity; anyone can be a publisher.</p>
+      <p>In the web browser some of these principles still apply—yet differently. For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices. Another major difference is that the nature of a web page is by default more like a scroll.</p>
 
-<p>Without a font-size line-length can’t be established, without line-length column-width can’t be determined, unless the column-widths are understood the overall layout width is an unknown quantity—hence why modular scale is the first step.</p>
+      <p>How do we begin to calculate the proportions of a layout? The vertical axis can’t logically be the starting point, as content could update regularly or—worse still—be of an unknown quantity; anyone can be a publisher.</p>
 
-</div>
+      <p>Without a font-size line-length can’t be established, without line-length column-width can’t be determined, unless the column-widths are understood the overall layout width is an unknown quantity—hence why modular scale is the first step.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="passage">
+      <h3>Choosing a suitable scale</h3>
+      
+      <p>Picking font sizes can be trial and error, the process may involve viewing examples of text on a range of devices, making adjustments where needed.</p>
+
+      <p>To make the most use of the modular scale; the HTML element can be scaled using percentages. This provides a level of granularity enabling the same—or similar—font sizes to be scaled proportionately whilst aligning to a range of baseline grids, allowing for a variety of line-heights.</p>
+
+      <p>The percentage used on the HTML element alters line-height—which depending upon the size of the font will have an effect upon legibility—more on this coming up on the next page.</p>
+
+      <p>All font sizes chosen for Interior were chosen to work with the column widths in the grid system.</p>
+    </div>
+
+    <figure class="type-system">
+      <img src="/images/page-illustrations_units.svg" alt="Computed pixel (px) font sizes, and rem units.">
+      <figcaption>Figure 1 — Computed px size at a scale of 87.5%, which are set in rems, Helvetica Neue.</figcaption>
+    </figure>
+  </section>
 {% endblock %}
