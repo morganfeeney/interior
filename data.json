@@ -99,6 +99,19 @@
         "english": "1",
         "pica": ".833",
         "philosophy": ".617"
+      },
+      "systems": {
+        "system1": [
+          {"two-line-pica": "3.286rem"},
+          {"double-pica": "3rem"},
+          {"paragon": "2.143rem"},
+          {"great-primer": "1.857rem"},
+          {"augustin": "1.429rem"},
+          {"mittel": "1.285711rem"},
+          {"english": "1.143rem"},
+          {"pica": "1rem"},
+          {"philosophy": "0.857rem"}
+        ]
       }
     }
 }
