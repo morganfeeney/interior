@@ -3,9 +3,8 @@
 // -----------------------------------------------------------------------------
 
 html {
-  // font-size: 75%; // Set the html font-size to 12px.
   font-size: 87.5%; // Set the html font-size to 14px.
-  // @media(min-width: 1366px) {
+  // @media(min-width: $screen-large) {
   //  font-size: 112.5%; // Sets html font size to 18px.
   // }
 }
@@ -25,8 +24,12 @@ h1 {
   }
 }
 
-h2, h3, h4, h5, h6 {
-  @include heading-6()
+h2, h3 {
+  @include heading-3();
+}
+
+h4, h5, h6 {
+  @include heading-6();
 }
 
 // Used to demonstrate the effects of applying these classes - scale and measure.
@@ -57,7 +60,7 @@ p {
   }
 }
 
-.test > p {
+.passage > p {
   @include small();
 }
 

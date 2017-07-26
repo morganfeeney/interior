@@ -1,4 +1,13 @@
 .design-principles-layout {
+  main {
+    display: grid;
+    grid-gap: $grid-gap-small;
+
+    @media(min-width: $screen-large) {
+      grid-gap: $grid-gap-large;
+    }
+  }
+
   main > section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -19,17 +28,22 @@
     align-self: flex-end;
   }
 
-  h2 {
+  h2, h3 {
     display: block;
     column-span: all;
   }
 
-  .test {
+  .passage {
     grid-column: span 2;
-    grid-row: 2;
+  }
 
+  section:first-of-type .passage {
+    grid-row: 2 / span 2;
+  }
+
+  .passage {
     columns: 2;
-    orphans: 3;
+    //orphans: 3;
     column-gap: $grid-row-gap-small;
 
     @media(min-width: $screen-large) {
@@ -40,10 +54,15 @@
       break-inside: avoid-column;
       display: inline-grid;
     }
+  }
 
-    // h1, h2 {
-    //   column-span: all;
-    //   break-inside: avoid-column;
-    // }
+  .main-image {
+    grid-column: span 2;
+    grid-row: span 2;
+    align-self: flex-start; // Safari misaligns the image without this.
+  }
+
+  .type-system {
+    grid-column: 3 / span 2;
   }
 }
