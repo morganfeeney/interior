@@ -62,6 +62,11 @@ p {
 
 .passage > p {
   @include small();
+  hyphens: auto;
+}
+
+.passage > h4 {
+  @include small();
 }
 
 .intro {

@@ -31,19 +31,24 @@
   h2, h3 {
     display: block;
     column-span: all;
+    margin-top: -1rem; // Align to the top of the grid cell.
   }
 
   .passage {
     grid-column: span 2;
   }
 
-  section:first-of-type .passage {
+  section:nth-child(1) .passage {
     grid-row: 2 / span 2;
+  }
+
+  section:nth-of-type(2) .passage {
+    grid-row: 1 / span 1;
   }
 
   .passage {
     columns: 2;
-    //orphans: 3;
+    // orphans: 3;
     column-gap: $grid-row-gap-small;
 
     @media(min-width: $screen-large) {
@@ -52,7 +57,10 @@
 
     p {
       break-inside: avoid-column;
-      display: inline-grid;
+
+      @supports not (break-inside: avoid-column) {
+        display: inline-grid;
+      }
     }
   }
 
