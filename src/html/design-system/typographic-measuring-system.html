@@ -10,9 +10,9 @@
     <div class="passage">
       <h2>Why?</h2>
 
-      <p>Much has been written about the benefits of using a Modular Scale. What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
+      <p>Much has been written about the benefits of using a Typographic Measuring System (e.g. Modular Scale). What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
 
-      <p>A physical page is finite and does not change, with this in mind a designer may take the measurements and understand—from the dimensions and content—how a layout should be constructed. In this context a page is the starting point for mathematically calculating font size, grid system; and ultimately the layout.</p>
+      <p>A printed page is finite and does not change, with this in mind a designer may take the measurements and understand—from the dimensions and content—how a layout should be constructed. In this context a page is the starting point for calculating font size, grid system; and ultimately the layout.</p>
 
       <p>In the web browser some of these principles still apply—yet differently. For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices. Another major difference is that the nature of a web page is by default more like a scroll.</p>
 
@@ -25,19 +25,43 @@
   <section>
     <div class="passage">
       <h3>Choosing a suitable scale</h3>
-      
+
       <p>Picking font sizes can be trial and error, the process may involve viewing examples of text on a range of devices, making adjustments where needed.</p>
 
-      <p>To make the most use of the modular scale; the HTML element can be scaled using percentages. This provides a level of granularity enabling the same—or similar—font sizes to be scaled proportionately whilst aligning to a range of baseline grids, allowing for a variety of line-heights.</p>
+      <p>To make the most use of a Typographic Measuring System; the HTML element can be scaled using percentages. This provides a level of granularity enabling font sizes to be scaled proportionately whilst aligning to a range of vertical grids, enabling a variety of line-heights.</p>
 
       <p>The percentage used on the HTML element alters line-height—which depending upon the size of the font will have an effect upon legibility—more on this coming up on the next page.</p>
 
-      <p>All font sizes chosen for Interior were chosen to work with the column widths in the grid system.</p>
+      <p>All font sizes chosen for Interior were chosen to work with the column widths in the <a href="#">grid system</a>.</p>
     </div>
 
     <figure class="type-system">
       <img src="/images/page-illustrations_units.svg" alt="Computed pixel (px) font sizes, and rem units.">
       <figcaption>Figure 1 — Computed px size at a scale of 87.5%, which are set in rems, Helvetica Neue.</figcaption>
     </figure>
+  </section>
+
+  <section>
+<div class="passage">
+  <h3>Process</h3>
+
+<h4>Plan for the measure</h4>
+<p>Providing an optimal line-length for reading—the measure—is key to typographic layout. Selecting a range of font-sizes which aid legibility when combined with the column widths chosen for the grid; is the goal.</p>
+
+<p>I have intentionally made line-length static, otherwise the measure will be fluid; and constantly change. By introducing layout widths, which restrict the amount of columns, combined with a range of font-sizes used for spanning as many columns as needed, I am able to define a suitable measure of roughly 7-10 words per line.</p>
+
+<h4>Take it to the baseline</h4>
+
+<p>I highly recommend getting a suitable range of font-sizes set on a baseline grid as quickly as possible (in HTML and CSS) view the typography on mobile device/s and make adjustments until you get what you want.</p>
+
+<p>The sizes I’ve used were chosen to work with a variety of line-height applied across a series of layout widths, in other words; that work across a multitude of screen sizes or even device types. As described by Brockman:</p>
+
+<p><em>“The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created”.</em></p>
+
+<h4>Start designing</h4>
+
+<p>Once you have the desired legibility, transfer that scale to something like Illustrator and start designing. You’ll eventually make your way back to the browser. Not only will your designs be more accurate, you’ll have laid a solid foundation which you can return to; safe in the knowledge of it already being tried and tested.</p>
+</div>
+
   </section>
 {% endblock %}
