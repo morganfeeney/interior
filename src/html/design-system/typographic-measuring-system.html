@@ -5,8 +5,12 @@
   <section>
     {{ super() }}
 
-    <img class="main-image" src="/images/page-illustrations_main-image.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman">
-
+    <picture class="main-image">
+      <source media="(min-width: 1366px)" srcset="/images/page-illustrations_main-image.svg">
+      <source srcset="/images/page-illustrations_main-image-medium.svg">
+      <img src="/images/page-illustrations_main-image-medium.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium.svg">
+    </picture>
+    
     <div class="passage">
       <h2>Why?</h2>
 

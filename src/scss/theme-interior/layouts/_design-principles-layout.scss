@@ -32,9 +32,11 @@
   h1 {
     align-self: flex-end;
 
+
     @media(max-width: $screen-large-max) {
-      grid-row: 1 / span 4;
+      grid-row: 1 / span 3;
     }
+
   }
 
   h2, h3 {
@@ -46,17 +48,10 @@
   .main-image {
     grid-column: span 2;
     align-self: flex-start; // Safari misaligns the image without this.
-    grid-row: span 4;
+    grid-row: span 3;
 
     @media(min-width: $screen-large) {
       grid-row: span 2;
-    }
-
-    @media(max-width: $screen-large-max) {
-      object-fit: cover;
-      height: 43rem;
-      width: 100%;
-      object-position: top left;
     }
   }
 
@@ -71,6 +66,10 @@
   }
 
   section:nth-of-type(2) .passage {
+    @media(max-width: $screen-large-max) {
+      grid-column: span 1;
+      columns: 1
+    }
     grid-row: 1 / span 1;
   }
 
@@ -89,6 +88,10 @@
   }
 
   .type-system {
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 2;
+
+    @media(min-width: $screen-large) {
+      grid-column: 3 / span 2;
+    }
   }
 }
