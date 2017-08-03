@@ -1,13 +1,13 @@
 {% extends "layouts/index-layout.njk" %}
 {% set page_title = "Design system" %}
 {% set page_description = "Read the documentation on how to use Interior" %}
-{% set first_section_class = "preamble" %}
-{% set second_section_class = "principles" %}
 
 {% block embedded_css %}
 {% endblock %}
 
-  {% block column1 %}
+  {% block content %}
+  <section class="preamble">
+
     {{ super() }}
     {# This content will need revising after writing about how grid is now essential—duh! #}
     <p class="intro">Whilst using and documenting Interior simultaneously it became
@@ -17,9 +17,9 @@
       why tie things together? Separating the fundamental design system—which
       can apply to a design created with any spec—from the ever-changing is not
       only logical, but efficient.</p>
-  {% endblock %}
-  {% block column2 %}
-    <div id="design-principles">
+    </section>
+
+    <section id="design-principles" class="design-principles">
       <div class="section-info">
         <h5>Design principles</h5>
         <p class="small">The fundamentals of Interior. Each principle is essential in order to create of consistent and well laid out web designs.</p>
@@ -40,8 +40,9 @@
         <img src="/images/illustrations-web-ready-03.svg" alt="Composition illustration">
         <span>Composition</span>
       </a>
-    </div>
-    <div id="development-considerations">
+    </section>
+
+    <section id="development-considerations" class="development-considerations">
       <div class="section-info">
         <h5>Development considerations</h5>
         <p class="small">Due to the nature of technology constantly evolving, there are some useful considerations to think about and possibly plan into a layout focused workflow.</p>
@@ -54,5 +55,5 @@
           <img src="/images/illustrations-web-ready-06.svg" alt="grid system illustration">
           <span>Specifications</span>
         </a>
-    </div>
+    </section>
   {% endblock %}

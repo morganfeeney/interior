@@ -75,16 +75,9 @@
   }
 
   .passage {
-    @media(min-width: $screen-large) {
-
-    }
     columns: 2;
     // orphans: 3;
     column-gap: $grid-column-gap;
-
-    // @media(min-width: $screen-large) {
-    //   column-gap: $grid-row-gap-large;
-    // }
 
     p {
       break-inside: avoid-column;

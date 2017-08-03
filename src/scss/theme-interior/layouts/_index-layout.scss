@@ -37,23 +37,22 @@
     }
   }
 
-  main section {
+  section {
     display: grid;
     grid-gap: $grid-gap-small;
+    grid-auto-rows: minmax(10rem, auto);
 
     @media(min-width: $screen-large) {
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: $grid-gap-large;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: $grid-gap-large;
     }
 
     @media(min-width: $screen-larger) {
-        grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 
   .preamble {
-    grid-template-rows: repeat(3, minmax(10rem, auto));
-
     @media(min-width: $screen-medium) {
       grid-template-rows: repeat(4, minmax(10rem, auto));
       grid-template-columns: repeat(3, 1fr);
@@ -83,8 +82,7 @@
     }
   }
 
-  #design-principles {
-    grid-template-rows: repeat(6, 10rem);
+  .design-principles {
     grid-template-columns: 1fr;
 
     @media(min-width: $screen-small) {
@@ -100,12 +98,11 @@
     }
   }
 
-  #development-considerations {
-    grid-template-rows: repeat(4, 10rem);
+  .development-considerations {
     grid-template-columns: 1fr;
 
     @media(min-width: $screen-small) {
-        grid-template-rows: repeat(3, 10rem);
+      grid-template-rows: repeat(3, 10rem);
     }
 
     @media(min-width: $screen-medium) {
@@ -117,11 +114,8 @@
     }
   }
 
-  #design-principles,
-  #development-considerations {
-    display: grid;
-    grid-gap: $grid-gap-small;
-
+  .design-principles,
+  .development-considerations {
     @media(min-width: $screen-smaller) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -192,7 +186,6 @@
     display: grid;
     align-items: baseline;
     grid-template-columns: auto 1fr;
-    // margin-top: 1rem;
   }
 
   .section-info {
