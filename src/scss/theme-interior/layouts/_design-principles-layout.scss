@@ -32,11 +32,9 @@
   h1 {
     align-self: flex-end;
 
-
     @media(max-width: $screen-large-max) {
       grid-row: 1 / span 3;
     }
-
   }
 
   h2, h3 {
@@ -55,10 +53,6 @@
     }
   }
 
-  .passage {
-    grid-column: span 2;
-  }
-
   section:nth-child(1) .passage {
     @media(min-width: $screen-large) {
       grid-row: 2 / span 2;
@@ -66,25 +60,22 @@
   }
 
   section:nth-of-type(2) .passage {
+    grid-row: 1 / span 1;
+
     @media(max-width: $screen-large-max) {
       grid-column: span 1;
       columns: 1
     }
-    grid-row: 1 / span 1;
   }
 
   .passage {
     columns: 2;
-    // orphans: 3;
     column-gap: $grid-column-gap;
+    grid-column: span 2;
 
-    p {
-      break-inside: avoid-column;
-
-      @supports not (break-inside: avoid-column) {
-        display: inline-grid;
-      }
-    }
+    // p {
+    //   break-inside: avoid-column;
+    // }
   }
 
   .type-system {

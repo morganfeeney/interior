@@ -62,11 +62,14 @@ p {
 
 .passage > p {
   @include small();
-  hyphens: auto;
+  padding-top: 0;
+  margin-bottom: 1rem;
 }
 
 .passage > h4 {
   @include small();
+  padding-top: 0;
+  margin-bottom: 1rem;
 }
 
 .intro {
