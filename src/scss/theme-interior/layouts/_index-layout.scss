@@ -63,6 +63,10 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
+    @media(min-width: $screen-larger) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
     .intro {
       grid-row: 2 / span 2;
       margin-top: -1rem;

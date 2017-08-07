@@ -61,15 +61,19 @@ p {
 }
 
 .passage > p {
-  @include small();
   padding-top: 0;
   margin-bottom: 1rem;
+  @media(max-width: $screen-large-max) {
+    @include small();
+  }
 }
 
 .passage > h4 {
-  @include small();
   padding-top: 0;
   margin-bottom: 1rem;
+  @media(max-width: $screen-large-max) {
+    @include small();
+  }
 }
 
 .intro {

@@ -19,6 +19,10 @@
       grid-auto-rows: minmax(21rem, auto);
       grid-gap: $grid-gap-large;
     }
+
+    @media(min-width: $screen-larger) {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 
   h1, h2 {
@@ -73,9 +77,9 @@
     column-gap: $grid-column-gap;
     grid-column: span 2;
 
-    // p {
-    //   break-inside: avoid-column;
-    // }
+    @media(min-width: $screen-larger) {
+      grid-column: span 3;
+    }
   }
 
   .type-system {
