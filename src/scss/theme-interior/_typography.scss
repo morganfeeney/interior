@@ -72,11 +72,7 @@ p {
   }
 }
 
-.passage > h2, h3, h4 {
-  //padding-top: 0;
-  // margin-bottom: 1rem;
-  // margin-top: .5rem;
-
+.passage > h2, h3 {
   @include baseline(
     $no-text: true,
     $margin-only: true,
@@ -87,9 +83,16 @@ p {
 }
 
 .passage > h4 {
-  @media(max-width: $screen-large-max) {
-    @include small();
-  }
+  @include small();
+  @include baseline(
+  $font-size: $english,
+  $line-height: 2rem,
+  $above: .45,
+  $below: 0,
+    $margin-only: true,
+
+    $padding-top: 0
+  );
 }
 
 .intro {

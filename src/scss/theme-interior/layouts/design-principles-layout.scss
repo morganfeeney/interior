@@ -48,7 +48,8 @@ h1 {
   }
 }
 
-h2, h3 {
+h2, h3,
+h3 + h4 {
   display: block;
   column-span: all;
   //margin-top: -1rem; // Align to the top of the grid cell.
@@ -94,5 +95,9 @@ section:nth-of-type(2) .passage {
 
   @media(min-width: $screen-large) {
     grid-column: 3 / span 2;
+  }
+
+  @media(min-width: $screen-larger) {
+    grid-column: 4 / span 2;
   }
 }
