@@ -6,7 +6,8 @@
 {% set cols = 30 %}
 
 {% block linked_css %}
-  <link rel="stylesheet" href="/css/interior.css">
+  {{ super() }}
+  <link rel="stylesheet" href="/css/index-layout.css">
 {% endblock %}
 
 {% block main %}

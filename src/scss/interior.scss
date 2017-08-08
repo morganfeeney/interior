@@ -34,8 +34,6 @@
 
 // Theme layouts
 @import "theme-interior/layout";
-@import "theme-interior/layouts/index-layout";
-@import "theme-interior/layouts/design-principles-layout";
 
 // Theme partials
 @import "theme-interior/partials/grid-overlay";
@@ -43,5 +41,6 @@
 @import "theme-interior/partials/header";
 @import "theme-interior/partials/nav";
 @import "theme-interior/partials/footer";
+@import "theme-interior/partials/image-link";
 
 //@import "https://fonts.googleapis.com/css?family=Inconsolata";
