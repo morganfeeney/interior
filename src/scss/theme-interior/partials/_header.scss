@@ -17,6 +17,17 @@
   &:not(:last-child) {
     margin-right: $horizontal-space-small;
   }
+
+  @include body-1();
+
+  @media(min-width: $screen-large) {
+    @include body-1-large();
+  }
+
+  // Cascade over the previous ruleset's line-height
+  @media(min-width: $screen-small) {
+    line-height: 3rem;
+  }
 }
 
 .main-header .home-link svg {

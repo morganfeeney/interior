@@ -1,1 +1,3 @@
-@include gridCSS-overlay();
+@include gridCSS-overlay(
+  $grid-larger: 21.143rem .5fr .5fr 21.143rem 21.143rem 21.143rem
+);
