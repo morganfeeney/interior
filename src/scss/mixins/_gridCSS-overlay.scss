@@ -4,7 +4,11 @@
 // This is what creates the overlay used to align columns for use with Interior.
 // -----------------------------------------------------------------------------
 
-@mixin gridCSS-overlay() {
+@mixin gridCSS-overlay(
+  $grid-medium: repeat(3, 1fr),
+  $grid-large: repeat(4, 1fr),
+  $grid-larger: repeat(5, 1fr)
+) {
   main {
     position: relative;
   }
@@ -47,17 +51,17 @@
   }
   @media(min-width: $screen-medium) {
     .grid-visible .master-grid {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: $grid-medium;
       }
   }
   @media(min-width: $screen-large) {
     .grid-visible .master-grid {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: $grid-large;
       }
   }
   @media(min-width: $screen-larger) {
     .grid-visible .master-grid {
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: $grid-larger;
       }
   }
 }
