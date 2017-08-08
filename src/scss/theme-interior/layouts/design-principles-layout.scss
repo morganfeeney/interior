@@ -38,6 +38,10 @@ h1, h2 {
   @media(min-width: $screen-large) {
     grid-column: span 2;
   }
+
+  @media(min-width: $screen-larger) {
+    grid-column: span 3;
+  }
 }
 
 h1 {
