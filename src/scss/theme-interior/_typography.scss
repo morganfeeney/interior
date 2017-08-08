@@ -60,17 +60,33 @@ p {
   }
 }
 
+.passage {
+  orphans: 1; // corrects the imbalance display: inline-grid introduces
+}
+
 .passage > p {
-  padding-top: 0;
-  margin-bottom: 1rem;
+  display: inline-block;
+
   @media(max-width: $screen-large-max) {
     @include small();
   }
 }
 
+.passage > h2, h3, h4 {
+  //padding-top: 0;
+  // margin-bottom: 1rem;
+  // margin-top: .5rem;
+
+  @include baseline(
+    $no-text: true,
+    $margin-only: true,
+    $above: -.5,
+    $below: -1,
+    $padding-top: 0
+  );
+}
+
 .passage > h4 {
-  padding-top: 0;
-  margin-bottom: 1rem;
   @media(max-width: $screen-large-max) {
     @include small();
   }
@@ -114,38 +130,5 @@ blockquote {
     &::before {
       content: "\2014"
     }
-  }
-}
-
-.main-header nav a {
-  @include body-1();
-
-  @media(min-width: $screen-large) {
-    @include body-1-large();
-  }
-
-  // Cascade over the previous ruleset's line-height
-  @media(min-width: $screen-small) {
-    line-height: 3rem;
-  }
-}
-
-.image-link span {
-  @include image-link-heading();
-
-  color: $brand-color-4;
-  counter-increment: default-counter;
-
-  @media(max-width: $screen-smaller-max) {
-    margin-top: 0;
-  }
-
-  &::before {
-    content: counter(default-counter)" ";
-    border-bottom: .14rem solid $brand-color-1;
-    text-align: center;
-    width: auto;
-    margin-right: .5rem;
-    padding-bottom: .25rem;
   }
 }

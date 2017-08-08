@@ -11,10 +11,12 @@
   $margin: 0,
   $above: 0,
   $below: 0,
-  $padding-top: ((cap-height($font-size))+($above*$base-line-unit)),
+  $top: ((cap-height($font-size))+($above*$base-line-unit)),
+  $padding-top: $top,
   $padding-bottom: null,
-  $margin-bottom: (($base-line-unit - $padding-top)+($below*$base-line-unit)),
+  $margin-bottom: (($base-line-unit - $top)+($below*$base-line-unit)),
   $margin-top: ($margin * $base-line-unit),
+  $margin-only: false,
   $no-text: false
 ) {
   @if $no-text == false {
@@ -29,6 +31,9 @@
   }
   @if $text-transform != false {
     text-transform: $text-transform;
+  }
+  @if $margin-only != false {
+    $margin-top: $top;
   }
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
@@ -55,7 +60,7 @@
       left: 0;
       right: 0;
       z-index: 2;
-      mix-blend-mode: multiply;  
+      mix-blend-mode: multiply;
       background:
         linear-gradient($grid-color 0, transparent 1px) 0 0 / 100vw 1rem repeat-y,
         linear-gradient(rgba($grid-color, 0.5) 0, transparent 1px) 0 0.5rem / 100vw 0.5rem repeat-y;
