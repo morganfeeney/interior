@@ -8,11 +8,7 @@
 
 main {
   display: grid;
-  grid-gap: $grid-gap-small;
-
-  @media(min-width: $screen-large) {
-    grid-gap: $grid-gap-large;
-  }
+  grid-gap: $grid-gap-large; // Used to align headings between sections.
 }
 
 main > section {
