@@ -65,34 +65,27 @@ p {
 }
 
 .passage > p {
-  display: inline-block;
-
+  padding-top: 0;
+  margin-bottom: 0;
   @media(max-width: $screen-large-max) {
     @include small();
   }
 }
 
 .passage > h2, h3 {
-  @include baseline(
-    $no-text: true,
-    $margin-only: true,
-    $above: -.5,
-    $below: -1,
-    $padding-top: 0
-  );
+  padding-top: 0;
+  //margin-top: -0.34rem;
+  margin-top: 0.05rem;
+  margin-bottom: 1rem;
 }
 
 .passage > h4 {
-  @include small();
-  @include baseline(
-  $font-size: $english,
-  $line-height: 2rem,
-  $above: .45,
-  $below: 0,
-    $margin-only: true,
+  padding-top: 0;
+  margin-bottom: 0;
+}
 
-    $padding-top: 0
-  );
+.passage p + h4 {
+  margin-top: 1rem;
 }
 
 .intro {

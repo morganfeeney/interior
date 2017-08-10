@@ -52,8 +52,7 @@ h1 {
   }
 }
 
-h2, h3,
-h3 + h4 {
+h2, h3 {
   display: block;
   column-span: all;
   //margin-top: -1rem; // Align to the top of the grid cell.
