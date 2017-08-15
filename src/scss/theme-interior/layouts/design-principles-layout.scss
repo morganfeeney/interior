@@ -57,6 +57,10 @@ align-self: flex-end;
     align-self: flex-start;
     margin-top: -1.5rem;
   }
+
+  @media(max-width: $screen-smaller-max) {
+      grid-column: span 2;
+  }
 }
 
 h2, h3 {
@@ -90,16 +94,19 @@ section:nth-child(1) .passage {
 section:nth-of-type(2) .passage {
   grid-row: 1 / span 1;
 
-  @media(max-width: $screen-large-max) {
+  @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
     grid-column: span 1;
     columns: 1
   }
 }
 
 .passage {
-  columns: 2;
-  column-gap: $grid-column-gap;
-  grid-column: span 2;
+    grid-column: span 2;
+
+    @media(min-width: $screen-smaller) {
+      columns: 2;
+      column-gap: $grid-column-gap;
+    }
 
   @media(min-width: $screen-larger) {
     grid-column: span 3;
@@ -107,7 +114,10 @@ section:nth-of-type(2) .passage {
 }
 
 .type-system {
-  grid-column: 2 / span 2;
+    grid-column: span 2;
+    @media(min-width: $screen-smaller) {
+      grid-column: 2 / span 1;
+  }
 
   @media(min-width: $screen-large) {
     grid-column: 3 / span 2;
