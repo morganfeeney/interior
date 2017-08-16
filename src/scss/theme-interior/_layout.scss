@@ -2,7 +2,7 @@ body {
   display: grid;
   width: 100%;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 6rem minmax(100vh, auto) 1fr;
+  grid-template-rows: 8rem minmax(100vh, auto) 1fr;
   grid-row-gap: $grid-row-gap-small;
 }
 
@@ -10,19 +10,26 @@ body {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 
+  @media(min-width: $screen-smallest) {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   @media(min-width: $screen-small) {
     width: $width-small;
-    margin-left: 2.444rem;
   }
+
   @media(min-width: $screen-medium) {
     width: $width-medium;
   }
+
   @media(min-width: $screen-large) {
     width: $width-large;
   }
+
   @media(min-width: $screen-larger) {
     width: $width-larger;
-    margin-left: 3.556rem;
+    margin-left: 3.57143rem;
   }
 }
 
