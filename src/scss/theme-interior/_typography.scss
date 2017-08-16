@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   @include heading-1();
+  
   @media(min-width: $screen-large) {
     @include heading-1-large();
   }
@@ -32,26 +33,6 @@ h4, h5, h6 {
   @include heading-6();
 }
 
-// Used to demonstrate the effects of applying these classes - scale and measure.
-.heading-1 {
-  @include heading-1();
-}
-.heading-2 {
-  @include heading-2();
-}
-.heading-3 {
-  @include heading-3();
-}
-.heading-4 {
-  @include heading-4()
-}
-.heading-5 {
-  @include heading-5();
-}
-.heading-6 {
-  @include heading-6();
-}
-
 p {
   @include body-1();
 
@@ -61,12 +42,13 @@ p {
 }
 
 .passage {
-  orphans: 1; // corrects the imbalance display: inline-grid introduces
+  orphans: 1;
 }
 
 .passage > p {
   padding-top: 0;
   margin-bottom: 0;
+
   @media(max-width: $screen-large-max) {
     @include small();
     padding-top: 0;
@@ -83,7 +65,7 @@ p {
     $below: 0,
     $margin: -1
   );
-  
+
   @media(min-width: $screen-large) {
     margin-bottom: 1rem;
   }
