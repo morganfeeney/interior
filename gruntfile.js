@@ -94,6 +94,7 @@ module.exports = function(grunt) {
          filter: "isFile",
          cwd: "src/html/examples"
        },["*.html","!index.html"]);
+       var screens = grunt.file.readJSON("screens.json");
        var result = {
          iso_date: iso_date,
          nice_date: nice_date,
@@ -102,7 +103,8 @@ module.exports = function(grunt) {
          posts: posts,
          design_system: design_system,
          examples: examples,
-         data: data
+         data: data,
+         screens: screens
        };
        return result;
      },

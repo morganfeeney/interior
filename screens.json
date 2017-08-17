@@ -1,0 +1,10 @@
+{
+    "sizes": {
+        "smallest": "400px",
+        "smaller": "540px",
+        "small": "686px",
+        "medium": "1006px",
+        "large": "1366px",
+        "larger": "1675px"
+    }
+}

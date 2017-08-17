@@ -6,8 +6,8 @@
     {{ super() }}
 
     <picture class="main-image">
-      <source media="(min-width: 1366px)" srcset="/images/page-illustrations_main-image.svg">
-      <source media="(min-width: 1006px)" srcset="/images/page-illustrations_main-image-medium.svg">
+      <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_main-image.svg">
+      <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/page-illustrations_main-image-medium.svg">
       <img src="/images/page-illustrations_main-image-medium.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium.svg">
     </picture>
 
@@ -41,35 +41,35 @@
 
     <figure class="type-system">
       <picture class="main-image">
-        <source media="(min-width: 1006px)" srcset="/images/page-illustrations_units.svg">
+        <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_units.svg">
         <source srcset="/images/page-illustrations_units-small.svg">
         <img src="/images/page-illustrations_units.svg" alt="Computed pixel (px) font sizes, and rem units.">
       </picture>
-      <figcaption>Figure 1 — Computed px size at a scale of 87.5%, which are set in rems, Helvetica Neue.</figcaption>
+      <figcaption>Figure 1 — Computed px size at a scale of 87.5%, set using rem units, Helvetica Neue.</figcaption>
     </figure>
   </section>
 
   <section>
-<div class="passage">
-  <h3>Process</h3>
+    <div class="passage">
+        <h3>Process</h3>
 
-<h4>Plan for the measure</h4>
-<p>Providing an optimal line-length for reading—the measure—is key to typographic layout. Selecting a range of font-sizes which aid legibility when combined with the column widths chosen for the grid; is the goal.</p>
+        <h4>Plan for the measure</h4>
+        <p>Providing an optimal line-length for reading—the measure—is key to typographic layout. Selecting a range of font-sizes which aid legibility when combined with the column widths chosen for the grid; is the goal.</p>
 
-<p>I have intentionally made line-length static, otherwise the measure will be fluid; and constantly change. By introducing layout widths, which restrict the amount of columns, combined with a range of font-sizes used for spanning as many columns as needed, I am able to define a suitable measure of roughly 7-10 words per line.</p>
+        <p>I have intentionally made line-length static, otherwise the measure will be fluid; and constantly change. By introducing layout widths, which restrict the amount of columns, combined with a range of font-sizes used for spanning as many columns as needed, I am able to define a suitable measure of roughly 7-10 words per line.</p>
 
-<h4>Take it to the baseline</h4>
+        <h4>Take it to the baseline</h4>
 
-<p>I highly recommend getting a suitable range of font-sizes set on a baseline grid as quickly as possible (in HTML and CSS) view the typography on mobile device/s and make adjustments until you get what you want.</p>
+        <p>I highly recommend getting a suitable range of font-sizes set on a baseline grid as quickly as possible (in HTML and CSS) view the typography on mobile device/s and make adjustments until you get what you want.</p>
 
-<p>The sizes I’ve used were chosen to work with a variety of line-height applied across a series of layout widths, in other words; that work across a multitude of screen sizes or even device types. As described by Brockman:</p>
+        <p>The sizes I’ve used were chosen to work with a variety of line-height applied across a series of layout widths, in other words; that work across a multitude of screen sizes or even device types.</p>
 
-<p><em>“The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created”.</em></p>
+        <p>As described by Brockman: <em>“The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created”.</em></p>
 
-<h4>Start designing</h4>
+        <h4>Start designing</h4>
 
-<p>Once you have the desired legibility, transfer that scale to something like Illustrator and start designing. You’ll eventually make your way back to the browser. Not only will your designs be more accurate, you’ll have laid a solid foundation which you can return to; safe in the knowledge of it already being tried and tested.</p>
-</div>
+        <p>Once you have the desired legibility, transfer that scale to something like Illustrator and start designing. You’ll eventually make your way back to the browser. Not only will your designs be more accurate, you’ll have laid a solid foundation which you can return to; safe in the knowledge of it already being tried and tested.</p>
+    </div>
 
   </section>
 {% endblock %}
