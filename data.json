@@ -1,39 +1,4 @@
 {
-  "pages" : [{
-    "id" : 1,
-    "title" : "Home page"
-    }],
-  "post_feed" : [{
-    "title": "This title is the first one and it's a fair size",
-    "text": "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you."
-    },
-    {
-    "title": "Uuummmm, this is a tasty burger!",
-    "text": "Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero."
-    },
-    {
-    "title": "Is she dead, yes or no?",
-    "text": "My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there."
-    }],
-    "gallery" : [{
-      "id" : 1
-    },
-    {
-      "id" : 2
-    },
-    {
-      "id" : 3
-    },
-    {
-      "id" : 4
-    },
-    {
-      "id" : 5
-    },
-    {
-      "id" : 6
-    }
-  ],
     "dummy_text" : {
       "title_long" : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
       "paragraph_long" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed leo ligula. Donec placerat imperdiet aliquam. Praesent at massa mi. Etiam porta ex velit, vel scelerisque orci condimentum ac. Vivamus sed dolor in orci ultricies blandit. Vivamus sagittis orci at gravida mattis. Maecenas vulputate placerat diam, iaculis semper elit commodo sed. Duis ornare orci ac lectus porttitor, ac eleifend nisi fermentum. Donec bibendum eu ligula suscipit consequat. Nunc finibus sed leo eget condimentum. Suspendisse fringilla mattis interdum. Proin posuere faucibus sapien tempor accumsan. Suspendisse et nisl pharetra, tincidunt eros et, porttitor velit. Sed dictum nunc sed rhoncus malesuada. Nullam elementum ex massa, eget suscipit mauris viverra eget.",
