@@ -18,7 +18,7 @@ main > section {
   grid-gap: $grid-gap-small;
 
   @media(min-width: $screen-medium) {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media(min-width: $screen-large) {
@@ -45,23 +45,26 @@ h1, h2 {
 }
 
 h1 {
-  align-self: flex-end;
+  align-self: flex-start;
+  grid-column: 1 / span 2;
+
+  @media(min-width: $screen-small) {
+    grid-row: 2;
+    align-self: flex-end;
+    grid-column: span 1;
+  }
 
   @media(min-width: $screen-medium) and (max-width: $screen-large) {
     margin-bottom: -.25rem;
   }
 
-  @media(max-width: $screen-large-max) {
+  @media(min-width: $screen-medium) {
     grid-row: 1 / span 3;
+    grid-column: span 1;
   }
 
-  @media(max-width: $screen-medium-max) {
-    grid-row: 2;
-    align-self: flex-start;
-    //margin-top: -1.5rem;
-  }
-
-  @media(max-width: $screen-smaller-max) {
+  @media(min-width: $screen-large) {
+    grid-row: 1 / span 1;
     grid-column: span 2;
   }
 }
@@ -69,18 +72,28 @@ h1 {
 h2, h3 {
   display: block;
   column-span: all;
-  //margin-top: -1rem; // Align to the top of the grid cell.
 }
 
 .main-image {
   grid-column: 1 / span 2;
-  grid-row: span 1;
-
+  grid-row: 1;
   align-self: flex-start; // Safari misaligns the image without this.
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  @media(min-width: $screen-smallest) {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+  }
+
+  @media(min-width: $screen-smaller) {
+    margin: 0;
+  }
 
   @media(min-width: $screen-medium) {
-    grid-column: span 2;
     grid-row: span 3;
+    grid-column: span 2;
+    margin: 0;
   }
 
   @media(min-width: $screen-large) {
@@ -121,10 +134,10 @@ section:nth-of-type(2) .passage {
 }
 
 .type-system {
-    grid-column: span 2;
+  grid-column: span 2;
 
-    @media(min-width: $screen-smaller) {
-      grid-column: 2 / span 1;
+  @media(min-width: $screen-smaller) {
+    grid-column: 2 / span 1;
   }
 
   @media(min-width: $screen-large) {
