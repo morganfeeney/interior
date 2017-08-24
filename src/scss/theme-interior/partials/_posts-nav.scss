@@ -1,28 +1,27 @@
 @media(min-height: 30rem) {
-  #posts-nav-section {
+  .posts-nav-section {
     position: sticky;
     bottom: 0;
-    background: $brand-color-light;
+    background: $brand-color-2;
+    margin-top: 2rem;
+
   }
 }
 
 .posts-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .next, .prev {
-    display: flex;
-    align-items: center;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $grid-column-gap;
 
   .prev::before,
   .next::after {
     content: "";
     border-top: $posts-nav-border;
     border-left: $posts-nav-border;
-    width: 1rem;
-    height: 1rem;
-    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    grid-row: span 2;
+    align-self: center;
   }
 
   .prev::before {
@@ -34,24 +33,29 @@
   }
 
   a {
-      @include baseline(
-        $font-size: $pica,
-        $line-height: 1.65,
-        $above: .5,
-        $below: 0
-      );
-      flex: 1;
-    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: $grid-column-gap / 2;
     text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
 
-    &.next {
-      justify-content: flex-end;
+    @include baseline(
+      $font-size: $pica,
+      $line-height: 1.5rem,
+      $above: .25,
+      $below: 0.75
+    );
+
+    > span {
+      grid-column: 2;
+
+      &:first-child {
+        font-weight: bold;
+      }
     }
 
-    &.prev {
-      justify-content: flex-start;
-    }
-    
     &:hover::before,
     &:hover::after {
       border-color: inherit;

@@ -7,12 +7,12 @@
       {% set nice_prev = design_system[prev] | capitalize | replace("-", " ") | replace(".html", "") %}
       {% set nice_next = design_system[next] | capitalize | replace("-", " ") | replace(".html", "") %}
       {% if nice_prev %}
-        <a class="prev" href="{{ design_system[prev] }}"><span>prev</span>{{ nice_prev }}</a>
+        <a class="prev" href="{{ design_system[prev] }}"><span>prev</span><span>{{ nice_prev }}</span></a>
       {% else %}
         {# NOWT #}
       {% endif %}
       {% if nice_next %}
-        <a class="next" href="{{ design_system[next] }}"><span>next</span>{{ nice_next }}</a>
+        <a class="next" href="{{ design_system[next] }}"><span>next</span><span>{{ nice_next }}</span></a>
       {% else %}
         {# NOWT #}
       {% endif %}

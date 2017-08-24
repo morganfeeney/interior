@@ -51,6 +51,7 @@ body {
 .main-article {
   grid-area: main;
   min-height: 100%;
+  display: grid;
 
   main {
     min-height: 100%;
