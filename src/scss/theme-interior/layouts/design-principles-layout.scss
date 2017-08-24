@@ -107,7 +107,7 @@ section:nth-child(1) .passage {
   }
 
   @media(min-width: $screen-large) {
-    grid-row: 2 / span 2;
+    grid-row: 2;
   }
 }
 

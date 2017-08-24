@@ -1,41 +1,24 @@
-{# {% extends "layouts/docs-layout.njk" %} #}
+{% extends "layouts/design-principles-layout.njk" %}
 {% set page_description = "Baseline is a tool for aligning copy to the baseline using CSS. Learn about how it works here." %}
 {% set post_page = true %}
 
 {% block content %}
-  <div class="grid">
-    <h2>Usage</h2>
-    <p>The <code class="code-inline language-scss">baseline()</code> mixin is a vertical text-alignment tool. It accepts a variety of arguments, automating baseline alignment with as few restrictions as possible. Use of arguments is necessary with a variety of <code class="code-inline language-scss">font-size</code> and <code class="code-inline language-scss">line-height</code> values.</p>
-    <h5>Arguments</h5>
-    <p>There are <strong>no</strong> required arguments.</p>
+<section>
+  {{ super() }}
+
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_main-image-05.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/page-illustrations_main-image-medium-06.svg">
+    <img src="/images/page-illustrations_main-image-medium.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium.svg">
+  </picture>
+
+  <div class="passage">
+    <h2>Why?</h2>
+
+    <p>The Baseline Grid and Modular Scale go hand-in-hand, for instance; the baseline grid is used to visually align text by indicating the location of the baseline, its proportions are created using the same proportions the text styles are created with. Interior makes full use of the grid by altering it’s proportions using percentages on the HTML element. This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will be relative to the percentage inherited throughout the entire document. It eventually makes life easy.</p>
+
   </div>
-  <div class="grid">
-    <dl class="dl-horizontal">
-      <dt><code class="code-inline language-scss">$font-size</code></dt>
-      <dd>Assigns a value to the font size. I use a range of variables based upon a <a href="typography.html">typographic scale</a>.</dd>
-    </dl>
-    <dl class="dl-horizontal">
-      <dt><code class="code-inline language-scss">$unit</code></dt>
-      <dd>Multiply the scale of line-height x2, x3 etc, x1 is the default.</dd>
-    </dl>
-    <dl class="dl-horizontal">
-      <dt><code class="code-inline language-scss">$line-height</code></dt>
-      <dd>Apply line-height, I've used unitless however should work otherwise.</dd>
-    </dl>
-    <dl class="dl-horizontal">
-      <dt><code class="code-inline language-scss">$margin</code></dt>
-      <dd>Adds a <code class="code-inline language-css">margin-top</code> for additional vertical alignment where needed.</dd>
-    </dl>
-    <dl class="dl-horizontal">
-      <dt><code class="code-inline language-scss">$above</code></dt>
-      <dd>Increases the padding above the text, works in conjunction with <code class="code-inline language-scss">$below</code>.</dd>
-    </dl>
-    <dl class="dl-horizontal">
-      <dt><code class="code-inline language-scss">$below</code></dt>
-      <dd>The amount of <code class="code-inline language-css">margin-bottom</code> to apply.</dd>
-    </dl>
-    {% include "../partials/code-samples/baseline-scss-required.njk" %}
-  </div>
+</section>
 {% endblock %}
 
 {% block aside %}{% endblock %}
