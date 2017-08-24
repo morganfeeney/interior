@@ -4,7 +4,6 @@
     bottom: 0;
     background: $brand-color-2;
     margin-top: 2rem;
-
   }
 }
 
@@ -44,8 +43,8 @@
     @include baseline(
       $font-size: $pica,
       $line-height: 1.5rem,
-      $above: .25,
-      $below: 0.75
+      $above: 1.25,
+      $below: 1.75
     );
 
     > span {
