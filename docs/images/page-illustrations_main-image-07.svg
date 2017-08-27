@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="616px" height="616px" viewBox="0 0 616 616" enable-background="new 0 0 616 616" xml:space="preserve">
+<rect x="0" y="206.4" fill="#F6C992" width="616" height="161.7"/>
+<rect x="0" y="534.1" fill="#F6C992" width="616" height="38.9"/>
+<rect x="0" y="370.2" fill="#C5D8AE" width="616" height="80.8"/>
+<rect x="0" y="452.3" fill="#A3BFE6" width="616" height="79.9"/>
+<g>
+	<line fill="none" stroke="#FF7070" stroke-width="2" stroke-miterlimit="10" x1="310.4" y1="571.1" x2="310.4" y2="535.5"/>
+	<path fill="none" stroke="#FF7070" stroke-width="2" stroke-miterlimit="10" d="M316.3,562.7l-5.9,8.4l-5.9-8.4"/>
+	<path fill="none" stroke="#FF7070" stroke-width="2" stroke-miterlimit="10" d="M304.4,544l5.9-8.4l5.9,8.4"/>
+</g>
+<g>
+	<line fill="none" stroke="#FF7070" stroke-width="2" stroke-miterlimit="10" x1="86.9" y1="448.2" x2="86.9" y2="208.6"/>
+	<path fill="none" stroke="#FF7070" stroke-width="2" stroke-miterlimit="10" d="M74.4,226.5l12.5-17.9l12.5,17.9"/>
+	<path fill="none" stroke="#FF7070" stroke-width="2" stroke-miterlimit="10" d="M99.4,430.3l-12.5,17.9l-12.5-17.9"/>
+</g>
+<g id="Baseline">
+	<g>
+		<rect x="0" y="491.2" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="450.3" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="409.3" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="614" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="573.1" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="532.1" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="368.4" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="327.5" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="286.5" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="245.6" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="204.7" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="163.7" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="122.8" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="81.9" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" y="40.9" fill="#FF7070" width="616" height="2"/>
+	</g>
+	<g>
+		<rect x="0" fill="#FF7070" width="616" height="2"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_15_" y="423.3" width="616" height="132.8"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_15_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<text transform="matrix(1 0 0 1 4.882812e-04 532.123)" fill="#4D6D94" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="bold" font-size="111.8057">Baseline grid</text>
+	</g>
+</g>
+</svg>
