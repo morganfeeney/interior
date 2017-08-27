@@ -29,11 +29,11 @@
 
   .next::after {
     transform: rotate(135deg);
+    justify-self: flex-end;
   }
 
   a {
     display: grid;
-    grid-template-columns: 1rem 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: $grid-column-gap / 2;
     text-decoration: none;
@@ -47,12 +47,29 @@
       $below: 1.75
     );
 
-    > span {
-      grid-column: 2;
+    &.prev {
+      grid-template-columns: 1rem 1fr;
 
-      &:first-child {
-        font-weight: bold;
+      > span {
+        grid-column: 2;
       }
+    }
+
+    &.next {
+      grid-template-columns: 1fr 1rem;
+
+      > span {
+        grid-column: 1;
+        text-align: right;
+      }
+    }
+
+    > span:first-child {
+      font-weight: bold;
+    }
+
+    > span:last-child {
+      grid-row: 2;
     }
 
     &:hover::before,
