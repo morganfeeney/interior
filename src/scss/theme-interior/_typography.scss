@@ -58,10 +58,10 @@ p {
 
 .passage > h2, h3 {
   @include baseline(
-    $font-size: $mittel,
+    $font-size: $augustin,
     $font-weight: bold,
     $line-height: 2rem,
-    $above: .4,
+    $above: .3,
     $below: 0,
     $margin: -1
   );
