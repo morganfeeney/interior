@@ -1,0 +1,85 @@
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "Baseline is a tool for aligning copy to the baseline using CSS. Learn about how it works here." %}
+{% set post_page = true %}
+
+{% block content %}
+<section>
+  {{ super() }}
+
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_main-image-07.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/page-illustrations_main-image-medium-08.svg">
+    <img src="/images/page-illustrations_main-image-medium-08.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium-08.svg">
+  </picture>
+
+  <div class="passage">
+    <h2>Why?</h2>
+
+    <p>The Baseline Grid and Modular Scale go hand-in-hand, for instance; the baseline grid is used to visually align text by indicating the location of the baseline, its proportions are created using the same proportions the text styles are created with.</p>
+
+    <p>Interior makes full use of the grid by altering it’s proportions using percentages on the HTML element. This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will be relative to the percentage inherited throughout the entire document. It eventually makes life easy.</p>
+
+    <p>If you size HTML as follows:</p>
+    <br>
+    <p>75%</p>
+    <p>87.5%</p>
+    <p>112.5%</p>
+
+    <p>…you get the following base font-sizes / line-heights to work with:</p>
+
+    <br>
+    <p>12px</p>
+    <p>14px</p>
+    <p>18px</p>
+
+    <p>…therefore a simple rem becomes incredibly useful.</p>
+
+    <p>It also means that line-height must always be in units based upon the initial value of 1rem (if that’s your baseline), but getting the darn thing to sit on the Baseline Grid is another story.</p>
+
+    <p>I’ll start by saying that it isn't a problem once the calculations have been automated (Sass mixins/functions are very useful here).</p>
+
+    <p>[illustrations needed, show the spooky box etc and how that is what aligns to the baseline].</p>
+
+    <p>I’m not going to detail how the calculations work, or what I’ve done this from a technical point of view (possibly direct folk to a wiki or the source files), as that isn’t the point of this information (that and it would be repetitive due to countless others already doing just that), the point is to demonstrate how it fits into a design system.</p>
+
+  </div>
+</section>
+
+<section>
+  <div class="passage">
+    <h3>Vertical rhythm</h3>
+
+    <p>Everything I’ve learnt recently about typography leads to units of measurement being the fundamental building blocks of order and harmony in design. A Baseline Grid can be used as a visual aid to enable this harmony by highlighting where text can fit into a layout.</p>
+
+    <p>But surely we can already do this with CSS?</p>
+
+    <p>… yes we can, but when we start to piece the various components of a web page together as part of a system, and want to align things vertically (horizontally isn’t a problem), the current spec is flawed[possibly revise wording here]. There are articles which explain the problem in great detail, here’s a good one, it refers to the problem as a “spooky box”: [http://www.studiothick.com/essays/web-typography-is-broken]</p>
+
+    <p>[illustration here of 2 columns of text at different sizes not lining up, show where the spooky box is too]</p>
+
+  </div>
+</section>
+
+<section>
+  <div class="passage">
+    <h3>Process</h3>
+
+    <h4>Pick a font-stack</h4>
+
+    <p>I use Helvetica &amp; system fonts quite a lot so didn't need to make too many adjustments to the default cap-height settings in Interior. If you pick different fonts you’ll need to work out what the cap-height is and apply it. if you plan to use Interior there’s a variable for cap-height and it’s tied into the baseline mixin.</p>
+
+    <h4>Establish a unit for the baseline</h4>
+
+    <p>I use 1rem (see above, link to HTML sizing part), as it works really well for several reasons—even though it has already been prescribed by Sassline (and others), I like to make life difficult for myself and went through the process of completely ignoring it by using unit-less values, in the end the way a browser renders unit-less values over unit values (e.g. rems), resulted in computed sizes that were incorrect [provide example, codepen] there were some severe limitations. Thankfully Sassline was available as a reference.</p>
+
+    <h4>Make adjustments</h4>
+
+    <p>This is the tricky—and possibly most time consuming—part, and what the visual baseline grid is for. To align text to “sit” on the baseline I need to see things in action, so I open up a browser window and view text on a baseline grid, if it doesn’t quite sit right I make adjustments until it does.</p>
+
+    <p>What I found of most use to get this correct was creating sample pages with varying degrees of content, paragraphs, headings, block-quotes, citations, images, figures with captions etc. then adding and removing things-each element impacts the next one down the baseline (unless you use an explicit grid to split up each element).</p>
+
+  </div>
+</section>
+{% endblock %}
+
+{% block aside %}{% endblock %}
