@@ -8,7 +8,7 @@
 
 main {
   display: grid;
-  grid-gap: $grid-gap-large; // Used to align headings between sections.
+  grid-gap: 5rem $grid-column-gap; // Used to align headings between sections.
 }
 
 main > section {
