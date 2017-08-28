@@ -56,19 +56,21 @@ p {
   }
 }
 
-.passage > h2, h3 {
-  @include baseline(
-    $font-size: $augustin,
-    $font-weight: bold,
-    $line-height: 2rem,
-    $above: .3,
-    $below: 0,
-    $margin: -1
-  );
+.passage > {
+  h2, h3 {
+   @include baseline(
+     $font-size: $augustin,
+     $font-weight: bold,
+     $line-height: 2rem,
+     $above: .3,
+     $below: 0,
+     $margin: -1
+   );
 
-  @media(min-width: $screen-large) {
-    margin-bottom: 1rem;
-  }
+   @media(min-width: $screen-large) {
+     margin-bottom: 1rem;
+   }
+ }
 }
 
 .passage > h4 {
@@ -131,6 +133,36 @@ blockquote {
   cite {
     &::before {
       content: "\2014"
+    }
+  }
+}
+
+.unit-conversion {
+  border-collapse: collapse;
+  @include body-1-large();
+
+  @media(min-width: $screen-large) {
+    @include body-1-large();
+  }
+
+  td {
+    @include body-1();
+
+    @media(min-width: $screen-large) {
+      @include body-1-large();
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+
+    padding-top: 0;
+    margin-bottom: 0;
+
+    &:nth-of-type(1) {
+      text-align: right;
+    }
+
+    &:nth-of-type(2) {
+      text-align: left;
     }
   }
 }

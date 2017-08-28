@@ -15,30 +15,44 @@
   <div class="passage">
     <h2>Why?</h2>
 
-    <p>The Baseline Grid and Modular Scale go hand-in-hand, for instance; the baseline grid is used to visually align text by indicating the location of the baseline, its proportions are created using the same proportions the text styles are created with.</p>
+    <p>In order to align multiple text blocks, possibly of varying sizes, along the horizontal axis using CSS, the correct distance to align things by has to be calculated. If not we end up with misalignment, which can be very unpleasant.</p>
 
-    <p>Interior makes full use of the grid by altering it’s proportions using percentages on the HTML element. This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will be relative to the percentage inherited throughout the entire document. It eventually makes life easy.</p>
+    <p>One tool I use to understand this distance is a <em>Baseline Grid</em>, its a visual aid used to understand how to align text.
+      The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked;
+      the latter is used to automate the calculations used to align text blocks on the former.</p>
 
-    <p>If you size HTML as follows:</p>
-    <br>
-    <p>75%</p>
-    <p>87.5%</p>
-    <p>112.5%</p>
+    <p>To squeeze even more use from it we can alter it’s proportions using percentages on the <code class="code-inline">&lt;html&gt;</code> element.
+      This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will be relative to the document.
+      It eventually makes life easy.</p>
 
-    <p>…you get the following base font-sizes / line-heights to work with:</p>
+    <p>If you size <code class="code-inline">&lt;html&gt;</code> as follows:</p>
 
-    <br>
-    <p>12px</p>
-    <p>14px</p>
-    <p>18px</p>
+    <table class="unit-conversion">
+      <tr>
+        <td>75%</td>
+        <td>=</td>
+        <td>12px</td>
+      </tr>
+      <tr>
+        <td>87.5%</td>
+        <td>=</td>
+        <td>14px</td>
+      </tr>
+      <tr>
+        <td>112.5%</td>
+        <td>=</td>
+        <td>18px</td>
+      </tr>
+    </table>
 
-    <p>…therefore a simple rem becomes incredibly useful.</p>
+    <p>…a simple <code class="code-inline">1rem</code> becomes incredibly useful.</p>
 
-    <p>It also means that line-height must always be in units based upon the initial value of 1rem (if that’s your baseline), but getting the darn thing to sit on the Baseline Grid is another story.</p>
+    <p>It also means that line-height must be in multiples of <code class="code-inline">1rem</code> (if that’s your baseline).
+       understanding how all of this works is another story.</p>
 
     <p>I’ll start by saying that it isn't a problem once the calculations have been automated (Sass mixins/functions are very useful here).</p>
 
-    <p>[illustrations needed, show the spooky box etc and how that is what aligns to the baseline].</p>
+{# [illustrations needed, show the spooky box etc and how that is what aligns to the baseline]. #}
 
     <p>I’m not going to detail how the calculations work, or what I’ve done this from a technical point of view (possibly direct folk to a wiki or the source files), as that isn’t the point of this information (that and it would be repetitive due to countless others already doing just that), the point is to demonstrate how it fits into a design system.</p>
 
