@@ -15,17 +15,15 @@
   <div class="passage">
     <h2>Why?</h2>
 
-    <p>In order to align multiple text blocks, possibly of varying sizes, along the horizontal axis using CSS, the correct distance to align things by has to be calculated. If not we end up with misalignment, which can be very unpleasant.</p>
+    <p>In order to align multiple text blocks, possibly of varying sizes, along the horizontal axis using CSS; the correct distance to align things by has to be calculated.
+      If not we end up with misalignment, which can be very unpleasant.</p>
 
-    <p>One tool I use to understand this distance is a <em>Baseline Grid</em>, its a visual aid used to understand how to align text.
+    <p>One tool I use to understand this distance is a <em>Baseline Grid</em>, its a visual aid used to enable text alignment.
       The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked;
-      the latter is used to automate the calculations used to align text blocks on the former.</p>
+      the latter is used to automate calculations which align text blocks on the former.</p>
 
-    <p>To squeeze even more use from it we can alter it’s proportions using percentages on the <code class="code-inline">&lt;html&gt;</code> element.
-      This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will be relative to the document.
-      It eventually makes life easy.</p>
-
-    <p>If you size <code class="code-inline">&lt;html&gt;</code> as follows:</p>
+    <p>To squeeze even more use out of it we can make a single rem equate to any computed value we want by applying percentages to the <code class="code-inline">&lt;html&gt;</code> element.
+      This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will yield a computed pixel <code class="code-inline">font-size</code> that suits.</p>
 
     <table class="unit-conversion">
       <tr>
@@ -45,31 +43,25 @@
       </tr>
     </table>
 
-    <p>…a simple <code class="code-inline">1rem</code> becomes incredibly useful.</p>
-
-    <p>It also means that line-height must be in multiples of <code class="code-inline">1rem</code> (if that’s your baseline).
-       understanding how all of this works is another story.</p>
-
-    <p>I’ll start by saying that it isn't a problem once the calculations have been automated (Sass mixins/functions are very useful here).</p>
-
-{# [illustrations needed, show the spooky box etc and how that is what aligns to the baseline]. #}
-
-    <p>I’m not going to detail how the calculations work, or what I’ve done this from a technical point of view (possibly direct folk to a wiki or the source files), as that isn’t the point of this information (that and it would be repetitive due to countless others already doing just that), the point is to demonstrate how it fits into a design system.</p>
-
+    <p>If your base font-size is 12px, this means 1rem = 12px, this knowledge enables quite a lot of flexibility if you like things to be in multiples of 6.</p>
+    {# [illustrations needed, show the spooky box etc and how that is what aligns to the baseline]. #}
   </div>
 </section>
 
 <section>
   <div class="passage">
-    <h3>Vertical rhythm</h3>
+    <h3>Vertical harmony</h3>
 
-    <p>Everything I’ve learnt recently about typography leads to units of measurement being the fundamental building blocks of order and harmony in design. A Baseline Grid can be used as a visual aid to enable this harmony by highlighting where text can fit into a layout.</p>
+    <p>Everything I’ve learnt recently about typography leads towards units of measurement being the fundamental building blocks of order and harmony in design.
+      A Baseline Grid can be used as a visual aid to enable it by indicating what areas of a layout should accommodate text, and visa-versa; all in multiples of a number such as 6.</p>
 
-    <p>But surely we can already do this with CSS?</p>
+    <p>But surely we can already create this level of precision with CSS?</p>
 
-    <p>… yes we can, but when we start to piece the various components of a web page together as part of a system, and want to align things vertically (horizontally isn’t a problem), the current spec is flawed[possibly revise wording here]. There are articles which explain the problem in great detail, here’s a good one, it refers to the problem as a “spooky box”: [http://www.studiothick.com/essays/web-typography-is-broken]</p>
+    <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together as part of a system, and want to align things vertically, and in a way that allows them to be re-assembled in varying order, so they align in a away that can be controlled (horizontally isn’t a problem),
+      the current spec does not cater toward this mentality.
+      One of the main reasons is there is no concept of a cap-height; there are several articles which explain the problem in great detail, here’s a <a href="http://www.studiothick.com/essays/web-typography-is-broken">good one</a>, it refers to the problem as a “spooky box”.</p>
 
-    <p>[illustration here of 2 columns of text at different sizes not lining up, show where the spooky box is too]</p>
+    {# [illustration here of 2 columns of text at different sizes not lining up, show where the spooky box is too] #}
 
   </div>
 </section>
