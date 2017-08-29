@@ -58,19 +58,13 @@ p {
 
 .passage > {
   h2, h3 {
-   @include baseline(
-     $font-size: $augustin,
-     $font-weight: bold,
-     $line-height: 2rem,
-     $above: .3,
-     $below: 0,
-     $margin: -1
-   );
+  @include heading-3();
+  margin-top: -1.05rem;
 
-   @media(min-width: $screen-large) {
-     margin-bottom: 1rem;
-   }
- }
+    @media(min-width: $screen-large) {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .passage > h4 {

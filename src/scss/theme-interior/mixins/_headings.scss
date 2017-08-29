@@ -32,7 +32,7 @@
 
 @mixin heading-3() {
   @include baseline(
-    $font-size: $mittel,
+    $font-size: $augustin,
     $font-weight: bold,
     $line-height: 2rem,
     $above: .4,
