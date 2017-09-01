@@ -15,14 +15,16 @@
   <div class="passage">
     <h2>Why?</h2>
 
-    <p>In order to align multiple text blocks, possibly of varying sizes, along the horizontal axis using CSS; the correct distance to align things by has to be calculated.
+    <p>In order to align multiple text blocks, possibly of varying font sizes,
+      along the x and y axes using CSS; the distances to align with has to be calculated.
       If not we end up with misalignment, which can be very unpleasant.</p>
 
-    <p>One tool I use to understand this distance is a <em>Baseline Grid</em>, its a visual aid used to enable text alignment.
+    <p>One tool I use to understand this distance is a <em>Baseline Grid</em>,
+      its a visual aid used to enable text alignment.
       The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked;
       the latter is used to automate calculations which align text blocks on the former.</p>
 
-    <p>To squeeze even more use out of it we can make a single rem equate to any computed value we want by applying percentages to the <code class="code-inline">&lt;html&gt;</code> element.
+    <p>I can squeeze even more use out of it by making a single rem equate to any computed value I want by applying percentages to the <code class="code-inline">&lt;html&gt;</code> element.
       This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will yield a computed pixel <code class="code-inline">font-size</code> that suits.</p>
 
     <table class="unit-conversion">
@@ -43,23 +45,27 @@
       </tr>
     </table>
 
-    <p>If your base font-size is 12px, this means 1rem = 12px, this knowledge enables quite a lot of flexibility if you like things to be in multiples of 6.</p>
+    <p>If the base font-size is 12px, this means 1rem = 12px, this allows me to traverse/align to the baseline in multiples of 6.</p>
     {# [illustrations needed, show the spooky box etc and how that is what aligns to the baseline]. #}
   </div>
 </section>
 
 <section>
   <div class="passage">
-    <h3>Vertical harmony</h3>
+    <h3>Vertical rhythm</h3>
 
     <p>Everything I’ve learnt recently about typography leads towards units of measurement being the fundamental building blocks of order and harmony in design.
-      A Baseline Grid can be used as a visual aid to enable it by indicating what areas of a layout should accommodate text, and visa-versa; all in multiples of a number such as 6.</p>
+      A Baseline Grid—in conjunction with a Grid System—can enable order by indicating what areas of a layout should accommodate text,
+      and visa-versa.</p>
 
-    <p>But surely we can already create this level of precision with CSS?</p>
+    <p><em>But can't we already create this level of precision with CSS?</em></p>
 
-    <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together as part of a system, and want to align things vertically, and in a way that allows them to be re-assembled in varying order, so they align in a away that can be controlled (horizontally isn’t a problem),
-      the current spec does not cater toward this mentality.
-      One of the main reasons is there is no concept of a cap-height; there are several articles which explain the problem in great detail, here’s a <a href="http://www.studiothick.com/essays/web-typography-is-broken">good one</a>, it refers to the problem as a “spooky box”.</p>
+    <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together—as part of a system—and
+      align blocks vertically, in a way that allows them to be re-assembled in varying order,
+      so they align in a away that can be controlled,
+      the current spec does not cater toward this way of working—not without working around it.
+      One of the main reasons is there is no concept of a cap-height; there are several articles which explain the problem in great detail,
+      here’s a <a href="http://www.studiothick.com/essays/web-typography-is-broken">good one</a>, it refers to the problem as a “spooky box”.</p>
 
     {# [illustration here of 2 columns of text at different sizes not lining up, show where the spooky box is too] #}
 
@@ -72,17 +78,32 @@
 
     <h4>Pick a font-stack</h4>
 
-    <p>I use Helvetica &amp; system fonts quite a lot so didn't need to make too many adjustments to the default cap-height settings in Interior. If you pick different fonts you’ll need to work out what the cap-height is and apply it. if you plan to use Interior there’s a variable for cap-height and it’s tied into the baseline mixin.</p>
+    <p>I've used Helvetica &amp; system fonts so didn't need to make many adjustments to the default cap-height settings in Interior.
+      If you pick different fonts you’ll need to work out what the cap-height is and apply it.
+      if you plan to use Interior there’s a variable for cap-height—it’s tied into the <code class="code-inline">baseline()</code> mixin.</p>
 
     <h4>Establish a unit for the baseline</h4>
 
-    <p>I use 1rem (see above, link to HTML sizing part), as it works really well for several reasons—even though it has already been prescribed by Sassline (and others), I like to make life difficult for myself and went through the process of completely ignoring it by using unit-less values, in the end the way a browser renders unit-less values over unit values (e.g. rems), resulted in computed sizes that were incorrect [provide example, codepen] there were some severe limitations. Thankfully Sassline was available as a reference.</p>
+    <p>Multiples of <code class="code-inline">.5rem</code> work really well, depending upon the document base font size, for several reasons:</p>
+      <ol>
+        <li>Granularity—the measure is affected by font size and column width which impacts line-height,
+          using <code class="code-inline">.5rem</code> allows more variety of font sizes, without having to keep resizing the entire document using percentages
+          as the columns get wider—which is another way to vary the baseline grid (and line-heght).</li>
+          <li>Unit-less values are incorrectly computed in some cases, which can lead to a lot of head scratching,
+            it almost seems counter-intuitive to go for a static unit of measurement but in this case the solution works.</li>
+          <li>Simplicity—you only need to be concerned with multiples of <code class="code-inline">.5rem</code>, nothing more in terms of line-height.</li>
+      </ol>
 
     <h4>Make adjustments</h4>
 
-    <p>This is the tricky—and possibly most time consuming—part, and what the visual baseline grid is for. To align text to “sit” on the baseline I need to see things in action, so I open up a browser window and view text on a baseline grid, if it doesn’t quite sit right I make adjustments until it does.</p>
+    <p>This is the tricky—possibly most time consuming—part, and what the visual baseline grid is for.
+      To align text to “sit” on the baseline I need to see things in action,
+      so I open up a browser window and view text on a baseline grid,
+      if it doesn’t quite sit right I make adjustments until it does and then track my progress using Git.</p>
 
-    <p>What I found of most use to get this correct was creating sample pages with varying degrees of content, paragraphs, headings, block-quotes, citations, images, figures with captions etc. then adding and removing things-each element impacts the next one down the baseline (unless you use an explicit grid to split up each element).</p>
+    <p>What I found of most use to get this correct was creating sample pages with varying degrees of content,
+      paragraphs, headings, block-quotes, citations, images, figures with captions etc.
+      then adding and removing things—every element has an impact on it's neighbor.</p>
 
   </div>
 </section>
