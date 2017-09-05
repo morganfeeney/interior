@@ -46,11 +46,12 @@ p {
 }
 
 .passage > p {
+  @include small();
   padding-top: 0;
   margin-bottom: 0;
 
-  @media(max-width: $screen-large-max) {
-    @include small();
+  @media(min-width: $screen-large) {
+    @include body-1-large();
     padding-top: 0;
     margin-bottom: 0;
   }
@@ -103,12 +104,6 @@ p {
 }
 
 blockquote {
-  @include baseline(
-    $margin: .5,
-    $above: 1,
-    $below: 1.5
-  );
-
   p, cite {
     @include body-1();
     font-style: oblique;
@@ -131,25 +126,40 @@ blockquote {
   }
 }
 
-.unit-conversion {
-  border-collapse: collapse;
-  @include body-1-large();
+h2 + blockquote {
+  margin-bottom: 2rem;
+}
+
+.passage .unit-conversion {
+  //border-collapse: collapse;
+  //@include small();
+  // padding-top: 0;
+  // margin-bottom: 0;
+
+  @include baseline(
+    $font-size: $english,
+    $line-height: 1.5rem,
+    $above: 0.2,
+    $below: 0
+  );
+
+  padding-top: 0;
+  margin-bottom: 0;
 
   @media(min-width: $screen-large) {
     @include body-1-large();
+    padding-top: 0;
+    margin-bottom: 0;
   }
 
   td {
-    @include body-1();
+    padding-top: 0;
+    margin-bottom: 0;
 
     @media(min-width: $screen-large) {
-      @include body-1-large();
       padding-top: 0;
       margin-bottom: 0;
     }
-
-    padding-top: 0;
-    margin-bottom: 0;
 
     &:nth-of-type(1) {
       text-align: right;
@@ -161,12 +171,18 @@ blockquote {
   }
 }
 
-ol {
-  @include body-1();
+ol, ul {
+  @include small();
+  padding-top: 0;
+  margin-bottom: 0;
 
   @media(min-width: $screen-large) {
     @include body-1-large();
     padding-top: 0;
     margin-top: 1rem;
   }
+}
+
+ul ul {
+  margin-top: 0;
 }
