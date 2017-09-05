@@ -1,0 +1,111 @@
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "Baseline is a tool for aligning copy to the baseline using CSS. Learn about how it works here." %}
+{% set post_page = true %}
+
+{% block content %}
+<section>
+  {{ super() }}
+
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_main-image-05.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/page-illustrations_main-image-medium-06.svg">
+    <img src="/images/page-illustrations_main-image-medium-06.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium-06.svg">
+  </picture>
+
+  <div class="passage">
+    <h2>Why?</h2>
+
+      <blockquote cite="http://">
+        <p>The question of column width is not merely one of design or of format; the question of legibility's of equal importance.</p>
+        <cite>Page 30 of Grid Systems in Graphic Design by Josef Muller Bröckman</cite>
+      </blockquote>
+
+    <p>Use of a visual grid as a design tool is nothing new, however the use of it on the web isn’t commonplace.
+      Sometimes the term “grid system” is confusing as documentation tends to focus on code; not the purpose of a grid as a design aid,
+      or (refer to) the design principles of grid layout as it is known in Graphic Design. The result is an influx of predictable web layouts.</p>
+
+    <p>Interior's Grid System is an interpretation of the methods detailed in the book: Grid Systems in Graphic Design by Josef Muller Bröckman.
+      It has been adapted from print, and is only possible due the new CSS grid spec.
+      Without which, the layout options would be minimal, painfully difficult to create and simply workarounds. </p>
+  </div>
+</section>
+
+<section>
+  <div class="passage">
+    <h3>Things to understand in advance</h3>
+    <ol>
+      <li>How much content my design will consume, what the nature of it is (as this can dictate style), how many images will be used, what size they will be, how much copy will be available, etc.—the layout should be designed around the content.</li>
+      <li>How much variation is required? For example a grid with 3 horizontal cells may not provide enough variation as 4.</li>
+      <li>Layout widths—the cells used are not always fluid therefore I chose a cell width that is divisible within each layout width.</li>
+      <li>The grid used on this website (Interior) works for 4 layout widths and is fluid up until the first layout width is defined (mobile)—layout widths allow us to limit the amount of possibility for content reflow.</li>
+      <li>This grid system is visual, it’s purpose is for visually understanding the available space in layout.</li>
+      <li>The grid layouts have been designed in Illustrator and developed using HTML and CSS. The number of layout widths is useful in reducing the amount of time necessary to change the design to accommodate content reflow. I appreciate Illustrator is not cheap, you could use pen and paper if you want, or both, or Sketch or anything that gets the job done; the underlying principles are relative.</li>
+      <li>The ultimate goal is legibility, therefore I opted for selecting column widths that enable legibility. This section is therefore inextricably linked to all of the others: modular scale, baseline grid and composition. The layout widths chosen should be compatible with a suitable line-length viz the measure—font-size dictates column width, which in-turn will dictate layout width. </li>
+      <li>I selected the 3 most popular screen widths (according to stats counter) had some content ready to go which allowed me to understand the column width based upon the line-length for a variety of font-sizes. I then had to work in the browser as there were some things that I didn’t encounter in Illustrator.</li>
+      <li>It’s an ongoing process and, as tradition would have it, was not expected to be a task that was over and done with without revisiting and adjusting the design to accommodate all of the things which comprise it. For example Bröckman suggests [reference needed] understanding how much content is required in advance, would expect a designer to be able to sketch out in pen or pencil a scaled down version of the intended design/s, etc. So don't expect a quick process as this is not intended to be that way, however once you have your layout; you can use it again.</li>
+      <li>This is a work in progress, so be prepared for (hopefully not many) mistakes and my mind to change about things in approximately 1 year’s time.</li>
+    </ol>
+
+  </div>
+</section>
+
+<section>
+  <div class="passage">
+    <h3>Process</h3>
+
+    <h4>Calculate grid-cell proportions</h4>
+
+    <h5>Width:</h5>
+
+    <p>I established the following:</p>
+
+    <ul>
+      <li>Font sizes
+        <ul>
+          <li>The font sizes should be compatible with the measure</li>
+        </ul>
+      </li>
+
+      <li>Line length (measure)
+        <ul>
+          <li>The measure suggests 7-10 words per line, therefore a single column width should allow the same at the sizes defined by the modular scale, if a larger font is used more columns will be occupied. [image needed]</li>
+        </ul>
+      </li>
+
+      <li>Layout width
+        <ul>
+          <li>I decided up on a series of widths based upon the most popular screen resolutions from the results available on statscounter. Layout widths then dictated how many grid-cells could possibly be used. This fed directly into the decision on a suitable column width.</li>
+        </ul>
+      </li>
+
+      <li>Column width
+        <ul>
+          <li>I analysed how effective the column width would be by meeting the previous criteria and making any necessary adjustments.</li>
+        </ul>
+      </li>
+    </ul>
+
+  <h5>Height:</h5>
+
+<p>Initially I decided upon computed grid-cell dimensions of 296px x 296px, this was adjusted slightly to accommodate the baseline grid (multiples of 1rem), which the cells must align to on the vertical axis.</p>
+
+<p>After this task was complete I could then established a grid to layout the content.</p>
+
+<h4>Create a grid from grid-cells</h4>
+
+<p>Grid creation was loosely based upon what I decided I would need in order to have enough flexibility to be practical yet creative. I took direct influence from Grid Systems in Graphic Design—which I referred to—learning from examples I was able to better understand how important the amount of cells would be as part of the creative process; on both horizontal and vertical axes.</p>
+
+{# [example/s here of a variety of grids with differing amounts of cells] #}
+
+{# [example here of multiple cells with different sized copy] #}
+
+    <h4>Apply to your design</h4>
+
+    <p>As stated on the previous page, if you want to apply an accurate representation of CSS styles to a working design,
+      for the sake of continuity (and sanity) this method will allow it. Enabling you to work back and forth between the browser and a DTP program such as Illustrator.</p>
+
+  </div>
+</section>
+{% endblock %}
+
+{% block aside %}{% endblock %}
