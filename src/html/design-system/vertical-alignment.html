@@ -15,12 +15,11 @@
   <div class="passage">
     <h2>Why?</h2>
 
-    <p>In order to align multiple text blocks, possibly of varying font sizes,
-      along the x and y axes using CSS; the distances to align with has to be calculated.
-      If not we end up with misalignment, which can be very unpleasant.</p>
+    <p>In order to align parallel text blocks of varying sizes on the y axis using CSS;
+      the distances measured to align with can be pre-determined.</p>
 
-    <p>One tool I use to understand this distance is a <em>Baseline Grid</em>,
-      its a visual aid used to enable text alignment.
+    <p>One tool I use to understand the distance is a <em>Baseline Grid</em> [illustration needed],
+      its a visual aid used to enable text alignment—comparable to ruled paper.
       The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked;
       the latter is used to automate calculations which align text blocks on the former.</p>
 
@@ -45,7 +44,7 @@
       </tr>
     </table>
 
-    <p>If the base font-size is 12px, this means 1rem = 12px, this allows me to traverse/align to the baseline in multiples of 6.</p>
+    <p>If the base font-size is 12px, this means 1rem = 12px, this allows me to traverse/align to the baseline in multiples of 6—providing a suitable range of font-sizes and line-heights for layout.</p>
     {# [illustrations needed, show the spooky box etc and how that is what aligns to the baseline]. #}
   </div>
 </section>
@@ -55,16 +54,15 @@
     <h3>Vertical rhythm</h3>
 
     <p>Everything I’ve learnt recently about typography leads towards units of measurement being the fundamental building blocks of order and harmony in design.
-      A Baseline Grid—in conjunction with a Grid System—can enable order by indicating what areas of a layout should accommodate text,
+      A Baseline Grid—in conjunction with a Grid System—can assist order by indicating what areas of a layout should accommodate text,
       and visa-versa.</p>
 
     <p><em>But can't we already create this level of precision with CSS?</em></p>
 
-    <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together—as part of a system—and
-      align blocks vertically, in a way that allows them to be re-assembled in varying order,
-      so they align in a away that can be controlled,
+    <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together as part of a system and
+      align blocks vertically, in a way that allows them to be re-assembled in any order,
       the current spec does not cater toward this way of working—not without working around it.
-      One of the main reasons is there is no concept of a cap-height; there are several articles which explain the problem in great detail,
+      One of the main reasons is there is no concept of cap-height; there are several articles which explain the problem in great detail,
       here’s a <a href="http://www.studiothick.com/essays/web-typography-is-broken">good one</a>, it refers to the problem as a “spooky box”.</p>
 
     {# [illustration here of 2 columns of text at different sizes not lining up, show where the spooky box is too] #}
@@ -78,7 +76,7 @@
 
     <h4>Pick a font-stack</h4>
 
-    <p>I've used Helvetica &amp; system fonts so didn't need to make many adjustments to the default cap-height settings in Interior.
+    <p>I've used Helvetica &amp; system fonts so didn't need to make many adjustments to the default cap-height [illustration needed] settings in Interior.
       If you pick different fonts you’ll need to work out what the cap-height is and apply it.
       if you plan to use Interior there’s a variable for cap-height—it’s tied into the <code class="code-inline">baseline()</code> mixin.</p>
 
@@ -96,7 +94,7 @@
 
     <h4>Make adjustments</h4>
 
-    <p>This is the tricky—possibly most time consuming—part, and what the visual baseline grid is for.
+    <p>Possibly most time consuming—and tricky—part and what the visual baseline grid is for.
       To align text to “sit” on the baseline I need to see things in action,
       so I open up a browser window and view text on a baseline grid,
       if it doesn’t quite sit right I make adjustments until it does and then track my progress using Git.</p>
@@ -104,6 +102,11 @@
     <p>What I found of most use to get this correct was creating sample pages with varying degrees of content,
       paragraphs, headings, block-quotes, citations, images, figures with captions etc.
       then adding and removing things—every element has an impact on it's neighbor.</p>
+
+    <h4>Apply to your design</h4>
+
+    <p>As stated on the previous page, if you want to apply an accurate representation of CSS styles to a working design,
+      for the sake of continuity (and sanity) this method will allow it. Enabling you to work back and forth between the browser and a DTP program such as Illustrator.</p>
 
   </div>
 </section>
