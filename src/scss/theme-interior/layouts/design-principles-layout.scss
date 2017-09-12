@@ -3,7 +3,7 @@
 @import "../../mixins/gridCSS-overlay";
 
 @include gridCSS-overlay(
-  $grid-larger: 21.143rem .5fr .5fr 21.143rem 21.143rem 21.143rem
+  $grid-larger: 24.6667rem .5fr .5fr 24.6667rem 24.6667rem 24.6667rem
 );
 
 main {
@@ -23,7 +23,7 @@ main > section {
 
   @media(min-width: $screen-large) {
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(21rem, auto);
+    grid-auto-rows: minmax($grid-row-large, auto);
     grid-gap: $grid-gap-large;
   }
 

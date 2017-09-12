@@ -14,8 +14,8 @@
   @include baseline(
     $font-size: $two-line-pica,
     $font-weight: bold,
-    $line-height: 4rem,
-    $above: 0.25,
+    $line-height: 4.5rem,
+    $above: 0.75,
     $below: 2
   );
 }

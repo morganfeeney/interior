@@ -52,13 +52,13 @@ $m: $horizontal-space !default;
 $grid-row-gap-small: 1rem;
 $grid-row-gap-large: 2rem;
 
-$grid-column-gap: 1.714288rem;
+$grid-column-gap: 2rem;
 
 $grid-gap-small: $grid-row-gap-small $grid-column-gap;
 $grid-gap-large: $grid-row-gap-large $grid-column-gap;
 
 // Grid rows
-$grid-row-large: 21rem;
+$grid-row-large: 24rem;
 
 // Gutters
 $grid-gutter: $horizontal-space !default;
