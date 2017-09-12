@@ -37,7 +37,7 @@ p {
   @include body-1();
 
   @media(min-width: $screen-large) {
-    @include body-1-large();
+    @include body-2();
   }
 }
 
@@ -46,12 +46,12 @@ p {
 }
 
 .passage > p {
-  @include small();
+  @include small-1();
   padding-top: 0;
   margin-bottom: 0;
 
-  @media(min-width: $screen-large) {
-    @include body-1-large();
+  @media(min-width: $screen-larger) {
+    @include body-2();
     padding-top: 0;
     margin-bottom: 0;
   }
@@ -62,7 +62,7 @@ p {
   @include heading-3();
   margin-top: -1.05rem;
 
-    @media(min-width: $screen-large) {
+    @media(min-width: $screen-larger) {
       margin-bottom: 1rem;
     }
   }
@@ -78,8 +78,9 @@ p {
     $above: 0.3,
     $below: 0
   );
-  @media(min-width: $screen-large) {
-    @include small();
+
+  @media(min-width: $screen-larger) {
+    @include small-1();
   }
 }
 
@@ -92,20 +93,20 @@ p {
 }
 
 .intro {
-  @include intro();
+  @include intro-1();
 
   @media(min-width: $screen-large) {
-    @include intro-large();
+    @include intro-2();
   }
 }
 
 .small {
-  @include small();
+  @include small-1();
 }
 
 blockquote {
   p, cite {
-    @include body-1();
+    @include small-1();
     font-style: oblique;
     display: inline;
   }
@@ -132,7 +133,7 @@ h2 + blockquote {
 
 .passage .unit-conversion {
   //border-collapse: collapse;
-  //@include small();
+  //@include small-1();
   // padding-top: 0;
   // margin-bottom: 0;
 
@@ -147,7 +148,7 @@ h2 + blockquote {
   margin-bottom: 0;
 
   @media(min-width: $screen-large) {
-    @include body-1-large();
+    @include body-2();
     padding-top: 0;
     margin-bottom: 0;
   }
@@ -172,14 +173,30 @@ h2 + blockquote {
 }
 
 ol, ul {
-  @include small();
+  @include small-1();
   padding-top: 0;
   margin-bottom: 0;
 
-  @media(min-width: $screen-large) {
-    @include body-1-large();
+  @media(min-width: $screen-larger) {
+    @include body-2();
     padding-top: 0;
     margin-top: 1rem;
+  }
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  counter-reset: ol;
+
+  li::before {
+    counter-increment: ol;
+    content: counter(ol) ". ";
+    text-align: right;
+    position: absolute;
+    margin-left: -1.914288rem;
+    font-size: 1rem;
+    width: 1.714288rem;
   }
 }
 

@@ -9,7 +9,7 @@
   );
 }
 
-@mixin body-1-large() {
+@mixin body-2() {
   @include baseline(
     $font-size: $mittel,
     $line-height: 2rem,
@@ -18,7 +18,7 @@
   );
 }
 
-@mixin intro() {
+@mixin intro-1() {
   @include baseline(
     $font-size: $mittel,
     $line-height: 2rem,
@@ -27,7 +27,7 @@
   );
 }
 
-@mixin intro-large() {
+@mixin intro-2() {
   @include baseline(
     $font-size: $augustin,
     $line-height: 2rem,
@@ -36,7 +36,7 @@
   );
 }
 
-@mixin small() {
+@mixin small-1() {
   @include baseline(
     $font-size: $english,
     $line-height: 1.5rem,
@@ -45,7 +45,7 @@
   );
 }
 
-@mixin small-large() {
+@mixin small-2() {
   @include baseline(
     $font-size: $pica,
     $line-height: 1rem,

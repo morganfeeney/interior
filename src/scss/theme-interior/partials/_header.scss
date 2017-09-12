@@ -21,7 +21,7 @@
   @include body-1();
 
   @media(min-width: $screen-large) {
-    @include body-1-large();
+    @include body-2();
   }
 
   // Cascade over the previous ruleset's line-height
