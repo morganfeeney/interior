@@ -181,7 +181,7 @@ section {
     object-fit: cover;
     object-position: top left;
     width: 100%;
-    height: 17rem;
+    //height: 17rem;
   }
 
   @media(max-width: $screen-smaller-max) {
@@ -189,7 +189,7 @@ section {
     object-fit: cover;
     object-position: bottom left;
     width: 100%;
-    height: 10rem;
+    //height: 10rem;
   }
 }
 
