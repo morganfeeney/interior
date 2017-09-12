@@ -3,18 +3,11 @@
 // -----------------------------------------------------------------------------
 
 html {
-  font-size: 87.5%; // Set the html font-size to 14px.
-  // @media(min-width: $screen-large) {
-  //  font-size: 112.5%; // Sets html font size to 18px.
-  // }
+  font-size: 75%; // Set the html font-size to 12px.
 }
 
 body {
  font-kerning: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-headings;
 }
 
 h1 {
@@ -45,7 +38,7 @@ p {
   orphans: 1;
 }
 
-.passage > p {
+.passage p {
   @include small-1();
   padding-top: 0;
   margin-bottom: 0;
@@ -60,7 +53,7 @@ p {
 .passage > {
   h2, h3 {
   @include heading-3();
-  margin-top: -1.05rem;
+  //margin-top: -1.05rem;
 
     @media(min-width: $screen-larger) {
       margin-bottom: 1rem;
@@ -106,7 +99,6 @@ p {
 
 blockquote {
   p, cite {
-    @include small-1();
     font-style: oblique;
     display: inline;
   }
@@ -172,34 +164,37 @@ h2 + blockquote {
   }
 }
 
-ol, ul {
-  @include small-1();
-  padding-top: 0;
-  margin-bottom: 0;
-
-  @media(min-width: $screen-larger) {
-    @include body-2();
+.passage {
+  ol, ul {
+    @include small-1();
     padding-top: 0;
-    margin-top: 1rem;
+    margin-bottom: 0;
+
+    @media(min-width: $screen-larger) {
+      @include body-2();
+      padding-top: 0;
+    }
   }
-}
 
-ol {
-  list-style-type: none;
-  padding: 0;
-  counter-reset: ol;
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    counter-reset: ol;
 
-  li::before {
-    counter-increment: ol;
-    content: counter(ol) ". ";
-    text-align: right;
-    position: absolute;
-    margin-left: -1.914288rem;
-    font-size: 1rem;
-    width: 1.714288rem;
+    li::before {
+      counter-increment: ol;
+      content: counters(ol, ".") ". ";
+      text-align: right;
+      position: absolute;
+      margin-left: -1.914288rem;
+      font-size: 1rem;
+      width: 1.714288rem;
+      margin-top: 0.03rem;
+    }
   }
-}
 
-ul ul {
-  margin-top: 0;
+  ol ol {
+    margin-top: 0;
+  }
 }
