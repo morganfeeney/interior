@@ -34,7 +34,7 @@
   .grid-visible .master-grid {
       width: 100%;
       pointer-events: none;
-      grid-template-rows: repeat(30, 10rem);
+      grid-template-rows: repeat(30, $grid-row-small);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
