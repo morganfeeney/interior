@@ -22,7 +22,7 @@
 
 @mixin heading-2() {
   @include baseline(
-    $font-size: $two-line-pica,
+    $font-size: $great-primer,
     $font-weight: bold,
     $line-height: 3rem,
     $above: .33,
@@ -32,11 +32,11 @@
 
 @mixin heading-3() {
   @include baseline(
-    $font-size: $augustin,
+    $font-size: $mittel,
     $font-weight: bold,
     $line-height: 2rem,
     $above: .4,
-    $below: 0,
+    $below: 1,
     $margin: 0
   );
 }

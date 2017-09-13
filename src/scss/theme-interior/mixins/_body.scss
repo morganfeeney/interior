@@ -18,16 +18,7 @@
   );
 }
 
-@mixin intro-1() {
-  @include baseline(
-    $font-size: $mittel,
-    $line-height: 2rem,
-    $above: .45,
-    $below: 0
-  );
-}
-
-@mixin intro-2() {
+@mixin body-3() {
   @include baseline(
     $font-size: $augustin,
     $line-height: 2.5rem,

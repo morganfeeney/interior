@@ -44,7 +44,7 @@ p {
   margin-bottom: 0;
 
   @media(min-width: $screen-larger) {
-    @include body-2();
+    @include body-3();
     padding-top: 0;
     margin-bottom: 0;
   }
@@ -53,10 +53,9 @@ p {
 .passage > {
   h2, h3 {
   @include heading-3();
-  //margin-top: -1.05rem;
 
     @media(min-width: $screen-larger) {
-      margin-bottom: 1rem;
+      @include heading-2();
     }
   }
 }
@@ -73,7 +72,7 @@ p {
   );
 
   @media(min-width: $screen-larger) {
-    @include small-1();
+    @include body-3();
   }
 }
 
@@ -86,10 +85,10 @@ p {
 }
 
 .intro {
-  @include intro-1();
+  @include body-2();
 
   @media(min-width: $screen-large) {
-    @include intro-2();
+    @include body-3();
   }
 }
 
@@ -113,8 +112,11 @@ blockquote {
   }
 
   cite {
+    @media(min-width: $screen-larger) {
+      font-size: $pica;
+    }
     &::before {
-      content: "\2014"
+      content: "\2014  "
     }
   }
 }
@@ -171,7 +173,7 @@ h2 + blockquote {
     margin-bottom: 0;
 
     @media(min-width: $screen-larger) {
-      @include body-2();
+      @include body-3();
       padding-top: 0;
     }
   }
@@ -188,9 +190,13 @@ h2 + blockquote {
       text-align: right;
       position: absolute;
       margin-left: -1.914288rem;
-      font-size: 1rem;
+      font-size: $philosophy;
       width: 1.714288rem;
-      margin-top: 0.03rem;
+      margin-top: 0.15rem;
+
+      @media(min-width: $screen-larger) {
+        font-size: $pica;
+      }
     }
   }
 
