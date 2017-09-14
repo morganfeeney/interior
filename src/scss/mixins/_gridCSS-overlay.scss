@@ -34,15 +34,15 @@
   .grid-visible .master-grid {
       width: 100%;
       pointer-events: none;
-      grid-template-rows: repeat(30, $grid-row-small);
+      grid-template-rows: repeat(30, $grid-row-1);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
 
-      grid-gap: $grid-gap-small;
+      grid-gap: $grid-gap-1;
 
       @media(min-width: $screen-large) {
-        grid-template-rows: repeat(30, $grid-row-large);
-        grid-gap: $grid-gap-large;
+        grid-template-rows: repeat(30, $grid-row-2);
+        grid-gap: $grid-gap-2;
       }
 
       & > div {

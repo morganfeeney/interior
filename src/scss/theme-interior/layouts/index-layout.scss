@@ -33,10 +33,10 @@ h1 {
 main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: $grid-row-gap-small;
+  grid-row-gap: $grid-row-gap-1;
 
   @media(min-width: $screen-large) {
-    grid-row-gap: $grid-row-gap-large;
+    grid-row-gap: $grid-row-gap-2;
   }
 
   @media(min-width: $screen-small) and (max-width: $screen-medium-max) {
@@ -46,12 +46,12 @@ main {
 
 section {
   display: grid;
-  grid-gap: $grid-gap-small;
+  grid-gap: $grid-gap-1;
   grid-auto-rows: minmax(10rem, auto);
 
   @media(min-width: $screen-large) {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: $grid-gap-large;
+    grid-gap: $grid-gap-2;
   }
 
   @media(min-width: $screen-larger) {
@@ -66,7 +66,7 @@ section {
   }
 
   @media(min-width: $screen-large) {
-    grid-template-rows: repeat(2, minmax($grid-row-large, auto));
+    grid-template-rows: repeat(2, minmax($grid-row-2, auto));
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -105,7 +105,7 @@ section {
   }
 
   @media(min-width: $screen-large) {
-    grid-template-rows: repeat(2, minmax($grid-row-large, auto));
+    grid-template-rows: repeat(2, minmax($grid-row-2, auto));
   }
 }
 
@@ -121,7 +121,7 @@ section {
   }
 
   @media(min-width: $screen-large) {
-    grid-template-rows: $grid-row-large;
+    grid-template-rows: $grid-row-2;
   }
 }
 
@@ -150,13 +150,13 @@ section {
   @media(min-width: $screen-large) {
     grid-column: span 4;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: $grid-gap-large;
+    grid-gap: $grid-gap-2;
   }
 
   @media(min-width: $screen-larger) {
     grid-column: span 5;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: $grid-row-large;
+    grid-template-rows: $grid-row-2;
   }
 }
 
@@ -172,7 +172,7 @@ section {
   @media(max-width: $screen-smaller-max) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: span 2;
-    grid-gap: $grid-gap-small;
+    grid-gap: $grid-gap-1;
   }
 }
 
@@ -205,7 +205,7 @@ section {
 
   @media(max-width: $screen-small-max) {
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: $grid-gap-small;
+    grid-gap: $grid-gap-1;
     grid-row: span 2;
     grid-column: span 2;
   }

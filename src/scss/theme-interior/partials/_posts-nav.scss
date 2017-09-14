@@ -10,7 +10,7 @@
 .posts-nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: $grid-column-gap;
+  grid-column-gap: $grid-column-gap-1;
 
   .prev::before,
   .next::after {
@@ -35,7 +35,7 @@
   a {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: $grid-column-gap / 2;
+    grid-column-gap: $grid-column-gap-1 / 2;
     text-decoration: none;
     text-transform: capitalize;
     color: inherit;
