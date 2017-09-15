@@ -36,18 +36,26 @@ p {
 
 .passage {
   orphans: 1;
-  line-height: initial;
+
+    // All margin and padding is removed from passage contents, baseline is
+    // therefore applied to passage for aligment
+    @media(min-width: $screen-larger) {
+        @include baseline(
+            $no-text: true
+        );
+    }
+
 }
 
 .passage p {
   @include small-1();
-  padding-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 
   @media(min-width: $screen-larger) {
     @include body-3();
-    padding-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -100,7 +108,6 @@ p {
 blockquote {
   p, cite {
     font-style: oblique;
-    display: inline;
   }
 
   p {
@@ -120,6 +127,15 @@ blockquote {
       content: "\2014  "
     }
   }
+}
+
+blockquote[cite]::after {
+    content: "\2014  "attr(cite);
+    font-style: oblique;
+    font-size: $pica;
+    margin-top: .5rem;
+    display: block;
+    text-indent: 2rem;
 }
 
 h2 + blockquote {
