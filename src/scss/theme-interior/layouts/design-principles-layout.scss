@@ -87,6 +87,14 @@ h2, h3 {
   }
 
   @media(min-width: $screen-smaller) {
+      // TEMPFIX
+      > img {
+          height: $main-image-height-1;
+          object-fit: cover;
+          object-position: left top;
+          width: 100%;
+      }
+
     margin: 0;
   }
 
@@ -97,6 +105,13 @@ h2, h3 {
   }
 
   @media(min-width: $screen-large) {
+      // TEMPFIX
+      > img {
+          height: $main-image-height-2;
+          object-fit: cover;
+          object-position: left top;
+          width: 100%;
+      }
     grid-row: span 2;
   }
 }
