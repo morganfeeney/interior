@@ -1,5 +1,6 @@
 {% extends "layouts/design-principles-layout.njk" %}
 {% set page_description = "Read this now" %}
+{% set page_title = "Typographic <br>measuring system" | safe %}
 {% set post_page = true %}
 
 {% block content %}
@@ -15,15 +16,21 @@
     <div class="passage">
       <h2>Why?</h2>
 
-      <p>Much has been written about the benefits of using a Typographic Measuring System (e.g. Modular Scale). What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
+      <p>Much has been written about the benefits of using a Typographic Measuring System, e.g. <em>Modular Scale</em>.
+          What is described here demonstrates how some of that knowledge can be adapted for web use.</p>
 
-      <p>A printed page is finite and does not change, with this in mind a designer may take the measurements and understand—from the dimensions and content—how a layout should be constructed. In this context a page is the starting point for calculating font size, grid system; and ultimately the layout.</p>
+      <p>A printed page is finite and does not change, with this in mind a designer may take the measurements and understand, from the dimensions and content, how a layout should be constructed.
+          In this context a page is the starting point for calculating font size, grid system; and ultimately the layout.</p>
 
-      <p>In the web browser some of these principles still apply—yet differently. For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices. Another major difference is that the nature of a web page is by default more like a scroll.</p>
+      <p>In the web browser some of these principles still apply—yet differently.
+          For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices.
+          Another major difference is that the nature of a web page is by default more like a scroll.</p>
 
-      <p>How do we begin to calculate the proportions of a layout? The vertical axis can’t logically be the starting point, as content could update regularly or—worse still—be of an unknown quantity; anyone can be a publisher.</p>
+      <p>How do we begin to calculate the proportions of a layout? The vertical axis can’t logically be the starting point,
+          as content could update regularly or—worse still—be of an unknown quantity; anyone can be a publisher.</p>
 
-      <p>Without a font-size line-length can’t be established, without line-length column-width can’t be determined, unless the column-widths are understood the overall layout width is an unknown quantity—hence why this is the first step.</p>
+      <p>Without a font-size line-length can’t be established, without line-length column-width can’t be determined,
+          unless the column-widths are understood the overall layout width is an unknown quantity—hence why this is the first step.</p>
     </div>
   </section>
 
@@ -35,7 +42,7 @@
 
       <p>To make the most use of a Typographic Measuring System; the HTML element can be scaled using percentages. This provides a level of granularity enabling fonts to be scaled proportionately whilst aligning to a range of vertical grids.</p>
 
-      <p>The percentage used on the HTML element alters line-height—which depending upon the size of the font will have an effect upon legibility—more on this coming up on the next page.</p>
+      <p>The percentage used on the HTML element alters line-height—which depending upon the size of the font will have an effect upon legibility.</p>
 
       <p>All font sizes chosen for Interior were chosen to work with the column widths in the <a href="#">grid system</a>.</p>
     </div>
@@ -65,7 +72,8 @@
 
         <p>The sizes I’ve used were chosen to work with a variety of line-height applied across a series of layout widths, in other words; that work across a multitude of screen sizes or even device types.</p>
 
-        <p>As described by Brockman: <em>“The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created”.</em></p>
+        <p>As described by Brockman:</p>
+        <blockquote><p>The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created</p>.</blockquote>
 
         <h4>Start designing</h4>
 
