@@ -76,12 +76,12 @@ p {
   @include baseline(
     $font-size: $english,
     $line-height: 1.5rem,
-    $above: 0.3,
+    $above: 0.5,
     $below: 0
   );
 
   @media(min-width: $screen-larger) {
-    @include body-3();
+    @include heading-4();
   }
 }
 
@@ -135,7 +135,7 @@ blockquote[cite]::after {
     font-size: $pica;
     margin-top: .5rem;
     display: block;
-    text-indent: 2rem;
+    text-indent: $grid-column-gap-2;
 }
 
 h2 + blockquote {
@@ -206,7 +206,7 @@ h2 + blockquote {
       content: counters(ol, ".") ". ";
       text-align: right;
       position: absolute;
-      margin-left: -1.914288rem;
+      margin-left: -2.25rem;
       font-size: $philosophy;
       width: 1.714288rem;
       margin-top: 0.15rem;

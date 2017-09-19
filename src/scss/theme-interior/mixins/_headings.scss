@@ -5,7 +5,7 @@
     $font-size: $paragon,
     $font-weight: bold,
     $line-height: 3rem,
-    $above: 0.4,
+    $above: 0.25,
     $below: 2
   );
 }
@@ -26,7 +26,8 @@
     $font-weight: bold,
     $line-height: 3rem,
     $above: .33,
-    $below: 1
+    $below: 1,
+    $margin: -1
   );
 }
 
@@ -35,18 +36,18 @@
     $font-size: $mittel,
     $font-weight: bold,
     $line-height: 2rem,
-    $above: .4,
+    $above: .25,
     $below: 1,
-    $margin: 0
+    $margin: -.5
   );
 }
 
 @mixin heading-4() {
   @include baseline(
-    $font-weight: bold,
-    $font-size: $paragon,
-    $line-height: .96,
-    $below: 0
+      $font-size: $augustin,
+      $line-height: 2.5rem,
+      $above: .65,
+      $below: 0
   );
 }
 
