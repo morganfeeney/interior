@@ -34,7 +34,7 @@
 
   a {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-column-gap: $grid-column-gap-1 / 2;
     text-decoration: none;
     text-transform: capitalize;
