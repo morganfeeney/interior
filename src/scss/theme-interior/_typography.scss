@@ -81,10 +81,8 @@ p {
 }
 
 .passage p + h4,
-.passage ol + h4 {
-  margin-top: 1rem;
-
-  @media(min-width: $screen-larger) {
+.passage ul + h4 {
+  @media(min-width: $screen-large) {
     margin-top: 1.5rem;
   }
 }
@@ -123,6 +121,7 @@ blockquote {
     @media(min-width: $screen-larger) {
       font-size: $pica;
     }
+
     &::before {
       content: "\2014  "
     }
@@ -130,12 +129,12 @@ blockquote {
 }
 
 blockquote[cite]::after {
-    content: "\2014  "attr(cite);
-    font-style: oblique;
-    font-size: $pica;
-    margin-top: .5rem;
-    display: block;
-    text-indent: $grid-column-gap-2;
+  content: "\2014  "attr(cite);
+  font-style: oblique;
+  font-size: $pica;
+  margin-top: .5rem;
+  display: block;
+  text-indent: $grid-column-gap-2;
 }
 
 h2 + blockquote {
@@ -202,35 +201,13 @@ h2 + blockquote {
 
   ul {
       @media(min-width: $screen-larger) {
-        font-size: $english;
+        font-size: $mittel;
+        line-height: $mittel;
       }
   }
 
   ul ul {
+    // Indent the second level of each <ul>
     padding-left: $augustin;
-  }
-
-  ol {
-    //list-style-type: none;
-    //counter-reset: ol;
-    //
-    // li {
-    //   position: relative;
-    // }
-
-    // li::before {
-    //   counter-increment: ol;
-    //   content: counters(ol, ".") ". ";
-    //   text-align: right;
-    //   position: absolute;
-    //   left: -2.25rem;
-    //   font-size: $philosophy;
-    //   width: 1.714288rem;
-    //   margin-top: 0.15rem;
-    //
-    //   @media(min-width: $screen-larger) {
-    //     font-size: $pica;
-    //   }
-    // }
   }
 }
