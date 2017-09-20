@@ -140,6 +140,7 @@ section:nth-of-type(2) .passage {
 
   @media(min-width: $screen-smaller) {
     columns: 2;
+    -webkit-perspective: 1;
     column-gap: $grid-column-gap-2;
   }
 

@@ -73,20 +73,20 @@ p {
   padding-top: 0;
   margin-bottom: 0;
 
-  @include baseline(
-    $font-size: $english,
-    $line-height: 1.5rem,
-    $above: 0.5,
-    $below: 0
-  );
+  @include heading-6();
 
   @media(min-width: $screen-larger) {
     @include heading-4();
   }
 }
 
-.passage p + h4 {
+.passage p + h4,
+.passage ol + h4 {
   margin-top: 1rem;
+
+  @media(min-width: $screen-larger) {
+    margin-top: 1.5rem;
+  }
 }
 
 .passage h3 + h4 {
@@ -184,7 +184,7 @@ h2 + blockquote {
 }
 
 .passage {
-  ol, ul {
+  li > span {
     @include small-1();
     padding-top: 0;
     margin-bottom: 0;
@@ -195,29 +195,42 @@ h2 + blockquote {
     }
   }
 
-  ol {
+  ol, ul {
     padding: 0;
     margin: 0;
-    list-style-type: none;
-    counter-reset: ol;
-
-    li::before {
-      counter-increment: ol;
-      content: counters(ol, ".") ". ";
-      text-align: right;
-      position: absolute;
-      margin-left: -2.25rem;
-      font-size: $philosophy;
-      width: 1.714288rem;
-      margin-top: 0.15rem;
-
-      @media(min-width: $screen-larger) {
-        font-size: $pica;
-      }
-    }
   }
 
-  ol ol {
-    margin-top: 0;
+  ul {
+      @media(min-width: $screen-larger) {
+        font-size: $english;
+      }
+  }
+
+  ul ul {
+    padding-left: $augustin;
+  }
+
+  ol {
+    //list-style-type: none;
+    //counter-reset: ol;
+    //
+    // li {
+    //   position: relative;
+    // }
+
+    // li::before {
+    //   counter-increment: ol;
+    //   content: counters(ol, ".") ". ";
+    //   text-align: right;
+    //   position: absolute;
+    //   left: -2.25rem;
+    //   font-size: $philosophy;
+    //   width: 1.714288rem;
+    //   margin-top: 0.15rem;
+    //
+    //   @media(min-width: $screen-larger) {
+    //     font-size: $pica;
+    //   }
+    // }
   }
 }

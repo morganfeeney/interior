@@ -2,7 +2,7 @@
 
 @mixin heading-1() {
   @include baseline(
-    $font-size: $paragon,
+    $font-size: $paragon, //30px
     $font-weight: bold,
     $line-height: 3rem,
     $above: 0.25,
@@ -12,7 +12,7 @@
 
 @mixin heading-1-large() {
   @include baseline(
-    $font-size: $two-line-pica,
+    $font-size: $two-line-pica, // 46px
     $font-weight: bold,
     $line-height: 4.5rem,
     $above: 0.75,
@@ -22,7 +22,7 @@
 
 @mixin heading-2() {
   @include baseline(
-    $font-size: $great-primer,
+    $font-size: $great-primer, //24px
     $font-weight: bold,
     $line-height: 3rem,
     $above: .33,
@@ -33,7 +33,7 @@
 
 @mixin heading-3() {
   @include baseline(
-    $font-size: $mittel,
+    $font-size: $mittel, //18px
     $font-weight: bold,
     $line-height: 2rem,
     $above: .25,
@@ -44,7 +44,7 @@
 
 @mixin heading-4() {
   @include baseline(
-      $font-size: $augustin,
+      $font-size: $augustin, // 20px
       $line-height: 2.5rem,
       $above: .65,
       $below: 0
@@ -53,7 +53,7 @@
 
 @mixin heading-5() {
   @include baseline(
-    $font-size: $great-primer,
+    $font-size: $great-primer, //24px
     $font-weight: bold,
     $line-height: 1.25,
     $above: .2,
@@ -64,10 +64,10 @@
 
 @mixin heading-6() {
   @include baseline(
-    $font-size: $english,
+    $font-size: $english, //16px
     $font-weight: bold,
     $line-height: 2rem,
-    $above: .4,
+    $above: .9,
     $below: 0,
     $margin: 0
   );
