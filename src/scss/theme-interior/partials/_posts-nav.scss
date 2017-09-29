@@ -57,6 +57,7 @@
 
     &.next {
       grid-template-columns: 1fr 1rem;
+      grid-column: 2;
 
       > span {
         grid-column: 1;
