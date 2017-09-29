@@ -1,30 +1,60 @@
-{# {% extends "layouts/docs-layout.njk" %} #}
-{% set page_description = "The method behind Interior has completely changed, the focus is on using mixins to create columns & gutters, Flexbox does the layout." %}
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "Baseline is a toul for aligning copy to the baseline using CSS. Learn about how it works here." %}
 {% set post_page = true %}
 
 {% block content %}
-  <div class="grid">
-    <p class="intro">I wrote <a href="http://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">this article</a>
-     to document and explain what I learnt during previous iterations of Interior. The main lesson was to question <em>everything</em>.</p>
-      <h5>Possibilities</h5>
-    <p>There's point in the article where I state that I will be documenting standards, the idea there was not to get too bogged down with specifics <em>such as naming conventions</em>,
-      but more along the lines of suggesting possibilities, not prescribing specific layouts—a demonstration of something different.</p>
-  </div>
-{% endblock %}
-{% block bigmofo %}
-<figure class="bigmofo">
-  <p class="small">This is a bit of information about the image</p>
-  <img class="example-1" src="/images/grid-system_grid-1.svg" alt="">
-</figure>
-<figure class="bigmofo">
-  <p class="small">This is a bit of information about the image</p>
-  <img class="example-2" src="/images/grid-system_grid-1.svg" alt="">
-  <p class="small">This is a bit of information about the image</p>
-  <img class="example-3" src="/images/grid-system_grid-1.svg" alt="">
-</figure>
-{% endblock %}
-{% block closing_content %}
+<section>
+  {{ super() }}
 
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_main-image-05.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/page-illustrations_main-image-medium-06.svg">
+    <img src="/images/page-illustrations_main-image-medium-06.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium-06.svg">
+  </picture>
+
+  <div class="passage">
+    <h2>How?</h2>
+
+    <p>After experiencing the pain of the previous steps comes the “fun” part, composition. This is where all the hard work pays off.</p>
+
+    <h4>Armed with the following</h4>
+
+    <ul>
+      <li><span>Typographic measuring system</li></span>
+      <li><span>Vertical alignment</li></span>
+      <li><span>Grid system</li></span>
+    </ul>
+
+    <p>…the fun can begin!</p>
+
+    <p>The compositions for each of Interior’s pages (including this one) started in Illustrator. Due to nothing being arbitrary—thanks to each previous section—and therefore (browser quirks aside, oh the woes of CSS columns) can be predicted from one format to another, filling in the gaps by designing anything missed right in the browser using Interior’s automation and visual (master) grid.</p>
+
+    <p>As you read on you may realise that the order of things is not set in stone, I found it impractical to do so—this is one of those things that may change later. However they have to be categorised as opposed to being in a single post as each informs the other and they can be considered separately.</p>
+
+    <p>I’ll detail the process I followed using Interior as an example below:</p>
+  </div>
+</section>
+
+<section>
+  <div class="passage">
+
+    <h3>Master grid</h3>
+
+    <p>I designed the master grid in Illustrator, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid. This allowed me to work consistently on each layout.</p>
+
+    <p>figure 1. [image needed]</p>
+
+  </div>
+</section>
+<section>
+  <div class="passage">
+    <h3>Layout</h3>
+<p>I already had an idea in mind of the range of font sizes I could get started with, I applied them to the headers and body copy, then used the master grid as a reference so that I could get creative  within the grid’s constraints. </p>
+<p>I used image placeholders (grey boxes) during the initial wireframe creation—as I knew there would be a need for some fairly interesting imagery to contrast against the black columns of Helvetica; and needed to see the layout take shape. I kind of broke a rule here (design to suit the content) as my content in this case was being created in parallel with the documentation; however with me being the designer there was no issue as it can all be changed to suit.</p>
+
+<p>There is a hierarchy in everything from the typography to the imagery.</p>
+  </div>
+</section>
 {% endblock %}
 
 {% block aside %}{% endblock %}
