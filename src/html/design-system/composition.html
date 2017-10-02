@@ -14,45 +14,84 @@
 
   <div class="passage">
     <h2>How?</h2>
-
-    <p>After experiencing the pain of the previous steps comes the “fun” part, composition. This is where all the hard work pays off.</p>
-
+    <p>After experiencing the pain of the previous steps comes the “fun” part, composition.
+      This is where all the hard work pays off.</p>
     <h4>Armed with the following</h4>
-
     <ul>
       <li><span>Typographic measuring system</li></span>
       <li><span>Vertical alignment</li></span>
       <li><span>Grid system</li></span>
     </ul>
-
     <p>…the fun can begin!</p>
-
-    <p>The compositions for each of Interior’s pages (including this one) started in Illustrator. Due to nothing being arbitrary—thanks to each previous section—and therefore (browser quirks aside, oh the woes of CSS columns) can be predicted from one format to another, filling in the gaps by designing anything missed right in the browser using Interior’s automation and visual (master) grid.</p>
-
-    <p>As you read on you may realise that the order of things is not set in stone, I found it impractical to do so—this is one of those things that may change later. However they have to be categorised as opposed to being in a single post as each informs the other and they can be considered separately.</p>
-
+    <p>The compositions for each of Interior’s pages (including this one) started in Illustrator.
+      Due to nothing being arbitrary—thanks to each previous section—and therefore (browser quirks aside, oh the woes of CSS columns) can be predicted from one format to another,
+      filling in the gaps by designing anything missed right in the browser using Interior’s automation and visual (master) grid.</p>
+    <p>As you read on you may realise that the order of things is not set in stone,
+      I found it impractical to do so—this is one of those things that may change later.
+      However they have to be categorised as opposed to being in a single post as each informs the other and they can be considered separately.</p>
     <p>I’ll detail the process I followed using Interior as an example below:</p>
   </div>
 </section>
 
-<section>
+<section id="Master-grid">
   <div class="passage">
-
     <h3>Master grid</h3>
-
-    <p>I designed the master grid in Illustrator, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid. This allowed me to work consistently on each layout.</p>
-
+    <p>I designed the master grid in Illustrator, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid.
+      This allowed me to work consistently on each layout.</p>
     <p>figure 1. [image needed]</p>
-
   </div>
 </section>
-<section>
+
+<section id="layout">
   <div class="passage">
     <h3>Layout</h3>
-<p>I already had an idea in mind of the range of font sizes I could get started with, I applied them to the headers and body copy, then used the master grid as a reference so that I could get creative  within the grid’s constraints. </p>
-<p>I used image placeholders (grey boxes) during the initial wireframe creation—as I knew there would be a need for some fairly interesting imagery to contrast against the black columns of Helvetica; and needed to see the layout take shape. I kind of broke a rule here (design to suit the content) as my content in this case was being created in parallel with the documentation; however with me being the designer there was no issue as it can all be changed to suit.</p>
+    <p>I already had an idea in mind of the range of font sizes I could get started with, I applied them to the headers and body copy,
+      then used the master grid as a reference so that I could get creative  within the grid’s constraints. </p>
+    <p>I used image placeholders (grey boxes) during the initial wireframe creation—as I knew there would be a need for some fairly interesting imagery to contrast against the black columns of Helvetica;
+      and needed to see the layout take shape. I kind of broke a rule here (design to suit the content) as my content in this case was being created in parallel with the documentation;
+      however with me being the designer there was no issue as it can all be changed to suit.</p>
+    <p>There is a hierarchy in everything from the typography to the imagery.</p>
+  </div>
+</section>
 
-<p>There is a hierarchy in everything from the typography to the imagery.</p>
+<section id="Typographic-Measuring-System">
+  <div class="passage">
+    <h3>Typographic Measuring System</h3>
+    <p>The layouts I created informed the Typographic Measuring System.
+      Once I had decided that the sizes were practical enough for web use I gathered and curated them into a formatted list.
+      This formed the system used, each size was assigned a unique variable name.</p>
+    <p>figure 2. [image needed]</p>
+  </div>
+</section>
+
+<section id="layout">
+  <div class="passage">
+    <h3>Vertical Alignment</h3>
+    <p>I had to work out a way to get the master grid into the browser so I could layout accurately.
+      It’s fairly crude but does the job, so in conjunction with the baseline grid I applied the grids I designed in Illustrator piece by piece.</p>
+  </div>
+</section>
+
+<section id="layout">
+  <div class="passage">
+    <h3>Grid System</h3>
+    <p>The grid system I used was created in Illustrator—and used as a design tool in Illustrator,
+      that design was painstakingly chosen so that it would work for web pages—it was the crux of the entire exercise.
+      Understanding what a Grid System is came from reading Grid Systems in Graphic Design.
+      It did not come from looking at what other web folk had created before, for the sake of progress it couldn’t.</p>
+  </div>
+</section>
+
+<section id="layout">
+  <div class="passage">
+    <h3>Firefox grid inspector</h3>
+    <p>Not long after I got something together Firefox released their awesome grid inspector.
+      I use Safari to browse on my mobile device, and the bulk of dev was done using Chrome so I couldn't rely solely on Firefox—it sets a very high standard.
+      This tool is invaluable and I had to use it in conjunction with the master grid I created.
+      The difference between the master grid and the grid of what you inspect is huge.
+      One is design a reference and should remain constant throughout the entire process of creating a layout,
+      whereas the grids inspected in various elements sitting on the master grid could be constantly evolving, yet should align to the master.
+      The tool enables the level of fine tuning necessary for creating with precision.</p>
   </div>
 </section>
 {% endblock %}

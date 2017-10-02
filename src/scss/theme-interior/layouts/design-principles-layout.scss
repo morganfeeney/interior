@@ -139,7 +139,7 @@ section:nth-child(1) .passage {
   }
 }
 
-section:nth-of-type(2) .passage {
+.passage.passage-with-figure {
   grid-row: 1 / span 1;
 
   @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
@@ -154,6 +154,10 @@ section:nth-of-type(2) .passage {
   @media(min-width: $screen-smaller) {
     columns: 2;
     -webkit-perspective: 1;
+    column-gap: $grid-column-gap-1;
+  }
+
+  @media(min-width: $screen-large) {
     column-gap: $grid-column-gap-2;
   }
 

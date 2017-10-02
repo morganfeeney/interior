@@ -1,0 +1,51 @@
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "Baseline is a toul for aligning copy to the baseline using CSS. Learn about how it works here." %}
+{% set post_page = true %}
+
+{% block content %}
+<section>
+  {{ super() }}
+
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/page-illustrations_main-image-05.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/page-illustrations_main-image-medium-06.svg">
+    <img src="/images/page-illustrations_main-image-medium-06.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/page-illustrations_main-image-medium-06.svg">
+  </picture>
+
+  <div class="passage">
+    <h2>What?</h2>
+    <p>All too often websites focus on how code can be written, take for example the following well-known methodologies:</p>
+    <ul>
+      <li><span>BEM</span></li>
+      <li><span>OOCSS</span></li>
+      <li><span>SMACSS</span></li>
+      <li><span>ITCSS</span></li>
+      <li><span>Atomic CSS</span></li>
+      <li><span>Functional CSS</span></li>
+      <li><span>SOC</span></li>
+    </ul>
+    <p>Now obviously it would be a bit daft if those websites didn't focus on their own methodologies.
+      However when it comes to producing your own code maybe you've though about implementing one, or creating your own.
+      I have and have to stop myself from over organising things and get on with the task at hand most of the time.</p>
+      <p>Based on recent experience of new CSS specs, introducing features that impact the way Interior works,
+        for the latest incarnation I decided not to follow a methodology; the reasons are:</p>
+  </div>
+</section>
+
+<section id="constraints">
+  <div class="passage">
+    <h3>Constraints</h3>
+    <p>What I found most constraining is tying things together using automation,
+      i.e. mixins that do too much which are a nightmare to alter further down the line.
+      They become fragile and difficult to maintain, which seems like the complete opposite of what they would be used for.
+      You’d have to apply the principles from a methodology to the mixin code too which is explained next.</p>
+    <h4>Time</h4>
+    <p>Changing my mind, halfway through an iteration, that the methodology is a bad fit and then implementing either a new methodology, or removing it, is more of a focus on tooling than anything else.</p>
+    <p>Therefore the main focus has not been on the code, at-least not in the sense of it being tied into a particular methodology.</p>
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block aside %}{% endblock %}
