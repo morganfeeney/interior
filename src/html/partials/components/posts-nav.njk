@@ -1,4 +1,14 @@
-{# Needs making into a macro #}
+{# Create an order I am happy with, otherwise it's alphabetical #}
+{% set design_system = [
+  "typographic-measuring-system.html",
+  "vertical-alignment.html",
+  "grid-system.html",
+  "composition.html",
+  "methodologies.html",
+  "specifications.html"
+  ] %}
+
+{# Could be made into a macro #}
 {% for item in design_system %}
   {% if file == item %}
     <nav class="posts-nav" role="navigation">
