@@ -14,7 +14,8 @@
 
   <div class="passage">
     <h2>What?</h2>
-    <p>All too often websites focus on how code can be written, take for example the following well-known methodologies:</p>
+    <p>Frequently website authors focus on how code should be written, take for example the following well-known methodologies:</p>
+    <br>
     <ul>
       <li><span>BEM</span></li>
       <li><span>OOCSS</span></li>
@@ -22,13 +23,12 @@
       <li><span>ITCSS</span></li>
       <li><span>Atomic CSS</span></li>
       <li><span>Functional CSS</span></li>
-      <li><span>SOC</span></li>
     </ul>
-    <p>Now obviously it would be a bit daft if those websites didn't focus on their own methodologies.
-      However when it comes to producing your own code maybe you've though about implementing one, or creating your own.
-      I have and have to stop myself from over organising things and get on with the task at hand most of the time.</p>
-      <p>Based on recent experience of new CSS specs, introducing features that impact the way Interior works,
-        for the latest incarnation I decided not to follow a methodology; the reasons are:</p>
+    <br>
+    <p>Now, it would be a bit daft if the promoters of said methodologies <em>didn't</em> focus on how code is written.
+      However when it comes to producing my own code I have to stop myself from over organising things and get on with the task at hand most of the time.</p>
+      <p>Based upon my recent experiences of new CSS specs introducing features that impact the way Interior works,
+        for the latest incarnation I decided not to follow a methodology. In a nutshell here's why:</p>
   </div>
 </section>
 
@@ -39,12 +39,34 @@
       i.e. mixins that do too much which are a nightmare to alter further down the line.
       They become fragile and difficult to maintain, which seems like the complete opposite of what they would be used for.
       You’d have to apply the principles from a methodology to the mixin code too which is explained next.</p>
-    <h4>Time</h4>
-    <p>Changing my mind, halfway through an iteration, that the methodology is a bad fit and then implementing either a new methodology, or removing it, is more of a focus on tooling than anything else.</p>
+  </div>
+</section>
+
+<section id="time">
+  <div class="passage">
+    <h3>Time</h3>
+    <p>Changing my mind, halfway through an iteration, that the methodology is a bad fit and then implementing either a new methodology,
+      or removing it, is more of a focus on tooling than anything else.</p>
     <p>Therefore the main focus has not been on the code, at-least not in the sense of it being tied into a particular methodology.</p>
   </div>
 </section>
 
+<section id="do-what-works">
+  <div class="passage">
+    <h3>Do what works</h3>
+    <p>My main focus can't always be code duplication, but it’s not that much of an issue in the case of Interior.
+      I’ve done what I needed to do to get something up and running in an efficient manner as possible whilst aiming to focus on what <em>really</em> matters.</p>
+  </div>
+</section>
+
+<section id="problem-solving">
+  <div class="passage">
+    <h3>Methodologies solve specific problems</h3>
+    <p>Maybe your code doesn't suffer from the kind of issues that crop up and give a methodology a use case,
+      you may have your own <em>nut to crack</em>. Introducing a methodology for the sake of it could
+      end up being the wrong decision. Think wisely as the repercussions can echo throughout eternity.</p>
+  </div>
+</section>
 
 {% endblock %}
 
