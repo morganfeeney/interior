@@ -11,8 +11,8 @@ body {
   margin-right: 1.5rem;
 
   @media(min-width: $screen-smallest) {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-left: $grid-column-gap-1;
+    margin-right: $grid-column-gap-1;
   }
 
   @media(min-width: $screen-small) {
@@ -25,11 +25,12 @@ body {
 
   @media(min-width: $screen-large) {
     width: $width-large;
+    margin-left: $grid-column-gap-2;
+    margin-right: $grid-column-gap-2;
   }
 
   @media(min-width: $screen-larger) {
     width: $width-larger;
-    margin-left: 3.57143rem;
   }
 }
 
@@ -39,8 +40,8 @@ body {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 1rem;
-    margin-top: 2rem;
+    grid-column-gap: $grid-column-gap-1;
+    margin-top: $grid-column-gap-1;
 
     @media(min-width: $screen-large) {
       grid-gap: $grid-gap-2;
