@@ -3,14 +3,9 @@
 }
 
 .main-header nav {
-  grid-column: 1 / span 2;
-  grid-row: 2;
-
-  @media(min-width: $screen-small) {
-    text-align: right;
-    grid-column: 2;
-    grid-row: 1;
-  }
+  text-align: right;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .main-header nav a {
