@@ -72,10 +72,10 @@ $main-image-height-2: (($grid-row-2 * 2) + ($grid-row-gap-2 ));
 // Screen widths (min-width)
 $screen-smallest: 400px !default;
 $screen-smaller: 540px !default;
-$screen-small: 686px !default;
-$screen-medium: 1006px !default;
-$screen-large: 1366px !default;
-$screen-larger: 1675px !default;
+$screen-small: 660px !default;
+$screen-medium: 978px !default;
+$screen-large: 1332px !default;
+$screen-larger: 1656px !default;
 
 // Screen widths (max-width)
 $screen-smaller-max: ($screen-smaller)-1 !default;
@@ -87,7 +87,7 @@ $screen-larger-max: ($screen-larger)-1 !default;
 //** Widths
 //
 // Layout widths (min-width)
-$width-small: 616px !default;
-$width-medium: 936px !default;
-$width-large: 1256px !default;
+$width-small: 612px !default;
+$width-medium: 930px !default;
+$width-large: 1260px !default;
 $width-larger: 1584px !default;
