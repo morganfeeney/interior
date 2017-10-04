@@ -67,7 +67,7 @@ h1 {
     grid-column: span 1;
   }
 
-  @media(min-width: $screen-medium) and (max-width: $screen-large) {
+  @media(min-width: $screen-medium) and (max-width: $screen-large-max) {
     margin-bottom: -.05rem;
   }
 
@@ -130,7 +130,7 @@ h2, h3 {
 }
 
 section:nth-child(1) .passage {
-  @media(min-width: $screen-medium) and (max-width: $screen-large) {
+  @media(min-width: $screen-medium) and (max-width: $screen-large-max) {
     margin-top: 4rem;
   }
 
