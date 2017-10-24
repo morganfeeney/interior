@@ -128,7 +128,7 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     all: {
-      src: ["docs/**/*","!docs/**/CNAME","!docs/images","!docs/**/images/*"]
+      src: ["docs/**/*","!docs/**/CNAME","!docs/images","!docs/**/images/**/*"]
     },
     html: {
       src: ["docs/**/*.html"]
