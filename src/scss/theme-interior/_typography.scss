@@ -47,7 +47,8 @@ p {
 
 }
 
-.passage p {
+.passage p,
+.passage br {
   @include small-1();
   margin: 0;
   padding: 0;
