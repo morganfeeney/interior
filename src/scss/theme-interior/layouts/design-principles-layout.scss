@@ -151,18 +151,29 @@ section:nth-child(1) .passage {
   }
 }
 
-.type-system {
-  grid-column: span 2;
 
-  @media(min-width: $screen-smaller) {
-    grid-column: 2 / span 1;
+.figure-layout-1 {
+  .passage {
+    @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
+      columns: 1;
+      grid-column: span 1;
+    }
   }
 
-  @media(min-width: $screen-large) {
-    grid-column: 3 / span 2;
-  }
+  figure {
+    grid-column: span 2;
 
-  @media(min-width: $screen-larger) {
-    grid-column: 4 / span 2;
+    @media(min-width: $screen-smaller) {
+      grid-column: 2 / span 1;
+      align-self: center;
+    }
+
+    @media(min-width: $screen-large) {
+      grid-column: 3 / span 1;
+    }
+
+    @media(min-width: $screen-larger) {
+      grid-column: 4 / span 1;
+    }
   }
 }
