@@ -44,7 +44,6 @@ p {
             $no-text: true
         );
     }
-
 }
 
 .passage p,
@@ -211,4 +210,8 @@ h2 + blockquote {
     // Indent the second level of each <ul>
     padding-left: $augustin;
   }
+}
+
+figcaption {
+  @include small-2();
 }
