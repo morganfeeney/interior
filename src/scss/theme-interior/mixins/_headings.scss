@@ -75,7 +75,7 @@
 
 @mixin image-link-heading {
   @include baseline(
-    $font-size: $pica,
+    $font-size: $pica, //14px
     $font-weight: bold,
     $margin: 1
   );

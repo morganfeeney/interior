@@ -2,7 +2,7 @@
 
 @mixin body-1() {
   @include baseline(
-    $font-size: $english,
+    $font-size: $english, //16px
     $line-height: 2rem,
     $above: .45,
     $below: 0
@@ -11,7 +11,7 @@
 
 @mixin body-2() {
   @include baseline(
-    $font-size: $mittel,
+    $font-size: $mittel, //18px
     $line-height: 2rem,
     $above: .45,
     $below: 0
@@ -20,7 +20,7 @@
 
 @mixin body-3() {
   @include baseline(
-    $font-size: $augustin,
+    $font-size: $augustin, //20px
     $line-height: 2.5rem,
     $above: .5,
     $below: 0
@@ -29,7 +29,7 @@
 
 @mixin small-1() {
   @include baseline(
-    $font-size: $english,
+    $font-size: $english, //16px
     $line-height: 2rem,
     $above: 0.2,
     $below: 0
@@ -38,9 +38,9 @@
 
 @mixin small-2() {
   @include baseline(
-    $font-size: $pica,
-    $line-height: 1rem,
-    $above: 0.1,
+    $font-size: $pica, //14px
+    $line-height: 1.5rem,
+    $above: 0,
     $below: -.7
   );
 }
