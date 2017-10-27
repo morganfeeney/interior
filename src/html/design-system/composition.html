@@ -1,5 +1,5 @@
 {% extends "layouts/design-principles-layout.njk" %}
-{% set page_description = "Baseline is a toul for aligning copy to the baseline using CSS. Learn about how it works here." %}
+{% set page_description = "Baseline is a tool for aligning copy to the baseline using CSS. Learn about how it works here." %}
 {% set post_page = true %}
 
 {% block content %}
@@ -27,7 +27,7 @@
     <br>
     <p>The compositions for each of Interior’s pages (including this one) started in Illustrator.
       Due to nothing being arbitrary—thanks to each previous section—and therefore (browser quirks aside, oh the woes of CSS columns) can be predicted from one format to another,
-      filling in the gaps by designing anything missed right in the browser using Interior’s automation and visual (master) grid.</p>
+      filling in the gaps by designing anything missed right in the browser using Interior’s automation and (visual) Grid System.</p>
     <p>As you read on you may realise that the order of things is not set in stone,
       I found it impractical to do so—this is one of those things that may change later.
       However they have to be categorised as opposed to being in a single post as each informs the other and they can be considered separately.</p>
@@ -35,20 +35,50 @@
   </div>
 </section>
 
-<section id="Master-grid">
+<section id="typographic-measuring-system">
   <div class="passage">
-    <h3>Master grid</h3>
-    <p>I designed the master grid in Illustrator, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid.
-      This allowed me to work consistently on each layout.</p>
-    <p>figure 1. [image needed]</p>
+    <h3>Typographic Measuring System</h3>
+    <p>The layouts I created informed the <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a>.
+      Once I had decided that the sizes were practical enough for web use I gathered and curated them into a formatted list.
+      This formed the system used, each size was assigned a unique variable name.</p>
   </div>
+</section>
+
+<section id="vertical-alignment">
+  <div class="passage">
+    <h3>Vertical Alignment</h3>
+    <p>I had to work out a way to get the Grid System into the browser so I could layout designs accurately.
+      It’s fairly crude but does the job, so in conjunction with the baseline grid I applied the grids I designed in Illustrator piece by piece.</p>
+  </div>
+  <figure class="figure-layout-2">
+    <picture>
+      <img src="/images/supporting-image/baseline-grid.svg" alt="Illustration detaling a vertical grid and grid system combined.">
+    </picture>
+    <figcaption>Figure 1 — Vertical grid and grid system combined.</figcaption>
+  </figure>
+</section>
+
+<section id="grid-system">
+  <div class="passage">
+    <h3>Grid system</h3>
+    <p>I designed the Grid System using <em>Illustrator</em>, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid.
+      This allowed me to work consistently on each layout.</p>
+      <p>Unlike the grid inspector, the Grid System is a visual aid that is not reflective of CSS Grid styles. It is the Grid System a design adheres to.
+        The one I used with Illustrator was recreated using HTML and CSS; so designs can be translated from Illustrator to the browser with accuracy.</p>
+  </div>
+  <figure class="figure-layout-2">
+    <picture>
+      <img src="/images/supporting-image/layout-widths-content.svg" alt="Illustration detaling 3 different layout widths with varying grid cells per width.">
+    </picture>
+    <figcaption>Figure 2 — Illustration detaling 3 different layout widths with varying grid cells, <em>and content</em> per width.</figcaption>
+  </figure>
 </section>
 
 <section id="layout">
   <div class="passage">
     <h3>Layout</h3>
     <p>I already had an idea in mind of the range of font sizes I could get started with, I applied them to the headers and body copy,
-      then used the master grid as a reference so that I could get creative  within the grid’s constraints. </p>
+      then used the Grid System as a reference so that I could get creative  within the its constraints. </p>
     <p>I used image placeholders (grey boxes) during the initial wireframe creation—as I knew there would be a need for some fairly interesting imagery to contrast against the black columns of Helvetica;
       and needed to see the layout take shape. I kind of broke a rule here (design to suit the content) as my content in this case was being created in parallel with the documentation;
       however with me being the designer there was no issue as it can all be changed to suit.</p>
@@ -57,35 +87,7 @@
   </div>
 </section>
 
-<section id="Typographic-Measuring-System">
-  <div class="passage">
-    <h3>Typographic Measuring System</h3>
-    <p>The layouts I created informed the Typographic Measuring System.
-      Once I had decided that the sizes were practical enough for web use I gathered and curated them into a formatted list.
-      This formed the system used, each size was assigned a unique variable name.</p>
-    <p>figure 2. [image needed]</p>
-  </div>
-</section>
-
-<section id="layout">
-  <div class="passage">
-    <h3>Vertical Alignment</h3>
-    <p>I had to work out a way to get the master grid into the browser so I could layout accurately.
-      It’s fairly crude but does the job, so in conjunction with the baseline grid I applied the grids I designed in Illustrator piece by piece.</p>
-  </div>
-</section>
-
-<section id="layout">
-  <div class="passage">
-    <h3>Grid System</h3>
-    <p>The grid system I used was created in Illustrator—and used as a design tool in Illustrator,
-      that design was painstakingly chosen so that it would work for web pages—it was the crux of the entire exercise.
-      Understanding what a Grid System is came from reading Grid Systems in Graphic Design.
-      It did not come from looking at what other web folk had created before, for the sake of progress it couldn’t.</p>
-  </div>
-</section>
-
-<section id="layout">
+<section id="grid-inspector">
   <div class="passage">
     <h3>Firefox grid inspector</h3>
     <p>Not long after I got something together Firefox released their awesome grid inspector.
