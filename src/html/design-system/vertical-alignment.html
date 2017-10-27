@@ -62,12 +62,15 @@
     <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together as part of a system and
       align blocks vertically, in a way that allows them to be re-assembled in any order,
       the current spec does not cater toward this way of working—not without working around it.
-      One of the main reasons is there is no concept of cap-height; there are several articles which explain the problem in great detail,
-      here’s a <a href="http://www.studiothick.com/essays/web-typography-is-broken">good one</a>, it refers to the problem as a “spooky box”.</p>
-
-    {# [illustration here of 2 columns of text at different sizes not lining up, show where the spooky box is too] #}
-
+      One of the main reasons is there is no concept of cap-height;
+      there are several articles which explain the problem in great detail, here <a href="https://medium.com/written-in-code/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b" target="_blank">Razvan Onefri explains</a> it from his perspective.</p>
   </div>
+  <figure class="figure-layout-2">
+    <picture>
+      <img src="/images/supporting-image/cap-height.svg" alt="Illustration if cap-height, based on Razvan Onefri's.">
+    </picture>
+    <figcaption>Figure 1 — Computed px size at a scale of 87.5%, set using rem units, Helvetica Neue.</figcaption>
+  </figure>
 </section>
 
 <section>

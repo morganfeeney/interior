@@ -199,7 +199,7 @@ h2 + blockquote {
     margin: 0;
   }
 
-  ul {
+  ul, ol {
       @media(min-width: $screen-larger) {
         font-size: $mittel;
         line-height: $mittel;
