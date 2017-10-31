@@ -201,7 +201,6 @@ section:nth-child(1) .passage {
 
   @media(min-width: $screen-medium) {
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: $grid-column-gap-2;
 
     picture {
       grid-column: 1 / span 2;
@@ -211,5 +210,9 @@ section:nth-child(1) .passage {
       grid-column: 3;
       align-self: center;
     }
+  }
+
+  @media(min-width: $screen-large) {
+    grid-column-gap: $grid-column-gap-2;
   }
 }

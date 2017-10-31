@@ -81,7 +81,8 @@ p {
 }
 
 .passage p + h4,
-.passage ul + h4 {
+.passage ul + h4,
+.passage blockquote + h4 {
   @media(min-width: $screen-large) {
     margin-top: 1.5rem;
   }
