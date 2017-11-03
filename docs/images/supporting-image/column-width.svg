@@ -1,76 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="613px"
-	 height="289px" viewBox="0 0 613 289" enable-background="new 0 0 613 289" xml:space="preserve">
-<g id="Layer_1">
-	<g id="Artwork">
-		<g id="Guides" display="none">
-		</g>
-		<g id="BG">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px"
+	 height="288px" viewBox="0 0 612 288" enable-background="new 0 0 612 288" xml:space="preserve">
+<g id="_x31_">
+	<g>
+		<g>
 			<g>
-				<g>
-					<path d="M193.1,50.9v187.1H0.8V50.9H193.1 M193.9,50.2H0v188.6h193.9V50.2L193.9,50.2z"/>
-				</g>
-				<g>
-					<path d="M402.7,50.9v187.1H210.3V50.9H402.7 M403.4,50.2H209.6v188.6h193.9V50.2L403.4,50.2z"/>
-				</g>
-				<g>
-					<path d="M612.2,50.9v187.1H419.9V50.9H612.2 M613,50.2H419.1v188.6H613V50.2L613,50.2z"/>
-				</g>
+				<path d="M192.8,50.6v186.8H0.8V50.6H192.8 M193.5,49.8H0v188.3h193.5V49.8L193.5,49.8z"/>
 			</g>
-			<rect x="-18.7" y="24.1" fill="none" width="515.4" height="242.6"/>
-			<rect x="210.8" y="51.5" fill="none" width="402.2" height="175"/>
-			<text transform="matrix(1 0 0 1 210.7617 61.0928)"><tspan x="0" y="0" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">Whilst using and documenting Interior simultaneously it became </tspan><tspan x="0" y="23.6" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">increasingly apparent that keeping up with the development of </tspan><tspan x="0" y="47.2" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">new specifications would be a never ending task. What&apos;s more, if I </tspan><tspan x="0" y="70.7" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">want to change methodologies I&apos;d have to refactor lots of code, </tspan><tspan x="0" y="94.3" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">why tie things together? Separating the fundamental design </tspan><tspan x="0" y="117.9" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">system—which can apply to a design created with any </tspan><tspan x="0" y="141.5" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4751">spec—from the ever-changing is not only logical, but efficient.</tspan></text>
-			<rect x="0.9" y="51.5" fill="none" width="192" height="161.5"/>
-			<text transform="matrix(1 0 0 1 0.9326 59.8901)"><tspan x="0" y="0" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="bold" font-size="11.7907">Design principles</tspan><tspan x="0" y="23.6" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.1064">The fundamentals of Interior. Each </tspan><tspan x="0" y="35.4" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.1064">principle is essential in order to create </tspan><tspan x="0" y="47.2" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.1064">consistent web layouts.</tspan></text>
+			<g>
+				<path d="M402,50.6v186.8H210V50.6H402 M402.8,49.8H209.2v188.3h193.5V49.8L402.8,49.8z"/>
+			</g>
+			<g>
+				<path d="M611.2,50.6v186.8h-192V50.6H611.2 M612,49.8H418.5v188.3H612V49.8L612,49.8z"/>
+			</g>
 		</g>
-		<g id="_x31_920">
-		</g>
-		<g id="_x31_366">
-		</g>
-		<g id="_x37_68">
-		</g>
+		<rect x="210.4" y="51.1" fill="none" width="401.5" height="174.7"/>
+		<text transform="matrix(1 0 0 1 210.418 60.7285)"><tspan x="0" y="0" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">Whilst using and documenting Interior simultaneously it became </tspan><tspan x="0" y="23.5" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">increasingly apparent that keeping up with the development of </tspan><tspan x="0" y="47.1" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">new specifications would be a never ending task. What&apos;s more, if I </tspan><tspan x="0" y="70.6" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">want to change methodologies I&apos;d have to refactor lots of code, </tspan><tspan x="0" y="94.2" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">why tie things together? Separating the fundamental design </tspan><tspan x="0" y="117.7" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">system—which can apply to a design created with any </tspan><tspan x="0" y="141.3" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="13.4532">spec—from the ever-changing is not only logical, but efficient.</tspan></text>
+		<rect x="0.9" y="51.1" fill="none" width="191.7" height="161.2"/>
+		<text transform="matrix(1 0 0 1 0.9316 59.5278)"><tspan x="0" y="0" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="bold" font-size="11.7715">Design principles</tspan><tspan x="0" y="23.5" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.0899">The fundamentals of Interior. Each </tspan><tspan x="0" y="35.3" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.0899">principle is essential in order to create </tspan><tspan x="0" y="47.1" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.0899">consistent web layouts.</tspan></text>
 	</g>
 </g>
-<g id="Layer_2">
-	<g id="Artwork_copy">
-		<g id="Guides_copy" display="none">
-		</g>
-		<g id="BG_copy">
-		</g>
-		<g id="_x31_920_copy">
-		</g>
-		<g id="_x31_366_copy">
-		</g>
-		<g id="_x37_68_copy">
-		</g>
-	</g>
+<g id="_x32_">
 </g>
-<g id="Layer_3">
-	<g id="BG_1_">
-	</g>
-	<g id="Guides_2_" display="none">
-	</g>
-	<g id="Artwork_1_">
-	</g>
+<g id="_x33_">
 </g>
-<g id="Layer_4">
-	<g id="BG_2_" display="none">
-	</g>
-	<g id="Guides_4_">
-	</g>
-	<g id="Artwork_2_">
-	</g>
+<g id="_x34_">
 </g>
-<g id="Layer_5">
-	<g id="BG_3_">
-	</g>
-	<g id="Artwork_3_">
-	</g>
-	<g id="Guides_5_">
-	</g>
+<g id="_x35_">
 </g>
-<g id="Examples" display="none">
+<g id="_x36_">
 </g>
 </svg>

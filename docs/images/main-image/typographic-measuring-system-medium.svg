@@ -6,69 +6,56 @@
 <g id="Illustration_1_">
 	<rect fill="#FBEEEE" width="612" height="438"/>
 	<g>
-		<text transform="matrix(1 0 0 1 20.0312 15.0801)">
-			<tspan x="0" y="0" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="7.2848">6</tspan>
-			<tspan x="0" y="11.7" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="9.7131">8</tspan>
-			<tspan x="0" y="24.8" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.9272">9</tspan>
-			<tspan x="0" y="39.3" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="12.1414">10</tspan>
-			<tspan x="0" y="56.8" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="14.5696">12</tspan>
-			<tspan x="0" y="77.2" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="16.9979">14</tspan>
-			<tspan x="0" y="103.4" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="21.8545">18</tspan>
-			<tspan x="0" y="138.4" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="29.1393">24</tspan>
-			<tspan x="0" y="182.1" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="36.4241">30</tspan>
-			<tspan x="0" y="234.6" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="43.7089">36</tspan>
-			<tspan x="0" y="304.5" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="58.2786">48</tspan>
-			<tspan x="0" y="391.9" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="72.8482">60</tspan>
-		</text>
+		<text transform="matrix(1 0 0 1 20.0312 15.0801)"><tspan x="0" y="0" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="7.2848">6</tspan><tspan x="0" y="11.7" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="9.7131">8</tspan><tspan x="0" y="24.8" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="10.9272">9</tspan><tspan x="0" y="39.3" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="12.1414">10</tspan><tspan x="0" y="56.8" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="14.5696">12</tspan><tspan x="0" y="77.2" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="16.9979">14</tspan><tspan x="0" y="103.4" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="21.8545">18</tspan><tspan x="0" y="138.4" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="29.1393">24</tspan><tspan x="0" y="182.1" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="36.4241">30</tspan><tspan x="0" y="234.6" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="43.7089">36</tspan><tspan x="0" y="304.5" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="58.2786">48</tspan><tspan x="0" y="391.9" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="72.8482">60</tspan></text>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="161.6" x2="148.1" y2="161.6"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="165.2" x2="148.1" y2="165.2"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="161.6" x2="148.1" y2="161.6"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="165.2" x2="148.1" y2="165.2"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="124.8" x2="148.1" y2="124.8"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="128.4" x2="148.1" y2="128.4"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="124.8" x2="148.1" y2="124.8"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="128.4" x2="148.1" y2="128.4"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="96.2" x2="148.1" y2="96.2"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="99.7" x2="148.1" y2="99.7"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="96.2" x2="148.1" y2="96.2"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="99.7" x2="148.1" y2="99.7"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="74.6" x2="148.1" y2="74.6"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="78.1" x2="148.1" y2="78.1"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="74.6" x2="148.1" y2="74.6"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="78.1" x2="148.1" y2="78.1"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="56.2" x2="148.1" y2="56.2"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="59.7" x2="148.1" y2="59.7"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="56.2" x2="148.1" y2="56.2"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="59.7" x2="148.1" y2="59.7"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="41.1" x2="148.1" y2="41.1"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="44.7" x2="148.1" y2="44.7"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="41.1" x2="148.1" y2="41.1"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="44.7" x2="148.1" y2="44.7"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="27.7" x2="148.1" y2="27.7"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="31.2" x2="148.1" y2="31.2"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="27.7" x2="148.1" y2="27.7"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="31.2" x2="148.1" y2="31.2"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="15.7" x2="148.1" y2="15.7"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="19.3" x2="148.1" y2="19.3"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="15.7" x2="148.1" y2="15.7"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="19.3" x2="148.1" y2="19.3"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="9" x2="148.1" y2="9"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="9" x2="148.1" y2="9"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="207.3" x2="148.1" y2="207.3"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="210.9" x2="148.1" y2="210.9"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="207.3" x2="148.1" y2="207.3"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="210.9" x2="148.1" y2="210.9"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="264.9" x2="148.1" y2="264.9"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="268.4" x2="148.1" y2="268.4"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="264.9" x2="148.1" y2="264.9"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="268.4" x2="148.1" y2="268.4"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="341.3" x2="148.1" y2="341.3"/>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="344.9" x2="148.1" y2="344.9"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="341.3" x2="148.1" y2="341.3"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="344.9" x2="148.1" y2="344.9"/>
 		</g>
 		<g>
-			<line fill="none" stroke="#ED7073" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="426.5" x2="148.1" y2="426.5"/>
+			<line fill="none" stroke="#FF7070" stroke-width="0.5" stroke-miterlimit="10" x1="20" y1="426.5" x2="148.1" y2="426.5"/>
 		</g>
 	</g>
 	<g>
@@ -79,7 +66,7 @@
 			<use xlink:href="#SVGID_3_"  overflow="visible"/>
 		</clipPath>
 		<g clip-path="url(#SVGID_2_)">
-			<text transform="matrix(1.0013 0 0 1 240.6387 338.0967)" fill="#ED7073" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="215.8995">Typo</text>
+			<text transform="matrix(1.0013 0 0 1 240.6387 338.0967)" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="215.8995">Typo</text>
 		</g>
 	</g>
 </g>

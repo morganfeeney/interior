@@ -75,7 +75,7 @@
 		<use xlink:href="#SVGID_17_"  overflow="visible"/>
 	</clipPath>
 	<g clip-path="url(#SVGID_2_)">
-		<text transform="matrix(1 0 0 1 0.8022 518.2559)" fill="#4D6D94" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-weight='bold' font-size="109">Vertical alignment</text>
+		<text transform="matrix(1 0 0 1 0.8022 518.2559)" fill="#4D6D94" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="bold" font-size="109">Vertical alignment</text>
 	</g>
 </g>
 </svg>
