@@ -73,6 +73,30 @@
   );
 }
 
+@mixin heading-7() {
+  @include baseline(
+    $font-size: $english, //16px
+    $text-transform: uppercase,
+    $font-weight: bold,
+    $line-height: 2rem,
+    $above: .65,
+    $below: 0,
+    $margin: 1
+  );
+}
+
+@mixin heading-8() {
+  @include baseline(
+    $font-size: $philosophy, //12px
+    $text-transform: uppercase,
+    $font-weight: bold,
+    $line-height: 2rem,
+    $above: .65,
+    $below: 0,
+    $margin: 0
+  );
+}
+
 @mixin image-link-heading {
   @include baseline(
     $font-size: $pica, //14px

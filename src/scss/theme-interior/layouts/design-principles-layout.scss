@@ -85,11 +85,6 @@ h1 {
   }
 }
 
-h2, h3 {
-  display: block;
-  column-span: all;
-}
-
 .main-image {
   grid-column: 1 / span 2;
   grid-row: 1;

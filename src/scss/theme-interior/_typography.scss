@@ -26,6 +26,10 @@ h4, h5, h6 {
   @include heading-6();
 }
 
+h6 {
+  //text-transform: uppercase;
+}
+
 p {
   @include body-1();
 
@@ -47,7 +51,8 @@ p {
 }
 
 .passage p,
-.passage br {
+.passage br,
+.unit-conversion p {
   @include small-1();
   margin: 0;
   padding: 0;
@@ -69,6 +74,10 @@ p {
   }
 }
 
+.passage > :first-child {
+  column-span: all;
+}
+
 .passage > h4 {
   padding-top: 0;
   margin-bottom: 0;
@@ -80,6 +89,17 @@ p {
   }
 }
 
+.passage > h6 {
+  padding-top: 0;
+  margin-bottom: 0;
+
+  @include heading-8();
+
+  @media(min-width: $screen-larger) {
+    @include heading-7();
+  }
+}
+
 .passage p + h4,
 .passage ul + h4,
 .passage blockquote + h4 {
@@ -88,7 +108,8 @@ p {
   }
 }
 
-.passage h3 + h4 {
+.passage h3 + h4,
+.passage h4 + h6 {
   column-span: all;
 }
 
@@ -143,42 +164,24 @@ h2 + blockquote {
 }
 
 .passage .unit-conversion {
-  //border-collapse: collapse;
-  //@include small-1();
-  // padding-top: 0;
-  // margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 4rem 1fr;
 
-  @include baseline(
-    $font-size: $english,
-    $line-height: 1.5rem,
-    $above: 0.2,
-    $below: 0
-  );
+  > p {
+    //text-align: center;
+    //margin: 0;
+    padding: .98rem 0;
 
-  padding-top: 0;
-  margin-bottom: 0;
-
-  @media(min-width: $screen-large) {
-    @include body-2();
-    padding-top: 0;
-    margin-bottom: 0;
-  }
-
-  td {
-    padding-top: 0;
-    margin-bottom: 0;
-
-    @media(min-width: $screen-large) {
-      padding-top: 0;
-      margin-bottom: 0;
+    &:nth-child(3n+2) {
+      text-align: center;
     }
 
-    &:nth-of-type(1) {
+    &:nth-child(3n+1) {
       text-align: right;
     }
 
-    &:nth-of-type(2) {
-      text-align: left;
+    &:not(:nth-child(9),:nth-child(8),:nth-child(7)) {
+      border-bottom: .1rem solid $gray-4;
     }
   }
 }
@@ -213,6 +216,14 @@ h2 + blockquote {
   }
 }
 
+body {
+  counter-reset: figure;
+}
+
 figcaption {
   @include small-2();
+  &::before {
+    counter-increment: figure;
+    content: "Figure " counter(figure)" — ";
+  }
 }
