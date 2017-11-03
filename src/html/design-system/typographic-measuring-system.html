@@ -23,14 +23,14 @@
         from the dimensions and content, how a layout should be constructed.
         In this context a page is the starting point for calculating font size, Grid System; and ultimately the layout.</p>
 
-      <p>In the web browser some of these principles still apply—yet differently.
+      <p>In the web browser some of these principles still apply; yet differently.
           For instance, Responsive Web Design introduces a unique design problem; the “page” dimensions can change, be infinite, and viewed on a myriad of devices.
           Another major difference is that the nature of a web page is by default more like a scroll.</p>
 
       <p>Therefore, how do we begin to calculate the proportions of a layout? The vertical axis can’t logically be the starting point,
           as content could update regularly or—worse still—be of an unknown quantity; anyone can be a publisher.</p>
 
-      <p>Without a font-size, line-length can’t be established, without line-length column-width can’t be determined,
+      <p>Without font-size, line-length can’t be established, without line-length column-width can’t be determined,
           unless the column-widths are understood the overall layout width is an unknown quantity—hence why this is the first step.</p>
     </div>
   </section>
@@ -40,12 +40,11 @@
       <h3>Choosing a suitable system</h3>
 
       <p>Picking font sizes can be trial and error, the process may involve viewing examples of text on a range of devices, making adjustments where needed.</p>
-
-      <p>To make the most use of a Typographic Measuring System; the HTML element can be scaled using percentages. This provides a level of granularity enabling fonts to be scaled proportionately whilst aligning to a range of vertical grids.</p>
-
-      <p>The percentage used on the HTML element alters line-height—which depending upon the size of the font will have an effect upon legibility.</p>
-
-      <p>All font sizes chosen for Interior were chosen to work with the column widths in the <a href="#">grid system</a>.</p>
+      <p>To make the most use of a Typographic Measuring System;
+        the <code class="code-inline">&lt;html&gt;</code> element can be scaled using percentages.
+        This provides a level of granularity enabling fonts to be scaled proportionately whilst aligning to a range of vertical grids.</p>
+      <p>The percentage used alters line-height—which depending upon the size of the font will have an effect upon legibility.</p>
+      <p>All font sizes chosen were done so to work with the columns provided by the <a href="/design-system/grid-system.html">Grid System</a>.</p>
     </div>
 
     <figure class="figure-layout-2">
@@ -53,7 +52,7 @@
         <img src="/images/supporting-image/measuring-system-sizes.svg" alt="Computed pixel (px) font sizes, and rem units.">
       </picture>
 
-      <figcaption>Figure 1 — Computed px size at a scale of 87.5%, set using rem units, Helvetica Neue.</figcaption>
+      <figcaption>Computed px size at a scale of 75%, set using rem units, Helvetica Neue.</figcaption>
     </figure>
   </section>
 
@@ -75,8 +74,10 @@
 
       <p>The sizes I chose work with a variety of line-height applied across a series of layout widths, in other words; that work across a multitude of screen sizes or even device types.</p>
       <br>
-      <p>As described by Brockman:</p>
-      <blockquote><p>The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created.</p></blockquote>
+      <blockquote cite="Josef Muller Bröckman">
+        <p>The correct spaces between letters and words and the length and spacing of lines conducive to easy reading, does much to enhance the impression created.</p>
+      </blockquote>
+      <br>
 
       <h4>Use for design</h4>
 

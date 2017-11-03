@@ -109,24 +109,48 @@ section {
   }
 }
 
-.development-considerations {
-  grid-template-columns: 1fr;
+.design-principles {
+  @media(min-width: $screen-smaller) and (max-width: $screen-medium-max) {
+    .section-info {
+      &:nth-of-type(2) {
+        grid-row: 7;
 
-  @media(min-width: $screen-small) {
-    grid-template-rows: repeat(3, 10rem);
+        ~ .image-link {
+          grid-row: 8;
+        }
+      }
+    }
   }
+  @media(min-width: $screen-large) and (max-width: $screen-larger-max) {
+    .section-info {
+      &:nth-of-type(2) {
+        grid-row: 3;
 
-  @media(min-width: $screen-medium) {
-    grid-template-rows: 21rem;
-  }
-
-  @media(min-width: $screen-large) {
-    grid-template-rows: $grid-row-2;
+        ~ .image-link {
+          grid-row: 3;
+        }
+      }
+    }
   }
 }
 
-.design-principles,
-.development-considerations {
+// .development-considerations {
+//   grid-template-columns: 1fr;
+//
+//   @media(min-width: $screen-small) {
+//     grid-template-rows: repeat(3, 10rem);
+//   }
+//
+//   @media(min-width: $screen-medium) {
+//     grid-template-rows: 21rem;
+//   }
+//
+//   @media(min-width: $screen-large) {
+//     grid-template-rows: $grid-row-2;
+//   }
+// }
+
+.design-principles {
   @media(min-width: $screen-smaller) {
     grid-template-columns: repeat(2, 1fr);
   }

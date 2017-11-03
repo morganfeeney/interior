@@ -15,34 +15,28 @@
   <div class="passage">
     <h2>Why?</h2>
 
-    <p>In order to align parallel text blocks of varying sizes on the y axis using CSS;
+    <p>In order to align parallel text blocks of varying sizes on the vertical axis using CSS;
       the distances measured to align with can be pre-determined.</p>
 
     <p>One tool I use to understand the distance is a <em>Baseline Grid</em>,
-      its a visual aid used to enable text alignment—comparable to ruled paper.
+      it's a visual aid used to enable text alignment—comparable to ruled paper.
       The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked;
-      the latter is used to automate calculations which align text blocks on the former.</p>
+      the latter is used to automate calculations which align text blocks on the former; in conjunction with the <a href="/design-system/grid-system.html">Grid System</a>.</p>
 
     <p>I can squeeze even more use out of it by making a single rem equate to any computed value I want by applying percentages to the <code class="code-inline">&lt;html&gt;</code> element.
-      This way a single rem unit (the measurement used for incrementally traversing the baseline grid) will yield a computed pixel <code class="code-inline">font-size</code> that suits.</p>
+      This way a single rem (the measurement used for incrementally traversing the baseline grid) will yield a computed pixel <code class="code-inline">font-size</code> that suits.</p>
 
-    <table class="unit-conversion">
-      <tr>
-        <td>75%</td>
-        <td>=</td>
-        <td>12px</td>
-      </tr>
-      <tr>
-        <td>87.5%</td>
-        <td>=</td>
-        <td>14px</td>
-      </tr>
-      <tr>
-        <td>112.5%</td>
-        <td>=</td>
-        <td>18px</td>
-      </tr>
-    </table>
+    <div class="unit-conversion">
+        <p>75%</p>
+        <p>=</p>
+        <p>12px</p>
+        <p>87.5%</p>
+        <p>=</p>
+        <p>14px</p>
+        <p>112.5%</p>
+        <p>=</p>
+        <p>18px</p>
+    </div>
 
     <p>If the base font-size is 12px, this means 1rem = 12px, this allows me to traverse/align to the baseline in multiples of 6—providing a suitable range of font-sizes and line-heights for layout.</p>
   </div>
@@ -53,7 +47,7 @@
     <h3>Vertical rhythm</h3>
 
     <p>Everything I’ve learnt recently about typography leads towards units of measurement being the fundamental building blocks of order and harmony in design.
-      A Baseline Grid—in conjunction with a Grid System—can assist order by indicating what areas of a layout should accommodate text,
+      A Baseline Grid, in conjunction with a Grid System, can assist by indicating what areas of a layout should accommodate text,
       and visa-versa.</p>
 
     <p><em>But can't we already create this level of precision with CSS?</em></p>
@@ -68,7 +62,7 @@
     <picture>
       <img src="/images/supporting-image/cap-height.svg" alt="Illustration if cap-height, based on Razvan Onefri's.">
     </picture>
-    <figcaption>Figure 1 — Illustration detailing cap-height, line-height and font-size.</figcaption>
+    <figcaption>Illustration detailing cap-height, line-height and font-size.</figcaption>
   </figure>
 </section>
 
@@ -80,13 +74,13 @@
 
     <p>I've used Helvetica &amp; system fonts so didn't need to make many adjustments to the default cap-height settings in Interior.
       If you pick different fonts you’ll need to work out what the cap-height is and apply it.
-      if you plan to use Interior there’s a variable for cap-height—it’s tied into the <code class="code-inline">baseline()</code> mixin.</p>
+      if you plan to use Interior there’s a variable for cap-height—it’s passed into the <code class="code-inline">baseline()</code> mixin.</p>
 
     <h4>Establish a unit for the baseline</h4>
 
     <p>Multiples of <code class="code-inline">.5rem</code> work really well, depending upon the document base font size, for several reasons:</p>
       <ol>
-        <li><span>Granularity—the measure is affected by font size and column width which impacts line-height,
+        <li><span>Granularity—the measure is affected by font size and column width which impacts line-height;
           using <code class="code-inline">.5rem</code> allows more variety of font sizes, without having to keep resizing the entire document using percentages
           as the columns get wider—which is another way to vary the baseline grid (and line-heght).</span></li>
           <li><span>Unit-less values are incorrectly computed in some cases, which can lead to a lot of head scratching,
@@ -105,10 +99,10 @@
       paragraphs, headings, block-quotes, citations, images, figures with captions etc.
       then adding and removing things—every element has an impact on it's neighbor.</p>
 
-    <h4>Apply to your design</h4>
+    <h4>Use for design</h4>
 
     <p>As stated on the previous page, if you want to apply an accurate representation of CSS styles to a working design,
-      for the sake of continuity (and sanity) this method will allow it. Enabling you to work back and forth between the browser and a DTP program such as Illustrator.</p>
+      for the sake of continuity this method will allow it. Enabling you to work back and forth between the browser and a DTP program such as <em>Illustrator</em>.</p>
 
   </div>
 </section>
