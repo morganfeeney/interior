@@ -46,7 +46,7 @@ main {
 section {
   display: grid;
   grid-gap: $grid-gap-1;
-  grid-auto-rows: minmax(10rem, auto);
+  grid-auto-rows: minmax($grid-row-1, auto);
 
   @media(min-width: $screen-large) {
     grid-template-columns: repeat(4, 1fr);
@@ -60,7 +60,7 @@ section {
 
 .preamble {
   @media(min-width: $screen-medium) {
-    grid-template-rows: repeat(4, minmax(10rem, auto));
+    grid-template-rows: repeat(4, minmax($grid-row-1, auto));
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -96,10 +96,10 @@ section {
 }
 
 .design-principles {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 
   @media(min-width: $screen-small) {
-    grid-template-rows: repeat(6, minmax(10rem, auto));
+    grid-template-rows: repeat(6, minmax($grid-row-1, auto));
   }
 
   @media(min-width: $screen-medium) {
@@ -148,22 +148,6 @@ section {
     }
   }
 }
-
-// .development-considerations {
-//   grid-template-columns: 1fr;
-//
-//   @media(min-width: $screen-small) {
-//     grid-template-rows: repeat(3, 10rem);
-//   }
-//
-//   @media(min-width: $screen-medium) {
-//     grid-template-rows: 21rem;
-//   }
-//
-//   @media(min-width: $screen-large) {
-//     grid-template-rows: $grid-row-2;
-//   }
-// }
 
 .design-principles {
   @media(min-width: $screen-smaller) {
@@ -215,20 +199,10 @@ section {
   }
 }
 
-.image-link > img {
-  @media(min-width: $screen-small) {
-    object-fit: cover;
-    object-position: top left;
-    width: 100%;
-    //height: 17rem;
-  }
-
-  @media(max-width: $screen-smaller-max) {
-    order: 2;
-    object-fit: cover;
-    object-position: bottom left;
-    width: 100%;
-    //height: 10rem;
+.image-link,
+.section-info {
+  @media(min-width: $screen-smaller) and (max-width: $screen-small-max) {
+    grid-row: span 2;
   }
 }
 
@@ -258,11 +232,9 @@ section {
   }
 }
 
-@media(min-width: $screen-small) and (max-width: $screen-medium-max) {
+@media(max-width: $screen-smaller-max) {
   .image-link > img {
-    height: 17rem;
-    object-fit: cover;
-    object-position: left;
+    order: 2;
   }
 }
 
