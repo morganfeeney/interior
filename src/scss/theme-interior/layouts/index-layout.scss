@@ -192,7 +192,7 @@ section {
   grid-template-rows: auto 1fr;
   text-decoration: none;
 
-  @media(min-width: $screen-smaller) and (max-width: $screen-medium-max) {
+  @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
     grid-row: span 2;
   }
 
@@ -200,13 +200,6 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-column: span 2;
     grid-gap: $grid-gap-1;
-  }
-}
-
-.image-link,
-.section-info {
-  @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
-    grid-row: span 2;
   }
 }
 
