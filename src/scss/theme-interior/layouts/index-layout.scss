@@ -10,8 +10,7 @@ body {
 
 h1 {
   grid-column: 1 / span 2;
-  grid-row: 1;
-  align-self: flex-end;
+  align-self: end;
 
   @media(min-width: $screen-medium) {
     grid-row: 2;
@@ -75,8 +74,11 @@ section {
   }
 
   .intro {
-    grid-row: 2 / span 2;
     margin-top: -1rem;
+
+    @media(min-width: $screen-small) {
+      grid-row: 2 / span 2;
+    }
 
     @media(min-width: $screen-medium) {
       grid-row: 3 / span 2;
@@ -110,7 +112,7 @@ section {
 }
 
 .design-principles {
-  @media(min-width: $screen-smaller) and (max-width: $screen-medium-max) {
+  @media(min-width: $screen-small) and (max-width: $screen-medium-max) {
     .section-info {
       &:nth-of-type(2) {
         grid-row: 7;
@@ -121,6 +123,19 @@ section {
       }
     }
   }
+
+  @media(min-width: $screen-medium) and (max-width: $screen-large-max) {
+    .section-info {
+      &:nth-of-type(2) {
+        grid-row: 4;
+
+        ~ .image-link {
+          grid-row: 4;
+        }
+      }
+    }
+  }
+
   @media(min-width: $screen-large) and (max-width: $screen-larger-max) {
     .section-info {
       &:nth-of-type(2) {
