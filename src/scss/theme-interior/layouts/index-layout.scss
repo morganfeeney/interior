@@ -99,11 +99,11 @@ section {
   grid-template-columns: 1fr 1fr;
 
   @media(min-width: $screen-small) {
-    grid-template-rows: repeat(6, minmax($grid-row-1, auto));
+    grid-template-rows: repeat(9, minmax($grid-row-1, auto));
   }
 
   @media(min-width: $screen-medium) {
-    grid-template-rows: repeat(2, minmax(21rem, auto));
+    grid-template-rows: repeat(6, minmax($grid-row-1, auto));
   }
 
   @media(min-width: $screen-large) {
@@ -114,11 +114,13 @@ section {
 .design-principles {
   @media(min-width: $screen-small) and (max-width: $screen-medium-max) {
     .section-info {
+      grid-row: span 1;
+
       &:nth-of-type(2) {
-        grid-row: 7;
+        grid-row: 7 / span 1;
 
         ~ .image-link {
-          grid-row: 8;
+          grid-row: 8 / span 2;
         }
       }
     }
@@ -126,11 +128,13 @@ section {
 
   @media(min-width: $screen-medium) and (max-width: $screen-large-max) {
     .section-info {
+      grid-row: span 1;
+
       &:nth-of-type(2) {
-        grid-row: 4;
+        grid-row: 6 / span 1;
 
         ~ .image-link {
-          grid-row: 4;
+          grid-row: 6 / span 2;
         }
       }
     }
@@ -201,7 +205,7 @@ section {
 
 .image-link,
 .section-info {
-  @media(min-width: $screen-smaller) and (max-width: $screen-small-max) {
+  @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
     grid-row: span 2;
   }
 }
