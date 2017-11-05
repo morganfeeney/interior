@@ -27,6 +27,15 @@
   );
 }
 
+@mixin body-4() {
+  @include baseline(
+    $font-size: $great-primer, //24px
+    $line-height: 3rem,
+    $above: .5,
+    $below: 0
+  );
+}
+
 @mixin small-1() {
   @include baseline(
     $font-size: $english, //16px

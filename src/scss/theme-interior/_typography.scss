@@ -38,6 +38,14 @@ p {
   }
 }
 
+.lead {
+  @include body-3();
+
+  @media(min-width: $screen-small) {
+    @include body-4();
+  }
+}
+
 .passage {
   orphans: 1;
 
@@ -139,17 +147,12 @@ blockquote {
     }
   }
 
-  cite {
-    @media(min-width: $screen-larger) {
-      font-size: $pica;
-    }
-
-    &::before {
-      content: "\2014  "
-    }
+  cite::before {
+    content: "\2014  "
   }
 }
 
+blockquote cite,
 blockquote[cite]::after {
   content: "\2014  "attr(cite);
   font-style: oblique;
