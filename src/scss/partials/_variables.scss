@@ -70,8 +70,8 @@ $main-image-height-2: (($grid-row-2 * 2) + ($grid-row-gap-2 ));
 //** Widths
 //
 // Layout widths (min-width)
-$width-small: 612px !default;
-$width-medium: 930px !default;
+$width-small: 600px !default;
+$width-medium: 912px !default;
 $width-large: 1260px !default;
 $width-larger: 1584px !default;
 
@@ -80,7 +80,7 @@ $width-larger: 1584px !default;
 // Screen widths (min-width)
 $screen-smallest: 400px !default;
 $screen-smaller: 540px !default;
-$screen-small: 660px !default;
+$screen-small: 648px !default;
 $screen-medium: 978px !default;
 $screen-large: 1332px !default;
 $screen-larger: 1656px !default;
