@@ -23,12 +23,6 @@ h1 {
   }
 }
 
-@media(max-width: $screen-large-max) {
-  .main-header .container {
-    width: auto;
-  }
-}
-
 main {
   display: grid;
   grid-template-columns: 1fr;

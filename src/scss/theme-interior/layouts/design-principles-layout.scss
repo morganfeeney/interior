@@ -24,23 +24,21 @@ main > section {
 
   @media(min-width: $screen-medium) {
     grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: $grid-column-gap-1;
+    grid-row-gap: $grid-row-gap-2;
 
     &:first-child {
       grid-template-rows: $grid-row-1 auto;
     }
-
-    grid-column-gap: $grid-column-gap-1;
-    grid-row-gap: $grid-row-gap-2;
   }
 
   @media(min-width: $screen-large) {
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: $grid-gap-2;
 
     &:first-child {
       grid-template-rows: $grid-row-2 auto;
     }
-
-    grid-gap: $grid-gap-2;
   }
 
   @media(min-width: $screen-larger) {
@@ -122,15 +120,6 @@ section:nth-child(1) .passage {
   }
 }
 
-.passage.passage-with-figure {
-  grid-row: 1 / span 1;
-
-  @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
-    grid-column: span 1;
-    columns: 1
-  }
-}
-
 .passage {
   grid-column: span 2;
 
@@ -149,34 +138,7 @@ section:nth-child(1) .passage {
   }
 }
 
-
 .figure-layout-1 {
-  .passage {
-    @media(min-width: $screen-smaller) and (max-width: $screen-large-max) {
-      columns: 1;
-      grid-column: span 1;
-    }
-  }
-
-  figure {
-    grid-column: span 2;
-
-    @media(min-width: $screen-smaller) {
-      grid-column: 2 / span 1;
-      align-self: center;
-    }
-
-    @media(min-width: $screen-large) {
-      grid-column: 3 / span 1;
-    }
-
-    @media(min-width: $screen-larger) {
-      grid-column: 4 / span 1;
-    }
-  }
-}
-
-.figure-layout-2 {
   grid-column: 1 / span 3;
   display: grid;
   grid-row-gap: $grid-row-gap-1;
