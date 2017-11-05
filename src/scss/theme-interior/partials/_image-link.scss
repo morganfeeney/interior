@@ -5,7 +5,7 @@
   counter-increment: default-counter;
 
   @media(max-width: $screen-smaller-max) {
-    margin-top: 0;
+    margin-top: -.25rem;
   }
 
   &::before {

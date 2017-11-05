@@ -101,6 +101,7 @@
   @include baseline(
     $font-size: $pica, //14px
     $font-weight: bold,
-    $margin: 1
+    $line-height: 1.5rem,
+    $margin: .75
   );
 }
