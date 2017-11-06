@@ -63,7 +63,6 @@ img {
 
 .container > img {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   padding-top: 0.16rem;
   margin-top: 2rem;
@@ -72,7 +71,6 @@ img {
 
 .item > img {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 
