@@ -37,6 +37,11 @@
 		</header>
 		{% endblock %}
 		<article id="main-article" class="container-outer main-article {{ article_classes }}">
+			{% if article %}
+				{% block date %}
+				{% endblock %}
+			{% endif %}
+
 			<main class="container {{ main_classes }}">
 				{% block main %}{% endblock %}
 			</main>
