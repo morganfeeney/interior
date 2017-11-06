@@ -13,6 +13,7 @@ html {
   right: 0;
   z-index: 2;
   mix-blend-mode: multiply;
+  background: -o-linear-gradient(#FF7070 0, transparent 1px) 0 0/100vw 1rem repeat-y, -o-linear-gradient(rgba(255, 112, 112, 0.5) 0, transparent 1px) 0 0.5rem/100vw 0.5rem repeat-y;
   background: linear-gradient(#FF7070 0, transparent 1px) 0 0/100vw 1rem repeat-y, linear-gradient(rgba(255, 112, 112, 0.5) 0, transparent 1px) 0 0.5rem/100vw 0.5rem repeat-y;
   pointer-events: none;
 }
@@ -49,16 +50,22 @@ p + img {
 }
 
 .button-grid-toggle {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
-  padding: .35rem .5rem;
+  padding: .5rem .75rem;
   background: #ff7070;
   border: none;
-  box-shadow: 0px 2px 0px #000000, 0px 1px 0px #fff inset;
+  -webkit-box-shadow: 0px 2px 0px #000000, 0px 1px 0px #fff inset;
+          box-shadow: 0px 2px 0px #000000, 0px 1px 0px #fff inset;
   border-radius: .4rem 0 0;
   color: #fff;
-  font-size: .75rem;
+}
+
+@media (min-width: 708px) {
+  .button-grid-toggle {
+    position: fixed;
+  }
 }
 
 code, pre {
@@ -67,6 +74,7 @@ code, pre {
 
 pre {
   -moz-tab-size: 4;
+    -o-tab-size: 4;
        tab-size: 4;
 }
 
@@ -132,12 +140,14 @@ code:not(.code-inline) {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-height: 100%;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
 }
 
@@ -305,8 +315,8 @@ p {
 }
 
 .passage > :first-child {
-  -moz-column-span: all;
-       column-span: all;
+  -webkit-column-span: all;
+          column-span: all;
 }
 
 .passage > h4 {
@@ -364,8 +374,8 @@ p {
 
 .passage h3 + h4,
 .passage h4 + h6 {
-  -moz-column-span: all;
-       column-span: all;
+  -webkit-column-span: all;
+          column-span: all;
 }
 
 .intro {
@@ -698,13 +708,15 @@ main {
 }
 
 .posts-nav .prev::before {
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .posts-nav .next::after {
-  -ms-transform: rotate(135deg);
-      transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
   justify-self: flex-end;
 }
 

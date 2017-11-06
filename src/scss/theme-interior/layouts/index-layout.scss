@@ -210,6 +210,9 @@ section {
   @media(max-width: $screen-small-max) {
     grid-template-rows: repeat(2, 1fr);
     grid-gap: $grid-gap-1;
+  }
+
+  @media(max-width: $screen-smaller-max) {
     grid-row: span 2;
     grid-column: span 2;
   }

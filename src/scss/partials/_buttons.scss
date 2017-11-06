@@ -1,12 +1,15 @@
 .button-grid-toggle {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
-  padding: .35rem .5rem;
+  padding: .5rem .75rem;
   background: #ff7070;
   border: none;
   box-shadow: 0px 2px 0px #000000, 0px 1px 0px #fff inset;
   border-radius: .4rem 0 0;
   color: #fff;
-  font-size: .75rem;
+
+  @media(min-width: ($screen-small + 60px)) {
+    position: fixed;
+  }
 }

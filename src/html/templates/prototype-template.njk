@@ -31,6 +31,7 @@
 					</a>
 					<nav id="main-nav">
 						<a href="{{ home_url }}articles">Articles</a>
+						<a href="https://github.com/morganfeeney/interior" target="_blank">Code</a>
 					</nav>
 				{% endblock %}
 			</div>
@@ -72,13 +73,11 @@
 				</div>
 			</footer>
 		{% endblock %}
-		{% if development %}
-			{% block footer_scripts %}
+		{% block footer_scripts %}
+			{% if development %}
 				{% include "../partials/footer-scripts.njk" %}
-			{% endblock %}
-		{% else %}
-		  {# NOWT #}
-		{% endif %}
-
+			{% endif %}
+			{% include "../partials/overlay.njk" %}
+		{% endblock %}
 	</body>
 </html>

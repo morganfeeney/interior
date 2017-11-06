@@ -354,8 +354,9 @@ section {
 .image-link span {
   display: -ms-grid;
   display: grid;
-  -ms-flex-align: baseline;
-      align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -ms-grid-columns: auto 1fr;
       grid-template-columns: auto 1fr;
 }
@@ -372,6 +373,11 @@ section {
     -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
     grid-gap: 1rem 2rem;
+  }
+}
+
+@media (max-width: 539px) {
+  .section-info {
     -ms-grid-row: span 2;
         grid-row: span 2;
     -ms-grid-column: span 2;
@@ -392,8 +398,9 @@ section {
 
 @media (max-width: 539px) {
   .image-link > img {
-    -ms-flex-order: 2;
-        order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
