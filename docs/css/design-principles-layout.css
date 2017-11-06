@@ -234,18 +234,18 @@ h1 {
 
 @media (min-width: 540px) {
   .passage {
-    -moz-columns: 2;
-         columns: 2;
+    -webkit-columns: 2;
+            columns: 2;
     -webkit-perspective: 1;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
   }
 }
 
 @media (min-width: 1332px) {
   .passage {
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
   }
 }
 
