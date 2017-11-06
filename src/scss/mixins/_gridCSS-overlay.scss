@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// Mixin — gridCSS-overlay()
+// -----------------------------------------------------------------------------
+// This is what creates the overlay used to align columns for use with Interior.
+// -----------------------------------------------------------------------------
+
+@mixin gridCSS-overlay(
+  $grid-medium: repeat(3, 1fr),
+  $grid-large: repeat(4, 1fr),
+  $grid-larger: repeat(5, 1fr),
+  $grid-gap: $grid-gap-1,
+  $grid-gap-large: $grid-gap-2
+) {
+  main {
+    position: relative;
+  }
+  .grid-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+  }
+  /*
+  * Getting the proportions correct and allowing enough rows to cover
+  * excess height
+  *
+  * To get to 296px width the parent container (grid overlay) must be at a
+  * width of 1256px, with for columns with a gutter of 24px.
+  *
+  * In the case of the rows, 16rem is as near as I can get using a rem
+  * unit to the designed unit of 296px
+  */
+  .grid-visible .master-grid {
+      width: 100%;
+      pointer-events: none;
+      grid-template-rows: repeat(30, $grid-row-1);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      grid-gap: $grid-gap;
+
+      @media(min-width: $screen-large) {
+        grid-template-rows: repeat(30, $grid-row-2);
+        grid-gap: $grid-gap-large;
+      }
+
+      & > div {
+        border: 1px solid;
+      }
+  }
+  @media(min-width: $screen-medium) {
+    .grid-visible .master-grid {
+          grid-template-columns: $grid-medium;
+      }
+  }
+  @media(min-width: $screen-large) {
+    .grid-visible .master-grid {
+          grid-template-columns: $grid-large;
+      }
+  }
+  @media(min-width: $screen-larger) {
+    .grid-visible .master-grid {
+          grid-template-columns: $grid-larger;
+      }
+  }
+}

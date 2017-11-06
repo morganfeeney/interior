@@ -1,0 +1,81 @@
+@media(min-height: 30rem) {
+  .posts-nav-section {
+    position: sticky;
+    bottom: 0;
+    background: $brand-color-2;
+    margin-top: 2rem;
+  }
+}
+
+.posts-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $grid-column-gap-1;
+
+  .prev::before,
+  .next::after {
+    content: "";
+    border-top: $posts-nav-border;
+    border-left: $posts-nav-border;
+    width: 1.5rem;
+    height: 1.5rem;
+    grid-row: span 2;
+    align-self: center;
+  }
+
+  .prev::before {
+    transform: rotate(-45deg);
+  }
+
+  .next::after {
+    transform: rotate(135deg);
+    justify-self: flex-end;
+  }
+
+  a {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: $grid-column-gap-1 / 2;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+
+    @include baseline(
+      $font-size: $pica,
+      $line-height: 1.5rem,
+      $above: 1.25,
+      $below: 1.75
+    );
+
+    &.prev {
+      grid-template-columns: 1rem 1fr;
+
+      > span {
+        grid-column: 2;
+      }
+    }
+
+    &.next {
+      grid-template-columns: 1fr 1rem;
+      grid-column: 2;
+
+      > span {
+        grid-column: 1;
+        text-align: right;
+      }
+    }
+
+    > span:first-child {
+      font-weight: bold;
+    }
+
+    > span:last-child {
+      grid-row: 2;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      border-color: inherit;
+    }
+  }
+}

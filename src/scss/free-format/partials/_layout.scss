@@ -1,12 +1,36 @@
-// -----------------------------
+// -----------------------------------------------------------------------------
 // Layout
-// -----------------------------
+// -----------------------------------------------------------------------------
 
-.page-crack-magazine-1 #main-header::before {
+%flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  @media(min-width: 656px) {
+      margin-left: 2.444rem;
+    }
+    @media(min-width: 1366px) {
+      margin-left: 3.556rem;
+    }
+}
+
+.grid {
+  @include grid($gutter: 0);
+}
+
+.grid-main {
+  justify-content: space-between;
+}
+
+.page-crack-magazine-1 .main-header::before {
   content: none;
 }
 
-.page-crack-magazine-1 #main-article .container {
+.page-crack-magazine-1 .main-article .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -14,30 +38,41 @@
 
 .page-crack-magazine-1 {
   aside {
-    @include col(12, $calc: false, $margin: false);
+    @include column(
+      $columns: 12,
+      $calc: false,
+      $margin: false
+    );
     @include baseline($margin: .34);
     @media(min-width: $screen-medium) {
       @include baseline($margin: 12.34);
-      @include col(2);
+      @include column(2);
     }
   }
   .layout-contents {
     display: flex;
     flex-flow: row wrap;
     @media(min-width: $screen-medium) {
-      @include col(9, $margin: auto);
+      @include column(
+        $columns: 9,
+        $margin: auto
+      );
     }
     .item {
-      @include baseline($above: 1, $below: 2, $no-text: true);
-      @include grid($negative-gutter: -1rem);
+      @include baseline(
+        $above: 1,
+        $below: 2,
+        $no-text: true
+      );
+      @include grid($gutter: -1rem);
       @media(min-width: $screen-medium) {
-        @include grid($negative-gutter: 0);
+        @include grid($gutter: 0);
       }
       position: relative;
       &::before {
         content: "";
         border-top: $light-border;
-        @include col(12);
+        @include column(12);
         position: absolute;
         top: 0
       }
@@ -47,9 +82,16 @@
 
 .layout-contents .item:nth-child(1) {
   align-items: flex-end;
-  @include baseline($no-text: true, $above: .34);
+  @include baseline(
+    $no-text: true,
+    $above: .34
+  );
   @media(min-width: $screen-medium) {
-    @include baseline($margin: 12, $no-text: true, $above: .34);
+    @include baseline(
+      $margin: 12,
+      $no-text: true,
+      $above: .34
+    );
   }
   &::before {
     content: none;
@@ -59,7 +101,7 @@
       flex: 1 1 100%;
     }
     @media(min-width: $screen-medium) {
-      @include col(7);
+      @include column(7);
       @supports(object-fit: cover){
         height: $hero-image-offset-top;
         object-fit: cover;
@@ -71,9 +113,9 @@
     }
   }
   > div {
-    @include col(12);
+    @include column(12);
     @media(min-width: $screen-medium) {
-      @include col(5);
+      @include column(5);
     }
   }
 }
@@ -83,55 +125,88 @@
   .item:nth-child(4) {
     justify-content: space-between;
     > div {
-      @include col(12);
+      @include column(12);
       @media(min-width: $screen-medium) {
-        @include col(4);
+        @include column(4);
       }
     }
   }
 }
 
 .layout-contents .item:nth-child(2) {
-  @include baseline($no-text: true, $above: .34);
+  @include baseline(
+    $no-text: true,
+    $above: .34
+  );
   @media(min-width: $screen-medium) {
-    @include baseline($no-text: true, $above: 7.34, $below: 10);
+    @include baseline(
+      $no-text: true,
+      $above: 7.34,
+      $below: 10
+    );
   }
 }
 
 .layout-contents .item:nth-child(3) {
-  @include baseline($no-text: true, $above: 1.34, $below: 2.5);
+  @include baseline(
+    $no-text: true,
+    $above: 1.34,
+    $below: 2.5
+  );
   @media(min-width: $screen-medium) {
-    @include col(8, $calc: false, $margin: false);
+    @include column(
+      $columns: 8,
+      $calc: false,
+      $margin: false
+    );
     margin-left: auto;
     align-items: center;
   }
   > div {
-    @include col(6, $margin-left: auto);
+    @include column(
+      $columns: 6,
+      $margin-left: auto
+    );
   }
   > img {
-    @include col(6);
+    @include column(6);
   }
 }
 
 .layout-contents .item:nth-child(4) {
-  @include baseline($no-text: true, $above: 1.34, $below: 3);
+  @include baseline(
+    $no-text: true,
+    $above: 1.34,
+    $below: 3
+  );
   &::before {
     content: none;
   }
 }
 
 .layout-contents .item:nth-child(5) {
-  @include baseline($no-text: true, $above: 1.34, $below: 1.34);
+  @include baseline(
+    $no-text: true,
+    $above: 1.34,
+    $below: 1.34
+  );
   @media(min-width: $screen-medium) {
-    @include col(8, $calc: false, $margin: false);
+    @include column(
+      $columns: 8,
+      $calc: false,
+      $margin: false
+    );
     margin-right: auto;
     align-items: flex-start;
   }
   > img {
-    @include col(6, $margin-left: auto);
+    @include column(
+      $columns: 6,
+      $margin-left: auto
+    );
     order: 1;
   }
   > div {
-    @include col(6);
+    @include column(6);
   }
 }

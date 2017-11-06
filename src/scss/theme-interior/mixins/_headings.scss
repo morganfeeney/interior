@@ -1,0 +1,107 @@
+// Opting for @include over @extend here.
+
+@mixin heading-1() {
+  @include baseline(
+    $font-size: $paragon, //30px
+    $font-weight: bold,
+    $line-height: 3rem,
+    $above: 0.25,
+    $below: 2
+  );
+}
+
+@mixin heading-1-large() {
+  @include baseline(
+    $font-size: $two-line-pica, // 46px
+    $font-weight: bold,
+    $line-height: 4.5rem,
+    $above: 0.75,
+    $below: 2
+  );
+}
+
+@mixin heading-2() {
+  @include baseline(
+    $font-size: $great-primer, //24px
+    $font-weight: bold,
+    $line-height: 3rem,
+    $above: .33,
+    $below: 1,
+    $margin: -1
+  );
+}
+
+@mixin heading-3() {
+  @include baseline(
+    $font-size: $mittel, //18px
+    $font-weight: bold,
+    $line-height: 2rem,
+    $above: .25,
+    $below: 1,
+    $margin: -.5
+  );
+}
+
+@mixin heading-4() {
+  @include baseline(
+      $font-size: $augustin, // 20px
+      $line-height: 2.5rem,
+      $above: .65,
+      $below: 0
+  );
+}
+
+@mixin heading-5() {
+  @include baseline(
+    $font-size: $great-primer, //24px
+    $font-weight: bold,
+    $line-height: 1.25,
+    $above: .2,
+    $margin: 0,
+    $below: .1
+  );
+}
+
+@mixin heading-6() {
+  @include baseline(
+    $font-size: $english, //16px
+    $font-weight: bold,
+    $line-height: 2rem,
+    $above: .9,
+    $below: 0,
+    $margin: 0
+  );
+}
+
+@mixin heading-7() {
+  @include baseline(
+    $font-size: $english, //16px
+    $text-transform: uppercase,
+    $font-weight: bold,
+    $line-height: 2rem,
+    $above: .65,
+    $below: 0,
+    $margin: 1
+  );
+}
+
+@mixin heading-8() {
+  @include baseline(
+    $font-size: $philosophy, //12px
+    $text-transform: uppercase,
+    $font-weight: bold,
+    $line-height: 2rem,
+    $above: .65,
+    $below: 0,
+    $margin: 0
+  );
+}
+
+@mixin image-link-heading {
+  @include baseline(
+    $font-size: $pica, //14px
+    $font-weight: bold,
+    $line-height: 1.5rem,
+    $margin: .75
+  );
+}

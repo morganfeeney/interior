@@ -1,23 +1,39 @@
-// -----------------------------
+// -----------------------------------------------------------------------------
 // Mixin — Baseline
-// -----------------------------
-
+// -----------------------------------------------------------------------------
 @mixin baseline(
-    $font-size: $font-base,
-    $unit: 1,
-    $line-height: $line-height-base * $unit,
-    $margin: 0,
-    $above: 0,
-    $below: 0,
-    $padding-top: (cap-height($font-size))+($above*$base-line-unit),
-    $padding-bottom: null,
-    $margin-bottom: ($base-line-unit - $padding-top)+($below*$base-line-unit),
-    $margin-top: ($margin*$base-line-unit),
-    $no-text: false
-  ) {
+  $font-size: $font-base,
+  $font-weight: false,
+  $font-style: false,
+  $text-transform: false,
+  $unit: 1,
+  $line-height: ($line-height-base * $unit),
+  $margin: 0,
+  $above: 0,
+  $below: 0,
+  $top: ((cap-height($font-size))+($above*$base-line-unit)),
+  $padding-top: $top,
+  $padding-bottom: null,
+  $margin-bottom: (($base-line-unit - $top)+($below*$base-line-unit)),
+  $margin-top: ($margin * $base-line-unit),
+  $margin-only: false,
+  $no-text: false
+) {
   @if $no-text == false {
     font-size: $font-size;
     line-height: $line-height;
+  }
+  @if $font-weight != false {
+    font-weight: $font-weight;
+  }
+  @if $font-style != false {
+    font-style: $font-style;
+  }
+  @if $text-transform != false {
+    text-transform: $text-transform;
+  }
+  @if $margin-only != false {
+    $margin-top: $top;
   }
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
@@ -25,8 +41,29 @@
   margin-bottom: $margin-bottom;
 }
 
-@mixin baseline-grid($grid-color: $brand-color-1, $grid-bg: $brand-color-light, $grid-bg-size: 100vw .5rem) {
-  background-image: linear-gradient(to bottom, $grid-color 0, $grid-bg 1px);
-  background-repeat: repeat-y;
-  background-size: $grid-bg-size;
+@mixin baseline-grid(
+  $grid-color: $grid-color,
+  $grid-bg: $grid-bg,
+  $grid-bg-size: $grid-bg-size
+) {
+  @at-root {
+    html {
+      position: relative;
+    }
+  }
+  &::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      mix-blend-mode: multiply;
+      background:
+        linear-gradient($grid-color 0, transparent 1px) 0 0 / 100vw 1rem repeat-y,
+        linear-gradient(rgba($grid-color, 0.5) 0, transparent 1px) 0 0.5rem / 100vw 0.5rem repeat-y;
+      pointer-events: none;
+    }
 }

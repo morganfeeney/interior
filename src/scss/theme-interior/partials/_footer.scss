@@ -1,0 +1,11 @@
+
+
+.sig {
+  @include baseline(
+    $margin: 1,
+    $above: 1,
+    $below: 1
+  );
+  border-top: 1px solid #ff7070;
+  grid-column: 1 / span 6;
+}

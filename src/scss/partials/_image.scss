@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// Image
+// -----------------------------------------------------------------------------
+
+%fluid-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img {
+  @extend %fluid-img;
+}
+
+.container > img {
+  align-self: center;
+  @include baseline(
+    $font-size: $font-base,
+    $no-text: true,
+    $margin: 2
+  );
+}
+
+.item > img {
+  align-self: center;
+}
+
+p + img {
+  @include baseline(
+    $no-text: true,
+    $above: .4,
+    $below: .4
+  );
+}
+
+.image-box svg {
+  max-width: 100%;
+}

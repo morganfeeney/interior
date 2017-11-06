@@ -1,34 +1,32 @@
-// -----------------------------
+// -----------------------------------------------------------------------------
 // Free format — Main stylesheet
-// -----------------------------
+// -----------------------------------------------------------------------------
 
-@import "free-format/partials/variables";
 
 // Functions
 @import "functions/units";
 @import "functions/vertical-rhythm";
 
 // Variables
-@import "theme-interior/partials/variables";
+@import "partials/variables";
+@import "free-format/partials/variables";
 
 // Mixins
 @import "mixins/baseline";
-@import "mixins/col";
+@import "mixins/columns";
 
 // Theme Mixins
-@import "theme-interior/mixins/typography";
 @import "mixins/layout";
 
 // Core partials
-@import "partials/layout";
+@import "mixins/grid-overlay";
+@import "free-format/partials/grid-overlay";
+@import "partials/baseline-grid";
+@import "partials/image";
 
 // Theme partials
-@import "theme-interior/partials/base";
-@import "theme-interior/partials/layout";
+@import "theme-interior/base";
 @import "free-format/partials/typography";
-@import "theme-interior/partials/image";
 
 // Theme layouts
 @import "free-format/partials/layout";
-
-// Custom web fonts

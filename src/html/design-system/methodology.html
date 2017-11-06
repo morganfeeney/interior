@@ -1,0 +1,66 @@
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "Baseline is a tool for aligning copy to the baseline using CSS. Learn about how it works here." %}
+{% set post_page = true %}
+
+{% block content %}
+<section>
+  {{ super() }}
+
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/main-image/methodology-large.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/main-image/methodology-medium.svg">
+    <img src="/images/main-image/methodology-medium.svg" alt="Visual representation of a typographic measuring system—inspired by Bröckman" srcset="/images/main-image/methodology-medium.svg">
+  </picture>
+
+  <time class="hidden" datetime="2017-11-06T00:35:09.100Z" title="Published: Mon Nov 06 2017">Mon Nov 06 2017</time>
+
+  <div class="passage">
+    <h2>What?</h2>
+    <p>Frequently websites promoting methodologies focus on how code should be written, take for example the following popular examples:</p>
+    <br>
+    <ul>
+      <li><span>BEM</span></li>
+      <li><span>OOCSS</span></li>
+      <li><span>SMACSS</span></li>
+      <li><span>ITCSS</span></li>
+      <li><span>Atomic CSS</span></li>
+      <li><span>Functional CSS</span></li>
+    </ul>
+    <br>
+    <p>Now, it would be a bit daft if the promoters of those methodologies <em>didn't</em> focus on how code is written.
+      However when it comes to producing my own code I have to stop myself from over organising things, as sometimes only focusing on with the task at hand is what's needed.</p>
+      <p>Based upon my recent experiences of new CSS specs introducing features that impact the way Interior works,
+        for the latest incarnation I decided not to follow a methodology.</p>
+  </div>
+</section>
+
+<section id="constraints">
+  <div class="passage">
+    <h3>Constraints</h3>
+    <p>During the previous version of Interior, it felt like I was tying myself in knots due to what I was trying to achieve with automation, perhaps it was symptomatic of my approach.</p>
+    <p>A mixin that does a lot of heavy lifting can become nightmarish to alter, and difficult to maintain, which seems to defeat the object.
+      Imagine then tossing in the rigidity that comes with a pre-defined methodology, and applying those principles, seeing what works and what doesn't, especially if you are unfamiliar with them—the workload multiplies.</p>
+
+    <h4>Time</h4>
+    <p>Changing my mind, halfway through an iteration, that a methodology is a bad fit and then implementing either a new methodology,
+      or removing it, is more of a focus on tooling than anything else.</p>
+    <p>Therefore the main focus has not been on the code, at-least not in the sense of it being tied into a particular methodology, or worse still a framework that is built with one!</p>
+
+    <h4>Do what works</h4>
+    <p>My main focus can't always be code duplication, but it’s not that much of an issue in the case of Interior.
+      I’ve done what I needed to do to get something up and running in an efficient manner as possible whilst aiming to focus on what <em>really</em> matters.</p>
+  </div>
+</section>
+
+<section id="problem-solving">
+  <div class="passage">
+    <h3>Methodologies solve specific problems</h3>
+    <p>Maybe your code doesn't suffer from the kind of issues that crop up and give a methodology a use case,
+      you may have your own <em>nut to crack</em>. Introducing a methodology for the sake of it could
+      end up being the wrong decision. Think wisely as the repercussions can echo throughout eternity.</p>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block aside %}{% endblock %}
