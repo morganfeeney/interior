@@ -1,7 +1,7 @@
 # Interior
 
 Culmination of research and development of grid systems &amp; how to create layouts using them:
-[see this](codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox)
+[see this](https://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox)
 
 ## Documentation
 
