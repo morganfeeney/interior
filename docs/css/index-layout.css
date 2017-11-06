@@ -232,6 +232,23 @@ section {
   }
 }
 
+@media (min-width: 540px) and (max-width: 647px) {
+  .design-principles .section-info {
+    -ms-grid-row: span 1;
+        grid-row: span 1;
+  }
+  .design-principles .section-info:nth-of-type(2) {
+    -ms-grid-row-span: 1;
+    -ms-grid-row: 6;
+        grid-row: 6 / span 1;
+  }
+  .design-principles .section-info:nth-of-type(2) ~ .image-link {
+    -ms-grid-row-span: 2;
+    -ms-grid-row: 7;
+        grid-row: 7 / span 2;
+  }
+}
+
 @media (min-width: 648px) and (max-width: 977px) {
   .design-principles .section-info {
     -ms-grid-row: span 1;
