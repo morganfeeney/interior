@@ -1,18 +1,18 @@
-{% import "../macros/macro-image.njk" as images %}
+{% import "../fragments/image.njk" as images %}
 {% set title = page | capitalize | replace("-", " ") %}
 {% if development %}
-	{% set home_url = "http://local.interior.com/" %}
+	{% set home_url = "/" %}
 {% else %}
 	{% set home_url = "http://interiorsystem.co.uk/" %}
 {% endif %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {% if html_classes %}class="{{ html_classes }}"{% endif %}>
 	<head>
 		<meta charset="UTF-8">
 		<title>{% if page_title %}{{ page_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description | safe }}{% else %}TBA{% endif %}">
 		{% block linked_css %}
-			<link rel="stylesheet" href="/css/style.css">
+			<link rel="stylesheet" href="/css/interior.css">
 		{% endblock %}
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{% block header_scripts %}
@@ -22,26 +22,38 @@
 		{% endblock %}
 	</head>
 	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">
-		<header id="main-header" class="container-outer {{ main_header_classes }}">
+		{% block header %}
+		<header id="main-header" class="container-outer main-header {{ main_header_classes }}">
 			<div class="container">
-				{% block header %}
-					<a id="main-header-home-link" class="home-link" href="{{ home_url }}"><p>Interior</p><p>Layout system</p></a>
+				{% block header_content %}
+					<a id="main-header-home-link" class="home-link" href="{{ home_url }}">
+						{% include "partials/logo.njk" %}
+					</a>
 					<nav id="main-nav">
-						<a href="{{ home_url }}docs">Docs</a>
-						<a href="{{ home_url }}examples">Examples</a>
+						<a href="{{ home_url }}articles">Articles</a>
 					</nav>
 				{% endblock %}
 			</div>
 		</header>
-		<article id="main-article" class="container-outer {{ article_classes }}">
-			<main class="container-outer {{ main_classes }}">
-				<div class="container {{ container_class }}">
-					{% block main %}{% endblock %}
-				</div>
+		{% endblock %}
+		<article id="main-article" class="container-outer main-article {{ article_classes }}">
+			{% if article %}
+				{% block date %}
+				{% endblock %}
+			{% endif %}
+
+			<main class="container {{ main_classes }}">
+				{% block main %}{% endblock %}
 			</main>
+			{% if aside %}
+				<aside class="{{ aside_classes }}">
+					{% block aside %}
+					{% endblock %}
+				</aside>
+			{% endif %}
 			{% if post_page %}
 				{% block posts_nav %}
-					<section id="posts-nav-section" class="container-outer {{ posts_nav_section_classes }}">
+					<section class="container-outer posts-nav-section {{ posts_nav_section_classes }}">
 						<div class="container">
 							{% block posts_nav_content %}
 								{% include "../partials/components/posts-nav.njk" %}
@@ -52,7 +64,7 @@
 			{% endif %}
 		</article>
 		{% block main_footer %}
-			<footer id="main-footer" class="container-outer {{ main_footer_classes }}">
+			<footer id="main-footer" class="container-outer main-footer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}
 						{% include "partials/footer.njk" %}
@@ -61,9 +73,12 @@
 			</footer>
 		{% endblock %}
 		{% if development %}
-  		<script src="http://localhost:35729/livereload.js"></script>
+			{% block footer_scripts %}
+				{% include "../partials/footer-scripts.njk" %}
+			{% endblock %}
 		{% else %}
 		  {# NOWT #}
 		{% endif %}
+
 	</body>
 </html>

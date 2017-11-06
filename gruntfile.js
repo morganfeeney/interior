@@ -7,14 +7,16 @@ module.exports = function(grunt) {
   sass: {
    interior: {
     options: {
-      outputStyle: "compressed",
+      outputStyle: "expanded",
       sourceMapContents: true,
       sourceMap: true,
-      precision: 4
+      precision: 7
     },
     files: {
-     "docs/css/style.css": "src/scss/style.scss",
-     "docs/css/free-format.css": "src/scss/free-format.scss"
+      "docs/css/free-format.css": "src/scss/free-format.scss",
+      "docs/css/interior.css": "src/scss/interior.scss",
+      "docs/css/index-layout.css": "src/scss/theme-interior/layouts/index-layout.scss",
+      "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
     }
    }
   },
@@ -24,7 +26,8 @@ module.exports = function(grunt) {
     map: true,
     processors: [
      require("autoprefixer")({
-      browsers: ["last 3 versions"]
+      browsers: ["last 3 versions"],
+      grid: true
      })
     ]
    },
@@ -36,7 +39,7 @@ module.exports = function(grunt) {
   watch: {
    sass: {
     files: ["src/scss/**/*.scss"],
-    tasks: "sass",
+    tasks: ["sass", "postcss"],
     options: {
      spawn: false,
      livereload: true
@@ -83,24 +86,26 @@ module.exports = function(grunt) {
          cwd: "src/html/posts"
        },["*.html","!index.html"]);
        // Docs
-       var docs = grunt.file.expand({
+       var design_system = grunt.file.expand({
          filter: "isFile",
-         cwd: "src/html/docs"
+         cwd: "src/html/design-system"
        },["*.html","!index.html"]);
        // Examples
        var examples = grunt.file.expand({
          filter: "isFile",
          cwd: "src/html/examples"
        },["*.html","!index.html"]);
+       var screens = grunt.file.readJSON("screens.json");
        var result = {
          iso_date: iso_date,
          nice_date: nice_date,
          file: file,
          page: page,
          posts: posts,
-         docs: docs,
+         design_system: design_system,
          examples: examples,
-         data: data
+         data: data,
+         screens: screens
        };
        return result;
      },
@@ -123,7 +128,7 @@ module.exports = function(grunt) {
   // Clean task
   clean: {
     all: {
-      src: ["docs/**/*","!docs/**/CNAME","!docs/images","!docs/**/images/*"]
+      src: ["docs/**/*","!docs/**/CNAME","!docs/images","!docs/**/images/**/*"]
     },
     html: {
       src: ["docs/**/*.html"]

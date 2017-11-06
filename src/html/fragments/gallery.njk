@@ -1,0 +1,11 @@
+{% import "../fragments/image.njk" as images %}
+
+{% macro gallery(image_size="360", data_src="gallery") %}
+  <section class="gallery">
+    {% for gallery_item in data_src %}
+      <div class="gallery-item">
+        {{ images.image_placeholder(size=image_size) }}
+      </div>
+    {% endfor %}
+  </section>
+{% endmacro %}

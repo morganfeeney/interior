@@ -2,10 +2,10 @@
 {% set language="scss" %}
 {% block code %}<span class="comment">// A column with no calc()</span>
 .no-calc-example {
-  @include col(6, $calc: false);
+  @include column(6, $calc: false);
 }
 <span class="comment">// A column with no $margin</span>
 .no-margin-example {
-  @include col(6, $margin: false);
+  @include column(6, $margin: false);
 }
 {% endblock %}

@@ -1,0 +1,89 @@
+{% extends "layouts/design-principles-layout.njk" %}
+{% set page_description = "A brief account of where Interior came from, where it is now, plus some ideas about the future." %}
+{% set post_page = true %}
+
+{% block content %}
+<section>
+  {{ super() }}
+
+  <picture class="main-image">
+    <source media="(min-width: {{ screens.sizes["large"] }})" srcset="/images/main-image/specification-large.svg">
+    <source media="(min-width: {{ screens.sizes["medium"] }})" srcset="/images/main-image/specification-medium.svg">
+    <img src="/images/main-image/specification-medium.svg" alt="Visual representation of a CSS specification" srcset="/images/main-image/specification-medium.svg">
+  </picture>
+
+  <time class="hidden" datetime="2017-11-06T00:35:09.100Z" title="Published: Mon Nov 06 2017">Mon Nov 06 2017</time>
+
+  <div class="passage">
+    <h2>Focus</h2>
+    <p>I deliberately avoided focusing on code used to produce my work in each of the previous sections,
+      however <em>without</em> it what you are reading would not exist.
+      The advancement of <a href="https://www.w3.org/TR/css-grid-1/">Grid</a> is one of the catalysts behind this decision;
+      the other being an approach that I hadn't tried.</p>
+      <p>Prior to Grid, whilst writing: <a href="https://codepen.io/morganfeeney/post/dont-build-bootstrap-style-grid-systems-with-flexbox" target="_blank">Don't build a Bootstrap style grid-system with Flexbox</a>,
+      I thought about changing Interior from being yet <em>another</em> resource on how to generate a series of
+        “columns” using mixins, into a series of design principles that promote creativity in web design.</p>
+        <p>By that point I'd realised design is rarely the focal point when it comes to what we commonly refer to as a <em>Grid System</em>,
+          who knows what the reasoning behind the trend that has arisen really is?
+          Maybe it was born out of convenience, or worse still, we've simply copied each other.
+          There's also a thought in the back of my head telling me there's a shortage of industry-hardened graphic designers involved in web design for us to learn from.</p>
+          <br>
+          <p>Anyway... the future has arrived.</p>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="passage">
+    <h3>Impact</h3>
+    <p>Interior has always been experimental and a way for me to implement and learn.
+      It originally derived from Bootstrap 3.3.7.
+    <p>Then the Flex spec arrived and enabled more possibility, that meant re-writing Interior.</p>
+    <p>Just when I was coming to the end of so much learning, re-writing, and consideration, came Grid.</p>
+    <p>I was aiming to release Interior ahead of it, and convinced myself that a milestone in my progress would be a good thing to look back on,
+      but Grid beat me to it—I knew it would, I was being stubborn.</p>
+
+
+    <h4>Paradigm shift</h4>
+    <p>In anticipation of Grid—during Interior's “Flex period”—I rationalised: due to the new abilities the Grid spec provides;
+      I had better understand what a Grid System is.</p>
+    <p>To me, this meant studying a definitive source. I chose <em>Grid Systems in Graphic Design</em> by Joseph Müller-Brockmann.
+      After studying it, the realisation of what Brockmann documented hit me like <em>a ton of bricks</em>.</p>
+    <p>I tried to apply the guidance using Flex, and to a point things worked,
+      but getting there was so convoluted—in the end it couldn’t be achieved with the 1 dimensional Flex without the use of <code class="code-inline">margin</code>.</p>
+    <p>I decided out of curiosity to see for myself why there was so much enthusiasm for Grid.
+       Immediately my Flex based approach became obsolete, to continue would have been an exercise in futility.</p>
+  </div>
+</section>
+
+<section id="the-spec">
+  <div class="passage">
+    <h3>The spec is the framework</h3>
+    <p>Lately, I’ve read some articles, e.g. <a href="http://jensimmons.com/post/feb-28-2017/benefits-learning-how-code-layouts-css" target="_blank">this</a>,
+      that allude to the following sentiment: “the spec is the framework”,
+      specifically where Flex and Grid are concerned, and I agree.</p>
+      <p>But what about design principles, do they belong with a framework's documentation? Often they appear to lack any solid design reference.</p>
+      <p>The most popular, due to their own success, and people's desire for an <em>off-the-shelf</em> convenient solution; became
+        synonymous with the very concept of web design.</p>
+
+      <h4>How high is the bar set?</h4>
+      <p>What Grid provides is superb, however the way we approach layout won't progress
+        if we only regurgitate the same designs from before, using Grid.</p>
+        <p>Let's not forget the modern-day concept of grid layout originated from Swiss <em>Graphic Design</em>.</p>
+
+      <h4>The term Grid System needs to be re-defined</h4>
+      <p>Who’s responsibility is it to detail design principles, and should there be any?</p>
+      <p>Is this something that the spec could, should, or even consider referring to from a historical and educational point of view?</p>
+      <p>The reason I ask is that I believe the meaning behind what a “Grid System” is has been lost,
+          I learned the concept from frameworks, and I'm sure there will be many others like me.
+          However after reading the work of Brockmann and comparing to what I learnt from frameworks I feel like I missed something fundamental along the way.</p>
+
+    <p>If we only consider the recent articles, and presentations—e.g. <a href="https://vimeo.com/147950924" target="_blank">Jen Simmons'</a> and <a href="https://vimeo.com/239782886" target="_blank">Mark Boulton's</a>—about the design limitations of frameworks,
+      and how web design trends lead to stagnant and unimaginative results, why not supply the reference required to learn how to push the creative boundaries?</p>
+      <p>Perhaps the spec could provide said reference, after all it is the main source of documentation. Maybe I have misunderstood the purpose of a spec,
+        however Grid is not like any other we've seen the likes of before.</p>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block aside %}{% endblock %}

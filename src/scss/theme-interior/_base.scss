@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// Base
+// -----------------------------------------------------------------------------
+
+// Reset
+html {
+ box-sizing: border-box;
+ // Allow the baseline grid overlay to fill the viewport height.
+ min-height: 100%;
+}
+
+*, *::before, *::after {
+ box-sizing: inherit;
+ margin: 0;
+}
+
+// Baseline grid
+body {
+  line-height: $font-base;
+  font-size: $font-base;
+  -webkit-text-size-adjust: 100%;
+  font-family: $font-family-base;
+}
+
+html,
+body,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &,
+  &:link,
+  &:focus,
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.hidden {
+  display: none;
+}

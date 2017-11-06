@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="462px" viewBox="0 0 600 462" enable-background="new 0 0 600 462" xml:space="preserve">
+<pattern  x="-1650.4" y="-866.9" width="61" height="68.3" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_1" viewBox="0 -68.3 61 68.3" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 61,0 61,-68.3 0,-68.3 		"/>
+		<polygon fill="#FFF0F0" points="61,0 0,0 0,-68.3 61,-68.3 		"/>
+	</g>
+</pattern>
+<g>
+	<defs>
+		<rect id="SVGID_9_" x="-805.5" width="600" height="462"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_9_"  overflow="visible"/>
+	</clipPath>
+	<g id="Heading_1_" clip-path="url(#SVGID_2_)">
+		<defs>
+			<rect id="SVGID_13_" x="-811.5" y="-133.7" width="616" height="616"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_13_"  overflow="visible"/>
+		</clipPath>
+		<g opacity="0.8" clip-path="url(#SVGID_4_)">
+			<text transform="matrix(1 0 0 1 -808.5479 288.3086)" fill="#FF7070" font-family="'HelveticaNeue-Bold'" font-size="147">Grid systems</text>
+		</g>
+	</g>
+</g>
+<g>
+	<rect fill="url(#New_Pattern_Swatch_1)" width="600" height="462"/>
+	<g>
+		<g>
+			<rect x="165.5" y="115" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="142" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="169" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="196" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="222.9" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="249.9" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="276.9" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="303.9" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="330.9" fill="#FFFFFF" width="192.3" height="15.7"/>
+			<rect x="165.5" y="357.9" fill="#FFFFFF" width="192.3" height="15.7"/>
+		</g>
+		<rect x="218" y="81.2" fill="#FFFFFF" width="184.8" height="251.2"/>
+		<path fill="#B3B3B3" d="M410.3,339.9H210.5V73.7h199.8V339.9z M218,332.3h184.8V81.2H218V332.3z"/>
+		<g>
+			<rect x="249.5" y="111" fill="#CCCCCC" width="121.6" height="5.9"/>
+			<rect x="249.5" y="128.1" fill="#CCCCCC" width="97.7" height="5.9"/>
+			<rect x="249.5" y="145.1" fill="#CCCCCC" width="121.6" height="5.9"/>
+			<rect x="249.5" y="162.1" fill="#CCCCCC" width="97.7" height="5.9"/>
+			<rect x="249.5" y="179.1" fill="#CCCCCC" width="121.6" height="5.9"/>
+			<rect x="249.5" y="196.1" fill="#CCCCCC" width="97.7" height="5.9"/>
+			<rect x="249.5" y="213.1" fill="#CCCCCC" width="121.6" height="5.9"/>
+			<rect x="249.5" y="230.2" fill="#CCCCCC" width="97.7" height="5.9"/>
+			<rect x="249.5" y="247.2" fill="#CCCCCC" width="121.6" height="5.9"/>
+			<rect x="249.5" y="264.2" fill="#CCCCCC" width="97.7" height="5.9"/>
+		</g>
+		<path fill="none" d="M533.4,327.5l66.6-41.9v-47h-67.6v-84.2H600V104h-25.5c-23.2,0-42.1-18.9-42.1-42.1
+			c0-23.2,18.9-42.1,42.1-42.1H600v-4.3h-79.5v406.8H600v-52.9L533.4,327.5z"/>
+		<path fill="#FFFFFF" d="M539.9,61.9c0,19.1,15.5,34.6,34.6,34.6H600V27.3h-25.5C555.4,27.3,539.9,42.8,539.9,61.9z"/>
+		<path fill="#B3B3B3" d="M574.5,19.8c-23.2,0-42.1,18.9-42.1,42.1c0,23.2,18.9,42.1,42.1,42.1H600v-3.8v-3.8h-25.5
+			c-19.1,0-34.6-15.5-34.6-34.6s15.5-34.6,34.6-34.6H600v-3.8v-3.8H574.5z"/>
+		<rect x="539.9" y="162" fill="#FFFFFF" width="60.1" height="69.1"/>
+		<polygon fill="#B3B3B3" points="532.4,154.5 532.4,238.6 600,238.6 600,234.9 600,231.1 539.9,231.1 539.9,162 600,162 600,158.2 
+			600,154.5 		"/>
+		<polygon fill="#FFFFFF" points="600,360.5 600,294.5 547.6,327.5 		"/>
+		<polygon fill="#B3B3B3" points="533.4,327.5 600,369.4 600,365 600,360.5 547.6,327.5 600,294.5 600,290.1 600,285.7 		"/>
+		<path fill="none" d="M0,38v51l53.2,33.5L0,155.9v55.5h54.2v84.2H0V346h12.1c23.2,0,42.1,18.9,42.1,42.1
+			c0,23.2-18.9,42.1-42.1,42.1H0v5.3h79.5V38H0z"/>
+		<path fill="#FFFFFF" d="M46.7,388.1c0-19.1-15.5-34.6-34.6-34.6H0v69.1h12.1C31.2,422.6,46.7,407.1,46.7,388.1z"/>
+		<path fill="#B3B3B3" d="M12.1,346H0v3.8v3.8h12.1c19.1,0,34.6,15.5,34.6,34.6c0,19.1-15.5,34.6-34.6,34.6H0v3.8v3.8h12.1
+			c23.2,0,42.1-18.9,42.1-42.1C54.2,364.9,35.4,346,12.1,346z"/>
+		<rect y="218.8" fill="#FFFFFF" width="46.7" height="69.1"/>
+		<polygon fill="#B3B3B3" points="0,211.3 0,215.1 0,218.8 46.7,218.8 46.7,288 0,288 0,291.7 0,295.5 54.2,295.5 54.2,211.3 		"/>
+		<polygon fill="#FFFFFF" points="0,97.8 0,147 39.1,122.4 		"/>
+		<polygon fill="#B3B3B3" points="0,89 0,93.4 0,97.8 39.1,122.4 0,147 0,151.4 0,155.9 53.2,122.4 		"/>
+	</g>
+</g>
+</svg>

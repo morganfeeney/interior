@@ -1,0 +1,38 @@
+.main-header {
+  background: $brand-color-2;
+}
+
+.main-header nav {
+  text-align: right;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.main-header nav a {
+  &:not(:last-child) {
+    margin-right: $horizontal-space-small;
+  }
+
+  @include body-1();
+
+  @media(min-width: $screen-large) {
+    @include body-2();
+  }
+
+  // Cascade over the previous ruleset's line-height
+  @media(min-width: $screen-small) {
+    line-height: 3rem;
+  }
+}
+
+.main-header .home-link svg {
+  width: 8rem; // gives a computed height of 28px (1:4)
+
+  @media(max-width: $screen-small-max) {
+    margin-bottom: .5rem; // balances vertical rhythm with this width
+  }
+
+  @media(min-width: $screen-small) {
+    width: 10rem; // gives a computed height of 35px (1:4)
+  }
+}

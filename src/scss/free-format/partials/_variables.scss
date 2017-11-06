@@ -1,6 +1,23 @@
-// -----------------------------
-// variables
-// -----------------------------
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+
+//** Columns
+//
+// Number of columns
+$max-columns: 12 !default;
+
+// Typographic scale: https://gist.github.com/morganfeeney/0dc92d8368787a4a260fb8c002dfeb8d
+//
+// Deprecated, use variables from theme-interior.
+$canon: font-scale(3) !default; // 48px
+$double-great-primer: font-scale(2.250) !default; // 36px
+$four-line-brevier: font-scale(2) !default; // 32px
+$two-line-pica: font-scale(1.5) !default; // 24px
+$double-pica: font-scale(1.313) !default; // 21px
+$great-primer: font-scale(1.125) !default; // 18px
+$english: font-scale(.875) !default; // 14px
+$pica: font-scale(.75) !default; // 12px
 
 $light-gray: lightgray;
 $brand-color-1: $light-gray;
@@ -8,3 +25,110 @@ $brand-color-light: lighten($brand-color-1, 15);
 $wrapper-width-large: 100rem;
 $hero-image-offset-top: 25rem;
 $link-color: #000;
+
+$gutter-smaller: $grid-gutter/2 !default;
+$gutter-small: $grid-gutter/2 !default;
+$gutter-medium: $grid-gutter/2 !default;
+$gutter-large: $grid-gutter/2 !default;
+
+//** Screens
+//
+// Screen widths (min-width)
+$screen-smaller: 400px !default;
+$screen-small: 569px !default;
+$screen-medium: 700px !default;
+$screen-large: 900px !default;
+$screen-larger: 1200px !default;
+$screen-largest: 1400px !default;
+$screen-whopper: 2000px !default;
+
+// Screen widths (max-width)
+$screen-small-max: ($screen-small)-1 !default;
+$screen-medium-max: ($screen-medium)-1 !default;
+$screen-large-max: ($screen-large)-1 !default;
+$screen-larger-max: ($screen-larger)-1 !default;
+$screen-largest-max: ($screen-largest)-1 !default;
+$screen-whopper-max: ($screen-whopper)-1 !default;
+
+// Container gutters
+$container-gutter: 5rem !default;
+
+$container-gutter: 6rem;
+
+$container-gutter-small: $container-gutter/2 !default;
+$container-gutter-smaller: $container-gutter-small/2 !default;
+
+//** Wrappers
+$wrapper-width-large: $screen-larger !default;
+$grid-overlay-width: $wrapper-width-large !default;
+
+// Breakpoints
+$breakpoints-map: (
+  small: (
+    gutter: $gutter-smaller,
+    container-gutter: 3rem,
+    breakpoint: false,
+    margin: true
+  ),
+  large: (
+    gutter: $gutter-large,
+    container-gutter: 10rem,
+    breakpoint: $screen-large,
+    margin: true
+  )
+)!default;
+$breakpoints: map-values($breakpoints-map)!default;
+
+$breakpoints-mm-map: (
+  smaller: (
+    gutter: $gutter-smaller,
+    container-gutter: $container-gutter-smaller,
+    columns: 4,
+    breakpoint: false,
+    margin: true
+  ),
+  small: (
+    gutter: $gutter-small,
+    container-gutter: $container-gutter-smaller,
+    breakpoint: $screen-small
+  ),
+  medium: (
+    gutter: f$gutter-small,
+    container-gutter: $container-gutter-small,
+    breakpoint: $screen-medium
+  ),
+  large: (
+    gutter: font-scale(2.5),
+    container-gutter: $container-gutter,
+    breakpoint: $screen-large,
+    margin: true
+  )
+)!default;
+$breakpoints-mm: map-values($breakpoints-mm-map)!default;
+
+$overlay-breakpoints-map: (
+  smaller: (
+    gutter: $gutter-smaller,
+    container-gutter: $container-gutter-smaller,
+    breakpoint: false,
+    columns: 4,
+    margin: true
+  ),
+  small: (
+    gutter: $gutter-small,
+    container-gutter: $container-gutter-smaller,
+    breakpoint: $screen-small,
+    columns: 2
+  ),
+  medium: (
+    gutter: $gutter-small,
+    container-gutter: $gutter-medium,
+    breakpoint: $screen-medium
+  ),
+  large: (
+    gutter: $gutter-small,
+    container-gutter: $container-gutter,
+    breakpoint: $screen-large
+  )
+)!default;
+$overlay-breakpoints: map-values($overlay-breakpoints-map)!default;

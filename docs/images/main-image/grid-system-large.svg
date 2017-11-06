@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="612px" height="600px" viewBox="0 0 612 600" enable-background="new 0 0 612 600" xml:space="preserve">
+<rect fill="#FFFF00" width="612" height="600"/>
+<g>
+	<defs>
+		<rect id="SVGID_5_" width="612" height="600"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_5_"  overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_2_)">
+		<rect x="291.5" y="-56.5" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="23.7" height="723"/>
+		<rect x="83.6" y="-56.5" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="23.7" height="723"/>
+		<rect x="499.5" y="-56.5" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="23.7" height="723"/>
+		<rect x="-58.1" y="293.2" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="723" height="23.7"/>
+		<rect x="-58.1" y="85.6" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="723" height="23.7"/>
+		<rect x="-58.1" y="506.8" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="723" height="23.7"/>
+	</g>
+</g>
+<g id="Heading">
+	<defs>
+		<rect id="SVGID_7_" width="612" height="600"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_7_"  overflow="visible"/>
+	</clipPath>
+	<g opacity="0.8" clip-path="url(#SVGID_4_)">
+		<text transform="matrix(1 0 0 1 -4.6328 430.0376)" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="bold" font-size="151.3675">Grid systems</text>
+	</g>
+	<g opacity="0.7" clip-path="url(#SVGID_4_)">
+		<rect x="-2.6" y="531.1" fill="none" width="616" height="181.6"/>
+		<text transform="matrix(1 0 0 1 -2.585 564.9761)" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="47.3846">In web design</text>
+	</g>
+	<g opacity="0.7" clip-path="url(#SVGID_4_)">
+		<rect x="315.2" y="50.7" fill="none" width="490.4" height="57.8"/>
+		<text transform="matrix(1 0 0 1 315.1973 84.5669)" fill="#FF7070" font-family='"Helvetica Neue", Helvetica, Arial, sans-serif' font-size="47.3846">Visual communication</text>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_9_" y="754" width="612" height="438"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_9_"  overflow="visible"/>
+	</clipPath>
+	<rect x="-2" y="590.3" clip-path="url(#SVGID_6_)" fill="#FFFF00" width="616" height="616"/>
+	<g clip-path="url(#SVGID_6_)">
+		<defs>
+			<rect id="SVGID_11_" x="-2" y="620.3" width="616" height="616"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_11_"  overflow="visible"/>
+		</clipPath>
+		<g clip-path="url(#SVGID_8_)">
+			<rect x="291.5" y="563.8" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="23.7" height="723"/>
+			<rect x="83.6" y="563.8" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="23.7" height="723"/>
+			<rect x="499.5" y="563.8" fill="none" stroke="#666666" stroke-width="0.5" stroke-miterlimit="10" width="23.7" height="723"/>
+		</g>
+	</g>
+</g>
+</svg>

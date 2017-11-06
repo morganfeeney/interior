@@ -1,0 +1,19 @@
+.image-link span {
+  @include image-link-heading();
+
+  color: $brand-color-4;
+  counter-increment: default-counter;
+
+  @media(max-width: $screen-smaller-max) {
+    margin-top: -.25rem;
+  }
+
+  &::before {
+    content: counter(default-counter)" ";
+    border-bottom: .14rem solid $brand-color-1;
+    text-align: center;
+    width: auto;
+    margin-right: .5rem;
+    padding-bottom: .25rem;
+  }
+}

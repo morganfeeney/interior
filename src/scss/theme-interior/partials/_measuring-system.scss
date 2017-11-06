@@ -1,0 +1,29 @@
+$measuring-systems: (
+  // The following is based on the measure when applied to a grid
+  // more of a Typographic measuring system than modular scale.
+  // html font-size at 75%
+  system-1: (
+    two-line-pica: 3.833rem, //46px
+      double-pica: 3.5rem, //42px
+    paragon: 2.5rem, //30px
+      great-primer: 2rem, //24px
+    augustin: 1.667rem, // 20px
+      mittel: 1.5rem, //18px
+    english: 1.333rem, //16px
+      pica: 1.167rem, //14px
+    philosophy: 1rem //12px
+  )
+);
+
+// html font-size at 87.5%
+$system-1: map-get($measuring-systems, system-1);
+
+  $two-line-pica: map-get($system-1, two-line-pica);
+  $double-pica: map-get($system-1, double-pica);
+  $paragon: map-get($system-1, paragon);
+  $great-primer: map-get($system-1, great-primer);
+  $augustin: map-get($system-1, augustin);
+  $mittel: map-get($system-1, mittel);
+  $english: map-get($system-1, english);
+  $pica: map-get($system-1, pica);
+  $philosophy: map-get($system-1, philosophy);
