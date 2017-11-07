@@ -13,7 +13,6 @@ module.exports = function(grunt) {
       precision: 7
     },
     files: {
-      "docs/css/free-format.css": "src/scss/free-format.scss",
       "docs/css/interior.css": "src/scss/interior.scss",
       "docs/css/index-layout.css": "src/scss/theme-interior/layouts/index-layout.scss",
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
