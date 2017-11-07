@@ -221,7 +221,7 @@ h1 {
 }
 
 .figure-layout-1 {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   display: grid;
   grid-row-gap: 1rem;
 }
@@ -242,6 +242,7 @@ h1 {
 @media (min-width: 978px) {
   .figure-layout-1 {
     grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / span 3;
   }
   .figure-layout-1 picture {
     grid-column: 1 / span 2;

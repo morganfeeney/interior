@@ -1,7 +1,7 @@
 {
   "name": "interior",
-  "description": "Scss & flexbox layout system.",
-  "version": "2.1.0",
+  "description": "A design system for the modern web.",
+  "version": "3.0.5",
   "author": "Morgan Feeney",
   "license": "MIT",
   "devDependencies": {
@@ -13,7 +13,6 @@
     "grunt-postcss": "^0.6.0",
     "grunt-prettify": "^0.4.0",
     "grunt-sass": "^1.2.0",
-    "grunt-sync": "^0.2.3",
     "load-grunt-tasks": "^3.1.0",
     "time-grunt": "^1.1.0"
   },
@@ -36,6 +35,11 @@
     "fluid",
     "mobile-first",
     "front-end",
-    "grid-system"
+    "grid-system",
+    "design-system",
+    "graphic-design",
+    "typography",
+    "grid",
+    "layout"
   ]
 }

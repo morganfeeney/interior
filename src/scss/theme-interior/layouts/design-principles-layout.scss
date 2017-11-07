@@ -129,7 +129,7 @@ section:nth-child(1) .passage {
 }
 
 .figure-layout-1 {
-  grid-column: 1 / span 3;
+  grid-column: 1 / span 2;
   display: grid;
   grid-row-gap: $grid-row-gap-1;
 
@@ -148,6 +148,7 @@ section:nth-child(1) .passage {
 
   @media(min-width: $screen-medium) {
     grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / span 3;
 
     picture {
       grid-column: 1 / span 2;
