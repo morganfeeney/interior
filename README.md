@@ -11,7 +11,7 @@ MIT License
 
 This project would not be possible without:
 * [CSS Grid](https://www.w3.org/TR/css-grid-1/)
-* [Grid Systems in Graphic design by Josef Müller Brockman](https://en.wikipedia.org/wiki/Josef_M%C3%BCller-Brockmann)
+* [Grid Systems in Graphic design by Josef Müller Brockmann](https://en.wikipedia.org/wiki/Josef_M%C3%BCller-Brockmann)
 * [Firefox grid inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 * [Grid by Example](http://gridbyexample.com)
 * The ongoing support from Yuanyuan Zhang
