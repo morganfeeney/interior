@@ -14,6 +14,7 @@ module.exports = function(grunt) {
     },
     files: {
       "docs/css/interior.css": "src/scss/interior.scss",
+      "src/css/critical/interior.css": "src/scss/interior.scss",
       "docs/css/index-layout.css": "src/scss/theme-interior/layouts/index-layout.scss",
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
     }
@@ -166,9 +167,9 @@ module.exports = function(grunt) {
  // Default task(s).
  grunt.registerTask("default", [
   "clean:all",
+  "sass",
   "nunjucks",
   "prettify",
-  "sass",
   "postcss",
   "watch"
  ]);

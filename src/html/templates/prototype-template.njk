@@ -1,16 +1,21 @@
 {% import "../fragments/image.njk" as images %}
 {% set title = page | capitalize | replace("-", " ") %}
-{% if development %}
-	{% set home_url = "/" %}
-{% else %}
-	{% set home_url = "http://interiorsystem.co.uk/" %}
-{% endif %}
+
 <!DOCTYPE html>
 <html lang="en" {% if html_classes %}class="{{ html_classes }}"{% endif %}>
 	<head>
 		<meta charset="UTF-8">
 		<title>{% if page_title %}{{ page_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description | safe }}{% else %}TBA{% endif %}">
+		{% block critical_css %}
+			{% if development %}
+					<link rel="stylesheet" href="/css/interior.css">
+				{% else %}
+				<style>
+					{% include "../../css/critical/interior.css" %}
+				</style>
+				{% endif %}
+		{% endblock %}
 		{% block linked_css %}
 			<link rel="stylesheet" href="/css/interior.css">
 		{% endblock %}
@@ -26,11 +31,11 @@
 		<header id="main-header" class="container-outer main-header {{ main_header_classes }}">
 			<div class="container">
 				{% block header_content %}
-					<a id="main-header-home-link" class="home-link" href="{{ home_url }}">
+					<a id="main-header-home-link" class="home-link" href="/">
 						{% include "partials/logo.njk" %}
 					</a>
 					<nav id="main-nav">
-						<a href="{{ home_url }}articles">Articles</a>
+						<a href="/articles">Articles</a>
 						<a href="https://github.com/morganfeeney/interior" target="_blank">Code</a>
 					</nav>
 				{% endblock %}
