@@ -166,9 +166,7 @@ module.exports = function(grunt) {
           return true;
         }
       })(),
-    "wrap_line_length": 250,
-    "brace_style": "collapse",
-    "preserve_newlines": false,
+    "preserveBOM": false,
     "condense": true,
     "max_preserve_newlines": 2,
     "unformatted": ["style", "svg", "a", "code", "pre"]
