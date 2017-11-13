@@ -7,14 +7,21 @@ module.exports = function(grunt) {
   sass: {
    interior: {
     options: {
-      outputStyle: "expanded",
+      outputStyle:
+      (function() {
+        if (development) {
+          return "expanded";
+        } else {
+          return "compressed";
+        }
+      })(),
       sourceMapContents: true,
       sourceMap: true,
       precision: 7
     },
     files: {
       "docs/css/interior.css": "src/scss/interior.scss",
-      "src/css/critical/interior.css": "src/scss/interior.scss",
+      "src/html/critical-css/interior.css": "src/scss/interior.scss",
       "docs/css/index-layout.css": "src/scss/theme-interior/layouts/index-layout.scss",
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
     }
@@ -112,7 +119,8 @@ module.exports = function(grunt) {
       env.addGlobal('development', development);
     },
     data: grunt.file.readJSON("data.json"),
-    paths: "src/html"
+    paths: "src/html",
+    noCache: false // Flag to speed up nunjucks compilation
    },
    dev: {
     files: [{
@@ -141,12 +149,20 @@ module.exports = function(grunt) {
    options: {
     "indent": 1,
     "indent_char": " ",
+    "indent_inner_html":
+      (function() {
+        if (development) {
+          return false;
+        } else {
+          return true;
+        }
+      })(),
     "wrap_line_length": 250,
     "brace_style": "collapse",
-    "preserve_newlines": true,
+    "preserve_newlines": false,
     "condense": true,
     "max_preserve_newlines": 2,
-    "unformatted": ["a", "code", "pre"]
+    "unformatted": ["style", "svg", "a", "code", "pre"]
    },
    all: {
     expand: true,
