@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
   sass: {
-   link: {
+   linked: {
     options: {
       outputStyle:
       (function() {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
     }
   },
-  inline: {
+  embedded: {
     options: {
       outputStyle: "compressed",
       sourceMap: false,
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 },
   // Post CSS task
   postcss: {
-    link: {
+    linked: {
       src: ["docs/css/**/*.css"],
       options: {
        map: true,
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
        ]
       },
     },
-    inline: {
+    embedded: {
       src: ["src/html/critical-css/*.css"],
       options: {
        processors: [
