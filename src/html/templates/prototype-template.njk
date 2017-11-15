@@ -8,13 +8,13 @@
 		<title>{% if page_title %}{{ page_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
 		<meta name="description" content="{% if page_description %}{{ page_description | safe }}{% else %}TBA{% endif %}">
 
-		{% block critical_css %}
+		{% block embedded_css %}
 			{% if development %}
 					<link rel="stylesheet" href="/css/interior.css">
 				{% else %}
-				<style>
-					{% include "critical-css/interior.css" %}
-				</style>
+					<style>
+						{% include "critical-css/interior.css" %}
+					</style>
 				{% endif %}
 		{% endblock %}
 
@@ -25,7 +25,6 @@
 			{% include "partials/head-scripts.njk" %}
 		{% endblock %}
 
-		{% block embedded_css %}{% endblock %}
 	</head>
 
 	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">

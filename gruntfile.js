@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
   sass: {
-   interior: {
+   link: {
     options: {
       outputStyle:
       (function() {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
     }
   },
-  criticalCSS: {
+  inline: {
     options: {
       outputStyle: "compressed",
       sourceMap: false,
@@ -38,17 +38,27 @@ module.exports = function(grunt) {
 },
   // Post CSS task
   postcss: {
-   options: {
-    map: true,
-    processors: [
-     require("autoprefixer")({
-      browsers: ["last 3 versions"]
-     })
-    ]
-   },
-   interior: {
-    src: "docs/css/**/*.css"
-   }
+    link: {
+      src: ["docs/css/**/*.css"],
+      options: {
+       map: true,
+       processors: [
+        require("autoprefixer")({
+         browsers: ["last 3 versions"]
+        })
+       ]
+      },
+    },
+    inline: {
+      src: ["src/html/critical-css/*.css"],
+      options: {
+       processors: [
+        require("autoprefixer")({
+         browsers: ["last 3 versions"]
+        })
+       ]
+      },
+    }
   },
   // Watch task
   watch: {
@@ -61,7 +71,7 @@ module.exports = function(grunt) {
     }
    },
    css: {
-    files: ["docs/css/**/*.css"],
+    files: ["docs/css/**/*.css", "src/html/critical-css/*.css"],
     tasks: "postcss",
     options: {
      spawn: false,
@@ -131,7 +141,7 @@ module.exports = function(grunt) {
     paths: "src/html",
     noCache: false // Flag to speed up nunjucks compilation
    },
-   dev: {
+   all: {
     files: [{
      expand: true,
      cwd: "src/html",
@@ -191,9 +201,9 @@ module.exports = function(grunt) {
  grunt.registerTask("default", [
   "clean:all",
   "sass",
+  "postcss",
   "nunjucks",
   "prettify",
-  "postcss",
   "watch"
  ]);
 };
