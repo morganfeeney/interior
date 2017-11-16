@@ -11,9 +11,10 @@
 {% endblock %}
 
 {% block embedded_css %}
+  {{ super() }}
   <style>
     h1 {
-      grid-row: 1;
+      grid-row: 1!important;
       margin-bottom: -.05rem;
     }
     .time {

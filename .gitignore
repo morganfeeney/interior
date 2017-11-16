@@ -6,3 +6,5 @@ config.codekit
 .sublime-project
 #docs/**/*
 docs/!CNAME
+src/html/critical-css/**/*.css
+src/html/critical-css/**/*.css.map

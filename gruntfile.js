@@ -5,9 +5,16 @@ module.exports = function(grunt) {
   pkg: grunt.file.readJSON("package.json"),
   // Sass task
   sass: {
-   interior: {
+   linked: {
     options: {
-      outputStyle: "expanded",
+      outputStyle:
+      (function() {
+        if (development) {
+          return "expanded";
+        } else {
+          return "compressed";
+        }
+      })(),
       sourceMapContents: true,
       sourceMap: true,
       precision: 7
@@ -17,21 +24,41 @@ module.exports = function(grunt) {
       "docs/css/index-layout.css": "src/scss/theme-interior/layouts/index-layout.scss",
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"
     }
-   }
   },
+  embedded: {
+    options: {
+      outputStyle: "compressed",
+      sourceMap: false,
+      precision: 7
+    },
+    files: {
+      "src/html/critical-css/interior.css": "src/scss/interior.scss"
+    }
+  },
+},
   // Post CSS task
   postcss: {
-   options: {
-    map: true,
-    processors: [
-     require("autoprefixer")({
-      browsers: ["last 3 versions"]
-     })
-    ]
-   },
-   interior: {
-    src: "docs/css/**/*.css"
-   }
+    linked: {
+      src: ["docs/css/**/*.css"],
+      options: {
+       map: true,
+       processors: [
+        require("autoprefixer")({
+         browsers: ["last 3 versions"]
+        })
+       ]
+      },
+    },
+    embedded: {
+      src: ["src/html/critical-css/*.css"],
+      options: {
+       processors: [
+        require("autoprefixer")({
+         browsers: ["last 3 versions"]
+        })
+       ]
+      },
+    }
   },
   // Watch task
   watch: {
@@ -44,7 +71,7 @@ module.exports = function(grunt) {
     }
    },
    css: {
-    files: ["docs/css/**/*.css"],
+    files: ["docs/css/**/*.css", "src/html/critical-css/*.css"],
     tasks: "postcss",
     options: {
      spawn: false,
@@ -111,9 +138,10 @@ module.exports = function(grunt) {
       env.addGlobal('development', development);
     },
     data: grunt.file.readJSON("data.json"),
-    paths: "src/html"
+    paths: "src/html",
+    noCache: false // Flag to speed up nunjucks compilation
    },
-   dev: {
+   all: {
     files: [{
      expand: true,
      cwd: "src/html",
@@ -140,12 +168,18 @@ module.exports = function(grunt) {
    options: {
     "indent": 1,
     "indent_char": " ",
-    "wrap_line_length": 250,
-    "brace_style": "collapse",
-    "preserve_newlines": true,
+    "indent_inner_html":
+      (function() {
+        if (development) {
+          return false;
+        } else {
+          return true;
+        }
+      })(),
+    "preserveBOM": false,
     "condense": true,
     "max_preserve_newlines": 2,
-    "unformatted": ["a", "code", "pre"]
+    "unformatted": ["style", "svg", "a", "code", "pre"]
    },
    all: {
     expand: true,
@@ -166,10 +200,10 @@ module.exports = function(grunt) {
  // Default task(s).
  grunt.registerTask("default", [
   "clean:all",
-  "nunjucks",
-  "prettify",
   "sass",
   "postcss",
+  "nunjucks",
+  "prettify",
   "watch"
  ]);
 };

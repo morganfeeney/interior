@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <title>Vertical alignment</title>
   <meta name="description" content="Understanding vertical alignment used in conjunction with Grid Systems.">
-  <link rel="stylesheet" href="/css/interior.css">
+  <style>
+						html{position:relative}.baseline-grid::before{content:"";width:100%;position:absolute;top:0;bottom:0;left:0;right:0;z-index:2;mix-blend-mode:multiply;background:-o-linear-gradient(#FF7070 0, transparent 1px) 0 0/100vw 1rem repeat-y,-o-linear-gradient(rgba(255,112,112,0.5) 0, transparent 1px) 0 0.5rem/100vw 0.5rem repeat-y;background:linear-gradient(#FF7070 0, transparent 1px) 0 0/100vw 1rem repeat-y,linear-gradient(rgba(255,112,112,0.5) 0, transparent 1px) 0 0.5rem/100vw 0.5rem repeat-y;pointer-events:none}img{max-width:100%;height:auto;display:block}.container>img{-ms-flex-item-align:center;align-self:center;padding-top:.16rem;margin-top:2rem;margin-bottom:.84rem}.item>img{-ms-flex-item-align:center;align-self:center}p+img{padding-top:.56rem;margin-top:0rem;margin-bottom:.84rem}.image-box svg{max-width:100%}.button-grid-toggle{position:absolute;bottom:0;right:0;padding:.5rem .75rem;background:#ff7070;border:none;-webkit-box-shadow:0px 2px 0px #000000, 0px 1px 0px #fff inset;box-shadow:0px 2px 0px #000000, 0px 1px 0px #fff inset;border-radius:.4rem 0 0;color:#fff}@media (min-width: 708px){.button-grid-toggle{position:fixed}}code,pre{white-space:pre}pre{-moz-tab-size:4;-o-tab-size:4;tab-size:4}pre code{background:rgba(255,179,179,0.2);display:block;padding-left:2rem;padding-right:2rem;overflow:auto;-webkit-overflow-scrolling:touch}pre.code-block::before{content:attr(rel);background:#555;display:block;color:#fff;text-transform:uppercase;font-family:"Inconsolata",monospace,courier;font-size:.65rem;font-weight:bold;letter-spacing:.15rem}code{background:rgba(255,112,112,0.1)}.comment{color:#999}pre{padding-top:0;margin-top:1rem;margin-bottom:.84rem}pre:before{font-size:1.333rem;line-height:1.5;padding-top:.21328rem;margin-top:0rem;margin-bottom:.78672rem;margin-bottom:0;padding-left:1rem;padding-bottom:.05rem}.code-inline{line-height:1;font-family:"Inconsolata",monospace,courier;font-weight:normal}code:not(.code-inline){font-size:1.667rem;line-height:2;padding-top:.76672rem;margin-top:0rem;margin-bottom:0;padding-bottom:1rem}html{-webkit-box-sizing:border-box;box-sizing:border-box;min-height:100%}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0}body{line-height:1rem;font-size:1rem;-webkit-text-size-adjust:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}html,body,figure{margin:0;padding:0}a,a:link,a:focus,a:hover{color:#FF7070}.hidden{display:none}html{font-size:75%}body{-webkit-font-kerning:normal;font-kerning:normal}h1{font-size:2.5rem;line-height:3rem;font-weight:bold;padding-top:.65rem;margin-top:0rem;margin-bottom:2.35rem}@media (min-width: 1332px){h1{font-size:3.833rem;line-height:4.5rem;font-weight:bold;padding-top:1.36328rem;margin-top:0rem;margin-bottom:1.63672rem}}h2,h3{font-size:1.5rem;line-height:2rem;font-weight:bold;padding-top:.49rem;margin-top:-.5rem;margin-bottom:1.51rem}h4,h5,h6{font-size:1.333rem;line-height:2rem;font-weight:bold;padding-top:1.11328rem;margin-top:0rem;margin-bottom:-.11328rem}p{font-size:1.333rem;line-height:2rem;padding-top:.66328rem;margin-top:0rem;margin-bottom:.33672rem}@media (min-width: 1332px){p{font-size:1.5rem;line-height:2rem;padding-top:.69rem;margin-top:0rem;margin-bottom:.31rem}}.lead{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem}@media (min-width: 648px){.lead{font-size:2rem;line-height:3rem;padding-top:.82rem;margin-top:0rem;margin-bottom:.18rem}}.passage{orphans:1}@media (min-width: 1656px){.passage{padding-top:.16rem;margin-top:0rem;margin-bottom:.84rem}}.passage p,.passage br,.unit-conversion p{font-size:1.333rem;line-height:2rem;padding-top:.41328rem;margin-top:0rem;margin-bottom:.58672rem;margin:0;padding:0}@media (min-width: 1656px){.passage p,.passage br,.unit-conversion p{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem;margin:0;padding:0}}.passage>h2,.passage>h3{font-size:1.5rem;line-height:2rem;font-weight:bold;padding-top:.49rem;margin-top:-.5rem;margin-bottom:1.51rem}@media (min-width: 1656px){.passage>h2,.passage>h3{font-size:2rem;line-height:3rem;font-weight:bold;padding-top:.65rem;margin-top:-1rem;margin-bottom:1.35rem}}.passage>:first-child{-webkit-column-span:all;column-span:all}.passage>h4{padding-top:0;margin-bottom:0;font-size:1.333rem;line-height:2rem;font-weight:bold;padding-top:1.11328rem;margin-top:0rem;margin-bottom:-.11328rem}@media (min-width: 1656px){.passage>h4{font-size:1.667rem;line-height:2.5rem;padding-top:.91672rem;margin-top:0rem;margin-bottom:.08328rem}}.passage>h6{padding-top:0;margin-bottom:0;font-size:1rem;line-height:2rem;font-weight:bold;text-transform:uppercase;padding-top:.81rem;margin-top:0rem;margin-bottom:.19rem}@media (min-width: 1656px){.passage>h6{font-size:1.333rem;line-height:2rem;font-weight:bold;text-transform:uppercase;padding-top:.86328rem;margin-top:1rem;margin-bottom:.13672rem}}@media (min-width: 1332px){.passage p+h4,.passage ul+h4,.passage blockquote+h4{margin-top:1.5rem}}.passage h3+h4,.passage h4+h6{-webkit-column-span:all;column-span:all}.intro{font-size:1.5rem;line-height:2rem;padding-top:.69rem;margin-top:0rem;margin-bottom:.31rem}@media (min-width: 1332px){.intro{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem}}.small{font-size:1.333rem;line-height:2rem;padding-top:.41328rem;margin-top:0rem;margin-bottom:.58672rem}blockquote p,blockquote cite{font-style:oblique}blockquote p::before{content:"\2018"}blockquote p::after{content:"\2019"}blockquote cite::before{content:"\2014  "}blockquote cite,blockquote[cite]::after{content:"— " attr(cite);font-style:oblique;font-size:1.167rem;margin-top:.5rem;display:block;text-indent:3rem}h2+blockquote{margin-bottom:2rem}.passage .unit-conversion{display:grid;grid-template-columns:1fr 4rem 1fr}.passage .unit-conversion>p{padding:.98rem 0}.passage .unit-conversion>p:nth-child(3n+2){text-align:center}.passage .unit-conversion>p:nth-child(3n+1){text-align:right}.passage .unit-conversion>p:not(:nth-child(9)):not(:nth-child(8)):not(:nth-child(7)){border-bottom:0.1rem solid #CCC}.passage li>span{font-size:1.333rem;line-height:2rem;padding-top:.41328rem;margin-top:0rem;margin-bottom:.58672rem;padding-top:0;margin-bottom:0}@media (min-width: 1656px){.passage li>span{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem;padding-top:0}}.passage ol,.passage ul{padding:0;margin:0}@media (min-width: 1656px){.passage ul,.passage ol{font-size:1.5rem;line-height:1.5rem}}.passage ul ul{padding-left:1.667rem}body{counter-reset:figure}figcaption{font-size:1.167rem;line-height:1.5rem;padding-top:.18672rem;margin-top:0rem;margin-bottom:.11328rem}figcaption::before{counter-increment:figure;content:"Figure " counter(figure) " — "}body{display:grid;width:100%;grid-template-areas:"header" "main" "footer";grid-template-rows:8rem minmax(100vh, auto) 1fr;grid-row-gap:1rem}.container{margin-left:1.5rem;margin-right:1.5rem}@media (min-width: 400px){.container{margin-left:2rem;margin-right:2rem}}@media (min-width: 648px){.container{width:600px}}@media (min-width: 978px){.container{width:912px}}@media (min-width: 1332px){.container{width:1260px;margin-left:3rem;margin-right:3rem}}@media (min-width: 1656px){.container{width:1584px}}.main-header{grid-area:header}.main-header .container{display:grid;grid-template-columns:repeat(2, 1fr);grid-column-gap:2rem;margin-top:2rem}@media (min-width: 1332px){.main-header .container{grid-gap:2rem 3rem}}.main-article{grid-area:main;min-height:100%;display:grid}.main-footer{grid-area:footer;-ms-flex-item-align:end;align-self:end}.main-footer .container{display:grid;grid-template-columns:repeat(6, 1fr);grid-template-rows:auto}.footer-at-end{display:grid}main{position:relative}.grid-overlay{display:none;position:absolute;top:0;left:0;height:100%;z-index:2;overflow:hidden}.grid-visible .master-grid{width:100%;pointer-events:none;grid-template-rows:repeat(30, 11.5rem);display:grid;grid-template-columns:repeat(2, 1fr);grid-gap:1rem 2rem}@media (min-width: 1332px){.grid-visible .master-grid{grid-template-rows:repeat(30, 24rem);grid-gap:2rem 3rem}}.grid-visible .master-grid>div{border:1px solid}@media (min-width: 978px){.grid-visible .master-grid{grid-template-columns:repeat(3, 1fr)}}@media (min-width: 1332px){.grid-visible .master-grid{grid-template-columns:repeat(4, 1fr)}}@media (min-width: 1656px){.grid-visible .master-grid{grid-template-columns:21.143rem 0.5fr 0.5fr 21.143rem 21.143rem 21.143rem}}@media (min-height: 30rem){.posts-nav-section{position:-webkit-sticky;position:sticky;bottom:0;background:#fff;margin-top:2rem}}.posts-nav{display:grid;grid-template-columns:1fr 1fr;grid-column-gap:2rem}.posts-nav .prev::before,.posts-nav .next::after{content:"";border-top:0.1rem solid #000;border-left:0.1rem solid #000;width:1.5rem;height:1.5rem;grid-row:span 2;-ms-flex-item-align:center;align-self:center}.posts-nav .prev::before{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.posts-nav .next::after{-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);justify-self:flex-end}.posts-nav a{display:grid;grid-template-rows:auto 1fr;grid-column-gap:1rem;text-decoration:none;text-transform:capitalize;color:inherit;font-size:1.167rem;line-height:1.5rem;padding-top:1.43672rem;margin-top:0rem;margin-bottom:1.31328rem}.posts-nav a.prev{grid-template-columns:1rem 1fr}.posts-nav a.prev>span{grid-column:2}.posts-nav a.next{grid-template-columns:1fr 1rem;grid-column:2}.posts-nav a.next>span{grid-column:1;text-align:right}.posts-nav a>span:first-child{font-weight:bold}.posts-nav a>span:last-child{grid-row:2}.posts-nav a:hover::before,.posts-nav a:hover::after{border-color:inherit}.main-header{background:#fff}.main-header nav{text-align:right;grid-column:2;grid-row:1}.main-header nav a{font-size:1.333rem;line-height:2rem;padding-top:.66328rem;margin-top:0rem;margin-bottom:.33672rem}.main-header nav a:not(:last-child){margin-right:1rem}@media (min-width: 1332px){.main-header nav a{font-size:1.5rem;line-height:2rem;padding-top:.69rem;margin-top:0rem;margin-bottom:.31rem}}@media (min-width: 648px){.main-header nav a{line-height:3rem}}.main-header .home-link svg{width:8rem}@media (max-width: 647px){.main-header .home-link svg{margin-bottom:.5rem}}@media (min-width: 648px){.main-header .home-link svg{width:10rem}}.sig{font-size:1rem;line-height:1;padding-top:1.16rem;margin-top:1rem;margin-bottom:.84rem;border-top:1px solid #ff7070;grid-column:1 / span 6}.image-link span{font-size:1.167rem;line-height:1.5rem;font-weight:bold;padding-top:.18672rem;margin-top:.75rem;margin-bottom:.81328rem;color:#000;counter-increment:default-counter}@media (max-width: 539px){.image-link span{margin-top:-.25rem}}.image-link span::before{content:counter(default-counter) " ";border-bottom:0.14rem solid #FF7070;text-align:center;width:auto;margin-right:.5rem;padding-bottom:.25rem}
+					</style>
   <link rel="stylesheet" href="/css/design-principles-layout.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-  (function(i, s, o, g, r, a, m) {
+  (function(i, s, o, g, r, a, m)
+  {
    i['GoogleAnalyticsObject'] = r;
-   i[r] = i[r] || function() {
+   i[r] = i[r] || function()
+   {
     (i[r].q = i[r].q || []).push(arguments)
    }, i[r].l = 1 * new Date();
    a = s.createElement(o),
@@ -26,41 +30,43 @@
  <body class="page-vertical-alignment  design-principles-layout">
   <header id="main-header" class="container-outer main-header ">
    <div class="container">
-    <a id="main-header-home-link" class="home-link" href="http://interiorsystem.co.uk/">
-     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 50" enable-background="new 0 0 200 50" xml:space="preserve">
-      <g id="Interior_logo">
-       <g id="guides_horizontal">
-        <rect x="0" y="11.3" fill="#FF7070" width="200" height="1.2" />
-        <rect x="0" y="37.6" fill="#FF7070" width="200" height="1.2" />
-       </g>
-       <g id="type">
-        <path d="M10.4,12.4v25.1H6.3V12.4H10.4z" />
-        <path d="M21.5,37.6V10.8L41.1,30V12.5h4.1v26.6L25.6,20.1v17.6H21.5z" />
-        <path d="M63.7,16v21.5h-4.1V16h-6.2v-3.6h16.4V16H63.7z" />
-        <path d="M93,16H82.3v6h10.5v3.6H82.3V34H93v3.6H78.2V12.4H93V16z" />
-        <path d="M112.1,26.9l8.3,10.7h-5l-7.7-10.3h-0.7v10.3H103V12.4h4.7c3.5,0,6.1,0.6,7.7,1.9c1.7,1.4,2.6,3.2,2.6,5.5
-			c0,1.8-0.5,3.3-1.6,4.6C115.4,25.7,113.9,26.5,112.1,26.9z M107.1,24h1.3c3.8,0,5.8-1.4,5.8-4.1c0-2.6-1.9-3.9-5.6-3.9h-1.4V24z" />
-        <path d="M134.2,12.4v25.1h-4.1V12.4H134.2z" />
-        <path d="M144.7,24.9c0-3.5,1.4-6.6,4.2-9.1c2.8-2.5,6.1-3.8,10-3.8c3.8,0,7.1,1.3,9.8,3.8c2.7,2.6,4.1,5.6,4.1,9.2
+    <a id="main-header-home-link" class="home-link" href="/">
+     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 50" enable-background="new 0 0 200 50" xml:space="preserve" width="120px">
+<g id="Interior_logo">
+	<g id="guides_horizontal">
+		<rect x="0" y="11.3" fill="#FF7070" width="200" height="1.2"/>
+		<rect x="0" y="37.6" fill="#FF7070" width="200" height="1.2"/>
+	</g>
+	<g id="type">
+		<path d="M10.4,12.4v25.1H6.3V12.4H10.4z"/>
+		<path d="M21.5,37.6V10.8L41.1,30V12.5h4.1v26.6L25.6,20.1v17.6H21.5z"/>
+		<path d="M63.7,16v21.5h-4.1V16h-6.2v-3.6h16.4V16H63.7z"/>
+		<path d="M93,16H82.3v6h10.5v3.6H82.3V34H93v3.6H78.2V12.4H93V16z"/>
+		<path d="M112.1,26.9l8.3,10.7h-5l-7.7-10.3h-0.7v10.3H103V12.4h4.7c3.5,0,6.1,0.6,7.7,1.9c1.7,1.4,2.6,3.2,2.6,5.5
+			c0,1.8-0.5,3.3-1.6,4.6C115.4,25.7,113.9,26.5,112.1,26.9z M107.1,24h1.3c3.8,0,5.8-1.4,5.8-4.1c0-2.6-1.9-3.9-5.6-3.9h-1.4V24z"
+			/>
+		<path d="M134.2,12.4v25.1h-4.1V12.4H134.2z"/>
+		<path d="M144.7,24.9c0-3.5,1.4-6.6,4.2-9.1c2.8-2.5,6.1-3.8,10-3.8c3.8,0,7.1,1.3,9.8,3.8c2.7,2.6,4.1,5.6,4.1,9.2
 			c0,3.6-1.4,6.7-4.1,9.2c-2.8,2.5-6.1,3.8-10,3.8c-3.5,0-6.6-1.1-9.3-3.4C146.2,32.2,144.7,28.9,144.7,24.9z M148.8,24.9
 			c0,2.8,1,5.1,3,6.8c2,1.8,4.3,2.7,6.9,2.7c2.8,0,5.2-0.9,7.1-2.7c1.9-1.8,2.9-4.1,2.9-6.7c0-2.7-1-4.9-2.9-6.7
-			c-1.9-1.8-4.3-2.7-7.1-2.7c-2.8,0-5.2,0.9-7.1,2.7C149.8,20.1,148.8,22.3,148.8,24.9z" />
-        <path d="M191.7,26.9l8.3,10.7h-5l-7.7-10.3h-0.7v10.3h-4.1V12.4h4.8c3.5,0,6.1,0.6,7.7,1.9c1.7,1.4,2.6,3.2,2.6,5.5
-			c0,1.8-0.5,3.3-1.6,4.6C194.9,25.7,193.5,26.5,191.7,26.9z M186.6,24h1.3c3.8,0,5.8-1.4,5.8-4.1c0-2.6-1.9-3.9-5.6-3.9h-1.4V24z" />
-       </g>
-       <g id="guides_vertical">
-        <rect x="5.1" fill="#FF7070" width="1.2" height="50" />
-        <rect x="10.4" fill="#FF7070" width="1.2" height="50" />
-        <rect x="129" fill="#FF7070" width="1.2" height="50" />
-        <rect x="134.2" fill="#FF7070" width="1.2" height="50" />
-        <rect x="181.4" fill="#FF7070" width="1.2" height="50" />
-        <rect x="186.6" fill="#FF7070" width="1.2" height="50" />
-       </g>
-      </g>
-     </svg>
+			c-1.9-1.8-4.3-2.7-7.1-2.7c-2.8,0-5.2,0.9-7.1,2.7C149.8,20.1,148.8,22.3,148.8,24.9z"/>
+		<path d="M191.7,26.9l8.3,10.7h-5l-7.7-10.3h-0.7v10.3h-4.1V12.4h4.8c3.5,0,6.1,0.6,7.7,1.9c1.7,1.4,2.6,3.2,2.6,5.5
+			c0,1.8-0.5,3.3-1.6,4.6C194.9,25.7,193.5,26.5,191.7,26.9z M186.6,24h1.3c3.8,0,5.8-1.4,5.8-4.1c0-2.6-1.9-3.9-5.6-3.9h-1.4V24z"
+			/>
+	</g>
+	<g id="guides_vertical">
+		<rect x="5.1" fill="#FF7070" width="1.2" height="50"/>
+		<rect x="10.4" fill="#FF7070" width="1.2" height="50"/>
+		<rect x="129" fill="#FF7070" width="1.2" height="50"/>
+		<rect x="134.2" fill="#FF7070" width="1.2" height="50"/>
+		<rect x="181.4" fill="#FF7070" width="1.2" height="50"/>
+		<rect x="186.6" fill="#FF7070" width="1.2" height="50"/>
+	</g>
+</g>
+</svg>
     </a>
     <nav id="main-nav">
-     <a href="http://interiorsystem.co.uk/articles">Articles</a>
+     <a href="/articles">Articles</a>
      <a href="https://github.com/morganfeeney/interior" target="_blank">Code</a>
     </nav>
    </div>
@@ -79,10 +85,8 @@
       <h2>Why?</h2>
       <p>In order to align parallel text blocks of varying sizes on the vertical axis using CSS; the distances measured to align with can be pre-determined.</p>
       <p>One tool I use to understand the distance is a
-       <em>Baseline Grid</em>, it's a visual aid used to enable text alignment—comparable to ruled paper. The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked; the latter
-       is used to automate calculations which align text blocks on the former; in conjunction with the <a href="/design-system/grid-system.html">Grid System</a>.</p>
-      <p>I can squeeze even more use out of it by making a single rem equate to any computed value I want by applying percentages to the <code class="code-inline">&lt;html&gt;</code> element. This way a single rem (the measurement used for incrementally
-       traversing the baseline grid) will yield a computed pixel <code class="code-inline">font-size</code> that suits.</p>
+       <em>Baseline Grid</em>, it's a visual aid used to enable text alignment—comparable to ruled paper. The Baseline Grid and <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a> are inextricably linked; the latter is used to automate calculations which align text blocks on the former; in conjunction with the <a href="/design-system/grid-system.html">Grid System</a>.</p>
+      <p>I can squeeze even more use out of it by making a single rem equate to any computed value I want by applying percentages to the <code class="code-inline">&lt;html&gt;</code> element. This way a single rem (the measurement used for incrementally traversing the baseline grid) will yield a computed pixel <code class="code-inline">font-size</code> that suits.</p>
       <div class="unit-conversion">
        <p>75%</p>
        <p>=</p>
@@ -100,14 +104,11 @@
     <section>
      <div class="passage">
       <h3>Vertical rhythm</h3>
-      <p>Everything I’ve learnt recently about typography leads towards units of measurement being the fundamental building blocks of order and harmony in design. A Baseline Grid, in conjunction with a Grid System, can assist by indicating what areas of
-       a layout should accommodate text, and visa-versa.</p>
+      <p>Everything I’ve learnt recently about typography leads towards units of measurement being the fundamental building blocks of order and harmony in design. A Baseline Grid, in conjunction with a Grid System, can assist by indicating what areas of a layout should accommodate text, and visa-versa.</p>
       <p>
        <em>But can't we already create this level of precision with CSS?</em>
       </p>
-      <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together as part of a system and align blocks vertically, in a way that allows them to be re-assembled in any order, the current spec does not
-       cater toward this way of working—not without working around it. One of the main reasons is there is no concept of cap-height; there are several articles which explain the problem in great detail, here <a href="https://medium.com/written-in-code/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b"
-       target="_blank">Razvan Onefri explains</a> it from his perspective.</p>
+      <p>… yes, but it's far from straight forward. When we start to piece the various components of a web page together as part of a system and align blocks vertically, in a way that allows them to be re-assembled in any order, the current spec does not cater toward this way of working—not without working around it. One of the main reasons is there is no concept of cap-height; there are several articles which explain the problem in great detail, here <a href="https://medium.com/written-in-code/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b" target="_blank">Razvan Onefri explains</a> it from his perspective.</p>
      </div>
      <figure class="figure-layout-1">
       <picture>
@@ -120,14 +121,12 @@
      <div class="passage">
       <h3>Process</h3>
       <h4>Pick a font-stack</h4>
-      <p>I've used Helvetica &amp; system fonts so didn't need to make many adjustments to the default cap-height settings in Interior. If you pick different fonts you’ll need to work out what the cap-height is and apply it. if you plan to use Interior there’s
-       a variable for cap-height—it’s passed into the <code class="code-inline">baseline()</code> mixin.</p>
+      <p>I've used Helvetica &amp; system fonts so didn't need to make many adjustments to the default cap-height settings in Interior. If you pick different fonts you’ll need to work out what the cap-height is and apply it. if you plan to use Interior there’s a variable for cap-height—it’s passed into the <code class="code-inline">baseline()</code> mixin.</p>
       <h4>Establish a unit for the baseline</h4>
       <p>Multiples of <code class="code-inline">.5rem</code> work really well, depending upon the document base font size, for several reasons:</p>
       <ol>
        <li>
-        <span>Granularity—the measure is affected by font size and column width which impacts line-height; using <code class="code-inline">.5rem</code> allows more variety of font sizes, without having to keep resizing the entire document using percentages
-         as the columns get wider—which is another way to vary the baseline grid (and line-heght).</span>
+        <span>Granularity—the measure is affected by font size and column width which impacts line-height; using <code class="code-inline">.5rem</code> allows more variety of font sizes, without having to keep resizing the entire document using percentages as the columns get wider—which is another way to vary the baseline grid (and line-heght).</span>
        </li>
        <li>
         <span>Unit-less values are incorrectly computed in some cases, which can lead to a lot of head scratching, it almost seems counter-intuitive to go for a static unit of measurement but in this case the solution works.</span>
@@ -137,13 +136,10 @@
        </li>
       </ol>
       <h4>Make adjustments</h4>
-      <p>Possibly most time consuming—and tricky—part and what the visual baseline grid is for. To align text to “sit” on the baseline I need to see things in action, so I open up a browser window and view text on a baseline grid, if it doesn’t quite sit
-       right I make adjustments until it does and then track my progress using Git.</p>
-      <p>What I found of most use to get this correct was creating sample pages with varying degrees of content, paragraphs, headings, block-quotes, citations, images, figures with captions etc. then adding and removing things—every element has an impact
-       on it's neighbor.</p>
+      <p>Possibly most time consuming—and tricky—part and what the visual baseline grid is for. To align text to “sit” on the baseline I need to see things in action, so I open up a browser window and view text on a baseline grid, if it doesn’t quite sit right I make adjustments until it does and then track my progress using Git.</p>
+      <p>What I found of most use to get this correct was creating sample pages with varying degrees of content, paragraphs, headings, block-quotes, citations, images, figures with captions etc. then adding and removing things—every element has an impact on it's neighbor.</p>
       <h4>Use for design</h4>
-      <p>As stated on the previous page, if you want to apply an accurate representation of CSS styles to a working design, for the sake of continuity this method will allow it. Enabling you to work back and forth between the browser and a DTP program such
-       as
+      <p>As stated on the previous page, if you want to apply an accurate representation of CSS styles to a working design, for the sake of continuity this method will allow it. Enabling you to work back and forth between the browser and a DTP program such as
        <em>Illustrator</em>.</p>
      </div>
     </section>
@@ -183,26 +179,31 @@
   var gridOverLay = document.querySelector('.grid-overlay');
   var grid = document.createElement('div');
   grid.setAttribute('class', 'grid-overlay master-grid');
-  function gridOverlay(cols) {
+  function gridOverlay(cols)
+  {
    main.appendChild(grid);
-   for (var i = 0; i < cols; i++) {
+   for (var i = 0; i < cols; i++)
+   {
     var gridChild = document.createElement('div');
     grid.appendChild(gridChild);
    }
   }
   // Create a button to togglethe grid overlay.
-  function overlayToggle(e) {
+  function overlayToggle(e)
+  {
    var toggle = document.createElement('button');
    toggle.setAttribute('class', 'button-grid-toggle');
    toggle.innerHTML = "Toggle Grid";
    body.appendChild(toggle);
-   toggle.addEventListener('click', function(e) {
+   toggle.addEventListener('click', function(e)
+   {
     body.classList.toggle('grid-visible');
     body.classList.toggle('baseline-grid');
     e.preventDefault();
    });
   }
-  if (cols >= 1) {
+  if (cols >= 1)
+  {
    overlayToggle();
    gridOverlay(cols);
   }
