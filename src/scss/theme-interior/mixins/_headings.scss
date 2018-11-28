@@ -12,9 +12,9 @@
 
 @mixin heading-1-large() {
   @include baseline(
-    $font-size: $two-line-pica, // 46px
+    $font-size: $double-paragon, // 50px
     $font-weight: bold,
-    $line-height: 4.5rem,
+    $line-height: 6rem,
     $above: 0.75,
     $below: 2
   );
