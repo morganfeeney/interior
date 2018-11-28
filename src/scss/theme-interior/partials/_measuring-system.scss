@@ -3,6 +3,7 @@ $measuring-systems: (
   // more of a Typographic measuring system than modular scale.
   // html font-size at 75%
   system-1: (
+      double-paragon: 5rem, //60px
     two-line-pica: 3.833rem, //46px
       double-pica: 3.5rem, //42px
     paragon: 2.5rem, //30px
@@ -18,6 +19,7 @@ $measuring-systems: (
 // html font-size at 87.5%
 $system-1: map-get($measuring-systems, system-1);
 
+  $double-paragon: map-get($system-1, double-paragon);
   $two-line-pica: map-get($system-1, two-line-pica);
   $double-pica: map-get($system-1, double-pica);
   $paragon: map-get($system-1, paragon);
