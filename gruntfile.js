@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
  // Project configuration.
  var development = grunt.option('prod') ? false : true;
@@ -7,6 +9,7 @@ module.exports = function(grunt) {
   sass: {
    linked: {
     options: {
+      implementation: sass,
       outputStyle:
       (function() {
         if (development) {
@@ -27,6 +30,7 @@ module.exports = function(grunt) {
   },
   embedded: {
     options: {
+      implementation: sass,
       outputStyle: "compressed",
       sourceMap: false,
       precision: 7
