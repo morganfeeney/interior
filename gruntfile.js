@@ -23,6 +23,7 @@ module.exports = function(grunt) {
       precision: 7
     },
     files: {
+      "docs/css/interior-2019.css": "src/scss/interior-2019.scss",
       "docs/css/interior.css": "src/scss/interior.scss",
       "docs/css/index-layout.css": "src/scss/theme-interior/layouts/index-layout.scss",
       "docs/css/design-principles-layout.css": "src/scss/theme-interior/layouts/design-principles-layout.scss"

@@ -1,0 +1,94 @@
+{% import "../fragments/image.njk" as images %}
+{% set title = page | capitalize | replace("-", " ") %}
+
+<!DOCTYPE html>
+<html lang="en" {% if html_classes %}class="{{ html_classes }}"{% endif %}>
+	<head>
+		<meta charset="UTF-8">
+		<title>{% if page_title %}{{ page_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
+		<meta name="description" content="{% if page_description %}{{ page_description | safe }}{% else %}TBA{% endif %}">
+
+    {% block embedded_css %}
+			{% if development %}
+					<link rel="stylesheet" href="/css/interior-2019.css">
+				{% else %}
+					<style>
+						{% include "critical-css/interior-2019.css" %}
+					</style>
+				{% endif %}
+		{% endblock %}
+
+		{% block linked_css %}{% endblock %}
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block header_scripts %}
+		{% endblock %}
+
+	</head>
+
+	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">
+		{% block header %}
+			<header id="main-header" class="container-outer main-header {{ main_header_classes }}">
+				<div class="container">
+					{% block header_content %}
+						<a id="main-header-home-link" class="home-link" href="/">
+							{% include "partials/logo.njk" %}
+						</a>
+						<nav id="main-nav">
+							<a href="/articles">Articles</a>
+							<a href="https://github.com/morganfeeney/interior" target="_blank">Code</a>
+						</nav>
+					{% endblock %}
+				</div>
+			</header>
+		{% endblock %}
+
+		<article id="main-article" class="container-outer main-article {{ article_classes }}">
+			{% if article %}
+				{% block date %}
+				{% endblock %}
+			{% endif %}
+
+			<main class="container {{ main_classes }}">
+				{% block main %}{% endblock %}
+			</main>
+
+			{% if aside %}
+				<aside class="{{ aside_classes }}">
+					{% block aside %}
+					{% endblock %}
+				</aside>
+			{% endif %}
+
+			{% if post_page %}
+				{% block posts_nav %}
+					<section class="container-outer posts-nav-section {{ posts_nav_section_classes }}">
+						<div class="container">
+							{% block posts_nav_content %}
+								{% include "../partials/components/posts-nav.njk" %}
+							{% endblock %}
+						</div>
+					</section>
+				{% endblock %}
+			{% endif %}
+		</article>
+
+		{% block main_footer %}
+			<footer id="main-footer" class="container-outer main-footer {{ main_footer_classes }}">
+				<div class="container">
+					{% block footer %}
+						{% include "partials/footer.njk" %}
+					{% endblock %}
+				</div>
+			</footer>
+		{% endblock %}
+
+		{% block footer_scripts %}
+			{% if development %}
+				{% include "../partials/footer-scripts.njk" %}
+			{% endif %}
+			{% include "../partials/overlay.njk" %}
+		{% endblock %}
+
+	</body>
+</html>
