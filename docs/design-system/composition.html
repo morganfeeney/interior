@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="footer-at-end">
- <head>
-  <meta charset="UTF-8">
-  <title>Composition</title>
-  <meta name="description" content="An account of the steps I followed to assemble the various components of the Design System into a whole.">
-  <style>
-						html{position:relative}.baseline-grid::before{content:"";width:100%;position:absolute;top:0;bottom:0;left:0;right:0;z-index:2;mix-blend-mode:multiply;background:-o-linear-gradient(#FF7070 0, transparent 1px) 0 0/100vw 1rem repeat-y,-o-linear-gradient(rgba(255,112,112,0.5) 0, transparent 1px) 0 0.5rem/100vw 0.5rem repeat-y;background:linear-gradient(#FF7070 0, transparent 1px) 0 0/100vw 1rem repeat-y,linear-gradient(rgba(255,112,112,0.5) 0, transparent 1px) 0 0.5rem/100vw 0.5rem repeat-y;pointer-events:none}img{max-width:100%;height:auto;display:block}.container>img{-ms-flex-item-align:center;align-self:center;padding-top:.16rem;margin-top:2rem;margin-bottom:.84rem}.item>img{-ms-flex-item-align:center;align-self:center}p+img{padding-top:.56rem;margin-top:0rem;margin-bottom:.84rem}.image-box svg{max-width:100%}.button-grid-toggle{position:absolute;bottom:0;right:0;padding:.5rem .75rem;background:#ff7070;border:none;-webkit-box-shadow:0px 2px 0px #000000, 0px 1px 0px #fff inset;box-shadow:0px 2px 0px #000000, 0px 1px 0px #fff inset;border-radius:.4rem 0 0;color:#fff}@media (min-width: 708px){.button-grid-toggle{position:fixed}}code,pre{white-space:pre}pre{-moz-tab-size:4;-o-tab-size:4;tab-size:4}pre code{background:rgba(255,179,179,0.2);display:block;padding-left:2rem;padding-right:2rem;overflow:auto;-webkit-overflow-scrolling:touch}pre.code-block::before{content:attr(rel);background:#555;display:block;color:#fff;text-transform:uppercase;font-family:"Inconsolata",monospace,courier;font-size:.65rem;font-weight:bold;letter-spacing:.15rem}code{background:rgba(255,112,112,0.1)}.comment{color:#999}pre{padding-top:0;margin-top:1rem;margin-bottom:.84rem}pre:before{font-size:1.333rem;line-height:1.5;padding-top:.21328rem;margin-top:0rem;margin-bottom:.78672rem;margin-bottom:0;padding-left:1rem;padding-bottom:.05rem}.code-inline{line-height:1;font-family:"Inconsolata",monospace,courier;font-weight:normal}code:not(.code-inline){font-size:1.667rem;line-height:2;padding-top:.76672rem;margin-top:0rem;margin-bottom:0;padding-bottom:1rem}html{-webkit-box-sizing:border-box;box-sizing:border-box;min-height:100%}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0}body{line-height:1rem;font-size:1rem;-webkit-text-size-adjust:100%;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}html,body,figure{margin:0;padding:0}a,a:link,a:focus,a:hover{color:#FF7070}.hidden{display:none}html{font-size:75%}body{-webkit-font-kerning:normal;font-kerning:normal}h1{font-size:2.5rem;line-height:3rem;font-weight:bold;padding-top:.65rem;margin-top:0rem;margin-bottom:2.35rem}@media (min-width: 1332px){h1{font-size:5rem;line-height:6rem;font-weight:bold;padding-top:1.55rem;margin-top:0rem;margin-bottom:1.45rem}}h2,h3{font-size:1.5rem;line-height:2rem;font-weight:bold;padding-top:.49rem;margin-top:-.5rem;margin-bottom:1.51rem}h4,h5,h6{font-size:1.333rem;line-height:2rem;font-weight:bold;padding-top:1.11328rem;margin-top:0rem;margin-bottom:-.11328rem}p{font-size:1.333rem;line-height:2rem;padding-top:.66328rem;margin-top:0rem;margin-bottom:.33672rem}@media (min-width: 1332px){p{font-size:1.5rem;line-height:2rem;padding-top:.69rem;margin-top:0rem;margin-bottom:.31rem}}.lead{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem}@media (min-width: 648px){.lead{font-size:2rem;line-height:3rem;padding-top:.82rem;margin-top:0rem;margin-bottom:.18rem}}.passage{orphans:1}@media (min-width: 1656px){.passage{padding-top:.16rem;margin-top:0rem;margin-bottom:.84rem}}.passage p,.passage br,.unit-conversion p{font-size:1.333rem;line-height:2rem;padding-top:.41328rem;margin-top:0rem;margin-bottom:.58672rem;margin:0;padding:0}@media (min-width: 1656px){.passage p,.passage br,.unit-conversion p{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem;margin:0;padding:0}}.passage>h2,.passage>h3{font-size:1.5rem;line-height:2rem;font-weight:bold;padding-top:.49rem;margin-top:-.5rem;margin-bottom:1.51rem}@media (min-width: 1656px){.passage>h2,.passage>h3{font-size:2rem;line-height:3rem;font-weight:bold;padding-top:.65rem;margin-top:-1rem;margin-bottom:1.35rem}}.passage>:first-child{-webkit-column-span:all;column-span:all}.passage>h4{padding-top:0;margin-bottom:0;font-size:1.333rem;line-height:2rem;font-weight:bold;padding-top:1.11328rem;margin-top:0rem;margin-bottom:-.11328rem}@media (min-width: 1656px){.passage>h4{font-size:1.667rem;line-height:2.5rem;padding-top:.91672rem;margin-top:0rem;margin-bottom:.08328rem}}.passage>h6{padding-top:0;margin-bottom:0;font-size:1rem;line-height:2rem;font-weight:bold;text-transform:uppercase;padding-top:.81rem;margin-top:0rem;margin-bottom:.19rem}@media (min-width: 1656px){.passage>h6{font-size:1.333rem;line-height:2rem;font-weight:bold;text-transform:uppercase;padding-top:.86328rem;margin-top:1rem;margin-bottom:.13672rem}}@media (min-width: 1332px){.passage p+h4,.passage ul+h4,.passage blockquote+h4{margin-top:1.5rem}}.passage h3+h4,.passage h4+h6{-webkit-column-span:all;column-span:all}.intro{font-size:1.5rem;line-height:2rem;padding-top:.69rem;margin-top:0rem;margin-bottom:.31rem}@media (min-width: 1332px){.intro{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem}}.small{font-size:1.333rem;line-height:2rem;padding-top:.41328rem;margin-top:0rem;margin-bottom:.58672rem}blockquote p,blockquote cite{font-style:oblique}blockquote p::before{content:"\2018"}blockquote p::after{content:"\2019"}blockquote cite::before{content:"\2014  "}blockquote cite,blockquote[cite]::after{content:"— " attr(cite);font-style:oblique;font-size:1.167rem;margin-top:.5rem;display:block;text-indent:3rem}h2+blockquote{margin-bottom:2rem}.passage .unit-conversion{display:grid;grid-template-columns:1fr 4rem 1fr}.passage .unit-conversion>p{padding:.98rem 0}.passage .unit-conversion>p:nth-child(3n+2){text-align:center}.passage .unit-conversion>p:nth-child(3n+1){text-align:right}.passage .unit-conversion>p {border-bottom:0.1rem solid #CCC}.passage li>span{font-size:1.333rem;line-height:2rem;padding-top:.41328rem;margin-top:0rem;margin-bottom:.58672rem;padding-top:0;margin-bottom:0}@media (min-width: 1656px){.passage li>span{font-size:1.667rem;line-height:2.5rem;padding-top:.76672rem;margin-top:0rem;margin-bottom:.23328rem;padding-top:0}}.passage ol,.passage ul{padding:0;margin:0}@media (min-width: 1656px){.passage ul,.passage ol{font-size:1.5rem;line-height:1.5rem}}.passage ul ul{padding-left:1.667rem}body{counter-reset:figure}figcaption{font-size:1.167rem;line-height:1.5rem;padding-top:.18672rem;margin-top:0rem;margin-bottom:.11328rem}figcaption::before{counter-increment:figure;content:"Figure " counter(figure) " — "}body{display:grid;width:100%;grid-template-areas:"header" "main" "footer";grid-template-rows:8rem minmax(100vh, auto) 1fr;grid-row-gap:1rem}.container{margin-left:1.5rem;margin-right:1.5rem}@media (min-width: 400px){.container{margin-left:2rem;margin-right:2rem}}@media (min-width: 648px){.container{width:600px}}@media (min-width: 978px){.container{width:912px}}@media (min-width: 1332px){.container{width:1260px;margin-left:3rem;margin-right:3rem}}@media (min-width: 1656px){.container{width:1584px}}.main-header{grid-area:header}.main-header .container{display:grid;grid-template-columns:repeat(2, 1fr);grid-column-gap:2rem;margin-top:2rem}@media (min-width: 1332px){.main-header .container{grid-gap:2rem 3rem}}.main-article{grid-area:main;min-height:100%;display:grid}.main-footer{grid-area:footer;align-self:end}.main-footer .container{display:grid;grid-template-columns:repeat(6, 1fr);grid-template-rows:auto}.footer-at-end{display:grid}main{position:relative}.grid-overlay{display:none;position:absolute;top:0;left:0;height:100%;z-index:2;overflow:hidden}.grid-visible .master-grid{width:100%;pointer-events:none;grid-template-rows:repeat(30, 11.5rem);display:grid;grid-template-columns:repeat(2, 1fr);grid-gap:1rem 2rem}@media (min-width: 1332px){.grid-visible .master-grid{grid-template-rows:repeat(30, 24rem);grid-gap:2rem 3rem}}.grid-visible .master-grid>div{border:1px solid}@media (min-width: 978px){.grid-visible .master-grid{grid-template-columns:repeat(3, 1fr)}}@media (min-width: 1332px){.grid-visible .master-grid{grid-template-columns:repeat(4, 1fr)}}@media (min-width: 1656px){.grid-visible .master-grid{grid-template-columns:21.143rem 0.5fr 0.5fr 21.143rem 21.143rem 21.143rem}}@media (min-height: 30rem){.posts-nav-section{position:-webkit-sticky;position:sticky;bottom:0;background:rgba(255,255,255,0.9);margin-top:2rem}}.posts-nav{display:grid;grid-template-columns:1fr 1fr;grid-column-gap:2rem}.posts-nav .prev::before,.posts-nav .next::after{content:"";border-top:0.1rem solid #000;border-left:0.1rem solid #000;width:1.5rem;height:1.5rem;grid-row:span 2;align-self:center}.posts-nav .prev::before{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.posts-nav .next::after{-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg);justify-self:flex-end}.posts-nav a{display:grid;grid-template-rows:auto 1fr;grid-column-gap:1rem;text-decoration:none;text-transform:capitalize;color:inherit;font-size:1.167rem;line-height:1.5rem;padding-top:1.43672rem;margin-top:0rem;margin-bottom:1.31328rem}.posts-nav a.prev{grid-template-columns:1rem 1fr}.posts-nav a.prev>span{grid-column:2}.posts-nav a.next{grid-template-columns:1fr 1rem;grid-column:2}.posts-nav a.next>span{grid-column:1;text-align:right}.posts-nav a>span:first-child{font-weight:bold}.posts-nav a>span:last-child{grid-row:2}.posts-nav a:hover::before,.posts-nav a:hover::after{border-color:inherit}.main-header{background:#fff}.main-header nav{text-align:right;grid-column:2;grid-row:1}.main-header nav a{font-size:1.333rem;line-height:2rem;padding-top:.66328rem;margin-top:0rem;margin-bottom:.33672rem}.main-header nav a:not(:last-child){margin-right:1rem}@media (min-width: 1332px){.main-header nav a{font-size:1.5rem;line-height:2rem;padding-top:.69rem;margin-top:0rem;margin-bottom:.31rem}}@media (min-width: 648px){.main-header nav a{line-height:3rem}}.main-header .home-link svg{width:8rem}@media (max-width: 647px){.main-header .home-link svg{margin-bottom:.5rem}}@media (min-width: 648px){.main-header .home-link svg{width:10rem}}.sig{font-size:1rem;line-height:1;padding-top:1.16rem;margin-top:1rem;margin-bottom:.84rem;border-top:1px solid #ff7070;grid-column:1 / span 6}.image-link span{font-size:1.167rem;line-height:1.5rem;font-weight:bold;padding-top:.18672rem;margin-top:.75rem;margin-bottom:.81328rem;color:#000;counter-increment:default-counter}@media (max-width: 539px){.image-link span{margin-top:-.25rem}}.image-link span::before{content:counter(default-counter) " ";border-bottom:0.14rem solid #FF7070;text-align:center;width:auto;margin-right:.5rem;padding-bottom:.25rem}
-					</style>
-  <link rel="stylesheet" href="/css/design-principles-layout.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- </head>
- <body class="page-composition  design-principles-layout">
-  <header id="main-header" class="container-outer main-header ">
-   <div class="container">
-    <a id="main-header-home-link" class="home-link" href="/">
-     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 50" enable-background="new 0 0 200 50" xml:space="preserve" width="120px">
+<head>
+ <meta charset="UTF-8">
+ <title>Composition</title>
+ <meta name="description" content="An account of the steps I followed to assemble the various components of the Design System into a whole.">
+ <link rel="stylesheet" href="/css/interior.css">
+ <link rel="stylesheet" href="/css/design-principles-layout.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="page-composition  design-principles-layout">
+ <header id="main-header" class="container-outer main-header ">
+  <div class="container">
+   <a id="main-header-home-link" class="home-link" href="/">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 50" enable-background="new 0 0 200 50" xml:space="preserve" width="120px">
 <g id="Interior_logo">
 	<g id="guides_horizontal">
 		<rect x="0" y="11.3" fill="#FF7070" width="200" height="1.2"/>
@@ -47,157 +45,158 @@
 	</g>
 </g>
 </svg>
-    </a>
-    <nav id="main-nav">
-     <a href="/articles">Articles</a>
-     <a href="https://github.com/morganfeeney/interior" target="_blank">Code</a>
-    </nav>
-   </div>
-  </header>
-  <article id="main-article" class="container-outer main-article ">
-   <main class="container ">
-    <section>
-     <h1>Composition</h1>
-     <picture class="main-image">
-      <source media="(min-width: 1332px)" srcset="/images/main-image/composition-large.svg">
-      <source media="(min-width: 978px)" srcset="/images/main-image/composition-medium.svg">
-      <img src="/images/main-image/composition-medium.svg" alt="Visual representation of a composition" srcset="/images/main-image/composition-medium.svg">
-     </picture>
-     <time class="hidden" datetime="2017-11-06T00:35:09.100Z" title="Published: Mon Nov 06 2017">Mon Nov 06 2017</time>
-     <div class="passage">
-      <h2>How?</h2>
-      <p>After experiencing the the previous steps comes the fun part; composition. This is where all the hard work pays off.</p>
-      <br>
-      <p>Armed with the following:</p>
-      <ul>
-       <li>
-        <span>Typographic measuring system</li>
-       </span>
-       <li>
-        <span>Vertical alignment</li>
-       </span>
-       <li>
-        <span>Grid system</li>
-       </span>
-      </ul>
-      <p>…the fun can begin!</p>
-      <br>
-      <p>The compositions for each of Interior’s pages (including this one) started in
-       <em>Illustrator</em>. Due to nothing being arbitrary—thanks to each previous section—and therefore (browser quirks aside, oh the woes of CSS columns) can be predicted from one format to another, gaps were filled by designing anything missed right in the browser using Interior’s automation and (visual) Grid System.</p>
-      <p>As you read on you may realise that the order of things is not set in stone, I found it impractical to do so—this is one of
-       <em>those things</em> that may change later. However they have to be categorised, as opposed to being in a single post, as each informs the other and they can be considered separately.</p>
-     </div>
-    </section>
-    <section id="grid-system">
-     <div class="passage">
-      <h3>Grid system</h3>
-      <p>I designed the Grid System using
-       <em>Illustrator</em>, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid. This allowed me to work consistently on each layout.</p>
-      <h4>Layout</h4>
-      <p>I already had an idea in mind of the range of font sizes I could get started with, I applied them to the headings and body, then used the Grid System as a reference so that I could make more creative decisions.</p>
-      <p>I used image placeholders (grey boxes) during the initial wireframe creation—as I knew there would be a need for some fairly interesting imagery to contrast against the black columns of Helvetica; and needed to see the layout take shape. I kind of broke a rule here (design to suit the content) as my content in this case was being created in parallel with the documentation; however with me being the designer there was no issue as it can all be changed to suit.</p>
-      <p>There is a hierarchy in everything from the typography to the imagery.</p>
-     </div>
-     <figure class="figure-layout-1">
-      <picture>
-       <img src="/images/supporting-image/layout-widths-content.svg" alt="Illustration detaling 3 different layout widths with varying grid cells per width.">
-      </picture>
-      <figcaption>Illustration detaling 3 different layout widths with varying grid cells,
-       <em>and content</em> per width.</figcaption>
-     </figure>
-    </section>
-    <section id="typographic-measuring-system">
-     <div class="passage">
-      <h3>Typographic Measuring System</h3>
-      <p>Due to being able to understand what typography each design would consume—through visualisation—the layouts I created informed the <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a>; which had already been established. Once applied, the practicalities of the decisions made in isolation became apparent—the abstraction should be a round-trip, creating each component for assembly in isolation will only work up to a point. Once I had decided that the sizes were practical enough for web use I gathered and curated them into a formatted list, each size was assigned a unique variable name.</p>
-     </div>
-    </section>
-    <section id="vertical-alignment">
-     <div class="passage">
-      <h3>Vertical Alignment</h3>
-      <p>I had to work out a way to get the Grid System into browsers so I could layout designs accurately. It’s fairly crude but does the job, so in conjunction with the baseline grid I applied the grids I designed in Illustrator piece by piece.</p>
-      <p>Unlike a Grid Inspector, the Grid System is a visual aid that is not reflective of CSS Grid styles. It is the Grid System a design adheres to. The one I used with Illustrator was recreated using HTML, CSS and a smattering of JS; so designs can be translated to the browser with accuracy.</p>
-     </div>
-     <figure class="figure-layout-1">
-      <picture>
-       <img src="/images/supporting-image/baseline-grid.svg" alt="Illustration detaling a vertical grid and grid system combined.">
-      </picture>
-      <figcaption>Baseline Grid and Grid System combined.</figcaption>
-     </figure>
-    </section>
-    <section id="grid-inspector">
-     <div class="passage">
-      <h3>Firefox Grid Inspector</h3>
-      <p>Not long after I got something together, Firefox released their
-       <em>superb</em> grid inspector.</p>
-      <p>I use Safari to browse using my mobile device, and the bulk of dev was done using Chrome so I couldn't rely solely on Firefox—however it sets a
-       <em>very</em> high standard. The difference between the Grid System and the grid of what you inspect is huge. One is a design reference and should remain constant throughout the entire process of creating a layout, whereas the grids inspected could be constantly evolving, yet should align to the Grid System. The tool enables the level of fine tuning necessary for creating layouts, with precision.</p>
-     </div>
-    </section>
-   </main>
-   <section class="container-outer posts-nav-section ">
-    <div class="container">
-     <nav class="posts-nav" role="navigation">
-      <a class="prev" href="grid-system.html">
-       <span>prev</span>
-       <span>Grid system</span>
-      </a>
-      <a class="next" href="methodology.html">
-       <span>next</span>
-       <span>Methodology</span>
-      </a>
-     </nav>
+   </a>
+   <nav id="main-nav">
+    <a href="/articles">Articles</a>
+    <a href="https://github.com/morganfeeney/interior" target="_blank">Code</a>
+   </nav>
+  </div>
+ </header>
+ <article id="main-article" class="container-outer main-article ">
+  <main class="container ">
+   <section>
+    <h1>Composition</h1>
+    <picture class="main-image">
+     <source media="(min-width: 1332px)" srcset="/images/main-image/composition-large.svg">
+     <source media="(min-width: 978px)" srcset="/images/main-image/composition-medium.svg">
+     <img src="/images/main-image/composition-medium.svg" alt="Visual representation of a composition" srcset="/images/main-image/composition-medium.svg">
+    </picture>
+    <time class="hidden" datetime="2017-11-06T00:35:09.100Z" title="Published: Mon Nov 06 2017">Mon Nov 06 2017</time>
+    <div class="passage">
+     <h2>How?</h2>
+     <p>After experiencing the the previous steps comes the fun part; composition. This is where all the hard work pays off.</p>
+     <br>
+     <p>Armed with the following:</p>
+     <ul>
+      <li>
+       <span>Typographic measuring system</li>
+      </span>
+      <li>
+       <span>Vertical alignment</li>
+      </span>
+      <li>
+       <span>Grid system</li>
+      </span>
+     </ul>
+     <p>…the fun can begin!</p>
+     <br>
+     <p>The compositions for each of Interior’s pages (including this one) started in
+      <em>Illustrator</em>. Due to nothing being arbitrary—thanks to each previous section—and therefore (browser quirks aside, oh the woes of CSS columns) can be predicted from one format to another, gaps were filled by designing anything missed right in the browser using Interior’s automation and (visual) Grid System.</p>
+     <p>As you read on you may realise that the order of things is not set in stone, I found it impractical to do so—this is one of
+      <em>those things</em> that may change later. However they have to be categorised, as opposed to being in a single post, as each informs the other and they can be considered separately.</p>
     </div>
    </section>
-  </article>
-  <footer id="main-footer" class="container-outer main-footer ">
+   <section id="grid-system">
+    <div class="passage">
+     <h3>Grid system</h3>
+     <p>I designed the Grid System using
+      <em>Illustrator</em>, and applied it to the pre-determined screen widths (I used art boards to represent each one) then got my readymade content onto the grid. This allowed me to work consistently on each layout.</p>
+     <h4>Layout</h4>
+     <p>I already had an idea in mind of the range of font sizes I could get started with, I applied them to the headings and body, then used the Grid System as a reference so that I could make more creative decisions.</p>
+     <p>I used image placeholders (grey boxes) during the initial wireframe creation—as I knew there would be a need for some fairly interesting imagery to contrast against the black columns of Helvetica; and needed to see the layout take shape. I kind of broke a rule here (design to suit the content) as my content in this case was being created in parallel with the documentation; however with me being the designer there was no issue as it can all be changed to suit.</p>
+     <p>There is a hierarchy in everything from the typography to the imagery.</p>
+    </div>
+    <figure class="figure-layout-1">
+     <picture>
+      <img src="/images/supporting-image/layout-widths-content.svg" alt="Illustration detaling 3 different layout widths with varying grid cells per width.">
+     </picture>
+     <figcaption>Illustration detaling 3 different layout widths with varying grid cells,
+      <em>and content</em> per width.</figcaption>
+    </figure>
+   </section>
+   <section id="typographic-measuring-system">
+    <div class="passage">
+     <h3>Typographic Measuring System</h3>
+     <p>Due to being able to understand what typography each design would consume—through visualisation—the layouts I created informed the <a href="/design-system/typographic-measuring-system.html">Typographic Measuring System</a>; which had already been established. Once applied, the practicalities of the decisions made in isolation became apparent—the abstraction should be a round-trip, creating each component for assembly in isolation will only work up to a point. Once I had decided that the sizes were practical enough for web use I gathered and curated them into a formatted list, each size was assigned a unique variable name.</p>
+    </div>
+   </section>
+   <section id="vertical-alignment">
+    <div class="passage">
+     <h3>Vertical Alignment</h3>
+     <p>I had to work out a way to get the Grid System into browsers so I could layout designs accurately. It’s fairly crude but does the job, so in conjunction with the baseline grid I applied the grids I designed in Illustrator piece by piece.</p>
+     <p>Unlike a Grid Inspector, the Grid System is a visual aid that is not reflective of CSS Grid styles. It is the Grid System a design adheres to. The one I used with Illustrator was recreated using HTML, CSS and a smattering of JS; so designs can be translated to the browser with accuracy.</p>
+    </div>
+    <figure class="figure-layout-1">
+     <picture>
+      <img src="/images/supporting-image/baseline-grid.svg" alt="Illustration detaling a vertical grid and grid system combined.">
+     </picture>
+     <figcaption>Baseline Grid and Grid System combined.</figcaption>
+    </figure>
+   </section>
+   <section id="grid-inspector">
+    <div class="passage">
+     <h3>Firefox Grid Inspector</h3>
+     <p>Not long after I got something together, Firefox released their
+      <em>superb</em> grid inspector.</p>
+     <p>I use Safari to browse using my mobile device, and the bulk of dev was done using Chrome so I couldn't rely solely on Firefox—however it sets a
+      <em>very</em> high standard. The difference between the Grid System and the grid of what you inspect is huge. One is a design reference and should remain constant throughout the entire process of creating a layout, whereas the grids inspected could be constantly evolving, yet should align to the Grid System. The tool enables the level of fine tuning necessary for creating layouts, with precision.</p>
+    </div>
+   </section>
+  </main>
+  <section class="container-outer posts-nav-section ">
    <div class="container">
-    <p class="sig">
-     <span class="name">
-      <a href="http://interiorsystem.co.uk">
-       <cite>Interior</cite>
-      </a>
-     </span> © 2015-2018 by <a href="http://www.morganfeeney.com">Morgan Feeney</a>
-    </p>
+    <nav class="posts-nav" role="navigation">
+     <a class="prev" href="grid-system.html">
+      <span>prev</span>
+      <span>Grid system</span>
+     </a>
+     <a class="next" href="methodology.html">
+      <span>next</span>
+      <span>Methodology</span>
+     </a>
+    </nav>
    </div>
-  </footer>
-  <script>
-  var cols = 60;
-  </script>
-  <script>
-  var body = document.querySelector('body');
-  var main = document.querySelector('main');
-  var gridOverLay = document.querySelector('.grid-overlay');
-  var grid = document.createElement('div');
-  grid.setAttribute('class', 'grid-overlay master-grid');
-  function gridOverlay(cols)
+  </section>
+ </article>
+ <footer id="main-footer" class="container-outer main-footer ">
+  <div class="container">
+   <p class="sig">
+    <span class="name">
+     <a href="http://interiorsystem.co.uk">
+      <cite>Interior</cite>
+     </a>
+    </span> © 2015-2018 by <a href="http://www.morganfeeney.com">Morgan Feeney</a>
+   </p>
+  </div>
+ </footer>
+ <script src="http://localhost:35729/livereload.js"></script>
+ <script>
+ var cols = 60;
+ </script>
+ <script>
+ var body = document.querySelector('body');
+ var main = document.querySelector('main');
+ var gridOverLay = document.querySelector('.grid-overlay');
+ var grid = document.createElement('div');
+ grid.setAttribute('class', 'grid-overlay master-grid');
+ function gridOverlay(cols)
+ {
+  main.appendChild(grid);
+  for (var i = 0; i < cols; i++)
   {
-   main.appendChild(grid);
-   for (var i = 0; i < cols; i++)
-   {
-    var gridChild = document.createElement('div');
-    grid.appendChild(gridChild);
-   }
+   var gridChild = document.createElement('div');
+   grid.appendChild(gridChild);
   }
-  // Create a button to togglethe grid overlay.
-  function overlayToggle(e)
+ }
+ // Create a button to togglethe grid overlay.
+ function overlayToggle(e)
+ {
+  var toggle = document.createElement('button');
+  toggle.setAttribute('class', 'button-grid-toggle');
+  toggle.innerHTML = "Toggle Grid";
+  body.appendChild(toggle);
+  toggle.addEventListener('click', function(e)
   {
-   var toggle = document.createElement('button');
-   toggle.setAttribute('class', 'button-grid-toggle');
-   toggle.innerHTML = "Toggle Grid";
-   body.appendChild(toggle);
-   toggle.addEventListener('click', function(e)
-   {
-    body.classList.toggle('grid-visible');
-    body.classList.toggle('baseline-grid');
-    e.preventDefault();
-   });
-  }
-  if (cols >= 1)
-  {
-   overlayToggle();
-   gridOverlay(cols);
-  }
-  </script>
- </body>
+   body.classList.toggle('grid-visible');
+   body.classList.toggle('baseline-grid');
+   e.preventDefault();
+  });
+ }
+ if (cols >= 1)
+ {
+  overlayToggle();
+  gridOverlay(cols);
+ }
+ </script>
+</body>
 </html>
