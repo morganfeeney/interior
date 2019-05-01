@@ -1,0 +1,39 @@
+:root {
+  --global-small: 0.750rem; /* 12px */
+  --global-body: 1rem; /* 16px */
+  --global-large: 1.375rem; /* 22px */
+  --android-large-x: 1.75rem; /* 28px */
+  --android-large: 2rem; /* 32px */
+  --global-large-x: 2.25rem;  /* 36px */
+  --global-headline: 3rem; /* 48px */
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.global-small {
+  font-size: var(--global-small);
+}
+
+.global-body {
+  font-size: var(--global-body);
+}
+
+.global-large {
+  font-size: var(--global-large);
+}
+
+.android-large {
+  font-size: var(--android-large);
+}
+
+.android-large-x {
+  font-size: var(--android-large-x);
+}
+
+.global-large-x {
+  font-size: var(--global-large-x);
+}
+
+.global-headline {
+  font-size: var(--global-headline);
+}
