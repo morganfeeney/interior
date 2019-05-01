@@ -1,0 +1,8 @@
+.main {
+  grid-auto-rows: var(--row-height);
+}
+
+.main .global-body {
+  grid-column: grid;
+  grid-row: span 3;
+}

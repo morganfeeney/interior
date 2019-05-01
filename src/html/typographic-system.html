@@ -1,25 +1,26 @@
 {% extends "templates/new-prototype-template.njk" %}
+{% set main_classes = "main" %}
 
 {% block header %}
-<h1 class="global-large">Typographic system</h1>
+  <header id="main-header" class="grid doc-header">
+    <h1 class="global-large doc-header__title">Typographic system</h1>
+  </header>
 {% endblock %}
 
 {% block main %}
-<p class="global-body">The sizes within the typographic system are set in points, which is a universal unit of measurement. I initially setup a Sketch library containing these sizes, from there I translated them into CSS for web use, e.g. 1rem equals 16pt/16px.</p>
+  <p class="global-body">The sizes within the typographic system are set in points, which is a universal unit of measurement. I initially setup a Sketch library containing these sizes, from there I translated them into CSS for web use, e.g. 1rem equals 16pt/16px.</p>
 
-<figure class="figure">
-  <div class="placeholder-image"></div>
-  <figcaption class="figcaption">1</figcaption>
-</figure>
-<p class="global-small">Type sizes in 12 - 48pt, SF Pro Display, as created in Sketch library (displayed at actual size). The lines indicate where the ascenders and descenders should align.</p>
+  <figure class="figure">
+    <div class="placeholder-image"></div>
+    <figcaption class="figcaption global-small">Type sizes in 12 - 48pt, SF Pro Display, as created in Sketch library (displayed at actual size). The lines indicate where the ascenders and descenders should align.</figcaption>
+  </figure>
 
-<figure class="figure">
-  <div class="placeholder-image"></div>
-  <figcaption class="figcaption">2</figcaption>
-</figure>
-<p class="global-small">Type Sizes taken from the Sketch library, translated into CSS custom propertie, which are also interchangeable.</p>
+  <figure class="figure">
+    <div class="placeholder-image"></div>
+    <figcaption class="figcaption global-small">Type Sizes taken from the Sketch library, translated into CSS custom propertie, which are also interchangeable.</figcaption>
+  </figure>
 
-<p class="global-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
+  <p class="global-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
 
 {% endblock %}
 

@@ -1,0 +1,20 @@
+.figure {
+  grid-column: span 3;
+  grid-row: span 5;
+  display: grid;
+  grid-template-columns: repeat(3, var(--column-width));
+  grid-auto-rows: var(--row-height);
+  grid-row-gap: var(--baseline);
+  grid-column-gap: 1rem;
+}
+
+.placeholder-image {
+  background: var(--grey-tint);
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.figcaption {
+  grid-column: span 3;
+  grid-row: span 2;
+}

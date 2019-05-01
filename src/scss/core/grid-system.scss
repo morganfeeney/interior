@@ -135,7 +135,7 @@
   grid-template-columns: var(--container-grid);
   padding: 0;
   margin: 0;
-  grid-row-gap: var(--grid-gap);
+  grid-row-gap: var(--baseline);
 }
 
 .grid {
@@ -143,5 +143,5 @@
   display: grid;
   grid-column-gap: var(--grid-gap);
   grid-row-gap: var(--baseline);
-  grid-template-columns: repeat(var(--columns), var(--column-width));
+  grid-template-columns: [grid-start] repeat(var(--columns), var(--column-width)) [grid-end];
 }

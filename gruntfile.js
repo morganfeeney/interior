@@ -46,7 +46,7 @@ module.exports = function(grunt) {
        map: true,
        processors: [
         require("autoprefixer")({
-         browsers: ["last 3 versions"]
+         browsers: ["last 1 versions"]
         })
        ]
       },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
       options: {
        processors: [
         require("autoprefixer")({
-         browsers: ["last 3 versions"]
+         browsers: ["last 1 versions"]
         })
        ]
       },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
   // Watch task
   watch: {
    sass: {
-    files: ["src/scss/**/*.scss"],
+    files: ["src/scss/**/*.scss", "src/scss/**/*.css"],
     tasks: ["sass", "postcss"],
     options: {
      spawn: false,

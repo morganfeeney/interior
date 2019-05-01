@@ -2,5 +2,20 @@
 // Interior — Main stylesheet
 // -----------------------------------------------------------------------------
 
-// Functions
+// Core
+@import "core/grid-system";
+@import "core/reset";
+@import "core/global-spacing";
+@import "core/colour-palette";
+
+// Tools
+@import "tools/baseline-grid";
+@import "tools/grid-overlay";
+
+// System
 @import "typographic-system";
+
+// Blocks
+@import "blocks/doc-header/doc-header";
+@import "blocks/main/main";
+@import "blocks/figure/figure";
