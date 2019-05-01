@@ -1,0 +1,32 @@
+.grid-overlay-parent {
+  position: relative;
+}
+
+.grid-overlay {
+  display: none;
+}
+
+.grid-visible .grid-overlay {
+  display: grid;
+  grid-auto-rows: var(--row-height);
+  grid-column-gap: var(--grid-gap);
+  grid-row-gap: var(--baseline);
+  grid-column: var(--container-column-span);
+
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.grid-overlay div {
+  border: 1px solid cyan;
+}
+
+.button-grid-toggle {
+  position: fixed;
+  bottom: 3rem;
+}
