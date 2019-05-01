@@ -63,13 +63,15 @@
 
   /* The only thing that changes is the number of columns, otherwise the structure is identical */
   --container-grid-template:
+    [margin-start]
     1fr
     var(--m)
     [container-grid-start]
     var(--c) repeat(var(--container-column-count), var(--g) var(--c))
     [container-grid-end]
     var(--m)
-    1fr;
+    1fr
+    [margin-end];
 
   --container-column-count-320: 3;
   --container-column-count-360: 3;
