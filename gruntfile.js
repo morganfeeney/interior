@@ -156,6 +156,16 @@ module.exports = function(grunt) {
     }],
    }
   },
+  copy: {
+    js: {
+      files: [{
+        cwd: 'src/js/',
+        expand: true,
+        src: '**/*.js',
+        dest: 'docs/js/'
+      }]
+    }
+  },
   // Clean task
   clean: {
     all: {
@@ -209,6 +219,7 @@ module.exports = function(grunt) {
   "postcss",
   "nunjucks",
   "prettify",
+  "copy",
   "watch"
  ]);
 };
