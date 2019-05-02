@@ -24,9 +24,10 @@
    * Base units for calculating dimensions and spacial units.
    */
   --grid-gap-half: .5rem;
-  --grid-gap: 1rem;
+  --grid-gap: 1.125rem;
   --grid-gap-double: 2rem;
-  --margin: var(--margin-1);
+  --grid-row-gap: #{($baseline * 4)};
+  --margin: var(--margin-2);
   --margin-double: calc(var(--margin) * 2);
   --c-width: var(--container-width-2);
 
@@ -41,7 +42,7 @@
   --grid-columns-1024: 16;
   --grid-columns-1360: 16;
 
-  --row-height-320: 4.5rem; /* 72px */
+  --row-height-320: 5.5rem; /* 72px */
   --row-height-360: 4.5rem;
   --row-height-414: 4.5rem;
   --row-height-768: 4.5rem;
@@ -137,13 +138,13 @@
   grid-template-columns: var(--container-grid);
   padding: 0;
   margin: 0;
-  grid-row-gap: var(--baseline);
+  grid-row-gap: var(--grid-row-gap);
 }
 
 .grid {
   grid-column: var(--container-column-span);
   display: grid;
   grid-column-gap: var(--grid-gap);
-  grid-row-gap: var(--baseline);
+  grid-row-gap: var(--grid-row-gap);
   grid-template-columns: [grid-start] repeat(var(--columns), var(--column-width)) [grid-end];
 }

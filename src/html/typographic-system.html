@@ -8,20 +8,25 @@
 {% endblock %}
 
 {% block main %}
-  <p class="global-body">The sizes within the typographic system are set in points, which is a universal unit of measurement. I initially setup a Sketch library containing these sizes, from there I translated them into CSS for web use, e.g. 1rem equals 16pt/16px.</p>
+  <section class="grid {{ main_classes }}">
+    <p class="global-body">The sizes within the typographic system are set in points, which is a universal unit of measurement. I initially setup a Sketch library containing these sizes, from there I translated them into CSS for web use, e.g. 1rem equals 16pt/16px.</p>
+  </section>
 
-  <figure class="figure">
-    <div class="placeholder-image"></div>
-    <figcaption class="figcaption global-small">Type sizes in 12 - 48pt, SF Pro Display, as created in Sketch library (displayed at actual size). The lines indicate where the ascenders and descenders should align.</figcaption>
-  </figure>
+  <section class="figure-wrapper">
+    <figure class="figure">
+      <div class="placeholder-image"></div>
+      <figcaption class="figcaption global-small">Type sizes in 12 - 48pt, SF Pro Display, as created in Sketch library (displayed at actual size). The lines indicate where the ascenders and descenders should align.</figcaption>
+    </figure>
 
-  <figure class="figure">
-    <div class="placeholder-image"></div>
-    <figcaption class="figcaption global-small">Type Sizes taken from the Sketch library, translated into CSS custom propertie, which are also interchangeable.</figcaption>
-  </figure>
+    <figure class="figure">
+      <div class="placeholder-image"></div>
+      <figcaption class="figcaption global-small">Type Sizes taken from the Sketch library, translated into CSS custom propertie, which are also interchangeable.</figcaption>
+    </figure>
+  </section>
 
-  <p class="global-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
-
+  <section class="grid {{ main_classes }}">
+    <p class="global-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
+  </section>
 {% endblock %}
 
 {% block main_footer %}{% endblock %}

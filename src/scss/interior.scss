@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 
 // Core
+@import "core/global-spacing";
 @import "core/grid-system";
 @import "core/reset";
-@import "core/global-spacing";
 @import "core/colour-palette";
 
 // Tools
@@ -13,9 +13,10 @@
 @import "tools/grid-overlay";
 
 // System
-@import "typographic-system";
+@import "system/typographic-system";
 
 // Blocks
 @import "blocks/doc-header/doc-header";
 @import "blocks/main/main";
+@import "blocks/figure-wrapper/figure-wrapper";
 @import "blocks/figure/figure";

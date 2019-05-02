@@ -20,7 +20,7 @@ body {
     right: 0;
     z-index: 2;
     mix-blend-mode: multiply;
-    background: linear-gradient(#FF7070 0,transparent 1px) 0 0/100vw var(--baseline-full) repeat-y,linear-gradient(rgba(255,112,112,0.5) 0,transparent 1px) 0 var(--baseline-half)/100vw var(--baseline-half) repeat-y;
+    background: linear-gradient(#FF7070 0,transparent 1px) 0 0/100vw var(--baseline) repeat-y,linear-gradient(rgba(255,112,112,0.5) 0,transparent 1px) 0 var(--baseline-wut)/100vw var(--baseline-wut) repeat-y;
     pointer-events: none;
     background: var(--background-baseline);
 }

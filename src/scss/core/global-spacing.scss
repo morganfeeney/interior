@@ -1,0 +1,7 @@
+body {
+  --baseline: .5rem;
+  --baseline-wut: 0.75rem;
+}
+
+// Custom properties don't work when using them with calc() that's inside another custom property.
+$baseline: .5rem;

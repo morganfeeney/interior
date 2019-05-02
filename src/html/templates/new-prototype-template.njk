@@ -27,11 +27,8 @@
 
 	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">
 		<article id="{{ page }}-article" class="container-grid {{ article_classes }}">
-      {% block header %}
-      {% endblock %}
-			<main class="grid {{ main_classes }}">
-				{% block main %}{% endblock %}
-			</main>
+      {% block header %}{% endblock %}
+			{% block main %}{% endblock %}
 		</article>
 
 		{% block footer_scripts %}

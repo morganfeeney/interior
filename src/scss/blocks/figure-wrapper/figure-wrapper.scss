@@ -1,4 +1,4 @@
-.doc-header {
+.figure-wrapper {
   display: grid;
   grid-auto-rows: var(--row-height);
   grid-row-gap: var(--grid-row-gap);
@@ -6,10 +6,3 @@
   grid-column: margin;
   grid-template-columns: var(--container-grid);
 }
-
-.doc-header__title {
-  grid-row: 2;
-  grid-column: container-grid;
-}
-
-/* min-height: calc(var(--row-height) * 2); */
