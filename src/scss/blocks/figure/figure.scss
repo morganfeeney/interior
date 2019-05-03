@@ -1,20 +1,35 @@
+body {
+  counter-reset: figure;
+}
+
 .figure {
-  grid-column: 3 / span 5;
-  grid-row: span 5;
   display: grid;
   grid-template-columns: repeat(3, var(--column-width));
-  grid-auto-rows: var(--row-height);
-  grid-row-gap: var(--grid-row-gap);
+  grid-template-rows: repeat(3, var(--row-height) var(--grid-row-gap)) var(--row-height);
   grid-column-gap: var(--grid-gap);
+  margin-right: var(--grid-gap);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::before {
+    grid-row: 6;
+    counter-increment: figure;
+    content: counter(figure);
+    font-size: var(--font-size-global-small);
+    line-height: var(--grid-row-gap);
+  }
 }
 
 .placeholder-image {
   background: var(--grey-tint);
+  background: black;
   grid-column: span 3;
-  grid-row: span 3;
+  grid-row: span 5;
 }
 
 .figcaption {
   grid-column: span 3;
-  grid-row: span 2;
+  grid-row: 7;
 }
