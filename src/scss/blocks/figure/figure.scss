@@ -8,6 +8,7 @@ body {
   grid-template-rows: repeat(3, var(--row-height) var(--grid-row-gap)) var(--row-height);
   grid-column-gap: var(--grid-gap);
   margin-right: var(--grid-gap);
+  scroll-snap-align: center;
 
   &:last-child {
     margin-right: 0;

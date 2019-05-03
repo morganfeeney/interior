@@ -2,6 +2,8 @@
   grid-column: margin;
   overflow-x: auto;
   display: flex;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 
   &::before,
   &::after {
