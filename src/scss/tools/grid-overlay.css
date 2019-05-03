@@ -10,7 +10,7 @@
   display: grid;
   grid-auto-rows: var(--row-height);
   grid-column-gap: var(--grid-gap);
-  grid-row-gap: var(--baseline);
+  grid-row-gap: var(--grid-row-gap);
   grid-column: var(--container-column-span);
 
   pointer-events: none;
