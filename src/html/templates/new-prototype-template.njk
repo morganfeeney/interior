@@ -26,10 +26,10 @@
 	</head>
 
 	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">
-		<article id="{{ page }}-article" class="container-grid {{ article_classes }}">
+		<main id="{{ page }}-article" class="container-grid {{ article_classes }}">
       {% block header %}{% endblock %}
 			{% block main %}{% endblock %}
-		</article>
+		</main>
 
 		{% block footer_scripts %}
 			{% if development %}
