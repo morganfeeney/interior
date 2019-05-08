@@ -1,13 +1,20 @@
 .figure-wrapper {
   grid-column: margin;
   overflow-x: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: var(--container-grid);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 
-  &::before,
-  &::after {
-    content: "";
-    flex: 1 0 var(--margin);
-  }
+  // &::before,
+  // &::after {
+  //   content: "";
+  //   flex: 1 0 var(--margin);
+  // }
+}
+
+.figure-wrapper__inner {
+  grid-column: container-grid;
+  display: grid;
+  grid-auto-flow: column;
 }

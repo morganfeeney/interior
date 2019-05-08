@@ -23,11 +23,19 @@ body {
   }
 }
 
+.figure_code-sample {
+  grid-template-columns: repeat(4, var(--column-width));
+}
+
 .placeholder-image {
   background: var(--grey-tint);
   background: black;
   grid-column: span 3;
   grid-row: span 5;
+}
+
+.figure_code-sample .placeholder-image {
+  grid-column: span 4;
 }
 
 .figcaption {
