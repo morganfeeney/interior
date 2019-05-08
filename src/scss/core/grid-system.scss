@@ -75,7 +75,6 @@
     [margin-end];
 
   --container-column-count-320: 3;
-  --container-column-count-360: 3;
   --container-column-count-414: 5;
   --container-column-count-768: 11;
   --container-column-count-1024: 15;
@@ -84,15 +83,6 @@
   --container-grid: var(--container-grid-template);
   --container-column-count: var(--container-column-count-320);
   --container-column-span: container-grid;
-}
-
-@media (min-width: 360px) {
-  :root {
-    --c-width: var(--container-width-3);
-    --rh: var(--row-height-360);
-    --columns: var(--grid-columns-360);
-    --container-column-count: var(--container-column-count-360);
-  }
 }
 
 @media (min-width: 414px) {
