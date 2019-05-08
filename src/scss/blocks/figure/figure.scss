@@ -4,18 +4,12 @@ body {
 
 .figure {
   display: grid;
-  grid-template-columns: repeat(3, var(--column-width));
-  grid-template-rows: repeat(3, var(--row-height) var(--grid-row-gap)) var(--row-height);
-  grid-column-gap: var(--grid-gap);
-  margin-right: var(--grid-gap);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr var(--grid-row-gap) var(--row-height);
   scroll-snap-align: center;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
   &::before {
-    grid-row: 6;
+    grid-row: 2;
     counter-increment: figure;
     content: counter(figure);
     font-size: var(--font-size-global-small);
@@ -24,21 +18,26 @@ body {
 }
 
 .figure_code-sample {
-  grid-template-columns: repeat(4, var(--column-width));
+  &::after { // only works if we don't use grid gap
+    content: "";
+    width: var(--margin);
+    background: transparent;
+    grid-row: 1 / span 5;
+  }
 }
 
 .placeholder-image {
   background: var(--grey-tint);
   background: black;
-  grid-column: span 3;
-  grid-row: span 5;
+  width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+  height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2))
 }
 
 .figure_code-sample .placeholder-image {
-  grid-column: span 4;
+  width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
 }
 
 .figcaption {
-  grid-column: span 3;
-  grid-row: 7;
+  grid-row: 3;
+  width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
 }
