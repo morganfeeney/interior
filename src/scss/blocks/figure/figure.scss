@@ -17,10 +17,13 @@ body {
   }
 }
 
-.figure_code-sample {
-  &::after { // only works if we don't use grid gap
+.figure:last-child {
+  // only works if we don't use grid gap due to a gap being added between this
+  // and the content.
+  &::after {
     content: "";
-    width: var(--margin);
+    // align the last-child to the edge of the overflowing container.
+    width: calc(calc((100vw - var(--container-width)) / 2));
     background: transparent;
     grid-row: 1 / span 5;
   }
@@ -29,7 +32,7 @@ body {
 .placeholder-image {
   background: var(--grey-tint);
   background: black;
-  width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+  width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
   height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2))
 }
 
