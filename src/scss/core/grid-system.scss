@@ -14,8 +14,8 @@
   --container-width-8: 667px;
   --container-width-9: 768px;
   --container-width-10: 1024px;
-  --container-width-11: 1360px;
-  --container-width-12: 1600px;
+  --container-width-11: 1440px;
+  --container-width-12: 1920px;
 
   --margin-1: 1rem;
   --margin-2: 1.5rem;
@@ -37,17 +37,18 @@
 
   --grid-columns-320: 4;
   --grid-columns-360: 4;
-  --grid-columns-414: 6;
-  --grid-columns-768: 12;
-  --grid-columns-1024: 16;
-  --grid-columns-1360: 16;
+  --grid-columns-414: 4;
+  --grid-columns-768: 4;
+  --grid-columns-1024: 6;
+  --grid-columns-1440: 8;
+  --grid-columns-1920: 12;
 
   --row-height-320: 5.5rem; /* 72px */
   --row-height-360: 4.5rem;
-  --row-height-414: 4.5rem;
-  --row-height-768: 4.5rem;
+  --row-height-414: 7rem;
+  --row-height-768: 11.5rem;
   --row-height-1024: 4.5rem;
-  --row-height-1360: 6rem; /* 96px */
+  --row-height-1440: 6rem; /* 96px */
 
   --columns: var(--grid-columns-320);
   --grid-gap-subtraction: calc(var(--grid-gap) * calc(var(--columns) - 1)); /* Removes a gutter from the calculation */
@@ -75,10 +76,11 @@
     [margin-end];
 
   --container-column-count-320: 3;
-  --container-column-count-414: 5;
-  --container-column-count-768: 11;
-  --container-column-count-1024: 15;
-  --container-column-count-1360: 15;
+  --container-column-count-414: 3;
+  --container-column-count-768: 3;
+  --container-column-count-1024: 5;
+  --container-column-count-1440: 7;
+  --container-column-count-1920: 11;
 
   --container-grid: var(--container-grid-template);
   --container-column-count: var(--container-column-count-320);
@@ -96,7 +98,8 @@
 
 @media (min-width: 768px) {
   :root {
-    --margin: var(--margin-1);
+    --grid-gap: 1.5rem;
+    --margin: 3rem;
     --rh: var(--row-height-768);
     --c-width: var(--container-width-9);
     --columns: var(--grid-columns-768);
@@ -107,19 +110,25 @@
 
 @media (min-width: 1024px) {
   :root {
-    --rh: var(--row-height-1024);
     --c-width: var(--container-width-10);
     --columns: var(--grid-columns-1024);
     --container-column-count: var(--container-column-count-1024);
   }
 }
 
-@media (min-width: 1360px) {
+@media (min-width: 1440px) {
   :root {
-    --rh: var(--row-height-1360);
     --c-width: var(--container-width-11);
-    --columns: var(--grid-columns-1360);
-    --container-column-count: var(--container-column-count-1360);
+    --columns: var(--grid-columns-1440);
+    --container-column-count: var(--container-column-count-1440);
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --c-width: var(--container-width-12);
+    --columns: var(--grid-columns-1920);
+    --container-column-count: var(--container-column-count-1920);
   }
 }
 
