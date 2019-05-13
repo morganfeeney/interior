@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 // Core
+@import "core/breakpoints";
 @import "core/global-spacing";
 @import "core/grid-system";
 @import "core/reset";
@@ -14,6 +15,7 @@
 
 // System
 @import "system/typographic-system";
+@import "system/type-styles";
 
 // Blocks
 @import "blocks/doc-header/doc-header";

@@ -18,38 +18,38 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.global-small {
+@mixin global-small() {
   font-size: var(--font-size-global-small);
   line-height: var(--line-height-global-small);
 }
 
-.global-body {
+@mixin global-body {
   font-size: var(--font-size-global-body);
   line-height: var(--line-height-global-body);
 }
 
-.global-large {
+@mixin global-large {
   font-size: var(--font-size-global-large);
   line-height: var(--line-height-global-large);
   font-weight: normal;
 }
 
-.android-large {
+@mixin android-large {
   font-size: var(--font-size-android-large);
   line-height: var(--line-height-android-large);
 }
 
-.android-large-x {
+@mixin android-large-x {
   font-size: var(--font-size-android-large-x);
   line-height: var(--line-height-android-large-x);
 }
 
-.global-large-x {
+@mixin global-large-x {
   font-size: var(--font-size-global-large-x);
   line-height: var(--line-height-global-large-x);
 }
 
-.global-headline {
+@mixin global-headline {
   font-size: var(--font-size-global-headline);
   line-height: var(--line-height-global-headline);
 }

@@ -8,13 +8,17 @@
 }
 
 .doc-header__title {
-  --font-size-doc-header__title: var(--font-size-global-large);
-  --line-height-doc-header__title: var(--line-height-global-large);
-
   grid-row: 2;
   grid-column: container-grid;
-
-  font-size: var(--font-size-doc-header__title);
-  line-height: var(--line-height-doc-header__title);
   font-weight: normal;
+  
+  @include global-large();
+
+  @media(min-width: #{$iPhoneXR}) {
+    @include global-large-x();
+  }
+
+  @media(min-width: #{$tablet}) {
+    @include global-headline();
+  }
 }
