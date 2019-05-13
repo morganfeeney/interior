@@ -2,7 +2,16 @@
   grid-auto-rows: var(--row-height);
 }
 
-.main .global-body {
-  grid-column: grid;
+.main .type-body {
   grid-row: span 2;
+  grid-column: grid;
+  margin-top: -.3rem;
+
+  @media (min-width: #{$iPhoneXR}) {
+    grid-row: span 1;
+  }
+
+  @media (min-width: #{$tablet}) {
+    grid-column: span 3;
+  }
 }
