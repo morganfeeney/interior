@@ -17,5 +17,6 @@
   grid-column: container-grid;
   display: grid;
   grid-auto-flow: column;
+  grid-template-columns: min-content;
   grid-column-gap: var(--grid-gap);
 }
