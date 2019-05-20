@@ -1,0 +1,26 @@
+// Body
+//
+// 1. Remove padding in all browsers.
+// 2. Prevent font size changing when orientation changes on some deveices.
+body {
+  margin: 0; // 1.
+  -webkit-text-size-adjust:100%; // 2.
+}
+
+// Document
+//
+// 1. Change the way the box model behaves.
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 1.
+}
+
+// Elements
+//
+// 1. Remove margins from elements e.g. `<p>` so `grid-gap` can be used instead.
+figure,
+p,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; // 1.
+}
