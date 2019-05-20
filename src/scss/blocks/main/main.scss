@@ -1,5 +1,7 @@
 .main {
-  grid-auto-rows: var(--row-height);
+  // grid-auto-rows: fit-content(var(--row-height));
+  // min-height: calc((var(--row-height) * 2) + var(--grid-row-gap));
+  grid-auto-rows: minmax(var(--row-height), min-content);
 }
 
 .main .type-body {
