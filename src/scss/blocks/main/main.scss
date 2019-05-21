@@ -5,8 +5,9 @@
 .main .type-body {
   --body-margin-top: -.3rem;
   --body-margin-bottom: 0;
+  --type-body-grid-column: grid;
   grid-row: span 2;
-  grid-column: grid;
+  grid-column: var(--type-body-grid-column);
   margin-top: var(--body-margin-top);
   margin-bottom: var(--body-margin-bottom);
 
@@ -16,8 +17,12 @@
   }
 
   @media (min-width: #{$tablet}) {
-    grid-column: span 3;
+    // grid-column: span 3;
     --body-margin-top: -.5rem;
     --body-margin-bottom: 0; // Misaligning with grid modules is not a problem here.
+  }
+
+  @media (min-width: #{$iPadPro}) {
+    --type-body-grid-column: 2 / span 3;
   }
 }
