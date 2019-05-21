@@ -14,9 +14,14 @@
 }
 
 .figure-wrapper__inner {
-  grid-column: container-grid;
+  --figure-wrapper-inner-grid-column: container-grid;
+  grid-column: var(--figure-wrapper-inner-grid-column);
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: min-content;
   grid-column-gap: var(--grid-gap);
+
+  @media (min-width: #{$iPadPro}) {
+    --figure-wrapper-inner-grid-column: 5 / span 9;
+  }
 }

@@ -30,30 +30,38 @@ body {
 }
 
 .placeholder-image {
+  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  --placeholder-image-height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
   background: var(--grey-tint);
   background: black;
-  width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
-  height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
+  width: var(--placeholder-image-width);
+  height: var(--placeholder-image-height);
 
   @media (min-width: #{$tablet}) {
-    width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
-    height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
+    --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 }
 
 .figure_code-sample .placeholder-image {
-  width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
 
   @media (min-width: #{$tablet}) {
-    width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+  }
+
+  @media (min-width: #{$appleTV}) {
+    --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
   }
 }
 
 .figcaption {
+  --figcaption-margin-top: -.3rem;
   grid-row: 3;
   width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
 
   @media (min-width: #{$tablet}) {
     width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    margin-top: var(--figcaption-margin-top);
   }
 }

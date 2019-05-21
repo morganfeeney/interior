@@ -8,17 +8,23 @@
 }
 
 .doc-header__title {
+  --doc-header-margin-top: -.4rem;
+  --doc-header-title-grid-column: container-grid;
+  margin-top: var(--doc-header-margin-top);
   grid-row: 2;
-  grid-column: container-grid;
+  grid-column: var(--doc-header-title-grid-column);
   font-weight: normal;
-  
+
   @include global-large();
 
-  @media(min-width: #{$iPhoneXR}) {
+  @media (min-width: #{$iPhoneXR}) {
     @include global-large-x();
+    --doc-header-margin-top: -.7rem;
   }
 
-  @media(min-width: #{$tablet}) {
+  @media (min-width: #{$tablet}) {
     @include global-headline();
+    --doc-header-margin-top: -1rem;
+    --doc-header-title-grid-column: 5 / span 9;
   }
 }
