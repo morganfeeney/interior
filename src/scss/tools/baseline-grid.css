@@ -1,3 +1,7 @@
+html {
+  position: relative;
+}
+
 body {
   --color: #FF7070;
 
