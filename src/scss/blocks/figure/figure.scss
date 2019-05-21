@@ -50,10 +50,12 @@ body {
 }
 
 .figcaption {
+  --figcaption-margin-top: -.3rem;
   grid-row: 3;
   width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
 
   @media (min-width: #{$tablet}) {
     width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    margin-top: var(--figcaption-margin-top);
   }
 }
