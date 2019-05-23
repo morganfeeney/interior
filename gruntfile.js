@@ -95,7 +95,15 @@ module.exports = function(grunt) {
      livereload: true,
      reload: true
     }
+  },
+  js: {
+   files: "src/js/**/*.js",
+   options: {
+    spawn: false,
+    livereload: true,
+    reload: true
    }
+  }
   },
   // Nunjucks task
   nunjucks: {
