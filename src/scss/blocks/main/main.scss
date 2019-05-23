@@ -17,7 +17,7 @@
   }
 
   @media (min-width: #{$tablet}) {
-    // grid-column: span 3;
+    --type-body-grid-column: span 3;
     --body-margin-top: -.5rem;
     --body-margin-bottom: 0; // Misaligning with grid modules is not a problem here.
   }

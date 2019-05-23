@@ -25,6 +25,9 @@
   @media (min-width: #{$tablet}) {
     @include global-headline();
     --doc-header-margin-top: -1rem;
+  }
+
+  @media (min-width: #{$iPadPro}) {
     --doc-header-title-grid-column: 5 / span 9;
   }
 }
