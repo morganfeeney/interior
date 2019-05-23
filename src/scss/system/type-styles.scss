@@ -1,5 +1,5 @@
-.global-small {
-  @include global-small();
+.mobile-small {
+  @include mobile-small()
 }
 
 .global-body {
@@ -28,7 +28,11 @@
 
 
 .type-small {
-  @include global-small();
+  @include mobile-small();
+
+  @media (min-width: #{$iPhoneXR}) {
+    @include global-small();
+  }
 
   @media (min-width: #{$tablet}) {
     @include global-body();

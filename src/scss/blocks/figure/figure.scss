@@ -45,20 +45,17 @@ body {
 
 .figure_code-sample .placeholder-image {
   --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
-
-  @media (min-width: #{$tablet}) {
-    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
-  }
-
-  @media (min-width: #{$appleTV}) {
-    --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
-  }
 }
 
 .figcaption {
-  --figcaption-margin-top: -.3rem;
+  --figcaption-margin-top: -.15rem;
   grid-row: 3;
-  width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+  width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  margin-top: var(--figcaption-margin-top);
+
+  @media (min-width: #{$iPhoneXR}) {
+    width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+  }
 
   @media (min-width: #{$tablet}) {
     width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
