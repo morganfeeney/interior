@@ -1,0 +1,58 @@
+.placeholder-image {
+  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  --placeholder-image-height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
+  background-color: var(--grey-tint);
+  width: var(--placeholder-image-width);
+  height: var(--placeholder-image-height);
+
+  @media (min-width: #{$tablet}) {
+    --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
+  }
+}
+
+.figure_code-sample .placeholder-image {
+  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+}
+.test {
+  --font-size-mobile-small: 0.750rem; /* 12px */
+  --font-size-global-small: 0.750rem; /* 12px */
+  --font-size-global-body: 1rem; /* 16px */
+  --font-size-global-large: 1.375rem; /* 22px */
+  --font-size-android-large: 1.375rem; /* 22px */
+  --font-size-android-large-x: 1.75rem; /* 28px */
+  --font-size-global-large-x: 2.25rem;  /* 36px */
+  --font-size-global-headline: 3rem; /* 48px */
+}
+
+.placeholder-image_typographic-system {
+  --background-baseline:
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 0/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 12px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 20px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 36px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 44px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 66px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 74px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 102px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 110px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 142px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 150px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 186px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 194px/100vw,
+    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 242px/100vw;
+
+  background:
+    url('/images/Interior graphics_Typographic system 1.svg') no-repeat,
+    url('/images/Interior graphics_Typographic system 2.svg') no-repeat 8rem top,
+    var(--grey-tint);
+    background-size: auto 237px;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--background-baseline);
+    background-repeat: no-repeat;
+  }
+}
