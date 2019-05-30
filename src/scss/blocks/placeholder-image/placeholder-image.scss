@@ -12,19 +12,8 @@
 }
 
 @function grad($lg) {
-  $lg: linear-gradient(var(--interior-orange) 0,transparent 2px) 0 #{$lg}/100vw;
+  $lg: linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 #{$lg}/100vw;
   @return $lg;
-}
-
-.test {
-  --font-size-mobile-small: 0.750rem; /* 12px */
-  --font-size-global-small: 0.750rem; /* 12px */
-  --font-size-global-body: 1rem; /* 16px */
-  --font-size-global-large: 1.375rem; /* 22px */
-  --font-size-android-large: 1.375rem; /* 22px */
-  --font-size-android-large-x: 1.75rem; /* 28px */
-  --font-size-global-large-x: 2.25rem;  /* 36px */
-  --font-size-global-headline: 3rem; /* 48px */
 }
 
 .placeholder-image_typographic-system {
@@ -54,5 +43,14 @@
       grad(194px),
       grad(242px);
     background-repeat: no-repeat;
+  }
+}
+
+.placeholder-image_code-sample {
+  overflow: auto;
+  padding: 1rem 2rem;
+
+  @media (min-width: #{$tablet}) {
+    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
   }
 }
