@@ -1,0 +1,8 @@
+.code-sample {
+  --code-sample-font-family: Menlo, Courier;
+  font-family: var(--code-sample-font-family);
+}
+
+.code-sample__code {
+  font-family: inherit;
+}

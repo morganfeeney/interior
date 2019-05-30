@@ -1,0 +1,31 @@
+{# Create an order I am happy with, otherwise it's alphabetical #}
+{% set design_system = [
+  "typographic-measuring-system.html",
+  "vertical-alignment.html",
+  "grid-system.html",
+  "composition.html",
+  "methodology.html",
+  "specification.html"
+  ] %}
+
+{# Could be made into a macro #}
+{% for item in design_system %}
+  {% if file == item %}
+    <nav class="posts-nav" role="navigation">
+      {% set next = loop.index %}
+      {% set prev = loop.index-2 %}
+      {% set nice_prev = design_system[prev] | capitalize | replace("-", " ") | replace(".html", "") %}
+      {% set nice_next = design_system[next] | capitalize | replace("-", " ") | replace(".html", "") %}
+      {% if nice_prev %}
+        <a class="prev" href="{{ design_system[prev] }}"><span>prev</span><span>{{ nice_prev }}</span></a>
+      {% else %}
+        {# NOWT #}
+      {% endif %}
+      {% if nice_next %}
+        <a class="next" href="{{ design_system[next] }}"><span>next</span><span>{{ nice_next }}</span></a>
+      {% else %}
+        {# NOWT #}
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endfor %}
