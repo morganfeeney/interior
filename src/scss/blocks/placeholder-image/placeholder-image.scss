@@ -25,26 +25,32 @@
   --font-size-global-headline: 3rem; /* 48px */
 }
 
+@mixin grad($items) {
+  @each $i in $items {
+    background: linear-gradient(var(--interior-orange) 0,transparent 2px) 0 $i/100vw;
+  }
+}
+
 .placeholder-image_typographic-system {
   --background-baseline:
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 0/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 12px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 20px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 36px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 44px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 66px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 74px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 102px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 110px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 142px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 150px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 186px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 194px/100vw,
-    linear-gradient(var(--interior-orange) 0,transparent 2px) 0 242px/100vw;
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 0/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 12px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 20px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 36px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 44px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 66px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 74px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 102px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 110px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 142px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 150px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 186px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 194px/100vw,
+    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 242px/100vw;
 
   background:
-    url('/images/Interior graphics_Typographic system 1.svg') no-repeat,
-    url('/images/Interior graphics_Typographic system 2.svg') no-repeat 8rem top,
+    url('/images/Interior graphics_Typographic system 1.svg') no-repeat 0 1px,
+    url('/images/Interior graphics_Typographic system 2.svg') no-repeat 8rem 1px,
     var(--grey-tint);
     background-size: auto 237px;
   &::before {
