@@ -11,9 +11,11 @@
   }
 }
 
-.figure_code-sample .placeholder-image {
-  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+@function grad($lg) {
+  $lg: linear-gradient(var(--interior-orange) 0,transparent 2px) 0 #{$lg}/100vw;
+  @return $lg;
 }
+
 .test {
   --font-size-mobile-small: 0.750rem; /* 12px */
   --font-size-global-small: 0.750rem; /* 12px */
@@ -25,29 +27,7 @@
   --font-size-global-headline: 3rem; /* 48px */
 }
 
-@mixin grad($items) {
-  @each $i in $items {
-    background: linear-gradient(var(--interior-orange) 0,transparent 2px) 0 $i/100vw;
-  }
-}
-
 .placeholder-image_typographic-system {
-  --background-baseline:
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 0/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 12px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 20px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 36px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 44px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 66px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 74px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 102px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 110px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 142px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 150px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 186px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 194px/100vw,
-    linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 242px/100vw;
-
   background:
     url('/images/Interior graphics_Typographic system 1.svg') no-repeat 0 1px,
     url('/images/Interior graphics_Typographic system 2.svg') no-repeat 8rem 1px,
@@ -58,7 +38,21 @@
     width: 100%;
     height: 100%;
     display: block;
-    background: var(--background-baseline);
+    background:
+      grad(0),
+      grad(12px),
+      grad(20px),
+      grad(36px),
+      grad(44px),
+      grad(66px),
+      grad(74px),
+      grad(102px),
+      grad(110px),
+      grad(142px),
+      grad(150px),
+      grad(186px),
+      grad(194px),
+      grad(242px);
     background-repeat: no-repeat;
   }
 }

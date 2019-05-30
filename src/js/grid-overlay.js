@@ -20,7 +20,7 @@ function overlayToggle(e){
   toggle.addEventListener('click', function(e) {
     body.classList.toggle('grid-visible');
     main.classList.toggle('grid-overlay-parent');
-    body.classList.toggle('baseline-grid');
+    // body.classList.toggle('baseline-grid');
     e.preventDefault();
   });
 }
