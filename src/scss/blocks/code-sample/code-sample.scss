@@ -6,3 +6,16 @@
 .code-sample__code {
   font-family: inherit;
 }
+
+.code-sample__modal {
+  position: fixed;
+  left: 0;
+  background: var(--grey-tint);
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
