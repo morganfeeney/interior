@@ -181,6 +181,9 @@ module.exports = function(grunt) {
     },
     css: {
       src: ["docs/css/**/*"]
+    },
+    js: {
+      src: ["docs/js/**/*"]
     }
   },
   // Prettify task
