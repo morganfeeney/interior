@@ -32,6 +32,3 @@ window.onload = () => {
     return
   }
 }
-// Need to write some kind of check, possibly boolean, to see if the code has
-// been appended or not, could posibly use a class, or see if content exists?
-// then maybe destriy the modal and do it each time for every instance.
