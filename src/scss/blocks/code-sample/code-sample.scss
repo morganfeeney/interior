@@ -1,10 +1,31 @@
 .code-sample {
   --code-sample-font-family: Menlo, Courier;
   font-family: var(--code-sample-font-family);
+  line-height: var(--line-height-global-code);
 }
 
 .code-sample__code {
   font-family: inherit;
+}
+
+.code-sample__comment {
+  color: var(--grey-5);
+}
+
+.code-sample__property {
+  color: var(--grey-4);
+}
+
+.code-sample__value {
+  color: var(--interior-orange);
+}
+
+.code-sample__selector {
+  color: var(--interior-orange);
+}
+
+.code-sample__at-rule {
+  color: var(--interior-orange);
 }
 
 .code-sample__modal {
