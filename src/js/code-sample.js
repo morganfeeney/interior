@@ -9,6 +9,9 @@ executeCodeSampleModal = () => {
 
   codeSample.addEventListener('click', function() {
 
+    // Set the body to overflow hidden
+    body.classList.add('modal-open')
+
     // Clone the code sample we want to display
     const clone = this.cloneNode(true);
 
@@ -21,6 +24,7 @@ executeCodeSampleModal = () => {
 
 // Remove the modal using a click event
 closeModal = () => {
+  body.classList.remove('modal-open');
   document.querySelector('.js-code-sample-modal-body').innerHTML = '';
   document.querySelector('.js-code-sample-wrapper').remove();
 }

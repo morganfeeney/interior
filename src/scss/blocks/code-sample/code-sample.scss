@@ -38,5 +38,21 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.code-sample__modal-button {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.code-sample__modal-body {
+  overflow: auto;
+}
+
+.modal-open {
+  overflow: hidden;
 }
