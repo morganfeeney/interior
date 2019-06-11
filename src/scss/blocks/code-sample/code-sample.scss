@@ -51,8 +51,10 @@
 
 .code-sample__modal-body {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-open {
   overflow: hidden;
+  position: fixed;
 }
