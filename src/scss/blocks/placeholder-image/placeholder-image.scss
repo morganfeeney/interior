@@ -17,15 +17,18 @@
 }
 
 .placeholder-image_typographic-system {
+  display: flex;
+  align-items: center;
   background:
-    url('/images/Interior graphics_Typographic system 1.svg') no-repeat 0 1px,
-    url('/images/Interior graphics_Typographic system 2.svg') no-repeat 8rem 1px,
+    url('/images/Interior graphics_Typographic system 1.svg') no-repeat 0 center,
+    url('/images/Interior graphics_Typographic system 2.svg') no-repeat 8rem center,
     var(--grey-tint);
     background-size: auto 237px;
   &::before {
     content: "";
     width: 100%;
-    height: 100%;
+    height: 244px;
+    margin-top: 4px;
     display: block;
     background:
       grad(0),
@@ -49,6 +52,17 @@
 .placeholder-image_code-sample {
   overflow: hidden;
   padding: 1rem 2rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top,var(--grey-tint) 0%, transparent 100%);
+    left: 0;
+    right: 0;
+    height: 60px;
+    bottom: 0;
+  }
 
   @media (min-width: #{$tablet}) {
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
