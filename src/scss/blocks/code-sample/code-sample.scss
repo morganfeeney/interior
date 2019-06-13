@@ -29,32 +29,49 @@
 }
 
 .code-sample__modal {
-  position: fixed;
+  position: absolute;
   left: 0;
-  background: var(--grey-tint);
-  width: 100vw;
+  background: var(--dark-overlay);
   top: 0;
+  width: 100vw;
   bottom: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  overflow-y: auto;
-  padding: 1rem;
+  padding: .5rem;
+  align-items: center;
+  flex-flow: column;
 }
 
 .code-sample__modal-button {
   position: fixed;
+  z-index: 1;
   bottom: 0;
+  left: 0;
+  border: none;
   padding: 1rem;
   width: 100%;
+  -webkit-appearance: none;
+  background: var(--interior-orange, red);
+  color: var(--white);
+  margin: 0;
+  @extend .global-large;
 }
 
 .code-sample__modal-body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  background: var(--white);
+  border-radius: 1rem;
+  max-width: 100%; // Should flex to screen width.
+  position: relative;
+  top: var(--code-sample-modal-offset, 0);
+}
+
+.code-sample__modal-body .code-sample {
+  margin: 2rem;
 }
 
 .modal-open {
-  overflow: hidden;
-  position: fixed;
+  // overflow: hidden;
+  // position: fixed;
 }
