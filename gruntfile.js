@@ -98,6 +98,7 @@ module.exports = function(grunt) {
   },
   js: {
    files: "src/js/**/*.js",
+   tasks: ["clean:js", "copy:js"],
    options: {
     spawn: false,
     livereload: true,
