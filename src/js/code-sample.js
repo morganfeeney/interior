@@ -24,17 +24,7 @@ executeCodeSampleModal = () => {
     // Append the complete template to the document body
     body.appendChild(templateWrapper);
 
-    observer = new IntersectionObserver((entry) => {
-      if (this.intersextionRatio > 0) {
-        // Offset the top of the modal to be close to the original content
-        document.querySelector('.js-code-sample-modal-body').style.setProperty('--code-sample-modal-offset', offset + "px");
-      } else {
-        console.log('Fuck all')
-      }
-    });
-
-      observer.observe(this);
-
+    document.querySelector('.js-code-sample-modal-body').style.setProperty('--code-sample-modal-offset', offset + "px");
   });
 };
 
