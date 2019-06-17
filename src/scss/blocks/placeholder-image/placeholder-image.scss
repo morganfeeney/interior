@@ -5,6 +5,11 @@
   width: var(--placeholder-image-width);
   height: var(--placeholder-image-height);
 
+  @media (min-width: #{$iPhoneXR}) {
+    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
+  }
+
   @media (min-width: #{$tablet}) {
     --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
     --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
@@ -62,6 +67,11 @@
     right: 0;
     height: 60px;
     bottom: 0;
+  }
+
+  @media (min-width: #{$iPhoneXR}) {
+    --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 
   @media (min-width: #{$tablet}) {
