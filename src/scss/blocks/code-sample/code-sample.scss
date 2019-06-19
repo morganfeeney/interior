@@ -13,11 +13,11 @@
 }
 
 .code-sample__property {
-  color: var(--grey-4);
+  color: var(--black);
 }
 
 .code-sample__value {
-  color: var(--interior-orange);
+  color: var(--black);
 }
 
 .code-sample__selector {
@@ -31,47 +31,56 @@
 .code-sample__modal {
   position: absolute;
   left: 0;
-  background: var(--dark-overlay);
+  background: hsla(33.8, 85.2%, 55.1%, 0.89);
   top: 0;
   width: 100vw;
   bottom: 0;
-  margin: 0;
   display: flex;
   padding: .5rem;
   align-items: center;
   flex-flow: column;
+  justify-content: center;
 }
 
 .code-sample__modal-button {
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  bottom: 0;
-  left: 0;
+  bottom: -1rem;
+  right: -1.75rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
   border: none;
   padding: 1rem;
-  width: 100%;
   -webkit-appearance: none;
-  background: var(--interior-orange, red);
+  background: var(--white);
   color: var(--white);
+  border: 4px solid var(--black);
+  box-shadow: 
+    -.15rem -0.05rem hsla(0, 0%, 0.8%, 0.12), 
+    .25rem 0.35rem hsla(0, 0%, 0.8%, 0.24);
   margin: 0;
   @extend .global-large;
+}
+
+.code-sample__modal-inner {
+  position: relative;
+  top: var(--code-sample-modal-offset, 0);
+  max-width: 100%; // Should flex to screen width.
 }
 
 .code-sample__modal-body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background: var(--white);
-  border-radius: 1rem;
-  max-width: 100%; // Should flex to screen width.
-  position: relative;
-  top: var(--code-sample-modal-offset, 0);
+  box-shadow: .25rem 0.35rem hsla(0, 0%, 0.8%, 0.24);
+  border: 4px solid var(--black);
 }
 
 .code-sample__modal-body .code-sample {
   margin: 2rem;
 }
 
-.modal-open {
-  // overflow: hidden;
-  // position: fixed;
+.modal-open .figure-wrapper {
+  pointer-events: none;
 }

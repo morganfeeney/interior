@@ -24,7 +24,7 @@ executeCodeSampleModal = () => {
     // Append the complete template to the document body
     body.appendChild(templateWrapper);
 
-    document.querySelector('.js-code-sample-modal-body').style.setProperty('--code-sample-modal-offset', offset + "px");
+    // document.querySelector('.js-code-sample-inner').style.setProperty('--code-sample-modal-offset', offset + "px");
   });
 };
 
