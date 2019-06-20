@@ -1,0 +1,24 @@
+.modal-button {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    padding: 1rem;
+    -webkit-appearance: none;
+    background: var(--white) var(--modal-button-icon) no-repeat center;
+    text-indent: -999rem;
+    background-size: 2rem;
+    color: var(--white);
+    border: 4px solid var(--black);
+    box-shadow: 
+      -.15rem -0.05rem hsla(0, 0%, 0.8%, 0.12), 
+      .25rem 0.35rem hsla(0, 0%, 0.8%, 0.24);
+  }
+
+  .modal-button_open {
+    --modal-button-icon: url("/images/icons/eye.svg");
+  }
+
+  .modal-button_close {
+    --modal-button-icon: url("/images/icons/eye-slash.svg");
+  }

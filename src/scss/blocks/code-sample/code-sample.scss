@@ -42,25 +42,26 @@
   justify-content: center;
 }
 
-.code-sample__modal-button {
+.code-sample__modal-button-open {
+  position: absolute;
+  z-index: 1;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.code-sample__modal-button-close {
+  --modal-button-right: .75rem;
+
+  @media (min-width: #{$iPhoneXR}) {
+    --modal-button-right: -1.75rem;
+  }
+
   position: absolute;
   z-index: 1;
   bottom: -1rem;
-  right: -1.75rem;
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  border: none;
-  padding: 1rem;
-  -webkit-appearance: none;
-  background: var(--white);
-  color: var(--white);
-  border: 4px solid var(--black);
-  box-shadow: 
-    -.15rem -0.05rem hsla(0, 0%, 0.8%, 0.12), 
-    .25rem 0.35rem hsla(0, 0%, 0.8%, 0.24);
+  right: var(--modal-button-right);
   margin: 0;
-  @extend .global-large;
 }
 
 .code-sample__modal-inner {
@@ -83,4 +84,8 @@
 
 .modal-open .figure-wrapper {
   pointer-events: none;
+}
+
+.modal-open .modal-button_open {
+  display: none;
 }
