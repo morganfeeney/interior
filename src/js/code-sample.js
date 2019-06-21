@@ -37,7 +37,7 @@ closeModal = () => {
 
   body.classList.remove('modal-open');
 
-  if (modalBody) {
+  if (modalBody ) {
     modalBody.innerHTML = '';
   }
   if (modalWrapper) {
@@ -47,6 +47,7 @@ closeModal = () => {
 
 closeModalViaOverlay = () => {
   const renderedWrapper = document.querySelector('.js-code-sample-wrapper');
+  
   renderedWrapper.addEventListener('click', () => {
     closeModal();
   })

@@ -51,17 +51,11 @@
 }
 
 .code-sample__modal-button-close {
-  --modal-button-right: .75rem;
-
-  @media (min-width: #{$iPhoneXR}) {
-    --modal-button-right: -1.75rem;
-  }
-
   position: absolute;
   z-index: 1;
   bottom: -1rem;
-  right: var(--modal-button-right);
-  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .code-sample__modal-inner {
