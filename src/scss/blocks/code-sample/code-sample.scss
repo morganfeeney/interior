@@ -45,9 +45,9 @@
 .code-sample__modal-button-open {
   position: absolute;
   z-index: 1;
-  bottom: 1.5rem;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .code-sample__modal-button-close {

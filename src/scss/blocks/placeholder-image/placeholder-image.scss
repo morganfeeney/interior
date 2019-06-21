@@ -7,7 +7,6 @@
 
   @media (min-width: #{$iPhoneXR}) {
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
-    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 
   @media (min-width: #{$tablet}) {
@@ -56,8 +55,12 @@
 
 .placeholder-image_code-sample {
   overflow: hidden;
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
   position: relative;
+
+  @media (min-width: #{$iPhoneXR}) {
+    padding: 1rem 2rem;
+  }
 
   &::after {
     content: "";
@@ -65,17 +68,20 @@
     background: linear-gradient(to top,var(--grey-tint) 0%, rgba(255, 255, 255, 0) 100%);
     left: 0;
     right: 0;
-    height: 60px;
+    height: 100%;
     bottom: 0;
     pointer-events: none;
   }
 
   @media (min-width: #{$iPhoneXR}) {
     --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
-    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 
   @media (min-width: #{$tablet}) {
+    --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+  }
+
+  @media (min-width: #{$iPadPro}) {
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
   }
 }
