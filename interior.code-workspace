@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"emmet.showSuggestionsAsSnippets": true,
+		"emmet.triggerExpansionOnTab": true
+	}
+}
