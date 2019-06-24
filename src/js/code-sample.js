@@ -10,14 +10,14 @@ executeCodeSampleModal = () => {
 
     const codeSample = this.closest('.js-placeholder-image').querySelector('.js-code-sample');
     
-    // Set the body to overflow hidden
+    // Setup some body styles for the modal
     body.classList.add('modal-open');
 
     // Clone the code sample we want to display
     const clone = codeSample.cloneNode(true);
 
     // Get the distance from the top of the document and use it as an offset
-    let offset = window.pageYOffset + this.getBoundingClientRect().top;
+    let offset = window.pageYOffset + codeSample.getBoundingClientRect().top;
 
     // Append the cloned code sample to the template body
     templateBody.appendChild(clone);
@@ -25,7 +25,7 @@ executeCodeSampleModal = () => {
     // Append the complete template to the document body
     body.appendChild(templateWrapper);
 
-    // document.querySelector('.js-code-sample-inner').style.setProperty('--code-sample-modal-offset', offset + "px");
+    document.querySelector('.js-code-sample-inner').style.setProperty('--code-sample-modal-offset', offset + "px");
     closeModalViaOverlay();
   });
 };
