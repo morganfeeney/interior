@@ -1,5 +1,7 @@
 {% extends "templates/new-prototype-template.njk" %}
-{% import "blocks/figure-wrapper/figure-wrapper.njk" as fw %} 
+{% import "blocks/figure-wrapper/figure-wrapper.njk" as fw %}
+{% import "blocks/image-nav/image-nav.njk" as imgn %}
+
 {% set main_classes = "main" %}
 
 {% block header %}
@@ -32,6 +34,23 @@
   <section class="grid {{ main_classes }}">
     <p class="type-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
   </section>
+{% endblock %}
+
+{% block image_nav %}
+  {{ imgn.imageNav(
+    items=[
+      {
+        imgSrc:'/images/Interior-graphics_Column-width-2.svg',
+        href: '/column-width.html',
+        itemAlt: 'Column width image'
+      },
+      {
+        imgSrc:'/images/Interior-graphics_screens.svg',
+        href: '/srceens.html',
+        itemAlt: 'Screens image'
+      }
+    ]
+  ) }}
 {% endblock %}
 
 {% block main_footer %}{% endblock %}

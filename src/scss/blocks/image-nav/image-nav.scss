@@ -1,0 +1,12 @@
+.image-nav {
+  grid-column: margin;
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: var(--container-grid);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.image-nav__item {
+  grid-column: span 2;
+}

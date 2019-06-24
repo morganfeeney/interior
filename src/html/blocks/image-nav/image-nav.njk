@@ -1,0 +1,13 @@
+{% macro imageNav(items=[]) %}
+  <nav class="image-nav">
+    <div class="grid image-nav__inner">
+      {% if items !==[] %}
+        {% for item in items %}
+          <a class="image-nav__item" href="{{ item.href }}">
+            <img src="{{ item.imgSrc }}" alt="{{ item.itemAlt }}">
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </nav>
+{% endmacro %}
