@@ -25,7 +25,43 @@ executeCodeSampleModal = () => {
     // Append the complete template to the document body
     body.appendChild(templateWrapper);
 
-    document.querySelector('.js-code-sample-inner').style.setProperty('--code-sample-modal-offset', offset + "px");
+    let test = document.querySelector('.js-code-sample-inner'); 
+
+    // test.style.setProperty('--code-sample-modal-offset', offset + "px")
+    // window.matchMedia('(max-width: 767px)').addEventListener("change", console.log('test'));
+
+    let wMax = window.matchMedia('(max-width: 767px)');
+    let wMin = window.matchMedia('(min-width: 768px)');
+
+    // Set the property by default
+
+    if (wMax) {
+      test.style.setProperty(
+        '--code-sample-modal-offset', offset + "px"
+        ) 
+    } else if (wMin) {
+      test.style.setProperty(
+        '--code-sample-modal-offset', 0
+        ) 
+    }
+      // Remove the property across breakpoints if needed
+    myTest = (e) => {
+      if (e.matches) {
+        window.addEventListener(
+          "change", 
+          test.style.setProperty(
+            '--code-sample-modal-offset', 0
+            )
+          )
+      } else {
+        test.style.setProperty(
+          '--code-sample-modal-offset', offset + "px"
+          ) 
+      }  
+    }
+
+    wMin.addListener(myTest);
+
     closeModalViaOverlay();
   });
 };
@@ -51,6 +87,10 @@ closeModalViaOverlay = () => {
   renderedWrapper.addEventListener('click', () => {
     closeModal();
   })
+}
+
+updateCssProperty = (property, value) => {
+  style.setProperty(property, value)
 }
 
 window.onload = () => {
