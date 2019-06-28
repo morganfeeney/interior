@@ -1,11 +1,25 @@
+:root {
+  --placeholder-padding-default: .5rem 1rem;
+  --placeholder-padding-iPhoneXR: 1rem 2rem;
+  --placeholder-padding: var(--placeholder-padding-default);
+}
+
+:root {
+  @media (min-width: #{$iPhoneXR}) {
+    --placeholder-padding: var(--placeholder-padding-iPhoneXR);
+  }
+}
+
 .placeholder-image {
   --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
   --placeholder-image-height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
+
   background-color: var(--grey-tint);
   width: var(--placeholder-image-width);
   height: var(--placeholder-image-height);
 
   @media (min-width: #{$iPhoneXR}) {
+    --placeholder-padding: var(--placeholder-padding-iPhoneXR);
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
   }
 
@@ -55,12 +69,8 @@
 
 .placeholder-image_code-sample {
   overflow: hidden;
-  padding: .5rem 1rem;
+  padding: var(--placeholder-padding);
   position: relative;
-
-  @media (min-width: #{$iPhoneXR}) {
-    padding: 1rem 2rem;
-  }
 
   &::after {
     content: "";
