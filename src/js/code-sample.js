@@ -8,6 +8,8 @@ executeCodeSampleModal = () => {
 
   codeSampleModalButton.addEventListener('click', function() {
 
+    const placeHolder = document.querySelector('.js-placeholder-image');
+    
     const codeSample = this.closest('.js-placeholder-image').querySelector('.js-code-sample');
     
     // Setup some body styles for the modal
@@ -17,7 +19,7 @@ executeCodeSampleModal = () => {
     const clone = codeSample.cloneNode(true);
 
     // Get the distance from the top of the document and use it as an offset
-    let offset = window.pageYOffset + codeSample.getBoundingClientRect().top;
+    const offset = window.scrollY + placeHolder.getBoundingClientRect().top;
 
     // Append the cloned code sample to the template body
     templateBody.appendChild(clone);
@@ -25,42 +27,39 @@ executeCodeSampleModal = () => {
     // Append the complete template to the document body
     body.appendChild(templateWrapper);
 
-    let test = document.querySelector('.js-code-sample-inner'); 
-
-    // test.style.setProperty('--code-sample-modal-offset', offset + "px")
-    // window.matchMedia('(max-width: 767px)').addEventListener("change", console.log('test'));
-
-    let wMax = window.matchMedia('(max-width: 767px)');
-    let wMin = window.matchMedia('(min-width: 768px)');
-
+    const codeSampleInner = document.querySelector('.js-code-sample-inner'); 
+    const theWindowSize = 768;
+    const theWindowMin = window.matchMedia(`(min-width: ${theWindowSize}px)`);
+    const theWindowMax = window.matchMedia(`(max-width: ${theWindowSize - 1}px)`);
+    
     // Set the property by default
-
-    if (wMax) {
-      test.style.setProperty(
-        '--code-sample-modal-offset', offset + "px"
+    if (theWindowMax.matches) {
+      codeSampleInner.style.setProperty(
+        '--code-sample-modal-offset', `${offset}px`
         ) 
-    } else if (wMin) {
-      test.style.setProperty(
+    } else {
+      codeSampleInner.style.setProperty(
         '--code-sample-modal-offset', 0
         ) 
     }
-      // Remove the property across breakpoints if needed
-    myTest = (e) => {
+    
+    // Remove the property across breakpoints if needed using the "change" event-listener
+    modalEventListener = (e) => {
       if (e.matches) {
         window.addEventListener(
           "change", 
-          test.style.setProperty(
+          codeSampleInner.style.setProperty(
             '--code-sample-modal-offset', 0
             )
           )
       } else {
-        test.style.setProperty(
-          '--code-sample-modal-offset', offset + "px"
+        codeSampleInner.style.setProperty(
+          '--code-sample-modal-offset', `${offset}px`
           ) 
       }  
     }
 
-    wMin.addListener(myTest);
+    theWindowMin.addListener(modalEventListener);
 
     closeModalViaOverlay();
   });
