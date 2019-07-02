@@ -13,9 +13,12 @@
 					<link rel="stylesheet" href="/css/interior.css">
 				{% else %}
 					<style>
-						{% include "critical-css/interior.css" %}
+						{% include "embedded-css/interior.css" %}
 					</style>
 				{% endif %}
+        <style>
+          {% include "embedded-css/global-vars.css" %}
+        </style>
 		{% endblock %}
 
 		{% block linked_css %}{% endblock %}
