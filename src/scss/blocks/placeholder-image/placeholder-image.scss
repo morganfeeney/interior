@@ -2,9 +2,7 @@
   --placeholder-padding-default: .5rem 1rem;
   --placeholder-padding-iPhoneXR: 1rem 2rem;
   --placeholder-padding: var(--placeholder-padding-default);
-}
 
-:root {
   @media (min-width: #{$iPhoneXR}) {
     --placeholder-padding: var(--placeholder-padding-iPhoneXR);
   }

@@ -1,3 +1,8 @@
+// Global vars for this component
+:root {
+  --modal-border-width: 4px;
+}
+
 .code-sample {
   --code-sample-font-family: Menlo, Courier;
   font-family: var(--code-sample-font-family);
@@ -30,8 +35,6 @@
 }
 
 .code-sample__modal {
-  --modal-border-width: 4px;
-
   position: absolute;
   left: 0;
   background: hsla(33.8, 85.2%, 55.1%, 0.89);
@@ -39,8 +42,6 @@
   width: 100vw;
   bottom: 0;
   display: flex;
-  padding-left: calc(1rem + var(--modal-border-width));
-  padding-right: calc(1rem + var(--modal-border-width));
   align-items: center;
   flex-flow: column;
 }
@@ -65,6 +66,10 @@
   position: relative;
   top: var(--code-sample-modal-offset, 0);
   max-width: 100%; // Should flex to screen width.
+
+  @media(max-width: #{$tablet}) {
+    width: calc(var(--container-width) + (var(--modal-border-width) * 2 ));
+  }
 }
 
 .code-sample__modal-body {

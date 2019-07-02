@@ -1,5 +1,9 @@
 const codeSampleModalButton = document.querySelector('.js-code-sample-open-modal');
 const template = document.querySelector('.js-code-sample-template');
+const root = document.querySelector(':root');
+
+// This can't be set until the DOM parses it later on
+let modalBorderWidth = '';
 
 executeCodeSampleModal = () => {
   const templateContent = document.importNode(template.content, true);
@@ -19,7 +23,7 @@ executeCodeSampleModal = () => {
     const clone = codeSample.cloneNode(true);
 
     // Get the distance from the top of the document and use it as an offset
-    const offset = window.scrollY + placeHolder.getBoundingClientRect().top;
+    const offset = window.scrollY - parseInt(modalBorderWidth, 10) + placeHolder.getBoundingClientRect().top;
 
     // Append the cloned code sample to the template body
     templateBody.appendChild(clone);
@@ -93,6 +97,8 @@ updateCssProperty = (property, value) => {
 }
 
 window.onload = () => {
+  modalBorderWidth = window.getComputedStyle(root).getPropertyValue('--js-modal-border-width');
+
   if (template) {
     executeCodeSampleModal()
   } 
