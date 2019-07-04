@@ -1,0 +1,25 @@
+.scroller {
+  grid-column: margin;
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: var(--container-grid);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroller__inner {
+  --scroller-inner-grid-column: container-grid;
+  grid-column: var(--scroller-inner-grid-column);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content;
+  grid-column-gap: var(--grid-gap);
+
+  @media (min-width: #{$iPadPro}) {
+    --figure-wrapper-inner-grid-column: 5 / span 9;
+  }
+}
+
+.scroller__item {
+  width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+}

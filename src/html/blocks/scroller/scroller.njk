@@ -1,9 +1,9 @@
-{% macro imageNav(items=[]) %}
-  <nav class="image-nav">
-    <div class="grid image-nav__inner">
+{% macro scroller(items=[]) %}
+  <nav class="scroller">
+    <div class="scroller__inner">
       {% if items !==[] %}
         {% for item in items %}
-          <a class="image-nav__item" href="{{ item.href }}">
+          <a class="scroller__item" href="{{ item.href }}">
             <img src="{{ item.imgSrc }}" alt="{{ item.itemAlt }}">
           </a>
         {% endfor %}

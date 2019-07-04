@@ -1,6 +1,6 @@
 {% extends "templates/new-prototype-template.njk" %}
 {% import "blocks/figure-wrapper/figure-wrapper.njk" as fw %}
-{% import "blocks/image-nav/image-nav.njk" as imgn %}
+{% import "blocks/scroller/scroller.njk" as scr %}
 
 {% set main_classes = "main" %}
 
@@ -37,7 +37,7 @@
 {% endblock %}
 
 {% block image_nav %}
-  {{ imgn.imageNav(
+  {{ scr.scroller(
     items=[
       {
         imgSrc:'/images/Interior-graphics_Column-width-2.svg',
@@ -53,4 +53,6 @@
   ) }}
 {% endblock %}
 
-{% block main_footer %}{% endblock %}
+{% block footer %}
+  {% include "blocks/footer/footer.html" %}
+{% endblock %}
