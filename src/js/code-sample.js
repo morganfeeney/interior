@@ -10,12 +10,11 @@ executeCodeSampleModal = () => {
   const templateBody = templateContent.querySelector('.js-code-sample-modal-body');
   const templateWrapper = templateContent.querySelector('.js-code-sample-wrapper');
 
-  codeSampleModalButton.addEventListener('click', function() {
+  codeSampleModalButton.addEventListener('click', function () {
 
     const placeHolder = document.querySelector('.js-placeholder-image');
-    
     const codeSample = this.closest('.js-placeholder-image').querySelector('.js-code-sample');
-    
+
     // Setup some body styles for the modal
     body.classList.add('modal-open');
 
@@ -31,36 +30,36 @@ executeCodeSampleModal = () => {
     // Append the complete template to the document body
     body.appendChild(templateWrapper);
 
-    const codeSampleInner = document.querySelector('.js-code-sample-inner'); 
+    const codeSampleInner = document.querySelector('.js-code-sample-inner');
     const theWindowSize = 768;
     const theWindowMin = window.matchMedia(`(min-width: ${theWindowSize}px)`);
     const theWindowMax = window.matchMedia(`(max-width: ${theWindowSize - 1}px)`);
-    
+
     // Set the property by default
     if (theWindowMax.matches) {
       codeSampleInner.style.setProperty(
         '--code-sample-modal-offset', `${offset}px`
-        ) 
+      )
     } else {
       codeSampleInner.style.setProperty(
         '--code-sample-modal-offset', 0
-        ) 
+      )
     }
-    
+
     // Remove the property across breakpoints if needed using the "change" event-listener
     modalEventListener = (e) => {
       if (e.matches) {
         window.addEventListener(
-          "change", 
+          "change",
           codeSampleInner.style.setProperty(
             '--code-sample-modal-offset', 0
-            )
           )
+        )
       } else {
         codeSampleInner.style.setProperty(
           '--code-sample-modal-offset', `${offset}px`
-          ) 
-      }  
+        )
+      }
     }
 
     theWindowMin.addListener(modalEventListener);
@@ -76,7 +75,7 @@ closeModal = () => {
 
   body.classList.remove('modal-open');
 
-  if (modalBody ) {
+  if (modalBody) {
     modalBody.innerHTML = '';
   }
   if (modalWrapper) {
@@ -86,7 +85,7 @@ closeModal = () => {
 
 closeModalViaOverlay = () => {
   const renderedWrapper = document.querySelector('.js-code-sample-wrapper');
-  
+
   renderedWrapper.addEventListener('click', () => {
     closeModal();
   })
@@ -101,7 +100,7 @@ window.onload = () => {
 
   if (template) {
     executeCodeSampleModal()
-  } 
+  }
   else {
     return
   }
