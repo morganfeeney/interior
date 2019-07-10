@@ -18,12 +18,12 @@
 @import "system/type-styles";
 
 // Blocks
-@import "blocks/doc-header/doc-header";
-@import "blocks/main/main";
-@import "blocks/figure-wrapper/figure-wrapper";
-@import "blocks/figure/figure";
-@import "blocks/placeholder-image/placeholder-image";
-@import "blocks/code-sample/code-sample";
-@import "blocks/modal-button/modal-button";
-@import "blocks/scroller/scroller";
-@import "blocks/footer/footer";
+@import "../blocks/doc-header/doc-header";
+@import "../blocks/main/main";
+@import "../blocks/figure-wrapper/figure-wrapper";
+@import "../blocks/figure/figure";
+@import "../blocks/placeholder-image/placeholder-image";
+@import "../blocks/code-sample/code-sample";
+@import "../blocks/modal-button/modal-button";
+@import "../blocks/scroller/scroller";
+@import "../blocks/footer/footer";

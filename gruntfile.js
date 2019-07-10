@@ -39,11 +39,11 @@ module.exports = function (grunt) {
         files: [
           {
             src: "src/scss/interior.scss",
-            dest: "src/html/embedded-css/interior.css"
+            dest: "src/embedded-css/interior.css"
           },
           {
             src: "src/scss/core/global-vars.scss",
-            dest: "src/html/embedded-css/global-vars.css"
+            dest: "src/embedded-css/global-vars.css"
           }
         ]
       },
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
         },
       },
       embedded: {
-        src: ["src/html/embedded-css/*.css"],
+        src: ["src/embedded-css/*.css"],
         options: {
           processors: [
             require("autoprefixer")({
@@ -75,7 +75,7 @@ module.exports = function (grunt) {
     // Watch task
     watch: {
       sass: {
-        files: ["src/scss/**/*.scss", "src/scss/**/*.css"],
+        files: ["src/**/*.scss", "src/**/*.css"],
         tasks: ["sass", "postcss"],
         options: {
           spawn: false,
@@ -83,7 +83,7 @@ module.exports = function (grunt) {
         }
       },
       css: {
-        files: ["docs/css/**/*.css", "src/html/embedded-css/*.css"],
+        files: ["docs/css/**/*.css", "src/embedded-css/*.css"],
         tasks: "postcss",
         options: {
           spawn: false,
@@ -159,13 +159,13 @@ module.exports = function (grunt) {
           env.addGlobal('development', development);
         },
         data: grunt.file.readJSON("data.json"),
-        paths: "src/html",
+        paths: "src",
         noCache: false // Flag to speed up nunjucks compilation
       },
       all: {
         files: [{
           expand: true,
-          cwd: "src/html",
+          cwd: "src",
           src: ["**/*.html"],
           dest: "docs/",
           ext: ".html"
