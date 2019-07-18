@@ -32,7 +32,7 @@
 				<div class="container">
 					{% block header_content %}
 						<a id="main-header-home-link" class="home-link" href="/">
-							{% include "partials/logo.njk" %}
+							{% include "../partials/logo.njk" %}
 						</a>
 						<nav id="main-nav">
 							<a href="/articles">Articles</a>
@@ -77,7 +77,7 @@
 			<footer id="main-footer" class="container-outer main-footer {{ main_footer_classes }}">
 				<div class="container">
 					{% block footer %}
-						{% include "partials/footer.njk" %}
+						{% include "../partials/footer.njk" %}
 					{% endblock %}
 				</div>
 			</footer>

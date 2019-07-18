@@ -1,8 +1,11 @@
 const sass = require('node-sass');
+const postcssPresetEnv = require('postcss-preset-env');
+
 
 module.exports = function (grunt) {
   // Project configuration.
   var development = grunt.option('prod') ? false : true;
+
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     // Sass task
@@ -51,25 +54,32 @@ module.exports = function (grunt) {
     // Post CSS task
     postcss: {
       linked: {
-        src: ["docs/css/**/*.css"],
         options: {
           map: true,
           processors: [
-            require("autoprefixer")({
-              browsers: ["last 1 versions"]
+            postcssPresetEnv({
+              stage: 0,
+              autoprefixer: {
+                grid: false,
+              },
+              importFrom: "src/css/test.css"
             })
-          ]
+          ],
         },
+        src: "docs/css/**/*.css"
       },
       embedded: {
-        src: ["src/embedded-css/*.css"],
         options: {
           processors: [
-            require("autoprefixer")({
-              browsers: ["last 1 versions"]
+            postcssPresetEnv({
+              stage: 0,
+              autoprefixer: {
+                grid: false,
+              },
             })
-          ]
+          ],
         },
+        src: "src/embedded-css/*.css"
       },
     },
     // Watch task
@@ -84,7 +94,6 @@ module.exports = function (grunt) {
       },
       css: {
         files: ["docs/css/**/*.css", "src/embedded-css/*.css"],
-        tasks: "postcss",
         options: {
           spawn: false,
           livereload: true
@@ -166,8 +175,13 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: "src",
-          src: ["**/*.html"],
+          src: ["html/**/*.html"],
           dest: "docs/",
+          // Rename src, removing the html/ directory, which is for authoring purposes.
+          // More info here: https://gruntjs.com/configuring-tasks#the-rename-property
+          rename: (dest, src) => {
+            return dest + src.replace('html', '');
+          },
           ext: ".html"
         }],
       }
