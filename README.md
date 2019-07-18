@@ -5,7 +5,7 @@ Culmination of research and development of grid systems &amp; how to create layo
 
 ## License
 
-MIT License
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 
 ## Acknowledgements
 
