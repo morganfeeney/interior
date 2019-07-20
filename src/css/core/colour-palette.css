@@ -1,9 +1,7 @@
 :root {
   --black: #000000;
   --white: #FFFFFF;
-
   --interior-orange: #F7931E;
-
   --grey-1: #212529;
   --grey-2: #343A40;
   --grey-3: #495057;
@@ -13,9 +11,7 @@
   --grey-7: #DEE2E6;
   --grey-8: #E9ECEF;
   --grey-9: #F8F9FA;
-
   --grey-tint: #F6F6F6;
-
   --colour-scarlet: #ED2939;
   --colour-red: #E60F0F;
   --colour-amber: #FFBF00;
@@ -28,6 +24,5 @@
   --colour-violet: #8A2BE2;
   --colour-purple: #8B189B;
   --colour-magenta: #FF0090;
-
   --dark-overlay: rgba(0,0,0,0.8);
 }

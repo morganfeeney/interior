@@ -1,0 +1,13 @@
+@custom-media --iPhoneSE (min-width: 320px);
+@custom-media --iPhoneXR (min-width: 414px);
+@custom-media --tablet (min-width: 768px);
+@custom-media --iPadPro (min-width: 1024px);
+@custom-media --desktop (min-width: 1440px);
+@custom-media --appleTV (min-width: 1920px);
+
+@custom-media --iPhoneSE-max (max-width: 319px);
+@custom-media --iPhoneXR-max (max-width: 413px);
+@custom-media --tablet-max (max-width: 767px);
+@custom-media --iPadPro-max (max-width: 1023px);
+@custom-media --desktop-max (max-width: 1439px);
+@custom-media --appleTV-max (max-width: 1919px);

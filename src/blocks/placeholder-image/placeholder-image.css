@@ -3,7 +3,7 @@
   --placeholder-padding-iPhoneXR: 2rem;
   --placeholder-padding: var(--placeholder-padding-default);
 
-  @media (min-width: #{$iPhoneXR}) {
+  @media (--iPhoneXR) {
     --placeholder-padding: var(--placeholder-padding-iPhoneXR);
   }
 }
@@ -16,21 +16,21 @@
   width: var(--placeholder-image-width);
   height: var(--placeholder-image-height);
 
-  @media (min-width: #{$iPhoneXR}) {
+  @media (--iPhoneXR) {
     --placeholder-padding: var(--placeholder-padding-iPhoneXR);
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
   }
 
-  @media (min-width: #{$tablet}) {
+  @media (--tablet) {
     --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
     --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 }
 
-@function grad($lg) {
+/* @function grad($lg) {
   $lg: linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 #{$lg}/100vw;
   @return $lg;
-}
+} */
 
 .placeholder-image_typographic-system {
   display: flex;
@@ -81,15 +81,15 @@
     pointer-events: none;
   }
 
-  @media (min-width: #{$iPhoneXR}) {
+  @media (--iPhoneXR) {
     --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
   }
 
-  @media (min-width: #{$tablet}) {
+  @media (--tablet) {
     --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
   }
 
-  @media (min-width: #{$iPadPro}) {
+  @media (--iPadPro) {
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
   }
 }

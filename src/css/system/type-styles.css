@@ -1,0 +1,19 @@
+.type-small {
+  @mixin mobile-small;
+
+  @media (--iPhoneXR) {
+    @include global-small;
+  }
+
+  @media (--tablet) {
+    @mixin global-body;
+  }
+}
+
+.type-body {
+  @mixin global-body;
+
+  @media (--tablet) {
+    @mixin global-large;
+  }
+}

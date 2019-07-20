@@ -15,7 +15,7 @@
   grid-auto-columns: min-content;
   grid-column-gap: var(--grid-gap);
 
-  @media (min-width: #{$iPadPro}) {
+  @media (--iPadPro) {
     --figure-wrapper-inner-grid-column: 5 / span 9;
   }
 }
@@ -26,11 +26,12 @@
   grid-auto-flow: column;
 
   &:last-child {
-    // only works if we don't use grid gap due to a gap being added between this
-    // and the content.
+    /* only works if we don't use grid gap due to a gap being added between this
+     * and the content.
+     */
     &::after {
       content: "";
-      // align the last-child to the edge of the overflowing container.
+      /* align the last-child to the edge of the overflowing container. */
       width: calc((100vw - var(--container-width)) / 2);
       background: transparent;
     }
@@ -38,6 +39,5 @@
 
   img {
     width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
-
   }
 }

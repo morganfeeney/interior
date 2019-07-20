@@ -15,19 +15,19 @@
   grid-column: var(--doc-header-title-grid-column);
   font-weight: normal;
 
-  @include global-large();
+  @mixin global-large;
 
-  @media (min-width: #{$iPhoneXR}) {
-    @include global-large-x();
+  @media (--iPhoneXR) {
+    @mixin global-large-x;
     --doc-header-margin-top: -.7rem;
   }
 
-  @media (min-width: #{$tablet}) {
-    @include global-headline();
+  @media (--tablet) {
+    @mixin global-headline;
     --doc-header-margin-top: -1rem;
   }
 
-  @media (min-width: #{$iPadPro}) {
+  @media (--iPadPro) {
     --doc-header-title-grid-column: 5 / span 9;
   }
 }

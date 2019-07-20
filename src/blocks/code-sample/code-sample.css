@@ -1,4 +1,4 @@
-// Global vars for this component
+/* Global vars for this component */
 :root {
   --modal-border-width: 4px;
 }
@@ -65,9 +65,9 @@
 .code-sample__modal-inner {
   position: relative;
   top: var(--code-sample-modal-offset, 0);
-  max-width: 100%; // Should flex to screen width.
+  max-width: 100%; /* Should flex to screen width. */
 
-  @media(max-width: #{$tablet}) {
+  @media(--tablet-max) {
     width: calc(var(--container-width) + (var(--modal-border-width) * 2 ));
   }
 }

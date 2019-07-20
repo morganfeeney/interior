@@ -6,6 +6,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.4.9",
+    "cssnano": "^4.1.10",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -17,6 +18,8 @@
     "load-grunt-tasks": "^4.0.0",
     "node-sass": "^4.11.0",
     "postcss": "^7.0.17",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.2",
     "postcss-preset-env": "^6.7.0",
     "time-grunt": "^1.1.0"
   },

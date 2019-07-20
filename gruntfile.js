@@ -1,6 +1,7 @@
 const sass = require('node-sass');
 const postcssPresetEnv = require('postcss-preset-env');
-
+const postcssImport = require('postcss-import');
+const postcssMixins = require('postcss-mixins');
 
 module.exports = function (grunt) {
   // Project configuration.
@@ -9,72 +10,87 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     // Sass task
-    sass: {
-      linked: {
-        options: {
-          implementation: sass,
-          outputStyle:
-            (function () {
-              if (development) {
-                return "expanded";
-              } else {
-                return "compressed";
-              }
-            })(),
-          sourceMapContents: true,
-          sourceMap: true,
-          precision: 7
-        },
-        files: [
-          {
-            src: "src/scss/interior.scss",
-            dest: "docs/css/interior.css"
-          }
-        ]
-      },
-      embedded: {
-        options: {
-          implementation: sass,
-          outputStyle: "compressed",
-          sourceMap: false,
-          precision: 7
-        },
-        files: [
-          {
-            src: "src/scss/interior.scss",
-            dest: "src/embedded-css/interior.css"
-          },
-          {
-            src: "src/scss/core/global-vars.scss",
-            dest: "src/embedded-css/global-vars.css"
-          }
-        ]
-      },
-    },
+    // sass: {
+    //   linked: {
+    //     options: {
+    //       implementation: sass,
+    //       outputStyle:
+    //         (function () {
+    //           if (development) {
+    //             return "expanded";
+    //           } else {
+    //             return "compressed";
+    //           }
+    //         })(),
+    //       sourceMapContents: true,
+    //       sourceMap: true,
+    //       precision: 7
+    //     },
+    //     files: [
+    //       {
+    //         src: "src/scss/interior.scss",
+    //         dest: "docs/css/interior.css"
+    //       }
+    //     ]
+    //   },
+    //   embedded: {
+    //     options: {
+    //       implementation: sass,
+    //       outputStyle: "compressed",
+    //       sourceMap: false,
+    //       precision: 7
+    //     },
+    //     files: [
+    //       {
+    //         src: "src/scss/interior.scss",
+    //         dest: "src/embedded-css/interior.css"
+    //       },
+    //       {
+    //         src: "src/scss/core/global-vars.scss",
+    //         dest: "src/embedded-css/global-vars.css"
+    //       }
+    //     ]
+    //   },
+    // },
     // Post CSS task
     postcss: {
       linked: {
         options: {
           map: true,
           processors: [
+            postcssImport(),
+            postcssMixins(),
             postcssPresetEnv({
               stage: 0,
               autoprefixer: {
                 grid: false,
               },
-              importFrom: "src/css/test.css"
+              features: {
+                "custom-properties": false
+              },
+              importFrom: "src/css/core/breakpoints.css"
             })
           ],
         },
-        src: "docs/css/**/*.css"
+        files: [{
+          expand: true,
+          cwd: "src/css/",
+          src: "interior.css",
+          dest: "docs/css"
+        }]
       },
       embedded: {
         options: {
           processors: [
+            postcssImport(),
+            postcssMixins(),
             postcssPresetEnv({
               stage: 0,
               autoprefixer: {
                 grid: false,
+              },
+              features: {
+                "custom-properties": false
               },
             })
           ],
@@ -248,7 +264,6 @@ module.exports = function (grunt) {
   // Default task(s).
   grunt.registerTask("default", [
     "clean:all",
-    "sass",
     "postcss",
     "nunjucks",
     "prettify",
