@@ -37,7 +37,7 @@
     }
   }
 
-  img {
+  & img {
     width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
   }
 }
