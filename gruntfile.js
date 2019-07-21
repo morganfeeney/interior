@@ -1,8 +1,8 @@
-const sass = require('node-sass');
 const postcssPresetEnv = require('postcss-preset-env');
 const postcssImport = require('postcss-import');
 const postcssMixins = require('postcss-mixins');
 const cssnano = require('cssnano');
+const postcssFunctions = require('postcss-functions');
 
 module.exports = function (grunt) {
   var development = grunt.option('prod') ? false : true;
@@ -15,6 +15,14 @@ module.exports = function (grunt) {
           map: true,
           processors: [
             postcssImport(),
+            postcssFunctions({
+              functions: {
+                grad: (gradVal) => {
+                  const gradient = `linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 ${gradVal}/100vw`;
+                  return gradient;
+                }
+              }
+            }),
             postcssMixins(),
             postcssPresetEnv({
               stage: 0,

@@ -27,11 +27,6 @@
   }
 }
 
-/* @function grad($lg) {
-  $lg: linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 #{$lg}/100vw;
-  @return $lg;
-} */
-
 .placeholder-image_typographic-system {
   display: flex;
   align-items: center;
