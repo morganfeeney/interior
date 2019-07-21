@@ -2,57 +2,13 @@ const sass = require('node-sass');
 const postcssPresetEnv = require('postcss-preset-env');
 const postcssImport = require('postcss-import');
 const postcssMixins = require('postcss-mixins');
+const cssnano = require('cssnano');
 
 module.exports = function (grunt) {
-  // Project configuration.
   var development = grunt.option('prod') ? false : true;
 
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
-    // Sass task
-    // sass: {
-    //   linked: {
-    //     options: {
-    //       implementation: sass,
-    //       outputStyle:
-    //         (function () {
-    //           if (development) {
-    //             return "expanded";
-    //           } else {
-    //             return "compressed";
-    //           }
-    //         })(),
-    //       sourceMapContents: true,
-    //       sourceMap: true,
-    //       precision: 7
-    //     },
-    //     files: [
-    //       {
-    //         src: "src/scss/interior.scss",
-    //         dest: "docs/css/interior.css"
-    //       }
-    //     ]
-    //   },
-    //   embedded: {
-    //     options: {
-    //       implementation: sass,
-    //       outputStyle: "compressed",
-    //       sourceMap: false,
-    //       precision: 7
-    //     },
-    //     files: [
-    //       {
-    //         src: "src/scss/interior.scss",
-    //         dest: "src/embedded-css/interior.css"
-    //       },
-    //       {
-    //         src: "src/scss/core/global-vars.scss",
-    //         dest: "src/embedded-css/global-vars.css"
-    //       }
-    //     ]
-    //   },
-    // },
-    // Post CSS task
     postcss: {
       linked: {
         options: {
@@ -69,7 +25,7 @@ module.exports = function (grunt) {
                 "custom-properties": false
               },
               importFrom: "src/css/core/breakpoints.css"
-            })
+            }),
           ],
         },
         files: [{
@@ -92,24 +48,34 @@ module.exports = function (grunt) {
               features: {
                 "custom-properties": false
               },
+            }),
+            cssnano({
+              discardComments: true,
+              mergeIdents: true
             })
           ],
         },
-        src: "src/embedded-css/*.css"
+        files: [
+          {
+            src: "src/css/interior.css",
+            dest: "src/embedded-css/interior.css"
+          },
+          {
+            src: "src/css/core/global-vars.css",
+            dest: "src/embedded-css/global-vars.css"
+          }
+        ]
       },
     },
-    // Watch task
+
     watch: {
-      sass: {
-        files: ["src/**/*.scss", "src/**/*.css"],
-        tasks: ["sass", "postcss"],
-        options: {
-          spawn: false,
-          livereload: true
-        }
-      },
       css: {
-        files: ["docs/css/**/*.css", "src/embedded-css/*.css"],
+        files: [
+          "src/css/**/*.css",
+          "src/blocks/**/*.css",
+          "src/embedded-css/*.css"
+        ],
+        tasks: "postcss:linked",
         options: {
           spawn: false,
           livereload: true
@@ -141,7 +107,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    // Nunjucks task
+
     nunjucks: {
       options: {
         preprocessData: function (data) {
@@ -202,6 +168,7 @@ module.exports = function (grunt) {
         }],
       }
     },
+
     copy: {
       js: {
         files: [{
@@ -212,7 +179,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    // Clean task
+
     clean: {
       all: {
         src: ["docs/**/*", "!docs/**/CNAME", "!docs/images", "!docs/**/images/**/*"]
@@ -227,7 +194,7 @@ module.exports = function (grunt) {
         src: ["docs/js/**/*"]
       }
     },
-    // Prettify task
+
     prettify: {
       options: {
         "indent": 1,
