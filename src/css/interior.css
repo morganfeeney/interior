@@ -5,16 +5,14 @@
 /* Core */
 @import "core/global-spacing.css";
 @import "core/grid-system.css";
-@import "core/reset.css";
 @import "core/colour-palette.css";
-
-/* Tools */
-@import "tools/baseline-grid.css";
-@import "tools/grid-overlay.css";
+@import "core/reset.css";
 
 /* System */
 @import "system/typographic-system.css";
 @import "system/type-styles.css";
+@import "system/layout/container-grid.css";
+@import "system/layout/grid.css";
 
 /* Blocks */
 @import "../blocks/doc-header/doc-header.css";
@@ -26,3 +24,7 @@
 @import "../blocks/modal-button/modal-button.css";
 @import "../blocks/scroller/scroller.css";
 @import "../blocks/footer/footer.css";
+
+/* Tools */
+@import "tools/baseline-grid.css";
+@import "tools/grid-overlay.css";

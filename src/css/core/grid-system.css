@@ -131,18 +131,3 @@
   }
 }
 
-.container-grid {
-  display: grid;
-  grid-template-columns: var(--container-grid);
-  padding: 0;
-  margin: 0;
-  grid-row-gap: var(--grid-row-gap);
-}
-
-.grid {
-  grid-column: var(--container-column-span);
-  display: grid;
-  grid-column-gap: var(--grid-gap);
-  grid-row-gap: var(--grid-row-gap);
-  grid-template-columns: [grid-start] repeat(var(--columns), var(--column-width)) [grid-end];
-}

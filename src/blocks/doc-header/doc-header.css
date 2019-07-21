@@ -28,6 +28,6 @@
   }
 
   @media (--iPadPro) {
-    --doc-header-title-grid-column: 5 / span 9;
+    --doc-header-title-grid-column: 5 / span 9
   }
 }
