@@ -1,14 +1,4 @@
-{% extends "./templates/new-prototype-template.njk" %}
-{% import "../blocks/figure-wrapper/figure-wrapper.njk" as fw %}
-{% import "../blocks/scroller/scroller.njk" as scr %}
-
-{% set main_classes = "main" %}
-
-{% block header %}
-  <header id="main-header" class="doc-header">
-    <h1 class="doc-header__title">Typographic system</h1>
-  </header>
-{% endblock %}
+{% extends "../templates/doc-template.njk" %}
 
 {% block main %}
   <section class="grid {{ main_classes }}">
@@ -23,7 +13,7 @@
 
     <figure class="figure figure_code-sample">
       <div class="js-placeholder-image placeholder-image placeholder-image_code-sample">
-        {% include "./partials/code-samples/typographic-system.njk" %}
+        {% include "../partials/code-samples/typographic-system.njk" %}
       </div>
       <figcaption class="figcaption type-small">Type Sizes taken from the Sketch library, translated into CSS custom propertie, which are also interchangeable.</figcaption>
     </figure>
@@ -34,30 +24,4 @@
   <section class="grid {{ main_classes }}">
     <p class="type-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
   </section>
-{% endblock %}
-
-{% block image_nav %}
-  {{ scr.scroller(
-    items=[
-      {
-        imgSrc:'/images/Interior-graphics_Column-width-2.svg',
-        href: '/column-width.html',
-        itemAlt: 'Column width image'
-      },
-            {
-        imgSrc:'/images/Interior-graphics_Column-width-2.svg',
-        href: '/column-width.html',
-        itemAlt: 'Column width image'
-      },
-      {
-        imgSrc:'/images/Interior-graphics_screens.svg',
-        href: '/srceens.html',
-        itemAlt: 'Screens image'
-      }
-    ]
-  ) }}
-{% endblock %}
-
-{% block footer %}
-  {% include "blocks/footer/footer.html" %}
 {% endblock %}

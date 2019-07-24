@@ -1,0 +1,14 @@
+{% extends "./new-prototype-template.njk" %}
+{% import "../../blocks/figure-wrapper/figure-wrapper.njk" as fw %}
+{% import "../../blocks/scroller/scroller.njk" as scr %}
+{% import "../../blocks/doc-header/doc-header.njk" as dh %}
+
+{% set main_classes = "main" %}
+
+{% block header %}
+  {{ dh.docHeader(docTitle=page | replace("-", " ") | capitalize) }}
+{% endblock %}
+
+{% block footer %}
+  {% include "../../blocks/footer/footer.html" %}
+{% endblock %}
