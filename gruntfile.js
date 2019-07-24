@@ -18,7 +18,7 @@ module.exports = function (grunt) {
             postcssFunctions({
               functions: {
                 grad: (gradVal) => {
-                  const gradient = `linear-gradient(var(--interior-orange) 1px,transparent 1px) 0 ${gradVal}/100vw`;
+                  const gradient = `linear-gradient(var(--interior-orange) 1px, transparent 1px) 0 ${gradVal}/100vw`;
                   return gradient;
                 }
               }
@@ -46,17 +46,6 @@ module.exports = function (grunt) {
       embedded: {
         options: {
           processors: [
-            postcssImport(),
-            postcssMixins(),
-            postcssPresetEnv({
-              stage: 0,
-              autoprefixer: {
-                grid: false,
-              },
-              features: {
-                "custom-properties": false
-              },
-            }),
             cssnano({
               discardComments: true,
               mergeIdents: true
@@ -65,7 +54,7 @@ module.exports = function (grunt) {
         },
         files: [
           {
-            src: "src/css/interior.css",
+            src: "docs/css/interior.css",
             dest: "src/embedded-css/interior.css"
           },
           {
