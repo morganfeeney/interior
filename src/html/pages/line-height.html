@@ -2,26 +2,6 @@
 
 {% block main %}
   <section class="grid {{ main_classes }}">
-    <p class="type-body">Sizes within the typographic system are set in pt or <em>point</em>, the universal unit of measurement. I initially setup a Sketch library containing the sizes in fig.1, from there I translated them into CSS. 1rem equals 16pt in Sketch or 16px on the web.</p>
-  </section>
-
-  {% set figureWrapperContent %}
-    <figure class="figure">
-      <div class="placeholder-image placeholder-image_typographic-system"></div>
-      <figcaption class="figcaption type-small">Type sizes in 12 - 48pt, Helvetica Neue, as created in Sketch library (actual size). The lines indicate where ascenders and descenders should align.</figcaption>
-    </figure>
-
-    <figure class="figure figure_code-sample">
-      <div class="js-placeholder-image placeholder-image placeholder-image_code-sample">
-        {% include "../partials/code-samples/typographic-system.njk" %}
-      </div>
-      <figcaption class="figcaption type-small">Type Sizes taken from the Sketch library, translated into CSS custom propertie, which are also interchangeable.</figcaption>
-    </figure>
-  {% endset %}
-
-  {{ fw.figureWrapper(figureWrapperContent) }}
-
-  <section class="grid {{ main_classes }}">
-    <p class="type-body">The system functions across a range of screen sizes, font sizes are universally available and interchangable as and when required. With CSS this is achieved through the use of custom properties fig. 2.</p>
+    <p class="type-body">The same level of detail applied to column width, to achieve desired line-length, should also be applied to line-height. If lines are too generously spaced apart, the same distraction occurs that you would get by not choosing suitable column width.</p>
   </section>
 {% endblock %}
