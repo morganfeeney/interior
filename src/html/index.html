@@ -4,7 +4,11 @@
 {% set page_description = "The design elements used to create Interior and to create with." %}
 
   {% block main %}
-    <h2>
-      <a href="/typographic-system.html">typographic system</a>
-    </h2>
+    {% for page in pages %}
+      <h2>
+        <a href="/pages/{{ page }}">
+          {{ page | replace("-", " ") | replace(".html", "") | capitalize }}
+        </a>
+      </h2>
+    {% endfor %}
   {% endblock %}

@@ -114,21 +114,22 @@ module.exports = function (grunt) {
           var nice_date = date.toDateString();
           var file = path.basename(this.src[0]);
           var page = path.basename(this.src[0], '.html');
-          // Posts
+
           var posts = grunt.file.expand({
             filter: "isFile",
             cwd: "src/html/posts"
           }, ["*.html", "!index.html"]);
-          // Docs
-          var design_system = grunt.file.expand({
+
+          var pages = grunt.file.expand({
             filter: "isFile",
-            cwd: "src/html/design-system"
+            cwd: "src/html/pages"
           }, ["*.html", "!index.html"]);
-          // Examples
+
           var examples = grunt.file.expand({
             filter: "isFile",
             cwd: "src/html/examples"
           }, ["*.html", "!index.html"]);
+
           var screens = grunt.file.readJSON("screens.json");
           var result = {
             iso_date: iso_date,
@@ -136,10 +137,10 @@ module.exports = function (grunt) {
             file: file,
             page: page,
             posts: posts,
-            design_system: design_system,
             examples: examples,
             data: data,
-            screens: screens
+            screens: screens,
+            pages: pages
           };
           return result;
         },
