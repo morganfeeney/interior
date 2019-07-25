@@ -88,3 +88,7 @@
     --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
   }
 }
+
+.placeholder-image__typeset {
+  @mixin global-body;
+}

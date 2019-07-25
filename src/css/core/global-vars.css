@@ -2,4 +2,5 @@
  * they're readily available on the :root {} */
 :root {
   --js-modal-border-width: var(--modal-border-width);
+  --body-margin-top: -.3rem;
 }

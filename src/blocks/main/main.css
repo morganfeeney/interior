@@ -3,7 +3,6 @@
 }
 
 .main .type-body {
-  --body-margin-top: -.3rem;
   --body-margin-bottom: 0;
   --type-body-grid-column: grid;
   grid-row: span 2;
