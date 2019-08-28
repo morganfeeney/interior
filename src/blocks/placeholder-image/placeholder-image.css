@@ -9,7 +9,7 @@
 }
 
 .placeholder-image {
-  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  --placeholder-image-width: placeholderWidth(4);
   --placeholder-image-height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
 
   background-color: var(--grey-tint);
@@ -18,11 +18,11 @@
 
   @media (--iPhoneXR) {
     --placeholder-padding: var(--placeholder-padding-iPhoneXR);
-    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+    --placeholder-image-width: placeholderWidth(3);
   }
 
   @media (--tablet) {
-    --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    --placeholder-image-width: 2;
     --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 }
@@ -77,15 +77,15 @@
   }
 
   @media (--iPhoneXR) {
-    --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+    --placeholder-image-width: placeholderWidth(4);
   }
 
   @media (--tablet) {
-    --placeholder-image-width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    --placeholder-image-width: placeholderWidth(2);
   }
 
   @media (--iPadPro) {
-    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+    --placeholder-image-width: placeholderWidth(3);
   }
 }
 

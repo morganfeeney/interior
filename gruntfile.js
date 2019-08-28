@@ -20,6 +20,10 @@ module.exports = function (grunt) {
                 grad: (gradVal) => {
                   const gradient = `linear-gradient(var(--interior-orange) 1px, transparent 1px) 0 ${gradVal}/100vw`;
                   return gradient;
+                },
+                placeholderWidth: (columnWidth) => {
+                  const placeholder = `calc((var(--column-width) * ${columnWidth}) + (var(--grid-gap) * ${columnWidth -1}))`;
+                  return placeholder;
                 }
               }
             }),

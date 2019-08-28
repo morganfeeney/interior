@@ -33,11 +33,11 @@ body {
 .figcaption {
   --figcaption-margin-top: -.15rem;
   grid-row: 3;
-  width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  width: placeholderWidth(4);
   margin-top: var(--figcaption-margin-top);
 
   @media (--iPhoneXR) {
-    width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+    width: placeholderWidth(3);
   }
 
   @media (--tablet) {
@@ -48,13 +48,13 @@ body {
 
 .figure_line-height .placeholder-image {
   background: var(--grey-6);
-  --placeholder-image-width: calc((var(--column-width) * 4) + (var(--grid-gap) * 3));
+  --placeholder-image-width: placeholderWidth(4);
   --placeholder-image-height: calc(var(--row-height) * 1);
 
   overflow: hidden;
 
   @media (--tablet) {
-    --placeholder-image-width: calc((var(--column-width) * 3) + (var(--grid-gap) * 2));
+    --placeholder-image-width: placeholderWidth(3);
   }
 }
 
