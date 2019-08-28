@@ -30,6 +30,26 @@ body {
   }
 }
 
+.figure_double {
+  grid-template-rows: 1fr var(--grid-row-gap) 1fr var(--grid-row-gap) var(--row-height);
+}
+
+.figure_double::before {
+  grid-row: 4;
+}
+
+.figure_double .placeholder-image ~ .placeholder-image {
+  grid-row: 3;
+}
+
+.figure_double .figcaption {
+  grid-row: 5;
+}
+
+.figure_no-caption {
+  grid-template-rows: 1fr;
+}
+
 .figcaption {
   --figcaption-margin-top: -.15rem;
   grid-row: 3;

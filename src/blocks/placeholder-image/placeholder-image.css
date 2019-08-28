@@ -92,3 +92,18 @@
 .placeholder-image__typeset {
   @mixin global-body;
 }
+
+.placeholder-image__typeset_2 {
+  line-height: 2.25rem;
+  margin-top: -.75rem;
+}
+
+.placeholder-image__typeset_3 {
+  @mixin global-large;
+}
+
+.placeholder-image__typeset_4 {
+  @mixin global-large;
+  line-height: 4rem;
+  margin-top: -1.35rem;
+}
