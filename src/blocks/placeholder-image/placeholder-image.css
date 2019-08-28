@@ -9,7 +9,7 @@
 }
 
 .placeholder-image {
-  --placeholder-image-width: placeholderWidth(4);
+  --placeholder-image-width: calcColumnWidth(4);
   --placeholder-image-height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
 
   background-color: var(--grey-tint);
@@ -18,7 +18,7 @@
 
   @media (--iPhoneXR) {
     --placeholder-padding: var(--placeholder-padding-iPhoneXR);
-    --placeholder-image-width: placeholderWidth(3);
+    --placeholder-image-width: calcColumnWidth(3);
   }
 
   @media (--tablet) {
@@ -77,15 +77,15 @@
   }
 
   @media (--iPhoneXR) {
-    --placeholder-image-width: placeholderWidth(4);
+    --placeholder-image-width: calcColumnWidth(4);
   }
 
   @media (--tablet) {
-    --placeholder-image-width: placeholderWidth(2);
+    --placeholder-image-width: calcColumnWidth(2);
   }
 
   @media (--iPadPro) {
-    --placeholder-image-width: placeholderWidth(3);
+    --placeholder-image-width: calcColumnWidth(3);
   }
 }
 

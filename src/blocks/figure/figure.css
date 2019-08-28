@@ -33,28 +33,28 @@ body {
 .figcaption {
   --figcaption-margin-top: -.15rem;
   grid-row: 3;
-  width: placeholderWidth(4);
+  width: calcColumnWidth(4);
   margin-top: var(--figcaption-margin-top);
 
   @media (--iPhoneXR) {
-    width: placeholderWidth(3);
+    width: calcColumnWidth(3);
   }
 
   @media (--tablet) {
-    width: calc((var(--column-width) * 2) + (var(--grid-gap) * 1));
+    width: calcColumnWidth(2);
     margin-top: var(--figcaption-margin-top);
   }
 }
 
 .figure_line-height .placeholder-image {
   background: var(--grey-6);
-  --placeholder-image-width: placeholderWidth(4);
+  --placeholder-image-width: calcColumnWidth(4);
   --placeholder-image-height: calc(var(--row-height) * 1);
 
   overflow: hidden;
 
   @media (--tablet) {
-    --placeholder-image-width: placeholderWidth(3);
+    --placeholder-image-width: calcColumnWidth(3);
   }
 }
 
