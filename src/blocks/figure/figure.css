@@ -5,7 +5,7 @@ body {
 .figure {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr var(--grid-row-gap) var(--row-height);
+  grid-template-rows: 1fr var(--grid-row-gap);
   scroll-snap-align: center;
 
   &::before {
@@ -28,6 +28,18 @@ body {
     background: transparent;
     grid-row: 1 / span 5;
   }
+}
+
+.figure-wrapper_vertical-order .figure_with-caption {
+  grid-row: 2;
+}
+
+.figure_with-caption {
+  grid-template-rows: 1fr var(--grid-row-gap) var(--row-height);
+}
+
+.figure_without-counter::before {
+  content: none;
 }
 
 .figure_double {

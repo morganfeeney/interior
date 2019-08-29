@@ -1,5 +1,5 @@
-{% macro figureWrapper(content) %}
-  <section class="figure-wrapper">
+{% macro figureWrapper(content, classes='') %}
+  <section class="figure-wrapper{% if classes !='' %} {{ classes }}{% endif %}">
     <div class="figure-wrapper__inner">
       {% if content !=='' %}
         {{ content | safe }}
