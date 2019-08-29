@@ -1,0 +1,37 @@
+{% extends "../templates/doc-template.njk" %}
+
+{% block main %}
+  <section class="grid {{ main_classes }}">
+    <p class="type-body">Body type is the main face used for the body of work. Headings are meant to be distinguished from body copy, either by an increase in size, proximity, style, weight, colour, or other means.</p>
+  </section>
+
+  {% set figureWrapperContent %}
+    <figure class="figure figure_double figure_type figure_body-copy-and-headings">
+      <div class="placeholder-image">
+        <p class="placeholder-image__typeset placeholder-image__typeset_heading">Deutsches Ipsum Dolor</p>
+        <p class="placeholder-image__typeset">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
+      </div>
+      <div class="placeholder-image">
+        <p class="placeholder-image__typeset placeholder-image__typeset_heading-2">Deutsches Ipsum Dolor</p>
+        <p class="placeholder-image__typeset">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
+      </div>
+      <figcaption class="figcaption type-small">Fig 1: The title is the same font-size and is distinguished from the body using its proximity. Fig 2: Is a completely different font-size, adding a great level of impact.</figcaption>
+    </figure>
+
+    <figure class="figure figure_double figure_type figure_body-copy-and-headings">
+      <div class="placeholder-image">
+        <p class="placeholder-image__typeset placeholder-image__typeset_heading-3">Deutsches Ipsum Dolor</p>
+        <p class="placeholder-image__typeset">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
+      </div>
+      <div class="placeholder-image">
+        <p class="placeholder-image__typeset placeholder-image__typeset_heading-4">Deutsches Ipsum Dolor</p>
+        <p class="placeholder-image__typeset">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
+      </div>
+      <figcaption class="figcaption type-small">Lines with 22-pt Helvetica Nueue, 32-pt and 64-pt line-height.</figcaption>
+    </figure>
+  {% endset %}
+
+  {{ fw.figureWrapper(figureWrapperContent) }}
+
+  {% include "../partials/components/scroller-nav.njk" %}
+{% endblock %}

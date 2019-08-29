@@ -66,7 +66,7 @@ body {
   }
 }
 
-.figure_line-height .placeholder-image {
+.figure_type .placeholder-image {
   background: var(--grey-6);
   --placeholder-image-width: calcColumnWidth(4);
   --placeholder-image-height: calc(var(--row-height) * 1);
@@ -80,4 +80,8 @@ body {
 
 .placeholder-image__typeset {
   margin-top: var(--body-margin-top);
+}
+
+.figure_body-copy-and-headings .placeholder-image {
+  --placeholder-image-height: calc((var(--row-height) * 2) + var(--grid-row-gap));
 }
