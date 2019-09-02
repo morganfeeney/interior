@@ -6,28 +6,34 @@
   </section>
 
   {% set figureWrapperContent %}
-    <figure class="figure figure_double figure_type">
+    <figure class="figure figure_type">
       <div class="placeholder-image">
         <p class="placeholder-image__typeset">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
       </div>
+    </figure>
+
+    <figure class="figure figure_type figure_with-caption">
       <div class="placeholder-image">
         <p class="placeholder-image__typeset placeholder-image__typeset_2">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
       </div>
-      <figcaption class="figcaption type-small">Lines with 16-pt Helvetica Nueue, 24-pt and 36-pt line-height.</figcaption>
+      <figcaption class="figcaption type-small">Fig 1: 16-pt Helvetica Nueue 24-pt.<br> Fig 2: 16-pt Helvetica Nueue 36-pt line-height.</figcaption>
     </figure>
 
-    <figure class="figure figure_double figure_type">
+    <figure class="figure figure_type">
       <div class="placeholder-image">
         <p class="placeholder-image__typeset placeholder-image__typeset_3">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
       </div>
+    </figure>
+
+    <figure class="figure figure_type figure_with-caption">
       <div class="placeholder-image">
         <p class="placeholder-image__typeset placeholder-image__typeset_4">Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed. Id nec Zauberer argumentum, te melius erroribus vix. Volkswagen ut amet causae iriure, prodesset Bildung mea ut. Dicunt virtute suscipit Handschuh no. At nemore scaevola eum. Michael Schuhmacher regione malorum efficiendi ius. Deutsches Ipsum Dolor quo lucilius Apfelstrudel at, adhuc laboramus sadipscing per danke in mei ullum gloriatur. Id Mercedes Benz recteque accommodare sed.</p>
       </div>
-      <figcaption class="figcaption type-small">Lines with 22-pt Helvetica Nueue, 32-pt and 64-pt line-height.</figcaption>
+      <figcaption class="figcaption type-small">Fig 3: 22-pt Helvetica Nueue 32-pt. <br> Fig 4: 64-pt Helvetica Nueue line-height.</figcaption>
     </figure>
   {% endset %}
 
-  {{ fw.figureWrapper(figureWrapperContent) }}
+  {{ fw.figureWrapper(figureWrapperContent, classes="figure-wrapper_vertical-order") }}
 
   {% include "../partials/components/scroller-nav.njk" %}
 {% endblock %}

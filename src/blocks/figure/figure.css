@@ -81,7 +81,8 @@ body {
 .figure_type .placeholder-image {
   background: var(--grey-6);
   --placeholder-image-width: calcColumnWidth(4);
-  --placeholder-image-height: calc(var(--row-height) * 1);
+  --placeholder-image-height: calcRowHeight(2);
+
 
   overflow: hidden;
 
@@ -92,8 +93,4 @@ body {
 
 .placeholder-image__typeset {
   margin-top: var(--body-margin-top);
-}
-
-.figure_body-copy-and-headings .placeholder-image {
-  --placeholder-image-height: calc((var(--row-height) * 2) + var(--grid-row-gap));
 }

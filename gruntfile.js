@@ -24,6 +24,10 @@ module.exports = function (grunt) {
                 calcColumnWidth: (columnWidth) => {
                   const placeholder = `calc((var(--column-width) * ${columnWidth}) + (var(--grid-gap) * ${columnWidth -1}))`;
                   return placeholder;
+                },
+                calcRowHeight: (rowHeight) => {
+                  const placeholder = `calc((var(--row-height) * ${rowHeight}) + (var(--grid-gap) * ${rowHeight -1}))`;
+                  return placeholder;
                 }
               }
             }),
