@@ -19,7 +19,10 @@
   --line-height-global-headline: 4.375rem; /* 70px */
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: var(--root-line-height, var(--line-height-global-body));
 }
+
+
 
 @define-mixin mobile-small {
   font-size: var(--font-size-mobile-small);

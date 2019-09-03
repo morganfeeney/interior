@@ -5,7 +5,7 @@
 .main .type-body {
   --body-margin-bottom: 0;
   --type-body-grid-column: grid;
-  grid-row: span 2;
+  grid-row: var(--body-grid-row, span 2);
   grid-column: var(--type-body-grid-column);
   margin-top: var(--body-margin-top);
   margin-bottom: var(--body-margin-bottom);
