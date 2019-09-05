@@ -11,7 +11,14 @@ gridRow = () => {
     let fs = compStyles.getPropertyValue('font-size').split('px')[0];
 
     if (h > rowComputedHeight) {
-      p.style.setProperty('--body-grid-row', 'span 3')
+      // The condition will always be true due to grid-auto-rows being used
+
+      let rowSpan = (Math.floor((h - 32) / (rowComputedHeight + 16)) + 1);
+      // p.style.setProperty('--body-grid-row', `span ${rowSpan}`);
+
+      p.setAttribute('style', `grid-row: span ${rowSpan}`);
+      
+      // console.log(`Computed height of box: ${h}, a standard row height: ${rowComputedHeight}`)      
     }
   });
 }
