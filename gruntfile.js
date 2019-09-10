@@ -55,8 +55,6 @@ module.exports = function (grunt) {
         options: {
           processors: [
             cssnano({
-              discardComments: true,
-              mergeIdents: true
             })
           ],
         },
