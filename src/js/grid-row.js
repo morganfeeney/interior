@@ -1,3 +1,5 @@
+import { customMediaMin } from './breakpoints.js';
+
 const rows = document.querySelectorAll('.type-body');
 const documentComputedFontSize = window.getComputedStyle(root).getPropertyValue('font-size');
 const getRowValue = window.getComputedStyle(root).getPropertyValue('--row-height');
@@ -5,7 +7,7 @@ const getGridRowGap = window.getComputedStyle(document.querySelector('.type-body
 const gridRowGapUnit = getGridRowGap.split('px')[0];
 const rowHeightUnit = ((documentComputedFontSize.split('px')[0]) * (getRowValue.split('rem')[0]));
 
-gridRow = () => {
+const gridRow = () => {
   rows.forEach(p => {
     let compStyles = window.getComputedStyle(p);
     let h = compStyles.getPropertyValue('height').split('px')[0];
@@ -20,4 +22,20 @@ gridRow = () => {
   });
 }
 
-gridRow();
+// gridRow();
+
+const gridRowMediaListener = (e) => {
+  if (e.matches) {
+    window.addEventListener(
+      "change", 
+      gridRow()
+      // console.log(e)
+    )
+  }
+}
+
+for (const media in customMediaMin) {
+  const test = window.matchMedia(customMediaMin[media]);
+  // console.log(test);
+  test.addListener(gridRowMediaListener); 
+}
