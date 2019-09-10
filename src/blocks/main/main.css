@@ -6,11 +6,12 @@
   --body-margin-bottom: 0;
   --type-body-grid-column: grid;
   grid-column: var(--type-body-grid-column);
+  grid-row: var(--body-grid-row);
   margin-top: var(--body-margin-top);
   margin-bottom: var(--body-margin-bottom);
 
   @media (--iPhoneXR) {
-    grid-row: span 1;
+    /* grid-row: span 1; */
     --body-margin-bottom: -.3rem; /* Correct text misaligning with the bottom of grid modules. */
   }
 

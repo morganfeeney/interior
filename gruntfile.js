@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 "custom-properties": false
               },
               importFrom: "src/css/core/breakpoints.css",
-              exportTo: "src/js/breakpoints.js"
+              // exportTo: "src/js/breakpoints.js"
             }),
           ],
         },
