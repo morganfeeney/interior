@@ -4,69 +4,75 @@ import {
 } 
 from './breakpoints.js';
 
-const rows = document.querySelectorAll('.type-body');
-let documentComputedFontSize = '';
-let getRowValue = '';
-let getGridRowGap = '';
-let gridRowGapUnit = '';
-let rowHeightUnit = '';
+// Get all of the elements I want to apply CSS to.
+const elements = document.querySelectorAll('.js-type-body');
 
+// Declare variables to use in calculations which I can update later.
+let documentComputedFontSize = '';
+let rowHeight = '';
+let gridRowGap = '';
+let gridRowGapUnit = '';
+let computedRowHeight = '';
+
+// Assign values to variables in a function so they can be re-used.
 function setUpRowVars() {
-  documentComputedFontSize = window.getComputedStyle(root).getPropertyValue('font-size');
-  getRowValue = window.getComputedStyle(root).getPropertyValue('--rh');
-  getGridRowGap = window.getComputedStyle(document.querySelector('.type-body').closest('.grid')).getPropertyValue('grid-row-gap');
-  gridRowGapUnit = getGridRowGap.split('px')[0];
-  rowHeightUnit = ((documentComputedFontSize.split('px')[0]) * (getRowValue.split('rem')[0]));
+  documentComputedFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');
+  rowHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--rh');
+  gridRowGap = window.getComputedStyle(document.querySelector('.js-type-body').closest('.grid')).getPropertyValue('grid-row-gap');
+  gridRowGapUnit = gridRowGap.split('px')[0];
+  computedRowHeight = ((documentComputedFontSize.split('px')[0]) * (rowHeight.split('rem')[0]));
 }
 
-function gridRow(p) {
+// Apply CSS any elements we have selected via `const rows`.
+function spanGridRows(content) {
+  // call the vars in this function as it is used by `mediaquerylist`.
   setUpRowVars();
   
-  p.style.removeProperty('--body-grid-row');
-  let compStyles = window.getComputedStyle(p);
-  let h = compStyles.getPropertyValue('height').split('px')[0];
-  let rowSpan = (Math.ceil(h / (rowHeightUnit + (gridRowGapUnit / 2))));
+  // Remove any previously set `--body-grid-row` properties otherwise the `rowsToSpan` calculation fails miserably.
+  content.style.removeProperty('--body-grid-row');
 
-  if (h > rowHeightUnit) {
-    // The condition will always be true due to grid-auto-rows being used.
-    p.style.setProperty('--body-grid-row', `span ${rowSpan}`);
-    // console.log(`Computed height of box: ${h}, a standard row height: ${rowHeightUnit}`)
+  // Work out the computed height of any elements I select.
+  let computedStyles = window.getComputedStyle(content);
+  let contentHeight = computedStyles.getPropertyValue('height').split('px')[0];
+
+  // Calculate how many grid-rows to span.
+  let rowsToSpan = (Math.ceil(contentHeight / (computedRowHeight + (gridRowGapUnit / 2))));
+
+  // Check that we need to run the functions.
+  // The condition will always be true due to grid-auto-rows being used.
+  if (contentHeight > computedRowHeight) {
+    content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
   }
 }
 
-function mediaMatched() {
-  rows.forEach(row => {
-    gridRow(row)
+// Get all elements and make them span based on their own computed height.
+function spanAllSelectedElements() {
+  elements.forEach(element => {
+    spanGridRows(element)
   });
 }
 
-function matchesIt(blah) {
-  if (blah.matches) {
-    window.addEventListener('change', mediaMatched())
+// Detect changes in media then make all elements span rows.
+function spanElementsOnChange(element) {
+  if (element.matches) {
+    window.addEventListener('change', spanAllSelectedElements())
   }
 }
 
+// Apply all the functions via a range of conditions.
 function initCustomMedia(){
   for (const media in customMediaMinMax) {
     let myMedia = window.matchMedia(customMediaMinMax[media])
 
+    // Test on page-load using `matches`, then span rows.
     if (myMedia.matches) {
-      mediaMatched()
+      spanAllSelectedElements()
     }
-    
-    myMedia.addListener(matchesIt)
+
+    // Listen for media changes and then apply function to span rows via `change`.
+    myMedia.addListener(spanElementsOnChange)
   }
 }
 
-initCustomMedia()
-
-// gridRow(document.querySelector('.type-body'));
-
-// setUpRows(rows)
-
-// function mediaLoop() {
-//   for (const media in customMediaMin) {
-//     const m = window.matchMedia(customMediaMin[media]);
-//     m.addListener(gridRowMediaListener); 
-//   }
-// }
+// Run all the things.
+initCustomMedia();
