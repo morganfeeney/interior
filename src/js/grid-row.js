@@ -1,8 +1,4 @@
-import { 
-  customMediaMin, 
-  customMediaMinMax 
-} 
-from './breakpoints.js';
+import { customMediaMinMax } from './breakpoints.js';
 
 // Get all of the elements I want to apply CSS to.
 const elements = document.querySelectorAll('.js-type-body');
