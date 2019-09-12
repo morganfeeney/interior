@@ -1,0 +1,15 @@
+{% extends "../templates/doc-template.njk" %}
+
+{% block main %}
+  <section class="grid {{ main_classes }}">
+    <p class="js-type-body type-body">The ideal column widths enable legibility; for instance, there is a well-known rule that 7-10 words per line is the ideal line-length. There are a myriad of ways this rule van be adhered to. Using non-fluid screen sizes, combined with columns adds a tremendous level of certainty.
+Line-length is therefore one of the fundamental building blocks of this system.
+
+    <br>Without going into great detail, the 7-10 words per line rule exists to prevent the reader’s eye from becoming tired. It is difficult to follow a long line of text, to its end, and then search for the start of the next line when you go past 10 words. Equally frustrating can be the line-height, too high and there is a very similar problem [example needed]. Reading should be a pleasurable experience, especially when uninterrupted by formatting that does nothing but strain the reader’s eye.
+[examples needed of fonts applied to the grid columns]</p>
+  </section>
+{% endblock %}
+
+{% block image_nav %}
+  {% include "../partials/components/scroller-nav.njk" %}
+{% endblock %}
