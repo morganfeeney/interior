@@ -1,6 +1,6 @@
 .container-grid {
   display: grid;
-  grid-template-columns: var(--container-grid);
+  grid-template-columns: var(--container-grid-template);
   padding: 0;
   margin: 0;
   grid-row-gap: var(--grid-row-gap);

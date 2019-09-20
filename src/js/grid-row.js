@@ -13,7 +13,7 @@ let computedRowHeight = '';
 // Assign values to variables in a function so they can be re-used.
 function setUpRowVars() {
   documentComputedFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size');
-  rowHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--rh');
+  rowHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--row-height');
   gridRowGap = window.getComputedStyle(document.querySelector('.js-type-body').closest('.grid')).getPropertyValue('grid-row-gap');
   gridRowGapUnit = gridRowGap.split('px')[0];
   computedRowHeight = ((documentComputedFontSize.split('px')[0]) * (rowHeight.split('rem')[0]));

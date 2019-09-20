@@ -3,5 +3,5 @@
   display: grid;
   grid-column-gap: var(--grid-gap);
   grid-row-gap: var(--grid-row-gap);
-  grid-template-columns: [grid-start] repeat(var(--columns), var(--column-width)) [grid-end];
+  grid-template-columns: [grid-start] repeat(var(--column-count), var(--column-width)) [grid-end];
 }

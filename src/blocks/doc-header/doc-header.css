@@ -4,7 +4,7 @@
   grid-row-gap: var(--grid-row-gap);
   background: var(--grey-tint);
   grid-column: margin;
-  grid-template-columns: var(--container-grid);
+  grid-template-columns: var(--container-grid-template);
 }
 
 .doc-header__title {
