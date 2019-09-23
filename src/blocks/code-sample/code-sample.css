@@ -62,13 +62,14 @@
   transform: translateX(-50%);
 }
 
+/* Should flex to screen width. */
 .code-sample__modal-inner {
   position: relative;
   top: var(--code-sample-modal-offset, 0);
-  max-width: 100%; /* Should flex to screen width. */
+  max-width: 100%;
 
   @media(--tablet-max) {
-    width: calc(var(--container-width) + (var(--modal-border-width) * 2 ));
+    width: calc((var(--container-width) - calc(var(--margin) * 2)) + (var(--modal-border-width) * 2 ));
   }
 }
 
