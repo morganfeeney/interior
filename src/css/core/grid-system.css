@@ -168,9 +168,9 @@
 @media (--appleTV) {
   :root {
     --container-width: var(--container-width-12);
+    --column-count: var(--column-count-1920);
     --container-grid-column-count: var(--container-grid-column-count-1920);
+    --test-column-width: calc((100vw - var(--excess-width) - 22.5rem) / 12);
   }
 }
-
-/* Need to sort out the grid at the largest breakpoint, rows and columns are incorrect size */
 
