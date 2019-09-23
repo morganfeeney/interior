@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                   return placeholder;
                 },
                 calcRowHeight: (rowHeight) => {
-                  const placeholder = `calc((var(--row-height) * ${rowHeight}) + (var(--grid-row-gap) * ${rowHeight -1}))`;
+                  const placeholder = `calc((var(--row-height) * ${rowHeight}) + (var(--gutter-y) * ${rowHeight -1}))`;
                   return placeholder;
                 }
               }

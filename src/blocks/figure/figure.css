@@ -5,7 +5,7 @@ body {
 .figure {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr var(--grid-row-gap);
+  grid-template-rows: 1fr var(--gutter-y);
   scroll-snap-align: center;
 
   &::before {
@@ -13,7 +13,7 @@ body {
     counter-increment: figure;
     content: counter(figure);
     font-size: var(--font-size-global-small);
-    line-height: var(--grid-row-gap);
+    line-height: var(--gutter-y);
   }
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .figure_with-caption {
-  grid-template-rows: 1fr var(--grid-row-gap) var(--row-height);
+  grid-template-rows: 1fr var(--gutter-y) var(--row-height);
 }
 
 .figure_without-counter::before {
@@ -49,7 +49,7 @@ body {
 }
 
 .figure_double {
-  grid-template-rows: 1fr var(--grid-row-gap) 1fr var(--grid-row-gap) var(--row-height);
+  grid-template-rows: 1fr var(--gutter-y) 1fr var(--gutter-y) var(--row-height);
 }
 
 .figure_double::before {

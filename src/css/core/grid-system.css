@@ -2,7 +2,7 @@
 ::-webkit-scrollbar {
  width: 0; 
 }
-/* DON'T FOGET TO REMOVE!!! */
+/* DON'T FORGET TO REMOVE!!! */
 
 :root {
   /* Fluid Margin
@@ -59,6 +59,7 @@
    * Used for creating small gutter sized columns and for use with `grid-gap`.
    */
    --gutter-x: var(--grid-gap);
+   --gutter-y: var(--grid-row-gap);
  
    /* Columns */
   --column-count-320: 4;
@@ -90,13 +91,13 @@
    * Only the grid columns change in quantity.
    * Requires 1 less column than other grids.
    */
-  --container-column-count-320: 3;
-  --container-column-count-414: 3;
-  --container-column-count-768: 3;
-  --container-column-count-1024: 5;
-  --container-column-count-1440: 7;
-  --container-column-count-1920: 11;
-  --container-column-count: var(--container-column-count-320);
+  --container-grid-column-count-320: 3;
+  --container-grid-column-count-414: 3;
+  --container-grid-column-count-768: 3;
+  --container-grid-column-count-1024: 5;
+  --container-grid-column-count-1440: 7;
+  --container-grid-column-count-1920: 11;
+  --container-grid-column-count: var(--container-grid-column-count-320);
 
   /* The only thing that changes is the number of columns, otherwise the structure is identical */
   --container-grid-template:
@@ -104,15 +105,18 @@
     var(--fluid-margin)
     var(--m)
     [container-grid-start]
-    var(--c) repeat(var(--container-column-count), var(--g) var(--c))
+    var(--c) repeat(var(--container-grid-column-count), var(--g) var(--c))
     [container-grid-end]
     var(--m)
     var(--fluid-margin)
     [margin-end];
 
   --container-column-span: container-grid;
-
   --test-column-width: calc((100vw - 6.375rem) / 4);
+}
+
+:root {
+  --inner-grid-template: repeat(auto-fill, var(--test-column-width))
 }
 
 @media (--iPhoneSE) {
@@ -126,7 +130,7 @@
     --container-width: var(--container-width-5);
     --row-height: var(--row-height-414);
     --columns: var(--grid-columns-414);
-    --container-column-count: var(--container-column-count-414);
+    --container-grid-column-count: var(--container-grid-column-count-414);
   }
 }
 
@@ -138,8 +142,7 @@
     --container-width: var(--container-width-9);
     --column-count: var(--column-count-768);
     --column-span-1: 1 / span 6;
-    --container-column-count: var(--container-column-count-768);
-
+    --container-grid-column-count: var(--container-grid-column-count-768);
     --test-column-width: calc((100vw - var(--excess-width) - 10.5rem) / 4);
   }
 }
@@ -148,8 +151,7 @@
   :root {
     --container-width: var(--container-width-10);
     --column-count: var(--column-count-1024);
-    --container-column-count: var(--container-column-count-1024);
-
+    --container-grid-column-count: var(--container-grid-column-count-1024);
     --test-column-width: calc((100vw - var(--excess-width) - 13.5rem) / 6);
   }
 }
@@ -158,8 +160,7 @@
   :root {
     --container-width: var(--container-width-11);
     --column-count: var(--column-count-1440);
-    --container-column-count: var(--container-column-count-1440);
-
+    --container-grid-column-count: var(--container-grid-column-count-1440);
     --test-column-width: calc((100vw - var(--excess-width) - 16.5rem) / 8);
   }
 }
@@ -167,7 +168,7 @@
 @media (--appleTV) {
   :root {
     --container-width: var(--container-width-12);
-    --container-column-count: var(--container-column-count-1920);
+    --container-grid-column-count: var(--container-grid-column-count-1920);
   }
 }
 

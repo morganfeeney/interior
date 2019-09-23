@@ -1,7 +1,7 @@
 .doc-header {
   display: grid;
   grid-auto-rows: var(--row-height);
-  grid-row-gap: var(--grid-row-gap);
+  grid-row-gap: var(--gutter-y);
   background: var(--grey-tint);
   grid-column: margin;
   grid-template-columns: var(--container-grid-template);

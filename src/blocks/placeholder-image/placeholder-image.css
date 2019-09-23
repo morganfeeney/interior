@@ -10,7 +10,7 @@
 
 .placeholder-image {
   --placeholder-image-width: calcColumnWidth(4);
-  --placeholder-image-height: calc((var(--row-height) * 3) + (var(--grid-row-gap) * 2));
+  --placeholder-image-height: calc((var(--row-height) * 3) + (var(--gutter-y) * 2));
 
   background-color: var(--grey-tint);
   width: var(--placeholder-image-width);
@@ -23,7 +23,7 @@
 
   @media (--tablet) {
     --placeholder-image-width: calcColumnWidth(2);
-    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
+    --placeholder-image-height: calc((var(--row-height) * 2) + (var(--gutter-y) * 1));
   }
 }
 
