@@ -24,9 +24,15 @@ body {
   &::after {
     content: "";
     /* align the last-child to the edge of the overflowing container. */
-    width: calc(var(--fluid-margin) + var(--margin));
+    width: var(--margin);
     background: transparent;
     grid-row: 1 / span 5;
+  }
+
+  @media (--iPhoneSE) {
+    &::after {
+      width: calc(var(--fluid-margin) + var(--margin));
+    }
   }
 }
 
