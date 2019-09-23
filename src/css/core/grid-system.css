@@ -107,7 +107,7 @@
   --container-column-span: container-grid;
 }
 
-@media (min-width: 414px) {
+@media (--iPhoneXR) {
   :root {
     --container-width: var(--container-width-5);
     --row-height: var(--row-height-414);
@@ -116,7 +116,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (--tablet) {
   :root {
     --grid-gap: 1.5rem;
     --margin: 3rem;
@@ -128,7 +128,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (--iPadPro) {
   :root {
     --container-width: var(--container-width-10);
     --column-count: var(--column-count-1024);
@@ -136,7 +136,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (--desktop) {
   :root {
     --container-width: var(--container-width-11);
     --column-count: var(--column-count-1440);
@@ -144,7 +144,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (--appleTV) {
   :root {
     --container-width: var(--container-width-12);
     --container-column-count: var(--container-column-count-1920);
