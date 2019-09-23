@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                   return gradient;
                 },
                 calcColumnWidth: (columnWidth) => {
-                  const placeholder = `calc((var(--column-width) * ${columnWidth}) + (var(--grid-gap) * ${columnWidth -1}))`;
+                  const placeholder = `calc((var(--test-column-width) * ${columnWidth}) + (var(--gutter-x) * ${columnWidth -1}))`;
                   return placeholder;
                 },
                 calcRowHeight: (rowHeight) => {

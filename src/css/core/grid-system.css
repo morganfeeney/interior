@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+ width: 0;
+}
+
 :root {
   /* Fluid Margin
    *
@@ -42,7 +46,7 @@
    * Base units for calculating dimensions and spacial units.
    */
   --grid-gap-half: .5rem;
-  --grid-gap: 1.125rem;
+  --grid-gap: 1.125rem; /* 18px */
   --grid-gap-double: 2rem;
   --grid-row-gap: 2rem;
   --margin: var(--margin-2);
@@ -105,6 +109,14 @@
     [margin-end];
 
   --container-column-span: container-grid;
+
+  --test-column-width: calc((100vw - 6.375rem) / 4);
+}
+
+@media (--iPhoneSE) {
+  :root {
+    --test-column-width: calc((100vw - var(--excess-width) - 6.375rem) / 4);
+  }
 }
 
 @media (--iPhoneXR) {
@@ -125,6 +137,8 @@
     --column-count: var(--column-count-768);
     --column-span-1: 1 / span 6;
     --container-column-count: var(--container-column-count-768);
+
+    --test-column-width: calc((100vw - var(--excess-width) - 10.5rem) / 4);
   }
 }
 
@@ -133,6 +147,8 @@
     --container-width: var(--container-width-10);
     --column-count: var(--column-count-1024);
     --container-column-count: var(--container-column-count-1024);
+
+    --test-column-width: calc((100vw - var(--excess-width) - 13.5rem) / 6);
   }
 }
 
@@ -141,6 +157,8 @@
     --container-width: var(--container-width-11);
     --column-count: var(--column-count-1440);
     --container-column-count: var(--container-column-count-1440);
+
+    --test-column-width: calc((100vw - var(--excess-width) - 16.5rem) / 8);
   }
 }
 
@@ -150,4 +168,6 @@
     --container-column-count: var(--container-column-count-1920);
   }
 }
+
+/* Need to sort out the grid at the largest breakpoint, rows and columns are incorrect size */
 

@@ -1,5 +1,6 @@
 .main {
-  grid-auto-rows: minmax(var(--row-height), min-content); /* Allow content to flow if greater than --row-height; */
+  grid-auto-rows: minmax(var(--row-height), min-content);
+  /* Allow content to flow if greater than --row-height; */
 }
 
 .main .type-body {
@@ -12,13 +13,15 @@
 
   @media (--iPhoneXR) {
     /* grid-row: span 1; */
-    --body-margin-bottom: -.3rem; /* Correct text misaligning with the bottom of grid modules. */
+    --body-margin-bottom: -.3rem;
   }
+  /* Correct text misaligning with the bottom of grid modules. */
 
+  /* Misaligning with grid modules is not a problem here. */
   @media (--tablet) {
     --type-body-grid-column: span 3;
     --body-margin-top: -.5rem;
-    --body-margin-bottom: 0; /* Misaligning with grid modules is not a problem here. */
+    --body-margin-bottom: 0; 
   }
 
   @media (--iPadPro) {

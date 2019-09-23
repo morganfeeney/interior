@@ -22,7 +22,7 @@
   }
 
   @media (--tablet) {
-    --placeholder-image-width: 2;
+    --placeholder-image-width: calcColumnWidth(2);
     --placeholder-image-height: calc((var(--row-height) * 2) + (var(--grid-row-gap) * 1));
   }
 }
