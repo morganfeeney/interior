@@ -1,10 +1,12 @@
 .scroller {
   grid-column: margin;
   overflow-x: auto;
+  overflow-y: hidden;
   display: grid;
   grid-template-columns: var(--container-grid-template);
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .scroller__inner {
