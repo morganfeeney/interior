@@ -2,24 +2,41 @@
 
 {% block main %}
   <section class="grid {{ main_classes }}">
-    <p class="js-type-body type-body">The ideal column widths enable legibility; for instance, there is a well-known rule that 7-10 words per line is the ideal line-length. There are a myriad of ways this rule van be adhered to. Using non-fluid screen sizes, combined with columns adds a tremendous level of certainty.
-Line-length is therefore one of the fundamental building blocks of this system.
+    <p class="js-type-body type-body">Column width not only creates a definite structure for laying out documents, it aids legibility. 
+    The well-known rule of 7-10 words per line can be used as a metric for deciding upon a suitable line-length for layout, after all, it aims to rid the fatigue reading long copy creates over time. 
+    The combination of using non-fluid screen sizes, with columns based on line-length will also add a tremendous level of certainty.
   </section>
 
   {% set figureWrapperContent %}
-    <figure class="figure figure_with-caption">
+    <figure class="figure figure_with-caption figure_with-larger-caption figure_without-counter figure_3-up-wide">
       <div class="placeholder-image placeholder-image_column-width">
-        <img src="/images/Interior-graphics_Type-system-XR.svg" />
+        <img src="/images/Interior-graphics_Type-system-XR-small.svg" />
       </div>
-      <figcaption class="figcaption type-small">Fig 1: 16-pt Helvetica Nueue 24-pt.<br> Fig 2: 16-pt Helvetica Nueue 36-pt line-height.</figcaption>
+      <figcaption class="figcaption type-small">Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
+      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.</figcaption>
+    </figure>
+        <figure class="figure figure_with-caption figure_with-larger-caption figure_without-counter figure_3-up-wide">
+      <div class="placeholder-image placeholder-image_column-width">
+        <img src="/images/Interior-graphics_Type-system-XR-medium.svg" />
+      </div>
+      <figcaption class="figcaption type-small">Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
+      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.</figcaption>
+    </figure>
+        <figure class="figure figure_with-caption figure_with-larger-caption figure_without-counter figure_3-up-wide">
+      <div class="placeholder-image placeholder-image_column-width">
+        <img src="/images/Interior-graphics_Type-system-XR-large.svg" />
+      </div>
+      <figcaption class="figcaption type-small">Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
+      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.</figcaption>
     </figure>
   {% endset %}
   {{ fw.figureWrapper(figureWrapperContent, classes="figure-wrapper_vertical-order") }}
 
-    <section class="grid {{ main_classes }}">
+  <section class="grid {{ main_classes }}">
     <p class="js-type-body type-body">
-    Without going into great detail, the 7-10 words per line rule exists to prevent the reader’s eye from becoming tired. It is difficult to follow a long line of text, to its end, and then search for the start of the next line when you go past 10 words. Equally frustrating can be the line-height, too high and there is a very similar problem [example needed]. Reading should be a pleasurable experience, especially when uninterrupted by formatting that does nothing but strain the reader’s eye.
-[examples needed of fonts applied to the grid columns]</p>
+    Without going into great detail, the 7-10 words per line rule exists to prevent the reader’s eye from becoming tired.
+     It is difficult to follow a long line of text, to its end, and then search for the start of the next line when you go past 10 words. 
+     Equally frustrating can be the <a href="/pages/line-height.html">line-height</a>, too high and there is a very similar problem.</p>
   </section>
 
 {% endblock %}

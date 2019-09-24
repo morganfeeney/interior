@@ -36,12 +36,39 @@ body {
   }
 }
 
+/* Make the last item align with the left hanging text */
+.figure_3-up-wide:last-child {
+  @media (--iPadPro) {
+    &::after {
+      width: calc((var(--fluid-margin) + var(--margin)) + (var(--test-column-width) + var(--gutter-x)));
+    }
+  }
+
+  @media (--desktop) {
+    &::after {
+      width: calc((var(--fluid-margin) + var(--margin)) + (calcColumnWidth(3)) + var(--gutter-x));
+    }
+  }
+
+  @media (--appleTV) {
+    &::after {
+      width: 0;
+    }
+  }
+}
+
 .figure-wrapper_vertical-order .figure_with-caption {
   grid-row: 2;
 }
 
 .figure_with-caption {
   grid-template-rows: 1fr var(--gutter-y) var(--row-height);
+}
+
+.figure_with-larger-caption {
+  @media(--iPhoneXR-max) {
+    grid-template-rows: 1fr var(--gutter-y) calcRowHeight(2);
+  }
 }
 
 .figure_without-counter::before {
@@ -71,7 +98,7 @@ body {
 .figcaption {
   --figcaption-margin-top: -.15rem;
   grid-row: 3;
-  width: calcColumnWidth(4);
+  width: calcColumnWidth(3);
   margin-top: var(--figcaption-margin-top);
 
   @media (--iPhoneXR) {

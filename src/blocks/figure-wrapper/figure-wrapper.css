@@ -19,4 +19,8 @@
   @media (--iPadPro) {
     --figure-wrapper-inner-grid-column: 5 / span 9;
   }
+
+  @media (--appleTV) {
+    --figure-wrapper-inner-grid-column: 3 / span 9;
+  }
 }
