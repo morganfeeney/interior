@@ -1,6 +1,6 @@
-{% macro figureWrapper(content, classes='') %}
+{% macro figureWrapper(content, classes='', innerClasses='') %}
   <section class="figure-wrapper{% if classes !='' %} {{ classes }}{% endif %}">
-    <div class="figure-wrapper__inner">
+    <div class="figure-wrapper__inner{% if innerClasses !='' %} {{ innerClasses }}{% endif %}">
       {% if content !=='' %}
         {{ content | safe }}
       {% endif %}
