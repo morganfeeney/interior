@@ -53,7 +53,7 @@
     @media (--tablet) {
       height: calc(100% - var(--gutter-y));
       background: white;
-      border: 1px solid var(--black);
+      /* border: 1px solid var(--black); */
       border-bottom: 0;
     }
   }

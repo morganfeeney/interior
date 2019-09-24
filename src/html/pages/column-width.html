@@ -8,33 +8,39 @@
   </section>
 
   {% set figureWrapperContent %}
-    <figure class="figure figure_with-caption figure_with-larger-caption figure_without-counter figure_3-up-wide">
+    <figure class="figure figure_with-caption figure_without-counter figure_3-up-wide">
       <div class="placeholder-image placeholder-image_column-width">
         <img src="/images/Interior-graphics_Type-system-XR-small.svg" />
       </div>
-      <figcaption class="figcaption type-small">Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
-      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.</figcaption>
+      <figcaption class="figcaption type-small">
+      Here we can see how well 12pt will read based on the line-length. It's not ideal for long copy due to it's size, 
+      however I can use it for captions.
+      </figcaption>
     </figure>
-        <figure class="figure figure_with-caption figure_with-larger-caption figure_without-counter figure_3-up-wide">
+    <figure class="figure figure_with-caption figure_without-counter figure_3-up-wide">
       <div class="placeholder-image placeholder-image_column-width">
         <img src="/images/Interior-graphics_Type-system-XR-medium.svg" />
       </div>
-      <figcaption class="figcaption type-small">Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
-      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.</figcaption>
+      <figcaption class="figcaption type-small">
+      Body copy is set to 16pt/24pt, the ideal line-length appears in the 3rd row. 
+      This gives an overall idea of the kind of grid I want, and the font-sizes I can accommodate.
+      </figcaption>
     </figure>
-        <figure class="figure figure_with-caption figure_with-larger-caption figure_without-counter figure_3-up-wide">
+    <figure class="figure figure_with-caption figure_without-counter figure_3-up-wide">
       <div class="placeholder-image placeholder-image_column-width">
         <img src="/images/Interior-graphics_Type-system-XR-large.svg" />
       </div>
-      <figcaption class="figcaption type-small">Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
-      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.</figcaption>
+      <figcaption class="figcaption type-small">
+      In this example the space between each line becomes noticably smaller, this is due to line-height and font-size increasing.</figcaption>
     </figure>
   {% endset %}
   {{ fw.figureWrapper(figureWrapperContent, classes="figure-wrapper_vertical-order") }}
 
   <section class="grid {{ main_classes }}">
     <p class="js-type-body type-body">
-    Without going into great detail, the 7-10 words per line rule exists to prevent the reader’s eye from becoming tired.
+      Selecting a column width that makes text pleasant to read is one of the most important typographic problems; 
+      almost circular in nature, due to all of its factors (font-size, line-height &amp; column-width) needing consideration even though they may not appear in order.
+     <br>Without going into great detail, the 7-10 words per line rule exists to prevent the reader’s eye from becoming tired.
      It is difficult to follow a long line of text, to its end, and then search for the start of the next line when you go past 10 words. 
      Equally frustrating can be the <a href="/pages/line-height.html">line-height</a>, too high and there is a very similar problem.</p>
   </section>
