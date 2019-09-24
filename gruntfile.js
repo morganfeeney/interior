@@ -40,7 +40,7 @@ module.exports = function (grunt) {
               features: {
                 "custom-properties": false
               },
-              importFrom: 'src/css/core/breakpoints.css'
+              importFrom: 'src/css/layout/breakpoints.css'
             }),
           ],
         },

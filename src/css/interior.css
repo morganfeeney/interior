@@ -3,16 +3,16 @@
  * ---------------------------------------------------------------------------*/
 
 /* Core */
-@import "core/global-spacing.css";
-@import "core/grid-system.css";
-@import "core/colour-palette.css";
-@import "core/reset.css";
+@import "layout/global-spacing.css";
+@import "layout/grid-system.css";
+@import "colour/colour-palette.css";
+@import "reset.css";
 
 /* System */
-@import "system/typographic-system.css";
-@import "system/type-styles.css";
-@import "system/layout/container-grid.css";
-@import "system/layout/grid.css";
+@import "typography/typographic-system.css";
+@import "typography/type-styles.css";
+@import "layout/container-grid.css";
+@import "layout/grid.css";
 
 /* Blocks */
 @import "../blocks/doc-header/doc-header.css";
