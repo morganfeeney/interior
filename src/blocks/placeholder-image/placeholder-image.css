@@ -27,6 +27,23 @@
   }
 }
 
+.placeholder-image_no-bg {
+  background: transparent;
+}
+
+.placeholder-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.placeholder-image_column-width {
+  @media (--iPhoneXR) {
+    --placeholder-image-width: calcColumnWidth(4);
+  }
+}
+
 .placeholder-image_typographic-system {
   display: flex;
   align-items: center;
