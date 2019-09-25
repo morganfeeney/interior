@@ -35,7 +35,7 @@
     &::after {
       content: "";
       /* align the last-child to the edge of the overflowing container. */
-      width: calc((100vw - var(--container-width)) / 2);
+      width: calc(var(--fluid-margin) + var(--margin));
       background: transparent;
     }
   }
