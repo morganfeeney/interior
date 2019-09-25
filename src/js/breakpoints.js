@@ -17,13 +17,48 @@ const customMediaMax = {
 };
 
 const customMediaMinMax = {
-  '--iPhoneSE-max': `${customMediaMax['--iPhoneSE-max']}`,
-  '--iPhoneSE':     `${customMediaMin['--iPhoneSE']} and ${customMediaMax['--iPhoneXR-max']}`,
-  '--iPhoneXR':     `${customMediaMin['--iPhoneXR']} and ${customMediaMax['--tablet-max']}`,
-  '--tablet':       `${customMediaMin['--tablet']} and ${customMediaMax['--iPadPro-max']}`,
-  '--iPadPro':      `${customMediaMin['--iPadPro']} and ${customMediaMax['--desktop-max']}`,
-  '--desktop':      `${customMediaMin['--desktop']} and ${customMediaMax['--appleTV-max']}`,
-  '--appleTV':      `${customMediaMin['--appleTV']}`,
+  '--iPhoneSE-max': 
+    {
+      breakpoint: `${customMediaMax['--iPhoneSE-max']}`,
+      lines: 4,
+      lineHeight: 24
+    },
+  '--iPhoneSE': 
+    {
+      breakpoint:`${customMediaMin['--iPhoneSE']} and ${customMediaMax['--iPhoneXR-max']}`,
+      lines: 4,
+      lineHeight: 24
+    },
+  '--iPhoneXR': 
+    {
+      breakpoint:`${customMediaMin['--iPhoneXR']} and ${customMediaMax['--tablet-max']}`,
+      lines: 5,
+      lineHeight: 24
+    },
+  '--tablet': 
+    {
+      breakpoint:`${customMediaMin['--tablet']} and ${customMediaMax['--iPadPro-max']}`,
+      lines: 6,
+      lineHeight: 32
+    },
+  '--iPadPro': 
+    {
+      breakpoint:`${customMediaMin['--iPadPro']} and ${customMediaMax['--desktop-max']}`,
+      lines: 6,
+      lineHeight: 32
+    },
+  '--desktop': 
+    {
+      breakpoint:`${customMediaMin['--desktop']} and ${customMediaMax['--appleTV-max']}`,
+      lines: 6,
+      lineHeight: 32
+    },
+  '--appleTV': 
+    {
+      breakpoint:`${customMediaMin['--appleTV']}`,
+      lines: 6,
+      lineHeight: 32
+    }
 };
 
 export { 
