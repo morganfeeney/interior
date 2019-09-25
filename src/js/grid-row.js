@@ -16,10 +16,10 @@ function getComputedRowHeight() {
   rowHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--row-height');
   gridRowGap = window.getComputedStyle(document.querySelector('.js-type-body').closest('.grid')).getPropertyValue('grid-row-gap');
   gridRowGapUnit = parseInt(gridRowGap.split('px')[0]);
-  computedRowHeight = parseInt(((documentComputedFontSize.split('px')[0]) * (rowHeight.split('rem')[0])));
+  computedRowHeight = (documentComputedFontSize.split('px')[0]) * (rowHeight.split('rem')[0]);
 }
 
-// Apply CSS any elements we have selected via `const rows`.
+// Apply CSS to any elements we have selected.
 function spanGridRows(content) {
   // call the vars in this function as it is used by `mediaquerylist`.
   getComputedRowHeight();
@@ -30,22 +30,24 @@ function spanGridRows(content) {
   // Work out the computed height of any elements I select.
   let computedStyles = window.getComputedStyle(content);
   let contentHeight = parseInt(computedStyles.getPropertyValue('height').split('px')[0]);
-
+  let rowsToSpan = '';
+  
   // Calculate how many grid-rows to span.
-  let rowsToSpan = (Math.ceil(contentHeight / ((computedRowHeight) + (gridRowGapUnit))));
-
   for (const media in customMediaMinMax) {
-    let myMedia = window.matchMedia(customMediaMinMax[media].breakpoint)
+    // Destructure variables from customMediaMinMax object
+    let { breakpoint, lineHeight, lines } = customMediaMinMax[media]; 
+    let myMedia = window.matchMedia(breakpoint)
 
     // Test on page-load using `matches`, then span rows.
     if (myMedia.matches) {
-      rowsToSpan = Math.ceil((contentHeight / customMediaMinMax[media].lineHeight) / customMediaMinMax[media].lines);
+      rowsToSpan = Math.ceil((contentHeight / lineHeight) / lines);
+
+      // Make sure this doesn't kick-off if there is only a single row of content
+      if ((contentHeight / lineHeight) > (lines + 1)) {
+        content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
+      }
     }
   }
-
-  // Check that we need to run the functions.
-  // The condition will always be true due to grid-auto-rows being used.
-  content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
 }
 
 // Get all elements and make them span based on their own computed height.
