@@ -1,3 +1,5 @@
+import { customMediaMin, customMediaMax } from './breakpoints.js';
+
 const codeSampleModalButton = document.querySelector('.js-code-sample-open-modal');
 const template = document.querySelector('.js-code-sample-template');
 const root = document.querySelector(':root');
@@ -5,7 +7,7 @@ const root = document.querySelector(':root');
 // This can't be set until the DOM parses it later on
 let modalBorderWidth = '';
 
-executeCodeSampleModal = () => {
+function executeCodeSampleModal() {
   const templateContent = document.importNode(template.content, true);
   const templateBody = templateContent.querySelector('.js-code-sample-modal-body');
   const templateWrapper = templateContent.querySelector('.js-code-sample-wrapper');
@@ -31,9 +33,8 @@ executeCodeSampleModal = () => {
     body.appendChild(templateWrapper);
 
     const codeSampleInner = document.querySelector('.js-code-sample-inner');
-    const theWindowSize = 768;
-    const theWindowMin = window.matchMedia(`(min-width: ${theWindowSize}px)`);
-    const theWindowMax = window.matchMedia(`(max-width: ${theWindowSize - 1}px)`);
+    const theWindowMin = window.matchMedia(customMediaMin['--tablet']);
+    const theWindowMax = window.matchMedia(customMediaMax['--tablet-max']);
 
     // Set the property by default
     if (theWindowMax.matches) {
@@ -47,7 +48,7 @@ executeCodeSampleModal = () => {
     }
 
     // Remove the property across breakpoints if needed using the "change" event-listener
-    modalEventListener = (e) => {
+    const modalEventListener = (e) => {
       if (e.matches) {
         window.addEventListener(
           "change",
@@ -69,7 +70,7 @@ executeCodeSampleModal = () => {
 };
 
 // Remove the modal using a click event
-closeModal = () => {
+function closeModal() {
   const modalBody = document.querySelector('.js-code-sample-modal-body');
   const modalWrapper = document.querySelector('.js-code-sample-wrapper');
 
@@ -83,16 +84,12 @@ closeModal = () => {
   };
 }
 
-closeModalViaOverlay = () => {
+function closeModalViaOverlay() {
   const renderedWrapper = document.querySelector('.js-code-sample-wrapper');
 
   renderedWrapper.addEventListener('click', () => {
     closeModal();
   })
-}
-
-updateCssProperty = (property, value) => {
-  style.setProperty(property, value)
 }
 
 window.onload = () => {
