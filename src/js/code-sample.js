@@ -69,8 +69,8 @@ function executeCodeSampleModal() {
   });
 };
 
-// Remove the modal using a click event
-function closeModal() {
+// Remove the modal using a click event.
+export function closeModal() {
   const modalBody = document.querySelector('.js-code-sample-modal-body');
   const modalWrapper = document.querySelector('.js-code-sample-wrapper');
 

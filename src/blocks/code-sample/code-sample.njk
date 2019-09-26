@@ -4,9 +4,15 @@
 </code></pre>
 
 <template class="js-code-sample-template">
+  <script type="module">
+    import { closeModal } from '/js/code-sample.js';
+    document.querySelector('.js-code-sample-close-modal').onclick = function() {
+      closeModal();
+    }
+  </script>
   <div class="js-code-sample-wrapper code-sample__modal">
     <div class="js-code-sample-inner code-sample__modal-inner">
-      <button class="js-code-sample-close-modal modal-button modal-button_close code-sample__modal-button-close" onClick="closeModal()">Close</button>
+      <button class="js-code-sample-close-modal modal-button modal-button_close code-sample__modal-button-close">Close</button>
       <div class="js-code-sample-modal-body code-sample__modal-body">
       </div>
     </div>
