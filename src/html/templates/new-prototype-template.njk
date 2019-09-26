@@ -24,9 +24,11 @@
 		{% block linked_css %}{% endblock %}
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		{% block header_scripts %}{% endblock %}
-
-    <script async src="/js/code-sample.js" type="module"></script>
+		{% block header_scripts %}
+      <script async src="/js/code-sample.js" type="module"></script>
+      <script src="/js/grid-overlay.js" type="module"></script>
+      <script src="/js/grid-row.js" type="module"></script>  
+    {% endblock %}
 	</head>
 
 	<body class="page-{{ page }} {{ layout_classes }} {{ body_classes }}">
@@ -41,9 +43,6 @@
 			{% if development %}
 				{% include "../partials/footer-scripts.njk" %}
 			{% endif %}
-			<script src="/js/grid-overlay.js"></script>
-      <script src="/js/grid-row.js" type="module"></script>
 		{% endblock %}
-
 	</body>
 </html>
