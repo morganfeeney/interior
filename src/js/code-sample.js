@@ -1,4 +1,5 @@
 import { customMediaMin, customMediaMax } from './breakpoints.js';
+import { body } from './global-vars.js';
 
 const codeSampleModalButton = document.querySelector('.js-code-sample-open-modal');
 const template = document.querySelector('.js-code-sample-template');

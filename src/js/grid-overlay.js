@@ -1,18 +1,20 @@
-var cols = 1000;
-var body = document.querySelector('body');
-var main = document.querySelector('main');
-var gridOverLay = document.querySelector('.grid-overlay');
-var grid = document.createElement('div');
-grid.setAttribute('class', 'grid grid-overlay master-grid');
-function gridOverlay(cols){
+import { body, main } from './global-vars.js';
+let gridOverlaySpacers = 1000;
+
+// Create some divs 
+function gridOverlay(cols) {
+  let grid = document.createElement('div');
+  grid.setAttribute('class', 'grid grid-overlay master-grid');
+
   main.appendChild(grid);
   for (var i = 0; i < cols; i++) {
     var gridChild = document.createElement('div');
     grid.appendChild(gridChild);
   }
 }
-// Create a button to togglethe grid overlay.
-function overlayToggle(e){
+
+// Create a button to toggle the grid overlay.
+function overlayToggle(){
   var toggle = document.createElement('button');
   toggle.setAttribute('class', 'button-grid-toggle');
   toggle.innerHTML = "Toggle Grid";
@@ -36,7 +38,8 @@ function overlayToggle(e){
     e.preventDefault();
   });
 }
-if (cols >= 1) {
+
+if (gridOverlaySpacers >= 1) {
   overlayToggle();
-  gridOverlay(cols);
+  gridOverlay(gridOverlaySpacers);
 }
