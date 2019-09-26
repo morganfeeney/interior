@@ -1,2 +1,2 @@
-export let body = document.querySelector('body');
-export let main = document.querySelector('main');
+export const body = document.querySelector('body');
+export const main = document.querySelector('main');
