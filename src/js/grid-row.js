@@ -29,7 +29,7 @@ function spanGridRows(content) {
 
   // Work out the computed height of any elements I select.
   let computedStyles = window.getComputedStyle(content);
-  let contentHeight = parseInt(computedStyles.getPropertyValue('height').split('px')[0]);
+  let contentHeight = parseFloat(computedStyles.getPropertyValue('height').split('px')[0]);
   let rowsToSpan = '';
   
   // Calculate how many grid-rows to span.
@@ -40,10 +40,17 @@ function spanGridRows(content) {
 
     // Test on page-load using `matches`, then span rows.
     if (myMedia.matches) {
-      rowsToSpan = Math.ceil((contentHeight / lineHeight) / lines);
+      let test = Math.ceil(contentHeight / lineHeight);
+      console.log(`contentHeight: ${contentHeight}`);
+      console.log(`lineHeight: ${lineHeight}`);
+      console.log(`test: ${test}`);
+
+      rowsToSpan = Math.ceil(test / lines);
+      
+      console.log(`rowsToSpan: ${rowsToSpan}`);
 
       // Make sure this doesn't kick-off if there is only a single row of content
-      if ((contentHeight / lineHeight) > (lines + 1)) {
+      if ((contentHeight / lineHeight) >= lines) {
         content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
       }
     }
