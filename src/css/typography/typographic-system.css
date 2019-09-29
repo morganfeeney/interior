@@ -22,8 +22,6 @@
   line-height: var(--root-line-height, var(--line-height-global-body));
 }
 
-
-
 @define-mixin mobile-small {
   font-size: var(--font-size-mobile-small);
   line-height: var(--line-height-mobile-small);
