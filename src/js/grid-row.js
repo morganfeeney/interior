@@ -49,8 +49,8 @@ function spanGridRows(content) {
       
       console.log(`rowsToSpan: ${rowsToSpan}`);
 
-      // Make sure this doesn't kick-off if there is only a single row of content
-      if ((contentHeight / lineHeight) >= lines) {
+      // Make sure this doesn't kick-off if there is only a single row of content & 1 gutter.
+      if ((contentHeight / lineHeight) >= (lines + 1)) {
         content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
       }
     }
