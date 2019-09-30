@@ -21,7 +21,8 @@ function getComputedRowHeight() {
 
 // Apply CSS to any elements we have selected.
 function spanGridRows(content) {
-  // call the vars in this function as it is used by `mediaquerylist`.
+
+  // Call the vars in this function as it is used by `mediaquerylist`.
   getComputedRowHeight();
   
   // Remove any previously set `--body-grid-row` properties otherwise the `rowsToSpan` calculation fails miserably.
@@ -34,23 +35,26 @@ function spanGridRows(content) {
   
   // Calculate how many grid-rows to span.
   for (const media in customMediaMinMax) {
-    // Destructure variables from customMediaMinMax object
-    let { breakpoint, lineHeight, lines } = customMediaMinMax[media]; 
-    let myMedia = window.matchMedia(breakpoint)
+  
+    // Destructure variables from customMediaMinMax object.
+    let { 
+      breakpoint,
+      lineHeight,
+      linesWithGutter,
+    } = customMediaMinMax[media];
 
-    // Test on page-load using `matches`, then span rows.
+    let myMedia = window.matchMedia(breakpoint);
+
+    // Test using `matches`, then span rows.
     if (myMedia.matches) {
-      let test = Math.ceil(contentHeight / lineHeight);
-      console.log(`contentHeight: ${contentHeight}`);
-      console.log(`lineHeight: ${lineHeight}`);
-      console.log(`test: ${test}`);
+      let totalLinesOfText = Math.floor(contentHeight / lineHeight);
+      let totalGutters = gridRowGapUnit * Math.floor(totalLinesOfText / linesWithGutter);
 
-      rowsToSpan = Math.ceil(test / lines);
-      
-      console.log(`rowsToSpan: ${rowsToSpan}`);
-
-      // Make sure this doesn't kick-off if there is only a single row of content & 1 gutter.
-      if ((contentHeight / lineHeight) >= (lines + 1)) {
+      // Make sure gutters are needed to span across, if not use the default CSS row height.
+      if (totalGutters >=1 ) {
+        let totalHeight = contentHeight - totalGutters;
+        let gapsToSpan = Math.floor(totalHeight / computedRowHeight);        
+        rowsToSpan = gapsToSpan + 1;
         content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
       }
     }

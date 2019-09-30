@@ -21,42 +21,50 @@ const customMediaMinMax = {
     {
       breakpoint: `${customMediaMax['--iPhoneSE-max']}`,
       lines: 4,
+      linesWithGutter: 5,
       lineHeight: 24
     },
   '--iPhoneSE': 
     {
       breakpoint:`${customMediaMin['--iPhoneSE']} and ${customMediaMax['--iPhoneXR-max']}`,
       lines: 4,
+      linesWithGutter: 5,
       lineHeight: 24
     },
   '--iPhoneXR': 
     {
       breakpoint:`${customMediaMin['--iPhoneXR']} and ${customMediaMax['--tablet-max']}`,
       lines: 5,
+      linesWithGutter: 6,
+      gutterHeight: 32,
       lineHeight: 24
     },
   '--tablet': 
     {
       breakpoint:`${customMediaMin['--tablet']} and ${customMediaMax['--iPadPro-max']}`,
       lines: 6,
+      linesWithGutter: 7,
       lineHeight: 32
     },
   '--iPadPro': 
     {
       breakpoint:`${customMediaMin['--iPadPro']} and ${customMediaMax['--desktop-max']}`,
       lines: 6,
+      linesWithGutter: 7,
       lineHeight: 32
     },
   '--desktop': 
     {
       breakpoint:`${customMediaMin['--desktop']} and ${customMediaMax['--appleTV-max']}`,
       lines: 6,
+      linesWithGutter: 7,
       lineHeight: 32
     },
   '--appleTV': 
     {
       breakpoint:`${customMediaMin['--appleTV']}`,
       lines: 6,
+      linesWithGutter: 7,
       lineHeight: 32
     }
 };
