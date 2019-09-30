@@ -40,7 +40,7 @@ function spanGridRows(content) {
     let { 
       breakpoint,
       lineHeight,
-      lines,
+      linesWithGutter,
     } = customMediaMinMax[media];
 
     let myMedia = window.matchMedia(breakpoint);
@@ -48,7 +48,7 @@ function spanGridRows(content) {
     // Test using `matches`, then span rows.
     if (myMedia.matches) {
       let totalLinesOfText = Math.floor(contentHeight / lineHeight);
-      let totalGutters = gridRowGapUnit * Math.floor(totalLinesOfText / lines);
+      let totalGutters = gridRowGapUnit * Math.floor(totalLinesOfText / linesWithGutter);
 
       // Make sure gutters are needed to span across, if not use the default CSS row height.
       if (totalGutters >= gridRowGapUnit ) {
