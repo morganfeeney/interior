@@ -13,8 +13,7 @@ function executeCodeSampleModal() {
   const templateBody = templateContent.querySelector('.js-code-sample-modal-body');
   const templateWrapper = templateContent.querySelector('.js-code-sample-wrapper');
 
-  codeSampleModalButton.addEventListener('click', function () {
-
+  codeSampleModalButton.addEventListener('click', function modalListener() {
     const placeHolder = document.querySelector('.js-placeholder-image');
     const codeSample = this.closest('.js-placeholder-image').querySelector('.js-code-sample');
 
@@ -40,32 +39,31 @@ function executeCodeSampleModal() {
     // Set the property by default
     if (theWindowMax.matches) {
       codeSampleInner.style.setProperty(
-        '--code-sample-modal-offset', `${offset}px`
-      )
+        '--code-sample-modal-offset', `${offset}px`,
+      );
     } else {
       codeSampleInner.style.setProperty(
-        '--code-sample-modal-offset', 0
-      )
+        '--code-sample-modal-offset', 0,
+      );
     }
 
     // Remove the property across breakpoints if needed using the "change" event-listener
     const modalEventListener = (e) => {
       if (e.matches) {
         window.addEventListener(
-          "change",
+          'change',
           codeSampleInner.style.setProperty(
-            '--code-sample-modal-offset', 0
-          )
-        )
+            '--code-sample-modal-offset', 0,
+          ),
+        );
       } else {
         codeSampleInner.style.setProperty(
-          '--code-sample-modal-offset', `${offset}px`
-        )
+          '--code-sample-modal-offset', `${offset}px`,
+        );
       }
-    }
+    };
 
     theWindowMin.addListener(modalEventListener);
-
     closeModalViaOverlay();
   });
 };
@@ -97,9 +95,8 @@ window.onload = () => {
   modalBorderWidth = window.getComputedStyle(root).getPropertyValue('--js-modal-border-width');
 
   if (template) {
-    executeCodeSampleModal()
+    (function modalListener() {
+      executeCodeSampleModal();
+    }());
   }
-  else {
-    return
-  }
-}
+};
