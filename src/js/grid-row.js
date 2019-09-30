@@ -51,12 +51,16 @@ function spanGridRows(content) {
       let totalGutters = gridRowGapUnit * Math.floor(totalLinesOfText / linesWithGutter);
 
       // Make sure gutters are needed to span across, if not use the default CSS row height.
-      if (totalGutters >=1 ) {
+      if (totalGutters >= gridRowGapUnit ) {
 
         // Calculate how many rows to span without including the gutters.
         let totalHeight = contentHeight - totalGutters;
         let gapsToSpan = Math.floor(totalHeight / computedRowHeight);        
+
+        // There's always 1 more row than there are gutters.
         rowsToSpan = gapsToSpan + 1;
+
+        // Add it to the DOM!
         content.style.setProperty('--body-grid-row', `span ${rowsToSpan}`);
       }
     }
@@ -70,17 +74,11 @@ function spanAllSelectedElements() {
   });
 }
 
-// Detect changes in media then make all elements span rows.
-function spanElementsOnChange(element) {
-  if (element.matches) {
-    window.addEventListener('change', spanAllSelectedElements())
-  }
-}
-
 // Apply all the functions via a range of conditions.
-function initCustomMedia(){
+function initCustomMedia() {
   for (const media in customMediaMinMax) {
-    let myMedia = window.matchMedia(customMediaMinMax[media].breakpoint)
+    let { breakpoint } = customMediaMinMax[media];
+    let myMedia = window.matchMedia(breakpoint);
 
     // Test on page-load using `matches`, then span rows.
     if (myMedia.matches) {
@@ -88,7 +86,11 @@ function initCustomMedia(){
     }
 
     // Listen for media changes and then apply function to span rows via `change`.
-    myMedia.addListener(spanElementsOnChange)
+    myMedia.addEventListener('change', (e) => {
+      if (e.matches) {
+        spanAllSelectedElements()
+      }
+    })
   }
 }
 
