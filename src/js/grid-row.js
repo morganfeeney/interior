@@ -52,6 +52,8 @@ function spanGridRows(content) {
 
       // Make sure gutters are needed to span across, if not use the default CSS row height.
       if (totalGutters >=1 ) {
+
+        // Calculate how many rows to span without including the gutters.
         let totalHeight = contentHeight - totalGutters;
         let gapsToSpan = Math.floor(totalHeight / computedRowHeight);        
         rowsToSpan = gapsToSpan + 1;
