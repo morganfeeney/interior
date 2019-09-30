@@ -1,23 +1,24 @@
 import { body, main } from './global-vars.js';
-let gridOverlaySpacers = 1000;
 
-// Create some divs 
+const gridOverlaySpacers = 1000;
+
+// Create some divs
 function gridOverlay(cols) {
-  let grid = document.createElement('div');
+  const grid = document.createElement('div');
   grid.setAttribute('class', 'grid grid-overlay master-grid');
 
   main.appendChild(grid);
-  for (var i = 0; i < cols; i++) {
-    var gridChild = document.createElement('div');
+  for (let i = 0; i < cols; i++) {
+    const gridChild = document.createElement('div');
     grid.appendChild(gridChild);
   }
 }
 
 // Create a button to toggle the grid overlay.
-function overlayToggle(){
-  var toggle = document.createElement('button');
+function overlayToggle() {
+  const toggle = document.createElement('button');
   toggle.setAttribute('class', 'button-grid-toggle');
-  toggle.innerHTML = "Toggle Grid";
+  toggle.innerHTML = 'Toggle Grid';
   body.appendChild(toggle);
 
   // Check if localStorage has toggled the grid overlay
@@ -27,7 +28,7 @@ function overlayToggle(){
   }
 
   // Toggle the overlay classes, first check to see if toggle has been set in localstorage
-  toggle.addEventListener('click', function(e) {
+  toggle.addEventListener('click', (e) => {
     if (localStorage.getItem('Overlay') !== 'Toggled') {
       localStorage.setItem('Overlay', 'Toggled');
     } else {
