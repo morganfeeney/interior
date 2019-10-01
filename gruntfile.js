@@ -3,6 +3,7 @@ const postcssImport = require('postcss-import');
 const postcssMixins = require('postcss-mixins');
 const cssnano = require('cssnano');
 const postcssFunctions = require('postcss-functions');
+const path = require('path');
 
 module.exports = function (grunt) {
   const development = !grunt.option('prod');
@@ -97,7 +98,7 @@ module.exports = function (grunt) {
         },
       },
       js: {
-        files: 'src/js/**/*.js',
+        files: 'src/**/*.js',
         tasks: ['clean:js', 'copy:js'],
         options: {
           spawn: false,
@@ -110,30 +111,29 @@ module.exports = function (grunt) {
     nunjucks: {
       options: {
         preprocessData(data) {
-          const path = require('path');
-          let date = new Date();
-          let iso_date = date.toISOString();
-          let nice_date = date.toDateString();
-          let file = path.basename(this.src[0]);
-          let page = path.basename(this.src[0], '.html');
+          const date = new Date();
+          const iso_date = date.toISOString();
+          const nice_date = date.toDateString();
+          const file = path.basename(this.src[0]);
+          const page = path.basename(this.src[0], '.html');
 
-          let posts = grunt.file.expand({
+          const posts = grunt.file.expand({
             filter: 'isFile',
             cwd: 'src/html/posts',
           }, ['*.html', '!index.html']);
 
-          let pages = grunt.file.expand({
+          const pages = grunt.file.expand({
             filter: 'isFile',
             cwd: 'src/html/pages',
           }, ['*.html', '!index.html']);
 
-          let examples = grunt.file.expand({
+          const examples = grunt.file.expand({
             filter: 'isFile',
             cwd: 'src/html/examples',
           }, ['*.html', '!index.html']);
 
-          let screens = grunt.file.readJSON('screens.json');
-          let result = {
+          const screens = grunt.file.readJSON('screens.json');
+          const result = {
             iso_date,
             nice_date,
             file,
@@ -146,7 +146,7 @@ module.exports = function (grunt) {
           };
           return result;
         },
-        configureEnvironment(env, nunjucks) {
+        configureEnvironment(env) {
           env.addGlobal('development', development);
         },
         data: grunt.file.readJSON('data.json'),
@@ -170,10 +170,10 @@ module.exports = function (grunt) {
     copy: {
       js: {
         files: [{
-          cwd: 'src/js/',
+          cwd: 'src/',
           expand: true,
           src: '**/*.js',
-          dest: 'docs/js/',
+          dest: 'docs/',
         }],
       },
     },
