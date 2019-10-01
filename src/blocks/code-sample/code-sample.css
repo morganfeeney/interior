@@ -36,11 +36,11 @@
 
 .code-sample__modal {
   position: absolute;
-  left: 0;
   background: hsla(33.8, 85.2%, 55.1%, 0.89);
   top: 0;
-  width: 100vw;
+  right: 0;
   bottom: 0;
+  left: 0;
   display: flex;
   align-items: center;
   flex-flow: column;

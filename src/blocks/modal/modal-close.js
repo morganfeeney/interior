@@ -1,7 +1,7 @@
-import { body } from '../global-vars.js';
+import { body } from '../../js/global-vars.js';
 
 // Remove the modal using a click event.
-export default function closeModal() {
+export default function modalClose() {
   const modalBody = document.querySelector('.js-code-sample-modal-body');
   const modalWrapper = document.querySelector('.js-code-sample-wrapper');
 

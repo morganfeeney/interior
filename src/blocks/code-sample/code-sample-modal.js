@@ -1,6 +1,6 @@
-import { customMediaMin, customMediaMax } from '../breakpoints.js';
-import { body } from '../global-vars.js';
-import modalCloseOverlay from './modal-close-overlay.js';
+import { customMediaMin, customMediaMax } from '../../js/breakpoints.js';
+import { body } from '../../js/global-vars.js';
+import modalCloseOverlay from '../modal/modal-close-overlay.js';
 
 const codeSampleModalButton = document.querySelector('.js-code-sample-open-modal');
 const template = document.querySelector('.js-code-sample-template');
