@@ -1,26 +1,25 @@
-import { customMediaMin, customMediaMax } from './breakpoints.js';
-import { body } from './global-vars.js';
+import { customMediaMin, customMediaMax } from '../breakpoints.js';
+import { body } from '../global-vars.js';
+import modalCloseOverlay from './modal-close-overlay.js';
 
 const codeSampleModalButton = document.querySelector('.js-code-sample-open-modal');
 const template = document.querySelector('.js-code-sample-template');
 const root = document.querySelector(':root');
 
-// This can't be set until the DOM parses it later on
-let modalBorderWidth = '';
-
-function executeCodeSampleModal() {
+export default function executeCodeSampleModal() {
   const templateContent = document.importNode(template.content, true);
   const templateBody = templateContent.querySelector('.js-code-sample-modal-body');
   const templateWrapper = templateContent.querySelector('.js-code-sample-wrapper');
+  const modalBorderWidth = window.getComputedStyle(root).getPropertyValue('--modal-border-width');
 
-  codeSampleModalButton.addEventListener('click', function modalListener() {
+  codeSampleModalButton.addEventListener('click', function () {
     const placeHolder = document.querySelector('.js-placeholder-image');
     const codeSample = this.closest('.js-placeholder-image').querySelector('.js-code-sample');
 
     // Setup some body styles for the modal
     body.classList.add('modal-open');
 
-    // Clone the code sample we want to display
+    // Clone the code sample to display in the modal
     const clone = codeSample.cloneNode(true);
 
     // Get the distance from the top of the document and use it as an offset
@@ -48,7 +47,7 @@ function executeCodeSampleModal() {
     }
 
     // Remove the property across breakpoints if needed using the "change" event-listener
-    const modalEventListener = (e) => {
+    function modalEventListener(e) {
       if (e.matches) {
         window.addEventListener(
           'change',
@@ -61,42 +60,10 @@ function executeCodeSampleModal() {
           '--code-sample-modal-offset', `${offset}px`,
         );
       }
-    };
+    }
 
     theWindowMin.addListener(modalEventListener);
-    closeModalViaOverlay();
+    modalCloseOverlay();
   });
-};
-
-// Remove the modal using a click event.
-export function closeModal() {
-  const modalBody = document.querySelector('.js-code-sample-modal-body');
-  const modalWrapper = document.querySelector('.js-code-sample-wrapper');
-
-  body.classList.remove('modal-open');
-
-  if (modalBody) {
-    modalBody.innerHTML = '';
-  }
-  if (modalWrapper) {
-    modalWrapper.remove();
-  };
 }
-
-function closeModalViaOverlay() {
-  const renderedWrapper = document.querySelector('.js-code-sample-wrapper');
-
-  renderedWrapper.addEventListener('click', () => {
-    closeModal();
-  })
-}
-
-window.onload = () => {
-  modalBorderWidth = window.getComputedStyle(root).getPropertyValue('--js-modal-border-width');
-
-  if (template) {
-    (function modalListener() {
-      executeCodeSampleModal();
-    }());
-  }
-};
+executeCodeSampleModal();

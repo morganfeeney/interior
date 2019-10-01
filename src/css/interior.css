@@ -3,6 +3,7 @@
  * ---------------------------------------------------------------------------*/
 
 /* Core */
+@import "global-vars.css";
 @import "layout/global-spacing.css";
 @import "layout/grid-system.css";
 @import "colour/colour-palette.css";
