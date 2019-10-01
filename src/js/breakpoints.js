@@ -17,60 +17,60 @@ const customMediaMax = {
 };
 
 const customMediaMinMax = {
-  '--iPhoneSE-max': 
+  '--iPhoneSE-max':
     {
       breakpoint: `${customMediaMax['--iPhoneSE-max']}`,
       lines: 4,
       linesWithGutter: 5,
-      lineHeight: 24
+      lineHeight: 24,
     },
-  '--iPhoneSE': 
+  '--iPhoneSE':
     {
-      breakpoint:`${customMediaMin['--iPhoneSE']} and ${customMediaMax['--iPhoneXR-max']}`,
+      breakpoint: `${customMediaMin['--iPhoneSE']} and ${customMediaMax['--iPhoneXR-max']}`,
       lines: 4,
       linesWithGutter: 5,
-      lineHeight: 24
+      lineHeight: 24,
     },
-  '--iPhoneXR': 
+  '--iPhoneXR':
     {
-      breakpoint:`${customMediaMin['--iPhoneXR']} and ${customMediaMax['--tablet-max']}`,
+      breakpoint: `${customMediaMin['--iPhoneXR']} and ${customMediaMax['--tablet-max']}`,
       lines: 5,
       linesWithGutter: 6,
       gutterHeight: 32,
-      lineHeight: 24
+      lineHeight: 24,
     },
-  '--tablet': 
+  '--tablet':
     {
-      breakpoint:`${customMediaMin['--tablet']} and ${customMediaMax['--iPadPro-max']}`,
+      breakpoint: `${customMediaMin['--tablet']} and ${customMediaMax['--iPadPro-max']}`,
       lines: 6,
       linesWithGutter: 7,
-      lineHeight: 32
+      lineHeight: 32,
     },
-  '--iPadPro': 
+  '--iPadPro':
     {
-      breakpoint:`${customMediaMin['--iPadPro']} and ${customMediaMax['--desktop-max']}`,
+      breakpoint: `${customMediaMin['--iPadPro']} and ${customMediaMax['--desktop-max']}`,
       lines: 6,
       linesWithGutter: 7,
-      lineHeight: 32
+      lineHeight: 32,
     },
-  '--desktop': 
+  '--desktop':
     {
-      breakpoint:`${customMediaMin['--desktop']} and ${customMediaMax['--appleTV-max']}`,
+      breakpoint: `${customMediaMin['--desktop']} and ${customMediaMax['--appleTV-max']}`,
       lines: 6,
       linesWithGutter: 7,
-      lineHeight: 32
+      lineHeight: 32,
     },
-  '--appleTV': 
+  '--appleTV':
     {
-      breakpoint:`${customMediaMin['--appleTV']}`,
+      breakpoint: `${customMediaMin['--appleTV']}`,
       lines: 6,
       linesWithGutter: 7,
-      lineHeight: 32
-    }
+      lineHeight: 32,
+    },
 };
 
-export { 
+export {
   customMediaMin,
   customMediaMax,
-  customMediaMinMax
+  customMediaMinMax,
 };
