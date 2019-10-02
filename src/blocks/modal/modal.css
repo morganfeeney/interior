@@ -1,0 +1,7 @@
+.modal-open .modal__button_open {
+  display: none;
+}
+
+.modal-open .figure-wrapper {
+  pointer-events: none;
+}

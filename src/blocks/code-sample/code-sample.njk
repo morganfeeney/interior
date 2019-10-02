@@ -1,18 +1,18 @@
-<button class="js-code-sample-open-modal modal-button modal-button_open code-sample__modal-button-open">Close</button>
+<button class="js-code-sample-open-modal modal__button modal__button_open code-sample__modal-button-open">Close</button>
 
 <pre rel="{{ language }}" class="js-code-sample code-sample code-sample_{{ language }}"><code class="code-sample__code">{% block code %}{% endblock %}
 </code></pre>
 
 <template class="js-code-sample-template">
   <script type="module">
-    import modalClose from '../modal/modal-close.js';
+    import modalClose from './modal/__button/modal__button_close.js';
     document.querySelector('.js-code-sample-close-modal').onclick = function() {
       modalClose();
     }
   </script>
   <div class="js-code-sample-wrapper code-sample__modal">
     <div class="js-code-sample-inner code-sample__modal-inner">
-      <button class="js-code-sample-close-modal modal-button modal-button_close code-sample__modal-button-close">Close</button>
+      <button class="js-code-sample-close-modal modal__button modal__button_close code-sample__modal-button-close">Close</button>
       <div class="js-code-sample-modal-body code-sample__modal-body">
       </div>
     </div>

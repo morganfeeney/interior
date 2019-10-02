@@ -22,7 +22,9 @@
 @import "../blocks/figure/figure.css";
 @import "../blocks/placeholder-image/placeholder-image.css";
 @import "../blocks/code-sample/code-sample.css";
-@import "../blocks/modal-button/modal-button.css";
+@import "../blocks/modal/modal.css";
+@import "../blocks/code-sample/__modal/code-sample__modal.css";
+@import "../blocks/modal/__button/modal__button.css";
 @import "../blocks/scroller/scroller.css";
 @import "../blocks/footer/footer.css";
 

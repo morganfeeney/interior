@@ -1,4 +1,4 @@
-import { body } from '../../js/global-vars.js';
+import { body } from '../../../js/global-vars.js';
 
 // Remove the modal using a click event.
 export default function modalClose() {
