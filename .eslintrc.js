@@ -16,6 +16,7 @@ module.exports = {
   },
   rules: {
     'import/extensions': 'off',
-    'func-names': ['error', 'never']
+    'func-names': ['error', 'never'],
+    'guard-for-in': 'off'
   },
 };
