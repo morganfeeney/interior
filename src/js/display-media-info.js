@@ -11,12 +11,13 @@ export function displyMediaInfo () {
       console.log(`${media}: ${breakpoint}`)
     }
 
-    // Display media info on change.
-    m.addEventListener('change', (e) => {
-      if (e.matches) {
-        console.log(`${media}: ${breakpoint}`)
+    const displayMediaOnChange = () => {
+      if (m.matches) {
+        window.addEventListener('change', console.log(`${media}: ${breakpoint}`))
       }
-    })
+    }
+
+    m.addListener(displayMediaOnChange)
   }
 }
 

@@ -76,19 +76,21 @@ function spanAllSelectedElements () {
 function initCustomMedia () {
   for (const media in customMediaMinMax) {
     const { breakpoint } = customMediaMinMax[media]
-    const myMedia = window.matchMedia(breakpoint)
+    const m = window.matchMedia(breakpoint)
 
     // Test on page-load using `matches`, then span rows.
-    if (myMedia.matches) {
+    if (m.matches) {
       spanAllSelectedElements()
     }
 
     // Listen for media changes and then apply function to span rows via `change`.
-    myMedia.addEventListener('change', (e) => {
-      if (e.matches) {
-        spanAllSelectedElements()
+    const displayMediaOnChange = () => {
+      if (m.matches) {
+        window.addEventListener('change', spanAllSelectedElements())
       }
-    })
+    }
+
+    m.addListener(displayMediaOnChange)
   }
 }
 
