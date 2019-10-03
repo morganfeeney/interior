@@ -1,5 +1,10 @@
 {% extends "../templates/doc-template.njk" %}
 
+{% block header_scripts %}
+  {{ super() }}
+  <script src="/blocks/code-sample/__modal/code-sample__modal.js" type="module"></script>
+{% endblock %}
+
 {% block main %}
   <section class="grid {{ main_classes }}">
     <p class="js-type-body type-body">Sizes within the typographic system are set in pt or <em>point</em>, the universal unit of measurement. I initially setup a Sketch library containing the sizes in fig.1, from there I translated them into CSS. 1rem equals 16pt in Sketch or 16px on the web.</p>
