@@ -1,0 +1,11 @@
+.list-number {
+  list-style: number inside;
+  padding: 0;
+  margin-top: var(--line-height-global-body);
+  margin-bottom: var(--line-height-global-body);
+
+  @media(--tablet) {
+    margin-top: var(--line-height-global-large);
+    margin-bottom: var(--line-height-global-large);
+  }
+}

@@ -1,0 +1,28 @@
+{% extends "../templates/doc-template.njk" %}
+
+{% block main %}
+  <section class="grid {{ main_classes }}">
+    <div class="js-type-body type-body">
+      <p>For the initial exercise I discovered the following sizes to be the most popular, 
+      via Google Analytics (listed in order of size):</p>
+      <ul class="list-number">
+        <li>320x568</li>
+        <li>360x640</li>
+        <li>375x667</li>
+        <li>414x736</li>
+        <li>768x1024</li>
+        <li>1366x768</li>
+      </ul>
+    <p>Some of the sizes are considered “standard”, 
+    such as the screen size for an iPad in portrait orientation (768x1024), 
+    or the size for a standard Android device (360x640). 
+    The web is constantly evolving and that could affect this kind of list; accept that things could change in future.
+However, my analysis covered over 1 year and the list of popular sizes did not change during that period.
+</p>
+</div>
+  </section>
+{% endblock %}
+
+{% block image_nav %}
+  {% include "../partials/components/scroller-nav.njk" %}
+{% endblock %}
