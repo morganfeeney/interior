@@ -1,12 +1,12 @@
-const postcssPresetEnv = require('postcss-preset-env');
-const postcssImport = require('postcss-import');
-const postcssMixins = require('postcss-mixins');
-const cssnano = require('cssnano');
-const postcssFunctions = require('postcss-functions');
-const path = require('path');
+const postcssPresetEnv = require('postcss-preset-env')
+const postcssImport = require('postcss-import')
+const postcssMixins = require('postcss-mixins')
+const cssnano = require('cssnano')
+const postcssFunctions = require('postcss-functions')
+const path = require('path')
 
 module.exports = function (grunt) {
-  const development = !grunt.option('prod');
+  const development = !grunt.option('prod')
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -19,53 +19,53 @@ module.exports = function (grunt) {
             postcssFunctions({
               functions: {
                 grad: (gradVal) => {
-                  const gradient = `linear-gradient(var(--interior-orange) 1px, transparent 1px) 0 ${gradVal}/100vw`;
-                  return gradient;
+                  const gradient = `linear-gradient(var(--interior-orange) 1px, transparent 1px) 0 ${gradVal}/100vw`
+                  return gradient
                 },
                 calcColumnWidth: (columnWidth) => {
-                  const placeholder = `calc((var(--test-column-width) * ${columnWidth}) + (var(--gutter-x) * ${columnWidth - 1}))`;
-                  return placeholder;
+                  const placeholder = `calc((var(--test-column-width) * ${columnWidth}) + (var(--gutter-x) * ${columnWidth - 1}))`
+                  return placeholder
                 },
                 calcRowHeight: (rowHeight) => {
-                  const placeholder = `calc((var(--row-height) * ${rowHeight}) + (var(--gutter-y) * ${rowHeight - 1}))`;
-                  return placeholder;
-                },
-              },
+                  const placeholder = `calc((var(--row-height) * ${rowHeight}) + (var(--gutter-y) * ${rowHeight - 1}))`
+                  return placeholder
+                }
+              }
             }),
             postcssMixins(),
             postcssPresetEnv({
               stage: 0,
               autoprefixer: {
-                grid: false,
+                grid: false
               },
               features: {
-                'custom-properties': false,
+                'custom-properties': false
               },
-              importFrom: 'src/css/layout/breakpoints.css',
-            }),
-          ],
+              importFrom: 'src/css/layout/breakpoints.css'
+            })
+          ]
         },
         files: [{
           expand: true,
           cwd: 'src/css/',
           src: 'interior.css',
-          dest: 'docs/css',
-        }],
+          dest: 'docs/css'
+        }]
       },
       embedded: {
         options: {
           processors: [
             cssnano({
-            }),
-          ],
+            })
+          ]
         },
         files: [
           {
             src: 'docs/css/interior.css',
-            dest: 'src/embedded-css/interior.css',
-          },
-        ],
-      },
+            dest: 'src/embedded-css/interior.css'
+          }
+        ]
+      }
     },
 
     watch: {
@@ -73,29 +73,29 @@ module.exports = function (grunt) {
         files: [
           'src/css/**/*.css',
           'src/blocks/**/*.css',
-          'src/embedded-css/*.css',
+          'src/embedded-css/*.css'
         ],
         tasks: 'postcss:linked',
         options: {
           spawn: false,
-          livereload: true,
-        },
+          livereload: true
+        }
       },
       html: {
         files: ['src/**/*.html', 'src/**/*.njk'],
         tasks: ['clean:html', 'nunjucks', 'prettify'],
         options: {
           spawn: false,
-          livereload: true,
-        },
+          livereload: true
+        }
       },
       gruntfile: {
         files: 'gruntfile.js',
         options: {
           spawn: false,
           livereload: true,
-          reload: true,
-        },
+          reload: true
+        }
       },
       js: {
         files: 'src/**/*.js',
@@ -103,36 +103,36 @@ module.exports = function (grunt) {
         options: {
           spawn: false,
           livereload: true,
-          reload: true,
-        },
-      },
+          reload: true
+        }
+      }
     },
 
     nunjucks: {
       options: {
-        preprocessData(data) {
-          const date = new Date();
-          const iso_date = date.toISOString();
-          const nice_date = date.toDateString();
-          const file = path.basename(this.src[0]);
-          const page = path.basename(this.src[0], '.html');
+        preprocessData (data) {
+          const date = new Date()
+          const iso_date = date.toISOString()
+          const nice_date = date.toDateString()
+          const file = path.basename(this.src[0])
+          const page = path.basename(this.src[0], '.html')
 
           const posts = grunt.file.expand({
             filter: 'isFile',
-            cwd: 'src/html/posts',
-          }, ['*.html', '!index.html']);
+            cwd: 'src/html/posts'
+          }, ['*.html', '!index.html'])
 
           const pages = grunt.file.expand({
             filter: 'isFile',
-            cwd: 'src/html/pages',
-          }, ['*.html', '!index.html']);
+            cwd: 'src/html/pages'
+          }, ['*.html', '!index.html'])
 
           const examples = grunt.file.expand({
             filter: 'isFile',
-            cwd: 'src/html/examples',
-          }, ['*.html', '!index.html']);
+            cwd: 'src/html/examples'
+          }, ['*.html', '!index.html'])
 
-          const screens = grunt.file.readJSON('screens.json');
+          const screens = grunt.file.readJSON('screens.json')
           const result = {
             iso_date,
             nice_date,
@@ -142,16 +142,16 @@ module.exports = function (grunt) {
             examples,
             data,
             screens,
-            pages,
-          };
-          return result;
+            pages
+          }
+          return result
         },
-        configureEnvironment(env) {
-          env.addGlobal('development', development);
+        configureEnvironment (env) {
+          env.addGlobal('development', development)
         },
         data: grunt.file.readJSON('data.json'),
         paths: 'src',
-        noCache: false, // Flag to speed up nunjucks compilation
+        noCache: false // Flag to speed up nunjucks compilation
       },
       all: {
         files: [{
@@ -162,9 +162,9 @@ module.exports = function (grunt) {
           // Rename src, removing the html/ directory, which is for authoring purposes.
           // More info here: https://gruntjs.com/configuring-tasks#the-rename-property
           rename: (dest, src) => dest + src.replace('html', ''),
-          ext: '.html',
-        }],
-      },
+          ext: '.html'
+        }]
+      }
     },
 
     copy: {
@@ -173,24 +173,24 @@ module.exports = function (grunt) {
           cwd: 'src/',
           expand: true,
           src: '**/*.js',
-          dest: 'docs/',
-        }],
-      },
+          dest: 'docs/'
+        }]
+      }
     },
 
     clean: {
       all: {
-        src: ['docs/**/*', '!docs/**/CNAME', '!docs/images', '!docs/**/images/**/*'],
+        src: ['docs/**/*', '!docs/**/CNAME', '!docs/images', '!docs/**/images/**/*']
       },
       html: {
-        src: ['docs/**/*.html'],
+        src: ['docs/**/*.html']
       },
       css: {
-        src: ['docs/css/**/*'],
+        src: ['docs/css/**/*']
       },
       js: {
-        src: ['docs/js/**/*'],
-      },
+        src: ['docs/js/**/*']
+      }
     },
 
     prettify: {
@@ -200,30 +200,30 @@ module.exports = function (grunt) {
         indent_inner_html:
           (function () {
             if (development) {
-              return false;
+              return false
             }
-            return true;
+            return true
           }()),
         preserveBOM: false,
         condense: true,
         max_preserve_newlines: 2,
-        unformatted: ['style', 'svg', 'a', 'code', 'pre'],
+        unformatted: ['style', 'svg', 'a', 'code', 'pre']
       },
       all: {
         expand: true,
         cwd: 'docs/',
         src: ['**/*.html'],
         dest: 'docs/',
-        ext: '.html',
-      },
-    },
-  });
+        ext: '.html'
+      }
+    }
+  })
 
   // Load the plugins to run your tasks
   require('load-grunt-tasks')(grunt, {
-    scope: 'devDependencies',
-  });
-  require('time-grunt')(grunt);
+    scope: 'devDependencies'
+  })
+  require('time-grunt')(grunt)
 
   // Default task(s).
   grunt.registerTask('default', [
@@ -232,6 +232,6 @@ module.exports = function (grunt) {
     'nunjucks',
     'prettify',
     'copy',
-    'watch',
-  ]);
-};
+    'watch'
+  ])
+}
