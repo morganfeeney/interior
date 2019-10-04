@@ -1,0 +1,36 @@
+.stage {
+  display: grid;
+  grid-template-columns: 1fr [artboard-start] 330px [artboard-end] 1fr;
+}
+
+.artboard {
+  grid-column: artboard;
+  background: var(--white);
+  border: 2px solid var(--black);
+  border-bottom: 0;
+  height: calc(100% - var(--gutter-y));
+  display: grid;
+  grid-row: 1;
+}
+
+.container-grid-overlay {
+  grid-column: artboard;
+  border-left: 1px solid var(--interior-orange);
+  border-right: 1px solid var(--interior-orange);
+  background: repeating-linear-gradient(
+    to right,
+    var(--interior-orange),
+    var(--interior-orange) 1px,
+    transparent 1px,
+    transparent 3rem
+  ), repeating-linear-gradient(
+    to right,
+    var(--interior-orange),
+    var(--interior-orange) 1px,
+    transparent 1px,
+    transparent var(--gutter-x)
+  );
+  grid-row: 1;
+  z-index: 1;
+  height: 100%;
+}

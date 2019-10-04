@@ -28,6 +28,7 @@
 @import "../blocks/modal/__button/modal__button.css";
 @import "../blocks/scroller/scroller.css";
 @import "../blocks/footer/footer.css";
+@import "../blocks/artboard/artboard.css";
 
 /* Tools */
 @import "tools/baseline-grid.css";
