@@ -1,6 +1,9 @@
 .stage {
+  --artboard-width: 330px;
+  --gutter-width: 12px;
+  --column-width: 16.667%;
   display: grid;
-  grid-template-columns: 1fr [artboard-start] 330px [artboard-end] 1fr;
+  grid-template-columns: 1fr [artboard-start] var(--artboard-width) [artboard-end] 1fr;
 }
 
 .artboard {
@@ -14,23 +17,42 @@
 }
 
 .container-grid-overlay {
-  grid-column: artboard;
-  border-left: 1px solid var(--interior-orange);
-  border-right: 1px solid var(--interior-orange);
-  background: repeating-linear-gradient(
-    to right,
-    var(--interior-orange),
-    var(--interior-orange) 1px,
-    transparent 1px,
-    transparent 3rem
-  ), repeating-linear-gradient(
-    to right,
-    var(--interior-orange),
-    var(--interior-orange) 1px,
-    transparent 1px,
-    transparent var(--gutter-x)
-  );
   grid-row: 1;
   z-index: 1;
   height: 100%;
+  grid-column: artboard;
+  display: grid;
+  &::before,
+  &::after {
+    width: calc(100% - var(--gutter-width));
+    height: 100%;
+    display: block;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+    border-right: 1px solid var(--interior-orange);
+  }
+
+  &::before {
+    content: "";
+    margin-left: var(--gutter-width);
+    justify-self: center;
+    background: repeating-linear-gradient(
+      to right,
+      var(--interior-orange),
+      var(--interior-orange) 1px,
+      transparent 1px,
+      transparent var(--column-width)
+    )
+  }
+  &::after {
+    content: "";
+    background: repeating-linear-gradient(
+      to right,
+      var(--interior-orange),
+      var(--interior-orange) 1px,
+      transparent 1px,
+      transparent var(--column-width)
+    )
+  }
 }
