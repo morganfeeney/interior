@@ -1,5 +1,5 @@
 .stage {
-  --gutter-width: 12px;
+  --gutter-width: 6px;
   --column-width: 16.667%;
   --m: var(--gutter-width);
   --g: var(--gutter-width);
@@ -25,6 +25,7 @@
 
     @media(--tablet) {
       --fluid-margin: 3fr;
+      --gutter-width: 12px;
     }
 }
 
