@@ -5,11 +5,12 @@
   --g: var(--gutter-width);
   --c: 1fr;
   --container-column-count: 5;
+  --fluid-margin: 1fr;
   display: grid;
   align-items: end;
   grid-template-columns: 
     [fluid-margin-start]
-    4fr 
+    var(--fluid-margin) 
     [margin-start]
     var(--m) 
     [container-start] 
@@ -17,10 +18,14 @@
     [container-end] 
     var(--m) 
     [margin-end] 
-    4fr
+    var(--fluid-margin)
     [fluid-margin-end];
-    grid-template-rows: [container-start] repeat(5, 1fr) [container-end];
-    row-gap: var(--gutter-y);
+    grid-template-rows: [container-start] var(--gutter-y) repeat(3, 1fr) 0 [container-end];
+    row-gap: 1rem;
+
+    @media(--tablet) {
+      --fluid-margin: 3fr;
+    }
 }
 
 .artboard {
@@ -74,9 +79,8 @@
 }
 
 .stage__placeholder {
-  background: #ccc;
+  background: #e6e6e6;
   height: 100%;
-  z-index: 2;
 }
 
 .stage__placeholder_span-fluid-margin {
@@ -96,4 +100,20 @@
 
 .stage__placeholder_span-half_dummy-text {
   grid-column: 3 / span 5;
+}
+
+.artboard_span-fluid-margin {
+  grid-column: fluid-margin;
+  grid-row: 1/3;
+  z-index: 1;
+  border-bottom: 2px solid;
+}
+
+.artboard_span-margin {
+  grid-column: margin;
+  grid-row: 3/6;
+}
+
+.artboard_span-container {
+  grid-column: container;
 }

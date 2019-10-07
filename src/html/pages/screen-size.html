@@ -25,8 +25,41 @@
   </section>
 
   {% set figureWrapperContent %}
-    <figure class="figure figure_with-caption figure_without-counter figure_3-up-wide">
-      <div class="placeholder-image placeholder-image_column-width stage">
+    <figure class="figure figure_with-caption figure_3-up-wide">
+      <div class="placeholder-image placeholder-image_span-4 stage">
+        <div class="container-grid-overlay"></div>
+      </div>
+      <figcaption class="figcaption type-small">
+      A Container Grid comprised of <em>fluid areas</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
+      The total of which can equal a screen width, excluding fluid areas, and represents a viewport width.
+      </figcaption>
+    </figure>
+    <figure class="figure figure_with-caption figure_3-up-wide">
+      <div class="placeholder-image placeholder-image_span-4 stage">
+        <div class="artboard"></div>
+        <div class="container-grid-overlay"></div>
+      </div>
+      <figcaption class="figcaption type-small">
+      A box placed into an area spanning the margins (the first and last gutter). 
+      It will occupy the entire viewport width.
+      </figcaption>
+    </figure>
+  {% endset %}
+  {{ fw.figureWrapper(figureWrapperContent) }}
+
+  {% set figureWrapperContent2 %}
+    <figure class="figure figure_with-caption figure_3-up-wide">
+      <div class="placeholder-image placeholder-image_span-4 stage">
+        <div class="artboard artboard_span-container"></div>
+        <div class="container-grid-overlay"></div>
+      </div>
+      <figcaption class="figcaption type-small">
+      A box placed into an area spanning the <em>container</em> (the first and last column). 
+      It will occupy the entire viewport width, minus the margins.
+      </figcaption>
+    </figure>
+    <figure class="figure figure_with-caption figure_3-up-wide">
+      <div class="placeholder-image placeholder-image_span-4 stage">
         <div class="artboard"></div>
         <div class="container-grid-overlay"></div>
         <div class="stage__placeholder stage__placeholder_span-fluid-margin"></div>
@@ -35,37 +68,49 @@
         <div class="stage__placeholder stage__placeholder_span-container"></div>
       </div>
       <figcaption class="figcaption type-small">
-      Body copy is set to 16pt/24pt, the ideal line-length appears in the 3rd row. 
-      This gives an overall idea of the kind of grid I want, and the font-sizes I can accommodate.
+        A box spanning the margins, with several other boxes layered on top, 
+        each spanning a range of columns, demonstrating versatility.
       </figcaption>
     </figure>
+  {% endset %}
+  {{ fw.figureWrapper(figureWrapperContent2) }}
+
+  <section class="grid {{ main_classes }}">
+    <div class="js-type-body type-body">
+      The purpose of the Container Grid is to create a series of columns that equal the total of each chosen width.
+      If a screen is larger than a width, any excess space is fluid and can be utilised to solve a range of design problems <em>fig. 4</em>.
+    </div>
+  </section>
+
+  {% set figureWrapperContent3 %}
     <figure class="figure figure_with-caption figure_code-sample">
       <div class="js-placeholder-image placeholder-image placeholder-image_code-sample">
         {% include "../partials/code-samples/container-width.njk" %}
       </div>
       <figcaption class="figcaption type-small">Container widths are used to construct the grid, and have a direct imact on font-size.</figcaption>
     </figure>
+        <figure class="figure figure_with-caption figure_code-sample">
+      <div class="js-placeholder-image placeholder-image placeholder-image_code-sample">
+        {% include "../partials/code-samples/container-width.njk" %}
+      </div>
+      <figcaption class="figcaption type-small">Container widths are used to construct the grid, and have a direct imact on font-size.</figcaption>
+    </figure>
   {% endset %}
-
-  {{ fw.figureWrapper(figureWrapperContent) }}
+{# NEED TO ADD A CODE SAMPLE OF NAMED GRID LINES #}
+  {{ fw.figureWrapper(figureWrapperContent3) }}
 
   <section class="grid {{ main_classes }}">
-  <div class="js-type-body type-body">
-    <p>
-    The web is constantly evolving, any list I create could eventually change
-    and that may mean going back to the drawing board at a later date.
-    What's worth noting is that my analysis of data—from the account of a large e-tailer—covered a period of 1 year &amp;
-    1,000,000 users, during that period the most popular sizes did not change.
-    </p>
-    <p>The experience could be specifically tailored towards existing customers, 
-    as opposed to users that probably won’t shop with us. 
-    Users of screen sizes not in the list will also receive an excellent experience due to the strategy of including fluid elements [examples needed, 
-    e.g. bleeding imagery fluid header and footer]. This gives us the benefits of designing for certainty, whilst creating the impression of fluidity.</p>
+    <div class="js-type-body type-body">
+      When it comes to re-creating a design using CSS and HTML it removes the need for markup, providing freedom to span across
+      different ranges of columns.
+      <br>
+      It's important to note these terms are not related to CSS properties.
+      achieving a range of possibilities due to the gutters also being columns.
+      Users of screen sizes not in the list will also receive an excellent experience due to the strategy of including fluid elements [examples needed, 
+      e.g. bleeding imagery fluid header and footer]. This gives us the benefits of designing for certainty, whilst creating the impression of fluidity.</p>
     </div>
-    {# I COULD DO WITH LINKING TO A FILE WITH ARTBOARDS AND CRATING A CODE SAMPLE USING CUSTOM PROPERTIES #}
   </section>
 {% endblock %}
-
 
 {% block image_nav %}
   {% include "../partials/components/scroller-nav.njk" %}
