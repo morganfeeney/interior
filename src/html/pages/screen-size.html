@@ -9,7 +9,7 @@
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
       <p>To decide upon a suitable range of media to design for, via Google Analytics, 
-      I discovered the following sizes to be the most popular:</p>
+      I discovered the following viewport sizes to be the most popular:</p>
       <ol class="list-number">
         <li>320x568</li>
         <li>360x640</li>
@@ -30,8 +30,8 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      Container Grid comprised of <em>fluid areas</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
-      The total of which can equal a screen width, excluding fluid areas, and represents a viewport width.
+      A Container Grid is comprised of <em>fluid areas</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
+      The total width, excluding fluid areas, represents a viewport width.
       </figcaption>
     </figure>
     <figure class="figure figure_with-caption figure_3-up-wide">
@@ -40,8 +40,7 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      A container placed into an area spanning the margins—the first and last gutter. 
-      It will occupy the entire viewport width.
+      When a <em>container</em> spans across both margins—the first and last gutter—it occupies the entire viewport width.
       </figcaption>
     </figure>
   {% endset %}
@@ -59,8 +58,8 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      Here a container is placed into an area spanning the <em>container area</em>, the first and last columns. 
-      It will occupy the entire viewport width, minus the margins.
+      When a container spans the <em>container area</em>—where the first and last columns start / end—it occupies
+       the entire viewport width, minus margins.
       </figcaption>
     </figure>
     <figure class="figure figure_with-caption figure_3-up-wide">
@@ -73,7 +72,7 @@
         <div class="stage__placeholder stage__placeholder_span-container"></div>
       </div>
       <figcaption class="figcaption type-small">
-        A box spanning the margins, with several other boxes layered on top, 
+        Several boxes layered on top of each other, 
         each spanning a range of columns, demonstrating versatility.
       </figcaption>
     </figure>
@@ -82,8 +81,10 @@
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      The purpose of the Container Grid is to create a series of columns that equal the total of each chosen width.
-      If a screen is larger than a width, any excess space is fluid and can be utilised to solve a range of design problems <em>fig. 4</em>.
+      The Container Grid's purpose is to enable placement of content within its various areas, fluid-area, margins, columns &amp; 
+      gutters which equate to the dimensions of a given viewport width.
+      If a viewport is larger than the width of the grid, excess space can be utilised to solve a range of 
+      design problems <em>fig. 4</em>. Header, nav or image elements can span the entire viewport width beyond the bounds of the margins.
     </div>
   </section>
 
