@@ -1,10 +1,10 @@
 .stage {
-  --gutter-width: 6px;
-  --column-width: 16.667%;
+  --gutter-width: 13px;
+  --column-width: 25%;
   --m: var(--gutter-width);
   --g: var(--gutter-width);
   --c: 1fr;
-  --container-column-count: 5;
+  --container-column-count: 3;
   --fluid-margin: 1fr;
   display: grid;
   align-items: end;
@@ -25,7 +25,8 @@
 
     @media(--tablet) {
       --fluid-margin: 3fr;
-      --gutter-width: 12px;
+      --column-width: 16.667%;
+      --container-column-count: 5;
     }
 }
 
@@ -95,12 +96,19 @@
 }
 
 .stage__placeholder_span-half {
-  grid-column: 9 / span 5;
+  grid-column: 3 / span 3;
   grid-row: 3;
+
+  @media(--tablet) {
+    grid-column: 9 / span 5;
+  }
 }
 
 .stage__placeholder_span-half_dummy-text {
-  grid-column: 3 / span 5;
+  grid-column: 7 / span 3;
+  @media(--tablet) {
+    grid-column: 3 / span 5;
+  }
 }
 
 .artboard_span-fluid-margin {
