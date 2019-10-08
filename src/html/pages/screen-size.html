@@ -19,8 +19,8 @@
         <li>1366x768</li>
       </ol>
       <p>Some dimensions are considered <em>standard</em>, 
-      such as an iPad (768x1024), or a standard Android device (360x640).</p>
-      <p>With the dimensions I then created what I refer to as the <em>Container Grid</em>.</p>
+      such as an iPad (768x1024), or a typical Android device (360x640).</p>
+      <p>With the dimensions I create what I refer to as a <em>Container Grid</em> see <em>fig.1-4.</em></p>
     </div>
   </section>
 
@@ -30,7 +30,7 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      A Container Grid comprised of <em>fluid areas</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
+      Container Grid comprised of <em>fluid areas</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
       The total of which can equal a screen width, excluding fluid areas, and represents a viewport width.
       </figcaption>
     </figure>
@@ -40,12 +40,17 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      A box placed into an area spanning the margins (the first and last gutter). 
+      A container placed into an area spanning the margins—the first and last gutter. 
       It will occupy the entire viewport width.
       </figcaption>
     </figure>
   {% endset %}
   {{ fw.figureWrapper(figureWrapperContent) }}
+
+
+{# I NEED TO FOCUS ON TEXT AND IMAGES, NOT CONTAINERS AS MUCH #}
+
+
 
   {% set figureWrapperContent2 %}
     <figure class="figure figure_with-caption figure_3-up-wide">
@@ -54,7 +59,7 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      A box placed into an area spanning the <em>container</em> (the first and last column). 
+      Here a container is placed into an area spanning the <em>container area</em>, the first and last columns. 
       It will occupy the entire viewport width, minus the margins.
       </figcaption>
     </figure>
