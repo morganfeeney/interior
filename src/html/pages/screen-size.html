@@ -25,16 +25,19 @@
   </section>
 
   {% set figureWrapperContent %}
-    <figure class="figure figure_with-caption figure_3-up-wide">
+    <figure class="figure figure_with-caption">
       <div class="placeholder-image placeholder-image_span-4 stage">
-        <div class="container-grid-overlay"></div>
+        {% for item in range(1,16) %}
+          <div class="stage__y-item" style="grid-column: {{ item }}"></div>
+        {% endfor %}
+        <div class="artboard"></div>
       </div>
       <figcaption class="figcaption type-small">
-      A Container Grid is comprised of <em>fluid areas</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
+      A Container Grid is comprised of <em>fluid-margins</em>, <em>margins</em>, <em>gutters</em> and <em>columns</em>.
       The total width, excluding fluid areas, represents a viewport width.
       </figcaption>
     </figure>
-    <figure class="figure figure_with-caption figure_3-up-wide">
+    <figure class="figure figure_with-caption">
       <div class="placeholder-image placeholder-image_span-4 stage">
         <div class="artboard"></div>
         <div class="container-grid-overlay"></div>
@@ -52,7 +55,7 @@
 
 
   {% set figureWrapperContent2 %}
-    <figure class="figure figure_with-caption figure_3-up-wide">
+    <figure class="figure figure_with-caption">
       <div class="placeholder-image placeholder-image_span-4 stage">
         <div class="artboard artboard_span-container"></div>
         <div class="container-grid-overlay"></div>
@@ -62,7 +65,7 @@
        the entire viewport width, minus margins.
       </figcaption>
     </figure>
-    <figure class="figure figure_with-caption figure_3-up-wide">
+    <figure class="figure figure_with-caption">
       <div class="placeholder-image placeholder-image_span-4 stage">
         <div class="artboard"></div>
         <div class="container-grid-overlay"></div>
