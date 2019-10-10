@@ -116,6 +116,55 @@
   }
 }
 
+.stage__counter {
+  --counter-size: 0.4rem;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  grid-column: 1 / span var(--stage-counter-grid-column);
+  grid-row: var(--stage-counter-grid-row);
+
+  &::before {
+    content: "";
+    width: calc(100% - calcColumnWidth(.65));
+    margin-right: var(--counter-size);
+    right: 0;
+    position: absolute;
+    height: 2px;
+    background: var(--black);
+  }
+  &::after {
+    content: "";
+    right: calc((var(--g) / 2) - (var(--counter-size) / 2));
+    position: absolute;
+    width: var(--counter-size);
+    height: var(--counter-size);
+    border-radius: 50%;
+    background: var(--black);
+  }
+}
+
+.stage__number {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: var(--font-size-global-small);
+  line-height: 1.25rem;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  margin-left: calcColumnWidth(.5);
+  z-index: 1;
+  position: relative;
+
+  @media(--tablet) {
+    width: 1.5rem;
+    height: 1.5rem;
+    @mixin global-body;
+  }
+}
+
 .stage__placeholder {
   background: #e6e6e6;
   height: 100%;
