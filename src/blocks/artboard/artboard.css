@@ -1,4 +1,16 @@
 .stage {
+  --stage-grid-template-columns:    
+  [fluid-margin-start]
+  var(--fluid-margin) 
+  [margin-start]
+  var(--m) 
+  [container-start] 
+  var(--c) repeat(var(--container-column-count), var(--g) var(--c))
+  [container-end] 
+  var(--m) 
+  [margin-end] 
+  var(--fluid-margin)
+  [fluid-margin-end];
   --gutter-width: 13px;
   --column-width: 25%;
   --m: var(--gutter-width);
@@ -7,20 +19,10 @@
   --container-column-count: 3;
   --fluid-margin: 2fr;
   --placeholder-image-height: calcRowHeight(2);
+  position: relative;
   display: grid;
   align-items: end;
-  grid-template-columns: 
-    [fluid-margin-start]
-    var(--fluid-margin) 
-    [margin-start]
-    var(--m) 
-    [container-start] 
-    var(--c) repeat(var(--container-column-count), var(--g) var(--c))
-    [container-end] 
-    var(--m) 
-    [margin-end] 
-    var(--fluid-margin)
-    [fluid-margin-end];
+  grid-template-columns: var(--stage-grid-template-columns);
     grid-template-rows: [container-start] var(--gutter-y) repeat(3, 1fr) 0 [container-end];
     row-gap: 1rem;
 
@@ -119,11 +121,10 @@
 .stage__counter {
   --counter-size: 0.4rem;
   z-index: 1;
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
   grid-column: 1 / span var(--stage-counter-grid-column);
-  grid-row: var(--stage-counter-grid-row);
 
   &::before {
     content: "";
@@ -145,6 +146,24 @@
   }
 }
 
+.stage__counter-wrapper {
+  grid-column: fluid-margin;
+  grid-row: container;
+  align-self: center;
+  display: grid;
+  row-gap: 1rem;
+
+  grid-template-columns: var(--stage-grid-template-columns);
+
+  @supports(grid-template-columns: subgrid) {
+    grid-template-columns: subgrid;
+  }
+
+  @media(--tablet) {
+    row-gap: 2rem;
+  }
+}
+
 .stage__number {
   width: 1.25rem;
   height: 1.25rem;
@@ -159,9 +178,10 @@
   position: relative;
 
   @media(--tablet) {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     @mixin global-body;
+    line-height: 2rem;
   }
 }
 
