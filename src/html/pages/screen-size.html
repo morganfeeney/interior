@@ -54,16 +54,13 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      When a <em>container</em> spans across both margins—the first and last gutter—it occupies the entire viewport width.
+        When content spans both margins it occupies the entire viewport width.
       </figcaption>
     </figure>
   {% endset %}
   {{ fw.figureWrapper(figureWrapperContent) }}
 
-
 {# I NEED TO FOCUS ON TEXT AND IMAGES, NOT CONTAINERS AS MUCH #}
-
-
 
   {% set figureWrapperContent2 %}
     <figure class="figure figure_with-caption">
@@ -72,22 +69,23 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-      When a container spans the <em>container area</em>—where the first and last columns start / end—it occupies
-       the entire viewport width, minus margins.
+        When content spans the the first and last columns it occupies the entire viewport width, minus margins.
       </figcaption>
     </figure>
     <figure class="figure figure_with-caption">
       <div class="placeholder-image placeholder-image_span-4 stage">
-        <div class="artboard"></div>
         <div class="container-grid-overlay"></div>
-        <div class="stage__placeholder stage__placeholder_span-fluid-margin"></div>
-        <div class="stage__placeholder stage__placeholder_span-half stage__placeholder_span-half_dummy-text"></div>
+        <div class="stage__placeholder stage__placeholder_span-fluid-margin" style="grid-row: 1 / span 2"></div>
+        <div class="stage__placeholder stage__placeholder_span-half stage__placeholder_span-half_dummy-text">
+          {% for item in range(1,6) %}
+            <div class="dummy-text"></div>
+          {% endfor %}
+        </div>
         <div class="stage__placeholder stage__placeholder_span-half"></div>
         <div class="stage__placeholder stage__placeholder_span-container"></div>
       </div>
       <figcaption class="figcaption type-small">
-        Several boxes layered on top of each other, 
-        each spanning a range of columns, demonstrating versatility.
+        Sample layout consisting of a header spanning both fluid-margins, and content placed within both margins.
       </figcaption>
     </figure>
   {% endset %}
@@ -95,10 +93,12 @@
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      The Container Grid's purpose is to enable placement of content within its various areas, fluid-area, margins, columns &amp; 
-      gutters which equate to the dimensions of a given viewport width.
-      If a viewport is larger than the width of the grid, excess space can be utilised to solve a range of 
-      design problems <em>fig. 4</em>. Header, nav or image elements can span the entire viewport width beyond the bounds of the margins.
+      The Container Grid's purpose is to enable placement of content. 
+      Between breakpoints, any content within the fluid-margin will be fluid, whilst content placed within both margins
+      will adhere to the dimensions of a given viewport width.
+      If a viewport is larger than the width of all columns, gutters and margins, excess space can be utilised to solve a range of 
+      design problems. 
+      Header, nav or image elements can span the entire viewport width beyond the bounds of the margins <em>fig. 4</em>.
     </div>
   </section>
 
