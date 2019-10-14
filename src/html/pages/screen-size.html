@@ -10,7 +10,7 @@
     <div class="js-type-body type-body">
       <p>To decide upon a suitable range of media to design for, via Google Analytics, 
       I discovered the following viewport sizes to be the most popular:</p>
-      <ol class="list-number">
+      <ol class="list-number list-number_body">
         <li>320x568</li>
         <li>360x640</li>
         <li>375x667</li>
@@ -30,18 +30,22 @@
         {% for item in range(1,16) %}
           <div class="stage__y-item" style="grid-column: {{ item }}"></div>
         {% endfor %}
-        {% for item in range(1,5) %}
-          <div class="stage__counter" style="--stage-counter-grid-column: {{ item }}; --stage-counter-grid-row: {{ item }}">
-            <div class="stage__number">{{ item }}</div>
-          </div>
-        {% endfor %}
+        <div class="stage__counter-wrapper">
+          {% for item in range(1,5) %}
+            <div class="stage__counter" style="--stage-counter-grid-column: {{ item }}">
+              <div class="stage__number">{{ item }}</div>
+            </div>
+          {% endfor %}
+        </div>
         <div class="artboard"></div>
       </div>
       <figcaption class="figcaption type-small">
-      1. Fluid-margins <br>
-      2. Margins <br>
-      3. Columns <br>
-      4. Gutters <br>
+        <ol class="list-number">
+          <li>Fluid-margin</li>
+          <li>Margin</li>
+          <li>Column</li>
+          <li>Gutter</li>
+        </ul>
       </figcaption>
     </figure>
     <figure class="figure figure_with-caption">

@@ -1,6 +1,10 @@
 .list-number {
   list-style-position: inside;
   padding: 0;
+  margin: 0;
+}
+
+.list-number_body {
   margin-top: var(--line-height-global-body);
   margin-bottom: var(--line-height-global-body);
 
