@@ -20,7 +20,7 @@
       </ol>
       <p>Some dimensions are considered <em>standard</em>, 
       such as an iPad (768x1024), or a typical Android device (360x640).</p>
-      <p>With the dimensions I create what I refer to as a <em>Container Grid</em> see <em>fig.1-4.</em></p>
+      <p>With the dimensions I create what I refer to as a <em>Container Grid</em> (Fig. 1-4).</p>
     </div>
   </section>
 
@@ -94,11 +94,13 @@
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
       The Container Grid's purpose is to enable placement of content. 
-      Between breakpoints, any content within the fluid-margin will have a fluid width, whilst content placed within both margins
+      Between breakpoints, any content within the fluid-margin will have a fluid width, whilst content placed across both margins
       will adhere to the dimensions of a given viewport width.
-      If a viewport is larger than the width of all columns, gutters and margins, excess space can be utilised to solve a range of 
-      design problems. 
-      Header, nav or image elements can span the entire viewport width beyond the bounds of the margins <em>fig. 4</em>.
+      If a screen is wider than all columns, gutters and margins, fluid-margin can be utilised to solve a range of 
+      design problems (Fig. 4).
+      <br>
+      It's important to note that terms such as <em>margin</em> and <em>fluid-margin</em> are not related to CSS, 
+      their purpose is purely for design.
     </div>
   </section>
 
@@ -121,10 +123,9 @@
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      When it comes to re-creating a design using CSS and HTML it removes the need for markup, providing freedom to span across
+      Making use of CSS Grid and viewport units, e.g. <code>VW</code> removes the need for markup, providing freedom to span across
       different ranges of columns.
       <br>
-      It's important to note these terms are not related to CSS properties.
       achieving a range of possibilities due to the gutters also being columns.
       Users of screen sizes not in the list will also receive an excellent experience due to the strategy of including fluid elements [examples needed, 
       e.g. bleeding imagery fluid header and footer]. This gives us the benefits of designing for certainty, whilst creating the impression of fluidity.</p>
