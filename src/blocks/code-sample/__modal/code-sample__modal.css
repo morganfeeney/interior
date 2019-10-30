@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   flex-flow: column;
+  z-index: 1;
 }
 
 .code-sample__modal-button-open {

@@ -41,12 +41,9 @@
   /*
    * Base units for calculating dimensions and spacial units.
    */
-  --grid-gap-half: .5rem;
   --grid-gap: 1.125rem; /* 18px */
-  --grid-gap-double: 2rem;
   --grid-row-gap: 2rem;
   --margin: var(--margin-2);
-  --margin-double: calc(var(--margin) * 2);
 
   /* Gutters
    *
@@ -123,7 +120,6 @@
   :root {
     --container-width: var(--container-width-5);
     --row-height: var(--row-height-414);
-    --columns: var(--grid-columns-414);
     --container-grid-column-count: var(--container-grid-column-count-414);
   }
 }

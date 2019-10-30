@@ -8,8 +8,8 @@
 {% block main %}
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      <p>To decide upon a suitable range of media to design for, via Google Analytics, 
-      I discovered the following viewport sizes to be the most popular:</p>
+      <p>To decide upon a suitable range of media to design for, I start with viewport width. 
+      I discovered the following to be the most popular:</p>
       <ol class="list-number list-number_body">
         <li>320x568</li>
         <li>360x640</li>
@@ -95,11 +95,11 @@
     <div class="js-type-body type-body">
       The Container Grid's purpose is to enable placement of content. 
       Between breakpoints, any content within the fluid-margin will have a fluid width, whilst content placed across both margins
-      will adhere to the dimensions of a given viewport width.
+      will adhere to the width of a given viewport.
       If a screen is wider than all columns, gutters and margins, fluid-margin can be utilised to solve a range of 
       design problems (Fig. 4).
       <br>
-      It's important to note that terms such as <em>margin</em> and <em>fluid-margin</em> are not related to CSS, 
+      It's important to note that terms such as <em>margin</em> and <em>gutter</em> are not related to CSS, 
       their purpose is purely for design.
     </div>
   </section>
@@ -111,24 +111,17 @@
       </div>
       <figcaption class="figcaption type-small">Container widths are used to construct the grid, and have a direct imact on font-size.</figcaption>
     </figure>
-        <figure class="figure figure_with-caption figure_code-sample">
-      <div class="js-placeholder-image placeholder-image placeholder-image_code-sample">
-        {% include "../partials/code-samples/container-width.njk" %}
-      </div>
-      <figcaption class="figcaption type-small">Container widths are used to construct the grid, and have a direct imact on font-size.</figcaption>
-    </figure>
   {% endset %}
 {# NEED TO ADD A CODE SAMPLE OF NAMED GRID LINES #}
   {{ fw.figureWrapper(figureWrapperContent3) }}
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      Making use of CSS Grid and viewport units, e.g. <code>VW</code> removes the need for markup, providing freedom to span across
-      different ranges of columns.
-      <br>
-      achieving a range of possibilities due to the gutters also being columns.
-      Users of screen sizes not in the list will also receive an excellent experience due to the strategy of including fluid elements [examples needed, 
-      e.g. bleeding imagery fluid header and footer]. This gives us the benefits of designing for certainty, whilst creating the impression of fluidity.</p>
+      Making use of CSS Grid and viewport units, e.g. <em>vw</em> results in less markup, whilst providing freedom to span across
+      different ranges of columns. Combining Named Grid Lines, media queries and custom properties make the process of
+      spanning different numbers of columns D.R.Y. (Fig. ?)
+      
+      It also provides the benefits of designing for certainty, whilst creating the <em>impression</em> of fluidity.</p>
     </div>
   </section>
 {% endblock %}
