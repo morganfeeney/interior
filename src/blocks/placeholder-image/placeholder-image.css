@@ -125,6 +125,10 @@
   }
 }
 
+.placeholder-image_code-sample-large {
+  --placeholder-image-width: calcColumnWidth(4);
+}
+
 .placeholder-image__typeset {
   @mixin global-body;
 }
