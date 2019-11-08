@@ -1,13 +1,11 @@
 .code-sample__modal {
+  align-items: start;
   position: absolute;
   background: hsla(33.8, 85.2%, 55.1%, 0.89);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  flex-flow: column;
   z-index: 1;
 }
 
@@ -29,12 +27,15 @@
 
 /* Should flex to screen width. */
 .code-sample__modal-inner {
+  grid-column: container-grid;
+  margin-left: calc(0px - var(--modal-border-width));
+  margin-right: calc(0px - var(--modal-border-width));
   position: relative;
   top: var(--code-sample-modal-offset, 0);
   max-width: 100%;
 
-  @media(--tablet-max) {
-    width: calc((var(--container-width) - calc(var(--margin) * 2)) + (var(--modal-border-width) * 2 ));
+  @media (--iPadPro) {
+    grid-column: 5 / span 7;
   }
 }
 

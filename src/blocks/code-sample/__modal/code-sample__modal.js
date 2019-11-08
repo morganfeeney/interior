@@ -36,15 +36,19 @@ export default function executeCodeSampleModal () {
       const theWindowMax = window.matchMedia(customMediaMax['--tablet-max'])
 
       // Set the property by default
-      if (theWindowMax.matches) {
-        codeSampleInner.style.setProperty(
-          '--code-sample-modal-offset', `${offset}px`
-        )
-      } else {
-        codeSampleInner.style.setProperty(
-          '--code-sample-modal-offset', 0
-        )
-      }
+      // if (theWindowMax.matches) {
+      //   codeSampleInner.style.setProperty(
+      //     '--code-sample-modal-offset', `${offset}px`
+      //   )
+      // } else {
+      //   codeSampleInner.style.setProperty(
+      //     '--code-sample-modal-offset', 0
+      //   )
+      // }
+
+      codeSampleInner.style.setProperty(
+        '--code-sample-modal-offset', `${offset}px`
+      )
 
       // Remove the property across breakpoints if needed using the "change" event-listener
       function modalEventListener (e) {
@@ -62,7 +66,7 @@ export default function executeCodeSampleModal () {
         }
       }
 
-      theWindowMin.addListener(modalEventListener)
+      // theWindowMin.addListener(modalEventListener)
       modalCloseOverlay()
     })
   })
