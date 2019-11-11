@@ -3,7 +3,7 @@
   "description": "A design system for the modern web.",
   "version": "3.0.5",
   "author": "Morgan Feeney",
-  "license": "MIT",
+  "license": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
   "devDependencies": {
     "autoprefixer": "^9.4.9",
     "cssnano": "^4.1.10",
