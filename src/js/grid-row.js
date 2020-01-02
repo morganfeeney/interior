@@ -15,8 +15,8 @@ function getComputedRowHeight () {
   documentComputedFontSize = window.getComputedStyle(document.documentElement).getPropertyValue('font-size')
   rowHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--row-height')
   gridRowGap = window.getComputedStyle(document.querySelector('.js-type-body').closest('.grid')).getPropertyValue('grid-row-gap')
-  gridRowGapUnit = parseInt(gridRowGap.split('px')[0], 10)
-  computedRowHeight = (documentComputedFontSize.split('px')[0]) * (rowHeight.split('rem')[0])
+  gridRowGapUnit = parseInt(gridRowGap)
+  computedRowHeight = parseInt(documentComputedFontSize) * parseFloat(rowHeight)
 }
 
 // Apply CSS to any elements we have selected.
@@ -30,7 +30,7 @@ function spanGridRows (content) {
 
   // Work out the computed height of any elements I select.
   const computedStyles = window.getComputedStyle(content)
-  const contentHeight = parseFloat(computedStyles.getPropertyValue('height').split('px')[0])
+  const contentHeight = parseFloat(computedStyles.getPropertyValue('height'))
   let rowsToSpan = ''
 
   // Calculate how many grid-rows to span.
