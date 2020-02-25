@@ -35,7 +35,6 @@ function spanGridRows (content) {
 
   // Calculate how many grid-rows to span.
   for (const media in customMediaMinMax) {
-    // Destructure variables from customMediaMinMax object.
     const {
       breakpoint,
       lineHeight,

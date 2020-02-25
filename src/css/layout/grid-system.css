@@ -66,7 +66,7 @@
   --row-height-320: 5.5rem; /* 72px */
   --row-height-360: 4.5rem;
   --row-height-414: 7rem;
-  --row-height-768: 11.5rem;
+  --row-height-768: 12rem;
   --row-height-1024: 4.5rem;
   --row-height-1440: 6rem; /* 96px */
   --row-height: var(--row-height-320);

@@ -8,7 +8,7 @@
 {% block main %}
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      <p>To decide upon a suitable range of media to design for, I start with viewport width. 
+      <p>When deciding on a suitable range of media to design for, I start with viewport width. 
       I discovered the following to be the most popular:</p>
       <ol class="list-number list-number_body">
         <li>320x568</li>
@@ -54,7 +54,7 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-        When content spans both margins it occupies the entire viewport width.
+        When content spans both margins it occupies the entire container.
       </figcaption>
     </figure>
   {% endset %}
@@ -69,7 +69,7 @@
         <div class="container-grid-overlay"></div>
       </div>
       <figcaption class="figcaption type-small">
-        When content spans the the first and last columns it occupies the entire viewport width, minus margins.
+        If content spans the the first and last columns (not margins) it occupies the entire container width, minus margins.
       </figcaption>
     </figure>
     <figure class="figure figure_with-caption">
@@ -93,14 +93,15 @@
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      The Container Grid's purpose is to enable placement of content. 
-      Between breakpoints, any content within the fluid-margin will have a fluid width, whilst content placed across both margins
-      will adhere to the width of a given viewport.
-      If a screen is wider than all columns, gutters and margins, fluid-margin can be utilised to solve a range of 
-      design problems (Fig. 4).
-      <br>
-      It's important to note that terms such as <em>margin</em> and <em>gutter</em> are not related to CSS, 
-      their purpose is purely for design.
+      <p>A container grid is a container, yet only constructed using CSS, not a range of <code>&lt;div&gt;</code> wrappers,
+      although it can also be applied to that kind of structure.
+      It's main purpose is to act as an overall guide that makes it easy to decide where to place content.<br>
+      Between breakpoints, any content within the fluid-margin will have a fluid width, reflowing with the size of the viewport,
+      whilst content placed across both margins will adhere absolutely to the width of a container.<br>
+      If a viewport is wider than all columns, gutters and margins, fluid-margin can be utilised to solve a range of 
+      design problems (Fig. 4).<br>
+      <p>It's important to note that terms such as <em>margin</em> and <em>gutter</em> are not related to CSS, 
+      their purpose is purely for design in the context I am using them.</p>
     </div>
   </section>
 

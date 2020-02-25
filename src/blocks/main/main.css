@@ -20,8 +20,13 @@
   /* Misaligning with grid modules is not a problem here. */
   @media (--tablet) {
     --type-body-grid-column: span 3;
-    --body-margin-top: -.5rem;
-    --body-margin-bottom: 0; 
+    --body-margin-top: -0.15rem;
+    --body-margin-bottom: 0;
+
+    /* Align with the grid and other copy */
+    & code {
+      line-height: 1.625rem;
+    }
   }
 
   @media (--iPadPro) {
