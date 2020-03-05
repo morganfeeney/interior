@@ -1,0 +1,62 @@
+{% extends "../../../blocks/code-sample/code-sample.njk" %}
+{% set language="css" %}
+{% block code %}<span class="code-sample__selector">:root</span> {
+  <span class="code-sample__property">--excess-width:</span> <span class="code-sample__value">calc(100vw - var(--container-width))</span>;
+  <span class="code-sample__property">--fluid-margin:</span> <span class="code-sample__value">calc((var(--excess-width) / 2))</span>;<br>
+
+  <span class="code-sample__property">--margin:</span> <span class="code-sample__value">1.5rem</span>;
+  <span class="code-sample__property">--gutter:</span> <span class="code-sample__value">1rem</span>;<br>
+
+  <span class="code-sample__property">--container-width-1:</span> <span class="code-sample__value">320px</span>; 
+  <span class="code-sample__property">--container-width-2:</span> <span class="code-sample__value">360px</span>; 
+  <span class="code-sample__property">--container-width-3:</span> <span class="code-sample__value">375px</span>; 
+  <span class="code-sample__property">--container-width-4:</span> <span class="code-sample__value">414px</span>; 
+  <span class="code-sample__property">--container-width-5:</span> <span class="code-sample__value">768px</span>; 
+  <span class="code-sample__property">--container-width-6:</span> <span class="code-sample__value">1366px</span>;
+  <span class="code-sample__property">--container-width:</span> <span class="code-sample__value">var(--container-width-1)</span>;<br>
+
+  <span class="code-sample__comment">/* Columns */</span>
+  <span class="code-sample__property">--column-count-320:</span> <span class="code-sample__value">4</span>;
+  <span class="code-sample__property">--column-count-360:</span> <span class="code-sample__value">4</span>;
+  <span class="code-sample__property">--column-count-414:</span> <span class="code-sample__value">6</span>;
+  <span class="code-sample__property">--column-count-768:</span> <span class="code-sample__value">12</span>;
+  <span class="code-sample__property">--column-count-1024:</span> <span class="code-sample__value">16</span>;
+  <span class="code-sample__property">--column-count-1336:</span> <span class="code-sample__value">16</span>;
+  <span class="code-sample__property">--column-count:</span><span class="code-sample__value">var(--column-count-320)</span>;
+  <span class="code-sample__property">--column-width:</span> <span class="code-sample__value">1fr</span>;<br>
+
+
+  <span class="code-sample__comment">/* Succinct variables for use with `--container-grid-template` */</span>
+  <span class="code-sample__property">--m:</span> <span class="code-sample__value">var(--margin)</span>;
+  <span class="code-sample__property">--g:</span> <span class="code-sample__value">var(--gutter)</span>;
+  <span class="code-sample__property">--c:</span> <span class="code-sample__value">var(--column-width)</span>;<br>
+
+  <span class="code-sample__comment">/* Default 4 column grid */</span>
+  <span class="code-sample__property">--container-grid-template:</span>
+    <span class="code-sample__value">var(--fluid-margin)</span>
+    <span class="code-sample__value">var(--m)</span>
+    <span class="code-sample__value">var(--c) repeat(var(--container-grid-column-count), var(--g) var(--c))</span>
+    <span class="code-sample__value">var(--m)</span>
+    <span class="code-sample__value">var(--fluid-margin)</span>
+    <span class="code-sample__value">--grid-template-areas: "fm1 m1 c1 g1 c2 g2 c3 g3 c4 m2 fm2";</span>
+}<br>
+
+<span class="code-sample__selector">@media</span> (--mobile) {
+  <span class="code-sample__selector">:root</span> {
+    <span class="code-sample__property">--container-width:</span> <span class="code-sample__value">var(--container-width-4)</span>;
+    <span class="code-sample__property">--columns:</span> <span class="code-sample__value">var(--grid-columns-414)</span>;
+    <span class="code-sample__property">--container-grid-column-count:</span> <span class="code-sample__value">var(--container-grid-column-count-414)</span>;
+  }
+}<br>
+
+<span class="code-sample__selector">@media</span> (--tablet) {
+  <span class="code-sample__selector">:root</span> {
+    <span class="code-sample__property">--gutter:</span> <span class="code-sample__value">1.5rem</span>;
+    <span class="code-sample__property">--margin:</span> <span class="code-sample__value">3rem</span>;
+    <span class="code-sample__property">--container-width:</span> <span class="code-sample__value">var(--container-width-8)</span>;
+    <span class="code-sample__property">--column-count:</span> <span class="code-sample__value">var(--column-count-768)</span>;
+    <span class="code-sample__property">--container-grid-column-count:</span> <span class="code-sample__value">var(--container-grid-column-count-768)</span>;
+    <span class="code-sample__property">--grid-template-areas:</span> <span class="code-sample__value">"fm1 m1 c1 g1 c2 g2 c3 g3 c4 g4 c5 g5 c6 m2 fm2"</span>;
+  }
+}
+{% endblock %}

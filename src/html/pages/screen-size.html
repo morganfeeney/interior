@@ -8,7 +8,7 @@
 {% block main %}
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      <p>When deciding on a suitable range of media to design for, I start with viewport width. 
+      <p>To decide on a suitable range of media to design for, I start with viewport width. 
       I discovered the following to be the most popular:</p>
       <ol class="list-number list-number_body">
         <li>320x568</li>
@@ -100,17 +100,18 @@
       whilst content placed across both margins will adhere absolutely to the width of a container.<br>
       If a viewport is wider than all columns, gutters and margins, fluid-margin can be utilised to solve a range of 
       design problems (Fig. 4).<br>
-      <p>It's important to note that terms such as <em>margin</em> and <em>gutter</em> are not related to CSS, 
-      their purpose is purely for design in the context I am using them.</p>
     </div>
   </section>
 
   {% set figureWrapperContent3 %}
     <figure class="figure figure_with-caption figure_code-sample">
       <div class="js-placeholder-image placeholder-image placeholder-image_code-sample placeholder-image_code-sample-large">
-        {% include "../partials/code-samples/container-width.njk" %}
+        {% include "../partials/code-samples/container-grid.njk" %}
       </div>
-      <figcaption class="figcaption type-small">Container widths are used to construct the grid, and have a direct imact on font-size.</figcaption>
+      <figcaption class="figcaption type-small">
+        Container widths are used to construct the container-grid. View a  
+        <a href="https://codepen.io/morganfeeney/pen/023adaff056fc2a288c8066cef2c01f1">working example</a>.
+      </figcaption>
     </figure>
   {% endset %}
 {# NEED TO ADD A CODE SAMPLE OF NAMED GRID LINES #}
@@ -118,11 +119,18 @@
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      Making use of CSS Grid and viewport units, e.g. <em>vw</em> results in less markup, whilst providing freedom to span across
-      different ranges of columns. Combining Named Grid Lines, media queries and custom properties make the process of
-      spanning different numbers of columns D.R.Y. (Fig. ?)
+      <p>Making use of CSS Grid and viewport units, e.g. <code>vw</code> results in less markup, yet provides freedom to span across
+      different ranges of columns. Combining Grid Template Areas, media queries and custom properties make the process of
+      spanning different numbers of columns trivial, [provide some codepen examples?]</p>
+
+      <p>You can span all columns, across breakpoints without using media queries to re-declare in each 
+      breakpoint how many columns to span when making use of spanning the marigns</p>
+
+      <p>You can make the grid fluid by changing 100vw to 0vw</p>
+
+      <p>You can make the grid snap to viewport widths by leaving as-is</p>
       
-      It also provides the benefits of designing for certainty, whilst creating the <em>impression</em> of fluidity.</p>
+      <p>It also provides the benefits of designing for certainty, whilst creating the <em>impression</em> of fluidity.</p>
     </div>
   </section>
 {% endblock %}
