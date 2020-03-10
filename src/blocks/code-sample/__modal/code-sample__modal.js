@@ -1,4 +1,3 @@
-import { customMediaMin, customMediaMax } from '../../../js/breakpoints.js'
 import { body, root } from '../../../js/global-vars.js'
 import modalCloseOverlay from '../../modal/modal-close-overlay.js'
 
@@ -13,8 +12,8 @@ export default function executeCodeSampleModal () {
 
   codeSampleModalButtons.forEach((button) => {
     button.addEventListener('click', function () {
-      const placeHolder = document.querySelector('.js-placeholder-image')
-      const codeSample = this.closest('.js-placeholder-image').querySelector('.js-code-sample')
+      const placeHolder = this.closest('.js-placeholder-image')
+      const codeSample = placeHolder.querySelector('.js-code-sample')
 
       // Setup some body styles for the modal
       body.classList.add('modal-open')
@@ -32,41 +31,11 @@ export default function executeCodeSampleModal () {
       body.appendChild(templateWrapper)
 
       const codeSampleInner = document.querySelector('.js-code-sample-inner')
-      const theWindowMin = window.matchMedia(customMediaMin['--tablet'])
-      const theWindowMax = window.matchMedia(customMediaMax['--tablet-max'])
-
-      // Set the property by default
-      // if (theWindowMax.matches) {
-      //   codeSampleInner.style.setProperty(
-      //     '--code-sample-modal-offset', `${offset}px`
-      //   )
-      // } else {
-      //   codeSampleInner.style.setProperty(
-      //     '--code-sample-modal-offset', 0
-      //   )
-      // }
 
       codeSampleInner.style.setProperty(
         '--code-sample-modal-offset', `${offset}px`
       )
 
-      // Remove the property across breakpoints if needed using the "change" event-listener
-      function modalEventListener (e) {
-        if (e.matches) {
-          window.addEventListener(
-            'change',
-            codeSampleInner.style.setProperty(
-              '--code-sample-modal-offset', 0
-            )
-          )
-        } else {
-          codeSampleInner.style.setProperty(
-            '--code-sample-modal-offset', `${offset}px`
-          )
-        }
-      }
-
-      // theWindowMin.addListener(modalEventListener)
       modalCloseOverlay()
     })
   })

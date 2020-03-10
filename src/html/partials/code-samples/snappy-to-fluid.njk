@@ -1,0 +1,11 @@
+{% extends "../../../blocks/code-sample/code-sample.njk" %}
+{% set language="css" %}
+{% block code %}<span class="code-sample__comment">/* Change this */</span>
+<span class="code-sample__selector">:root</span> {
+  <span class="code-sample__property">--excess-width:</span> <span class="code-sample__value">calc(100vw - var(--container-width))</span>;
+}<br>
+<span class="code-sample__comment">/* To this */</span>
+<span class="code-sample__selector">:root</span> {
+  <span class="code-sample__property">--excess-width:</span> <span class="code-sample__value">calc(0vw - var(--container-width))</span>;
+}
+{% endblock %}

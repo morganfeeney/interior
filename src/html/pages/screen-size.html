@@ -93,7 +93,7 @@
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      <p>A container grid is a container, yet only constructed using CSS, not a range of <code>&lt;div&gt;</code> wrappers,
+      <p>A Container Grid is a container, yet only constructed using CSS, not a range of <code>&lt;div&gt;</code> wrappers,
       although it can also be applied to that kind of structure.
       It's main purpose is to act as an overall guide that makes it easy to decide where to place content.<br>
       Between breakpoints, any content within the fluid-margin will have a fluid width, reflowing with the size of the viewport,
@@ -110,29 +110,56 @@
       </div>
       <figcaption class="figcaption type-small">
         Container widths are used to construct the container-grid. View a  
-        <a href="https://codepen.io/morganfeeney/pen/023adaff056fc2a288c8066cef2c01f1">working example</a>.
+        <a href="https://codepen.io/morganfeeney/pen/023adaff056fc2a288c8066cef2c01f1" target="_blank">working example</a>.
       </figcaption>
     </figure>
   {% endset %}
-{# NEED TO ADD A CODE SAMPLE OF NAMED GRID LINES #}
   {{ fw.figureWrapper(figureWrapperContent3) }}
 
   <section class="grid {{ main_classes }}">
     <div class="js-type-body type-body">
-      <p>Making use of CSS Grid and viewport units, e.g. <code>vw</code> results in less markup, yet provides freedom to span across
-      different ranges of columns. Combining Grid Template Areas, media queries and custom properties make the process of
-      spanning different numbers of columns trivial, [provide some codepen examples?]</p>
+      <p>Making use of CSS Grid and viewport units means the layout is not described by markup.</p>
+      
+      <p>Combining Grid Template Areas, Media Queries and Custom Properties make the process of
+      spanning different ranges of columns almost trivial (Fig. 6).</p>
 
       <p>You can span all columns, across breakpoints without using media queries to re-declare in each 
-      breakpoint how many columns to span when making use of spanning the marigns</p>
-
-      <p>You can make the grid fluid by changing 100vw to 0vw</p>
-
-      <p>You can make the grid snap to viewport widths by leaving as-is</p>
-      
-      <p>It also provides the benefits of designing for certainty, whilst creating the <em>impression</em> of fluidity.</p>
+      breakpoint how many columns to span.</p>
     </div>
   </section>
+
+    {% set figureWrapperContent4 %}
+    <figure class="figure figure_with-caption figure_code-sample">
+      <div class="js-placeholder-image placeholder-image placeholder-image_code-sample placeholder-image_code-sample-large">
+        {% include "../partials/code-samples/spanning-example.njk" %}
+      </div>
+      <figcaption class="figcaption type-small">
+        A starting and ending grid line are all that is required, regardless of whether or not the number of additional grid lines change.
+        <a href="https://codepen.io/morganfeeney/pen/023adaff056fc2a288c8066cef2c01f1" target="_blank">See in action</a>.
+      </figcaption>
+    </figure>
+  {% endset %}
+  {{ fw.figureWrapper(figureWrapperContent4) }}
+
+  <section class="grid {{ main_classes }}">
+    <div class="js-type-body type-body">
+      <p>Although the grid used for this website snaps at breakpoints, you can easily 
+      configure it to be fluid by making a quick change (Fig. 7)</p>
+    </div>
+  </section>
+
+    {% set figureWrapperContent5 %}
+    <figure class="figure figure_with-caption figure_code-sample">
+      <div class="js-placeholder-image placeholder-image placeholder-image_code-sample placeholder-image_code-sample-large">
+        {% include "../partials/code-samples/snappy-to-fluid.njk" %}
+      </div>
+      <figcaption class="figcaption type-small">
+        By default, the grid used for this website has been configured to snap, 
+        but the same structure and all that comes with it can configured to be fluid.
+      </figcaption>
+    </figure>
+  {% endset %}
+  {{ fw.figureWrapper(figureWrapperContent5) }}
 {% endblock %}
 
 {% block image_nav %}
